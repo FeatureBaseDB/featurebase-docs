@@ -1,7 +1,7 @@
 ---
 title: Mutual TLS
 layout: default
-parent: Community configuration
+parent: Community authentication
 grand_parent: Community
 ---
 

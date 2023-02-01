@@ -1,7 +1,7 @@
 ---
 title: Azure-AD setup
 layout: default
-parent: Community configuration
+parent: Community authentication
 grand_parent: Community
 ---
 

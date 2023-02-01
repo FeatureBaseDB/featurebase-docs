@@ -1,7 +1,7 @@
 ---
 title: TLS user auth tokens
 layout: default
-parent: Community configuration
+parent: Community authentication
 grand_parent: Community
 ---
 

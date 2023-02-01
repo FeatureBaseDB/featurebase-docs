@@ -1,7 +1,7 @@
 ---
 title: TLS authentication
 layout: default
-parent: Community configuration
+parent: Community authentication
 grand_parent: Community
 ---
 
