@@ -17,10 +17,10 @@ format({specifier}, value,...)
 
 ## Arguments
 
-| Argument | Description | Further information |
+| Argument | Data type |Description |
 |---|---|---|
-| specifier | Specified format specifier | [Format specifiers](#format_specifiers) |
-| `value`| One or more values to be converted to the specified format |  |
+| specifier | String | Specify format for supplied values | [Format specifiers](#format-specifiers) |
+| `value` | Any supported | Values or  | [Supported data types](/docs/sql-guide/data-types/data-types-home) |
 
 ## Format Specifiers
 
@@ -46,14 +46,14 @@ format({specifier}, value,...)
 
 Table definition and inserting values
 ```sql
-create table segments
+CREATE TABLE segments
     (_id id, segment string, value int);
-insert into segments(_id, segment, value)
-    values (1,'white', 16777215);
+INSERT INTO segments(_id, segment, value)
+    VALUES (1,'white', 16777215);
 ```
-
-```
-select _id, format("%s -> #%x", segment, value) as segment from segments;
+SELECT statement with FORMAT()
+```sql
+SELECT _id, format("%s -> #%x", segment, value) AS segment FROM segments;
 +-----+-----------------+
 | _id | segment         |
 +-----+-----------------+
@@ -66,18 +66,21 @@ select _id, format("%s -> #%x", segment, value) as segment from segments;
 Create table and insert data.
 
 ```sql
-create table segments
+CREATE TABLE segments
     (_id id, time timestamp timeunit 'ms' epoch '2022-01-01T00:00:00Z', ids idset, strings stringset);
-insert into segments(_id, time, ids, strings)
-    values (1, '2023-01-01', [6 , 1, 9], ['red', 'blue', 'green']);
+INSERT INTO segments(_id, time, ids, strings)
+    VALUES (1, '2023-01-01', [6 , 1, 9], ['red', 'blue', 'green']);
 ```
 
-FORMAT() statement defining specifiers for columns
+SELECT statement formatting column data
+
+```sql
+SELECT format('id = %d , time = %v , ids = %d, strings = %s', _id, time, ids, strings) as description from segments;
 ```
-select format('id = %d , time = %v , ids = %d, strings = %s', _id, time, ids, strings) as description from segments;
-+-------------------------------------------------------------------------------------------+
-| description                                                                               |
-+-------------------------------------------------------------------------------------------+
+
+Result:
+
+```csv
+| description |
 | id = 1 , time = 2023-01-01 00:00:00 +0000 UTC , ids = [1 6 9], strings = [blue green red] |
-+-------------------------------------------------------------------------------------------+
 ```
