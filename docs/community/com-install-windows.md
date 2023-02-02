@@ -31,7 +31,8 @@ Setup Windows Hyper-V or VirtualBox with a Linux operating system.
 Alternatively you can setup WSL and install Linux.
 
 * [Install Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install){:target="_blank"}
-* [Learn how to setup the Windows Subsystem for Ubuntu Linux](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview){:target="_blank"} |
+* [Learn how to setup the Windows Subsystem for Ubuntu Linux](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview){:target="_blank"}
+* [Install Windows terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-ca&gl=ca){:target="_blank"} to access multiple WSL terminals and execute CLI commands on a running server.
 
 ## Next step
 
