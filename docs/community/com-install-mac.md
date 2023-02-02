@@ -16,7 +16,7 @@ Follow these instructions to install FeatureBase on a MacOS environment.
 
 * Learn about [FeatureBase Community](/docs/community/com-home)
 
-## Install FeatureBase on Linux
+## Install FeatureBase
 
 {% include /com-install/com-install-linux-source.md %}
 
