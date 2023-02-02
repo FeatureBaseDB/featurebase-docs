@@ -19,8 +19,6 @@ FeatureBase is a feature-oriented database platform that powers real-time analyt
 
 Our novel approach minimizes I/O on queries by allowing the database engine to read and write exactly the data it needs and intelligently compress that data in memory. The result is a step-function improvement in analytical workloads.
 
-* [Learn more on featurebase.com](https://featurebase.com)
-
 ## Before you begin
 
 * [Learn more about FeatureBase](https://www.featurebase.com/){:target="_blank"}
