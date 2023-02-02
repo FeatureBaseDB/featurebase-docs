@@ -21,22 +21,28 @@ FeatureBase does not currently run on Mac Safari
   * [Install FeatureBase on Linux](/docs/community/com-install-linux)
   * [Install FeatureBase on Mac](/docs/community/com-install-mac)
   * [Install FeatureBase on Windows](/docs/community/com-install-windows)
-* Install Mozilla Firefox or Google Chrome on the system
+* Login to your system
+
+{: .note}
+FeatureBase Community does not currently support Apple Safari. Install Mozilla Firefox or Google Chrome on your system instead.
 
 ## How do I start the FeatureBase Community server?
 
-1. Login to the system
-2. Open a terminal window and cd to the folder
-2. Execute these commands in a terminal window:
+*  Open a terminal window.
+*  cd to the `/opt` directory:
 
 ```
-CD /featurebase/opt
+cd ~/featurebase/opt
+```
+
+* Start the server
+```
 ./featurebase server
 ```
 
 ## How do I connect to FeatureBase community?
 
-Open the following URL in your web browser:
+FeatureBase Community is available by default at:
 
 ```
 http://localhost:10101/
