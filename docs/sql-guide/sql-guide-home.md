@@ -16,11 +16,9 @@ FeatureBase supports different types of queries that are discussed further in th
 {: .important}
 FeatureBase Community users must [Enable the SQL endpoint when they startup the server](/docs/community/com-startup-connect) to execute SQL commands.
 
-
 ## Before you begin
 
 {% include /cloud/cloud-db-create-before-begin.md %}
-* [Enable the SQL endpoint for FeatureBase Community](/docs/community/com-config/com-config-cli-enable-sql-endpoint)
 
 ## Statements
 
