@@ -22,7 +22,7 @@ These tokens are used to authenticate your user when TLS authentication is enabl
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 * [Learn how to enable TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
 * Setup a password manager or other safe storage for your tokens
 * cd to `~/featurebase/opt`
@@ -35,12 +35,10 @@ featurebase auth-token --[<flags>]
 
 ## Flags
 
-| Flag | Description | Further information |
-|---|---|---|
-| `h` or `help` | Auth token help |  |
-| `host string` | HTTPS host string `featurebase-host:port` | Default: `https://localhost:10101` |
+| Flag | Data type | Description | Default | Required | Further information |
+| `h` or `help` |  | Auth token help |  | Optional |  |
+| `host string` |  | HTTPS host string `featurebase-host:port` |  | Yes | Default: `https://localhost:10101` |
 {% include /com-ingest/flag-common-tls.md%}
-
 
 ## Obtain tokens from the lattice UI
 
