@@ -12,20 +12,16 @@ grand_parent: Community
 ## Before you begin
 
 * {% include /com-install/com-install-before-begin.md %}
-* [Configure authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* [Configure TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
 
-## Step one:
+## Step 1 - create group permissions file
 
-{: .important}
-The `admin` group can access all FeatureBase indexes.
+* CD to `~/featurebase/opt`
+* Create the file with `touch permissions.yaml`
 
-* Create a permissions file in the featureBase installation folder.
+## Step 2 - add the permissions
 
-```
-touch permissions.yaml
-```
-
-* Edit the file and add the following settings:
+* Edit  `~/featurebase/opt/permissions.yaml` then insert the following settings:
 
 ```
 user-groups:
@@ -37,4 +33,6 @@ user-groups:
 admin: "<groupd-id3>
 ```
 
-<!--QUERY -- are there any next steps? -->
+## Step 3 - edit the groups according to those created in Azure AD
+
+THIS IS A GUESS! HELP ME OBI-DEV, YOU'RE MY ONLY HOPE!

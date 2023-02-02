@@ -7,34 +7,36 @@ grand_parent: Community
 
 # How do I generate a secret key for FeatureBase authentication?
 
-Featurebase-keygen is a command-line application supplied with FeatureBase Community. The resulting key is:
+Generate a `secret-key` used when setting up TLS authentication
 
-[EXPERT INFORMATION NEEDED HERE PLEASE!
-
-* QUERY > 128/256 encryption?
-* QUERY > Is it like a standard keygen?
-* QUERY > How does this differ from a standard keygen?
-* QUERY > Does this relate to the TLS mutual stuff found in /com-config-tls-mutual?
-* QUERY > Any other useful background information?
-
-QUERY > I can't get this to work in a docker container. Does it REALLY exist??
-
-]
+* [Learn more about TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
 
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
+* cd to `~/featurebase/opt`
 
-## Generate a secret key
-
-* Open a terminal then `CD` to the FeatureBase installation directory.
-* Run the following command:
+## Syntax
 
 ```
-featurebase keygen
+./featurebase keygen --[flags]
 ```
 
-* Follow on-screen instructions to create the key.
+## Flags
+
+| Flag | Description | Further information |
+|---|---|---|
+| `h` or `help` | FeatureBase keygen help |
+| `l` or `length` | Integer value for the length of the key | Defaults to 32 |
+
+## Generate a key
+
+* Run the `./featurebase keygen` command
+* Copy the secret key for use in TLS authentication.
+
+## Next step
+
+* [Setup TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
 
 ## Further information
 

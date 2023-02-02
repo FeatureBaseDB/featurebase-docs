@@ -44,6 +44,7 @@ molecula-consumer-csv \
 {% include /com-ingest/com-ingest-flag-common-testing.md %}
 
 {% include /com-ingest/com-ingest-flag-csv-sql-auth.md %}
+{% include /com-ingest/flag-common-tls.md%}
 
 {% include /com-ingest/com-ingest-flag-extra-auth.md %}
 

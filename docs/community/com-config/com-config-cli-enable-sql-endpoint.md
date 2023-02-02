@@ -16,7 +16,7 @@ The SQL endpoint allows you to execute SQL statements:
 ## Syntax
 
 ```sh
-~/featurebase/opt$ ./featurebase cli --<flag>
+~/featurebase/opt$ ./featurebase cli --[flags]
 ```
 
 ## Common Flags

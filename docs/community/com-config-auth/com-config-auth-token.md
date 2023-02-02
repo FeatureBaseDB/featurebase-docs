@@ -25,17 +25,22 @@ These tokens are used to authenticate your user when TLS authentication is enabl
 * {% include /com-install/com-install-before-begin.md %}
 * [Learn how to enable TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
 * Setup a password manager or other safe storage for your tokens
+* cd to `~/featurebase/opt`
 
-## Obtain tokens via CLI
-
-* Open a Terminal then `cd` to the FeatureBase installation directory.
-* Run the following command:
+## Syntax
 
 ```
-featurebase auth-token
+featurebase auth-token --[<flags>]
 ```
 
-* Follow the prompts to obtain your auth-token.
+## Flags
+
+| Flag | Description | Further information |
+|---|---|---|
+| `h` or `help` | Auth token help |  |
+| `host string` | HTTPS host string `featurebase-host:port` | Default: `https://localhost:10101` |
+{% include /com-ingest/flag-common-tls.md%}
+
 
 ## Obtain tokens from the lattice UI
 
