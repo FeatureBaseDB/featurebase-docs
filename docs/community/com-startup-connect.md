@@ -35,10 +35,15 @@ FeatureBase Community does not currently support Apple Safari. Install Mozilla F
 cd ~/featurebase/opt
 ```
 
+## Start the FeatureBase Community server
+
 * Start the server
 ```
-./featurebase server
+./featurebase server [--sql.endpoint-enabled]
 ```
+
+{: .note}
+`--sql.endpoint-enabled` allows you to run SQL commands in the terminal.
 
 ## How do I connect to FeatureBase community?
 
