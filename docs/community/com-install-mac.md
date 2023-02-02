@@ -18,11 +18,11 @@ Follow these instructions to install FeatureBase on a MacOS environment.
 
 ## Install FeatureBase on Linux
 
-{% include /community/com-install-linux-source.md %}
+{% include /com-install/com-install-linux-source.md %}
 
 ## Authorize FeatureBase with MacOS Gatekeeper system
 
-{% include /community/com-issue-mac-gatekeeper-source.md %}
+{% include /com-install/com-issue-mac-gatekeeper-source.md %}
 
 ## Next step
 
