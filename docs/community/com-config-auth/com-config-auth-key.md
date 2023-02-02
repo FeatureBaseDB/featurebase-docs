@@ -37,9 +37,3 @@ Generate a `secret-key` used when setting up TLS authentication
 ## Next step
 
 * [Setup TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
-
-## Further information
-
-The FeatureBase key is used in the following circumstances:
-
-* [Setting up TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)

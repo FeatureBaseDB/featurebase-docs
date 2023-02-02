@@ -7,7 +7,7 @@ grand_parent: Community
 
 # How do I setup TLS authentication for FeatureBase Community?
 
-You can enable TLS authentication for FeatureBase Community by adding values to
+INTRO TEXT HERE
 
 ## Before you begin
 
