@@ -11,7 +11,7 @@ has_toc: false
 
 FeatureBase Community is open source and available to install:
 * natively on Linux or Mac environments
-* Windows via the Linux Virtual Machine
+* Windows via a Linux Virtual Machine or Windows Subsystem for Linux
 
 {% include page-toc.md %}
 
