@@ -10,39 +10,51 @@ The SQL endpoint allows you to execute SQL statements:
 
 ## Before you begin
 
-
+{% include /com-install/com-install-before-begin.md %}
 * cd to `~/featurebase/opt`
 
-## FeatureBase SQL Command Line Interface flags
-
-Obtain a full list of CLI flags by running `./featurebase cli --help`
-
-### Syntax
+## Syntax
 
 ```sh
 ~/featurebase/opt$ ./featurebase cli --<flag>
 ```
 
-### Flags
+## Common Flags
 
-| Flag | Description | Example |Further information |
+| Flag | Description | Example | Further information |
 |---|---|---|---|
-| `client-id string` | Cognito Client ID for FeatureBase Cloud access. |  |  |
-| `db-id string` | DatabaseID |  |  |
-| `email string` | Email address for FeatureBase Cloud access. |  |  |
-| `h` or `help` | CLI help |  |  |
+| `h` or `help` | CLI help | `./featurebase cli --help` |  |
 | `history-path string` | Path for SQL execution history files |  |  |
+| `db-id string` | DatabaseID where table is found. |  |  |
+
+## FeatureBase Community connection flags
+
+| Flag | Description | Example | Further information |
+|---|---|---|---|
 | `host string` | Featurebase hostname | default `localhost` |  |
-| `org-id string` | Cloud OrganizationID |  |
-| `password string` | Password for FeatureBase Cloud access. |  |  |
 | `port string` | FeatureBase port | default `10101` |  |
+
+## FeatureBase Cloud connection flags
+
+| Flag | Description | Example | Further information |
+|---|---|---|---|
+| `email string` | FeatureBase Cloud user email address |  |  |
+| `password string` | FeatureBase Cloud user password. |  |  |
+| `org-id string` | Cloud OrganizationID |  |
 | `region string` | Cloud region for FeatureBase Cloud access | us-east-2 |  |
+| `db-id string` | DatabaseID where table is found. |  |  |
+
+## AWS Cognito client connection flags
+
+| Flag | Description | Example | Further information |
+|---|---|---|---|
+| `client-id string` | AWS Cognito Client ID for FeatureBase Cloud access. |  | [AWS Cognito client](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-cognito-identity/index.html){:target="_blank"} |
 
 ## Examples
 
-### Enable SQL endpoint on the command line
+### Run SQL queries on your local server
 
-* Run `./featurebase cli`
+`./featurebase cli`
 
 ### Run SQL against commands FeatureBase Cloud
 
