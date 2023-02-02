@@ -13,10 +13,10 @@ grand_parent: Community
 
 * {% include /com-install/com-install-before-begin.md %}
 * [Configure TLS authentication](/docs/community/com-config-auth/com-config-tls-auth)
+* CD to `~/featurebase/opt`
 
 ## Step 1 - create group permissions file
 
-* CD to `~/featurebase/opt`
 * Create the file with `touch permissions.yaml`
 
 ## Step 2 - add the permissions
