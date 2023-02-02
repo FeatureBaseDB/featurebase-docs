@@ -1,33 +1,42 @@
-### Step 1: Download a FeatureBase release for your environment
+### Step 1 - Establish the correct release to install
 
-FeatureBase supports MacOS (darwin), ARM and AMD (intel) processors.
+* Open [FeatureBase releases on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases){:target="_blank"}
+* Make note of the:
+  * version (e.g., 3.30.0)
+  * kernel (darwin or linux)
+  * processor (arm or amd)
 
-* [Open the FeatureBase releases page on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases){:target="_blank"}
-* Download release to the `/Downloads` directory.
+### Step 2 - Download the release
 
-### Step 2: Untar the install files to the FeatureBase directory
+There are two ways to download the release:
 
-Open a terminal window then enter the following commands from your `user/home` directory to:
-* create a FeatureBase directory
-* untar the FeatureBase release to that directory
+| Method | Instructions | Destination |
+|---|---|---|
+| GUI | Click the installer to download. | Default downloads directory |
+| Terminal | Substitute the version, kernel and processor in the following command:<br/>`curl -L https://github.com/FeatureBaseDB/featurebase/releases/download/v<version>/featurebase-v<version>-<kernel>-<processor>64.tar.gz -o featurebase.tgz` |
 
-```
-mkdir ~/featurebase
-cd Downloads
-tar xvfz featurebase-<version>-community-<os><architecture>.tar.gz -C ~/featurebase
-```
+### Step 2: Untar release files
 
-Where:
-* `<version>` is the FeatureBase version (e.g., v1.30.)
-* `<os>` = linux or darwin for Apple Mac
-* `<architecture>` = AMD for intel, or ARM
-
-### Step 3: Move the files to new directories
-
-* Enter the following commands to move the folders to a new directory:
+* Open a terminal then create a destination directory for the release:
 
 ```
-cd ~/featurebase
+mkdir featurebase
+```
+
+* CD to the download directory then run the following command:
+
+```
+tar xvfz featurebase.tgz -C ~/featurebase
+```
+
+### Step 3: Setup application directory
+
+* CD to the `featurebase` directory
+* Move
+
+* Enter the following commands to setup the application directory
+
+```
 mv featurebase-* opt
 mv idk-* idk
 ```
