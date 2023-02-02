@@ -32,9 +32,7 @@ tar xvfz featurebase.tgz -C ~/featurebase
 ### Step 3: Setup application directory
 
 * CD to the `featurebase` directory
-* Move
-
-* Enter the following commands to setup the application directory
+* Setup the application directory using the following commands:
 
 ```
 mv featurebase-* opt
