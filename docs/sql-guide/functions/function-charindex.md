@@ -21,7 +21,7 @@ charindex(substring,expr,[position])
 |---|---|---|---|---|
 | `substring` | string | Character or string to be identified in the input string | Yes |  |
 | `expr` | string | Input string to search for `substring` | Yes |  [SQL expressions](/docs/sql-guide/expressions/expressions-home) |
-| `position` | int | Position in `expr` to begin search for `substring`. Defaults to `0` | Optional |  |
+| `position` | int | Position in `expr` to begin search for `substring`. | Optional | Defaults to `0` |
 
 ## Returns
 
@@ -63,4 +63,4 @@ RESULTS
 
 | _id | charindex|
 |---|---|
-|   1 | 5 |
+| 1 | 5 |
