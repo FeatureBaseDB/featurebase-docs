@@ -1,8 +1,11 @@
 ---
-title: Enable SQL endpoint
+title: SQL Endpoint
 layout: default
-parent: Community
+parent: Community configuration
+grand_parent: Community
 ---
+
+# SQL Endpoint
 
 The SQL endpoint allows you to execute SQL statements:
 * on the command-line
@@ -50,16 +53,7 @@ The SQL endpoint allows you to execute SQL statements:
 |---|---|---|---|
 | `client-id string` | AWS Cognito Client ID for FeatureBase Cloud access. |  | [AWS Cognito client](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-cognito-identity/index.html){:target="_blank"} |
 
-## Examples
-
-### Run SQL queries on your local server
-
-`./featurebase cli`
-
-### Run SQL against commands FeatureBase Cloud
-
-
 ## Further information
 
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [Run SQL over an HTTP endpoint](/docs/community/com-api/com-api-sql-endpoint)
+* [Run SQL over an HTTP endpoint](/docs/community/com-api/old-sql-endpoint)
