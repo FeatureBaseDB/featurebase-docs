@@ -14,7 +14,7 @@ INTRO TEXT HERE
 * [Learn about TLS (Transport Layer Security)](https://en.wikipedia.org/wiki/Transport_Layer_Security){:target="_blank"}
 * {% include /com-install/com-install-before-begin.md %}
 * [Generate a `secret-key`](/docs/community/com-config-auth/com-config-auth-key)
-* [Add FeatureBase as an Azure AD application](/docs/community/com-config-azure-sso)
+* [Add FeatureBase as an Azure AD application](/docs/community/com-config-aut/com-config-azure-sso)
 * [Setup FeatureBase Group permissions](/docs/community/com-config-auth/com-config-group-permissions)
 
 ## FeatureBase configuration file location
@@ -61,7 +61,7 @@ Authentication is added to the `featurebase.conf` file which can be found in dif
 | `scopes` | SAML IdP API value | Yes | [SAML 2.0 scopes and permissions](https://learn.microsoft.com/en-us/azure/active-directory/develop/scopes-oidc){:target="_blank"} |
 | `secret-key` | Secret key used to secure inter-node communication in a FeatureBase cluster. | Yes | [Generate a secret key](/docs/community/com-config-auth/com-config-auth-key) |
 | `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config-auth/com-config-group-permissions) |
-| `query-log-path` | Set path for query audit log | Optional | [Setup the query audit log](/docs/community/com-config-auth/com-config-log-audit-query) |
+| `query-log-path` | Set path for query audit log | Optional | <!--[Setup the query audit log](/docs/community/com-config-auth/com-config-log-audit-query)--> |
 | `configured-ips` | Admin permissions are granted for any IP or subnet in this list.  If not included or not set, no IPs are allow-listed. | Optional | Domain names and `0.0.0.0/0` are not allowed. |
 
 ## Additional information
