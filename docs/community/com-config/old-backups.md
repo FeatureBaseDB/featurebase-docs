@@ -89,8 +89,8 @@ Seperate components are backed up in a specific order, such that:
 
 In order to use TLS, the following options are required (for `backup` & `restore` commands):
 - `--tls.ca-certificate`: the CA certitificate to use for verifying the server certificate (defaults to CA certs installed to system)
-- `--tls.certificate`: the TLS client certificate to use for [mTLS](/docs/community/com-auth/old-enable-mutual-tls) authentication
-- `--tls.key`: the client key corresponding to the client certificate (for [mTLS](/docs/community/com-auth/old-enable-mutual-tls))
+- `--tls.certificate`: the TLS client certificate to use for [mTLS](/docs/community/com-config-auth/com-config-tls-mutual) authentication
+- `--tls.key`: the client key corresponding to the client certificate (for [mTLS](/docs/community/com-config-auth/com-config-tls-mutual))
 
 For example:
 ```
