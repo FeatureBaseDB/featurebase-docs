@@ -15,10 +15,19 @@ INTRO TEXT HERE
 * {% include /com-install/com-install-before-begin.md %}
 * [Generate a `secret-key`](/docs/community/com-config-auth/com-config-auth-key)
 * [Add FeatureBase as an Azure AD application](/docs/community/com-config-azure-sso)
+* [Setup FeatureBase Group permissions](/docs/community/com-config-auth/com-config-group-permissions)
+
+## FeatureBase configuration file location
+
+Authentication is added to the `featurebase.conf` file which can be found in different locations depending on the application and software version you have installed.
+
+| Application | Version | Directory path |
+|---|---|---|
+| FeatureBase | 1.0+ | `/featurebase-install-directory/opt/featurebse.conf` |
+| Molecula | 2.0+ | `/etc/featurebase.conf` |
+| Pilosa | 2.0+ | `/etc/featurebase.conf` |
 
 ## Authentication syntax
-
-Add values to `/featurebase-install-directory/opt/featurebase.conf`
 
 ```
 [auth]
@@ -41,7 +50,7 @@ Add values to `/featurebase-install-directory/opt/featurebase.conf`
 
 | Key | Description | Required | Further information |
 |---|---|---|---|
-| `enable=true` |  |  |  |
+| `enable=true` | Activate IdP authentication for FeatureBase |  |  |
 | `client-id` | SAML 2.0 Identity Provider (IdP) obtained from Azure AD Applications Overview | Yes | |
 | `client-secret` | As for `client-id`.  | Yes | Obtain from the IdP |
 | `authorize-url` | IdP obtained from Applications Overview > Endpoints. | Yes | Use `v2` links if there are two versions available. |
@@ -54,6 +63,10 @@ Add values to `/featurebase-install-directory/opt/featurebase.conf`
 | `permissions` | Path for group permissions file that maps group IDs to index-level access. | Yes | [Add group permissions](/docs/community/com-config-auth/com-config-group-permissions) |
 | `query-log-path` | Set path for query audit log | Optional | [Setup the query audit log](/docs/community/com-config-auth/com-config-log-audit-query) |
 | `configured-ips` | Admin permissions are granted for any IP or subnet in this list.  If not included or not set, no IPs are allow-listed. | Optional | Domain names and `0.0.0.0/0` are not allowed. |
+
+## Additional information
+
+{% include /com-config-auth/com-config-group-tls-additional.md %}
 
 ## Examples
 
@@ -70,10 +83,13 @@ Add values to `/featurebase-install-directory/opt/featurebase.conf`
   {redirect-base-url = "<SAML IdP value>"}
   logout-url = "https://login.microsoftonline.com/common/oauth2/v2.0/logout"
   scopes = ["https://graph.microsoft.com/.default", "offline_access"]
-  {secret-key = "de399a76250b6d85f2a7b70d7b5543ca350ee5e4d3bbf552075a4374126aa361"}
+  {secret-key = "<AZURE-AD-SECRET-KEY"}
   {permissions = "/featurebase-directory/permissions.yaml"}
 ```
 
+<!--
 ## Next step
 
-* [Add group permissions](/docs/community/com-config-auth/com-config-group-permissions)
+* [Configure audit logs]
+
+-->
