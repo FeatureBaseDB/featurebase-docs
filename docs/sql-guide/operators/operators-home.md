@@ -10,8 +10,7 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
-
+{% include /sql-guide/sql-guide-before-begin.md %}
 
 ## Unary Operators
 

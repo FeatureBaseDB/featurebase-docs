@@ -11,7 +11,7 @@ parent: SQL guide
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
+{% include /sql-guide/sql-guide-before-begin.md %}
 
 ## identifier
 ![expr](/assets/images/sql-guide/identifier.svg)
