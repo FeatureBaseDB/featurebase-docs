@@ -13,7 +13,7 @@ SQL statements can be executed in the Query editor.
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 
 ## SELECT statement
 
