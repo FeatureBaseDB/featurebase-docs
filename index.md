@@ -33,10 +33,8 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 |---|---|---|
 | Deployment | [Cloud deployment](/docs/cloud/cloud-signup) | [Community installation](/docs/community/com-home) |
 | Regional Deployment | No | Yes |  |
-<!-- Removed because neither product supports, therefore it's not useful
 | Automated Scale Up/Down|  No | No |   |
 | Automated Scale In/Out |  No | No |   |
--->
 
 ## Data Ingestion
 
@@ -51,7 +49,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 
 | Feature | Cloud | Community | Further information |
 |---|---|---|---|
-| Query UI  | [Query cloud tables](/docs/cloud/cloud-query-data) | [Query community tables](/docs/community/com-query-home) | Cloud queries are limited to 6mb and/or 30sec  |
+| Query UI  | [Query cloud tables](/docs/cloud/cloud-query-data) | [Query community tables](/docs/community/com-query-home) |  |
 | FeatureBase SQL - HTTPS | Yes | No | Any language/tool (Python, Go, etc) that can read over HTTPS  |
 | FeatureBase PQL - HTTPS |  Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
 | gRPC Endpoint | No | [Community gRPC endpoint](/docs/community/com-api/old-grpc-api) |   |
