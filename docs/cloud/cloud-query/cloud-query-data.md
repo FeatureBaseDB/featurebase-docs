@@ -31,6 +31,9 @@ You will receive an error ("Network Error") if a limit is exceeded.
 
 ## Executing A Query
 
+{: important}
+Cloud queries are limited to 6mb and/or 30sec
+
 In the User interface, clicking the “Query” section on the left hand navigation bar will take you to a page where you can explore data using PQL & SQL statements. The text editor allows for multiple queries to exist in the same pane. Individual queries are separated by newlines with only whitespace. You should first pick a database to query against in the top right corner. This will default to the oldest database created. You can redirect any query to a particular database by aliasing/prepending it with `“{<database name>}”`. Queries can be run by either clicking the run button or with a key combination of `“Ctrl + Enter"` or `Cmd + Enter"`.
 
 Queries in the user interface have an automatic limit of 100 records applied but can be adjusted up to a 10k maximum. This limit is to protect users from accidentally running taxing queries against their databases and impacting production performance. After running a query, you will see data populated in a tabular format below the text editor. You are free to explore your data and sort it by the columns returned. If you’d like to hide some of the returned columns, you can click “Columns” directly above the tabular results. You can also export this data to your local machine by clicking “Export” and either downloading a CSV or printing the results.
