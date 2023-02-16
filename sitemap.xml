@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-states/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-user-invite/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/com-ingest-source-sql/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-table-create-show/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-create/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/my-account/cloud-user-activate-account/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-config/com-config-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-insert/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-ascii/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/programmaticaccess/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-write-clearrow/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-union/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/old-ingester-configuration/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-user-deactivate/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/old-kafka-ingester-configuration/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-ref-user-roles/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-all/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-arrow/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-ltrim/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/operators/operators-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-limit/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-types-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-constrow/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-config/old-config-flags/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-troubleshooting/issue-limit-reached/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-api/old-grpc-api/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/concepts/overview-bitmap-data/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-upper/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-type-stringset/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-tables/cloud-table-manage/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-apply/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-char/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-write-set/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-intersect/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-config/old-scaling/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-auth/old-enable-mutual-tls/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-min/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-ref-user-move/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-query/old-python-library/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-api/old-apis/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-troubleshooting/com-issue-sql/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-stringsplit/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-replaceall/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/sql-guide-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/concepts/glossary/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-len/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-query/com-query-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-percentile/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-users-view-search/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-create-sample/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-shape/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/concepts/time-to-live/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-tables-show/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-insert-bulk-ndjson-example/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-type-int/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-user-edit-role/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-troubleshooting/cloud-troubleshooting-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-query/cloud-query-data/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-config/com-config-cli-enable-sql-endpoint/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/com-ingest-flags-sql/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-monitoring/old-set-up-log-rotation/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-api/com-api-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-query/old-grafana-connector/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-write-delete/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-sum/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-write-store/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-insert-bulk-csv-example/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-reverse/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/concepts/glossary</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-distinct/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-configuration/configuration-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/old-ingest-dataframe/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-type-id/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-config/old-resize-cluster/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-tables/cloud-table-create/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/old-consumer-examples/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-api/old-http-endpoint/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-home</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-api/old-sql-endpoint/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-delete/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-startup-connect/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-rows/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/com-ingest-example-csv/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-rtrim/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-signup/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-config/old-size-featurebase-database/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-difference/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-insert-bulk/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-type-timestamp/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-xor/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-write-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-config/old-backups/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/com-ingest-example-sql/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-row/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/com-ingest-source-csv/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/my-account/cloud-account-manage/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/my-account/cloud-user-personal-update/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-org/cloud-org-update-billing/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-user-edit-details/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-tables/cloud-table-delete/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-setcontainsall/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/old-setup/old-community-quickstart-guide/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statements-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-not/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-tables/cloud-table-query-endpoint/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-trim/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/com-ingest-manage/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-unionrows/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-type-string/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-setcontains/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-login/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/old-ingesters/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-monitoring/old-monitoring/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-quickstart/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-troubleshooting/issue-int-limitations/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-manage/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-users-manage/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-topn/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-api/old-web-ui/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/concepts/concepts-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-install-mac/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-columns-show/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-substring/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/my-account/cloud-user-move/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-type-idset/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-topk/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-monitoring/com-monitoring-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-org/cloud-org-manage/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-sort/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-auth/old-auth-enable/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/uioverview/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-table-create/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-type-bool/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-home</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-tables/cloud-table-add-column/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-install-windows/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/data-types/data-type-decimal/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-select/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/old-setup/old-architecture/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-max/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-monitoring/old-datadog/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/concepts/a-true-crime-story/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-count/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/concepts/overview-data-modeling/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-write-clear/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-troubleshooting/cloud-trial-account/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-auth/com-auth-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-includescolumn/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-options/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/functions-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-extract/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-install-linux/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-users/cloud-ref-user-status/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/old-setup/old-getting-started/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/concepts/time-quantums/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-ingest/cloud-ingest-manage/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-troubleshooting/com-troubleshooting-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/old-setup/old-setup-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-org/cloud-org-update-tech-contact/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-troubleshooting/com-issue-mac/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/old-setup/old-hostsystem/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/pql-guide/pql-read-groupby/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/community/com-ingest/com-ingest-flags-csv/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-tables/cloud-table-delete-column/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/functions/function-setcontainsany/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/cloud/cloud-org/cloud-org-address/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/expressions/expressions-home/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+        <url>
+            <loc>https://docs.featurebase.com/docs/sql-guide/statements/statement-table-alter/</loc>
+            <lastmod>2023-02-16</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1.0</priority>        
+        </url>
+        
+    </urlset>
