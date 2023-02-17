@@ -1,6 +1,6 @@
-This table provides mapping between [SQL data types](/docs/sql-guide/data-types/data-types-home) and [PQL data types](/docs/pql-guide/pql-home)
+This table provides mapping between [SQL data types](/docs/sql-guide/data-types/data-types-home) and internal data types used by the application.
 
-| SQL Data Type | FeatureBase Data Type |
+| SQL Data Type | Internal data types |
 |---|---|
 | [bool](/docs/sql-guide/data-types/data-type-bool) | bool |
 | [int](/docs/sql-guide/data-types/data-type-int) | int |
