@@ -8,7 +8,7 @@ nav_order: 4
 
 # BULK INSERT statement
 
-BULK INSERT is used to insert multiple rows of data to a target FeatureBase Table from a specified source.
+BULK INSERT is allows for lightweight data transformation from source to target in one request.
 
 Sources can include:
 * file
@@ -75,7 +75,7 @@ BULK INSERT
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
 | `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. | Optional |  |
-| `x'records'` | CSV or NDJSON records as a string literal to be used with the `STREAM` option | Required for STREAM | Not supported for `FORMAT 'PARQUET'` |
+| `x'records'` | CSV or NDJSON records as a string literal. | Required for STREAM | Not supported for `FORMAT 'PARQUET'` |
 | `WITH` | Pass one or more statement level options. | Optional |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |
@@ -173,6 +173,20 @@ with
     input 'FILE';
 ```
 -->
+
+### Bulk insert statement that reads from a CSV file
+
+```sql
+bulk replace
+    into insert_test (_id, int1, string1, timestamp1)
+    map (0 id, 1 int, 2 string)
+    transform (@0, @1, @2, current_timestamp)
+from
+    '/dev/queries/insert_test.csv'
+with
+    format 'CSV'
+    input 'FILE';
+```
 
 ## Further information
 
