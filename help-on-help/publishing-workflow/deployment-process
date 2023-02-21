@@ -1,39 +1,56 @@
 # FeatureBase-docs deployment process
 
-Deploying changes to production involves a *Staging* step where changes are tested then approved, followed by an explicit approval process before pushing to production.
+Deploying help updates involves:
+
+* Updating docs
+* Staging docs
+* Deploying docs to production
 
 ## Deployment dependencies
 
 * `main` branch -- the equivalent of "staging"
-* `gh-pages` -- the equivalent of "production"
-* Both PRs should include reviewers @gregthrone and/or @ljsinclair (as of 2023-02-17)
-* Github Action settings found in `/.github/workflows`
+* `gh-pages` branch -- the equivalent of "production"
+* Initial PR with updates should **always** include @gregthrone and/or @ljsinclair as reviewers (as of 2023-02-17 -- a new process is being designed to streamline this)
+* Github Action settings found in `/.github/workflows` which handle the deployment of `main` to `gh-pages`
 
-## Workflow 1 - changes merged to `main` (staging)
+## Workflow 1 - Update docs and create PR
 
-This process works as usual and is summarised below:
+The user (an engineer, programmer, writer) performs the following tasks:
 
-* Changes made in branch
-* Test on local build of branch
-* Visual check on changed content to make sure nothing broken
-* Run broken link check on local build and fix broken **internal** links
-* Pull Request to compare **main** with **branch**.
-* Approvals process with changes
-* Merge to **main**
+* Clone the repository and create a new branch from `main`
+* Makes changes in the branch
+* Builds locally to test -- [Local build instructions]()
+* Visual check of content to verify everything works as expected
+* Runs broken link check -- [Broken link check]()
+* Create Pull Request to compare **main** with **branch**.
+* Engages in discussion with SME and FeatureBase Docs administrators to fix any issues
 
-## Workflow 2 - test staging and push to `gh-pages` (production)
+## Workflow 2 - Approve and merge with `main` branch
 
-* Checkout **main** and pull changes to be sure
-* Test on local build of branch
+featurebase-docs administrator:
+* approves and merges the PR with `main`
+* deletes the previous branch to keep things tidy
+
+## Workflow 3 - test staging and create PR
+
+These steps will be performed by featurebase-docs administrator.
+
+* Checkout **main** and pull changes
+* Test the branch builds
 * Visual check on changed content to make sure nothing broken
 * Run broken link check on local build and fix broken **internal** links
 * Pull Request to compare **main** with **gh-pages**
-* Approvals process with changes
-* Merge to **gh-pages**
 
-## Github action
+## Workflow 4 - approval and push to production
 
-At this point, a GitHub action takes over which can be monitored here:
+These steps will be performed by FeatureBase-docs administrator:
+
+* Perform PR approvals process
+* Approve the changes and merge with `gh-pages`
+
+## Workflow 5 - Github action automation
+
+The Github action that performs the final push can be monitored here:
 
 https://github.com/FeatureBaseDB/featurebase-docs/actions
 
