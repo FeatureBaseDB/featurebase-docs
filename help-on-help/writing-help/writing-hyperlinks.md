@@ -9,7 +9,7 @@ Hyperlink colours (including those in navigation bars) are governed by the `$lin
 | Type of link | Structure | Example |
 |---|---|---|
 | Internal | `[meaningful-anchor-text](/docs/folder/filename)` | `[Learn how to create tables in FeatureBase cloud](/docs/cloud/cloud-tables/cloud-table-create)` |
-| External | `[meaningful-anchor-text](https://url){:target="_blank"}` | [Visit the FeatureBase website](https://featurebase.com){:target="_blank"} |
+| External | `[meaningful-anchor-text](https://url){:target="_blank"}` | [Visit the FeatureBase website](https://featurebase.com) |
 
 ## Rule 1 - write meaningful anchor text
 
@@ -24,11 +24,11 @@ Single word anchor text is sub-optimal, especially if you use the same word over
 
 | Example | Problem | Solution |
 |---|---|---|
-| "...once you've created a database you should create your tables and you can learn how to do that [here](#). Once you've done that you can begin ingesting data..." | It's harder to see a single hyperlink in a block of text, which means users will miss them. | "Once you've created a database you should create your tables.</br>* [Learn how to manage and create tables](#)<br/> When that task is complete, you can..." |
+| "...once you've created a database you should create your tables and you can learn how to do that [here](#). Once you've done that you can begin ingesting data..." | It's harder to see a single hyperlink in a block of text, which means users will miss them. | **Next step**<br/>Now your database has been created, add tables.<br/>* [Learn how to manage and create tables](#) |
 
 ### Other issues with single-word hyperlinks
 
-* No-one searches on a single word unless it's a recognised keyword (which itself can be > 1 word), therefore things like `click [here](#)` are useless.
+* No-one searches on a single word unless it's a recognised keyword (which itself can be > 1 word), therefore `click [here](#)` is useless.
 * Single words won't be indexed in search so that again makes information harder to find.
 * They're not accessible for screen readers or people with sight impairment.
 
@@ -40,7 +40,7 @@ This means the user is being bounced from one place to another without being abl
 
 Yes, there are undoubtedly many different related pages and lots of information available
 
-But this information needs to be presented in a logical order.
+But this information still needs to be presented in a logical order.
 
 * Background information should be given **before** or **after** the explanation.
 * Background information **required** to understand or perform a task belongs under the **Before you begin** heading
