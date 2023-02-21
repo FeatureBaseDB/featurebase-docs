@@ -2,7 +2,7 @@
 
 These guidelines are not an exhaustive list but we've done our best to cover the basics
 
-## Rule 0: There is no 0 (zero)
+## Rule 0 -- There is no 0 (zero)
 
 All numbered sequences start with 1 (one) when writing procedures and processes.
 
@@ -10,7 +10,7 @@ The interpretation of “0” as the starting point in a sequence relies on tech
 
 If you have prerequisites or requirements, put them under the **Before you begin** heading, especially if they're already documented elsewhere.
 
-## Rule 1: Separate explanations from procedural instructions
+## Rule 1 -- Separate explanations from procedural instructions
 
 Never put explanations and instructions in a single paragraph. When you do this you force your audience to read the whole thing in order to determine what they need to do next.
 
@@ -18,12 +18,12 @@ Never put explanations and instructions in a single paragraph. When you do this 
 
 ### Example of mixed explanation and procedural content
 
-># Configure FeatureBase Service Unit
+>## Configure FeatureBase Service Unit
 >On Linux, we recommend running FeatureBase as a systemd service unit. To learn more about systemd and units, go [here](#). To configure the FeatureBase service unit’s function, we’ll create a .service file.
 
 Can be rewritten as:
 
-># How do I configure the FeatureBase Service Unit?
+>## How do I configure the FeatureBase Service Unit?
 >
 >We recommend running FeatureBase as a systemd service unit.
 >
