@@ -14,7 +14,7 @@ Open a terminal window then enter the following commands from your `user/home` d
 ```
 mkdir ~/featurebase
 cd Downloads
-tar xvfz featurebase-<version>-community-<os><architecture>.tar.gz -C ~/featurebase
+tar xvfz featurebase-<version>-<os><architecture>.tar.gz -C ~/featurebase
 ```
 
 Where:
