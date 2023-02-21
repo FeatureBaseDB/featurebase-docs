@@ -1,54 +1,16 @@
 # Help on help
 
-The help-on-help folder contains all information regarding:
-* publishing workflow
-* building locally
-* style guide
-* writing help
+Help-on-help explains all aspects of writing, building, testing and deploying featurebase documentation to staging then to production.
 
-## Publishing workflow
+* [Writing help](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/writing-help) -- How to go about planning, and writing content
+* [Style Guide](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/style-guide) -- How pages and content should be structured
+* [Building locally](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/local-build) -- how to build the site locally using a local version of Jekyll or with Docker
+* [Publishing workflow](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/publishing-workflow) -- an overview of how site changes are made, approved, staged then published
 
-* An o
+Also included in the folder are source files and instructions for generating BNF diagrams used in the SQL Guide:
 
+* [Regenerate SQL SVG](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/regenerate-sql-svg)
 
+## Need support?
 
-
-
-
-## just-the-docs theme information and customizations
-
-* [theme information](/help-on-help/theme.md)
-* [just the docs homepage](https://just-the-docs.github.io/just-the-docs/)
-* [Just the docs GitHub Pages setup information](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md)
-
-## Local builds
-
-* [local build](/help-on-help/local-build.md)
-* [local build with docker](/help-on-help/local-build-with-docker.md)
-* [local build with VM](/help-on-help/local-build-with-vm.md)
-
-## Where files go
-
-Files are organized in subfolders under the following parents:
-
-* Content -- `/docs`
-* Images -- `/assets/images`
-* Common include files -- `/_includes`
-
-There's also a **[file naming standard](/help-on-help/file-naming.md)** that keeps things neat and tidy.
-
-## Writing and planning content
-
-* [planning content](/help-on-help/writing-planning-content.md)
-* [modular content not endless scroll](/help-on-help/writing-modular-not-endless-scroll.md)
-* [writing content](/help-on-help/writing-content.md)
-* [making hyperlinks useful](/help-on-help/writing-hyperlinks.md)
-* [inserting material icons for cloud UI icons](/help-on-help/material-icons.md)
-* [avoid duplication with common "include" files](/help-on-help/common-include.md)
-* [sparingly highlight important information with callout boxes](/help-on-help/content-callouts.md)
-* [setup nested nodes in site navigation](/help-on-help/content-nav-nesting-folder.md)
-* [set the page order in site navigation](/help-on-help/content-nav-page-order.md)
-
-## Testing for broken links
-
-* [broken link check with python script or htmlproofer via docker](/help-on-help/broken-link-check.md)
+* [Contact the Docs feedback team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you have questions.
