@@ -112,18 +112,3 @@ Therefore, you **MUST** include:
 * dependencies under the **Before you begin** heading
 * all steps in a logical order
 * useful links under **Further information**
-
-
-
-
-
-
-
-
-
-
-
- tends to occur when help pages are written in a rush without consulting what's there first.
-
-* Determine the information the user needs to know by reviewing what's already in help
-* Look at the structure of the system being documented and see if there are changes of context (e.g., Adding a column can only be done once you've created a table)
