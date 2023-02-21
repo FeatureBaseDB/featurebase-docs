@@ -19,7 +19,11 @@ NOTE: `/help-on-help` is explicitly excluded from the site build in the `/_confi
 
 Help on help is broken into the following folders:
 
-* [Publishing workflow]() -- an overview of how site changes are made, approved, staged then published
-* [Building locally]() -- how to build the site locally using a local version of Jekyll or with Docker
-* [Style Guide]() -- How pages and content should be structured
-* [Writing help]() -- How to go about planning, and writing content
+* [Publishing workflow](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/publishing-workflow) -- an overview of how site changes are made, approved, staged then published
+* [Building locally](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/local-build) -- how to build the site locally using a local version of Jekyll or with Docker
+* [Style Guide](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/style-guide) -- How pages and content should be structured
+* [Writing help](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/writing-help) -- How to go about planning, and writing content
+
+Also included in the folder are source files and instructions for generating BNF diagrams used in the SQL Guide
+
+* [Regenerate SQL SVG](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/regenerate-sql-svg)
