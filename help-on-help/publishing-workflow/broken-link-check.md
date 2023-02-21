@@ -7,50 +7,27 @@ There are two methods:
 * All systems -- dead_link_seeker.py
 * PC/Linux/Docker -- htmlproofer
 
-## Mac -- dead_link_seeker.py
+## Before you begin
 
-The script can be run from any machine with Python and its dependencies installed.
+* [Build FeatureBase-docs locally](/help-on-help/local-build)
 
-### Before you begin
+## Python approach
 
-* [Install Python](https://www.python.org/downloads/)
+Suitable for Any operating system and requires Python to be installed
 
-### Install dependecies
+* [Python broken link check for Mac or other OS](/broken-link-check)
 
-The script requires `urllib`, `collections` and `HTMLParser` packages
+## HTMLproofer Gem approach
 
-### Run dead_link_seeker.py
+* [HTMLproofer gem for PC or Docker]()
 
-```python
-python dead_link_seeker.py {address} [v]
-```
+## What you're looking for
 
-Arguments:
-
-| Argument | Description | Example |
-|---|---|---|
-| address | local or remote address | http://127.0.0.1:4000/<br/>http://docs.featurebase.com/ |
-| v | verbose mode |
-
-## PC/Linux/Docker -- htmlproofer
-
-### Before you begin
-
-HTMLproofer requires HTML site files which can be created:
-* by running `jekyll serve` or `jekyll build` commands on a local setup
-* created automatically when running the Docker image
-
-### Run the command from the repository directory
-
-Either CD to `/featurebase-docs` or open a terminal on a running Docker image.
-```
-exec htmlproofer ./_site
-```
+* Any link that is broken or unavailable
 
 ## False positives
 
-When testing on a local build the following will appear as false positives:
-
+Some links won't resolve regardless:
 * External sites
 * Email addresses
 * Images without <alt> tags
