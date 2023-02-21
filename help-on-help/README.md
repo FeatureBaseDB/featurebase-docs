@@ -1,6 +1,19 @@
 # Help on help
 
-Guidance on writing content in the `/featurebase-docs` repository
+The help-on-help folder contains all information regarding:
+* publishing workflow
+* building locally
+* style guide
+* writing help
+
+## Publishing workflow
+
+* An o
+
+
+
+
+
 
 ## just-the-docs theme information and customizations
 

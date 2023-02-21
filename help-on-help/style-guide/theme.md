@@ -1,8 +1,10 @@
 # Theme configuration
 
-The featurebase-docs repository is a Jekyll system and uses the *Just the Docs* gemfile theme. This means theme files are automatically kept up to date, but custom changes are possible.
+* [Just-the-docs theme help](https://just-the-docs.github.io/just-the-docs/)
 
-I've made the following customizations.
+
+
+
 
 ## Content files
 
