@@ -16,3 +16,10 @@ If you fail to plan, you plan to fail. This goes double for documentation becaus
 ## Writing rules
 
 * [Writing rules](/help-on-help/writing-help/writing-rules)
+* [Procedure writing rules](/help-on-help/writing-help/writing-procedures)
+* [Hyperlink writing rules](/help-on-help/writing-help/writing-hyperlinks)
+* [Highlighting important text](/help-on-help/writing-help/writing-content-callouts)
+
+## Need support?
+
+* [Contact the Docs feedback team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you have questions.

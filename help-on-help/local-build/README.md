@@ -21,3 +21,7 @@ Two methods are available to run a local build of the `/featurebaseDB/featurebas
 ## Local build using a Virtual Machine
 
 * [local build with VM](/help-on-help/local-build-with-vm.md)
+
+## Need support?
+
+* [Contact the Docs feedback team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you have questions.

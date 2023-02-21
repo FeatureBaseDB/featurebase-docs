@@ -38,3 +38,7 @@ Each help page found in `/docs` requires specifically structured YAML header con
 Both products use Google Material icons which are loaded to the site automatically.
 
 * [Inserting Google Material icons](/help-on-help/style-guide/material-icons)
+
+## Need support?
+
+* [Contact the Docs feedback team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you have questions.

@@ -53,7 +53,7 @@ An overview of folder structure and files
 
 Site help is found in `/help-on-help`
 
-* [Featurebase docs help-on-help](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help)
+* [Featurebase docs help-on-help](/help-on-help)
 
 ## Need support?
 

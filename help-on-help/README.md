@@ -4,7 +4,7 @@ Help-on-help explains all aspects of writing, building, testing and deploying fe
 
 * [Writing help](/help-on-help/writing-help) -- How to go about planning, and writing content
 * [Style Guide](/help-on-help/style-guide) -- How pages and content should be structured
-* [Building locally](/help-on-help/local-build) -- how to build the site locally using a local version of Jekyll or with Docker
+* [Building locally](/help-on-help/local-build) -- how to build the site locally using a Virtual Machine or with Docker
 * [Publishing workflow](/help-on-help/publishing-workflow) -- an overview of how site changes are made, approved, staged then published
 
 Also included in the folder are source files and instructions for generating BNF diagrams used in the SQL Guide:

@@ -67,3 +67,7 @@ The Github action that performs the final push can be monitored here:
 https://github.com/FeatureBaseDB/featurebase-docs/actions
 
 Successful completion of the action deploys the changes to the production site at **docs.featurebase.com**
+
+## Need support?
+
+* [Contact the Docs feedback team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you have questions.
