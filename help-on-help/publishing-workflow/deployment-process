@@ -13,6 +13,12 @@ Deploying help updates involves:
 * Initial PR with updates should **always** include @gregthrone and/or @ljsinclair as reviewers (as of 2023-02-17 -- a new process is being designed to streamline this)
 * Github Action settings found in `/.github/workflows` which handle the deployment of `main` to `gh-pages`
 
+## The participants
+
+* FeatureBase employees who update the docs
+* Featurebase-docs admins (as of 2023-02-21 these are @gregthrone and @ljsinclair)
+* FeatureBase Subject Matter Experts (SME)
+
 ## Workflow 1 - Update docs and create PR
 
 The user (an engineer, programmer, writer) performs the following tasks:
@@ -22,16 +28,22 @@ The user (an engineer, programmer, writer) performs the following tasks:
 * Builds locally to test -- [Local build instructions]()
 * Visual check of content to verify everything works as expected
 * Runs broken link check -- [Broken link check]()
+
+## Workflow 2 - Create the PR and get it reviewed
+
+**IMPORTANT** FeatureBase-docs PRs **must** be reviewed by FeatureBase-docs administrators (as of 2023-02-21 these are @gregthrone and @ljsinclair)
+
 * Create Pull Request to compare **main** with **branch**.
+* Invites SMEs and FeatureBase Administrators to review
 * Engages in discussion with SME and FeatureBase Docs administrators to fix any issues
 
-## Workflow 2 - Approve and merge with `main` branch
+## Workflow 3 - Approve and merge with `main` branch
 
 featurebase-docs administrator:
 * approves and merges the PR with `main`
 * deletes the previous branch to keep things tidy
 
-## Workflow 3 - test staging and create PR
+## Workflow 4 - test staging and create PR
 
 These steps will be performed by featurebase-docs administrator.
 
@@ -41,14 +53,14 @@ These steps will be performed by featurebase-docs administrator.
 * Run broken link check on local build and fix broken **internal** links
 * Pull Request to compare **main** with **gh-pages**
 
-## Workflow 4 - approval and push to production
+## Workflow 5 - approval and push to production
 
 These steps will be performed by FeatureBase-docs administrator:
 
 * Perform PR approvals process
 * Approve the changes and merge with `gh-pages`
 
-## Workflow 5 - Github action automation
+## Workflow 6 - Github action automation
 
 The Github action that performs the final push can be monitored here:
 
