@@ -8,9 +8,9 @@ All numbered sequences start with 1 (one) when writing procedures and processes.
 
 The interpretation of “0” as the starting point in a sequence relies on technical knowledge we can’t guarantee in end users.
 
-If you have prerequisites or requirements, put them under the “Before you begin” heading, especially if they’ve already been documented elsewhere.
+If you have prerequisites or requirements, put them under the **Before you begin** heading, especially if they're already documented elsewhere.
 
-# Rule 1: Separate explanations from procedural instructions
+## Rule 1: Separate explanations from procedural instructions
 
 Never put explanations and instructions in a single paragraph. When you do this you force your audience to read the whole thing in order to determine what they need to do next.
 
