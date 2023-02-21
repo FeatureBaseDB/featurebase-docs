@@ -5,9 +5,7 @@ Two methods are available to run a local build of the `/featurebaseDB/featurebas
 * Docker
 * Virtual Machine
 
-NOTE: You **can** install locally if desired, however this is **not** recommended because Ruby gem conflicts will occur if you:
-* have an existing Ruby/Jekyll setup
-* intend to setup additional Ruby/Jekyll sites on your local machine
+**IMPORTANT** We do **not** recommend installing Ruby and Jekyll on your operating system as gemfile conflicts **will occur**, ESPECIALLY if you've already setup for the old help repository `/molecula/documantion`
 
 ## Before you begin
 
