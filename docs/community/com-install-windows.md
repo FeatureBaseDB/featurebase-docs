@@ -23,7 +23,7 @@ FeatureBase is a Linux application which does not run natively on Windows operat
 
 ## Install FeatureBase community on the virtual environment
 
-{% include /community/com-install-linux-source.md %}
+{% include /com-install/com-install-linux-source.md %}
 
 ## Next step
 
