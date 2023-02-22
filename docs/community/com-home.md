@@ -14,8 +14,6 @@ FeatureBase Community can be deployed on multiple environments and regionally an
 * command-line import from CSV, SQL or Kafka data sources
 * command-line backup and restore
 
-Organizations can setup remote monitoring with DataDog or Prometheus metrics
-
 {% include page-toc.md %}
 
 ## Architecture diagram
@@ -26,13 +24,6 @@ Organizations can setup remote monitoring with DataDog or Prometheus metrics
 
 * [Learn about importing data to FeatureBase Community](/docs/community/com-ingest/com-ingest-manage)
 
-## Observability
-
-FeatureBase community supports:
-
-* [Datadog monitoring](/docs/community/com-monitoring/old-datadog)
-* Prometheus
-
 ## FeatureBase nodes
 
 FeatureBase Community is a masterless multi-node system with a single node type.
@@ -42,20 +33,8 @@ Like other common distributed data stores, it supports:
 * cluster resizing
 * distributed query processing
 
-## Default Ports
-
-By default, FeatureBase uses the following ports:
-
-| Port | Used for | Required? | Further information |
-|---|---|---|
-| 10101 | FeatureBase UI, HTTP(S) queries, SQL queries | Yes | [HTTPS endpoint](/docs/community/com-api/old-http-endpoint) |
-| 10301 | Cluster membership | For clustering | [embedded etcd](https://pkg.go.dev/github.com/coreos/etcd/embed) |
-| 10401 | Cluster schema | For clustering | [embedded etcd](https://pkg.go.dev/github.com/coreos/etcd/embed) |
-| 20101 | gRPC, Python library | Yes | [gRPC API](/docs/community/com-api/old-grpc-api) |
-
-{: .note}
->Default ports can be changed in the `featurebase.conf` file.
->[Learn more about FeatureBase Configuration](/docs/community/com-config/com-config-home)
+<!--heading in include: "Monitoring and Observability"-->
+{% include /com-config/com-config-supported-monitoring.md %}
 
 ## Installation requirements
 
@@ -70,6 +49,16 @@ The FeatureBase Community application requires:
 ## Install FeatureBase Community
 
 FeatureBase Community can be used under the [Apache version 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html)
+
+{% include /com-install/com-install-filename-std.md %}
+
+### Install FeatureBase
+
+Choose an appropriate install guide for your system:
+
+* [Linux]
+* [MacOS]
+* [Windows WSL]
 
 | Supported operating system | Further information |
 |---|---|
