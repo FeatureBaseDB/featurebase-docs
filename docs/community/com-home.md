@@ -16,6 +16,10 @@ FeatureBase Community can be deployed on multiple environments and regionally an
 
 {% include page-toc.md %}
 
+## Before you begin
+
+* FeatureBase Community can be used under the [Apache version 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html)
+
 ## Architecture diagram
 
 ![FeatureBase Network Architecture Diagram](/assets/images/community/featurebase-architecture-diagram.png "FeatureBase Network Architecture Diagram")
@@ -46,26 +50,16 @@ The FeatureBase Community application requires:
 
 [Learn more about FeatureBase system requirements](/docs/community/com-config/old-size-featurebase-database)
 
-## Install FeatureBase Community
-
-FeatureBase Community can be used under the [Apache version 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html)
-
+<!-- Heading in file: Release file naming standard -->
 {% include /com-install/com-install-filename-std.md %}
 
-### Install FeatureBase
+## Install FeatureBase Community
 
-Choose an appropriate install guide for your system:
-
-* [Linux]
-* [MacOS]
-* [Windows WSL]
-
-| Supported operating system | Further information |
-|---|---|
-| Linux | [Install on Linux](/docs/community/com-install-linux) |
-| Apple Macintosh | [Install on Mac](/docs/community/com-install-mac) |
-| Windows Subsystem for Linux | [Install on Windows](/docs/community/com-install-windows) |
-| All | [FeatureBase Docker setup](https://www.featurebase.com/blog/featurebase-with-a-simple-docker-deployment){:target="_blank"} |
+Choose an installation method:
+* [Install on Linux](/docs/community/com-install-linux)
+* [Install on MacOS](/docs/community/com-install-mac)
+* [Install on Windows](/docs/community/com-install-windows)
+* [Install using Docker](https://www.featurebase.com/blog/featurebase-with-a-simple-docker-deployment){:target="_blank"}
 
 ## Troubleshooting
 
@@ -74,5 +68,7 @@ Refer to troubleshooting pages if you experience issues:
 * [FeatureBase Community troubleshooting](/docs/community/com-troubleshooting/com-troubleshooting-home)
 
 ## Next step
+
+Once installed, startup the server and connect to the GUI
 
 * [Startup and connect to FeatureBase Community](/docs/community/com-startup-connect)
