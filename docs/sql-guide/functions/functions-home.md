@@ -12,6 +12,10 @@ has_toc: false
 
 {% include page-toc.md %}
 
+## Before you begin
+
+{% include /sql-guide/sql-guide-before-begin.md %}
+
 ## Function call operator
 
 ![expr](/assets/images/sql-guide/function_call.svg)
@@ -43,7 +47,9 @@ has_toc: false
 * [REPLACEALL()](/docs/sql-guide/functions/function-replaceall)
 * [REVERSE()](/docs/sql-guide/functions/function-reverse)
 * [RTRIM()](/docs/sql-guide/functions/function-rtrim)
+* [STR()](/docs/sql-guide/functions/function-str)
 * [STRINGSPLIT()](/docs/sql-guide/functions/function-stringsplit)
 * [SUBSTRING()](/docs/sql-guide/functions/function-substring)
 * [TRIM()](/docs/sql-guide/functions/function-trim)
 * [UPPER()](/docs/sql-guide/functions/function-upper)
+
