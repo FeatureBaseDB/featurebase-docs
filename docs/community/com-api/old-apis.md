@@ -5,7 +5,7 @@ parent: Community API
 grand_parent: Community
 ---
 
-# APIs
+# FeatureBase Community APIs
 
 FeatureBase provides three APIs built in: HTTP, gRPC, and the PostgreSQL wire protocol. Currently they are not all functionally equivalent. Notably, SQL is only supported through gRPC, while most administrative functions and data ingest are only available through the HTTP interface.
 
