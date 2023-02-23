@@ -13,6 +13,7 @@ The SQL endpoint allows you to execute SQL statements:
 
 ## Before you begin
 
+* [Start the FeatureBase Community server](/docs/community/com-startup-connect) with the `--sql.endpoint-enabled` flag
 * CD to the `/featurebase/opt` directory
 
 ## Start the FeatureBase SQL CLI
