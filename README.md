@@ -1,6 +1,12 @@
 # FeatureBase Docs
 
-FeatureBase-docs is a Jekyll site and uses the *Just the Docs* gemfile theme which was setup based on the following instructions:
+[![Deploy Jekyll site to Pages](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml)
+
+## Introduction
+
+FeatureBase-docs is a Jekyll site deployed to GitHub Pages.
+
+The site uses the *Just the Docs* gemfile theme which was setup based on the following instructions:
 
 * [Just the docs gemfile theme](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md)
 
