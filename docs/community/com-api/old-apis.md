@@ -1,11 +1,11 @@
 ---
-title: APIs
+title: Community APIs
 layout: default
 parent: Community API
 grand_parent: Community
 ---
 
-# APIs
+# FeatureBase Community APIs
 
 FeatureBase provides three APIs built in: HTTP, gRPC, and the PostgreSQL wire protocol. Currently they are not all functionally equivalent. Notably, SQL is only supported through gRPC, while most administrative functions and data ingest are only available through the HTTP interface.
 
@@ -79,12 +79,16 @@ When creating a transaction, an options object may be supplied as the request bo
 ```
 
 For an exclusive transaction, the optional boolean parameter
-"pause-snapshots" may be specified. A `true` value indicates that the snapshot
-queue should be paused once this transaction becomes active. *Note that pausing
-the snapshot queue can cause some write operations to block indefinitely.*
-If a transaction requests that the snapshot queue be paused, it will not
-report itself "active" until the snapshot queue has completed any outstanding
-snapshots and paused itself. The full sequence of events, then, is:
+"pause-snapshots" may be specified.
+
+A `true` value indicates that the snapshot queue should be paused once this transaction becomes active.
+
+{: .note}
+Pausing the snapshot queue can cause some write operations to block indefinitely.
+
+If a transaction requests that the snapshot queue be paused, it will not report itself "active" until the snapshot queue has completed any outstanding snapshots and paused itself.
+
+The full sequence of events, then, is:
 
 * Stop allowing new transactions to start.
 * Wait for transactions to complete.
@@ -92,8 +96,7 @@ snapshots and paused itself. The full sequence of events, then, is:
 * Wait for snapshot queue to report that it's successfully paused.
 * Transition to active state.
 
-Exclusive transactions which pause the snapshot queue should not write to
-the database; this is used as a way to block activity so backups can be made.
+Exclusive transactions which pause the snapshot queue should not write to the database; this is used as a way to block activity so backups can be made.
 
 When requesting information about a transaction, an object is returned:
 
@@ -108,21 +111,13 @@ When requesting information about a transaction, an object is returned:
 }
 ```
 
-To mark a transaction as complete, POST to `/transaction/{id}/finish`, and
-get back the same information you'd have gotten from a GET for that transaction.
-The finish request may block if any existing queries are running as part of
-that transaction, but immediately prevents any new queries from starting for
-that transaction.
+To mark a transaction as complete, POST to `/transaction/{id}/finish`, and get back the same information you'd have gotten from a GET for that transaction.
 
-Queries can be associated with a transaction by including
-`X-Pilosa-Transaction: {id}` in their request headers. A transaction's idle
-timer may be reset by any query against it, even a query which doesn't write
-anything.
+The finish request may block if any existing queries are running as part of that transaction, but immediately prevents any new queries from starting for that transaction.
 
-When an exclusive transaction is created, it does not necessarily start out
-in the `active` state. It immediately blocks the starting of new non-exclusive
-transactions, but does not transition to an `active` state until existing
-transactions complete. During this time, a GET to it should return:
+Queries can be associated with a transaction by including `X-Pilosa-Transaction: {id}` in their request headers. A transaction's idle timer may be reset by any query against it, even a query which doesn't write anything.
+
+When an exclusive transaction is created, it does not necessarily start out in the `active` state. It immediately blocks the starting of new non-exclusive transactions, but does not transition to an `active` state until existing transactions complete. During this time, a GET to it should return:
 
 ```json
 {
@@ -130,11 +125,7 @@ transactions complete. During this time, a GET to it should return:
 }
 ```
 
-If multiple exclusive transactions are requested, they become active
-sequentially in the order the requests came in, and the snapshot queue and
-other transactions are not permitted to resume until the exclusive transactions
-all complete.
-
+If multiple exclusive transactions are requested, they become active sequentially in the order the requests came in, and the snapshot queue and other transactions are not permitted to resume until the exclusive transactions all complete.
 
 ##### Using Transactions with Backups
 
@@ -203,8 +194,7 @@ Finishing the transaction removes it from the transaction store
 completely. A 200 response indicates that this was completed
 successfully. The "finish" request will also return a transaction
 response object which contains the transaction as it looked at the
-time of its removal. Notably, if the transaction was active, it will
-contain `active: true` though it does not exist any more and cannot be
+time of its removal. Notably, if the transaction was active, it will contain `active: true` though it does not exist any more and cannot be
 used.
 
 ##### Implementation Notes
@@ -215,29 +205,21 @@ When creating a new transaction, it is created on every node in the
 cluster and persisted to disk.
 
 Timeouts only expire when there has been *no activity* on a transaction for the timeout duration.
+
 Any activity on the transaction may extend the deadline (unimplemented).
 
-When finishing a transaction, it is first finished on the primary node and
-then the finish is broadcast to the cluster before returning to the
-client.
+When finishing a transaction, it is first finished on the primary node and then the finish is broadcast to the cluster before returning to the client.
 
-When getting an exclusive transaction, if the transaction is active,
-it will be returned only if and when all nodes agree.
+When getting an exclusive transaction, if the transaction is active, it will be returned only if and when all nodes agree.
 
-The primary node forwards all requests to every other node so they can stay
-in sync. If the primary node doesn't hear back from a node, the request
-fails. The primary node only reaches out to active nodes, so if the
-cluster is in state `DEGRADED`, things can still continue.
+The primary node forwards all requests to every other node so they can stay in sync. If the primary node doesn't hear back from a node, the request fails. The primary node only reaches out to active nodes, so if the cluster is in state `DEGRADED`, things can still continue.
 
-If a node is down and comes back up, it needs to synchronize its state
-with the primary node (unimplemented).
+If a node is down and comes back up, it needs to synchronize its state with the primary node (unimplemented).
 
 There is a separate transaction manager and transaction store.
 
 The transaction store is responsible for persisting info about
 transactions, while the transaction manager handles all the logic (at the node level).
-
-
 
 ## Ingest Interfaces
 
