@@ -3,7 +3,7 @@ title: SQL guide
 layout: default
 has_children: true
 nav_order: 5
-has_toc: false
+has_toc: true
 ---
 
 # FeatureBase SQL guide
@@ -13,12 +13,12 @@ FeatureBase supports different types of queries that are discussed further in th
 
 {% include page-toc.md %}
 
-{: .important}
-FeatureBase Community users must [Enable the SQL endpoint when they startup the server](/docs/community/com-startup-connect) to execute SQL commands.
-
 ## Before you begin
 
 {% include /cloud/cloud-db-create-before-begin.md %}
+
+{: .note}
+FeatureBase Community can run SQL through the FeatureBase CLI by [Enabling the SQL endpoint at startup](/docs/community/com-startup-connect)
 
 ## Statements
 
@@ -39,3 +39,4 @@ FeatureBase Community users must [Enable the SQL endpoint when they startup the 
 ## Expressions
 
 * [SQL expressions](/docs/sql-guide/expressions/expressions-home)
+

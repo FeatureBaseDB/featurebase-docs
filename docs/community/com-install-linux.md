@@ -22,3 +22,7 @@ Follow these instructions to install FeatureBase on a Linux environment.
 ## Next step
 
 * [Startup and connect to FeatureBase](/docs/community/com-startup-connect)
+
+## Further information
+
+* [Learn how to configure the Linux host system](/docs/community/old-setup/old-hostsystem)

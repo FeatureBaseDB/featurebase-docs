@@ -26,25 +26,26 @@ FeatureBase does not currently run on Mac Safari
 {: .note}
 FeatureBase Community does not currently support Apple Safari. Install Mozilla Firefox or Google Chrome on your system instead.
 
-## How do I start the FeatureBase Community server?
-
-*  Open a terminal window.
-*  cd to the `/opt` directory:
-
-```
-cd ~/featurebase/opt
-```
-
 ## Start the FeatureBase Community server
 
-* Start the server
+* Open a terminal
+* CD to the `~/featurebase/opt` directory
+* Run the following command:
+
 ```
-./featurebase server [--sql.endpoint-enabled]
+./featurebase server --sql.endpoint-enabled
 ```
+
+## Confirm FeatureBase server is running
 
 {: .note}
-`--sql.endpoint-enabled` allows you to run SQL commands in the terminal.
+localhost:10101 is the default port for the FeatureBase Community GUI. This can be changed in configuration settings.
 
+Run this command from any directory FeatureBase has been installed.
+
+```
+curl localhost:10101
+```
 ## How do I connect to FeatureBase community?
 
 FeatureBase Community is available by default at:
@@ -56,3 +57,7 @@ http://localhost:10101/
 ## Troubleshooting
 
 * [Issue: FeatureBase Community won't startup on Mac](/docs/community/com-troubleshooting/com-issue-mac)
+
+## Further information
+
+* [Learn about the SQL Endpoint](/docs/community/com-config/com-config-cli-enable-sql-endpoint)
