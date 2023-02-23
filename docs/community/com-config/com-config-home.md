@@ -7,10 +7,15 @@ nav_order: 8
 has_toc: false
 ---
 
+## Configure FeatureBase Community
+{: .no_toc }
+
 FeatureBase features can be enabled or disabled via
 
 * Command-line flags
 * TOML files
+
+{% include page-toc.md %}
 
 ## Before you begin
 
