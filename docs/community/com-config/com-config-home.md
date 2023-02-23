@@ -19,7 +19,7 @@ FeatureBase features can be enabled or disabled via
 
 ## Before you begin
 
-* {% include /com-install/com-install-before-begin.md %}
+{% include /com-install/com-install-before-begin.md %}
 
 ## How do I setup a FeatureBase cluster?
 
