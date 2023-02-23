@@ -22,7 +22,7 @@ Nesting requires the following YAML keys to be defined in the page header:
 | Key | Description |Level 1 | Level 2 | Level 3 |
 |---|---|---|---|
 | title | Page title in nav |yes | yes | yes |
-| has_children | Indicates one or more child pages | For 1+ L2 pages | For 1+ L3 pages | n/a |
+| has_children: [true|false] | `true` indicates page has children | For 1+ L2 pages | For 1+ L3 pages | n/a |
 | parent | Page one level up in the navigation under which the current page belongs | n/a | L1 title | L2 title |
 | grandparent | Page that contains the parent | n/a | n/a | L1 title |
 
