@@ -4,23 +4,27 @@ Sidebar navigation is governed by YAML at the top of the markdown files found in
 
 IMPORTANT: the folder structure is ignored
 
+## Before you begin
+
+* [Theme guidance on page order and navigation](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/){:target="_blank"}
+
 The theme supports 3 level of pages
 
-| Level | Description | Optional |
-|---|---|---|
-| Home | HTML homepage | One or more L1 pages |
-| L1 | Appears at navigation root. | One or more L2 pages |
-| L2 | Appears beneath L1 page | One or more L3 pages |
-| L3 | Appears beneath L2 page |  |
+| Level | Description | Optional pages you can add | Example |
+|---|---|---|---|
+| Home | HTML homepage | One or more L1 pages | /index.html |
+| L1 | Appears at navigation root. | One or more L2 pages | /docs/cloud/cloud-home.md |
+| L2 | Appears beneath L1 page | One or more L3 pages | /docs/cloud/cloud-databases/cloud-db-manage.md |
+| L3 | Appears beneath L2 page | /docs/cloud/cloud-databases/cloud-db-create.md |
 
-Nesting requires the following keys to be defined:
+Nesting requires the following YAML keys to be defined in the page header:
 
-| Key | L1 | L2 | L3 |
-|---|---|---|
-| title | yes | yes | yes |
-| has_children | For 1+ L2 pages | For 1+ L3 pages | n/a |
-| parent | n/a | L1 title | L2 title |
-| grandparent | n/a | n/a | L1 title |
+| Key | Description |Level 1 | Level 2 | Level 3 |
+|---|---|---|---|
+| title | Page title in nav |yes | yes | yes |
+| has_children | Indicates one or more child pages | For 1+ L2 pages | For 1+ L3 pages | n/a |
+| parent | Page one level up in the navigation under which the current page belongs | n/a | L1 title | L2 title |
+| grandparent | Page that contains the parent | n/a | n/a | L1 title |
 
 ## Example YAML
 
@@ -40,7 +44,7 @@ has_toc: false        # no auto-generated TOC of L1 pages beneath
 
 ```yaml
 title: page title        # page title appears in navigation
-layout: default          # default layout in remote theme
+layout: default          # standard layout for all pages
 has_children: false      # page has no L2 pages
 nav_order: 1             # page order in navigation
 has_toc: false           # auto-generated list of L2 pages
