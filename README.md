@@ -57,9 +57,8 @@ An overview of folder structure and files
 
 ## Further information
 
-Site help is found in `/help-on-help`
-
-* [Featurebase docs help-on-help](/help-on-help)
+* [Site help in `/help-on-help`](/help-on-help)
+* [Just-The-Docs Theme help](https://just-the-docs.github.io/just-the-docs/){:target="_blank"}
 
 ## Need support?
 

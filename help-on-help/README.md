@@ -2,9 +2,9 @@
 
 Help-on-help explains all aspects of writing, building, testing and deploying FeatureBase documentation to staging then to production.
 
-## SITE BUILD
+## Before you begin
 
-[![Deploy Jekyll site to Pages](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml)
+* Get a [High level overview](/README.md)
 
 ## Reference pages
 
