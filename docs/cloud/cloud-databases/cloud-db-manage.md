@@ -34,6 +34,8 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 {% include /cloud-db/cloud-summary-db-version.md %}
 
+* [Learn about why your database's version says "Unknown"](/docs/cloud/cloud-databases/cloud-db-versions)
+
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md %}
