@@ -6,12 +6,24 @@ grand_parent: Cloud
 nav_order: 4
 ---
 
-# Why is my database's version "Unknown"?
+# Additional database version information
 {: .no_toc }
 
 {% include page-toc.md %}
 
-## Here are a few common situations where a database's version will be set to "Unknown"
+
+## Where can I find my database version?
+
+### Option 1: View in your list of databases
+1. Select databases on the sidebar
+2. View your database's version under the version column
+
+### Option 2: View in your database's summary
+1. Select databases on the sidebar
+2. Click on your database's name
+3. View your database's version in the summary
+
+## Why is my database's version "Unknown"?
 
 | Database Status | Explanation | 
 |---|---|
