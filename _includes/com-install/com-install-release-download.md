@@ -1,6 +1,8 @@
 ## Step 2 - Download the release
 
-You can right-click the appropriate release and download to your `/downloads` directory, or use terminal commands:
+Right-click the appropriate release on the GitHub releases page, then download to your `/downloads` directory.
+
+Alternatively, you can download using the terminal.
 
 * Open a terminal
 * CD to the `/downloads` directory
