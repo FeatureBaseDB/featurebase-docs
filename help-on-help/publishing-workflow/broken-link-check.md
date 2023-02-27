@@ -9,30 +9,26 @@ There are two methods:
 
 ## Before you begin
 
-* [Build FeatureBase-docs locally](/help-on-help/local-build)
+* [Build FeatureBase-docs locally](/help-on-help/local-build/README.md)
+
+## What is revealed in a broken link check
+
+* Missing ALT tags -- ALT tags are important for accessibility purposes and should be fixed if possible.
+* Broken external links -- Manually check these because the broken-link-checks don't deal with external links
+* Email addresses -- Manually check because checker doesn't deal with them
+* Broken internal links -- these **must** be fixed
 
 ## Python approach
 
 Suitable for Any operating system and requires Python to be installed
 
-* [Python broken link check for Mac or other OS](/broken-link-check)
+* [Python broken link check for Mac or other OS](/help-on-help/publishing-workflow/broken-link-check-python.md)
 
 ## HTMLproofer Gem approach
 
-* [HTMLproofer gem for PC or Docker]()
+* [HTMLproofer gem for PC or Docker](/help-on-help/publishing-workflow/broken-link-check-htmlproofer.md)
 
-## What you're looking for
 
-* Any link that is broken or unavailable
-
-## False positives
-
-Some links won't resolve regardless:
-* External sites
-* Email addresses
-* Images without <alt> tags
-
-TIP: Add false positives to the `dead_link_seeker.py` `false_postitive` list at the end of the file.
 
 
 

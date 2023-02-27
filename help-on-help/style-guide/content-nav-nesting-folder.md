@@ -6,7 +6,7 @@ IMPORTANT: the folder structure is ignored
 
 ## Before you begin
 
-* [Theme guidance on page order and navigation](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/){:target="_blank"}
+* [Theme guidance on page order and navigation](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/)
 
 The theme supports 3 level of pages
 

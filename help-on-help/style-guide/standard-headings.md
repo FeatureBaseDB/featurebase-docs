@@ -2,8 +2,8 @@
 
 ## Before you begin
 Review the following help-on-help before deciding on the standard headings you need to use.
-* [Planning content](/writing-help/writing-planning-content)
-* [Writing rules](/writing-help/writing-rules)
+* [Planning content](help-on-help/writing-help/writing-planning-content.md)
+* [Writing rules](help-on-help/writing-help/writing-rules.md)
 
 ## Standard headings used throughout help
 

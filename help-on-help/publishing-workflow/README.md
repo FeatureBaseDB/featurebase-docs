@@ -25,9 +25,9 @@ The user (an engineer, programmer, writer) performs the following tasks:
 
 * Clone the repository and create a new branch from `main`
 * Makes changes in the branch
-* Builds locally to test -- [Local build instructions]()
+* Builds locally to test -- [Local build instructions](/help-on-help/local-build/README.md)
 * Visual check of content to verify everything works as expected
-* Runs broken link check -- [Broken link check]()
+* [Runs broken link check](/help-on-help/publishing-workflow/broken-link-check)
 
 ## Workflow 2 - Create the PR and get it reviewed
 
@@ -51,7 +51,8 @@ These steps will be performed by featurebase-docs administrator.
 * Test the branch builds
 * Visual check on changed content to make sure nothing broken
 * Run broken link check on local build and fix broken **internal** links
-* Pull Request to compare **main** with **gh-pages**
+* If errors > create new branch to fix errors and Jira assigned to appropriate person
+* If no errors > create pull request to compare **main** with **gh-pages**
 
 ## Workflow 5 - approval and push to production
 
@@ -62,11 +63,9 @@ These steps will be performed by FeatureBase-docs administrator:
 
 ## Workflow 6 - Github action automation
 
-The Github action that performs the final push can be monitored here:
-
-https://github.com/FeatureBaseDB/featurebase-docs/actions
-
 Successful completion of the action deploys the changes to the production site at **docs.featurebase.com**
+
+* [View GitHub action that builds then deploys to GH-pages and production](https://github.com/FeatureBaseDB/featurebase-docs/actions)
 
 ## Need support?
 

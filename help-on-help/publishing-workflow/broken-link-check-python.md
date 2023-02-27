@@ -2,17 +2,12 @@
 
 The script can be run from any machine with Python and its dependencies installed.
 
+## What is revealed in a broken link check
 
-## What you're looking for
-
-* Any link that is broken or unavailable
-
-## False positives
-
-Some links won't resolve regardless:
-* External sites
-* Email addresses
-* Images without <alt> tags
+* Missing ALT tags -- ALT tags are important for accessibility purposes and should be fixed if possible.
+* Broken external links -- Manually check these because the broken-link-checks don't deal with external links
+* Email addresses -- Manually check because checker doesn't deal with them
+* Broken internal links -- these **must** be fixed
 
 TIP: Add false positives to the `dead_link_seeker.py` `false_postitive` list at the end of the file.
 

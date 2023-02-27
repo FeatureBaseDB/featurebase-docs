@@ -2,7 +2,7 @@
 
 ## Before you begin
 
-* [Learn about nesting pages beneath a parent](/help-on-help/style-guide/content-nav-nesting-folder)
+* [Learn about nesting pages beneath a parent](/help-on-help/style-guide/content-nav-nesting-folder.md)
 
 ## Page order
 

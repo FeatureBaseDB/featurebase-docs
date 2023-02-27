@@ -4,6 +4,7 @@ Two methods are available to run a local build of the `/featurebaseDB/featurebas
 
 * Docker
 * Virtual Machine
+* Docker on Windows Subsystem for Linux
 
 **IMPORTANT** We do **not** recommend installing Ruby and Jekyll on your operating system as gemfile conflicts **will occur**, ESPECIALLY if you've already setup for the old help repository `/molecula/documantion`
 
@@ -16,11 +17,15 @@ Two methods are available to run a local build of the `/featurebaseDB/featurebas
 
 ## Local build using Docker
 
-* [local build with docker](/help-on-help/local-build-with-docker.md)
+* [local build with docker](/help-on-help/local-build/local-build-with-docker.md)
 
 ## Local build using a Virtual Machine
 
-* [local build with VM](/help-on-help/local-build-with-vm.md)
+* [local build with VM](/help-on-help/local-build/local-build-with-vm.md)
+
+## WSL Docker
+
+* [Local build with WSL2](/help-on-help/local-build/local-build-with-wsl2.md)
 
 ## Need support?
 
