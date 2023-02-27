@@ -7,7 +7,7 @@ nav_order: 1
 
 # How do I install FeatureBase Community on Linux?
 
-Follow these instructions to install FeatureBase on a Linux environment.
+Install FeatureBase Community in a Linux environment such as Ubuntu.
 
 {% include /page-toc.md %}
 
@@ -17,7 +17,19 @@ Follow these instructions to install FeatureBase on a Linux environment.
 
 ## Install FeatureBase on Linux
 
-{% include /com-install/com-install-linux-source.md %}
+### Step 1 - Establish the correct release to install
+
+* Open [FeatureBase releases on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases){:target="_blank"}
+* Make note of the:
+  * version (e.g., 3.32.0)
+  * kernel = `linux`
+  * processor (arm or amd)
+
+{% include /com-install/com-install-release-download.md%}
+
+{% include /com-install/com-install-release-untar-download.md%}
+
+{% include /com-install/com-install-setup-install-dir.md %}
 
 ## Next step
 
