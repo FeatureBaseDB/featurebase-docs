@@ -1,2 +1,1 @@
 Each database is displayed with a version - this represents the version of Featurebase that the database is running. 
-When the database doesn't have a version (such as when it is being created) the version will display as "Unknown".
