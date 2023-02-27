@@ -15,7 +15,7 @@ FeatureBase features can be enabled or disabled via
 * Command-line flags
 * TOML files
 
-<!-- commented out because waiting for PR to be approved and merged
+<!-- commented out because waiting for com-config-auth PR to be approved and merged
 
 {% include page-toc.md %}
 
