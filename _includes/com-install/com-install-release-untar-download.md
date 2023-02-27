@@ -1,4 +1,4 @@
-### Step 3: Untar release files
+## Step 3: Untar release files
 
 * Open a terminal then create a destination directory for the release:
 

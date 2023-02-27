@@ -1,4 +1,4 @@
-### Step 2 - Download the release
+## Step 2 - Download the release
 
 You can right-click the appropriate release and download to your `/downloads` directory, or use terminal commands:
 

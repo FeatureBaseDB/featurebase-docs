@@ -15,9 +15,7 @@ Install FeatureBase Community in a Linux environment such as Ubuntu.
 
 * Learn about [FeatureBase Community](/docs/community/com-home)
 
-## Install FeatureBase on Linux
-
-### Step 1 - Establish the correct release to install
+## Step 1 - Establish the correct release to install
 
 * Open [FeatureBase releases on GitHub](https://github.com/FeatureBaseDB/FeatureBase/releases){:target="_blank"}
 * Make note of the:
