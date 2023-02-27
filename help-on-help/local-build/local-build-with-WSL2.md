@@ -11,6 +11,7 @@ IMPORTANT: WSL2 will consume resources as it requires. There is no way to limit 
 * [Install Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install)
 * [Install WSL2]https://learn.microsoft.com/en-us/windows/wsl/install
 * [Install Ubuntu on WSL2](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
+* [Install Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/)
 * `ubuntu` is the WSL ubuntu installation. Alter as required
 
 ## Step 1 - install Docker
@@ -23,12 +24,15 @@ WARNING: Installation will fail if WSL1 is installed
 | Install Docker on WSL | `curl https://get.docker.com/ | bash` |
 | Mod user to use Docker without sudo | `usermod -aG docker <username>` |
 | Shutdown Ubuntu from powershell | `wsl -t ubuntu` |
-| Start Docker daemon | `service docker start` |
 
-## Step 2 - mount local filesystem
+## Step 2 - start docker then mount local filesystem
+
+NOTE: `service docker start` does not work and you need to start Docker Desktop instead
 
 | Purpose | Command |
 |---|---|
+| Start Docker daemon | Host system > Start Docker Desktop |
+| Start Ubuntu | UI > Open Ubuntu tab in Terminal app |
 | Mount the host filesystem | `cd /mnt/c` |
 | CD to featurebase-docs | `cd Users/<username>/<git-directory>/featurebase-docs` |
 | Build the image | `docker build - < Dockerfile` |
