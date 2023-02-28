@@ -14,26 +14,25 @@ The `TOTIMESTAMP()` function uses the Unix Epoch to calculate a date-time equiva
 ## Syntax
 
 ```
-TOTIMESTAMP([int_val | expr], timeunit)
+TOTIMESTAMP(int_expr, [timeunit])
 ```
 
 ## Arguments
 
 | Argument | Data type | Description | Required | Further information |
 |---|---|---|---|---|
-| int_val | integer | Integer value to be converted to a timestamp | Yes | |
-| expr | | expression used to derive an integer value to be converted to a timestamp | Optional | |
+| int_expr | integer | Integer value specified as literal or expression to be converted to a timestamp | Yes | |
 | timeunit | string | String value that specifies the unit of time to convert. | Optional | [Time units](#additional-information).|
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `timestamp` | Returns timestamp equivalent of `int_exp`, it converts the input using unix epoch as base and the optional `timeunit` to determine the granularity of the input value. |
+| timestamp | Returns timestamp equivalent of `int_expr`, it converts the input using unix epoch as base and the optional `timeunit` to determine the granularity of the input value. |
 
 ## Additional information
 
-### `timeunit`
+### timeunit
 
 `timeunit` defaults to `s` if not specified.
 
@@ -94,4 +93,32 @@ select _id, ts from demo;
    3 | 1970-01-02 01:01:01 +0000 UTC 
    4 | 1970-01-02 01:01:01 +0000 UTC 
    5 | 1970-01-02 01:01:01 +0000 UTC 
+```
+### Use TOTIMESTAMP() in a select query.
+TOTIMESTAMP() is a scalar function, it can be used in select list and in parts of the query where expressions are allowed. 
+
+```sql
+create table demo
+    (_id id, int_ts int);
+
+insert into demo(_id, int_ts)
+    values (1, 86400);
+insert into demo(_id, int_ts)
+    values (2, 86400);
+insert into demo(_id, int_ts)
+    values (3, 86400000);
+
+select _id, int_ts, TOTIMESTAMP(int_ts, 's') as ts from demo;
+
+ _id |   int_ts | ts                            
+-----+----------+-------------------------------
+   1 |    86400 | 1970-01-02 00:00:00 +0000 UTC 
+   2 |    86400 | 1970-01-02 00:00:00 +0000 UTC 
+   3 | 86400000 | 1972-09-27 00:00:00 +0000 UTC 
+
+select _id, int_ts, TOTIMESTAMP(int_ts, 's') as ts from demo where TOTIMESTAMP(int_ts, 's')>'1970-01-02T00:00:00Z';
+ _id |   int_ts | ts                            
+-----+----------+-------------------------------
+   3 | 86400000 | 1972-09-27 00:00:00 +0000 UTC 
+
 ```
