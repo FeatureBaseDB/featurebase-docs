@@ -29,8 +29,7 @@ NOTE: This process can take some time if starting from scratch or after executin
 
 NOTE: Changes to configuration files such as `/_config.yml` are not loaded while the site is up.
 
-* Open a terminal and `cd` to your `featurebase-installation` directory
-* Run the following command:
+* Run the the following in the `/featurebase-docs` directory:
 
 ```
 docker compose up serve
@@ -58,3 +57,7 @@ To stop the server
 Containers and images can be deleted from Docker Desktop if required or via the command line.
 
 * [Remove docker images, containers, volumes and networks](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
+
+## Further information
+
+* [Check for broken links](https://github.com/FeatureBaseDB/featurebase-docs/blob/main/help-on-help/broken-link-check.md)
