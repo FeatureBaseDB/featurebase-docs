@@ -5,10 +5,12 @@ parent: Data types & constraints
 grand_parent: SQL guide
 nav_order: 8
 ---
+## Before you begin
+* [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
 
 # TIMESTAMP data type
 
-Timestamp is a date-time data type used with `timeunit` constraint. Timestamp columns store date-time as integer value representing number of timeunits elapsed since [Unix epoch](https://www.unixtutorial.org/unix-epoch/)
+Timestamp is a date-time data type which represents the specified `timeunit` as integer values elapsed since the specified Unix Epoch.
 
 ## DDL Syntax
 
@@ -25,14 +27,7 @@ TIMESTAMP [TIMEUNIT {value}]
 
 ## Additional information
 
-### TIMEUNIT value
-
-| Unit | Declaration |
-|---|---|
-| seconds (default) | `s` |
-| milliseconds | `ms` |
-| microseconds | `us` |
-| nanoseconds | `ns` |
+{% include /sql-guide/timestamp-timeunit-table.md %}
 
 ## Examples
 

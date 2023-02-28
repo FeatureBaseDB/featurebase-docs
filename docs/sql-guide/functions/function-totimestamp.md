@@ -4,25 +4,26 @@ layout: default
 parent: SQL functions
 grand_parent: SQL guide
 ---
+## Before you begin
+* [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
 
 # TOTIMESTAMP() function
 
-The `TOTIMESTAMP()` function converts the given integer value to a timestamp and returns it. It uses the [unix epoch](https://www.unixtutorial.org/unix-epoch/) as the base and calculates date-time equivalent of the integer.
+The `TOTIMESTAMP()` function uses the Unix Epoch to calculate a date-time equivalent of a specified integer, then returns the results.
 
 ## Syntax
 
 ```
-TOTIMESTAMP(int_exp, timeunit)
+TOTIMESTAMP([int_val | expr], timeunit)
 ```
 
 ## Arguments
 
-
-| Argument | Description | Data type |
-|---|---|---|
-| `int_exp` | Required `int` value or expression to be converted to a `timestamp`. | `int` |
-| `timeunit` | Optional `string` value specifying the granularity of the input `int_exp`, defaults to `s`. see [TIMEUNIT values](#timeunit-value).| `string` |
-
+| Argument | Data type | Description | Required | Further information |
+|---|---|---|---|---|
+| int_val | integer | Integer value to be converted to a timestamp | Yes | |
+| expr | | expression used to derive an integer value to be converted to a timestamp | Optional | |
+| timeunit | string | String value that specifies the unit of time to convert. | Optional | [Time units](#additional-information).|
 
 ## Returns
 
@@ -30,22 +31,18 @@ TOTIMESTAMP(int_exp, timeunit)
 |---|---|
 | `timestamp` | Returns timestamp equivalent of `int_exp`, it converts the input using unix epoch as base and the optional `timeunit` to determine the granularity of the input value. |
 
-## Remarks
-If `timeunit` is not supplied, the granularity of the input will default to seconds.
+## Additional information
 
-### TIMEUNIT value
+### `timeunit`
 
-| Unit | Declaration |
-|---|---|
-| seconds (default) | `s` |
-| milliseconds | `ms` |
-| microseconds | `us` |
-| nanoseconds | `ns` |
+`timeunit` defaults to `s` if not specified.
+
+{% include /sql-guide/timestamp-timeunit-table.md %}
 
 ## Examples
 
-### Integer value as input to timestamp column. 
-Literal integers supplied as input to timestamp columns are implicitly converted to timestamp, implicit conversion of integer to timestamp will treat the integer value as seconds since unix epoch. For integer date-time values defined at granularity other than seconds TOTIMESTAMP() can be used to convert them to timestamp by selecting appropriate `timeunit` parameter that matches the granularity of the input. 
+### Implicitly convert integer to timestamp. 
+Implicit conversion will treat the integer value as seconds since unix epoch. Seconds is the default granularity of integer date-time value.
 
 ```sql
 create table demo
@@ -54,25 +51,47 @@ create table demo
 insert into demo(_id, ts)
     values (1, 0);
 insert into demo(_id, ts)
-    values (2, 90061);
+    values (2, 86400);    
 insert into demo(_id, ts)
-    values (3, TOTIMESTAMP(90061, 's'));
+    values (3, 90061);
 insert into demo(_id, ts)
-    values (4, TOTIMESTAMP(90061000,'ms'));    
-insert into demo(_id, ts)
-    values (5, TOTIMESTAMP(90061000000,'us'));   
-insert into demo(_id, ts)
-    values (6, TOTIMESTAMP(90061000000000,'ns'));   
+    values (4, -86400);
 
 select _id, ts from demo;
 
  _id | ts                            
 -----+-------------------------------
    1 | 1970-01-01 00:00:00 +0000 UTC 
+   2 | 1970-01-02 00:00:00 +0000 UTC 
+   3 | 1970-01-02 01:01:01 +0000 UTC 
+   4 | 1969-12-31 00:00:00 +0000 UTC 
+```
+
+### Convert granular integers to timestamp.
+To convert integer date-time values with non-standard granularity TOTIMESTAMP() can be used with appropriate `timeunit` parameter that matches the granularity of the input. 
+
+```sql
+create table demo
+    (_id id, ts timestamp timeunit 's');
+
+insert into demo(_id, ts)
+    values (1, TOTIMESTAMP(90061));
+insert into demo(_id, ts)
+    values (2, TOTIMESTAMP(90061, 's'));
+insert into demo(_id, ts)
+    values (3, TOTIMESTAMP(90061000,'ms'));    
+insert into demo(_id, ts)
+    values (4, TOTIMESTAMP(90061000000,'us'));   
+insert into demo(_id, ts)
+    values (5, TOTIMESTAMP(90061000000000,'ns'));   
+
+select _id, ts from demo;
+
+ _id | ts                            
+-----+-------------------------------
+   1 | 1970-01-02 01:01:01 +0000 UTC 
    2 | 1970-01-02 01:01:01 +0000 UTC 
    3 | 1970-01-02 01:01:01 +0000 UTC 
    4 | 1970-01-02 01:01:01 +0000 UTC 
    5 | 1970-01-02 01:01:01 +0000 UTC 
-   6 | 1970-01-02 01:01:01 +0000 UTC 
 ```
-
