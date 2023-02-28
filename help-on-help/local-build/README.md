@@ -29,4 +29,6 @@ Two methods are available to run a local build of the `/featurebaseDB/featurebas
 
 ## Need support?
 
-* [Contact the Docs feedback team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you have questions.
+## Need support?
+
+* [Raise a GitHub issue to get support or raise issues](https://github.com/FeatureBaseDB/featurebase-docs/issues)

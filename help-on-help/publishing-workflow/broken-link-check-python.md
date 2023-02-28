@@ -1,6 +1,6 @@
 # Mac -- dead_link_seeker.py
 
-The script can be run from any machine with Python and its dependencies installed.
+The `/dead_link_seeker.py` script can be run from any machine and requires Python and dependencies to be installed.
 
 ## What is revealed in a broken link check
 
@@ -15,10 +15,7 @@ TIP: Add false positives to the `dead_link_seeker.py` `false_postitive` list at 
 
 * [Build FeatureBase-docs locally](https://github.com/FeatureBaseDB/featurebase-docs/tree/docs-195-help-on-help/help-on-help/local-build)
 * [Install Python](https://www.python.org/downloads/)
-
-## Install dependecies
-
-The script requires `urllib`, `collections` and `HTMLParser` packages
+* Install `urllib`, `collections` and `HTMLParser` packages
 
 ## Run dead_link_seeker.py
 

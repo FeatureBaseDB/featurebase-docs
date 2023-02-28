@@ -2,6 +2,12 @@
 
 [![Deploy Jekyll site to Pages](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/FeatureBaseDB/featurebase-docs/actions/workflows/pages.yml)
 
+## Help on Help
+
+Full documentation on writing, building and testing help, the style guide and standards is found in the Help-on-help directory:
+
+* [Help on Help](/help-on-help/README.md)
+
 ## Introduction
 
 FeatureBase-docs is a Jekyll site deployed to GitHub Pages.
@@ -20,7 +26,7 @@ An overview of folder structure and files
 
 ### Important folders
 
-| Folder | Description | Status 2023-02 |
+| Folder | Description | Status |
 |---|---|---|
 | `/assets/images` | Site image files found in logically named subfolders | As of 2023-02-21 contains images from /molecula/documentation which will be removed in future PRs |
 | `/docs` | All content pages found in this folder. |  |
@@ -35,7 +41,7 @@ An overview of folder structure and files
 
 ### Important files
 
-**IMPORTANT** [Contact Docs Review Team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you wish to make an alteration to any of these files.
+**IMPORTANT** Create a [Git Issue](https://github.com/FeatureBaseDB/featurebase-docs/issues) if you need to make any changes to the following settings.
 
 | Filename | Purpose |
 |---|---|
@@ -57,9 +63,8 @@ An overview of folder structure and files
 
 ## Further information
 
-* [Site help in `/help-on-help`](/help-on-help)
 * [Just-The-Docs Theme help](https://just-the-docs.github.io/just-the-docs/){:target="_blank"}
 
 ## Need support?
 
-* [Contact the Docs feedback team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you have questions.
+* [Raise a GitHub issue to get support or raise issues](https://github.com/FeatureBaseDB/featurebase-docs/issues)

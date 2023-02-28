@@ -69,4 +69,6 @@ Successful completion of the action deploys the changes to the production site a
 
 ## Need support?
 
-* [Contact the Docs feedback team](https://app.slack.com/client/T2M810Z29/C02JJQR01EY) if you have questions.
+## Need support?
+
+* [Raise a GitHub issue to get support or raise issues](https://github.com/FeatureBaseDB/featurebase-docs/issues)

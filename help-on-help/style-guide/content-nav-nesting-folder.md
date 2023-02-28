@@ -1,12 +1,18 @@
-# Sidebar navigation
+# Setup sidebar navigation page order
 
-Sidebar navigation is governed by YAML at the top of the markdown files found in `/docs`
+The order and positioning of pages in the left sidebar navigation tree is governed by YAML headers in each `/doc` markdown file.
+
+There are two exceptions:
+* Pages with **no** header YAML are ignored and not loaded into the sidebar navigation
+* Pages with **no** parent page are added to the navigation root
 
 IMPORTANT: the folder structure is ignored
 
 ## Before you begin
 
 * [Theme guidance on page order and navigation](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/)
+
+## Three-level navigation depth
 
 The theme supports 3 level of pages
 
