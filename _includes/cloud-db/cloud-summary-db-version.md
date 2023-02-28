@@ -1,1 +1,1 @@
-Each database is displayed with a version - this represents the version of Featurebase that the database is running. 
+A database version represents the FeatureBase version the database runs on.
