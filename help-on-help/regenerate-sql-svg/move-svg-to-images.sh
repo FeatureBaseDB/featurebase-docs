@@ -3,7 +3,7 @@
 # Command to execute
 execute_cmd=mv
 
-path="/home/featurebase-docs"
+path="~/featurebase-docs"
 
 # Files inside actual_dir has to be moved
 actual_dir="$path/help-on-help"
