@@ -8,7 +8,7 @@ The following files perform specific functions:
 
 | Filename | Description |
 |---|---|
-| `sql3.ebnf` | BNF design source file |
+| `sql3.ebnf` | BNF design source file where changes can be made |
 | `makebnf.sh` | Shell script that generates sql3.html from sql3.ebnf |
 | `extract.css` | CSS stylesheet used by `extract.py` to generate `.svg` files |
 | `extract.py` | Python file that generates `.svg` files based on `extract.css` and `sql3.html` and saves to parent folder `/help-on-help` |
