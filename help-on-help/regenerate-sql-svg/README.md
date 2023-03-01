@@ -42,7 +42,15 @@ python extract.py`
 
 NOTE: You can also run `python3 extract.py` if required.
 
-## Step 4 - Validate images in destination folder
+## Step 4 - Move the svg files
+
+SVG files are saved to /help-on-help and need to be moved to /assets/images/sql-guide.
+
+* Run the move script:
+
+```
+bash ./move-svg-to-images.sh
+```
 
 
 
