@@ -94,8 +94,8 @@ select _id, ts from demo;
    4 | 1970-01-02 01:01:01 +0000 UTC 
    5 | 1970-01-02 01:01:01 +0000 UTC 
 ```
-### Use TOTIMESTAMP() in a select query.
-TOTIMESTAMP() is a scalar function, it can be used in select list and in parts of the query where expressions are allowed. 
+### Use TOTIMESTAMP() in a SELECT query.
+TOTIMESTAMP() is a scalar function, so it can be used in the SELECT list and in parts of the query where expressions are allowed. 
 
 ```sql
 create table demo
