@@ -2,36 +2,48 @@
 
 The scripts in this folder are used to regenerate the images found in the /img/sql/ folder.
 
-## makebnf.sh
+## Before you begin
 
-Start by running the makebnf.sh script. This will generate the sql3.html file that is required for the next step. First install any dependencies (likely ebnf2railroad)
+* Install python3
+* Install `npn` if not already installed
+* Install `pip` or `conda` if not already installed
+* Clone `/featurebase-docs`
 
-`npm install -g ebnf2railroad`
+## Step 1 - install dependencies
 
-Next, run the script:
+Use `pip` or `conda` to install dependencies.
 
-`./makebnf.sh`
+* CD to the `/usr` directory.
+* run the following commands:
 
-You may see some warnings about `Missing reference...`, which should be followed by:
+| Dependency | Directory | Command |
+|---|---|
+| `ebnf2railroad` | `sudo npm install -g ebnf2railroad` |
+| `bs4` | `[pip|conda] install bs4` |
+| `lxml` | `[pip|conda] install lxml` |
 
-`📜 Document created at ./sql3.html`
+## Step 2 - generate the sql3.html file
 
-## extract.py
+Run the `makebnf` script to generate the sql3.html file:
 
-Next, run the extract.py script, which extract all of the images in the sql3.html file and places them in /img/sql. This is intended to be run in python3 and will likely have a couple of dependencies:
+```
+bash ./makebnf.sh
+```
 
-Conda:
-`conda install bs4`
-`conda install lxml`
+NOTE: The build script may report `missing reference...` before reporting success, e.g., `📜 Document created at ./sql3.html`
 
-Pip:
-`pip install bs4`
-`pip install lxml`
+## Step 3 - Extract the images from the sql3.html file
 
-Run the script:
+Run the python extract script to generate the images described in the sql3.html file:
 
-`python extract.py`
-or
-`python3 extract.py`
+```
+python extract.py`
+```
+
+NOTE: You can also run `python3 extract.py` if required.
+
+## Step 4 - Validate images in destination folder
+
+
 
 All done! Go validate the images have been properly updated in the /img/sql folder.
