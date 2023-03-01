@@ -34,24 +34,25 @@ NOTE: The build script may report `missing reference...` before reporting succes
 
 ## Step 3 - Extract the images from the sql3.html file
 
-Run the python extract script to generate the images described in the sql3.html file:
+The `extract.py` file:
+* generates the required bnf `.svg` image files
+* saves them to `/help-on-help`
 
 ```
-python extract.py`
+python3 extract.py`
 ```
 
-NOTE: You can also run `python3 extract.py` if required.
+NOTE: You can also run `python extract.py` if required.
 
-## Step 4 - Move the svg files
+## Step 4 - confirm the images are updated
 
-SVG files are saved to /help-on-help and need to be moved to /assets/images/sql-guide.
+* CD to `/help-on-help` and confirm the images have been updated.
 
+## Step 4 - Move the svg files to `/assets/images/sql-guide`
+
+* CD to `/help-on-help/regenerate-sql-svg`
 * Run the move script:
 
 ```
 bash ./move-svg-to-images.sh
 ```
-
-
-
-All done! Go validate the images have been properly updated in the /img/sql folder.
