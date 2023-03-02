@@ -19,17 +19,9 @@ These instructions explain how to run FeatureBase Community after you’ve insta
   * [Install FeatureBase on Linux](/docs/community/com-install-linux)
   * [Install FeatureBase on Mac](/docs/community/com-install-mac)
   * [Install FeatureBase on Windows](/docs/community/com-install-windows)
-<<<<<<< HEAD
-* Login to your system
-
-{: .note}
-FeatureBase Community does not currently support Apple Safari. Install Mozilla Firefox or Google Chrome on your system instead.
-=======
-
 
 {: .note}
 FeatureBase Community's UI does not currently support Apple Safari. Install Mozilla Firefox or Google Chrome on your system instead.
->>>>>>> main
 
 ## Start the FeatureBase Community server
 

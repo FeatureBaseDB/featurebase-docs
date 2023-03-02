@@ -77,5 +77,3 @@ Use the following checklist to successfully restore a cluster from backups.
 | Redirect traffic to target | Redirect query traffic from original cluster to new cluster |
 | Start all processes on target | Start processes including ingest |
 | Clean up source | Backup the original cluster then tear it down |
-
--->
