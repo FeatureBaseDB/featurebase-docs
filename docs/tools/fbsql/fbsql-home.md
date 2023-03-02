@@ -18,11 +18,11 @@ fbsql is a terminal-based front-end to FeatureBase. It enables you to type in qu
 ## Options
 
 ```shell
--c command
---command=command
+-c "command"
+--command='command'
 ```
 
-Specifies that fbsql is to execute the given command string, **command**. This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence.
+Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes), **command**. This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence.
 
 ```shell
 --db=dbname
