@@ -38,11 +38,13 @@ BULK INSERT
     'intval' int,
     'decval' decimal(4) )
  FROM
-    '/data/sample.parquet'
+	'https://s3.amazonaws.com/todd-scratch.molecula.com/sample.parquet'
+
  WITH 
     FORMAT 'PARQUET'
-    INPUT 'FILE';
+    INPUT 'URL';
 ```
+
 
 ## Step 3: query the data
 
