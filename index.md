@@ -86,6 +86,13 @@ Follow these instructions which will guide you through the setup process:
 
 * [Setup your FeatureBase cloud account](/docs/cloud/cloud-home)
 
+## How do I launch FeatureBase with Docker?
+You can quickly start FeatureBase Community using the [Docker Hub](https://hub.docker.com/r/featurebasedb/featurebase) image:
+
+```
+docker run -p 10101:10101 featurebasedb/featurebase
+```
+
 ## How do I install FeatureBase Community?
 
 Follow these instructions to learn about system requirements and how to install FeatureBase on your operating system.
