@@ -1,5 +1,5 @@
 ---
-title: fbsql
+title: fbsql CLI
 layout: default
 parent: Tools
 has_children: true
@@ -7,103 +7,76 @@ nav_order: 1
 has_toc: false
 ---
 
-# fbsql
-
-FeatureBase interactive terminal.
-
-## Description
+# fbsql CLI
 
 fbsql is a terminal-based front-end to FeatureBase. It enables you to type in queries interactively, issue them to FeatureBase, and see the query results. Alternatively, input can be from a file or from command line arguments. In addition, fbsql provides a number of meta-commands and various shell-like features to facilitate writing scripts and automating a wide variety of tasks.
 
-## Options
+## Before you begin
 
-```shell
---client-id=client-id
-```
+In order to get value out of fbsql, you will need to have access to either a FeatureBase cloud account, or an instance of FeatureBase community.
 
-Cognito Client ID for FeatureBase Cloud access.
+### Setting up FeatureBase Cloud
 
-```shell
--c "command"
---command='command'
-```
+{% include /cloud/cloud-before-begin.md %}
 
-Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes), **command**. This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence.
+### Installing FeatureBase community
 
-```shell
---config=filename
-```
+{% include /com-install/com-install-before-begin.md %}
 
-Configuration file to read from.
+## Install fbsql
 
-```shell
--d=dbname
---dbname=dbname
-```
+In the very near future, fbsql will be packaged with every release on the [FeatureBase releases](https://github.com/FeatureBaseDB/featurebase/releases) page.
 
-Specifies the name of the database to connect to.
+Until fbsql is available there, you will need to build fbsql from source. Download the source code (which can also be found on the [FeatureBase Releases](https://github.com/FeatureBaseDB/featurebase/releases) page), and then run `make install-fbsql`.
 
-```shell
---email=emailaddress
-```
+## fbsql flags
 
-Email address for FeatureBase Cloud access.
+The following flags can be provided when running fbsql. None of the flags are required to start fbsql.
 
-```shell
--f filename
---file=filename
-```
-
-Read commands from the file **filename**, rather than standard input. This option can be repeated with the `-c` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. Except for that, this option is largely equivalent to the meta-command `\i`.
-
-```shell
---history-path=filename
-```
-
-File in which to store command history. This defaults to `.featurebase/fbsql_history` in the current user's home directory.
-
-```shell
---host=hostname
-```
-
-Specifies the host name of the machine on which the server is running. This can be a URL to a cloud instance of FeatureBase. In that case, the value of **hostname** might be something like `https://query.featurebase.com`.
-
-```shell
---kafka-config=filename
-```
-
-Run fbsql as a Kafka consumer in non-interactive mode. Based on the configuration provided in **filename**, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user.
-
-For more information, see [Kafka](/docs/tools/fbsql/fbsql-kafka).
-
-```shell
---org-id=organization
-```
-
-Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality.
-
-```shell
---password=password
-```
-
-Password for FeatureBase Cloud access.
-
-```shell
--p=port
---port=port
-```
-
-Specifies the TCP port or the local Unix-domain socket file extension on which FeatureBase is listening for connections.
-
-```shell
---region=region
-```
-
-Cloud region for FeatureBase Cloud access (e.g. us-east-2).
+| Flag | Description |
+|---|---|
+| `-c`<br>`--command` | Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes). This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. |
+| `--config` | Configuration file to read from. |
+| `-d`<br>`--dbname` | Specifies the name of the database to connect to. |
+| `--email` | Email address for FeatureBase Cloud access. |
+| `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input. This option can be repeated with the `-c` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. Except for that, this option is largely equivalent to the meta-command `\i`. |
+| `--history-path` | File in which to store command history. This defaults to `.featurebase/fbsql_history` in the current user's home directory. |
+| `--host` | Specifies the host name of the machine on which the server is running. This can be a URL to a cloud instance of FeatureBase. In that case, the value of **hostname** might be something like `https://query.featurebase.com`. |
+| `--kafka-config` | Run fbsql as a Kafka consumer in non-interactive mode. Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user. For more information, see [Kafka](/docs/tools/fbsql/fbsql-kafka). |
+| `--org-id` | Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality. |
+| `--password` | Password for FeatureBase Cloud access. |
+| `-p`<br>`--port` | Specifies the TCP port or the local Unix-domain socket file extension on which FeatureBase is listening for connections. |
 
 ## Usage
 
+### Entering SQL Commands
+
+In normal operation, fbsql provides a prompt with the name of the database to which fbsql is currently connected, followed by the string =#. For example:
+
+```
+$ fbsql -d testdb
+FeatureBase CLI ()
+Type "\q" to quit.
+testdb=#
+```
+
+At the prompt, the user can type in SQL commands. Ordinarily, input lines are sent to the server when a command-terminating semicolon is reached. An end of line does not terminate a command. Thus commands can be spread over several lines for clarity. If the command was sent and executed without error, the results of the command are displayed on the screen.
+
 ### Meta-Commands
+
+Anything you enter in fbsql that begins with an unquoted backslash is a fbsql meta-command that is processed by fbsql itself. These commands make fbsql more useful for administration or scripting. Meta-commands are often called slash or backslash commands.
+
+The format of an fbsql command is the backslash, followed immediately by a command verb, then any arguments. The arguments are separated from the command verb and each other by any number of whitespace characters.
+
+To include whitespace in an argument you can quote it with single quotes.
+
+If an unquoted colon (:) followed by a fbsql variable name appears within an argument, it is replaced by the variable's value, as described in SQL Interpolation below. The forms :'variable_name' and :"variable_name" described there work as well.
+
+Parsing for arguments stops at the end of the line, or when another unquoted backslash is found. An unquoted backslash is taken as the beginning of a new meta-command.
+
+Some of the meta-commands act on the current query buffer. This is simply a buffer holding whatever SQL command text has been typed but not yet sent to the server for execution. This will include previous input lines as well as any text appearing before the meta-command on the same line.
+
+The following meta-commands are defined:
 
 ```shell
 \c or \connect [ dbname ]
@@ -265,3 +238,93 @@ Sets or toggles expanded table formatting mode. As such it is equivalent to \pse
 
 The **command** is simply passed literally to the shell.
 
+## Examples
+
+### Starting fbsql with FeatureBase Cloud
+
+#### With command-line flags
+```
+fbsql --host="https://query.featurebase.com" \
+  --email="user@example.com" \
+  --password="a1b2c3d4e5f6"
+```
+
+#### With a configuration file
+
+```
+fbsql --config=cloud.toml
+```
+
+where the contents of `cloud.toml` look like:
+
+```
+host = "https://query.featurebase.com"
+email     = 'user@example.com'
+password  = 'a1b2c3d4e5f6'
+```
+
+### Starting fbsql with FeatureBase Community
+
+#### With command-line flags
+```
+fbsql --host="localhost" \
+  --port=10101
+```
+
+#### With a configuration file
+
+```
+fbsql --config=community.toml
+```
+
+where the contents of `community.toml` look like:
+
+```
+host = "localhost"
+port = "10101"
+```
+
+### Run SQL in fbsql from a local file
+
+The following examples assume the presence of a file called `example.sql` containing:
+
+```
+create table people (_id id, name string, age int);
+insert into people values (1, 'Amy', 42), (2, 'Bob', 27), (3, 'Carl', 33);
+select * from people;
+```
+
+#### Using the --file flag
+- example of running sql from a file (--file)
+
+```
+fbsql --config=community.toml \
+  --file example.sql
+```
+
+Will result in the following output:
+
+```
+Host: http://localhost:10101
+
+
+ _id | name | age
+-----+------+-----
+   1 | Amy  |  42
+   2 | Bob  |  27
+   3 | Carl |  33
+```
+
+#### Using the \include meta-command
+
+```
+fbsql=# \include example.sql
+
+ _id | name | age
+-----+------+-----
+   1 | Amy  |  42
+   2 | Bob  |  27
+   3 | Carl |  33
+
+fbsql=#
+```

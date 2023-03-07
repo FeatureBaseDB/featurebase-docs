@@ -70,7 +70,7 @@ Fields are specified as a TOML [arrays of tables](https://toml.io/en/v1.0.0#arra
 [[fields]]
 name        = "foo"
 source-type = "int"
-source-path = ["demo", "categorys"]
+source-path = ["demo", "categories"]
 ```
 
 ```
@@ -161,7 +161,7 @@ source-type = "int"
 [[fields]]
 name        = "categories"
 source-type = "stringset"
-source-path = ["demo", "categorys"]
+source-path = ["demo", "categories"]
 
 [[fields]]
 name        = "level"
