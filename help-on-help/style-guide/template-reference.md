@@ -13,7 +13,7 @@ YAML Header information
   * SQL and PQL can get away with just using the Keyword
   * FeatureBase-specific content needs to have a more **generic** title so that users get a clue as to what the page is for.
   * e.g., "Query FeatureBase data from the command line"
-* Introductory paragraph -- Give the reader a **brief** explanation of the purpose and context in which the content is relevant
+* Introductory paragraph -- Give the reader a **brief** explanation of the purpose and context in which the content is relevant. Provide detail below
 * Syntax -- Provide syntax to give the user a grounding in the structure and order of arguments
 * Arguments -- Table of arguments and descriptions. Descriptions should be short (any more than 2 sentences and the information goes under "Additional nformation"
 * Additional information -- drill down into more detailed information on arguments
