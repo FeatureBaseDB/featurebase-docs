@@ -11,7 +11,7 @@ FeatureBase Community users can run SQL Queries over the HTTP SQL endpoint.
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
-* [Enable the SQL endpoint for FeatureBase Community](/docs/community/com-config/com-config-cli-enable-sql-endpoint)
+* [Enable the SQL endpoint for FeatureBase Community](/docs/community/com-config/com-config-sql-cli-enable)
 
 ## Endpoint syntax
 
