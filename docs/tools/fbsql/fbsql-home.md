@@ -1,5 +1,5 @@
 ---
-title: fbsql CLI
+title: fbsql
 layout: default
 parent: Tools
 has_children: true
@@ -7,45 +7,41 @@ nav_order: 1
 has_toc: false
 ---
 
-# fbsql CLI
+# fbsql (CLI Client)
 
-fbsql is a terminal-based front-end to FeatureBase. It enables you to type in queries interactively, issue them to FeatureBase, and see the query results. Alternatively, input can be from a file or from command line arguments. In addition, fbsql provides a number of meta-commands and various shell-like features to facilitate writing scripts and automating a wide variety of tasks.
+fbsql is a terminal-based front-end to FeatureBase. It allows you to query your FeatureBase data and see the results via the command-line. Alternatively, input can be from a file or from command line arguments. fbsql allows you to query your data:
+
+* directly from the fbsql interface
+* by loading files containing the SQL queries
+
+You can also write scripts and automate tasks using built-in meta commands and shell-like features.
 
 ## Before you begin
 
-In order to get value out of fbsql, you will need to have access to either a FeatureBase cloud account, or an instance of FeatureBase community.
-
-### Setting up FeatureBase Cloud
-
-{% include /cloud/cloud-before-begin.md %}
-
-### Installing FeatureBase community
-
-{% include /com-install/com-install-before-begin.md %}
+{% include /cloud/cloud-before-begin.md %}, Or
+* {% include /com-install/com-install-before-begin.md %}
 
 ## Install fbsql
 
-In the very near future, fbsql will be packaged with every release on the [FeatureBase releases](https://github.com/FeatureBaseDB/featurebase/releases) page.
-
-Until fbsql is available there, you will need to build fbsql from source. Download the source code (which can also be found on the [FeatureBase Releases](https://github.com/FeatureBaseDB/featurebase/releases) page), and then run `make install-fbsql`.
+* [Learn How To Install fbsql](/docs/tools/fbsql/fbsql-install)
 
 ## fbsql flags
 
 The following flags can be provided when running fbsql. None of the flags are required to start fbsql.
 
-| Flag | Description |
-|---|---|
-| `-c`<br>`--command` | Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes). This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. |
-| `--config` | Configuration file to read from. |
-| `-d`<br>`--dbname` | Specifies the name of the database to connect to. |
-| `--email` | Email address for FeatureBase Cloud access. |
-| `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input. This option can be repeated with the `-c` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. Except for that, this option is largely equivalent to the meta-command `\i`. |
-| `--history-path` | File in which to store command history. This defaults to `.featurebase/fbsql_history` in the current user's home directory. |
-| `--host` | Specifies the host name of the machine on which the server is running. This can be a URL to a cloud instance of FeatureBase. In that case, the value of **hostname** might be something like `https://query.featurebase.com`. |
-| `--kafka-config` | Run fbsql as a Kafka consumer in non-interactive mode. Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user. For more information, see [Kafka](/docs/tools/fbsql/fbsql-kafka). |
-| `--org-id` | Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality. |
-| `--password` | Password for FeatureBase Cloud access. |
-| `-p`<br>`--port` | Specifies the TCP port or the local Unix-domain socket file extension on which FeatureBase is listening for connections. |
+| Flag | Description | Default |
+|---|---|---|
+| `-c`<br>`--command` | Specifies that fbsql is to execute the given command string (enclosed in either single or double quotes). This option can be repeated and combined with the `-f` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. | |
+| `--config` | Configuration file to read from. | | 
+| `-d`<br>`--dbname` | Specifies the name of the database to connect to. | |
+| `--email` | Email address for FeatureBase Cloud access. | | 
+| `-f`<br>`--file` | Read commands from the file **filename**, rather than standard input. This option can be repeated with the `-c` option. All `-c` options will be processed before all `-f` options are processed. When either `-c` or `-f` is specified, fbsql does not read commands from standard input; instead it terminates after processing all the `-c` and `-f` options in sequence. Except for that, this option is largely equivalent to the meta-command `\i`. | | 
+| `--history-path` | File in which to store command history. This defaults to `.featurebase/fbsql_history` in the current user's home directory. | |
+| `--host` | Specifies the host name of the machine on which the server is running. This can be a URL to a cloud instance of FeatureBase. In that case, the value of **hostname** might be something like `https://query.featurebase.com`. | `localhost`|
+| `--kafka-config` | Run fbsql as a Kafka consumer in non-interactive mode. Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user. For more information, see [How To Use Kafka With fbsql](/docs/tools/fbsql/fbsql-kafka) | |
+| `--org-id` | Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality. | |
+| `--password` | Password for FeatureBase Cloud access. | |
+| `-p`<br>`--port` | Specifies the TCP port or the local Unix-domain socket file extension on which FeatureBase is listening for connections. | `10101` | 
 
 ## Usage
 
@@ -74,15 +70,18 @@ If an unquoted colon (:) followed by a fbsql variable name appears within an arg
 
 Parsing for arguments stops at the end of the line, or when another unquoted backslash is found. An unquoted backslash is taken as the beginning of a new meta-command.
 
-Some of the meta-commands act on the current query buffer. This is simply a buffer holding whatever SQL command text has been typed but not yet sent to the server for execution. This will include previous input lines as well as any text appearing before the meta-command on the same line.
+Some of the meta-commands act on the current query buffer. This is simply a buffer holding whatever SQL command text has been typed but not yet sent to the server for execution. This will include previous input lines as well as any text appearing before the meta-command on the same line. The query buffer will only ever hold one complete or partial query
 
 The following meta-commands are defined:
 
+#### connect
 ```shell
 \c or \connect [ dbname ]
 ```
 
 Establishes a new connection to a FeatureBase database.
+
+#### change directory
 
 ```shell
 \cd [ directory ]
@@ -90,23 +89,30 @@ Establishes a new connection to a FeatureBase database.
 
 Changes the current working directory to directory. Without argument, changes to the current user's home directory.
 
+####  list databases
 ```shell
 \d
 ```
 
-List tables.
+Lists all of the objects in the database your are connected to (tables and views).
+
+####  list tables
 
 ```shell
 \dt
 ```
 
-List tables.
+Lists the tables in the database your are connected to.
+
+####  list views
 
 ```shell
 \dv
 ```
 
-List views.
+Lists the views in the database your are connected to.
+
+####  print output
 
 ```shell
 \echo text
@@ -114,29 +120,39 @@ List views.
 
 Prints the argument to standard output, followed by a newline.
 
+####  use a file for commands
+
 ```shell
 \i or \include filename
 ```
 
 Reads input from the file filename and executes it as though it had been typed on the keyboard.
 
+####  list databases
+
 ```shell
 \l or \list
 ```
 
-List the databases on the server
+Lists the databases on the server
+
+####  save results to file
 
 ```shell
 \o or \out [ filename ]
 ```
 
-Arranges to save future query results to the file **filename**.
+Arranges to save future query results to the file **filename**. If sent without the **filename**, the output will return to standard output
+
+####  print query buffer
 
 ```shell
 \p or \print
 ```
 
-Print the current query buffer to the standard output. If the current query buffer is empty, the most recently executed query is printed instead.
+Prints the current query buffer to the standard output. If the current query buffer is empty, the most recently executed query is printed instead.
+
+####  set options
 
 ```shell
 \pset [ option [ value ] ]
@@ -144,7 +160,7 @@ Print the current query buffer to the standard output. If the current query buff
 
 This command sets options affecting the output of query result tables. option indicates which option is to be set. The semantics of value vary depending on the selected option. For some options, omitting value causes the option to be toggled or unset, as described under the particular option. If no such behavior is mentioned, then omitting value just results in the current setting being displayed.
 
-\pset without any arguments displays the current status of all printing options.
+`\pset` without any arguments displays the current status of all printing options.
 
 Adjustable printing options are:
 
@@ -166,11 +182,7 @@ tuples_only (or t)
 
 If **value** is specified it must be either on or off which will enable or disable tuples-only mode. If **value** is omitted the command toggles between regular and tuples-only output. Regular output includes extra information such as column headers, titles, and various footers. In tuples-only mode, only actual table data is shown.
 
-```shell
-\q or \quit
-```
-
-Quits the fbsql program.
+####  print output to query output channel
 
 ```shell
 \qecho text
@@ -178,21 +190,35 @@ Quits the fbsql program.
 
 This command is identical to \echo except that the output will be written to the query output channel, as set by \o.
 
+####  quit
+
+```shell
+\q or \quit
+```
+
+Quits the fbsql program.
+
+####  clear query buffer
+
 ```shell
 \r or \reset
 ```
 
 Resets (clears) the query buffer.
 
+####  set variables
+
 ```shell
 \set [ name [ value [ ... ] ] ]
 ```
 
-Sets the fbsql variable **name** to **value**, or if more than one value is given, to the concatenation of all of them. If only one argument is given, the variable is set to an empty-string value. To unset a variable, use the `\unset` command.
+Sets the fbsql variable **name** to **value**, or if more than one value is given, to the concatenation of all of them. If only one argument is given, the variable is set to an empty-string value. To unset a variable, [use the `\unset` command](#unset-variable).
 
-\set without any arguments displays the names and values of all currently-set fbsql variables.
+`\set` without any arguments displays the names and values of all currently-set fbsql variables.
 
 Variable names are case-sensitive.
+
+####  timing
 
 ```shell
 \timing [ on | off ]
@@ -200,11 +226,15 @@ Variable names are case-sensitive.
 
 With a parameter, turns displaying of how long each SQL statement takes on or off. Without a parameter, toggles the display between on and off.
 
+####  unset variables
+
 ```shell
 \unset name
 ```
 
 Unsets (deletes) the fbsql variable **name**.
+
+####  write buffer to file
 
 ```shell
 \w or \write filename
@@ -212,11 +242,15 @@ Unsets (deletes) the fbsql variable **name**.
 
 Writes the current query buffer to the file **filename**. If the current query buffer is empty, the most recently executed query is written instead.
 
+####  warn to standard error channel
+
 ```shell
 \warn text
 ```
 
 This command is identical to \echo except that the output will be written to fbsql's standard error channel, rather than standard output.
+
+####  re-execute query buffer
 
 ```shell
 \watch [ seconds ]
@@ -226,11 +260,15 @@ Repeatedly execute the current query buffer until interrupted or the query fails
 
 If the current query buffer is empty, the most recently sent query is re-executed instead.
 
+####  set table formatting mode
+
 ```shell
 \x [ on | off ]
 ```
 
 Sets or toggles expanded table formatting mode. As such it is equivalent to \pset expanded.
+
+####  send command to the shell
 
 ```shell
 \! [ command ]
@@ -328,3 +366,7 @@ fbsql=# \include example.sql
 
 fbsql=#
 ```
+
+## Further Information
+
+* [How To Use Kafka With fbsql](/docs/tools/fbsql/fbsql-kafka)

@@ -1,70 +1,46 @@
 ---
-title: Kafka
+title: fbsql-Kafka
 layout: default
 parent: fbsql
 grand_parent: Tools
-nav_order: 1
+nav_order: 2
 ---
 
-# Kafka
+# How can I consume from Kafka using fbsql?
 
 If fbsql is provided the `--kafka-config=filename` flag, it will run as a Kafka consumer in non-interactive mode. Based on the configuration provided in **filename**, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user.
 
-The configuration file must be in [TOML](https://toml.io/) format.
-
-Messages must be in JSON format.
+## Before you begin
+* [Learn About fbsql](/docs/tools/fbsql/fbsql-home)
+* [Learn How To Install fbsql](/docs/tools/fbsql/fbsql-install)
 
 ## Configuration options
 
+The configuration file must be in [TOML](https://toml.io/) format.
+
+Messages from Kafka must be in JSON format.
+
 ### General
 
-```
-hosts = ["host1", "host2"]
-```
+The below table holds the key/value pairs supported in the TOML file:
 
-Specifies one more more Kafka broker hosts. If only one host is needed, this value can be provided without brackets.
+| Key | Description | Example Value | Default |
+|---|---|---|---|
+| `hosts` | Specifies one more more Kafka broker hosts. If only one host is needed, this value can be provided without brackets. | `["host1", "host2"]` | |
+| `group` | Kafka consumer group. See the [Confluent Documentation](https://docs.confluent.io/platform/current/clients/consumer.html) for more information. | `"groupname"` | |
+| `topics` | Specifies one more more Kafka topics to consumer from. If only one topic is needed, this value can be provided without brackets. | `["topic1", "topic2"]` | |
+| `table` | The name of the FeatureBase table into which Kafka messages, consumed by fbsql, will be written. The table must exist prior to using it as a kafka message destination. | `"tablename"` | |
+| `batch-size` | The size of the BULK INSERT batches sent to FeatureBase. This defaults to `1` which will not be very performant, so it is highly recommended that this be set to something more reasonable. | `100000` | `1`|
+| `batch-max-staleness` | Maximum length of time that the oldest record in a batch can exist before flushing the batch. Note that this can potentially stack with timeouts waiting for the source. The format of this value should be provided as a duration string, which is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". Set this value to `0` to disable timeouts. | `2h` | `1s`|
+| `timeout` | Time to wait for more records from Kafka before flushing a batch. The format of this value should be provided as a duration string, which is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". Set this value to `0` to disable timeouts.  | `1m` | `1s`|
 
-```
-group = "groupname"
-```
-
-Kafka consumer group. See the [Confluent Documentation](https://docs.confluent.io/platform/current/clients/consumer.html) for more information.
-
-```
-topics = ["topic1", "topic2"]
-```
-
-Specifies one more more Kafka topics to consumer from. If only one topic is needed, this value can be provided without brackets.
-
-```
-table = tablename
-```
-
-The name of the FeatureBase table into which Kafka messages, consumed by fbsql, will be written. The table must exist prior to using it as a kafka message destination.
-
-```
-batch-size = int
-```
-
-The size of the BULK INSERT batches sent to FeatureBase. This defaults to `1` which will not be very performant, so it is highly recommended that this be set to something more reasonable.
-
-```
-batch-max-staleness = duration
-```
-
-Maximum length of time that the oldest record in a batch can exist before flushing the batch. Note that this can potentially stack with timeouts waiting for the source. The format of this value should be provided as a duration string, which is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". Set this value to `0` to disable timeouts. Defaults to `1s`.
-
-```
-timeout = duration
-```
-
-Time to wait for more records from Kafka before flushing a batch. The format of this value should be provided as a duration string, which is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". Set this value to `0` to disable timeouts. Defaults to `1s`.
 
 ### Fields
 
-Providing field configuration is optional. If no fields are provided, fbsql will determine a basic field configuration to use by inspecting the FeatureBase table specified in the `table` configuration option. In this case, the Kafka keys in the Kafka messages should map directly to the fields in the FeatureBase table.
+Providing field configuration in the TOML file is optional. If no fields are provided, fbsql will determine a basic field configuration to use by inspecting the FeatureBase table specified in the `table` configuration option. In this case, the Kafka keys in the Kafka messages should map directly to the fields in the FeatureBase table.
 
-Fields are specified as a TOML [arrays of tables](https://toml.io/en/v1.0.0#array-of-tables).
+Fields are specified as a TOML [arrays of tables](https://toml.io/en/v1.0.0#array-of-tables). Each key in the kafka message will need an entry in the file like below.
+
 
 ```
 [[fields]]
@@ -73,40 +49,18 @@ source-type = "int"
 source-path = ["demo", "categories"]
 ```
 
-```
-name = "name"
-```
+The below holds the key/value pairs supported in the TOML table:
 
-Specifies the name of the FeatureBase field into which data will be written.
-
-```
-source-type = "int"
-```
-
-Specifies the type that fbsql should expect the message data for the field to be represented in the Kafka message. For example, if the message contains `"foo":"6"` (even though field `foo` is defined as an `int` on the FeatureBase table), the configuration for `foo` should contain `source-type = "string"`. If a `source-type` is not provided, it will default to the FeatureBase field's type.
+| Key | Description | Example Value | Default |
+|---|---|---|---|
+| `name` | Specifies the name of the FeatureBase column into which data will be written. | `col_name` | |
+| `source-type` | Specifies the type that fbsql should expect the message data for the field to be represented in the Kafka message. For example, if the message contains `"foo":"6"` (even though field `foo` is defined as an `int` on the FeatureBase table), the configuration for `foo` should contain `source-type = "string"`. If a `source-type` is not provided, it will default to the FeatureBase field's type.  | `"idset"` | FeatureBase Column Type |
+| `source-path` | If the data for a particular FeatureBase column needs to be extracted from a nested JSON object, that can be specified using `source-path`. Each additional element in the array represents a nested key. If `source-path` is not provided, it will default to the value provided in `name`. | `["key", "sub-key"]` | value of `name` |
+| `primay-key` | Exactly one field of the kafka message should be set as the primary key. The name of the field designated the primary key does not need to map to a column in FeatureBase. | `true` | |
 
 Possible `source-type` values are:
-```
-bool
-int
-decimal(scale)
-id
-idset
-string
-stringset
-timestamp
-```
 
-```
-source-path = ["key", "sub-key"]
-```
-If the data for a particular FeatureBase field needs to be extracted from a nested JSON object, that can be specified using `source-path`. Each additional element in the array represents a nested key. If `source-path` is not provided, it will default to the value provided in `name`.
-
-```
-primay-key = true
-```
-
-Exactly one field should be set as the primary key. The name of the field designated the primary key does not need to map to a field in FeatureBase.
+{% include /sql-guide/sql-datatypes.md %}
 
 ## Examples
 
