@@ -1,0 +1,1 @@
+Cloud databases are not automatically patched to the latest version. If you would like to upgrade to the latest version of FeatureBase for an existing database, please contact [se@featurebase.com](mailto:se@featurebase.com).

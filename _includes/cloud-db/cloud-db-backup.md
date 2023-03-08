@@ -1,0 +1,1 @@
+All of your databases are automatically backed up daily. FeatureBase handles and manages these backups for you. In the event an issue occurs and you need to restore your data from a backup, or if you have questions or particular needs for backups, please contact [se@featurebase.com](mailto:se@featurebase.com).
