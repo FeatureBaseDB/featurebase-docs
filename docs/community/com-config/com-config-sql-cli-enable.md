@@ -37,4 +37,4 @@ These flags can be used within the CLI.
 ## Further information
 
 * [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
-* [Run SQL over an HTTP endpoint](/docs/community/com-config/com-config-sql-cli-enable)
+* [Run SQL over an HTTP endpoint](/docs/community/com-api/old-sql-endpoint)

@@ -11,7 +11,7 @@ FeatureBase Community users can run SQL Queries over the HTTP SQL CLI.
 ## Before you begin
 
 {% include /com-install/com-install-before-begin.md %}
-* [Enable the SQL CLI for FeatureBase Community](/docs/community/com-config/com-config-sql-cli-enable)
+* [Enable the SQL CLI](/docs/community/com-config/com-config-sql-cli-enable)
 
 ## Endpoint syntax
 
