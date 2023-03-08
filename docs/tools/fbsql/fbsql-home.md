@@ -41,7 +41,7 @@ The following flags can be provided when running fbsql. None of the flags are re
 | `--kafka-config` | Run fbsql as a Kafka consumer in non-interactive mode. Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until terminated by the user. For more information, see [How To Use Kafka With fbsql](/docs/tools/fbsql/fbsql-kafka) | |
 | `--org-id` | Specified the Organization ID to use. Organizations are a concept used in FeatureBase Cloud, and in that case they are determined automatically based on user authorization. They are exposed here in case on-prem installations want to mimic that functionality. | |
 | `--password` | Password for FeatureBase Cloud access. | |
-| `-p`<br>`--port` | Specifies the TCP port or the local Unix-domain socket file extension on which FeatureBase is listening for connections. | `10101` | 
+| `-p`<br>`--port` | Specifies the TCP port or the local Unix-domain socket file extension on which FeatureBase is listening for connections. | Attempts to detect `10101` or `8080` (for serverless) | 
 
 ## Usage
 
