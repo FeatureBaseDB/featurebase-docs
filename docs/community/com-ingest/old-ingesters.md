@@ -172,7 +172,7 @@ The CSV ingester can read CSV files (optionally gzipped) and ingest them to Feat
 
 ## SQL Ingester
 
-The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data from a sql endpoint, and ingests the data into FeatureBase. It uses the SQL table column names to [specify how each field](/docs/community/com-ingest/old-ingesters#field-types) should be ingested, similar to the CSV Ingester.
+The SQL ingester uses a sql connection (via MSSQL, MySQL, or Postgres) to select data from a SQL CLI, and ingests the data into FeatureBase. It uses the SQL table column names to [specify how each field](/docs/community/com-ingest/old-ingesters#field-types) should be ingested, similar to the CSV Ingester.
 
 [Full SQL Ingester Configuration Reference](/docs/community/com-ingest/old-ingester-configuration#sql-ingester)
 
