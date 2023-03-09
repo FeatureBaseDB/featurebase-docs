@@ -1,18 +1,18 @@
 ---
-title: DATETIMEPART()
+title: DATE_TRUNC()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# DATETIMEPART() function
+# DATE_TRUNC() function
 
-The `DATETIMEPART()` function returns the specified part of a given date, in numerical format.
+The `DATE_TRUNC()` function truncates a given timestamp to a specified precision.
 
 ## Syntax
 
 ```
-DATETIMEPART(timeunit, date-time)
+DATE_TRUNC(timeunit, date-time)
 ```
 
 ## Arguments
@@ -27,17 +27,17 @@ DATETIMEPART(timeunit, date-time)
 
 | Data type | Value |
 |---|---|
-| int | Returns the specified part of the timestamp. |
+| string | Truncated date and time |
 
 ## Additional information
 
 ### timeunit
 
-{% include /sql-guide/datetimename-function-timeunit-table.md %}
+{% include /sql-guide/datetimeadd-function-timeunit-table.md %}
 
 ## Examples
 
-### Select the month from a given date
+### Display year and month only
 
 ```sql
 create table demo
@@ -46,14 +46,14 @@ create table demo
 insert into demo(_id, ts)
     values (1, '1970-01-01T00:00:00Z');
 
-select _id, datetimepart('m',ts) from demo;
+select _id, date_trunc('m',ts) from demo;
 
  _id | ts                           
 -----+----------
-   1 | 1
+   1 | 1970-01
 ```
 
-### Find out what day of the week a date is, with Sunday as 0
+### Display date, and time with hours and minutes but not seconds
 
 ```sql
 create table demo
@@ -62,11 +62,11 @@ create table demo
 insert into demo(_id, ts)
     values (1, '1970-01-01T00:00:00Z');
 
-select _id, datetimepart('w',ts) from demo;
+select _id, date_trunc('mi',ts) from demo;
 
  _id | ts                           
 -----+----------
-   1 | 4
+   1 | 1970-01-01T00:00
 ```
 
 
