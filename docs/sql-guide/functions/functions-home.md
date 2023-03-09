@@ -56,8 +56,11 @@ has_toc: false
 * [PREFIX()](/docs/sql-guide/functions/function-prefix)
 * [SUFFIX()](/docs/sql-guide/functions/function-suffix)
 
-## DateTime functions
+## Date/Time scalar functions
 
-* [DATETIMEFROMPARTS()](/docs/sql-guide/functions/function-datetimefromparts)
 * [DATETIMEADD()](/docs/sql-guide/functions/function-datetimeadd)
+* [DATETIMENAME()](/docs/sql-guide/functions/function-datetimename)
+* [DATETIMEPART()](/docs/sql-guide/functions/function-datetimepart)
+* [DATE_TRUNC()](/docs/sql-guide/functions/function-date_trunc)
+* [DATETIMEFROMPARTS()](/docs/sql-guide/functions/function-datetimefromparts)
 
