@@ -1,19 +1,18 @@
 ---
-title: DATETIMENAME()
+title: DATETIMEPART()
 layout: default
 parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# DATETIMENAME() function
+# DATETIMEPART() function
 
-The `DATETIMENAME()` function returns the specified part of a given date.
-If the part is a month or day of the week, it returns the name of that month or day, otherwise it returns a string containing the numerical representation.
+The `DATETIMEPART()` function returns the specified part of a given date, in numerical format.
 
 ## Syntax
 
 ```
-DATETIMENAME(timeunit, date-time)
+DATETIMEPART(timeunit, date-time)
 ```
 
 ## Arguments
@@ -38,7 +37,7 @@ DATETIMENAME(timeunit, date-time)
 
 ## Examples
 
-### Find out what month a particular date is in
+### Select the month from a given date
 
 ```sql
 create table demo
@@ -47,14 +46,14 @@ create table demo
 insert into demo(_id, ts)
     values (1, '1970-01-01T00:00:00Z');
 
-select _id, datetimename('m',ts) from demo;
+select _id, datetimepart('m',ts) from demo;
 
  _id | ts                           
 -----+----------
-   1 | January
+   1 | 1
 ```
 
-### Find out what day of the week a particular date is
+### Find out what day of the week a date is, with Sunday as 0
 
 ```sql
 create table demo
@@ -63,11 +62,11 @@ create table demo
 insert into demo(_id, ts)
     values (1, '1970-01-01T00:00:00Z');
 
-select _id, datetimename('w',ts) from demo;
+select _id, datetimepart('w',ts) from demo;
 
  _id | ts                           
 -----+----------
-   1 | Thursday
+   1 | 4
 ```
 
 
