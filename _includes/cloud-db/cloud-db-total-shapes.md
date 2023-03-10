@@ -1,3 +1,6 @@
+{: .note }
+Shapes labeled as "Development" are smaller, single-node configurations intended for development and testing purposes
+
 | Shape | Memory (GB) | Volume (GB) | Compute (vCPU) |
 |---|---|---|---|
 |8GB-Development|8|32|2|
