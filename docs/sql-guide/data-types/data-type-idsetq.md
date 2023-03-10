@@ -1,31 +1,31 @@
 ---
-title: IDSET
+title: IDSETQ
 layout: default
 parent: Data types & constraints
 grand_parent: SQL guide
-nav_order: 4
+nav_order: 5
 ---
 
-# IDSET data type
+# IDSETQ data type
 
-IDSET is a FeatureBase datatype used with `timeQuantum` and `ttl` constraints.
+IDSETQ is a FeatureBase datatype used for a set of unsigned integer values.
 
 ## DDL syntax
 
 ```
-IDSET [TIMEQUANTUM {value} [TTL '{value}}']]
+IDSETQ [TIMEQUANTUM {value} [TTL '{value}}']]
 ```
 
 ## Arguments
 
 | Argument | Description |
 |---|---|
-| IDSET | Data type used where there is a need to set multiple ID values for a single column |
+| IDSETQ | Data type used where there is a need to set multiple ID values for a single column |
 {% include /sql-guide/timequantum-ttl-args.md %}
 
 ## Additional information
 
-The IDSET data type:
+The IDSETQ data type:
 * has a `set` internal data type
 * one standard view by default unless a timeQuantum is set.
 * is used for:

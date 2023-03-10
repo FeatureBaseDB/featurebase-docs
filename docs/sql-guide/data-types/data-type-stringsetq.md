@@ -1,31 +1,31 @@
 ---
-title: STRINGSET
+title: STRINGSETQ
 layout: default
 parent: Data types & constraints
 grand_parent: SQL guide
-nav_order: 7
+nav_order: 9
 ---
 
-# STRINGSET data type
+# STRINGSETQ data type
 
-STRINGSET is a FeatureBase datatype used with `TIMEQUANTUM` and `TTL` (Time To Live) constraints.
+STRINGSETQ is a FeatureBase datatype used with `TIMEQUANTUM` and `TTL` (Time To Live) constraints.
 
 ## DDL Syntax
 
 ```
-STRINGSET [TIMEQUANTUM {value} [TTL '{value}']]
+STRINGSETQ [TIMEQUANTUM {value} [TTL '{value}']]
 ```
 
 ## Arguments
 
 | Argument | Description |
 |---|---|
-| STRINGSET | Data type used to set multiple STRING values for a single column. |
+| STRINGSETQ | Data type used to set multiple STRING values for a single column. |
 {% include /sql-guide/timequantum-ttl-args.md %}
 
 ## Additional information
 
-The STRINGSET data type:
+The STRINGSETQ data type:
 * has a `keyed set` internal datatype
 * one standard view by default unless a timeQuantum is set.
 * is used when:
