@@ -40,13 +40,10 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 {% include /cloud-db/cloud-db-new-name.md %}
 
-* Choose from development shapes intended for testing:
-
-{% include /cloud-db/cloud-db-shape-dev.md %}
-
-* Or choose a production shape instead:
-
-{% include /cloud-db/cloud-db-shape-prod.md %}
+{: .note }
+A shape labeled as "Development" is intended for testing:
+  
+{% include /cloud-db/cloud-db-total-shapes.md %}
 {% include /cloud-db/cloud-db-click-create.md %}
 
 ## Next step

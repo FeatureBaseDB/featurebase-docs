@@ -22,22 +22,19 @@ Cloud Database shapes incur an hourly fee, chargeable at the end of the month.
 * {% include contact-support.md %} to upgrade your account to access production database shapes
 
 
-### Database Shapes
+## Database Shapes
 
-All database shapes are available to users.
+{% include /cloud/trial-account-limits.md %}
 
-The shapes labeled as "dev" have;
+The shapes labeled as "Development" have:
 * only one node
 * are smaller and have less compute for development and testing purposes.
 
-The shapes labeled as "prod" have:
+Otherwise, the shapes have:
 * overprovisioned disk space and memory to ensure best performance
 * data replication should a node go down.
 
-All trial users will have $300 credits to spend as they wish.
-
-{% include /cloud-db/cloud-db-shape-dev.md %}
-{% include /cloud-db/cloud-db-shape-prod.md %}
+{% include /cloud-db/cloud-db-total-shapes.md %}
 ## Further information
 
 * [Learn how to manage FeatureBase Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
