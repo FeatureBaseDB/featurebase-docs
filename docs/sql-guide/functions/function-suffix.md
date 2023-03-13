@@ -17,10 +17,10 @@ suffix(expr, length)
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| `expr` | Any `string` expression. |
-| `length` | Required `int` value that represents the length of the suffix to extract. |
+| Argument | Data type | Description | Required | Further information |
+|---|---|---|---|---|
+| `expr` | string | String value or any expression that resolves to a string | Yes| |
+| `length` | int | Length of the suffix to extract | Yes | |
 
 ## Returns
 

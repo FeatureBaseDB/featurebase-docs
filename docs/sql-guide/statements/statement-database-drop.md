@@ -8,19 +8,21 @@ nav_order: 7
 
 # DROP DATABASE statement
 
-Drops the database from featurebase cloud. Note this statement only pertains to FeatureBase Cloud.
+Drops the database from featurebase cloud. 
+
+{% include /cloud/cloud-only-note.md %}
 
 ## Syntax
 
 ```sql
-DROP DATABASE database_name
+DROP DATABASE database_name;
 ```
 
 ## Arguments
 
-| Argument | Description | Further information |
-|----------|-------------|---------------------|
-| `database_name` | Name of the database to delete | |
+| Argument | Data type | Description | Required | Further information |
+|---|---|---|---|---|
+| `database_name` | string |Name of the database to delete | yes | |
 
 
 ## Examples

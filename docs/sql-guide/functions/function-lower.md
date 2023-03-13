@@ -17,9 +17,9 @@ lower(expr)
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| `expr` | Any `string` expression. |
+| Argument | Data type | Description | Required | Further information |
+|---|---|---|---|---|
+| `expr` | string | String value or any expression that resolves to a string | Yes| |
 
 ## Returns
 
