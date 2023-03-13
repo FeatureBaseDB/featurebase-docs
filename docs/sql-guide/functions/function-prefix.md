@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# PREFIX() string function
+# PREFIX() function
 
 `PREFIX()` function returns a substring of a given length, starting from the beginning of the provided string.
 

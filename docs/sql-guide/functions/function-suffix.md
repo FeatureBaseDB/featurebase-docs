@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# SUFFIX() string function
+# SUFFIX() function
 
 `SUFFIX()` function returns a substring of a given length, starting from the end of the provided string.
 

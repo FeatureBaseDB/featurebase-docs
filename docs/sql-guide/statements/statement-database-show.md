@@ -8,7 +8,7 @@ nav_order: 7
 
 # SHOW DATABASES statement
 
-Show detail on all databases in FeatureBase Cloud.
+Show detail on all databases.
 
 {% include /cloud/cloud-only-note.md %}
 

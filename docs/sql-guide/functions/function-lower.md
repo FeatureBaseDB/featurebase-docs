@@ -5,7 +5,7 @@ parent: SQL functions
 grand_parent: SQL guide
 ---
 
-# LOWER() string function
+# LOWER() function
 
 `LOWER()` function converts the specified string to lower-case in the column.
 

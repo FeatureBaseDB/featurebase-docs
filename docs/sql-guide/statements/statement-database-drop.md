@@ -8,7 +8,7 @@ nav_order: 7
 
 # DROP DATABASE statement
 
-Drops the database from featurebase cloud. 
+Drops the specified database. 
 
 {% include /cloud/cloud-only-note.md %}
 
