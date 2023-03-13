@@ -62,3 +62,5 @@ has_toc: false
 * [DATETIMENAME()](/docs/sql-guide/functions/function-datetimename)
 * [DATETIMEPART()](/docs/sql-guide/functions/function-datetimepart)
 * [DATE_TRUNC()](/docs/sql-guide/functions/function-date_trunc)
+* [DATETIMEFROMPARTS()](/docs/sql-guide/functions/function-datetimefromparts)
+
