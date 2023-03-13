@@ -52,6 +52,7 @@ insert into demo(_id, start-date, end-date)
     values (1, '2023-02-27T21:30:00Z', '2023-03-01T21:30:00Z');
     
 select _id, datetimediff('d', start-date, end-date) as days_diff from demo;
+
 _id | days_diff
 -----+-----------
   1 |         2
@@ -67,6 +68,7 @@ insert into demo(_id, start-date, end-date)
     values (1, '2023-03-01T12:00:00Z', '2023-03-01T09:00:00Z');
     
 select _id, datetimediff('h', start-date, end-date) as hours_diff from demo;
+
 _id | hours_diff
 -----+------------
   1 |         -3
@@ -82,6 +84,7 @@ insert into demo(_id, start-date, end-date)
     values (1, '2023-02-27T21:30:00Z', '2023-03-01T21:30:00Z');
     
 select _id, datetimediff(null, start-date, end-date) as diff from demo;
+
 _id | diff
 -----+------
   1 | NULL
