@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # CHARINDEX() function
 
-The `Charindex()` function supplies an integer value that represents the start of a substring within a string value
+The `Charindex()` function supplies an integer value that represents the start of a substring within a string value. Returns -1 if the substring cannot be found.
 
 ## Syntax
 
@@ -64,3 +64,15 @@ RESULTS
 | _id | charindex|
 |---|---|
 | 1 | 5 |
+
+### CHARINDEX not found
+
+```sql
+select _id, charindex('foo',segment) as charindex from customers;
+```
+
+RESULTS
+
+| _id | charindex|
+|---|----|
+| 1 | -1 |

@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # ASCII() function
 
-`Ascii()` returns the ASCII value of the specified string.
+`Ascii()` returns the ASCII value of the specified string, using the UTF-8 ASCII table. Limited to character values of 0 to 127.
 
 ## Syntax
 
