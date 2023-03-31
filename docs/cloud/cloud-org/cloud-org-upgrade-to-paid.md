@@ -10,15 +10,14 @@ nav_order: 4
 
 {: .no_toc }
 
-{% include /cloud-org/cloud-summary-org.md %}
+{% include page-toc.md %}
 
 ## Before you begin
 
-{% include /cloud-users/cloud-user-admin-role-needed.md %}
+{% include /cloud/cloud-before-begin.md %}
 
-## Change organization details
+## Upgrade your organization to Paid
 
-- Click **Configuration** > **Organization settings**
-- Update your organization name and address as required
-- Optionally change the Technical and Billing contact addresses.
-- Click **Update**.
+- Click **Configuration** > **Upgrade to Paid**.
+- Insert your credit card information or your bank account details.
+- Click **Submit**.
