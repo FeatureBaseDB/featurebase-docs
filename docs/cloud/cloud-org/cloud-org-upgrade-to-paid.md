@@ -1,12 +1,12 @@
 ---
-title: Upgrade your organization to paid
+title: Upgrade to paid
 layout: default
 parent: Manage organization
 grand_parent: Cloud
 nav_order: 4
 ---
 
-# How do I upgrade my organization to paid?
+# How do I add payment information for my organization?
 
 {: .no_toc }
 
@@ -15,9 +15,23 @@ nav_order: 4
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
+* [Database usage pricing](https://www.featurebase.com/pricing){:target="_blank:}
+* [Available database sizes](https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-shape/)
 
-## Upgrade your organization to Paid
+## Important payment information
 
-- Click **Configuration** > **Upgrade to Paid**.
-- Insert your credit card information or your bank account details.
-- Click **Submit**.
+{% include /cloud-org/cloud-payment-details.md %}
+
+## Add payment information for my organization
+
+* Click **Configuration** > **Upgrade to Paid**.
+* Choose your payment method: **Card** or **US bank account**
+* Enter your credit card information or your bank account details.
+* Click **Submit**.
+
+## Modify payment or cancel account
+
+* {% include contact-support.md %}
+
+## Further information
+* [Manage your bill](/docs/cloud/cloud-org/cloud-org-billing/)
