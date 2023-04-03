@@ -1,5 +1,5 @@
 ---
-title: Manage billing
+title: Manage organization billing
 layout: default
 parent: Manage organization
 grand_parent: Cloud
