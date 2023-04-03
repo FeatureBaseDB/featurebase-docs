@@ -7,7 +7,6 @@ nav_order: 5
 ---
 
 # How do I manage database payments for my organization?
-
 {: .no_toc }
 
 {% include page-toc.md %}
