@@ -1,5 +1,5 @@
 ---
-title: Upgrade to paid account
+title: Upgrade to a paid account
 layout: default
 parent: Manage organization
 grand_parent: Cloud

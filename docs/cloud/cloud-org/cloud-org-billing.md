@@ -6,8 +6,9 @@ grand_parent: Cloud
 nav_order: 5
 ---
 
-# How do I manage database payments for my organization?
+# How do I manage payments and billing for my organization?
 {: .no_toc }
+Learn how to manage payments and invoices for before and after your trial expires.
 
 {% include page-toc.md %}
 
@@ -21,11 +22,12 @@ nav_order: 5
 
 ## Billing cycle
 
-* Billing follows a 30-day cycle that starts on the date your organization was created.
+* Billing follows a monthly cycle that starts on the date your organization was created
 
 ## Paying your bill
 
-* At the end of the billing cycle, an invoice is issued and the payment method you have on file will automatically be charged the listed amount
+* An invoice is issued at the end of the billing cycle and your payment method is automatically charged
+* An email confirmation will be sent with the invoice and payment details to the email that created the organization
 
 ## Questions about your bill
 
