@@ -6,7 +6,7 @@ grand_parent: Cloud
 nav_order: 4
 ---
 
-# How do I add payment information for my organization?
+# How do I pay for my Database usage?
 
 {: .no_toc }
 
