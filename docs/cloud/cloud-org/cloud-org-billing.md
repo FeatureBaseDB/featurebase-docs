@@ -6,7 +6,7 @@ grand_parent: Cloud
 nav_order: 5
 ---
 
-# How do I manage billing for my organization?
+# How do I manage database payments for my organization?
 
 {: .no_toc }
 
