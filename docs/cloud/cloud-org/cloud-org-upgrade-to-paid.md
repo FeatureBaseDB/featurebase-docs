@@ -7,7 +7,6 @@ nav_order: 4
 ---
 
 # How do I pay for my Database usage?
-
 {: .no_toc }
 
 {% include page-toc.md %}
@@ -16,8 +15,8 @@ nav_order: 4
 
 {% include /cloud/cloud-before-begin.md %}
 
-- [Database usage pricing](https://www.featurebase.com/pricing){:target="\_blank:}
-- [Available database sizes](https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-shape/)
+* [Database usage pricing](https://www.featurebase.com/pricing){:target="\_blank:}
+* [Available database sizes](https://docs.featurebase.com/docs/cloud/cloud-databases/cloud-db-shape/)
 
 ## Important payment information
 
@@ -25,15 +24,15 @@ nav_order: 4
 
 ## Add payment information for my organization
 
-- Click **Configuration** > **Upgrade to Paid**.
-- Choose your payment method: **Card** or **US bank account**
-- Enter your credit card information or your bank account details.
-- Click **Submit**.
+* Click **Configuration** > **Upgrade to Paid**.
+* Choose your payment method: **Card** or **US bank account**
+* Enter your credit card information or your bank account details.
+* Click **Submit**.
 
 ## Modify payment or cancel account
 
-- {% include contact-support.md %}
+* {% include contact-support.md %}
 
 ## Further information
 
-- [Manage your bill](/docs/cloud/cloud-org/cloud-org-billing/)
+* [Manage your bill](/docs/cloud/cloud-org/cloud-org-billing/)
