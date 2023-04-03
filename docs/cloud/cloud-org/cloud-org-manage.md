@@ -36,6 +36,6 @@ has_toc: false
 
 - [Learn how to update technical contact address](/docs/cloud/cloud-org/cloud-org-update-tech-contact)
 
-## How do I upgrade my organization to paid?
+## How do I upgrade my organization to a paid account?
 
 - [Learn how to upgrade your organization to paid](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid)
