@@ -59,7 +59,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 | gRPC Endpoint | No | [Community gRPC endpoint](/docs/community/com-api/old-grpc-api) |   |
 | Pilosa Query Language (PQL) Query Builder | No | Yes | [Learn about PQL](/docs/pql-guide/pql-home) |
 | Python Client | No | [Python client library](/docs/community/com-query/old-python-library) | |
-| Grafana Plug-In | No | [Community grafana connector](/docs/community/com-query/old-grafana-connector) |  |
+| Grafana Plug-In | No | [Community grafana connector](/docs/community/com-query/grafana-connector) |  |
 | Postgres Lookup Database Option | No | Yes |   |
 
 ## Operations

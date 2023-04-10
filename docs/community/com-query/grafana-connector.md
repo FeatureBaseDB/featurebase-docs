@@ -8,23 +8,30 @@ nav_order: 2
 
 # Grafana Connector
 
-Molecula provides a Grafana plugin, which can be used to interact with FeatureBase (4.0 or higher <!-- TODO is this correct? -->) to run queries and view visualizations of results. Note that this is unrelated to using Grafana for operational monitoring of the FeatureBase cluster. For details on that, see the [monitoring reference page](/docs/community/com-monitoring/old-monitoring)
+Featurebase provides a Grafana plugin, which can be used to interact with FeatureBase (4.0 or higher <!-- TODO is this correct? -->) to run queries and view visualizations of results. Note that this is unrelated to using Grafana for operational monitoring of the FeatureBase cluster. For details on that, see the [monitoring reference page](/docs/community/com-monitoring/old-monitoring)
 
 ## Setup
 
 ### Install Grafana
-For the best experience, [install](https://grafana.com/grafana/download) Grafana version 7 using the binary, not brew. The plugin requires version 7 or greater, but version 7 works best. For convenience, here are the commands for mac. For other platforms, check the link.
+For the best experience, [install](https://grafana.com/grafana/download) Grafana version 9 using the binary, not brew. The plugin requires version 7 or greater, but version 7 works best. For convenience, here are the commands for mac. For other platforms, check the link.
 
+For the best experience, [install](https://grafana.com/grafana/download) Grafana using the binary, not brew. The plugin requires version 7 or greater and works best on version 9.
+
+### Mac OS 
 ```
-curl -O https://dl.grafana.com/enterprise/release/grafana-enterprise-7.5.13.darwin-amd64.tar.gz
-tar -zxvf grafana-enterprise-7.5.13.darwin-amd64.tar.gz
+curl -O https://dl.grafana.com/oss/release/grafana-9.4.7.darwin-amd64.tar.gz
+tar -zxvf grafana-9.4.7.darwin-amd64.tar.gz
+```
+
+### Linux
+```
+wget https://dl.grafana.com/oss/release/grafana-9.4.7.linux-amd64.tar.gz
+tar -zxvf grafana-9.4.7.linux-amd64.tar.gz
 ```
 
 ### Install Plugin
-As of FeatureBase 4.3, a Grafana plugin archive should be included in your release archive. Unpack and note the location of the `/dist` folder.
-
-
-In Grafana's configuration file `grafana-7-x.x/conf/defaults.ini` point the `plugins` field to the `/dist` folder.
+Download the latest Featurebase release from [Featurebase](https://releases.molecula.cloud/). Unpack and locate the `/dist` directory. 
+In Grafana's configuration file `grafana-9-x.x/conf/defaults.ini` point the `plugins` field to the `/dist` directory.
 
 ```
 plugins = /path/to/grafana-plugin/molecula/dist
@@ -40,7 +47,7 @@ The port which defaults to `3000` can be modified by setting the `http_port` fie
 
 ### Launch Grafana
 
-From `grafana-7-x.x/` run the following command:
+From `grafana-9-x.x/` run the following command:
 
 ```
 ./bin/grafana-server web
@@ -51,26 +58,26 @@ From `grafana-7-x.x/` run the following command:
 ### Add Datasource
 
 - Sign in or create credentials (you can use admin/admin if logging in for the first time)
-- Add Molecula as a datasource in Grafana and enter FeatureBase server information
+- Add Featurebase as a datasource in Grafana and enter FeatureBase server information
     - The welcome page should include a link to the [Add data source page](http://localhost:3000/datasources).
       - See the [Grafana docs](https://grafana.com/docs/grafana/latest/datasources/add-a-data-source) for more details.
-    - If your molecula-datasource plugin is installed, it should appear in the data source list.
-
+    - If your featurebase-datasource plugin is installed, it should appear in the data source list.
 
 ![Grafana Welcome](/assets/images/grafana-welcome.png "Grafana Welcome")  
 *Click "Add your first data source"*
 
-![Grafana Add Datasource](/assets/images/grafana-add-datasource.png "Grafana Add Datasource")  
-*Select the "Molecula" option. The "unsigned" label is expected*
+![Grafana Add Datasource](/assets/images/grafana/add-datasource.png "Grafana Add Datasource")  
+*Select the "Featurebase" option. The "unsigned" label is expected*
 
 ### Configure Server
 
 Point Grafana to a running FeatureBase server
 - Default FeatureBase address: `localhost`
 - Default FeatureBase GRPC port: `20101`
+- Default FeatureBase HTTP port: `10101`
 - `Max Query Results` limits the number of records returned by the server if no `Limit` call is provided.
 
-![Grafana Configure Datasource](/assets/images/grafana-configure-server.png "Grafana Configure Datasource")  
+![Grafana Configure Datasource](/assets/images/grafana/configure-server.png "Grafana Configure Datasource")  
 *If Featurebase server is running, you will see a similar message indicating success*
 
 ### Configure Authentication
@@ -95,8 +102,8 @@ docker run -d  \
     -p 20101:20101 \ # FeatureBase grpc port
     -v "$(pwd)":/var/lib/grafana/plugins \   # plugin directory volume mount
     --name=grafana \
-    -e "GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=molecula-datasource" \   # grafana configuration environment variable
-    grafana/grafana:7.5.9
+    -e "GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=featurebase-datasource" \   # grafana configuration environment variable
+    grafana/grafana:9.4.7
 ```
 
 After any changes to the plugin directory, restart the container with `docker restart grafana`.
@@ -112,44 +119,14 @@ If your environment requires a different installation method, please refer to th
 <!-- TODO: dataset-specific examples for each "format as" option -->
 <!-- TODO: screenshots of config and results -->
 
-
 ### Querying
 The plugin supports any [SQL](/docs/sql-guide/sql-guide-home) and [PQL](/docs/pql-guide/pql-home) queries that FeatureBase supports. When using PQL, the index must be selected from the respective drop down.
 
-![Query FeatureBase through Grafana](/assets/images/grafana-query.png "Query FeatureBase through Grafana")  
+![Query FeatureBase through Grafana](/assets/images/community/grafana/query.png "Query FeatureBase through Grafana")  
 *Enter your SQL or PQL query*
 
 #### Fetching Ids
 By default, `_id` will be filtered out in query results. Use the 'Fetch _id' toggle if required.
-
-### Data Series (Format As)
-Query results can be broken up in different ways to aid the creation of different types of visualizations.
-
-#### Single Series
-Typically used for a single data-series on a time based plot such as, the 'Graph' panel. This will require a TimestampField and a numeric field in the query results.
-
-Special Consideration:
-- DateInt fields will be interpreted as the number of seconds from the Unix epoch if it is named 'timestamp'.
-
-```pql
-Extract(Limit(All(), limit=1000), Rows(data_size), Rows(timestamp))
-```
-#### Series By Row
-
-Typically used for aggregation queries where each row is a distinct category with a statistic.
-```pql
-GroupBy(Rows(city))
-```
-As single series, this would return the count of each distinct city in a single table. But as 'Series By Row', it will promote each row to be its own data series.
-
-#### Series By Metric
-Typically used when you want to break up the query results into different data-series by the distinct values in a particular column. The column itself must be included in the query and selected as the 'metric'. <!-- TODO what is "the 'metric'" ??? -->
-
-```pql
-Extract(Limit(All(), limit=1000), Rows(data_size), Rows(timestamp), Rows(customer))
-```
-
-If 'customer' contains the distinct values of 'CVS' and 'Sprint', the result will be two separate data series.
 
 ### Use Grafana Variables
 
@@ -203,6 +180,36 @@ which is not a valid query. Instead, you'll want to use it as a child of another
 - User input:  `Intersect(ConstRow(columns=$var3), Row(region="NW"))`
 - Interpolated query: `Intersect(ConstRow(columns=[5,10,15]), Row(region="NW"))`
 
+### Variables in SQL
+
+Variables are supported in [SQL](/docs/sql-guide/sql-guide-home) queries. Variables can be used as projections, and expressions in where, group by, and having clauses.
+
+#### Top
+- Top supports variables with single integer value.
+- `$var` has value `10`
+- User input: `select top($var) from logs`
+- Interpolated query: `select top(10) from logs`
+
+#### ResultColumns 
+- `$var` has value ["customer", "region"]
+- User input: `select $var from logs`
+- Interpolated query: `select customer, region from logs`
+
+#### Where clause
+- `$var` has value ["Informational", "Debug"]
+- User input: `select * from logs where level = $var`
+- Interpolated query: `select * from logs where level = "Informational" or level = "Debug"`
+
+#### GroupBy
+- `$var` has value ["customer", "region"]
+- User input: `select * from logs group by $var`
+- Interpolated query: `select * from logs group by customer, region`
+
+#### Having clause
+- `$var` has value ["Informational", "Debug"]
+- User input: `select * from logs having level = $var`
+- Interpolated query: `select * from logs having level = "Informational" or level = "Debug"`
+
 ### Time Range Controls
 
 Grafana has time range controls at the top of each graph and dashboard.
@@ -212,5 +219,5 @@ Grafana has time range controls at the top of each graph and dashboard.
 
 To utilize these controls, you must associate it with a field in your dataset. This can be done by adding the field name to `TimeField` in the query editor. The type of this field must be `timestamp`.
 
-![Grafana Variable Select](/assets/images/grafana-timefield.png "Grafana Variable Select")  
+![Grafana Variable Select](/assets/images/grafana/timefield.png "Grafana Variable Select")  
 *Select the field you would like to associate with Grafana's time range controls*
