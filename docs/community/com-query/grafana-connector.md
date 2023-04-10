@@ -219,5 +219,5 @@ Grafana has time range controls at the top of each graph and dashboard.
 
 To utilize these controls, you must associate it with a field in your dataset. This can be done by adding the field name to `TimeField` in the query editor. The type of this field must be `timestamp`.
 
-![Grafana Variable Select](/assets/images/grafana/timefield.png "Grafana Variable Select")  
+![Grafana Variable Select](/assets/images/community/grafana/timefield.png "Grafana Variable Select")  
 *Select the field you would like to associate with Grafana's time range controls*
