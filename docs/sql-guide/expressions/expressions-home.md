@@ -38,7 +38,7 @@ Literals are explicitly specified fixed values that conform to a specific data t
 |---|---|---|
 | `date` |  | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | `decimal` |  | [DECIMAL() data type](/docs/sql-guide/data-types/data-type-decimal)
-| `set` | ![expr](/assets/images/sql-guide/set_literal.svg) | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)<br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
+| `set` | ![expr](/assets/images/sql-guide/set_literal.svg) | [IDSET data type](/docs/sql-guide/data-types/data-type-set)<br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-set) |
 | `string` |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
 | `tuple` | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types. |
 

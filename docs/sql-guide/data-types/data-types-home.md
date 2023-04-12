@@ -41,9 +41,9 @@ Data types and constraints are used to define table columns when creating tables
 
 ## FeatureBase data types
 
-* [IDSET](/docs/sql-guide/data-types/data-type-idset)
+* [IDSET](/docs/sql-guide/data-types/data-type-set)
 * [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq)
-* [STRINGSET](/docs/sql-guide/data-types/data-type-stringset)
+* [STRINGSET](/docs/sql-guide/data-types/data-type-set)
 * [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq)
 
 ## Constraints

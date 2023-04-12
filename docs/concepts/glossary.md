@@ -180,9 +180,9 @@ nav_order: 1
 
 | Term | Context | Further information |
 |---|---|---|
-| Time Quantum | SQL IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
+| Time Quantum | SQL IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-set)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-set) |
 | Timestamp | Data type | [Timestamp data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| TTL (Time To Live) |  IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
+| TTL (Time To Live) |  IDSET and STRINGSET constraint | [IDSET data type](/docs/sql-guide/data-types/data-type-set)  <br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-set) |
 | TOML | FeatureBase Community configuration files | [Tom's Obvious Minimal Language (TOML)](https://github.com/toml-lang/toml) |
 | TopK | PQL query | [PQL TOPK read query](/docs/pql-guide/pql-read-topk) |
 | TopN | PQL query | [PQL TOPN read query](/docs/pql-guide/pql-read-topn) |
