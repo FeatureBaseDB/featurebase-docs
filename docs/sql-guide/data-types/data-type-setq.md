@@ -63,7 +63,7 @@ This example demonstrates the deletion dates of three column views where TTL is 
 
 ### TTL `error: unknown unit`
 
-FeatureBase generates `error: unknown unit` if TTL is defined incorrectly. For example:
+Occurs when TTL is defined incorrectly.
 
 ```
   TTL '60second'
