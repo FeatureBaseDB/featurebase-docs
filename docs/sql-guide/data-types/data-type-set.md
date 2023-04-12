@@ -25,7 +25,7 @@ The SET data type is used to set multiple values for a single column.
 
 ## Additional information
 
-IDSET and STRINGSET are used to:
+The SET data type is used to:
 * group by
 * search for discrete values
 
