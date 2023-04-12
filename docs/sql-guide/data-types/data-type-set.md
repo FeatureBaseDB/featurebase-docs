@@ -20,8 +20,8 @@ The SET data type is used to set multiple values for a single column.
 
 | Argument | Description | Internal data type |
 |---|---|---|
-| IDSET | Data type used where there is a need to set multiple ID values for a single column | `set` |
-| STRINGSET | Data type used to set multiple STRING values for a single column. | `keyed set` |
+| IDSET | Set multiple ID values for a single column | `set` |
+| STRINGSET | Set multiple STRING values for a single column. | `keyed set` |
 
 ## Additional information
 
@@ -34,3 +34,7 @@ IDSET and STRINGSET are used to:
 ### CREATE TABLE with all data types
 
 {% include /sql-guide/table_create_eg_all_datatypes.md %}
+
+## Further information
+
+* [SETQ data type](/docs/sql-guide/data-types/data-type-setq)

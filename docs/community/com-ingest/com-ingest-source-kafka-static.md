@@ -89,7 +89,7 @@ The following information applies to `"config": "parameters"`:
 | `"Quantum"` | Time quantum constraint used when ingesting data from `recordTime` field to a `time` column.  |  |  |  |
 | `"Scale"` | number of digits of precision to store after the decimal point |  |  |  |
 | `"TTL"` |  |  |  | [Time to live](#ttl-time-to-live) |
-| `"Unit"` | Standard units used to store timestamp for  are `"d"`, `"h"`, `"m"`, `"s"`, `"ms"`, `"us"`, `"ns"` or `"c"` for custom (using `"CustomUnit"` for `dateInt`) | `"s"` | * `dateInt` data type<br/>* `recordtime` when incoming data is numeric<br/>* `timestamp` when incoming data is numeric |
+| `"Unit"` | Standard units used to store timestamp are: `"d"`, `"h"`, `"m"`, `"s"`, `"ms"`, `"us"`, `"ns"` or `"c"` for custom (using `"CustomUnit"` for `dateInt`) | `"s"` | * `dateInt` data type<br/>* `recordtime` when incoming data is numeric<br/>* `timestamp` when incoming data is numeric |
 
 ### Cache
 
@@ -98,7 +98,7 @@ The following information applies to `"config": "parameters"`:
 
 ### recordTime fields
 
-`recordTime` fields have two modes.
+`recordTime` fields have three modes:
 
 | Mode | Result |
 |---|---|
@@ -120,6 +120,8 @@ Use a [`TopK`](/docs/pql-guide/pql-read-topk) or sorted [`GroupBy`](/docs/pql-gu
 {% include /sql-guide/timequantum-additional.md %}
 
 {% include /sql-guide/ttl-additional.md %}
+
+{% include /sql-guide/time-units-timequantum-ttl.md %}
 
 ## Examples
 
@@ -165,6 +167,7 @@ The default setting is:
 ## Further information
 
 * [RFC339 definition](https://www.rfc-editor.org/rfc/rfc3339){:target="_blank"}
+* [SETQ data type](/docs/sql-guide/data-type/data-type-setq)
 
 ## Next step
 
