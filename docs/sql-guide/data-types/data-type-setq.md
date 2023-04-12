@@ -20,18 +20,18 @@ The `SETQ` data type is used to set multiple values and associate times for each
 
 | Argument | Description | Internal data type | Default | Additional information |
 |---|---|---|---|---|
-| IDSETQ | Data type used where there is a need to set multiple ID values for a single column | `set` |  | [IDSETQ](#idsetq) |
-| STRINGSETQ | Data type used to set multiple STRING values for a single column. | `keyed set` |  |  |
-| TIMEQUANTUM | TIMEQUANTUM creates a view that associates times with column data. |  |  | [TIMEQUANTUM](#timequantum) |
-| TTL | Used to reduce the growth of a data footprint by deleting older views after a stated time |  | `0s` | [TTL(time to live)](#ttl-time-to-live) |
-| <time-unit> | Standard time units used by both TIMEQUANTUM and TTL |  |  | [Time Units](#time-units) |
+| IDSETQ | Set multiple ID values for a single column| `set` |  | [IDSETQ](#idsetq) |
+| STRINGSETQ | Set multiple STRING values for a single column. | `keyed set` |  |  |
+| TIMEQUANTUM | Create a view that associates time-units with column data. |  |  | [TIMEQUANTUM](#timequantum) |
+| TTL | Used to reduce the growth of a data footprint by deleting older views after a stated time-unit |  | `0s` | [TTL(time to live)](#ttl-time-to-live) |
+| time-unit | Standard time units used by both TIMEQUANTUM and TTL |  |  | [Time Units](#time-units) |
 
 ## Additional information
 
 `SETQ` data types:
 * behave like a standard view unless the `TIMEQUANTUM` constraint is added.
-* used to group by
-* used to search for discrete values
+* are used to group by
+* are used to search for discrete values
 
 ### IDSETQ
 

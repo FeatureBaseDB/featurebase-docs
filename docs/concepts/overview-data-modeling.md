@@ -62,7 +62,7 @@ The LRU cache maintains the most recently accessed Rows.
 
 Setting a time quantum on a field creates extra views which allow ranged Row queries down to the time interval specified.
 
-* [Learn about IDSETQ and Time quantums](/docs/sql-guide/data-types/data-type-sewtq)
+* [Learn about IDSETQ and Time quantums](/docs/sql-guide/data-types/data-type-setq)
 * [Learn about STRINGSETQ and Time quantums](/docs/sql-guide/data-types/data-type-setq)
 
 ### TTL (Time To Live)

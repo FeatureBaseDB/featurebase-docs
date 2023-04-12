@@ -58,7 +58,7 @@ In order to use our application, you’ll need data. In a real-life situation, t
 ![Figure 5. Configure a Quick Start Database that is pre-loaded with demo data](/assets/images/quick-start-guide/cloud/create_cseg_db.png)
 
 
-While the database is spinning up, you will see updates to "Status" on the ```Databases``` section as the creation progresses. The database will have a status of ```CREATING``` followed by ```PROVISIONING``` while the process is starting and resources are provisioned. The database will then shift to ```RESTORING```, which indicates that data is being loaded into your database. 
+While the database is spinning up, you will see updates to "Status" on the ```Databases``` section as the creation progresses. The database will have a status of ```CREATING``` followed by ```PROVISIONING``` while the process is starting and resources are provisioned. The database will then shift to ```RESTORING```, which indicates that data is being loaded into your database.
 
 ![Figure 6. New Database: PROVISIONING](/assets/images/quick-start-guide/cloud/db_creating.png)
 
@@ -73,7 +73,7 @@ After about 10 minutes, the database status will progress to ```RUNNING```, and 
 
 ### Data Exploration of Customer Segmentation Feature Table
 
-It’s always a good idea to understand what the dataset you’re working with contains before you get started. Click on a table to show its contents. FeatureBase can ingest and represent a wide range of [data types](/docs/sql-guide/data-types/data-types-home). Two that may not be familiar are the [```IDSET```](/docs/sql-guide/data-types/data-type-idset/) and [```STRINGSET```](/docs/sql-guide/data-types/data-type-stringset/) types. ```SET``` types are multi-valued and allow FeatureBase to collapse traditional data models, like the star schema, by efficiently storing multiple values for a single column.
+It’s always a good idea to understand what the dataset you’re working with contains before you get started. Click on a table to show its contents. FeatureBase can ingest and represent a wide range of [data types](/docs/sql-guide/data-types/data-types-home). Two that may not be familiar are the [```IDSET```](/docs/sql-guide/data-types/data-type-set/) and [```STRINGSET```](/docs/sql-guide/data-types/data-type-set/) types. ```SET``` types are multi-valued and allow FeatureBase to collapse traditional data models, like the star schema, by efficiently storing multiple values for a single column.
 
 ![Figure 9. Customer Segmentation (cseg) table details](/assets/images/quick-start-guide/cloud/cseg_cols.png)
 
@@ -118,7 +118,7 @@ It is unlikely to need to ```SUM``` in this manner across all records. It is muc
 Here we introduce comparative and logical operators including ```GREATER THAN```, ```AND```, and ```OR```. 
 
 ```sql
-SELECT SUM(income) FROM cseg 
+SELECT SUM(income) FROM cseg
 WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));
 ```
 
@@ -144,7 +144,7 @@ SELECT AVG(income) FROM cseg;
 <!--
 This needs to be updated back to INNER JOIN and SQL once SQL3 JOIN functionality is stable
 -->
-FeatureBase supports **INNER JOIN** functionality, but it should be noted it's preferable to merge data from multiple separate tables or sources into a single normalized table. FeatureBase makes this possible and easy by defaulting to ingest process to use `UPSERT` behavior. Workflows requiring ```INNER JOIN```s in traditional databases can be simplified with FeatureBase by merging disparate datasets at ingest into a single table. 
+FeatureBase supports **INNER JOIN** functionality, but it should be noted it's preferable to merge data from multiple separate tables or sources into a single normalized table. FeatureBase makes this possible and easy by defaulting to ingest process to use `UPSERT` behavior. Workflows requiring ```INNER JOIN```s in traditional databases can be simplified with FeatureBase by merging disparate datasets at ingest into a single table.
 
 If this cannot be avoided, FeatureBase does support **INNER JOIN**  between two tables. In the following example, we are combining many of the queries in this guide and adding the ```INNER JOIN``` functionality using the `DISTINCT` function in FeatureBase's native language called [PQL](/docs/pql-guide/pql-home). The ```INNER JOIN``` is facilitating a ```COUNT``` of records, or people, that are ```available for hire``` as indicated by having a ```STRING``` column true for ```available_for_hire``` located in the skills table, and having a ```STRING``` column true for ```Teaching```. In other words, we would like to ```COUNT``` the number of people who are teachers and also available for hire. The latency on this type of ```INNER JOIN``` at the billion records scale is still sub-second allowing for several interesting data models.
 
@@ -162,7 +162,7 @@ Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
 
 ### TopK - A FeatureBase Superpower
 
-Ranking queries are notorious for being computationally intensive - aka slow. Some solutions will use statistics to speed up a ranking query by approximating the true results, but that’s not always a desirable option. In PQL, [```TopK```](/docs/pql-guide/pql-read-topk) queries can be run to return exact results in milliseconds. 
+Ranking queries are notorious for being computationally intensive - aka slow. Some solutions will use statistics to speed up a ranking query by approximating the true results, but that’s not always a desirable option. In PQL, [```TopK```](/docs/pql-guide/pql-read-topk) queries can be run to return exact results in milliseconds.
 
 This query returns the top five hobbies across all customers from the cseg table, sifting through a billion records in milliseconds.
 
@@ -233,7 +233,7 @@ SELECT COUNT(*) FROM cseg;
 ### Complex Segmentation 
 
 ```sql
-SELECT SUM(income) FROM cseg 
+SELECT SUM(income) FROM cseg
 WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));
 ```
 
@@ -290,7 +290,7 @@ GROUP BY education;
 
 When you have completed this guide, please take a few minutes to drop your tables and spin down your database. If you do not, it will continue to create charges on your account.
 
-You can delete the database directly in the ```Databases``` section, which will drop all of the tables within it. Click the three dots and select ```Delete```. 
+You can delete the database directly in the ```Databases``` section, which will drop all of the tables within it. Click the three dots and select ```Delete```.
 
 ![Figure 20. Delete Database](/assets/images/quick-start-guide/cloud/delete_database.png)
 
