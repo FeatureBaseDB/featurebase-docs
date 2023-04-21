@@ -26,6 +26,9 @@ Selects data from a FeatureBase table.
 ![expr](/assets/images/sql-guide/table_or_subquery.svg)
 ![expr](/assets/images/sql-guide/table_option.svg)
 
+### with_clause
+![expr](/assets/images/sql-guide/with_clause.svg)
+
 ### where_clause
 ![expr](/assets/images/sql-guide/where_clause.svg)
 
@@ -61,6 +64,7 @@ SELECT
 | top_clause | Specify a limit to apply to the number of rows returned in the output. | No | The `expr` used in the TOP clause must be an integer literal. |
 | select_list | A series of expressions separated by commas contains the items selected to form the output result set. | Yes | [select_list](#select_list-information) |
 | from_clause | A list of table_or_subquery expressions that specify which relations to select data from. | Yes | [from_clause](#from_clause-information) |
+| with_clause | a list of expressions that define manipulations on the data | Optional | only supports [FLATTEN]((/docs/sql-guide/functions/function-flatten/)) |
 | where_clause | An expression that defines a filter condition for the rows returned by the query. | Yes | Can be any constant, function or combination joined by operators or a subquery. |
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-information) |
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
@@ -88,6 +92,13 @@ The table_or_subquery expression can be:
 * a table_name or table_valued_function
 * a parenthesized `SELECT` statement
 Both expressions can be aliased with a table_alias
+
+### with_clause information
+
+![expr](/assets/images/sql-guide/with_clause.svg)
+
+A list of expressions that define manipulations on the data in the FROM clause. An expression can be:
+* a [FLATTEN]((/docs/sql-guide/functions/function-flatten/)) function on [IDSET](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) columns
 
 ### group_by_clause information
 

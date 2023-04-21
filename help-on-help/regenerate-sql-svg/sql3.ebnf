@@ -210,7 +210,7 @@ delete_stmt = "DELETE" ;
   Queries a FeatureBase table.
 
 *)
-select_stmt = "SELECT", [ "DISTINCT" ], [ top_clause ], select_list, [ from_clause ], [ where_clause ], [group_by_clause], [having_clause], [order_by_clause] ;
+select_stmt = "SELECT", [ "DISTINCT" ], [ top_clause ], select_list, [ from_clause ], [ with_clause ], [ where_clause ], [group_by_clause], [having_clause], [order_by_clause] ;
 
 top_clause = ( "TOP" | "TOPN" ), "(", expr, ")" ;  
 
@@ -225,6 +225,8 @@ column_alias = identifier ;
 qualifier = identifier ;
 
 from_clause = "FROM", table_or_subquery, { ",", table_or_subquery } ;
+
+with_clause = "WITH", expr ;
 
 table_or_subquery = 
       ( identifier | table_valued_function ), [ [ "AS" ], table_alias ], [ table_option ]
