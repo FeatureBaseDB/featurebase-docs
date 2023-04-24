@@ -32,6 +32,10 @@ flatten(column)
 The `flatten` function can only be used in:
 * The [WITH clause](/docs/sql-guide/statements/statement-select/#with_clause)
 * `SELECT...WITH...GROUP BY` queries
+* `SELECT DISTINCT...` queries
+* This only supports one input
+* Cannot support additional inputs in DISTINCT/GROUP BY
+* Only works with tables (no subqueries)
 
 
 ## Examples
