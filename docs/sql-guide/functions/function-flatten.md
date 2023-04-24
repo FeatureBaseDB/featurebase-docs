@@ -29,8 +29,10 @@ flatten(column)
 
 ## Additional information
 
-* This can only be used in the [WITH clause](/docs/sql-guide/statements/statement-select/#with_clause)
-* This should only be used with `GROUP BY` queries
+The `flatten` function can only be used in:
+* The [WITH clause](/docs/sql-guide/statements/statement-select/#with_clause)
+* `SELECT...WITH...GROUP BY` queries
+
 
 ## Examples
 
