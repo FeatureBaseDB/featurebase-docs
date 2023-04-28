@@ -41,7 +41,7 @@ Use the INT data type to perform range queries using `<` or `>`
 
 ## Update Behavior
 
-{% include /sql-guide/set_updates.md %}
+{% include /sql-guide/timequantum_updates.md %}
 
 ## Examples
 

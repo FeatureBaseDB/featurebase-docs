@@ -38,7 +38,7 @@ The STRINGSETQ data type:
 
 ## Update Behavior
 
-{% include /sql-guide/set_updates.md %}
+{% include /sql-guide/timequantum_updates.md %}
 
 ## Examples
 
