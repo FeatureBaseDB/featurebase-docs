@@ -7,7 +7,7 @@ nav_order: 9
 has_toc: true
 ---
 
-## Configure FeatureBase Community
+# Configure FeatureBase Community
 {: .no_toc }
 
 FeatureBase features can be enabled or disabled from the `*/featurebase/opt` directory in two ways:
@@ -37,7 +37,7 @@ FeatureBase features can be enabled or disabled from the `*/featurebase/opt` dir
 
 ## How do I set up a FeatureBase cluster?
 
-* [Set up a FeatureBase cluster](/docs/community/com-config/old-resize-cluster)
+* [Set up a FeatureBase cluster](/docs/community/com-cluster/com-cluster-setup)
 
 ## How do I set up authentication?
 
