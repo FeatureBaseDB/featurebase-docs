@@ -19,7 +19,18 @@ nav_order: 4
 - [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 - [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create)
 
-## Database Metrics
+## Disk utilization
 
-{% include /cloud-db/cloud-db-metrics.md %}
+{% include /cloud-db/cloud-db-metrics-disk-util.md %}
 
+## Average query response time
+
+{% include /cloud-db/cloud-db-metrics-avg-query-resp.md %}
+
+## Queries per second
+
+{% include /cloud-db/cloud-db-metrics-qps.md %}
+
+## Ingested records per second
+
+{% include /cloud-db/cloud-db-metrics-ingest-rate.md %}

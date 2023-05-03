@@ -1,6 +1,4 @@
-FeatureBase has the following metrics available for users.
-
-Metrics are accessible once the database is up and running
+FeatureBase cloud has the following metrics available to help users understand the activity and performance of their databases once they are created and `RUNNING`:
 
 - Average query response time
 - Queries per second
