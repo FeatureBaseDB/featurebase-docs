@@ -1,46 +1,46 @@
 ---
-title: Serverless 
+title: Serverless Preview 
 layout: default
 parent: Cloud
 has_children: false
 nav_order: 14 
 ---
 
-# Serverless
-*Currently in preview*
+# FeatureBase Serverless
+
+{: .no_toc }
+
+{% include /serverless/serverless-preview-warning.md %}
+
+FeatureBase Serverless is a new architecture for FeatureBase that separates compute power and storage and allows each to scale independently.
+
+{% include page-toc.md %}
 
 ## Why Serverless?
-Serverless is a new architecture to FeatureBase that separates compute power and storage. This allows for independent scaling of compute, storage, or both.  
 
-## Creating a Serverless Database
-Before you begin, you should check out how to create a database in our cloud enviornment, as there are a lot of similarities. ([See here](/docs/cloud/cloud-databases/cloud-db-create/))  
-One of the major differences is Serverless databases don't have a database shape!
+### Separation of storage and compute
+Serverless databases have durable storage that is separated from compute. You can consume and scale each independently based on your use-cases’ needs.
+
+### Zero down time scaling
+Serverless databases can have compute scaled up and down at any time without interruption to your services. Your database can increase the number of [workers](#workers) for surges in traffic during peak hours, as well as scale workers down during quiet hours. Your storage will grow with you over time, without any ceilings or need for manual scaling.
+
+### Pay only for what you use
+Compute and storage are metered independently, and you are only charged based on what you use. 
+
+### Improved availability
+In the event a worker fails, there is no risk of data loss or inability for other workers to read your data. Data is highly available and stored redundantly across multiple locations, in addition to having 11 nines of durability.
 
 ## Workers
-The concept of "workers" (or "units") is a new concept, sand pecific to Serverless. A worker is a reference to a "computer" that is assigned to a database. They are created by a Worker Service, which is created by a Worker Service Provider.
-Workers handle computation and transpiling of queries and data.
+"Workers" (or "units") is a new concept specifically for serverless databases. A worker is a reference to "compute" that is assigned to a database.
+Workers handle computation and transpiling of queries and data. Workers can be added and removed from a database dynamically using `SQL`.
 
-When you create a database, it defaults to 1 worker assigned to that database. This can be adjusted up with an alter database statement. Current limit for workers per database is 8.  
-Some examples are:  
-```
-CREATE DATABASE db1 WITH UNITS 1;
-```
+{% include /serverless/serverless-worker-shape.md %}
 
-```
-ALTER DATABASE db1 WITH UNITS 3;
-```
+## Known limitations
 
-## Limitations
-As of right now, there are a few limitations when it comes to Serverless.
+* [Serverless limitations](/docs/cloud/cloud-troubleshooting/issue-serverless-limitations/)
 
--   Certain SQL queries do not work quite yet such as:  
-    -   GROUPBY_SET  
-    -   PERCENTILE  
-    -   SELECT-HAVING  
-    -   TIME_QUANTUM_INSERT/STRINGSET-RANGEQ  
-    -   TIME_QUANTUM_INSERT/IDSET-RANGEQ  
-    -   TOP-LIMIT  
--   As well as anything related to the T-Store.  
--   the current limit for workers for a database is 8.  
--   There is no backup nor restore
-    -   There is a snapshot store and writelogger that holds persistent data.
+## Further information
+
+* [Create a serverless database](/docs/cloud/cloud-databases/cloud-db-create-serverless)
+* [Scaling a serverless database](/docs/cloud/cloud-databases/cloud-db-serverless-scale)

@@ -1,0 +1,1 @@
+* When you create a serverless database, 1 worker is assigned to that database by default
