@@ -78,12 +78,9 @@ INSERT INTO services (_id, servicelist, price) VALUES (1, 'free deliveries on or
 INSERT INTO services (_id, servicelist, price) VALUES (2, 'local postage per item', 2.20);
 ```
 
-### INSERT values into single column identified by `_id`
-
+### INSERT a value with an associated unixtimestamp for a [IDSETQ() data type](/docs/sql-guide/data-types/data-type-idsetq)
 ```sql
-INSERT into products (_id, stock) VALUES
-  (1,233),
-  (2,3289),
-  (3, 44),
-  (4, 1);
+INSERT INTO tq(_id, tgv) values (1, {1676649734, [1]})
 ```
+
+
