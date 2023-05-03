@@ -35,12 +35,12 @@ As of right now, there are a few limitations when it comes to Serverless.
 
 -   Certain SQL queries do not work quite yet such as:  
     -   GROUPBY_SET  
-	-	PERCENTILE  
-	-	SELECT-HAVING  
-	-	TIME_QUANTUM_INSERT/STRINGSET-RANGEQ  
-	-	TIME_QUANTUM_INSERT/IDSET-RANGEQ  
-	-	TOP-LIMIT  
+    -   PERCENTILE  
+    -   SELECT-HAVING  
+    -   TIME_QUANTUM_INSERT/STRINGSET-RANGEQ  
+    -   TIME_QUANTUM_INSERT/IDSET-RANGEQ  
+    -   TOP-LIMIT  
 -   As well as anything related to the T-Store.  
 -   the current limit for workers for a database is 8.  
 -   There is no backup nor restore
-    -   There is a snapshot store and writelogger that is holds persistent data.
+    -   There is a snapshot store and writelogger that holds persistent data.
