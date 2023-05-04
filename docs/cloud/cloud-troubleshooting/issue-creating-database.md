@@ -10,7 +10,7 @@ nav_order: 5
 
 ## Issue - Your service has been stopped
 
-You will be unable to create new databases
+You will be unable to create new databases.
 
 ### Cause
 
@@ -22,7 +22,7 @@ Please contact us at [se@featurebase.com](mailto:se@featurebase.com) immediately
 
 ## Issue - You have exhausted your trial credit balance
 
-You will be unable to create new databases
+You will be unable to create new databases.
 
 ### Cause
 
@@ -40,7 +40,7 @@ You will be unable to create new databases
 
 ### Cause
 
-Your credit balance has run out..
+Your credit balance has run out.
 
 ### Solution
 
