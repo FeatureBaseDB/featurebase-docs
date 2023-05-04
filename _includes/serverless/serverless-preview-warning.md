@@ -1,2 +1,2 @@
 {: .warning}
-FeatureBase Serverless is currently in preview and is not meant to be used in production workloads. It is only available through FeatureBase Cloud.
+FeatureBase Serverless should not be used for production workloads as it is currently in preview.
