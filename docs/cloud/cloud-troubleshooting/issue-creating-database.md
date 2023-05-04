@@ -6,9 +6,9 @@ grand_parent: Cloud
 nav_order: 5
 ---
 
-# Creating database issues.
+# Creating database issues
 
-## Issue - Your service has been stopped.
+## Issue - Your service has been stopped
 
 You will be unable to create new databases
 
@@ -20,25 +20,27 @@ Please contact us at se@featurebase.com for the reason of service being stopped.
 
 Please contact us at [se@featurebase.com](mailto:se@featurebase.com) immediately to prevent loss of data and restore your sevice.
 
-## Issue - You have exhausted your trial credit balance.
+## Issue - You have exhausted your trial credit balance
 
 You will be unable to create new databases
 
 ### Cause
 
-You have ran out of your trial credit.
+This issue occurs when trial account credit has been used.
 
-### Solution
+* [Learn more about FeatureBase trial accounts](https://www.featurebase.com/pricing){:target="_blank"}
 
-Please upgrade to paid user or contact us at [se@featurebase.com](mailto:se@featurebase.com).
+## Solution
 
-## Issue - You have exhausted your credit balance.
+* [Upgrade to paid account](https://docs.featurebase.com/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/){:target="_blank"}
+
+## Issue - You have exhausted your credit balance
 
 You will be unable to create new databases
 
 ### Cause
 
-You have ran out of your credit balance.
+Your credit balance has run out..
 
 ### Solution
 
