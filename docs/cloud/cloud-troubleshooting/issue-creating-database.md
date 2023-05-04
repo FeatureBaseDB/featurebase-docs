@@ -30,7 +30,7 @@ This issue occurs when trial account credit has been used.
 
 * [Learn more about FeatureBase trial accounts](https://www.featurebase.com/pricing){:target="_blank"}
 
-## Solution
+### Solution
 
 * [Upgrade to paid account](https://docs.featurebase.com/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/){:target="_blank"}
 
