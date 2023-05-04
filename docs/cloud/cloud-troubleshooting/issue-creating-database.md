@@ -14,7 +14,7 @@ You will be unable to create new databases.
 
 ### Cause
 
-Please contact us at se@featurebase.com for the reason of service being stopped.
+Please contact us at [se@featurebase.com](mailto:se@featurebase.com)  for the reason of service being stopped.
 
 ### Solution
 
