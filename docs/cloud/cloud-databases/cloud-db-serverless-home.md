@@ -1,47 +1,48 @@
 ---
-title: Serverless Database preview
+title: Serverless database preview
 layout: default
 parent: Manage Databases
 grand-parent: Cloud
 nav_order: 2
 ---
 
-# How do I scale compute power and storage for my FeatureBase Database?
+# What is FeatureBase Serverless?
 {: .no_toc }
 
 {% include /serverless/serverless-preview-warning.md %}
 
-FeatureBase Serverless Databases provide an architecture which separates computer power and storage so they can be scaled independently based on your use-case.
+FeatureBase Serverless provides a new database architecture which separates computer power and storage so they can be scaled independently.
 
 {% include page-toc.md %}
 
-## How do I scale database compute resources without down-time?
-<!--NOTE this would serve well as an intro to cloud-db-serverless-scale.md-->
-Serverless architecture introduces the concept of **workers** (or **Units**) which:
+## Scaling database compute resources without down-time
+
+FeatureBase Serverless introduces the concept of **Workers** (or **Units**) which:
 * Handle computation and transpiling of queries and data
 * Can be added or removed using SQL queries depending on your needs without needing to spin the database down.
 
 {% include /serverless/serverless-worker-shape.md %}
 
 ## Scaling database storage
-<!--NOTE I think this would serve well as the intro text to Create Serverless Database?-->
-Unlike standard Databases where you choose a **Shape** which specifies the total size and resources available, Serverless architecture allows your databases to scale:
+
+FeatureBase Serverless allows your database storage to scale:
 * automatically without a set ceiling
-* without the need for manual intervention
+* without the need to manually upgrade to a new database **Shape**
 
-In addition, data is protected from loss or corruption based on [cloud durability standards (AKA 11 nines)](https://cloud.google.com/blog/products/storage-data-transfer/understanding-cloud-storage-11-9s-durability-target){:target="_blank"} and:
-* stored redundantly across multiple locations
-* highly available to Workers even if one fails
+## Improved availability
 
-## Data and compute costs
+The FeatureBase Serverless architecture provides higher availability and durability for your data:
+* No data loss from losing Workers
+* Storage with 11 nines of durability
+* Redundant storage across multiple locations (highly available to Workers)
 
-Unlike FeatureBase Cloud Databases, Serverless Databases are metered and charged based only on your actual usage.
+## Independent storage and compute costs
 
-<!--I'd say it'd be worth providing base costs here, or to point users at wherever this is found so they know what they're in for-->
+FeatureBase Serverless databases have compute and storage metered and charged independently based on your usage.
 
 ## Known limitations
 
-* [Learn about Serverless Database limitations](/docs/cloud/cloud-troubleshooting/issue-serverless-limitations/)
+* [Learn about serverless database limitations](/docs/cloud/cloud-troubleshooting/issue-serverless-limitations/)
 
 ## How do I create a Serverless Database?
 
@@ -49,4 +50,4 @@ Unlike FeatureBase Cloud Databases, Serverless Databases are metered and charged
 
 ## How do I scale a Serverless Database?
 
-* [Learn how to scale Serverless databases](/docs/cloud/cloud-databases/cloud-db-serverless-scale)
+* [Learn how to scale serverless databases](/docs/cloud/cloud-databases/cloud-db-serverless-scale)

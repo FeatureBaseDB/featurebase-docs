@@ -6,21 +6,20 @@ grand_parent: Cloud
 nav_order: 3
 ---
 
-# How do I scale a serverless up or down database?
+# How do I scale a serverless database?
 {: .no_toc }
 
 {% include /serverless/serverless-preview-warning.md %}
 
-This procedure explains how to scale a serverless database up or down. 
+This procedure explains how to scale a serverless database.
 
 {% include page-toc.md %}
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-{% include /serverless/serverless-worker-shape.md %}
-{% include /serverless/serverless-create-defaults.md %}
-{% include /serverless/serverless-worker-limits.md %}
+* [Learn about FeatureBase Serverless](/docs/cloud/cloud-databases/cloud-db-serverless-home)
+* [Learn how to create a serverless database](/docs/cloud/cloud-databases/cloud-db-serverless-create)
 
 ## Scale a serverless database with SQL
 
@@ -31,10 +30,25 @@ This section needs to move to SQL once out of preview and replaced with a UI met
 ### Syntax 
 
 ```sql
-ALTER DATABASE {database-name} [WITH UNITS {# workers}];
+ALTER DATABASE {database-name}[WITH UNITS {<int-workers>}];
 ```
 
-### Examples
+###  Arguments
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
+| `database-name` | Name of existing database to alter | Yes |  |
+| WITH UNITS `<int-workers>` | Integer value of Worker units to assign to database | No| [Worker Unit additional](#worker-unit-additional) |
+
+## Additional information
+
+### Worker unit additional
+
+{% include /serverless/serverless-worker-shape.md %}
+{% include /serverless/serverless-create-defaults.md %}
+{% include /serverless/serverless-worker-limits.md %}
+
+## Examples
 
 ```sql
 ALTER DATABASE my-db WITH UNITS 3;
@@ -48,4 +62,4 @@ ALTER DATABASE my-db WITH UNITS 3;
 
 * [Create database API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase)
 * [Learn how to delete a database](/docs/cloud/cloud-databases/cloud-db-delete)
-* [Serverless limitations](/docs/cloud/cloud-troubleshooting/issue-serverless-limitations/)
+* [FeatureBase Serverless limitations](/docs/cloud/cloud-troubleshooting/issue-serverless-limitations/)

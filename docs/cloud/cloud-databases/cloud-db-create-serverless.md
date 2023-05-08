@@ -40,10 +40,25 @@ This section needs to move to SQL once out of preview
 ### Syntax 
 
 ```sql
-CREATE DATABASE {database-name} [WITH UNITS {# workers}];
+CREATE DATABASE {database-name} [WITH UNITS {<int-workers>}];
 ```
 
-### Examples
+###  Arguments
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
+| `database-name` | Name of existing database to alter | Yes |  |
+| WITH UNITS `<int-workers>` | Integer value of Worker units to assign to database | No| [Worker Unit additional](#worker-unit-additional) |
+
+## Additional information
+
+### Worker unit additional
+
+{% include /serverless/serverless-worker-shape.md %}
+{% include /serverless/serverless-create-defaults.md %}
+{% include /serverless/serverless-worker-limits.md %}
+
+## Examples
 
 ```sql
 CREATE DATABASE my-db WITH UNITS 1;
