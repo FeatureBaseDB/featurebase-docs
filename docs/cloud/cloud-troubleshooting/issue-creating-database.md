@@ -6,45 +6,27 @@ grand_parent: Cloud
 nav_order: 5
 ---
 
-# Creating database issues
+# Issue - Receiving errors when creating databases
 
-## Issue - Your service has been stopped
+You will receive errors and be unable to create new databases when your organization is in a couple of states.
 
-You will be unable to create new databases.
+## Cause
 
-### Cause
+Your organization will not be able to create databases if any of the following reasons are true:
 
-Please contact us at [se@featurebase.com](mailto:se@featurebase.com)  for the reason of service being stopped.
+* You have exhausted your trial credit balance
+* You have exhausted your credit balance
+* Your service has been stopped by the FeatureBase team
 
-### Solution
+## Solution
 
-Please contact us at [se@featurebase.com](mailto:se@featurebase.com) immediately to prevent loss of data and restore your sevice.
+### Trial accounts with no remaining credit
 
-## Issue - You have exhausted your trial credit balance
+* [Upgrade to paid account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/)
 
-You will be unable to create new databases.
+### Paying customers
 
-### Cause
-
-This issue occurs when trial account credit has been used.
-
-* [Learn more about FeatureBase trial accounts](https://www.featurebase.com/pricing){:target="_blank"}
-
-### Solution
-
-* [Upgrade to paid account](https://docs.featurebase.com/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/){:target="_blank"}
-
-## Issue - You have exhausted your credit balance
-
-You will be unable to create new databases
-
-### Cause
-
-Your credit balance has run out.
-
-### Solution
-
-Please contact us at [se@featurebase.com](mailto:se@featurebase.com) immediately to prevent loss of data and restore your sevice.
+* Please contact us at [se@featurebase.com](mailto:se@featurebase.com) immediately to prevent loss of data and restore your service.
 
 ## Further information
 

@@ -151,8 +151,6 @@ Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
 
 >NOTE: Included in the stock dataset is a table known as skills, please use the discovery queries to take a look!
 
-
-
 ### TopK - A FeatureBase Superpower
 
 Ranking queries are notorious for being computationally intensive - aka slow. Some solutions will use statistics to speed up a ranking query by approximating the true results, but that’s not always a desirable option. In PQL, [```TopK```](/docs/pql-guide/pql-read-topk) queries can be run to return exact results in milliseconds. 
