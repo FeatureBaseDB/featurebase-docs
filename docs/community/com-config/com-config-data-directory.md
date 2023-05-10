@@ -78,18 +78,9 @@ These files are found in the `.pilosa` root.
 |---|---|---|
 | `fb_views` | FeatureBase system table | [System tables](/docs/sql-guide/system-tables/system-tables-home) |
 | `<tablename>/_keys` |  A `_keys` directory is created for any index that uses a `string` key and contains a translation file for each partition the FeatureBase node is responsible for |  |
-| `<tablename>/dataframes`| `Dataframe` is an alternative data format used for general purpose calculation | [Dataframe additional](#dataframe-additional) |
+| `<tablename>/dataframes`| `Dataframe` is an alternative data format used for general purpose calculation |  |
 | `<tablename>/fields` | Metadata and key translation (if present) for each field in the table |  |
 | `<tablename>/backends` | Bitmap data for the table |  |
-
-## Additional information
-
-### Dataframe additional
-
-{: .note}
-Dataframe is **preview** functionality
-
-{% include /com-config/com-config-dataframe-summary.md %}
 
 ## Further information
 
