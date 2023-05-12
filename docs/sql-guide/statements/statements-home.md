@@ -35,8 +35,12 @@ SQL statements can be executed in the Query editor.
 * [INSERT](/docs/sql-guide/statements/statement-insert)
 * [BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
 
-## Further information
+## BULK INSERT statements
 
 * [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
 * [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
 * [BULK INSERT using Parquet data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+
+## System statements
+
+* [KILL QUERY statement](/docs/sql-guide/statements/statement-kill)
