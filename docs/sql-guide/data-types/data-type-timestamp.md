@@ -5,12 +5,13 @@ parent: Data types & constraints
 grand_parent: SQL guide
 nav_order: 10
 ---
-## Before you begin
-* [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
 
 # TIMESTAMP data type
 
 Timestamp is a date-time data type which represents the specified `timeunit` as integer values elapsed since the specified Unix Epoch.
+
+## Before you begin
+* [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
 
 ## DDL Syntax
 

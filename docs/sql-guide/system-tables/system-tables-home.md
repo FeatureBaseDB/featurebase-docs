@@ -7,7 +7,7 @@ parent: SQL guide
 # System Tables
 {: .no_toc }
 
-System Tables are logical tables to describe the databases configuration, settings, and metrics.  All tables except fb_views are logical, in-memory, and dynamically created upon database creation.
+System Tables are logical tables to describe the databases configuration, settings, and metrics.  All tables except `fb_views` are logical, in-memory, and dynamically created upon database creation.
 
 {% include page-toc.md %}
 
