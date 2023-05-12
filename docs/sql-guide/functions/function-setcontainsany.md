@@ -30,20 +30,7 @@ setcontainsany(targetset, testset)
 
 ## Examples
 
-### Segments table statements
-
-```sql
-create table segments  
-    (_id id, segment stringset);  
-
-insert into segments(_id, segment)  
-    values (1, ['RED', 'BLUE', 'GREEN']);
-```
-Table structure:
-
-| _id | segment |
-|---|---|
-| 1 | [RED BLUE GREEN] |
+{% include /sql-guide/create-table-segments.md %}
 
 ### Testing set membership in the select list
 
