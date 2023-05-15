@@ -16,7 +16,7 @@ Kills a running SQL query. If the targeted query is not in running status then t
 
 ## DDL Syntax
 
-```
+```sql
 KILL QUERY 'request_id';
 ```
 
@@ -32,18 +32,18 @@ KILL QUERY 'request_id';
 
 Query the `fb_exec_requests` system table to obtain the `request_id`:
 
-
-```
+```sql
 SELECT request_id, status, start_time, sql
 FROM fb_exec_requests
 WHERE status='running';
 ```
 
+{% include /sql-guide/query-status.md %}
+
 ### Responses to killed queries
 
 * A killed query is set to `cancelled` in the `fb_exec_requests` system table
 * An error is returned on any client application that submitted the query that is killed, for example:
-
 
 ```
 Error: [0:0] request '571f25ac-1d8c-49b8-a53d-111408964632' killed by user
@@ -84,8 +84,3 @@ Output:
 ## Further information
 
 * [System tables](/docs/sql-guide/system-tables/system-tables-home)
-* [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
-* [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
-* [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
-* [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
-* [Data types](/docs/sql-guide/data-types/data-types-home)
