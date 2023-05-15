@@ -30,54 +30,60 @@ KILL QUERY 'request_id';
 
 ### List currently running queries
 
-Following system table query will return a list of currently running queries in the Featurebase database. If you need to stop a running query, copy the `request_id` value from the item belonging to the query you want to stop and pass it to the `kill query` statement. The system table query also will be listed in the result because it was running when the result list was prepared.
+Query the `fb_exec_requests` system table to obtain the `request_id`:
+
 
 ```
-select request_id, status, start_time, sql 
-from fb_exec_requests 
-where status='running';
+SELECT request_id, status, start_time, sql
+FROM fb_exec_requests
+WHERE status='running';
 ```
 
-## Examples
+### Responses to killed queries
 
-### Kill a query to terminate unnecessary processing
-In this example we run the system table query to get the list of running queries. We locate the `request_id` for the query we want to stop, we pick the group by query on `large_data_set` table. Then we run the `kill query` statement with that query's `request_id` value to submit a cancel request. 
+* A killed query is set to `cancelled` in the `fb_exec_requests` system table
+* An error is returned on any client application that submitted the query that is killed, for example:
 
-```sql
-select request_id, status, start_time, sql 
-from fb_exec_requests 
-where status='running';
-
- request_id                           | status  | start_time                       | sql
---------------------------------------+---------+----------------------------------+--------------------------------------------
- 571f25ac-1d8c-49b8-a53d-111408964632 | running | 2023-05-12T16:13:39.342617-04:00 | select high_card_attribute, sum(measurement)
-                                      |         |                                  | from large_data_set
-                                      |         |                                  | where status='active'
-                                      |         |                                  | group by high_card_attribute                 
-                                      |         |                                  |
- 11b511a7-efcf-44f3-8fdc-3eb864873b48 | running | 2023-05-12T16:20:08.560989-04:00 | select request_id, status, start_time, sql
-                                      |         |                                  | from fb_exec_requests
-                                      |         |                                  | where status='running'
-```
-
-Following statement will submit a cancel request to the server. 
-
-```sql
-KILL QUERY '571f25ac-1d8c-49b8-a53d-111408964632';
-
- result                  | status
--------------------------+---------
- Kill request submitted. | pending
-```
-
-After the server successfully cancels a running query, the client application that submitted the query will receive the following error. Also the server will set the query's status to `cancelled`.
 
 ```
 Error: [0:0] request '571f25ac-1d8c-49b8-a53d-111408964632' killed by user
 ```
 
+## Examples
+
+### Kill a query to terminate unnecessary processing
+
+Query the `fb_exec_requests` system table to obtain a list of running queries:
+
+```sql
+select request_id, status, start_time, sql
+from fb_exec_requests
+where status='running';
+```
+
+Results:
+
+
+| request_id | status | start_time | sql |
+|---|---|---|---|
+| 571f25ac-1d8c-49b8-a53d-111408964632 | running | 2023-05-12T16:13:39.342617-04:00 | select high_card_attribute, sum(measurement)<br/>from large_data_set<br/>where status='active'<br/>group by high_card_attribute |
+| 11b511a7-efcf-44f3-8fdc-3eb864873b48 | running | 2023-05-12T16:20:08.560989-04:00 | select request_id, status, start_time, sql<br/>from fb_exec_requests<br/>where status='running' |
+
+This statement kills the first query from above:
+
+```sql
+KILL QUERY '571f25ac-1d8c-49b8-a53d-111408964632';
+```
+
+Output:
+
+| result | status |
+|---|---|
+| Kill request submitted | pending |
+
 ## Further information
 
+* [System tables](/docs/sql-guide/system-tables/system-tables-home)
 * [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
 * [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
 * [ALTER TABLE](/docs/sql-guide/statements/statement-table-alter)
