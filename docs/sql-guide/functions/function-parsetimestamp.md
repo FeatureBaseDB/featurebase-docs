@@ -19,7 +19,7 @@ PARSETIMESTAMP(expr, format)
 
 | Argument | Data type | Description | Required | Further information |
 |---|---|---|---|---|
-| `expr`   | string | Input string expression that needs to be converted to a timestamp | Yes |
+| `expr`   | string | Input string expression that needs to be converted to a timestamp | Yes | |
 | `format` | string | String value that specifies the format used to parse the time value. | Yes | [Format Codes](#format-codes) |
 
 
