@@ -62,12 +62,14 @@ select _id, ts from demo;
 
 Result:
 
+```
 | _id | ts |
 |---|---|
 | 1 | 1970-01-01 00:00:00 +0000 UTC |
 | 2 | 1970-01-02 00:00:00 +0000 UTC |
 | 3 | 1970-01-02 01:01:01 +0000 UTC |
 | 4 | 1969-12-31 00:00:00 +0000 UTC |
+```
 
 ### Convert granular integers to timestamp
 
