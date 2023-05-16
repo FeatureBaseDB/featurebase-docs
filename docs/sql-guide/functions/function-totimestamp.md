@@ -14,15 +14,15 @@ The `TOTIMESTAMP()` function uses the Unix Epoch to calculate a date-time equiva
 ## Syntax
 
 ```
-TOTIMESTAMP(int_expr, [timeunit])
+TOTIMESTAMP({int_expr}, [timeunit])
 ```
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Further information |
+| Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | int_expr | integer | Integer value specified as literal or expression to be converted to a timestamp | Yes | |
-| timeunit | string | String value that specifies the unit of time to convert. | Optional | [Time units](#additional-information).|
+| timeunit | string | String value that specifies the unit of time to convert. | Optional | [Time units](#timeunit-additional) |
 
 ## Returns
 
@@ -32,7 +32,7 @@ TOTIMESTAMP(int_expr, [timeunit])
 
 ## Additional information
 
-### timeunit
+### Timeunit additional
 
 `timeunit` defaults to `s` if not specified.
 
@@ -44,6 +44,8 @@ TOTIMESTAMP(int_expr, [timeunit])
 
 Implicit conversion will treat the integer value as seconds since unix epoch. Seconds is the default granularity of integer date-time value.
 
+#### Demo table
+
 ```sql
 create table demo
     (_id id, ts timestamp timeunit 's');
@@ -51,20 +53,24 @@ create table demo
 insert into demo(_id, ts)
     values (1, 0);
 insert into demo(_id, ts)
-    values (2, 86400);    
+    values (2, 86400);
 insert into demo(_id, ts)
     values (3, 90061);
 insert into demo(_id, ts)
     values (4, -86400);
+```
 
+#### SELECT() statement
+
+```sql
 select _id, ts from demo;
 ```
 
-Result:
+#### Results
 
 ```
-| _id | ts |
-|---|---|
+| _id | ts                          |
+|---|-------------------------------|
 | 1 | 1970-01-01 00:00:00 +0000 UTC |
 | 2 | 1970-01-02 00:00:00 +0000 UTC |
 | 3 | 1970-01-02 01:01:01 +0000 UTC |
@@ -75,8 +81,10 @@ Result:
 
 To convert integer date-time values with non-standard granularity TOTIMESTAMP() can be used with appropriate `timeunit` parameter that matches the granularity of the input.
 
+#### Demo table
+
 ```sql
-create table demo
+create table gran-integers
     (_id id, ts timestamp timeunit 's');
 
 insert into demo(_id, ts)
@@ -89,19 +97,25 @@ insert into demo(_id, ts)
     values (4, TOTIMESTAMP(90061000000,'us'));   
 insert into demo(_id, ts)
     values (5, TOTIMESTAMP(90061000000000,'ns'));   
+```
 
+#### SQL query
+
+```sql
 select _id, ts from demo;
 ```
 
-Result:
+#### Result
 
-| _id | ts |
-|---|---|
+```sql
+| _id | ts                          |
+|---|-------------------------------|
 | 1 | 1970-01-02 01:01:01 +0000 UTC |
 | 2 | 1970-01-02 01:01:01 +0000 UTC |
 | 3 | 1970-01-02 01:01:01 +0000 UTC |
 | 4 | 1970-01-02 01:01:01 +0000 UTC |
 | 5 | 1970-01-02 01:01:01 +0000 UTC |
+```
 
 ### Use TOTIMESTAMP() in a SELECT query
 
@@ -124,11 +138,14 @@ from demo;
 
 Result:
 
+```
 | _id | int_ts | ts |
 |---|---|---|
 | 1 | 86400 | 1970-01-02 00:00:00 +0000 UTC |
 | 2 | 86400 | 1970-01-02 00:00:00 +0000 UTC |
 | 3 | 86400000 | 1972-09-27 00:00:00 +0000 UTC |
+```
+
 
 ```sql
 select _id, int_ts, TOTIMESTAMP(int_ts, 's') as ts
@@ -137,9 +154,8 @@ where TOTIMESTAMP(int_ts, 's')>'1970-01-02T00:00:00Z';
 ```
 
 Result:
-
+```
 | _id | int_ts | ts |
 |---|---|---|
 | 3 | 86400000 | 1972-09-27 00:00:00 +0000 UTC |
-
 ```
