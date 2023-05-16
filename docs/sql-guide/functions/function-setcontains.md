@@ -20,7 +20,7 @@ setcontains(set, value)
 | Argument | Description | Data type |
 |---|---|---|
 | `set` | The set in which value is being tested for membership. | `stringset` or `idset` |
-| `value` | The value to test membership for in the set. `value` must be assignment compatible with the element type of the set. |
+| `value` | The value to test membership for in the set. `value` must be assignment compatible with the element type of the set. |  |
 
 ## Returns
 
