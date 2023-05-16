@@ -17,3 +17,10 @@ $link-color: $purple-000;
 
 // Code
 $code-background-color: #F7F7FB;
+
+// test to get code highlighting to work in table headers
+// making highligher color the same as header purple
+th.language-plaintext highlighter-rouge {
+ color: #221051
+
+}
