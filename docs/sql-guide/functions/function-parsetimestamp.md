@@ -21,8 +21,8 @@ PARSETIMESTAMP(expr, format)
 
 | Argument | Data type | Description | Required | Further information |
 |---|---|---|---|---|
-| expr   | string | Input string values that needs to be converted to a timestamp | Yes |
-| format | string | String value that specifies the format used to parse the time value. | Yes | [Format Codes](#format-codes) |
+| `expr`   | string | Input string expression that needs to be converted to a timestamp | Yes |
+| `format` | string | String value that specifies the format used to parse the time value. | Yes | [Format Codes](#format-codes) |
 
 
 ## Format Codes
@@ -59,7 +59,7 @@ PARSETIMESTAMP(expr, format)
 
 | Data type | Value |
 |---|---|
-| timestamp | Returns timestamp in RFC3339 format and  no timezone specified. |
+| timestamp | Returns timestamp in RFC3339 format and no timezone specified. |
 
 
 ## Examples
@@ -91,7 +91,7 @@ select _id, ts from demo;
    5 | 15:30:45
 ```
 
-SELECT statement with PARSETIMESTAMP()
+### SELECT statements with PARSETIMESTAMP()
 ```sql
 SELECT _id, parsetimestamp(ts,'%Y-%m-%d') as time FROM demo where _id = 1;
 +-----+--------------------+
