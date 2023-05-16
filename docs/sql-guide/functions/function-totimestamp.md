@@ -9,7 +9,9 @@ grand_parent: SQL guide
 The `TOTIMESTAMP()` function uses the Unix Epoch to calculate a date-time equivalent of a specified integer, then returns the results.
 
 ## Before you begin
+
 * [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
+* [Learn about `timestamp` data type](/docs/sql-guide/data-types/data-type-timestamp)
 
 ## Syntax
 
@@ -19,30 +21,34 @@ TOTIMESTAMP({int_expr}, [timeunit])
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Additional information |
-|---|---|---|---|---|
-| int_expr | integer | Integer value specified as literal or expression to be converted to a timestamp | Yes | |
-| timeunit | string | String value that specifies the unit of time to convert. | Optional | [Time units](#timeunit-additional) |
+| Argument | Data type | Description | Default | Required | Additional information |
+|---|---|---|---|---|---|
+| int_expr | `int` | Integer value specified as literal or expression to be converted to a timestamp |  | Yes |  |
+| timeunit | `string` | String value that specifies the unit of time to convert. | `s` | Optional | [Time units](#timeunit-additional) |
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| timestamp | Returns timestamp equivalent of `int_expr`, it converts the input using unix epoch as base and the optional `timeunit` to determine the granularity of the input value. |
+| timestamp | Unix epoch equivalent of `int_expr`
+
+
+it converts the input using unix epoch as base
+and the optional `timeunit` to determine the granularity of the input value.
+Returns timestamp equivalent of `int_expr`,
+ |
 
 ## Additional information
 
 ### Timeunit additional
 
-`timeunit` defaults to `s` if not specified.
-
 {% include /sql-guide/timestamp-timeunit-table.md %}
 
 ## Examples
 
-### Implicitly convert integer to timestamp
+### Convert granular integers to timestamp
 
-Implicit conversion will treat the integer value as seconds since unix epoch. Seconds is the default granularity of integer date-time value.
+`TOTIMESTAMP()` can be used to standardize differing time units on integer date-time values as they are inserted into a table.
 
 #### Demo table
 
@@ -51,52 +57,15 @@ create table demo
     (_id id, ts timestamp timeunit 's');
 
 insert into demo(_id, ts)
-    values (1, 0);
-insert into demo(_id, ts)
-    values (2, 86400);
-insert into demo(_id, ts)
-    values (3, 90061);
-insert into demo(_id, ts)
-    values (4, -86400);
-```
-
-#### SELECT() statement
-
-```sql
-select _id, ts from demo;
-```
-
-#### Results
-
-```
-| _id |           ts                  |
-|-----|-------------------------------|
-| 1   | 1970-01-01 00:00:00 +0000 UTC |
-| 2   | 1970-01-02 00:00:00 +0000 UTC |
-| 3   | 1970-01-02 01:01:01 +0000 UTC |
-| 4   | 1969-12-31 00:00:00 +0000 UTC |
-```
-
-### Convert granular integers to timestamp
-
-To convert integer date-time values with non-standard granularity TOTIMESTAMP() can be used with appropriate `timeunit` parameter that matches the granularity of the input.
-
-#### Demo table
-
-```sql
-create table gran-integers
-    (_id id, ts timestamp timeunit 's');
-
-insert into demo(_id, ts)
     values (1, TOTIMESTAMP(90061));
 insert into demo(_id, ts)
     values (2, TOTIMESTAMP(90061, 's'));
 insert into demo(_id, ts)
-    values (3, TOTIMESTAMP(90061000,'ms'));    
+    values (3, TOTIMESTAMP(90061000,'ms'));
 insert into demo(_id, ts)
-    values (4, TOTIMESTAMP(90061000000,'us'));   
+    values (4, TOTIMESTAMP(90061000000,'us'));
 insert into demo(_id, ts)
-    values (5, TOTIMESTAMP(90061000000000,'ns'));   
+    values (5, TOTIMESTAMP(90061000000000,'ns'));
 ```
 
 #### SQL query
