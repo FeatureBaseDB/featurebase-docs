@@ -4,8 +4,6 @@ layout: default
 parent: SQL functions
 grand_parent: SQL guide
 ---
-## Before you begin
-* [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
 
 # PARSETIMESTAMP() function
 
