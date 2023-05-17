@@ -12,7 +12,7 @@ SETCONTAINS() tests membership of a value within a set expression.
 ## Syntax
 
 ```
-setcontains({set, value})
+setcontains(set, value)
 ```
 
 ## Arguments
