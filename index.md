@@ -6,6 +6,44 @@ nav_order: 1
 has_toc: false
 ---
 
+TESTING CODE BLOCKS
+
+inline `inline block` in text
+
+```
+code block with no specification of language
+```
+
+```sql
+sql code block
+```
+
+```json
+json code block
+```
+
+```toml
+toml code block
+```
+
+```html
+html code block
+```
+
+```sh
+shell code block
+```
+
+```shell
+another shell code block
+```
+
+```cli
+cli code block which may not be a thing
+```
+
+
+
 # Welcome to FeatureBase help
 {: .no_toc }
 
