@@ -183,7 +183,7 @@ GROUP BY hobbies
 HAVING COUNT(*) > 200000000
 ORDER BY cnt DESC;
 ```
-![Figure 18. GROUP BY Query](/assets/images/quick-start-guide/cloud/cseg_groupby_having_new.png)
+![Figure 18. GROUP BY Query](/assets/images/quick-start-guide/cloud/cseg_groupby_having.png)
 
 
 
@@ -196,7 +196,7 @@ WITH (flatten(education))
 WHERE age=18
 GROUP BY education;
 ```
-![Figure 19. GROUP BY Query with Filters](/assets/images/quick-start-guide/cloud/cseg_groupby_filter_new.png)
+![Figure 19. GROUP BY Query with Filters](/assets/images/quick-start-guide/cloud/cseg_groupby_filter.png)
 
 
 >NOTE: At this point, we encourage you to mix and match segmentation criteria to experience low-latency queries even as complex conditions are added.
