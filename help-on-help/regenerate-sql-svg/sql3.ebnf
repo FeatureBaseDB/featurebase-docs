@@ -202,7 +202,10 @@ bulk_insert_option =
     | "INPUT", string_literal
     | "FORMAT", string_literal
     | "ALLOW_MISSING_VALUES"
-    | "HEADER_ROW" ;
+    | "HEADER_ROW"
+    | "CSV_EMPTY_STRING_AS_NULL"
+    | "CSV_EMPTY_SET_AS_NULL"
+    | "CSV_NULL_AS_NULL" ;
 
 (*
 

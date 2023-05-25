@@ -56,7 +56,7 @@ BULK INSERT
       [ROWSLIMIT integer_literal]
       [INPUT ['path/file_name' | 'URL' | 'STREAM']]
       [FORMAT
-        ['CSV' [HEADER_ROW]] |
+        ['CSV' [HEADER_ROW] [CSV_EMPTY_STRING_AS_NULL] [CSV_EMPTY_SET_AS_NULL] [CSV_NULL_AS_NULL]] |
         ['NDJSON' [ALLOW_MISSING_VALUES]] |
         ['PARQUET']
       ]
@@ -86,7 +86,10 @@ BULK INSERT
 | `'STREAM'` | The contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [STREAM quotation marks](#using-stream-with-quotation-marks) |
 | `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` or `'PARQUET'` | Optional | `'PARQUET'` does not support `INPUT (STREAM)` |
 | `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |
-| `ALLOW_MISSING_VALUES` | `NDJSON` argument to ignore `null` data in valid MAP clause that would otherwise cause an error that stops processing. | Optional |  |
+| `CSV_EMPTY_STRING_AS_NULL` | `CSV` argument that will assign `""` value as `null` | Optional |  |
+| `CSV_EMPTY_SET_AS_NULL` | `CSV` argument that will assign `[]` value as `null` for all `SET` datatypes | Optional |  |
+| `CSV_NULL_AS_NULL` | `CSV` argument that will assign `NULL` value as `null` | Optional |  |
+| `ALLOW_MISSING_VALUES` | `NDJSON` argument to ignore missing data in valid MAP clause that would otherwise cause an error that stops processing. | Optional |  |
 
 ## TRANSFORM clause
 
@@ -106,7 +109,7 @@ The number of expressions in the column list and TRANSFORM clause must match.
 |---|---|---|
 | CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/statements/statement-insert-bulk-csv-example) |
 | NDJSON | String [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) |
-| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | `MAP ('id' id, 'intval' int, 'decval' decimal(4), 'stringval' string)`` |
+| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/statements/statement-insert-bulk-parquet-example) |
 
 ### TRANSFORM examples
 
@@ -126,6 +129,28 @@ TRANSFORM (
 )
 ```
 ### FROM examples
+
+#### CSV Value Assignment
+There are special assignments for certain literal values when inserting CSV data.
+
+| Literal Value | Target Data Type | Resultant | Further information |
+|---|---|---|---|
+| `,,` or `,"",` | All unless explicitly listed | `NULL` | |
+| `,,` or `,"",` | `string` | `''` (empty string) | if `CSV_EMPTY_STRING_AS_NULL` is used, the resultant becomes `NULL` |
+| `,,` or `,"",` | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `[]` (empty set) | if `CSV_EMPTY_SET_AS_NULL` is used, the resultant becomes `NULL` |
+| `,NULL,` | All unless explicitly listed | `'NULL'` (string literal) | if `CSV_NULL_AS_NULL` is used, the resultant becomes `NULL` |
+
+#### NDJSON Value Assignment
+There are special assignments for certain literal values when inserting NDJSON data.
+
+| Literal Value | Target Data Type | Resultant | Further information |
+|---|---|---|---|
+| `""` | `string` | `''` (empty string) | |
+| `""` | `stringset`<br/>`stringsetq` | `['']` (set with empty string member) | |
+| `null` | All unless explicitly listed | `NULL` | |
+| `[]` | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `[]` (empty set) | |
+| Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
+| Value Missing () | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `[]` (empty set) | This will only occur if using `ALLOW_MISSING_VALUES` |
 
 #### Using STREAM argument
 
