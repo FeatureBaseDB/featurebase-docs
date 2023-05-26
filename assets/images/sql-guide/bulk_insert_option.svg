@@ -164,14 +164,14 @@
    <path d="M40 31a10 10 0 0 1 10 10v100a10 10 0 0 0 10 10">
    </path>
    <g class="terminal">
-    <path d="M60 151h37">
+    <path d="M60 151h49.75">
     </path>
-    <path d="M287 151h37">
+    <path d="M274.25 151h49.75">
     </path>
-    <rect height="22" rx="10" ry="10" width="190" x="97" y="140">
+    <rect height="22" rx="10" ry="10" width="164.5" x="109.75" y="140">
     </rect>
     <text x="192" y="155">
-     ALLOW_MISSING_VALUES
+     NULL_AS_EMPTY_SET
     </text>
    </g>
    <path d="M324 151a10 10 0 0 0 10 -10v-100a10 10 0 0 1 10 -10">
@@ -179,14 +179,14 @@
    <path d="M40 31a10 10 0 0 1 10 10v130a10 10 0 0 0 10 10">
    </path>
    <g class="terminal">
-    <path d="M60 181h79.5">
+    <path d="M60 181h37">
     </path>
-    <path d="M244.5 181h79.5">
+    <path d="M287 181h37">
     </path>
-    <rect height="22" rx="10" ry="10" width="105" x="139.5" y="170">
+    <rect height="22" rx="10" ry="10" width="190" x="97" y="170">
     </rect>
     <text x="192" y="185">
-     HEADER_ROW
+     ALLOW_MISSING_VALUES
     </text>
    </g>
    <path d="M324 181a10 10 0 0 0 10 -10v-130a10 10 0 0 1 10 -10">
@@ -194,14 +194,14 @@
    <path d="M40 31a10 10 0 0 1 10 10v160a10 10 0 0 0 10 10">
    </path>
    <g class="terminal">
-    <path d="M60 211h20">
+    <path d="M60 211h79.5">
     </path>
-    <path d="M304 211h20">
+    <path d="M244.5 211h79.5">
     </path>
-    <rect height="22" rx="10" ry="10" width="224" x="80" y="200">
+    <rect height="22" rx="10" ry="10" width="105" x="139.5" y="200">
     </rect>
     <text x="192" y="215">
-     CSV_EMPTY_STRING_AS_NULL
+     HEADER_ROW
     </text>
    </g>
    <path d="M324 211a10 10 0 0 0 10 -10v-160a10 10 0 0 1 10 -10">
@@ -209,14 +209,14 @@
    <path d="M40 31a10 10 0 0 1 10 10v190a10 10 0 0 0 10 10">
    </path>
    <g class="terminal">
-    <path d="M60 241h32.75">
+    <path d="M60 241h20">
     </path>
-    <path d="M291.25 241h32.75">
+    <path d="M304 241h20">
     </path>
-    <rect height="22" rx="10" ry="10" width="198.5" x="92.75" y="230">
+    <rect height="22" rx="10" ry="10" width="224" x="80" y="230">
     </rect>
     <text x="192" y="245">
-     CSV_EMPTY_SET_AS_NULL
+     CSV_EMPTY_STRING_AS_NULL
     </text>
    </g>
    <path d="M324 241a10 10 0 0 0 10 -10v-190a10 10 0 0 1 10 -10">
