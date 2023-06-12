@@ -55,7 +55,7 @@ These tables provided a side-by-side comparison of Cloud and Community functiona
 | FeatureBase SQL - HTTPS | Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
 | FeatureBase PQL - HTTPS |  Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
 | gRPC Endpoint | No | [Community gRPC endpoint](/docs/community/com-api/old-grpc-api) |   |
-| Pilosa Query Language (PQL) Query Builder | Yes | Yes | [Learn about PQL](/docs/pql-guide/pql-home) |
+| Pilosa Query Language (PQL) Query Builder | No | Yes | [Learn about PQL](/docs/pql-guide/pql-home) |
 | Python Client | [Python client library](/docs/tools/python-client-library/python-client-library-home/) | [Python client library](/docs/tools/python-client-library/python-client-library-home/) | |
 | Grafana Plug-In | No | [Community grafana connector](/docs/community/com-query/old-grafana-connector) |  |
 | Postgres Lookup Database Option | No | Yes |   |
