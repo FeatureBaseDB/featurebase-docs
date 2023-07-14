@@ -1,3 +1,5 @@
+### CREATE TABLE with integer constraints
+
 ```sql
 create table doctest
   (

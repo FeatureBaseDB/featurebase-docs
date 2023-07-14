@@ -18,15 +18,15 @@ INT [MIN {value}] [MAX {value}]
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| INT | Used for integer data that spans a large range of values intended for aggregate queries |
-| MIN | Minimum value constraint defaults to -2^63 |
-| MAX | Maximum value constraint defaults to 2^63 -1 |
+| Argument | Description | Default |
+|---|---|---|
+| INT | Used for integer data that spans a large range of values intended for aggregate queries |  |
+| MIN | Minimum value constraint | -2^63 |
+| MAX | Maximum value constraint | 2^63 -1 |
 
 ## Additional information
 
-INT is not suitable for queries that
+INT is **not suitable** for queries that
 * group by
 * include data sets with low cardinality
 
@@ -34,10 +34,6 @@ Instead, use the [ID data type](/docs/sql-guide/data-types/data-type-id).
 
 ## Examples
 
-### CREATE TABLE with integer constraints
-
 {% include /sql-guide/table-create-integer-constraints-eg.md%}
-
-### CREATE TABLE with all data types
 
 {% include /sql-guide/table-create-types-all-eg.md %}

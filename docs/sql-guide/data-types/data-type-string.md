@@ -39,16 +39,8 @@ Single quotation marks are used for string values in the following statements:
 
 ## Examples
 
-### CREATE TABLE with string data types
-
 {% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
-### SELECT FROM string column
+{% include /sql-guide/select-from-string-type-eg.md %}
 
-```sql
-SELECT * FROM products WHERE prodlist LIKE '%pen%';
-```
-
-### CREATE TABLE with all data types
-
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
+{% include /sql-guide/table-create-types-all-eg.md %}

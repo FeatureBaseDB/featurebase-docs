@@ -68,9 +68,9 @@ There are special assignments for certain literal values.
 
 ## Examples
 
-### CREATE products and sales tables and columns with string data types
+### CREATE TABLE with string data types
 
-{% include /sql-guide/table_create_products_sales.md %}
+{% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
 ### INSERT multiple records INTO `products` and `services` tables
 
@@ -106,6 +106,8 @@ VALUES (1, 'free deliveries on orders over $50', 0.00);
 INSERT INTO services (_id, servicelist, price)
 VALUES (2, 'local postage per item', 2.20);
 ```
+
+### CREATE TABLE with TIMEQUANTUM constraints
 
 {% include /sql-guide/table-create-timequantum-eg.md %}
 
