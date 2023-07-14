@@ -22,23 +22,26 @@ STRING
 
 ## Additional information
 
-The STRING data type:
-* has a `keyed mutex` internal data type
-* works best when:
-  * Looking for discrete values,
-  * `group by` where cardinality is low
+The STRING data type has a `keyed mutex` internal data type and recommended for queries:
+* on discrete values,
+* with `group by` where cardinality is low
 
-Use single quotes to contain string values in INSERT, REPLACE or SELECT statements.
+{: .note}
+>High cardinality data will:
+>* decrease performance
+>* increase storage overheads
 
-If data has high cardinality:
-* performance can decrease
-* storage will increase
+### Constraining string values
+
+Single quotation marks are used for string values in the following statements:
+* [INSERT/REPLACE](/docs/sql-guide/statements/statement-insert)
+* [SELECT](/docs/sql-guide/statements/statement-select)
 
 ## Examples
 
-### CREATE products and sales tables and columns with string datatypes
+### CREATE TABLE with string data types
 
-{% include /sql-guide/table_create_products_sales.md %}
+{% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
 ### SELECT FROM string column
 

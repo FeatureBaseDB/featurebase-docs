@@ -1,3 +1,5 @@
+### CREATE TABLE with string data types
+
 ```sql
 create table products
   (_id id, prodlist string, price decimal(2) stock int);

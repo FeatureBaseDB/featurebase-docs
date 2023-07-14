@@ -65,23 +65,19 @@ CREATE TABLE
 
 ### CREATE TABLE with integer constraints
 
-```sql
-create table doctest
-  (
-    _id id,
-    numbers int min -991 max 991,
-    words string
-  );
-```
+{% include /sql-guide/table-create-integer-constraints-eg.md%}
 
 ### CREATE TABLE with STRINGSET data type
 
 {% include /sql-guide/table-create-eg-stringset-datatype.md %}
 
+### CREATE TABLE with TIMEQUANTUM constraints
+
+{% include /sql-guide/table-create-timequantum-eg.md %}
+
 ### CREATE TABLE with all column types
 
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
-
+{% include /sql-guide/table-create-types-all-eg.md %}
 
 ## Further information
 

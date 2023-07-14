@@ -34,4 +34,4 @@ The STRINGSET data type:
 
 ### CREATE TABLE with all data types
 
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
+{% include /sql-guide/table-create-types-all-eg.md %}

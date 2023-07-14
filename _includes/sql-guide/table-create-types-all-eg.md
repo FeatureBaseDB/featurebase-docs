@@ -1,3 +1,4 @@
+### CREATE TABLE with all data types
 
 ```sql
 create table allcoltypes

@@ -34,6 +34,10 @@ Instead, use the [ID data type](/docs/sql-guide/data-types/data-type-id).
 
 ## Examples
 
+### CREATE TABLE with integer constraints
+
+{% include /sql-guide/table-create-integer-constraints-eg.md%}
+
 ### CREATE TABLE with all data types
 
-{% include /sql-guide/table_create_eg_all_datatypes.md %}
+{% include /sql-guide/table-create-types-all-eg.md %}
