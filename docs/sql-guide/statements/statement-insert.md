@@ -47,6 +47,13 @@ There are special assignments for certain literal values.
 | `[]` | `stringset` <br/>`idset` | `[]` (empty set) | Stores an empty set for new records and existing `NULL` records. Keeps existing values in set otherwise |
 
 ## Warnings
+
+FeatureBase recommends limiting INSERT statements to one record per key to avoid unexpected results.
+
+Issues may occur under when a single INSERT statement contains multiple records that:
+* share the same key
+* are being set to NULL and non-NULL values
+
 FeatureBase recommends limiting INSERT statements to one record per key to avoid unexpected results.
 Inconsistencies may occur when a single INSERT statement contains multiple records that share the same key, and are known to occur if, for a given key, a field is being set to both NULL and non-NULL values
 

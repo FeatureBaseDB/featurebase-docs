@@ -17,8 +17,13 @@ FeatureBase supports different types of queries that are discussed further in th
 
 {% include /cloud/cloud-db-create-before-begin.md %}
 
+## Running SQL queries
+
+SQL queries can be run against FeatureBase tables in the following ways:
+
+
 * [Learn how to query FeatureBase databases using terminal commands](/docs/tools/fbsql/fbsql-home)
-* [Learn how to query FeatureBase databsaes using the SQL Command Line Interface](/docs/community/com-config/com-config-sql-cli-enable)
+* [Learn how to query FeatureBase databases using the SQL Command Line Interface](/docs/community/com-config/com-config-sql-cli-enable)
 * Login to FeatureBase Community to run queries using the Query editor or Query builder
 
 ## Statements
