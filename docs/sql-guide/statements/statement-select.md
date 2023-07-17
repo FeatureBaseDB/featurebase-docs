@@ -55,31 +55,45 @@ SELECT
 
 ## Arguments
 
-| Argument | Description | Required | Further information |
+| Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `DISTINCT` | Keyword that specifies only unique rows exist in the output | Optional |  |
-| top_clause | Specify a limit to apply to the number of rows returned in the output. | No | The `expr` used in the TOP clause must be an integer literal. |
-| select_list | A series of expressions separated by commas contains the items selected to form the output result set. | Yes | [select_list](#select_list-information) |
-| from_clause | A list of table_or_subquery expressions that specify which relations to select data from. `WITH`is an optional parenthesized list of query hints that can only be used with a table. Query hints tell queries how to access data in a table. | Yes | [from_clause](#from_clause-information) |
+| `DISTINCT` | Keyword that specifies only unique rows exist in the output | Optional | [DISTINCT additional](#distinct-additional) |
+| top_clause | Specify a limit to apply to the number of rows returned in the output. | No | Requires integer literal |
+| select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [select_list](#select_list-additional) |
+| from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [from_clause](#from_clause-additional) |
+| from...with | A list of table query hints | Optional for table queries | [Query hints additional](#query-hints-additional) |
 | where_clause | An expression that defines a filter condition for the rows returned by the query. | Yes | Can be any constant, function or combination joined by operators or a subquery. |
-| group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-information) |
+| group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-additional) |
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
 | order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | Results can be ordered `ASC`ending or `DESC`ending. |
 
 ## Additional information
 
-### select_list information
+### DISTINCT additional
+
+`DISTINCT` can return two kinds of results:
+
+| DISTINCT | Description | Examples |
+|---|---|---|
+| Values | A query that returns `DISTINCT` values from a table | [SELECT DISTINCT](#select-distinct)
+| Sets | A query that returns a specific array of values from `SET` or `SETQ` data type columns | [Flatten hint](/docs/sql-guide/hints/hint-flatten) |
+
+### select_list additional
 
 ![expr](/assets/images/sql-guide/select_list.svg)
+
+### SELECT...LIKE wildcards
+
 ![expr](/assets/images/sql-guide/select_item.svg)
 
+Wildcards are used with the `LIKE` clause.
 * `*` wildcard represents all columns
 * `<qualifier>.*` limits the results to all columns based on the specified qualifier
 * `expr` can be any constant, function or combination thereof joined by operators, or a subquery
 * Items in the select_list can be aliased with a column_alias
 * Any column referenced in a non-aggregated expression in the select_list must also appear in the group_by list
 
-### from_clause information
+### FROM clause additional
 
 ![expr](/assets/images/sql-guide/from_clause.svg)
 ![expr](/assets/images/sql-guide/table_or_subquery.svg)
@@ -91,39 +105,11 @@ The table_or_subquery expression can be:
 
 Both expressions can be aliased with a table_alias
 
-#### WITH
+### Query hints
 
-`WITH`is an optional parenthesized list of query hints that can only be used with a table (not a subquery). Query hints tell queries how to access data in a table. Flatten is the only supported hint currently. 
+* [Query hints](/docs/sql-guide/hints/hints-home)
 
-
-#### flatten() hint
-
-The `flatten()` hint is used when a query wants to get distinct or group on individual members of [IDSET](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) columns
-
-The `flatten()` function can only be used:
-* in `SELECT...WITH...GROUP BY` queries
-* in `SELECT DISTINCT...` queries
-* with one input argument that matches the sole `DISTINCT`/`GROUP BY` column
-
-#### flatten() syntax
-
-```
-flatten(column)
-```
-
-#### flatten() arguments
-
-| Argument | Data type | Description | Required? | Further information |
-|---|---|---|---|---|
-| `column` | IDSET/STRINGSET | [IDSET](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) columns | Yes | This should only be used with `GROUP BY` queries |
-
-#### flatten() returns
-
-| Data type | Value |
-|---|---|
-| `ID`/`STRING` | individual values of passed column |
-
-### group_by_clause information
+### GROUP BY clause additional
 
 ![expr](/assets/images/sql-guide/group_by_clause.svg)
 
@@ -133,19 +119,9 @@ flatten(column)
 
 A column must appear in the group_by_clause if it is referenced in a non-aggregated expression in the select_list
 
-### Wildcards
-
-Wildcards are used with the `LIKE` clause.
-
-* [SQL statement wildcards](https://www.w3schools.com/sql/sql_wildcards.asp){:target="_blank"}
+* [GROUP BY...flatten hint](/docs/sql-guide/hints/hint-flatten)
 
 ## Examples
-
-### SELECT statement with wildcard
-
-```sql
-SELECT * FROM services WHERE servicelist LIKE '%free%';
-```
 
 ### SELECT COUNT
 
@@ -172,7 +148,6 @@ SELECT _id, fld FROM tbl WHERE _id = 1
 ```sql
 SELECT DISTINCT fld FROM tbl
 ```
-
 ### SELECT COUNT
 
 ```sql
@@ -217,17 +192,13 @@ SELECT fld, count(fld) FROM tbl GROUP BY fld
 SELECT fld1, count(fld1) FROM tbl WHERE fld2=1 GROUP BY fld1
 ```
 
-### GROUP BY with STRINGSET without flatten() that counts combinations of values example
+### GROUP BY with STRINGSET
+
+This query that counts combinations of values from the `segments` table.
+
+{% include /sql-guide/table-create-segments.md %}
 
 ```sql
-create table segments  
-    (_id id, segment stringset);  
-
-insert into segments(_id, segment)  
-    values (1, ['RED', 'BLUE', 'GREEN']), 
-      (2, ['GREEN']),
-      (3, ['RED', 'BLUE', 'GREEN']);
-
 select count(*) as cnt, segment from segments
 group by segment;
 
@@ -237,24 +208,16 @@ group by segment;
    1 | ['GREEN']
 ```
 
-### GROUP BY with flatten() that counts individual values example
+{: .note}
+This query can be [performed using the `flatten` hint](/docs/sql-guide/hints/hint-flatten#)
+
+### SELECT statement with wildcard
+
 ```sql
-create table segments  
-    (_id id, segment stringset);  
-
-insert into segments(_id, segment)  
-    values (1, ['RED', 'BLUE', 'GREEN']), 
-      (2, ['GREEN']),
-      (3, ['RED', 'BLUE', 'GREEN']);
-
-select count(*) as cnt, segment from segments
-WITH (flatten(segment))
-group by segment;
-
- cnt | segment
------+-----------
-   2 | ['RED']
-   2 | ['BLUE']
-   3 | ['GREEN']
+SELECT * FROM services WHERE servicelist LIKE '%free%';
 ```
 
+## Further information
+
+
+* [SQL statement wildcards](https://www.w3schools.com/sql/sql_wildcards.asp){:target="_blank"}
