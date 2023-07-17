@@ -41,8 +41,18 @@ INSERT INTO
 
 ### Value list additional
 
-The length of the value_list must match the length of the column_list.
+The `INSERT...value_list` clause has two rules:
+1. The number of values to insert must match the number of columns in `column_list`
+2. The first instance of a duplicate `_id` key is inserted.
 
+For example:
+
+| Statement | Issue | Result |
+|---|---|---|
+| `INSERT INTO productnames (_id, products) VALUES (1, 'FeatureBase'), (1, 'Pilosa');` | Duplicate unique `_id` value | `Pilosa` ignored |
+| `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | Duplicate unique `_id` value | NULL ignored |
+
+<!-- ORIGINAL DESCRIPTION KEPT UNTIL @mcloutier reviews rewrite above via Slack conversation
 ### Value list warning
 
 {: .warning}
@@ -51,7 +61,7 @@ FeatureBase recommends limiting INSERT statements to **one record per key** to a
 INSERT statement inconsistencies:
 * may occur when a single statement contains multiple records that share the same key, and
 * known to occur when a field is being set to both NULL and non-NULL values for a given key
-
+--->
 ### Value assignment
 
 There are special assignments for certain literal values.
