@@ -47,10 +47,10 @@ The `INSERT...value_list` clause has two rules:
 
 For example:
 
-| Statement | Issue | Result |
-|---|---|---|
-| `INSERT INTO productnames (_id, products) VALUES (1, 'FeatureBase'), (1, 'Pilosa');` | Duplicate unique `_id` value | `Pilosa` ignored |
-| `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | Duplicate unique `_id` value | NULL ignored |
+| Statement | Result |
+|---|---|
+| `INSERT INTO productnames (_id, products) VALUES (1, 'FeatureBase'), (1, 'Pilosa');` | `Pilosa` ignored |
+| `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | NULL ignored |
 
 <!-- ORIGINAL DESCRIPTION KEPT UNTIL @mcloutier reviews rewrite above via Slack conversation
 ### Value list warning
