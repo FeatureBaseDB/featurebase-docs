@@ -41,16 +41,14 @@ INSERT INTO
 
 ### Value list additional
 
-The `INSERT...value_list` clause has two rules:
-1. The number of values to insert must match the number of columns in `column_list`
-2. The first instance of a duplicate `_id` key is inserted.
+The `INSERT...value_list` clause has the following rules:
 
-For example:
+| Rule | Example | Result |
+|---|---|---|
+| Number of values to INSERT must match the number of columns in `column_list` | `INSERT INTO productnames (_id, products, sales)` VALUES (1, 'FeatureBase') | Run fails with error |
+| Values in rows with duplicate `_id` keys are overwritten | `INSERT INTO productnames (_id, products, sales) VALUES (1, 'FeatureBase', 2468121), (1, 'Pilosa', 132940);` | Second row overwrites the first |
+| Null values in rows with duplicate `_id` keys are ignored | | `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | NULL ignored |
 
-| Statement | Result |
-|---|---|
-| `INSERT INTO productnames (_id, products) VALUES (1, 'FeatureBase'), (1, 'Pilosa');` | `Pilosa` ignored |
-| `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | NULL ignored |
 
 <!-- ORIGINAL DESCRIPTION KEPT UNTIL @mcloutier reviews rewrite above via Slack conversation
 ### Value list warning
