@@ -39,9 +39,9 @@ INSERT INTO
 
 ## Additional information
 
-### Value list additional
+### INSERT INTO rules
 
-The `INSERT...value_list` clause has the following rules:
+The INSERT statement has the following rules:
 
 | Rule | Example | Result |
 |---|---|---|
