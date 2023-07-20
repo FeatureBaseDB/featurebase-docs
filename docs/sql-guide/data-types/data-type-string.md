@@ -41,6 +41,6 @@ Single quotation marks are used for string values in the following statements:
 
 {% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
-{% include /sql-guide/select-from-string-type-eg.md %}
+{% include /sql-guide/select-string-type-eg.md %}
 
 {% include /sql-guide/table-create-types-all-eg.md %}
