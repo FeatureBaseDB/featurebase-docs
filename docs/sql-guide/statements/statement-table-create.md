@@ -69,7 +69,8 @@ CREATE TABLE
 
 ### CREATE TABLE with STRINGSET data type
 
-{% include /sql-guide/table-create-eg-stringset-datatype.md %}
+{% include /sql-guide/table-create-stringset-datatype-eg.md %}
+
 
 ### CREATE TABLE with TIMEQUANTUM constraints
 
