@@ -1,13 +1,16 @@
 ---
-title: flatten()
+title: FLATTEN()
 layout: default
 parent: SELECT hints
 grand_parent: SQL guide
 ---
 
-# SELECT...flatten() hint
+# FLATTEN() hint
 
-The `SELECT...flatten()` function applies **exclusively** to `set` and `setq` data types.
+The FLATTEN() hint is used to return distinct or group on individual members of IDSET and STRINGSET columns. It can be used for:
+* SELECT...WITH...GROUP BY queries
+* SELECT DISTINCT... queries
+* queries with one input argument that matches the sole DISTINCT/GROUP BY column
 
 ## Before you begin
 
@@ -18,12 +21,20 @@ The `SELECT...flatten()` function applies **exclusively** to `set` and `setq` da
 
 ```sql
 
-[DISTINCT(flatten([SET_col|SETQ_col]))]
-
-
-WITH (flatten([SET_col|SETQ_col]))
-group by [SET_col|SETQ_col];
-
+SELECT
+  [
+    DISTINCT
+      (FLATTEN
+        ([SET_col | SETQ_col])
+      )
+  ]
+  ...
+  [
+    WITH
+      FLATTEN
+        ([SET_col|SETQ_col])
+    GROUP BY [SET_col|SETQ_col]
+  ]
 ```
 
 ## Arguments
@@ -47,9 +58,12 @@ group by [SET_col|SETQ_col];
 
 #### Returns
 
-| Data type | Value |
+Individual values are returned from the specified column based on the source data type
+
+| Source column type | Returned data type |
 |---|---|
-| `ID`/`STRING` | individual values of passed column |
+| IDSET/IDSETQ| ID (unsigned integer) |
+| STRINGSET/STRINGSETQ | String |
 
 ## Examples
 
@@ -61,9 +75,10 @@ group by [SET_col|SETQ_col];
 SELECT DISTINCT(flatten(segment))
 ```
 
-
-
 ### GROUP BY with flatten()
+
+{: .note}
+This query can also be [performed as a SELECT...GROUP BY statement](/docs/sql-guide/statements/statement-select#group-by-with-stringset)
 
 This query counts individual values from the `segments` table
 
@@ -78,6 +93,3 @@ group by segment;
    2 | ['BLUE']
    3 | ['GREEN']
 ```
-
-{: .note}
-This query can also be [performed as a SELECT...GROUP BY statement](/docs/sql-guide/statements/statement-select#group-by-with-stringset)
