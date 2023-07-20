@@ -196,7 +196,7 @@ SELECT fld1, count(fld1) FROM tbl WHERE fld2=1 GROUP BY fld1
 
 This query that counts combinations of values from the `segments` table.
 
-{% include /sql-guide/table-create-segments.md %}
+{% include /sql-guide/table-create-segments-eg.md %}
 
 ```sql
 select count(*) as cnt, segment from segments
