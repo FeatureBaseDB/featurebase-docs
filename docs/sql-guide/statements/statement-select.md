@@ -86,7 +86,8 @@ SELECT
 
 ## `<expr>` filter
 
-`<expr>` can be used in the following SELECT clauses:
+`<expr>` can be used in the <select_list> and clauses:
+
 * TOP
 * WHERE
 * HAVING
