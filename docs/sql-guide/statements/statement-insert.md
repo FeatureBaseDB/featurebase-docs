@@ -119,7 +119,7 @@ VALUES (1, {'2018-08-31T00:00:00Z', ['A','B']}, {1676649734, [1]});
 
 ### CREATE TABLE with `STRINGSET` data types
 
-{% include /sql-guide/table-create-eg-stringset-datatype.md %}
+{% include /sql-guide/table-create-stringset-datatype-eg.md %}
 
 ### INSERT data to `STRINGSET`
 
