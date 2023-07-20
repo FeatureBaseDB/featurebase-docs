@@ -12,10 +12,39 @@ Returns data from FeatureBase tables based on specified rows, columns and clause
 
 ## BNF diagrams
 
+![expr](/assets/images/sql-guide/select_stmt.svg)
+
+### TOP clause
+
+![expr](/assets/images/sql-guide/top_clause.svg)
+
+### SELECT list
+![expr](/assets/images/sql-guide/select_list.svg)
+![expr](/assets/images/sql-guide/select_item.svg)
+
+### FROM clause
+![expr](/assets/images/sql-guide/from_clause.svg)
+![expr](/assets/images/sql-guide/table_or_subquery.svg)
+![expr](/assets/images/sql-guide/table_option.svg)
+
+### WHERE clause
+
+![expr](/assets/images/sql-guide/where_clause.svg)
+
+### GROUP BY clause
+
+![expr](/assets/images/sql-guide/group_by_clause.svg)
+
+### HAVING clause
+
+![expr](/assets/images/sql-guide/having_clause.svg)
+
+### ORDER BY clause
+
+![expr](/assets/images/sql-guide/order_by_clause.svg)
+![expr](/assets/images/sql-guide/order_by_expression.svg)
 
 ## DDL Syntax
-
-![expr](/assets/images/sql-guide/select_stmt.svg)
 
 ```sql
 SELECT
@@ -29,69 +58,20 @@ SELECT
   [<order_by_clause>];
 ```
 
-### DISTINCT clause
+## Arguments
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | `DISTINCT` | Keyword that specifies only unique rows exist in the output | Optional | [DISTINCT additional](#distinct-additional) |
-
-### TOP clause
-
-![expr](/assets/images/sql-guide/top_clause.svg)
-
-| Argument | Description | Required | Additional information |
-|---|---|---|---|
 | top_clause | Specify a limit to apply to the number of rows returned in the output. | Optional | Requires integer literal |
-
-### SELECT list
-![expr](/assets/images/sql-guide/select_list.svg)
-![expr](/assets/images/sql-guide/select_item.svg)
-
-| Argument | Description | Required | Additional information |
-|---|---|---|---|
-| select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [select_list](#select_list-additional) |
-
-### FROM clause
-![expr](/assets/images/sql-guide/from_clause.svg)
-![expr](/assets/images/sql-guide/table_or_subquery.svg)
-![expr](/assets/images/sql-guide/table_option.svg)
-
-| Argument | Description | Required | Additional information |
-|---|---|---|---|
-| from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [from_clause](#from_clause-additional) |
-| from...with | A list of table query hints | Optional for table queries | [Query hints additional](#query-hints-additional) |
-
-### WHERE clause
-
-![expr](/assets/images/sql-guide/where_clause.svg)
-
-| Argument | Description | Required | Additional information |
-|---|---|---|---|
-| where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | Can be any constant, function or combination joined by operators or a subquery. |
-
-### GROUP BY clause
-
-![expr](/assets/images/sql-guide/group_by_clause.svg)
-
-| Argument | Description | Required | Additional information |
-|---|---|---|---|
-| group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-additional) |
-
-### HAVING clause
-
-![expr](/assets/images/sql-guide/having_clause.svg)
-
-| Argument | Description | Required | Additional information |
-|---|---|---|---|
+| expr | Supported SQL expression | Yes | [SQL Expressions](/docs/sql-guide/expressions/expressions-home) |
+| select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [SELECT list and GROUP BY clause](#select-list-and-group-by-clause) |
+| from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [FROM table or subquery expression](#from_table_or_subquery) |
+| from...with | A list of table query hints | Optional for table queries | [Query hints](/docs/sql-guide/hints/hints-home) |
+| where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | [WHERE filter conditions](#where-filter-conditions) |
+| group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [GROUP BY...flatten hint](/docs/sql-guide/hints/hint-flatten) |
+| column_expr | Specify a column or non-aggregate calculation on a column which is not required to appear in the select_list | Must exist in the from_clause |  |
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
-
-### ORDER BY clause
-
-![expr](/assets/images/sql-guide/order_by_clause.svg)
-![expr](/assets/images/sql-guide/order_by_expression.svg)
-
-| Argument | Description | Required | Additional information |
-|---|---|---|---|
 | order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | Results can be ordered `ASC`ending or `DESC`ending. |
 
 ## Additional information
@@ -105,48 +85,43 @@ SELECT
 | Values | A query that returns `DISTINCT` values from a table | [SELECT DISTINCT](#select-distinct)
 | Sets | A query that returns a specific array of values from `SET` or `SETQ` data type columns | [Flatten hint](/docs/sql-guide/hints/hint-flatten) |
 
-### select_list additional
+## <expr> filter
 
-![expr](/assets/images/sql-guide/select_list.svg)
+`<expr>` can be used in the following SELECT clauses:
+* TOP
+* WHERE
+* HAVING
+
+`<expr>` can include:
+
+| Filter | Description | Additional information |
+|---|---|---|
+| Subquery | A SELECT query that is run to obtain specific results required for the main query |  |
+| Constant | A literal or scalar value | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) or subquery |
+| Function | [FeatureBase SQL functions](/docs/sql-guide/functions/functions-home) | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) or subquery |
+
+### SELECT list and GROUP BY clause
+
+SELECT LIST Columns referenced in non-aggregate expressions must also appear in the GROUP BY clause.
 
 ### SELECT...LIKE wildcards
 
-![expr](/assets/images/sql-guide/select_item.svg)
-
 Wildcards are used with the `LIKE` clause.
-* `*` wildcard represents all columns
-* `<qualifier>.*` limits the results to all columns based on the specified qualifier
-* `expr` can be any constant, function or combination thereof joined by operators, or a subquery
-* Items in the select_list can be aliased with a column_alias
-* Any column referenced in a non-aggregated expression in the select_list must also appear in the group_by list
 
-### FROM clause additional
+| Wildcard | Description | Additional information |
+|---|---|
+| `*` | All columns |  |
+| `<qualifier>.*` | limit the results to all columns based on the specified qualifier |  |
+| `expr` | Filter used to refine the query | [<expr> filter](#expr-filter) |
+| <column_alias> | Select List column alias |  |
 
-![expr](/assets/images/sql-guide/from_clause.svg)
-![expr](/assets/images/sql-guide/table_or_subquery.svg)
-![expr](/assets/images/sql-guide/table_option.svg)
+### FROM table or subquery
 
 The table_or_subquery expression can be:
 * a table_name or table_valued_function
 * a parenthesized `SELECT` statement
 
-Both expressions can be aliased with a table_alias
-
-### Query hints
-
-* [Query hints](/docs/sql-guide/hints/hints-home)
-
-### GROUP BY clause additional
-
-![expr](/assets/images/sql-guide/group_by_clause.svg)
-
-`column_expr` specifies a column or non-aggregate calculation on a column which:
-* must exist in the from_clause
-* is not required to appear in the select_list
-
-A column must appear in the group_by_clause if it is referenced in a non-aggregated expression in the select_list
-
-* [GROUP BY...flatten hint](/docs/sql-guide/hints/hint-flatten)
+Both expressions can be aliased with a <table_alias>
 
 ## Examples
 
@@ -209,13 +184,21 @@ SELECT avg(fld) FROM tbl WHERE fld = 1
 
 ```sql
 SELECT fld, count(*) FROM tbl GROUP BY fld
+
 SELECT fld1, fld2, count(*) FROM tbl GROUP BY fld1, fld2
+
 SELECT fld1, fld2, count(*) FROM tbl GROUP BY fld1, fld2 LIMIT 1
+
 SELECT fld1, fld2, count(*) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2
+
 SELECT fld1, count(*) FROM tbl GROUP BY fld1 having count(*) > 1
+
 SELECT fld1, fld2, sum(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2
+
 SELECT fld1, fld2, sum(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2 having count(*) > 1
+
 SELECT fld, count(fld) FROM tbl GROUP BY fld
+
 SELECT fld1, count(fld1) FROM tbl WHERE fld2=1 GROUP BY fld1
 ```
 
@@ -236,7 +219,7 @@ group by segment;
 ```
 
 {: .note}
-This query can be [performed using the `flatten` hint](/docs/sql-guide/hints/hint-flatten#)
+This query can also be performed using the [`flatten` hint](/docs/sql-guide/hints/hint-flatten)
 
 ### SELECT statement with wildcard
 
