@@ -67,10 +67,10 @@ SELECT
 | select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [SELECT list and GROUP BY clause](#select-list-and-group-by-clause) |
 | from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [FROM table or subquery expression](#from-table-or-subquery) |
 | from...with | A list of table query hints | Optional for table queries | [Query hints](/docs/sql-guide/hints/hints-home) |
-| where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | * [`<expr>` filter conditions](#expr-filter)<br/* [SELECT...flatten hint](/docs/sql-guide/hints/hint-flatten) |
+| where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | * [`<expr>` filter conditions](#expr-filter)<br/>* [SELECT...flatten hint](/docs/sql-guide/hints/hint-flatten) |
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [SELECT...flatten hint](/docs/sql-guide/hints/hint-flatten) |
 | column_expr | Specify a column or non-aggregate calculation on a column which is not required to appear in the select_list | Must exist in the from_clause |  |
-| having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
+| having_clause | Pass aggregates to filter on based on conditions. | Optional | [`<expr>` filter conditions](#expr-filter) |
 | order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | Results can be ordered `ASC`ending or `DESC`ending. |
 
 ## Additional information
