@@ -8,7 +8,7 @@ nav_order: 7
 
 # SELECT statement
 
-Selects data from a FeatureBase table.
+Returns data from FeatureBase tables based on specified rows, columns and clauses.
 
 ## BNF diagrams
 
@@ -47,7 +47,7 @@ SELECT
   [<top_clause>]
   {<select_list>}
   {<from_clause>}
-  {<where_clause>}
+  [<where_clause>]
   [<group_by_clause>]
   [<having_clause>]
   [<order_by_clause>];
@@ -62,7 +62,7 @@ SELECT
 | select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [select_list](#select_list-additional) |
 | from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [from_clause](#from_clause-additional) |
 | from...with | A list of table query hints | Optional for table queries | [Query hints additional](#query-hints-additional) |
-| where_clause | An expression that defines a filter condition for the rows returned by the query. | Yes | Can be any constant, function or combination joined by operators or a subquery. |
+| where_clause | An expression that defines a filter condition for the rows returned by the query. | No | Can be any constant, function or combination joined by operators or a subquery. |
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-additional) |
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
 | order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | Results can be ordered `ASC`ending or `DESC`ending. |

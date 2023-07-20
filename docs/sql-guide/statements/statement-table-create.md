@@ -61,7 +61,7 @@ CREATE TABLE
 
 ### CREATE TABLE with decimal data type
 
-{% include /sql-guide/table_create_products_sales.md %}
+{% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
 ### CREATE TABLE with integer constraints
 
