@@ -59,8 +59,6 @@ CREATE TABLE
 
 ## Examples
 
-### CREATE TABLE with decimal data type
-
 {% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
 ### CREATE TABLE with integer constraints
