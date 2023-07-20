@@ -67,7 +67,7 @@ SELECT
 | select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [SELECT list and GROUP BY clause](#select-list-and-group-by-clause) |
 | from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [FROM table or subquery expression](#from-table-or-subquery) |
 | from...with | A list of table query hints | Optional for table queries | [Query hints](/docs/sql-guide/hints/hints-home) |
-| where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | [WHERE filter conditions](#where-filter-conditions) |
+| where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | [`<expr>` filter conditions](#expr-filter) |
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [GROUP BY...flatten hint](/docs/sql-guide/hints/hint-flatten) |
 | column_expr | Specify a column or non-aggregate calculation on a column which is not required to appear in the select_list | Must exist in the from_clause |  |
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
@@ -84,7 +84,7 @@ SELECT
 | Values | A query that returns `DISTINCT` values from a table | [SELECT DISTINCT](#select-distinct)
 | Sets | A query that returns a specific array of values from `SET` or `SETQ` data type columns | [Flatten hint](/docs/sql-guide/hints/hint-flatten) |
 
-## <expr> filter
+## `<expr>` filter
 
 `<expr>` can be used in the following SELECT clauses:
 * TOP
@@ -111,7 +111,7 @@ Wildcards are used with the `LIKE` clause.
 |---|---|
 | `*` | All columns |  |
 | `<qualifier>.*` | limit the results to all columns based on the specified qualifier |  |
-| `expr` | Filter used to refine the query | [<expr> filter](#expr-filter) |
+| `expr` | Filter used to refine the query | [`<expr>` filter](#expr-filter) |
 | <column_alias> | Select List column alias |  |
 
 ### FROM table or subquery
