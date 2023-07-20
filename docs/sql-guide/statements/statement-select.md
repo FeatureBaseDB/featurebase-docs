@@ -64,9 +64,8 @@ SELECT
 |---|---|---|---|
 | `DISTINCT` | Keyword that specifies only unique rows exist in the output | Optional | [DISTINCT additional](#distinct-additional) |
 | top_clause | Specify a limit to apply to the number of rows returned in the output. | Optional | Requires integer literal |
-| expr | Supported SQL expression | Yes | [SQL Expressions](/docs/sql-guide/expressions/expressions-home) |
 | select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [SELECT list and GROUP BY clause](#select-list-and-group-by-clause) |
-| from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [FROM table or subquery expression](#from_table_or_subquery) |
+| from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [FROM table or subquery expression](#from-table-or-subquery) |
 | from...with | A list of table query hints | Optional for table queries | [Query hints](/docs/sql-guide/hints/hints-home) |
 | where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | [WHERE filter conditions](#where-filter-conditions) |
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [GROUP BY...flatten hint](/docs/sql-guide/hints/hint-flatten) |
