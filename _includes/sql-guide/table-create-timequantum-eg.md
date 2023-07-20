@@ -1,5 +1,3 @@
-### CREATE TABLE with TIMEQUANTUM constraints
-
 ```sql
 CREATE TABLE timeq (
 _id id,

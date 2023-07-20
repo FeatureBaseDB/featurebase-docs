@@ -61,6 +61,8 @@ CREATE TABLE
 
 {% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
+### CREATE TABLE with integer constraints
+
 {% include /sql-guide/table-create-integer-constraints-eg.md%}
 
 ### CREATE TABLE with STRINGSET data type
@@ -69,7 +71,11 @@ CREATE TABLE
 
 {% include /sql-guide/table-create-segments-eg.md %}
 
+### CREATE TABLE with TIMEQUANTUM constraints
+
 {% include /sql-guide/table-create-timequantum-eg.md %}
+
+### CREATE TABLE with all column types
 
 {% include /sql-guide/table-create-types-all-eg.md %}
 
