@@ -12,36 +12,12 @@ Returns data from FeatureBase tables based on specified rows, columns and clause
 
 ## BNF diagrams
 
+
+## DDL Syntax
+
 ![expr](/assets/images/sql-guide/select_stmt.svg)
 
-### top_clause
-![expr](/assets/images/sql-guide/top_clause.svg)
-
-### select_list
-![expr](/assets/images/sql-guide/select_list.svg)
-![expr](/assets/images/sql-guide/select_item.svg)
-
-### from_clause
-![expr](/assets/images/sql-guide/from_clause.svg)
-![expr](/assets/images/sql-guide/table_or_subquery.svg)
-![expr](/assets/images/sql-guide/table_option.svg)
-
-### where_clause
-![expr](/assets/images/sql-guide/where_clause.svg)
-
-### group_by_clause
-![expr](/assets/images/sql-guide/group_by_clause.svg)
-
-### having_clause
-![expr](/assets/images/sql-guide/having_clause.svg)
-
-### order_by_clause
-![expr](/assets/images/sql-guide/order_by_clause.svg)
-![expr](/assets/images/sql-guide/order_by_expression.svg)
-
-## Syntax
-
-```
+```sql
 SELECT
   [DISTINCT]
   [<top_clause>]
@@ -55,16 +31,65 @@ SELECT
 
 ## Arguments
 
+### DISTINCT arguments
+
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | `DISTINCT` | Keyword that specifies only unique rows exist in the output | Optional | [DISTINCT additional](#distinct-additional) |
+
+### TOP clause
+
+![expr](/assets/images/sql-guide/top_clause.svg)
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
 | top_clause | Specify a limit to apply to the number of rows returned in the output. | Optional | Requires integer literal |
+
+### Select list
+![expr](/assets/images/sql-guide/select_list.svg)
+![expr](/assets/images/sql-guide/select_item.svg)
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
 | select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [select_list](#select_list-additional) |
+
+### FROM clause
+![expr](/assets/images/sql-guide/from_clause.svg)
+![expr](/assets/images/sql-guide/table_or_subquery.svg)
+![expr](/assets/images/sql-guide/table_option.svg)
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
 | from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [from_clause](#from_clause-additional) |
 | from...with | A list of table query hints | Optional for table queries | [Query hints additional](#query-hints-additional) |
+
+### where_clause
+![expr](/assets/images/sql-guide/where_clause.svg)
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
 | where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | Can be any constant, function or combination joined by operators or a subquery. |
+
+### group_by_clause
+![expr](/assets/images/sql-guide/group_by_clause.svg)
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-additional) |
+
+### having_clause
+![expr](/assets/images/sql-guide/having_clause.svg)
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
+
+### order_by_clause
+![expr](/assets/images/sql-guide/order_by_clause.svg)
+![expr](/assets/images/sql-guide/order_by_expression.svg)
+
+| Argument | Description | Required | Additional information |
+|---|---|---|---|
 | order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | Results can be ordered `ASC`ending or `DESC`ending. |
 
 ## Additional information

@@ -20,7 +20,7 @@ nav_order: 3
 ### value_list
 ![expr](/assets/images/sql-guide/value_list.svg)
 
-## DML syntax
+## DDL syntax
 
 ```
 INSERT INTO
