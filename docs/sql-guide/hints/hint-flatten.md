@@ -62,7 +62,7 @@ SELECT DISTINCT(flatten(segment)) FROM segments;
 ### GROUP BY with flatten()
 
 {: .note}
-This query can also be [performed as a SELECT...GROUP BY statement](/docs/sql-guide/statements/statement-select#group-by-with-stringset)
+This query can also be run as a [SELECT...GROUP BY statement](/docs/sql-guide/statements/statement-select#group-by-with-stringset)
 
 Count individual values from the `segments` table
 
