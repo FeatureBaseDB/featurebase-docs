@@ -39,27 +39,16 @@ INSERT INTO
 
 ## Additional information
 
-### INSERT INTO rules
+### Limitations
 
-The INSERT statement has the following rules:
+The `INSERT` statement has the following limitations:
 
-| Rule | Example | Result |
+| Limitation | Example | Result |
 |---|---|---|
 | Number of values to INSERT must match the number of columns in `column_list` | `INSERT INTO productnames (_id, products, sales)` VALUES (1, 'FeatureBase') | Run fails with error |
 | Values in rows with duplicate `_id` keys are overwritten | `INSERT INTO productnames (_id, products, sales) VALUES (1, 'FeatureBase', 2468121), (1, 'Pilosa', 132940);` | Second row overwrites the first |
 | Null values in rows with duplicate `_id` keys are ignored | | `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | NULL ignored |
 
-
-<!-- ORIGINAL DESCRIPTION KEPT UNTIL @mcloutier reviews rewrite above via Slack conversation
-### Value list warning
-
-{: .warning}
-FeatureBase recommends limiting INSERT statements to **one record per key** to avoid unexpected results.
-
-INSERT statement inconsistencies:
-* may occur when a single statement contains multiple records that share the same key, and
-* known to occur when a field is being set to both NULL and non-NULL values for a given key
---->
 ### Value assignment
 
 There are special assignments for certain literal values.
