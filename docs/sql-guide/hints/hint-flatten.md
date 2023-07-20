@@ -21,19 +21,18 @@ The FLATTEN() hint is used to return distinct or group on individual members of 
 
 ```sql
 [DISTINCT
-  (FLATTEN([SET_col_name | SETQ_col_name]))]
+  (FLATTEN(<colname>))]
 [WITH
-  (FLATTEN([SET_col_name | SETQ_col_name]))
+  (FLATTEN(<colname>))
 GROUP BY
-  ([SET_col_name | SETQ_col_name])]
+  (<colname>)]
 ```
 
 ## Arguments
 
 | Argument | Data type | Required? |
 |---|---|---|
-| `SET_col_name | * [IDSET](/docs/sql-guide/data-types/data-type-idset)<br/>*[STRINGSET](/docs/sql-guide/data-types/data-type-stringset) | Yes |
-| `SETQ_col_name | * [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq)<br/>*[STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) | Yes |
+| `<colname>` | [SET or SETQ](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) | Yes |
 
 ## Returns
 
@@ -59,7 +58,7 @@ SELECT DISTINCT(flatten(segment))
 {: .note}
 This query can also be [performed as a SELECT...GROUP BY statement](/docs/sql-guide/statements/statement-select#group-by-with-stringset)
 
-This query counts individual values from the `segments` table
+Count individual values from the `segments` table
 
 ```sql
 select count(*) as cnt, segment from segments
