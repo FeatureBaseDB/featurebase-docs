@@ -7,6 +7,9 @@ grand_parent: SQL guide
 
 # FLATTEN() hint
 
+{: .note}
+`FLATTEN()` is supported on [FeatureBase Cloud](/docs/cloud/cloud-home)
+
 The FLATTEN() hint is used to return distinct or group on individual members of IDSET and STRINGSET columns. It can be used for:
 * SELECT...WITH...GROUP BY queries
 * SELECT DISTINCT... queries
@@ -47,11 +50,14 @@ Individual values are returned from the specified column based on the source dat
 
 {% include /sql-guide/table-create-segments-eg.md %}
 
+<!-- commented out because this query doesn't work, has an "query error: 1:17: expected expression, found 'DISTINCT'
+"
 ### DISTINCT...flatten
 
 ```sql
-SELECT DISTINCT(flatten(segment))
+SELECT DISTINCT(flatten(segment)) FROM segments;
 ```
+-->
 
 ### GROUP BY with flatten()
 
@@ -61,7 +67,7 @@ This query can also be [performed as a SELECT...GROUP BY statement](/docs/sql-gu
 Count individual values from the `segments` table
 
 ```sql
-select count(*) as cnt, segment from segments
+SELECT count(*) AS cnt, segment FROM segments
 WITH (flatten(segment))
 group by segment;
 
