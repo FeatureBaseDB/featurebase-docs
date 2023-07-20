@@ -38,6 +38,10 @@ The STRINGSETQ data type:
 
 ## Examples
 
+### CREATE TABLE with SETQ Timequantum
+
+{% include /sql-guide/table-create-timequantum-eg.md %}
+
 ### CREATE TABLE with all data types
 
 {% include /sql-guide/table-create-types-all-eg.md %}
