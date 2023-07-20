@@ -29,9 +29,7 @@ SELECT
   [<order_by_clause>];
 ```
 
-## Arguments
-
-### DISTINCT arguments
+### DISTINCT clause
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
@@ -45,7 +43,7 @@ SELECT
 |---|---|---|---|
 | top_clause | Specify a limit to apply to the number of rows returned in the output. | Optional | Requires integer literal |
 
-### Select list
+### SELECT list
 ![expr](/assets/images/sql-guide/select_list.svg)
 ![expr](/assets/images/sql-guide/select_item.svg)
 
@@ -63,28 +61,32 @@ SELECT
 | from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [from_clause](#from_clause-additional) |
 | from...with | A list of table query hints | Optional for table queries | [Query hints additional](#query-hints-additional) |
 
-### where_clause
+### WHERE clause
+
 ![expr](/assets/images/sql-guide/where_clause.svg)
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | Can be any constant, function or combination joined by operators or a subquery. |
 
-### group_by_clause
+### GROUP BY clause
+
 ![expr](/assets/images/sql-guide/group_by_clause.svg)
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-additional) |
 
-### having_clause
+### HAVING clause
+
 ![expr](/assets/images/sql-guide/having_clause.svg)
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
 
-### order_by_clause
+### ORDER BY clause
+
 ![expr](/assets/images/sql-guide/order_by_clause.svg)
 ![expr](/assets/images/sql-guide/order_by_expression.svg)
 

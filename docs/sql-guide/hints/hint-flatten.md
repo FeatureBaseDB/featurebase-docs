@@ -14,7 +14,7 @@ The `SELECT...flatten()` function applies **exclusively** to `set` and `setq` da
 * [SQL SELECT statement](/docs/sql-guide/statements/statement-select)
 * [SET and SETQ data types](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types)
 
-#### Syntax
+## Syntax
 
 ```sql
 
@@ -26,13 +26,14 @@ group by [SET_col|SETQ_col];
 
 ```
 
-#### flatten() arguments
+## Arguments
 
 | Argument | Data types | Description | Required? | Additional information |
 |---|---|---|---|---|
 | `column_name` | `SET` and `SETQ` | Column with low cardinality data type | Yes | Column additional |
 
-[IDSET](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) columns | Yes | This should only be used with `GROUP BY` queries |
+
+| [IDSET](/docs/sql-guide/data-types/data-type-idset) and [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) columns | Yes | This should only be used with `GROUP BY` queries |
 
 ## Additional information
 
