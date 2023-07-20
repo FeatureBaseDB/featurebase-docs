@@ -81,7 +81,7 @@ SELECT
 
 | DISTINCT | Description | Examples |
 |---|---|---|
-| Values | A query that returns `DISTINCT` values from a table | [SELECT DISTINCT](#select-distinct)
+| Values | A query that returns `DISTINCT` values from a table | [SELECT DISTINCT](#select-distinct) |
 | Sets | A query that returns a specific array of values from `SET` or `SETQ` data type columns | [Flatten hint](/docs/sql-guide/hints/hint-flatten) |
 
 ## `<expr>` filter
@@ -111,9 +111,9 @@ Wildcards are used with the `LIKE` clause.
 | Wildcard | Description | Additional information |
 |---|---|
 | `*` | All columns |  |
-| `<qualifier>.*` | limit the results to all columns based on the specified qualifier |  |
-| `expr` | Filter used to refine the query | [`<expr>` filter](#expr-filter) |
 | <column_alias> | Select List column alias |  |
+| `expr` | Filter used to refine the query | [`<expr>` filter](#expr-filter) |
+| `<qualifier>.*` | limit the results to all columns based on the specified qualifier |  |
 
 ### FROM table or subquery
 
@@ -219,7 +219,7 @@ group by segment;
 ```
 
 {: .note}
-This query can also be performed using the [`flatten` hint](/docs/sql-guide/hints/hint-flatten)
+This query can also be performed using the [`flatten` hint](/docs/sql-guide/hints/hint-flatten/#group-by-with-flatten)
 
 ### SELECT statement with wildcard
 
