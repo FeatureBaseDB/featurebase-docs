@@ -55,10 +55,19 @@ CREATE TABLE doc_key_terms ()
 
 ### Tanimoto coefficient
 
+<!-- Note to Kord -- need a source table to be running the tanimoto over -->
+
+```sql
+select _id, tanimoto_coefficient(keyterms, {fb_keyterms})
+as coef
+from doc_questions
+order by coef;
+```
+
 ```sql
 SELECT
   id as Term,
-tanimoto(uuid, (SELECT uuids FROM doc_key_terms WHERE _id = 'gpt-3')) AS Weight
+tanimoto (uuid, (SELECT uuids FROM doc_key_terms WHERE _id = 'gpt-3')) AS Weight
 FROM doc_key_terms
 ORDER BY dist DESC;
 ```
