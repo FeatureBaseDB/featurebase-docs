@@ -11,7 +11,7 @@ nav_order: 1
 ## DDL Syntax
 
 ```
-BOOL
+BOOL [TRUE | FALSE]
 ```
 
 ## Arguments
@@ -39,4 +39,14 @@ Use this table to determine how integer and string values are represented when a
 CREATE TABLE docbool  (
     _id id,
     boolcol bool);
+```
+
+### INSERT INTO boolean data type
+
+```sql
+INSERT INTO docbool
+  (_id, boolcol)
+  VALUES
+  (1, FALSE),
+  (2, TRUE);
 ```
