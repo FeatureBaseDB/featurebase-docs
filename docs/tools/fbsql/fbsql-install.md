@@ -1,46 +1,48 @@
 ---
-title: Install fbsql
+title: Install or upgrade FBSQL
 layout: default
-parent: fbsql
+parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 1
 ---
-# How do I install the fbsql CLI?
+# How do I install or upgrade the FBSQL CLI?
 
-{% include page-toc.md %}
+FBSQL is provided as a tool for anyone who downloads the FeatureBase source code from GitHub.
+
+The application will run natively on any Linux or MacOS operating system. For Windows machines, the system can be setup and run on a Linux virtual machine.
 
 ## Before you begin
-* [Learn About fbsql](/docs/tools/fbsql/fbsql-home)
-* [Install go](https://go.dev/doc/install)
 
-## Step 1 - Navigate to source code
+* [Learn about FBSQL](/docs/tools/fbsql/fbsql-home)
+* Setup Linux or MacOS installation environment:
+  * Obtain administrator permissions
+  * Verify network settings allow access to your FeatureBase database
+  * [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
+  * [Create and login to a GitHub account](https://github.com/){:target="_blank"}
+  * [Install go](https://go.dev/doc/install){:target="_blank"}
+  * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
+  * Delete earlier installations at the CLI with `rm -rf fbsql`
 
-* [Navigate to the source code](https://github.com/FeatureBaseDB/featurebase)
+## Step 1 - Setup installation directory
 
-## Step 2 - Download the source code
+* Open a CLI on your computer.
+* Run `mkdir fbsql`.
 
-In your terminal, clone the repository
+## Step 2 - clone the repository and install FBSQL
+
+* CD to `fbsql` then clone the FeatureBase code repository:
+
+```
+git clone git@github.com:molecula/featurebase.git
+```
+* CD to `featurebase` then run the installation command:
 
 ```shell
-git clone https://github.com/FeatureBaseDB/featurebase
-```
-
-## Step 3 - Build fbsql
-
-Navigate to the source code folder
-
-```shell
-cd featurebase
-```
-
- and then run
- 
- ```shell
 make install-fbsql
 ```
 
-{: .note }
-In the very near future, fbsql will be packaged with every release on the [FeatureBase Releases](https://github.com/FeatureBaseDB/featurebase/releases) page.
+## Further information
 
-## Next step
-* [See fbsql examples](/docs/tools/fbsql/fbsql-home#examples)
+* [Learn how to connect to a Cloud database with FBSQL](/docs/tools/fbsql/fbsql-connect-cloud-db)
+* [Learn how to connect to a Community database with FBSQL](/docs/tools/fbsql/fbsql-connect-com-db)
+* [Learn how to run SQL commands with FBSQL](/docs/tools/fbsql/fbsql-running-sql)

@@ -4,40 +4,39 @@ layout: default
 parent: Cloud
 has_children: true
 nav_order: 5
+has_toc: false
 ---
 
 # How do I manage API keys in FeatureBase Cloud?
 {: .no_toc }
 
-This page provides an overview of FeatureBase API keys and links to guide you through the process of managing API keys.
-
-FeatureBase API keys are used for authentication [when accessing FeatureBase programmatically](/docs/cloud/programmaticaccess/).
-
-## Before you begin
-{: .no_toc }
-{% include /cloud/cloud-before-begin.md %}
+{% include /cloud-auth/cloud-auth-api-summary.md %}
 
 {% include page-toc.md %}
 
-{% include /cloud-auth/cloud-auth-revoke-warning.md %}
+## Before you begin
 
-## How do I access API keys for my organization?
+{% include /cloud/cloud-before-begin.md %}
 
-Users can access API keys via the Cloud UI. 
+{% include /cloud-users/cloud-summary-api-key-privs.md %}
 
-1. Click **Configuration**
-2. Click **Manage API Keys** 
+## Where do I manage API keys?
 
-{: .note } 
-Only admins can see all of the API keys that belong to your organization. Non-admins can see only their own keys.
+{% include /cloud-auth/cloud-auth-menu.md %}
 
-## Managing API keys in FeatureBase Cloud
+## How do I create an API key?
 
-* [Create API key](/docs/cloud/cloud-authentication/cloud-auth-create-key/)
-* [Rename API key](/docs/cloud/cloud-authentication/cloud-auth-rename-key/)
-* [Revoke API key](/docs/cloud/cloud-authentication/cloud-auth-revoke-key/)
+* [Learn how to create an API key](/docs/cloud/cloud-authentication/cloud-auth-create-key)
+
+## How do I rename an API key?
+
+* [Learn how to rename an API key](/docs/cloud/cloud-authentication/cloud-auth-rename-key)
+
+## How do I revoke an API key?
+
+* [Learn how to revoke API key](/docs/cloud/cloud-authentication/cloud-auth-revoke-key/)
 
 ## Further information
 
-* [Learn how to access FeatureBase Cloud programmatically](/docs/cloud/programmaticaccess/)
 * [API keys HTTP API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Keys)
+* [FBSQL command-line query editor](/docs/tools/fbsql/fbsql-home)
