@@ -1,20 +1,48 @@
 ---
-title: fbsql-loaders
+title: Import data using FBSQL
 layout: default
-parent: fbsql
+parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 20
 ---
 
-# FBSQL Loaders
+# Define a datasource with FBSQL loaders
 
-`fbsql` is a CLI tool used to interact with FeatureBase using SQL. It can also be run in non-interactive mode to load data from supported data sources. These "loaders" connect to a data source, build batches of SQL `BULK INSERT` statements with the data returned from the source, and send those `BULK INSERT` requests to FeatureBase.
+The `fbsql-loader` command can be run from the CLI to:
+* read data from a specified Impala, Kafka or Postgres data source
+* `BULK INSERT` this data to an existing FeatureBase database and table.
 
-Below are the currently supported data sources (with links to the source specific documentation):
+## Before you begin
 
-- [Kafka](/docs/tools/fbsql/fbsql-loaders-kafka):           use the `--loader-kafka` flag with the `fbsql` binary to run the kafka loader.
-- [PostgreSQL](/docs/tools/fbsql/fbsql-loaders-postgres): use the `--loader-postgres` flag with the `fbsql` binary to run the postgres loader.
-- [Impala](/docs/tools/fbsql/fbsql-loaders-impala):         use the `--loader-impala` flag with the `fbsql` binary to run the impala loader.
+* [Learn about SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk)
+{% include /fbsql/fbsql-before-begin.md%}
+{% include /fbsql/fb-db-create.md %}
+
+## Syntax
+
+```sh
+fbsql
+  <db-connection-string> \
+(--loader-(impala|kafka|postgres)) filename.toml
+```
+
+### Arguments
+
+| Argument | Description | Additional information |
+|---|---|---|
+| `<db-connection-string>` | FBSQL connection string to FeatureBase database | * [FBSQL connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db)<br/>* [FBSQL connect to FeatureBase Community](/docs/tools/fbsql/fbsql-connect-com-db) |
+| `--loader-impala` | Designate a configuration file containing Impala database credentials FeatureBase will read from. | [Load Impala Data With fbsql](/docs/tools/fbsql/fbsql-loaders-impala) |
+| `--loader-kafka` | Designate a configuration file containing Kafka Avro JSON files | [Load Kafka Data With fbsql](/docs/tools/fbsql/fbsql-loaders-kafka) |
+| `--loader-postgres` | Run fbsql in non-interactive mode to load data from PostgreSQL. | [Load PostgreSQL Data With fbsql](/docs/tools/fbsql/fbsql-loaders-postgres) |
+
+<!-- Plan here is to adapt the approach used for Community ingest flags, so the user works through a process:
+* homepage - overview, choose your input file
+* 3x input file definitions plus examples
+* 3x fbsql-flag-ref files for the specific files PLUS generic flags
+* 3x fbsql test cases for this (found in test cases node which is in branch now)
+
+-->
+
 
 ## Source Independent Configuration Options
 
@@ -32,7 +60,7 @@ The table below holds the key/value pairs supported in the TOML file independent
 
 ### Fields
 
-Providing field configuration in the TOML configuration file is optional. If no fields are provided, fbsql will try to map each source data field to a FeatureBase columns from the table specified in the configuration file. 
+Providing field configuration in the TOML configuration file is optional. If no fields are provided, fbsql will try to map each source data field to a FeatureBase columns from the table specified in the configuration file.
 
 Fields are specified as a TOML [arrays of tables](https://toml.io/en/v1.0.0#array-of-tables). Each source data field will need an entry in the file.
 
@@ -42,7 +70,7 @@ The table below holds the key/value pairs supported in the TOML file independent
 |---|---|---|---|
 | `name` | Specifies the name of the FeatureBase column into which data will be written. | `col_name` | |
 | `source-type` | Specifies the FeatureBase column type the incoming data will be formatted as. For example, if a kafka message message contains `"foo":"6"` the configuration for foo should contain `source-type = "string"` even if the `foo` column in FeatureBase is an `Int` type. If a `source-type` is not provided, it will default to the FeatureBase field's type.  | `"idset"` | FeatureBase Column Type |
-| `primay-key` | Exactly one field of the source data should be set as the primary key. The name of the field designated the primary key does not need to map to a column in FeatureBase. | `true` | `false` |
+| `primary-key` | Exactly one field of the source data should be set as the primary key. The name of the field designated the primary key does not need to map to a column in FeatureBase. | `true` | `false` |
 
 Possible `source-type` values are:
 

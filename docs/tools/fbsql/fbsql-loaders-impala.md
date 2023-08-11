@@ -1,18 +1,22 @@
 ---
 title: fbsql-loader-impala
 layout: default
-parent: fbsql
+parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 21
 ---
 # Impala Loader
+
+<!-- copied out of fbsql-loaders.md original
+Based on the configuration file provided as an argument to this flag, fbsql will query Impala and send the data to FeatureBase via BULK INSERT statements. In this mode, fbsql processes messages until all the tuples from Impala are loaded.
+-->
 
 If fbsql is provided the `--loader-impala=filename` flag, it will run in non-interactive mode. Based on the configuration provided in filename, fbsql will query Impala, read tuples returned, and submit them to FeatureBase via `BULK INSERT` statements. In this mode, fbsql processes messages until all tuples returned by the query are processed.
 
 ## Impala Specific Configuration Options
 
 ### General
-The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to Impala: 
+The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to Impala:
 
 | Key | Description | Example Value | Default |
 |---|---|---|---|
@@ -32,11 +36,11 @@ The table below holds the key/value pairs supported in the TOML fields array if 
 Impala `CREATE TABLE` statement:
 ```sql
 CREATE TABLE testdb.impala_table (
-    idkey int, 
-    intf int, 
-    stringf string, 
-    idf int, 
-    stringsetf string, 
+    idkey int,
+    intf int,
+    stringf string,
+    idf int,
+    stringsetf string,
     idsetf string);
 ```
 
@@ -52,10 +56,10 @@ INSERT INTO testdb.impala_table VALUES
 FeatureBase `CREATE TABLE` statement:
 ```sql
 CREATE TABLE tbl (
-    _id id, 
-    intf int, 
-    stringf string, 
-    idf id, 
+    _id id,
+    intf int,
+    stringf string,
+    idf id,
     stringsetf stringset,
     idsetf idset);
 ```

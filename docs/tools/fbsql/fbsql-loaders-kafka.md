@@ -1,12 +1,17 @@
 ---
 title: fbsql-loader-kafka
 layout: default
-parent: fbsql
+parent: CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 22
 ---
 
 # Kafka Loader
+
+<!-- copied from original fbsql-loaders.md
+
+Based on the configuration file provided as an argument to this flag, fbsql will read messages from a Kafka topic and submit them to FeatureBase via BULK INSERT statements.
+-->
 
 If fbsql is provided the `--loader-kafka=filename` flag, it will run as a Kafka consumer in non-interactive mode. Based on the configuration provided in **filename**, fbsql will read messages from a Kafka topic and submit them to FeatureBase via `BULK INSERT` statements. In this mode, fbsql processes messages until terminated by the user.
 
@@ -15,7 +20,7 @@ If fbsql is provided the `--loader-kafka=filename` flag, it will run as a Kafka 
 Messages from Kafka must be in JSON format.
 
 ### General
-The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to kafka: 
+The table below holds the key/value pairs supported in the TOML configuration file if you are connecting to kafka:
 
 | Key | Description | Example Value | Default |
 |---|---|---|---|
