@@ -6,31 +6,30 @@ grand_parent: SQL guide
 ---
 # TANIMOTO() function
 
-The Tainmoto function is based on the Tanimoto algorithm, used to determine a measure of similarity between [tables | table columns | sets of data (set,setq?) | Banana milkshakes]
+The Tainmoto function is based on the Tanimoto algorithm, used to determine a measure of similarity between data in a table or view.
 
 ## Syntax
 
 ```sql
-SELECT {_id},
-  tanimoto_coefficient (keyterms, {fb_keyterms})
-  AS
-    <measure>
-  FROM
-    {tablename}
-  ORDER BY <measure>
+tanimoto_coefficient (keyterms, {fb_keyterms})
 ```
 
 ## Arguments
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `{_id}` | Unique key identifying the row the tanimoto coefficient is applied to | Yes | [SELECT statement](/docs/sql-guide/statements/statement-select) |
 | tanimoto_coefficient |  |  |  |
-| keyterms |  |  |  |
-| fb_keyterms |  | Yes |  |
-| <measure> | Measurement of coefficient, can be "coef" or "weight" | yes | Measure can be used in ORDER BY clause |
+| keyterms | Designation for coefficient result |  |  |
+| fb_keyterms | Items in source table to place in order | Yes |  |
 
 ## Additional information
+
+### SELECT statement
+
+The function is used in a SELECT statement and requires:
+* [Select List](/docs/sql-guide/statements/statement-select#select_list-information)
+* [From clause](/docs/sql-guide/statements/statement-select/#from_clause-information)
+* [Order by clause]
 
 ### Tanimoto and Jaccard similarities
 
@@ -48,26 +47,25 @@ The **Jaccard index** and **Tanimoto similarity** are widely used for assessing 
 
 ### Source table
 
+Create table:
 ```sql
-CREATE TABLE doc_key_terms ()
+CREATE TABLE tanimoto_test (_id id, stuff stringset);
+```
 
+Insert values:
+```sql
+INSERT INTO tanimoto_test VALUES
+(1, ['cookies', 'milk']),
+(2, ['cup', 'plate']);
 ```
 
 ### Tanimoto coefficient
 
-<!-- Note to Kord -- need a source table to be running the tanimoto over -->
-
 ```sql
-select _id, tanimoto_coefficient(keyterms, {fb_keyterms})
-as coef
-from doc_questions
-order by coef;
-```
-
-```sql
-SELECT
-  id as Term,
-tanimoto (uuid, (SELECT uuids FROM doc_key_terms WHERE _id = 'gpt-3')) AS Weight
-FROM doc_key_terms
-ORDER BY dist DESC;
+SELECT *, tanimoto_coefficient (stuff, [milk, chocolate, cookies, cup])
+  AS
+    distance
+  FROM
+    fbtest
+  ORDER BY distance;
 ```

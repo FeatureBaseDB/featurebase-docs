@@ -64,7 +64,7 @@ SELECT
 | where_clause | An expression that defines a filter condition for the rows returned by the query. | Yes | Can be any constant, function or combination joined by operators or a subquery. |
 | group_by_clause | Separates the results into groups of rows allowing aggregates to be performed on each group. | Optional | [group_by_clause](#group_by_clause-information) |
 | having_clause | Pass aggregates to filter on based on conditions. | Optional |  |
-| order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | Results can be ordered `ASC`ending or `DESC`ending. |
+| order_by_clause | Comma-separated column name, column alias or column position in the SELECT list used to specify the order data is returned. | Optional | [Order by clause](#order-by-clause) |
 
 ## Additional information
 
@@ -93,7 +93,7 @@ Both expressions can be aliased with a table_alias
 
 #### WITH
 
-`WITH`is an optional parenthesized list of query hints that can only be used with a table (not a subquery). Query hints tell queries how to access data in a table. Flatten is the only supported hint currently. 
+`WITH`is an optional parenthesized list of query hints that can only be used with a table (not a subquery). Query hints tell queries how to access data in a table. Flatten is the only supported hint currently.
 
 
 #### flatten() hint
@@ -224,7 +224,7 @@ create table segments
     (_id id, segment stringset);  
 
 insert into segments(_id, segment)  
-    values (1, ['RED', 'BLUE', 'GREEN']), 
+    values (1, ['RED', 'BLUE', 'GREEN']),
       (2, ['GREEN']),
       (3, ['RED', 'BLUE', 'GREEN']);
 
@@ -243,7 +243,7 @@ create table segments
     (_id id, segment stringset);  
 
 insert into segments(_id, segment)  
-    values (1, ['RED', 'BLUE', 'GREEN']), 
+    values (1, ['RED', 'BLUE', 'GREEN']),
       (2, ['GREEN']),
       (3, ['RED', 'BLUE', 'GREEN']);
 
@@ -257,4 +257,3 @@ group by segment;
    2 | ['BLUE']
    3 | ['GREEN']
 ```
-
