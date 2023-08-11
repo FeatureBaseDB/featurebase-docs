@@ -44,7 +44,7 @@ Returns data from FeatureBase tables based on specified rows, columns and clause
 ![expr](/assets/images/sql-guide/order_by_clause.svg)
 ![expr](/assets/images/sql-guide/order_by_expression.svg)
 
-## DDL Syntax
+## Syntax
 
 ```sql
 SELECT

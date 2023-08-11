@@ -1,5 +1,5 @@
 ### SELECT FROM string column
 
 ```sql
-SELECT * FROM products WHERE prodlist LIKE '%pen%';
+SELECT * FROM products WHERE item LIKE '%pen%';
 ```

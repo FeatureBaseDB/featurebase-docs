@@ -33,6 +33,10 @@ Use this table to determine how integer and string values are represented when a
 
 ## Examples
 
-### CREATE TABLE with all data types
+### CREATE TABLE with boolean data type
 
-{% include /sql-guide/table-create-types-all-eg.md %}
+```sql
+CREATE TABLE docbool  (
+    _id id,
+    boolcol bool);
+```
