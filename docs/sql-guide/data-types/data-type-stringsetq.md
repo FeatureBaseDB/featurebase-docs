@@ -10,7 +10,7 @@ nav_order: 9
 
 STRINGSETQ is a FeatureBase datatype used to set multiple STRING values and associate times for each value in a single column.
 
-## DDL Syntax
+## Syntax
 
 ```
 STRINGSETQ [TIMEQUANTUM {value} [TTL '{value}']]

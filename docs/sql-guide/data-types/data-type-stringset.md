@@ -10,7 +10,7 @@ nav_order: 8
 
 STRINGSET is a FeatureBase datatype used to set multiple STRING values for a single column.
 
-## DDL Syntax
+## Syntax
 
 ```
 STRINGSET

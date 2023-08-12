@@ -8,7 +8,7 @@ nav_order: 3
 
 # ID numeric datatype
 
-## DDL Syntax
+## Syntax
 
 ```
 ID

@@ -26,7 +26,7 @@ Creates a FeatureBase table. The table already exists and `IF NOT EXISTS` is not
 ### Table_options
 ![expr](/assets/images/sql-guide/table_options.svg)
 
-## DDL Syntax
+## Syntax
 
 ```
 CREATE TABLE

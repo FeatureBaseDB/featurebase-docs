@@ -10,7 +10,7 @@ nav_order: 5
 
 IDSETQ is a FeatureBase datatype used to set multiple ID values and associate times for each value in a single column.
 
-## DDL syntax
+## Syntax
 
 ```
 IDSETQ [TIMEQUANTUM {value} [TTL '{value}']]

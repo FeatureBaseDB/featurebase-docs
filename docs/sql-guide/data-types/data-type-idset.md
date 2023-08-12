@@ -10,7 +10,7 @@ nav_order: 4
 
 IDSET is a FeatureBase datatype used to set multiple ID values for a single column.
 
-## DDL syntax
+## Syntax
 
 ```
 IDSET

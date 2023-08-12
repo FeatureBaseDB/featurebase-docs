@@ -10,7 +10,7 @@ nav_order: 6
 
 Int is a numeric datatype used with the `min` and `max` constraints.
 
-## DDL Syntax
+## Syntax
 
 ```
 INT [MIN {value}] [MAX {value}]

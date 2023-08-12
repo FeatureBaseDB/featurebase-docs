@@ -10,7 +10,7 @@ nav_order: 2
 
 Decimal is a numeric data type used with `scale` constraint.
 
-## DDL Syntax
+## Syntax
 
 ```
 DECIMAL[({SCALE value})]
