@@ -4,23 +4,31 @@ layout: default
 parent: SQL functions
 grand_parent: SQL guide
 ---
-# TANIMOTO() function
+# TANIMOTO() scalar function
 
-The Tainmoto function is based on the Tanimoto algorithm, used to determine a measure of similarity between data in a table or view.
+The TANIMOTO scalar function determines the similarity of data in a specified table or view.
 
 ## Syntax
 
 ```sql
-tanimoto_coefficient (keyterms, {fb_keyterms})
+tanimoto[_coefficient | _distance]
+  ( <column-name>,
+    {
+      (<select-statement>) |
+      [<item-list>]
+    }
+  )
 ```
 
 ## Arguments
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| tanimoto_coefficient |  |  |  |
-| keyterms | Designation for coefficient result |  |  |
-| fb_keyterms | Items in source table to place in order | Yes |  |
+| `tanimoto_coefficient` |  |  |  |
+| `tanimoto_distance` |  |  |  |
+| `<column-name>` | Name of column named in SELECT statement the function is a part of | Optional |  |
+| `<select-statement>` | Nested SQL statement to obtain values |  |  |
+| `<item-list>` | comma separated list of items found in the table named in the surrounding SELECT statement. | Yes |  |
 
 ## Additional information
 
@@ -36,6 +44,10 @@ The function is used in a SELECT statement and requires:
 The **Jaccard index** and **Tanimoto similarity** are widely used for assessing the similarity between sets of elements.
 
 * [Learn more about the Jaccard Index and Tanimoto similarity](https://www.featurebase.com/blog/tanimoto-similarity-in-featurebase){:target="_blank"}
+
+## Quoting values
+
+
 
 ## Returns
 
