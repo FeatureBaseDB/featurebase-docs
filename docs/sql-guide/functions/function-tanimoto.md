@@ -8,6 +8,8 @@ grand_parent: SQL guide
 
 The TANIMOTO scalar function determines the similarity of data in a specified table or view.
 
+<!-- QUERY - can JACCARD be substituted for TANIMOTO?-->
+
 ## Syntax
 
 ```sql
