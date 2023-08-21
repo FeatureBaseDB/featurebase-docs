@@ -6,7 +6,7 @@ grand_parent: SQL guide
 ---
 # TANIMOTO() scalar function
 
-The TANIMOTO scalar function determines the similarity of data in a specified table or view.
+The TANIMOTO scalar function quantifies the degree of similarity between two sets of data in a specified table or view.
 
 <!-- QUERY - can JACCARD be substituted for TANIMOTO?-->
 
@@ -53,9 +53,10 @@ The **Jaccard index** and **Tanimoto similarity** are widely used for assessing 
 
 ## Returns
 
-| Data type | Value |
+| Returns | Description |
 |---|---|
-|  |  |
+| `0` | No common elements found in results |
+| `1` | Identical sets found in results
 
 ## Examples
 
