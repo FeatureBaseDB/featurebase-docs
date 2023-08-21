@@ -13,7 +13,7 @@ The TANIMOTO scalar function quantifies the degree of similarity between two set
 ## Syntax
 
 ```sql
-tanimoto[_coefficient | _distance]
+tanimoto_[coefficient | distance]
   ( <column-name>,
     {
       (<select-statement>) |
