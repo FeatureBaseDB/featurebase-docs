@@ -59,6 +59,8 @@ The **Jaccard index** and **Tanimoto similarity** are widely used for assessing 
 
 ## Examples
 
+<!--NOTE FOR REVIEWERS > This will link out to content to be added in in the "cookbook" branch)-->
+
 ### Source table
 
 Create table:
