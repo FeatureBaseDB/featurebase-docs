@@ -39,17 +39,13 @@ tanimoto_[coefficient | distance]
 The function is used in a SELECT statement and requires:
 * [Select List](/docs/sql-guide/statements/statement-select#select_list-information)
 * [From clause](/docs/sql-guide/statements/statement-select/#from_clause-information)
-* [Order by clause]
+* [Order by clause](/docs/sql-guide/statements/statement-select/#ordering-results)
 
 ### Tanimoto and Jaccard similarities
 
 The **Jaccard index** and **Tanimoto similarity** are widely used for assessing the similarity between sets of elements.
 
 * [Learn more about the Jaccard Index and Tanimoto similarity](https://www.featurebase.com/blog/tanimoto-similarity-in-featurebase){:target="_blank"}
-
-## Quoting values
-
-
 
 ## Returns
 
@@ -59,8 +55,6 @@ The **Jaccard index** and **Tanimoto similarity** are widely used for assessing 
 | `1` | Identical sets found in results
 
 ## Examples
-
-<!--NOTE FOR REVIEWERS > This will link out to content to be added in in the "cookbook" branch)-->
 
 ### Source table
 
