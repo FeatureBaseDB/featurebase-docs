@@ -11,15 +11,15 @@ grand_parent: SQL guide
 ## Syntax
 
 ```sql
-COSINE_DISTANCE ({<compare-vector>},<vector-column>)
+COSINE_DISTANCE ({<compare-vector>,<vector-column>])
 ```
 
 ## Arguments
 
-| Argument | Description | Required | Additional information |
+| Argument | Description | Additional information |
 |---|---|---|---|
-| `<compare-vector>` |  | Yes |  |
-| `<vector-column>` | Column in target table |  |  |
+| `<compare-vector>` | A comma separated list of floating point numbers to be compared which can be derived using a nested SELECT statement |
+| `<vector-column>` | Column in target table |
 
 ## Additional information
 
@@ -34,6 +34,6 @@ The function is used in a SELECT statement and requires:
 
 | Returns | Description |
 |---|---|
-
+|
 
 ## Examples
