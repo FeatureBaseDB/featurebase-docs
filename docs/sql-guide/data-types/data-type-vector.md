@@ -8,7 +8,9 @@ nav_order: 11
 
 # VECTOR() data type
 
-Vector data types store a specified number of values in an array that can be queried using the cosine_distance function.
+Vector data types store a specified number of floating point values in an array.
+
+These vectors can be compared using the cosine_distance function.
 
 ## Syntax
 
@@ -18,9 +20,15 @@ VECTOR({length})
 
 ## Arguments
 
-| Argument | Description |
+| Argument | Description | Additional information |
 |---|---|---|
-| length | An integer value representing the number of elements in the array |
+| length | An integer value representing the number of elements in the array | Cannot have a zero length |
+
+## Additional information
+
+* values in the array must be floats
+* vector itself can be null
+* maximum precision is 64-bit float
 
 ## Examples
 
