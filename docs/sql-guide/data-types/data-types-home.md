@@ -25,6 +25,25 @@ Data types and constraints are used to define table columns when creating tables
 
 {% include /sql-guide/datatype-mapping.md %}
 
+## Array data types
+
+| Use case | Data type | Additional information |
+|---|---|---|
+| Low cardinality data | * [IDSET](/docs/sql-guide/data-types/data-type-idset)<br/>* [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) | [low-cardinality data](#low-cardinality-data-types) |
+| Timestamped low cardinality data | * [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq)<br/>* [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) | [low-cardinality data](#low-cardinality-data-types) |
+|  | [VECTOR](/docs/sql-guide/data-types/data-type-vector) |  |
+
+<!--THIS MAY BE WRONG -- MAY HAVE WRONG DEFINITION OF VECTOR -- CHECKING WITH KORD -->
+
+{: .note}
+`SET` and `SETQ` data types are used for [low-cardinality data](#low-cardinality-data-types)
+
+## Date/Time data types
+
+{% include /sql-guide/data-type-timestamp-summary.md %}
+
+* [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp)
+
 ## Numeric data types
 
 | User data | Data type |
@@ -37,12 +56,6 @@ Data types and constraints are used to define table columns when creating tables
 ## String data types
 
 * [STRING](/docs/sql-guide/data-types/data-type-string)
-
-## Date/Time data types
-
-{% include /sql-guide/data-type-timestamp-summary.md %}
-
-* [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp)
 
 ## Low-cardinality data types
 
@@ -64,7 +77,9 @@ Values are supplied as comma-separated values and once ingested can be queried u
 
 {% include /sql-guide/summary-constraints-datatypes.md %}
 
-## Example Create Table statement
+## Examples
+
+### Create Table statement with all data types
 
 {% include /sql-guide/table-create-types-all-eg.md %}
 
