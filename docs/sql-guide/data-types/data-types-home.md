@@ -25,19 +25,6 @@ Data types and constraints are used to define table columns when creating tables
 
 {% include /sql-guide/datatype-mapping.md %}
 
-## Array data types
-
-| Use case | Data type | Additional information |
-|---|---|---|
-| Low cardinality data | * [IDSET](/docs/sql-guide/data-types/data-type-idset)<br/>* [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) | [low-cardinality data](#low-cardinality-data-types) |
-| Timestamped low cardinality data | * [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq)<br/>* [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) | [low-cardinality data](#low-cardinality-data-types) |
-|  | [VECTOR](/docs/sql-guide/data-types/data-type-vector) |  |
-
-<!--THIS MAY BE WRONG -- MAY HAVE WRONG DEFINITION OF VECTOR -- CHECKING WITH KORD -->
-
-{: .note}
-`SET` and `SETQ` data types are used for [low-cardinality data](#low-cardinality-data-types)
-
 ## Date/Time data types
 
 {% include /sql-guide/data-type-timestamp-summary.md %}
@@ -50,6 +37,7 @@ Data types and constraints are used to define table columns when creating tables
 |---|---|
 | Boolean, yes/no | [BOOL](/docs/sql-guide/data-types/data-type-bool) |
 | Floating point | [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) |
+| Floating point array | [VECTOR](/docs/sql-guide/data-types/data-type-vector) |
 | Unsigned integer | [ID](/docs/sql-guide/data-types/data-type-id) |
 | Signed integer | [INT](/docs/sql-guide/data-types/data-type-int) |
 
