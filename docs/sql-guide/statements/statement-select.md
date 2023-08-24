@@ -61,8 +61,24 @@ SELECT
 <!-- Alternate SYNTAX
 SELECT
   [DISTINCT]
+  [TOP|TOPN (expr]
+  {[select-item,...]| AS | column_alias | [qualifier.]* }
+  {FROM
+    [table | subquery],...] |
+    [
+      [identifier | table_valued_function] [AS] | [table_alias] | [table_options]
+    ]
+    [
+      [shards (integer_literal,...)] |
+      [flatten (identifier)]
+    ]
+  }
+  WHERE expr
+  GROUP BY [column | order_by_expression]
 
-
+  col-name,...}
+  [WHERE ]
+  [Having]
   GROUP BY
 
   ORDER BY [col_name | num_results] [asc | desc]
