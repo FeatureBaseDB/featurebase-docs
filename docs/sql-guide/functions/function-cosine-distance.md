@@ -25,7 +25,7 @@ COSINE_DISTANCE ({compare-vector, vector-column])
 
 ### Table CREATE with vector data type
 
-{% include /sql-guide/table=create-vector.md%}
+{% include /sql-guide/table-create-vector.md%}
 
 ### INSERT INTO vector data type
 
