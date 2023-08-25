@@ -11,7 +11,7 @@ grand_parent: SQL guide
 ## Syntax
 
 ```sql
-COSINE_DISTANCE ({compare-vector, vector-column])
+COSINE_DISTANCE ({compare-vector, vector-column})
 ```
 
 ## Arguments
