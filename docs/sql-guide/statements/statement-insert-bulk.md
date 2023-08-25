@@ -72,11 +72,11 @@ BULK INSERT
 |---|---|---|---|
 | `INSERT` | Insert new records if the `_id` does not exist else update the record with the values passed. Values are not updated for missing columns. | Yes | `REPLACE` can be used but is the same functionality |
 | `table_name` | Name of target table | Yes |  |
-| `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. System builds a column list from existing columns in `table_name` if columns are not specified. | Optional |  |
-| `MAP` | Map expresses how the source data is mapped from its location and what datatype it should be outputted as. | Yes | [Map examples](#map-examples) |
+| `column_name` | Valid columns belonging to `table_name`. First column must be defined `_id` column. | Optional | System builds a column list from existing columns in `table_name` if columns are not specified. |
+| `MAP` | Specifies how source data is mapped from its location and what datatype to output as. | Yes | [Map examples](#map-examples) |
 | `position` | Ordinal position of value in source. |  |  |
 | `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
-| `TRANSFORM expr` | a list of expressions that are evaluated during execution for each row. | Optional | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
+| `TRANSFORM expr` | A list of expressions that are evaluated during execution for each row. | Optional | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
 | `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. | Optional |  |
@@ -84,8 +84,10 @@ BULK INSERT
 | `WITH` | Pass one or more statement level options. | Optional |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional |  |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |
-| `INPUT` | Input values must match those used in the `FROM` clause |  | `INLINE` is used for data included directly in the `FROM` clause. `STREAM` supports a streaming payload using an http multipart POST. See [fbsql](/docs/tools/fbsql/fbsql-home/) for an implementation of its use. `BATCHSIZE` is honored with `STREAM` as it batches records according to that value as the stream of records is received by the server. There's no batching on the client. |
-| `'INLINE'` | The contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
+| `INPUT` | Input values must match those used in the `FROM` clause |  |  |
+| `'INLINE'` | Used for data included directly from the `FROM` clause with contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
+| `'STREAM'` | `STREAM` supports a streaming payload using an http multipart POST. | Optional | [BULK INSERT with STREAM](#bulk-insert-with-stream) |
+| `BATCHSIZE` | Used to batch `'STREAM'` records into BATCHSIZE value as they are streamed to the server. |  | Use where batching is not available on client |
 | `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` or `'PARQUET'` | Optional | `'PARQUET'` does not support `INPUT (INLINE)` |
 | `NULL_AS_EMPTY_SET` | Argument that will coerce all `NULL` values resulting from the `MAP` clause into `[]` (empty sets) for all target columns with `SET` datatypes | Optional |  |
 | `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |
@@ -207,7 +209,7 @@ with
 ```
 -->
 
-### Bulk insert statement that reads from a CSV file
+### BULK INSERT with read from CSV file
 
 ```sql
 bulk replace
@@ -219,6 +221,20 @@ from
 with
     format 'CSV'
     input 'FILE';
+```
+
+### BULK INSERT with STREAM
+
+```sql
+bulk replace
+  into insert_test (_id, int1, string1, timestamp1)
+  map (0 id, 1 int, 2 string)
+  transform (@0, @1, @2, current_timestamp)
+  from
+    'icsv'
+  with
+    format 'CSV'
+    input 'STREAM';
 ```
 
 ## Further information
