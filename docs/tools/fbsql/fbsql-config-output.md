@@ -6,9 +6,13 @@ grand_parent: Tools
 nav_order: 12
 ---
 
-# fbsql output flags reference
+# fbsql output flags
 
-fbsql output can be configured from the command-line or fbsql interface.
+fbsql output can be configured from the command-line or fbsql interface to:
+* direct CLI and interface history to a new directory
+* change the working directory
+* create a file to output SQL query results and comments
+*
 
 ## Before you begin
 
@@ -22,7 +26,6 @@ fbsql output can be configured from the command-line or fbsql interface.
 (<meta-prefix>)
   [--history-path="<directory-name>"] |
   [cd [<directory-name>]] |
-  [[i|include] <filename.sql>]
   [[o | out] <query-output-filename>] |
   [qecho <text>] |
   [warn <text>]
@@ -42,7 +45,6 @@ fbsql output can be configured from the command-line or fbsql interface.
 | Flag | Description | Additional information |
 |---|---|---|
 | `cd [<directory-name>]` | Set fbsql file directory to $home or specified directory | Default is Directory fbsql started |
-{% include /fbsql/fbsql-interface-run-file-content.md %}
 
 ## Write text to output
 

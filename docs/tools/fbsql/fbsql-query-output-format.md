@@ -6,7 +6,7 @@ grand_parent: Tools
 nav_order: 13
 ---
 
-# fbsql SQL Query output formatting reference
+# fbsql SQL query output formatting flags
 
 `PSET` (Print Set) meta-commands can be run before SQL queries to alter default output formatting.
 
