@@ -9,7 +9,7 @@ nav_order: 1
 
 fbsql is provided as a tool for anyone who downloads the FeatureBase source code from GitHub.
 
-The application will run natively on any Linux or MacOS operating system. For Windows machines, the system can be setup and run on a Linux virtual machine.
+The application will run natively on any Linux or MacOS operating system. For Windows machines, the system can be installed and run on a Linux virtual machine.
 
 ## Before you begin
 
@@ -23,7 +23,7 @@ The application will run natively on any Linux or MacOS operating system. For Wi
   * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
   * Delete earlier installations at the CLI with `rm -rf fbsql`
 
-## Step 1 - Setup installation directory
+## Step 1 - Create installation directory
 
 * Open a CLI on your computer.
 * Run `mkdir fbsql`.
