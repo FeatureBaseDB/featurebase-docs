@@ -61,9 +61,7 @@ fbsql output can be configured from the command-line or fbsql interface.
 
 ## Examples
 
-### Create new directory and output query results to file
-
-Create directory and open it:
+## Create directory and open
 
 ```
 \! mkdir newfolder
@@ -71,7 +69,7 @@ Create directory and open it:
 
 ```
 
-Output query results to file and verify existence
+## Output query results to file
 
 ```
 \out output-test.sql
@@ -79,18 +77,28 @@ Output query results to file and verify existence
 output-test.sql
 ```
 
-Run query and verify output saved to correct file:
+## Write comment to file
+
+```
+\qecho Testing 1,2,3
+\! cat output-test.sql
+Testing 1,2,3
+```
+
+## Run query and verify output saved to correct file
 
 ```
 select * from products;
 \! cat output-test.sql
 
+Testing 1,2,3
  _id | item                 | price  | stock
 -----+----------------------+--------+-------
    1 | pen                  | 2.50   | NULL
    2 | pencil               | 0.50   | NULL
    3 | playpen              | 52.50  | NULL
    4 | gold-plated earplugs | 122.50 | NULL
+(0 rows)
 ```
 
 ## Further information
