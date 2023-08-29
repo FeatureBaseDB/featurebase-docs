@@ -1,5 +1,5 @@
 ---
-title: fbsql output flags
+title: SQL output flags
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools

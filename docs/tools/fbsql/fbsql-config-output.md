@@ -1,5 +1,5 @@
 ---
-title: PSET query output flags
+title: Output flags
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
