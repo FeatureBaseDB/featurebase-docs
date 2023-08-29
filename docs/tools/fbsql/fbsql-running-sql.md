@@ -33,7 +33,6 @@ This reference explains fbsql flags relating to database connections and schema
     [ t|timing [on|off] ] |
     [ p|print ] |
     [ r|reset ] |
-    [ <pset-query-output-flags> ]
 ]
 <sql-query>
 ```
@@ -82,10 +81,6 @@ This reference explains fbsql flags relating to database connections and schema
 | `[set|unset] <variable-name>` | Set or unset named variable |  |
 | `set <variable-name> <value>...` | Set a variable name and value. Multiple values are concatenated. | [SET variable names](#set-variable-names) |
 
-## PSET query output flags
-
-* [PSET query output flags](/docs/tools/fbsql/fbsql-config-output#pset-prefix)
-
 ## SQL query syntax
 
 * [SQL guide](/docs/sql-guide/sql-guide-home)
@@ -108,6 +103,12 @@ Aliases are case sensitive and can be inserted into statements in two ways:
 |---|---|
 | Single | `:'<variable-name>'` |
 | Double | `:"<variable-name>"` |
+
+### Query output formatting
+
+Query output can be formatted using `PSET` (Print Set) meta flags.
+
+* [PSET query output formatting reference](/docs/tools/fbsql/fbsql-query-output-format)
 
 ## Examples
 
@@ -173,3 +174,4 @@ Query with variable
 ## Further information
 
 * [SQL Guide](/docs/sql-guide/sql-guide-home)
+* [PSET SQL Query output formatting](/docs/tools/fbsql/fbsql-query-output-format)
