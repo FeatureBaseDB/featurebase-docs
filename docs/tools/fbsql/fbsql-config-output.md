@@ -59,6 +59,40 @@ fbsql output can be configured from the command-line or fbsql interface.
 
 {% include /fbsql/fbsql-query-buffer-extra.md %}
 
+## Examples
+
+### Create new directory and output query results to file
+
+Create directory and open it:
+
+```
+\! mkdir newfolder
+\cd newfolder
+
+```
+
+Output query results to file and verify existence
+
+```
+\out output-test.sql
+\! ls
+output-test.sql
+```
+
+Run query and verify output saved to correct file:
+
+```
+select * from products;
+\! cat output-test.sql
+
+ _id | item                 | price  | stock
+-----+----------------------+--------+-------
+   1 | pen                  | 2.50   | NULL
+   2 | pencil               | 0.50   | NULL
+   3 | playpen              | 52.50  | NULL
+   4 | gold-plated earplugs | 122.50 | NULL
+```
+
 ## Further information
 
 * [PSET SQL query output formatting reference](/docs/tools/fbsql/fbsql-query-output-format)
