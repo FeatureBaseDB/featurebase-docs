@@ -28,7 +28,7 @@ This reference explains fbsql flags relating to database connections and schema
     [ l|list ] |
     [ set <variable-name> [variable-value,...] ] |
     [ unset <variable-name> ] |
-    [ i|include <filename.sql> ] |
+    [ i|include <filename> ] |
     [ watch <seconds> ] |
     [ t|timing [on|off] ] |
     [ p|print ] |
