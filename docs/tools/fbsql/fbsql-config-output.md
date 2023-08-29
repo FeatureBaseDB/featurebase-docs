@@ -1,14 +1,14 @@
 ---
-title: FBSQL output flags
+title: fbsql output flags
 layout: default
 parent: CLI SQL tool
 grand_parent: Tools
 nav_order: 12
 ---
 
-# FBSQL output flags reference
+# fbsql output flags reference
 
-FBSQL output can be configured from the command-line or FBSQL interface.
+fbsql output can be configured from the command-line or fbsql interface.
 
 ## Before you begin
 
@@ -36,13 +36,13 @@ FBSQL output can be configured from the command-line or FBSQL interface.
 
 | Flag | Description | Default |
 |---|---|---|
-| `--history-path="<directory-name>"` | Save CLI and FBSQL interface execution history to new folder | `<user-home>.featurebase/fbsql_history` |
+| `--history-path="<directory-name>"` | Save CLI and fbsql interface execution history to new folder | `<user-home>.featurebase/fbsql_history` |
 
 ## File output
 
 | Flag | Description | Additional information |
 |---|---|---|
-| `cd [<directory-name>]` | Set FBSQL file directory to $home or specified directory | Default is Directory FBSQL started |
+| `cd [<directory-name>]` | Set fbsql file directory to $home or specified directory | Default is Directory fbsql started |
 {% include /fbsql/fbsql-interface-run-file-content.md %}
 
 ## Write text to output
@@ -50,18 +50,18 @@ FBSQL output can be configured from the command-line or FBSQL interface.
 | Flag | Description |
 |---|---|
 | `[o | out] <query-output-filename>` | Define existing file to output query results |
-| `echo <text>` | Output `<text>` to FBSQL interface |
+| `echo <text>` | Output `<text>` to fbsql interface |
 | `qecho <text>` | Output `<text>` to file defined by `\[o|output <output-filename>]` |
-| `warn <text>` | Output `<text>` to FBSQL standard error channel |
+| `warn <text>` | Output `<text>` to fbsql standard error channel |
 
 ## PSET prefix
 
-PSET flags can be executed from the CLI or FBSQL interface:
+PSET flags can be executed from the CLI or fbsql interface:
 
 | Interface | Prefix | Structure | Example |
 |---|---|---|---|
 | CLI | `fbsql [-P|--pset] <pset-meta-commands>` | PSET output flags structured as `flag="value"` | `fbsql --P border="1"` |
-| FBSQL | `\pset <pset-meta-commands>` | Valid sequence of PSET output flag, argument and value if required | `\pset border 2` |
+| fbsql | `\pset <pset-meta-commands>` | Valid sequence of PSET output flag, argument and value if required | `\pset border 2` |
 
 ## PSET output flags
 
@@ -170,7 +170,7 @@ Output:
  stock    | NULL
 ```
 
-### Change FBSQL time-zone
+### Change fbsql time-zone
 
 ```
 \pset location 'Australia/Melbourne'

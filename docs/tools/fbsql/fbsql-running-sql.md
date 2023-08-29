@@ -6,11 +6,11 @@ grand_parent: Tools
 nav_order: 4
 ---
 
-# How do I run SQL queries with FBSQL?
+# How do I run SQL queries with fbsql?
 
-Valid SQL queries can be run directly in the FBSQL interface and via files in accessible directories.
+Valid SQL queries can be run directly in the fbsql interface and via files in accessible directories.
 
-This reference explains FBSQL flags relating to database connections and schema
+This reference explains fbsql flags relating to database connections and schema
 
 ## Before you begin
 
@@ -71,7 +71,7 @@ This reference explains FBSQL flags relating to database connections and schema
 
 | Flag | Description |
 |---|---|
-| `[p | print]` | Display most recent query or query buffer to FBSQL interface followed by a newline |
+| `[p | print]` | Display most recent query or query buffer to fbsql interface followed by a newline |
 | `[r | reset]` | Reset query buffer |
 
 ## Set variable flags
