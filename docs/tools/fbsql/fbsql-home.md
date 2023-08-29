@@ -43,7 +43,13 @@ Run SQL queries in the fbsql interface or using text files:
 
 ## How do I format SQL query output?
 
-fbsql meta-commands give you full control over query output:
+{% include /fbsql/fbsql-query-formatting-summary.md %}
+
+* [fbsql query result reference](/docs/tools/fbsql/fbsql-query-output-format)
+
+## How do I change other output settings?
+
+{% include /fbsql/fbsql-output-flags-summary.md %}
 
 * [fbsql output reference](/docs/tools/fbsql/fbsql-config-output)
 

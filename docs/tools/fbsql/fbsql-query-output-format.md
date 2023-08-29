@@ -8,11 +8,7 @@ nav_order: 13
 
 # fbsql SQL query output formatting flags
 
-`PSET` (Print Set) meta-commands alter default output formatting for SQL queries:
-* border
-* orientation
-* query result timestamp
-* toggling storage of results as variables that can be reused
+{% include /fbsql/fbsql-query-formatting-summary.md %}
 
 ## Before you begin
 
