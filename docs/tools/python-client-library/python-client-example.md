@@ -8,16 +8,15 @@ nav_order: 2
 
 # Example application using python client library
 
-In this example, featurebase python client library is used to bulk insert data into a demo table.
+In this example, FeatureBase python client library is used to bulk insert data into a demo table.
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}, Or
 {% include /com-install/com-install-before-begin.md %}
-
-## Install python client library
-
 * [Learn How To Install python client library](/docs/tools/python-client-library/python-client-install)
+
+## Example python application
 
 ```python
 import string
