@@ -30,15 +30,15 @@ RANGEQ(tq-colum,{ts-begin | null},{ts-end | null})
 
 {% include /sql-guide/timequantum-timestamp-summary.md %}
 
-## `null` substitution
+### `null` substitution
 
-Substitute `null` if `ts-begin` or `ts-end` not known.
+Substitute `null` if `ts-begin` or `ts-end` is not known.
 
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `Timestamp` | Returns integer UNIX-epoch timestamps between ts-begin and ts-end inclusive |
+| `Timestamp` | Returns integer UNIX-epoch timestamps between `ts-begin` and `ts-end` inclusive |
 
 ## Examples
 
