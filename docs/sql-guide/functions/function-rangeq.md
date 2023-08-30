@@ -38,7 +38,7 @@ Substitute `null` if `ts-begin` or `ts-end` not known.
 
 | Data type | Value |
 |---|---|
-| `Timestamp` | Returns timestamps between ts-begin and ts-end inclusive |
+| `Timestamp` | Returns integer UNIX-epoch timestamps between ts-begin and ts-end inclusive |
 
 ## Examples
 
