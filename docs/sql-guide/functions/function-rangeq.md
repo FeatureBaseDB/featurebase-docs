@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # RANGEQ() function
 
-`RANGEQ()` is used on `IDSETQ` or `STRINGSETQ` data type columns to return values between two unix-epoch timestamps.
+`RANGEQ()` is used on `IDSETQ` or `STRINGSETQ` data type columns to return values between unix-epoch timestamps.
 
 ## Before you begin
 * [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
@@ -15,7 +15,7 @@ grand_parent: SQL guide
 ## Syntax
 
 ```sql
-RANGEQ(tq-colum,[ts-begin | null],[ts-end | null])
+RANGEQ(tq-colum,{ts-begin | null},{ts-end | null})
 ```
 
 ## Arguments
