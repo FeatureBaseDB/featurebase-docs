@@ -1,5 +1,5 @@
 ## Timequantum timestamps and data
 
-IDSETQ and STRINGSETQ permit time-stamped values to be loaded as an array of values associated with a single unique identifier.
+Timequantum constraints store an array of UNIX-epoch timestamps associated with specific values.
 
 * [Learn more about Timestamps](/docs/sql-guide/data-types/data-type-timestamp)
