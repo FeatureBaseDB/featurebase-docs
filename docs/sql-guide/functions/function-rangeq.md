@@ -28,7 +28,7 @@ RANGEQ(tq-colum,[ts-begin | null],[ts-end | null])
 
 ## Additional information
 
-{% include /sql-guide/timequantum-data-timestamp.md %}
+{% include /sql-guide/timequantum-data-timestamp-summary.md %}
 
 ## `null` substitution
 
