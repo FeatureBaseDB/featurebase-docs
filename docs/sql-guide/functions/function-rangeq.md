@@ -15,7 +15,7 @@ grand_parent: SQL guide
 ## Syntax
 
 ```sql
-RANGEQ(tq-colum,timestamp-start,timestamp-stop)
+RANGEQ(tq-colum,[ts-begin | null],[ts-end | null])
 ```
 
 ## Arguments
@@ -23,24 +23,26 @@ RANGEQ(tq-colum,timestamp-start,timestamp-stop)
 | Argument | Description | Additional information |
 |---|---|---|
 | `timequantum-col` | Any `idsetq` or `stringsetq` column that has an assigned `timequantum` unix-epoch timestamp | * [IDSETQ()](/docs/sql-guide/data-types/data-type-idsetq)<br/>* [STRINGSETQ()](/docs/sql-guide/data-types/data-type-stringsetq) |
-| `timestamp-start`<br/>`timestamp-stop` | Unix-epoch timestamps between which `RANGEQ()` function can return results. | [Timequantum timestamps and data](#timequantum-timestamps-and-data) |
+| `ts-begin` | Unix-epoch timestamp which is the first value in a range from which to return results | [Null substitution](#null-substitution) |
+| `ts-end` | Unix-epoch timestamp which is last value in range from which to return results. | [Null substitution](#null-substitution) |
 
 ## Additional information
 
 {% include /sql-guide/timequantum-data-timestamp.md %}
 
+## `null` substitution
+
+Substitute `null` if `ts-begin` or `ts-end` not known.
+
 ## Returns
 
 | Data type | Value |
 |---|---|
-| `Timestamp` |  Applies the difference between the 'start' and 'end' timestamps as a filter on the values of the 'time quantum' column. |
+| `Timestamp` | Returns timestamps between ts-begin and ts-end inclusive |
 
-<!--Hey @Garrett! I wrote this based on the results in the example.
-
-Returns values including `timestamp-start` and `timestamp-stop`
-
--->
 ## Examples
+
+### Source table definition
 
 ```sql
 
@@ -53,8 +55,13 @@ insert into segments(_id,segment)
    VALUES (1, {1789864485,['green', 'yellow']}),
           (2, {1889763885,['green']}),
           (3, {1589763885, ['green', 'red']});
+```
 
-select _id, segment from segments where rangeq(segment, 1889763885,2000000000);
+### SELECT with two RANGEQ() timestamps
+
+```sql
+SELECT _id, segment FROM segments WHERE RANGEQ(segment, 1889763885,2000000000);
+
 +-----+---------------+
 | _id | segment       |
 +-----+---------------+
@@ -63,5 +70,21 @@ select _id, segment from segments where rangeq(segment, 1889763885,2000000000);
 |   2 | GREEN         |
 +-----+---------------+
 |   3 | NULL          |
++-----+---------------+
+```
+
+## SELECT with one RANGEQ() timestamp
+
+```sql
+select _id, segment from segments where rangeq(segment, null ,2000000000)
+
++-----+---------------+
+| _id | segment       |
++-----+---------------+
+|   1 | GREEN,YELLOW  |
++-----+---------------+
+|   2 | GREEN         |
++-----+---------------+
+|   3 | RED           |
 +-----+---------------+
 ```
