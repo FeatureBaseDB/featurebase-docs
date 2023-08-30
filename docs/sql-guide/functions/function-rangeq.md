@@ -28,7 +28,7 @@ RANGEQ(tq-colum,{ts-begin | null},{ts-end | null})
 
 ## Additional information
 
-{% include /sql-guide/timequantum-data-timestamp-summary.md %}
+{% include /sql-guide/timequantum-timestamp-summary.md %}
 
 ## `null` substitution
 
@@ -44,47 +44,14 @@ Substitute `null` if `ts-begin` or `ts-end` not known.
 
 ### Source table definition
 
-```sql
+{% include /sql-guide/create-table-with-stringsetq-timeq.md %}
 
-CREATE TABLE segments (
-    _id id,
-    segment stringsetq timequantum 'YMDH'
-);
-
-insert into segments(_id,segment)
-   VALUES (1, {1789864485,['green', 'yellow']}),
-          (2, {1889763885,['green']}),
-          (3, {1589763885, ['green', 'red']});
-```
+{% include /sql-guide/insert-into-table-stringsetq-timeq.md %}
 
 ### SELECT with two RANGEQ() timestamps
 
-```sql
-SELECT _id, segment FROM segments WHERE RANGEQ(segment, 1889763885,2000000000);
-
-+-----+---------------+
-| _id | segment       |
-+-----+---------------+
-|   1 | NULL          |
-+-----+---------------+
-|   2 | GREEN         |
-+-----+---------------+
-|   3 | NULL          |
-+-----+---------------+
-```
+{% include /sql-guide/select-from-stringsetq-timeq.md %}
 
 ## SELECT with one RANGEQ() timestamp
 
-```sql
-select _id, segment from segments where rangeq(segment, null ,2000000000)
-
-+-----+---------------+
-| _id | segment       |
-+-----+---------------+
-|   1 | GREEN,YELLOW  |
-+-----+---------------+
-|   2 | GREEN         |
-+-----+---------------+
-|   3 | RED           |
-+-----+---------------+
-```
+{% include /sql-guide/select-from-stringsetq-timeq-one-arg.md %}
