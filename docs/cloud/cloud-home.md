@@ -9,7 +9,7 @@ has_toc: false
 # Introduction to FeatureBase Cloud
 {: .no_toc }
 
-FeatureBase Cloud is a fully managed version of FeatureBase and intended for users that don’t want to have to operate and maintain the underlying hardware. Our Cloud solution takes what makes FeatureBase amazing and makes it even easier to provision and operate in order to get value from your data faster.
+FeatureBase Cloud is fully managed on AWS infrastructure and makes it even easier to provision and operate in order to get value from your data faster.
 
 {% include page-toc.md %}
 
