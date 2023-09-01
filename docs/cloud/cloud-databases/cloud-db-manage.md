@@ -20,12 +20,15 @@ When you login to FeatureBase for the first time, or have deleted all databases,
 
 ## What kinds of database can I create?
 
-| Your use case | Click | Additional information |
+| Your use case | Additional information |
 |---|---|---|
-| Small projects or testing | **Start small** | [] |
+| Small projects or testing | [Start with a small database](#start-with-a-small-database) |
 | Testing the system with a large database | **Start with a billion records** | [Create sample database](/docs/cloud/cloud-databases/cloud-db-create-sample) |
 | Specific needs whilst testing or for production | **Make something custom** | [Create custom database](/docs/cloud/cloud-databases/cloud-db-create) |
 
+## Start with a small database
+
+This one-click database gives you a maximum of 
 
 <!-- NOTE TO SELF
 Changes to UI means cloud db shapes only relevant to cloud-db-create
