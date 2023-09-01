@@ -9,7 +9,9 @@ has_toc: false
 
 # SQL Statements
 
-SQL statements can be executed in the Query editor.
+SQL queries can be run against FeatureBase tables in the following ways:
+
+{% include /sql-guide/sql-guide-supported-tools.md %}
 
 ## Before you begin
 
@@ -38,6 +40,7 @@ SQL statements can be executed in the Query editor.
 
 ## DATABASE statements
 
+* [ALTER DATABASE](/docs/sql-guide/statements/statement-database-alter)
 * [DROP DATABASE](/docs/sql-guide/statements/statement-database-drop)
 
 ## INSERT statements
