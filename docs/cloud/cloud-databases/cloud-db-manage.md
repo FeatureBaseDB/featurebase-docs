@@ -12,61 +12,49 @@ has_toc: false
 
 When you login to FeatureBase for the first time, or have deleted all databases, you're presented with the Welcome page which gives you three ways to create your first database.
 
-## Before you begin
-{: .no_toc }
-{% include /cloud/cloud-before-begin.md %}
-
 {% include page-toc.md %}
 
-## What kinds of database can I create?
+## Before you begin
+{: .no_toc }
 
-| Purpose | Method |
-|---|---|
-| Small projects or testing | [Start with a small database](#start-with-a-small-database) |
-| Test the system with a large database | [Create sample database](/docs/cloud/cloud-databases/cloud-db-create-sample) |
-| Custom requirements  | [Create custom database](/docs/cloud/cloud-databases/cloud-db-create) |
-| Self sizing database | [Create a serverless database](/docs/cloud/cloud-databases/cloud-db-serverless-home) |
+{% include /cloud/cloud-before-begin.md %}
 
-## Cloud database shapes
+## What types of database can I create?
 
-{% include /cloud-db/cloud-summary-db-shape.md %}
-
-* [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
-
-## Cloud database versions
-
-{% include /cloud-db/cloud-summary-db-version.md %}
-
-* [Learn more about your database version](/docs/cloud/cloud-databases/cloud-db-versions)
+{% include /cloud-db/db-types.md %}
 
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md %}
 {% include /cloud-db/cloud-standard-naming-db.md %}
 
-## Database states
+## What kind of database can I create for testing purposes?
 
-{% include /concepts/summary-db-states.md %}
+| Purpose | Method |
+|---|---|
+| Small projects or testing | [Start with a small database](#start-with-a-small-database) |
+| Test the system with a large database | [Create sample database](/docs/cloud/cloud-databases/cloud-db-create-sample) |
 
-* [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states)
+## What kinds of database can I create for testing or production?
+
+| Purpose | Method |
+|---|---|
+| Custom requirements  | [Create custom database](/docs/cloud/cloud-databases/cloud-db-create) |
+| Self sizing database | [Create a serverless database](/docs/cloud/cloud-databases/cloud-db-serverless-home) |
+
+## How do I learn more about my database?
+
+* [Learn more about your database metrics](/docs/cloud/cloud-databases/cloud-db-metrics)
 
 ## Cloud database backups
 
 {% include /cloud-db/cloud-db-backup.md %}
 
-## Cloud database metrics
+## How do I drop my database?
 
-{% include /cloud-db/cloud-summary-db-metrics.md %}
-
-- [Learn more about your database metrics](/docs/cloud/cloud-databases/cloud-db-metrics)
-
-## Managing databases in FeatureBase Cloud
-
-* [Create database](/docs/cloud/cloud-databases/cloud-db-create)
-* [Create database with test data to evaluate the system](/docs/cloud/cloud-databases/cloud-db-create-sample)
 * [Drop database](/docs/cloud/cloud-databases/cloud-db-delete)
 
-## Managing databases using the FeatureBase API
+## Further information
 
 * [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Databases)
 

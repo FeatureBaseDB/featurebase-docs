@@ -6,8 +6,7 @@ grand_parent: Cloud
 nav_order: 4
 ---
 
-# Database metrics
-
+# Where do I find my database metrics?
 {: .no_toc }
 
 {% include /cloud-db/cloud-summary-db-metrics.md %}
@@ -15,22 +14,47 @@ nav_order: 4
 {% include page-toc.md %}
 
 ## Before you begin
+{: .no_toc }
 
-- [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
-- [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create)
 
-## Disk utilization
+## Where do I find database information?
 
-{% include /cloud-db/cloud-db-metrics-disk-util.md %}
+| Information | Page | Description | Additional information |
+|---|---|---|---|
+| Disk utilization | Home<br/>Database |
 
-## Average query response time
+The FeatureBase Home page displays the following information on every running database:
+*  - the actual memory used by database and data
+* Average query response time (Miliseconds)
+* Credit available (Trial or paid)
+* Ingested records per second
 
-{% include /cloud-db/cloud-db-metrics-avg-query-resp.md %}
+## Metrics available on the FeatureBase homepage
 
-## Queries per second
+Click **Home** to learn about the following metrics:
 
-{% include /cloud-db/cloud-db-metrics-qps.md %}
+| Metric | Description | Additional information |
+|---|---|
+| Disk utilization | How much space is being used by a database and its data |
+| Average query response time | The average time a query takes to execute on your database | Values based on query execution times in [fb_exec_requests system table](/docs/sql-guide/system-tables/system-tables-home/#fb_exec_requests) |
+| Queries per second | A graph of queries processed each second on the database, updated every 15 seconds | Graph reset on page refresh |
+| Ingested records per second | A graph of records ingested by the database, updated every 15 seconds | Graph reset on page refresh |
+| Credit available | Available credit on the account based on current usage | [View detailed credit and usage](/docs/cloud/cloud-org-manage) |
 
-## Ingested records per second
+## Information available on the Databases page
 
-{% include /cloud-db/cloud-db-metrics-ingest-rate.md %}
+* Click **Databases** then the database name to access further information on your database.
+
+| Information | Description | Additional information |
+|---|---|---|
+| Database ID | Unique identifier required for API and FBSQL connections that do not use user credentials |   |
+| Status | {% include /concepts/summary-db-states.md %} | [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states) |
+| Memory | Current available memory based on your choice of shaped or serverless database | [Learn about database types](#what-types-of-database-can-i-create) |
+| Owner | User name of account that created the database | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
+| Version | {% include /cloud-db/cloud-summary-db-version.md %} | [Learn more about your database version](/docs/cloud/cloud-databases/cloud-db-versions) |
+| Created | Time and date since database creation and user name of creator |  |
+| Last modified | Time and date since last alteration and user name that made changes |  |
+| Disk utilization | Actual memory used by database and data |  |
+| Query endpoint URL | Endpoint used for Cloud REST API queries |  |
