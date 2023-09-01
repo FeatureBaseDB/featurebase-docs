@@ -21,7 +21,7 @@ When you login to FeatureBase for the first time, or have deleted all databases,
 
 ## What types of database can I create?
 
-{% include /cloud-db/db-types.md %}
+{% include /cloud-db/cloud-db-type.md %}
 
 ## Naming standards
 
