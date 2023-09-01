@@ -10,9 +10,7 @@ has_toc: false
 # How do I manage databases in FeatureBase Cloud?
 {: .no_toc }
 
-This page provides an overview of FeatureBase databases and links to guide you through the process of creating databases.
-
-FeatureBase databases are clusters of FeatureBase nodes which act as dedicated resources to load and query data from an external data source.
+When you login to FeatureBase for the first time, or have deleted all databases, you're presented with the Welcome page which gives you three ways to create your first database.
 
 ## Before you begin
 {: .no_toc }
@@ -20,9 +18,20 @@ FeatureBase databases are clusters of FeatureBase nodes which act as dedicated r
 
 {% include page-toc.md %}
 
-## Trial accounts
+## What kinds of database can I create?
 
-{% include /cloud/trial-account-limits.md %}
+| Your use case | Click | Additional information |
+|---|---|---|
+| Small projects or testing | **Start small** | [] |
+| Testing the system with a large database | **Start with a billion records** | [Create sample database](/docs/cloud/cloud-databases/cloud-db-create-sample) |
+| Specific needs whilst testing or for production | **Make something custom** | [Create custom database](/docs/cloud/cloud-databases/cloud-db-create) |
+
+
+<!-- NOTE TO SELF
+Changes to UI means cloud db shapes only relevant to cloud-db-create
+Next step for start small and cloud-db-create is to create tables.
+And from create tables you get to import/ingest
+-->
 
 ## Cloud database shapes
 
