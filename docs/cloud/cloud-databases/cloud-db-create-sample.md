@@ -9,14 +9,9 @@ nav_order: 3
 # How do I quickly evaluate FeatureBase at scale?
 {: .no_toc }
 
-This procedure explains how to create a database loaded with sample data you can query immediately.
+The FeatureBase sample dataset contains 1 billion customer records with attributes that are commonly used for customer segmentation.
 
-Our sample dataset contains 1 billion customer records with attributes that are commonly used for customer segmentation.
-
-It will take approximately 10 minutes to create the database.
-
-{: .note }
-You can also [create a database of your own](/docs/cloud/cloud-databases/cloud-db-create) then create tables and add data.
+There are two ways to create the database which takes approximately 10 minutes to provision.
 
 {% include page-toc.md %}
 
@@ -24,7 +19,15 @@ You can also [create a database of your own](/docs/cloud/cloud-databases/cloud-d
 
 {% include /cloud/cloud-before-begin.md %}
 
-## Create database with pre-loaded data
+## Provision a billion record database
+
+You can create the database in two ways.
+
+## Method one - create the database with an auto-generated name
+
+* Click **Home** then **CREATE** under **Start with a billion records**
+
+## Method two - create the database with a custom name
 
 {% include /cloud-db/cloud-db-new-name.md %}
 {% include /cloud-db/cloud-db-load-sample.md %}
