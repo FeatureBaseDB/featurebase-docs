@@ -11,7 +11,7 @@ nav_order: 3
 
 The FeatureBase sample dataset contains 1 billion customer records with attributes that are commonly used for customer segmentation.
 
-There are two ways to create the database which takes approximately 10 minutes to provision.
+There are two methods to provision the database with an approximate duration of 10 minutes.
 
 {% include page-toc.md %}
 
@@ -23,11 +23,11 @@ There are two ways to create the database which takes approximately 10 minutes t
 
 You can create the database in two ways.
 
-## Method one - create the database with an auto-generated name
+### Method one - provision the database with an auto-generated name
 
-* Click **Home** then **CREATE** under **Start with a billion records**
+{% include /cloud/homepage-db-create-options.md %} under **Start with a billion records**
 
-## Method two - create the database with a custom name
+### Method two - provision the database with a custom name
 
 {% include /cloud-db/cloud-db-new-name.md %}
 {% include /cloud-db/cloud-db-load-sample.md %}

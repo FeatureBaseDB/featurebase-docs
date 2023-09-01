@@ -9,7 +9,7 @@ nav_order: 2
 # How do I create a cloud database?
 {: .no_toc }
 
-This procedure explains how to create a Database in FeatureBase Cloud.
+There are two ways to provision a database with a custom configuration in FeatureBase Cloud.
 
 {: .note }
 You can also [create a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
@@ -27,7 +27,15 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 {% include /concepts/standard-naming-obj.md %}
 {% include /cloud-db/cloud-standard-naming-db.md %}
 
-## Create Database
+## Provision a database with a custom configuration
+
+There are two methods to provision a custom configured database.
+
+### Method one - provision database from the homepage
+
+{% include /cloud/homepage-db-create-options.md %} under **Make something custom**.
+
+### Method two - provision database via the Databases page.
 
 {% include /cloud-db/cloud-db-new-name.md %}
 
