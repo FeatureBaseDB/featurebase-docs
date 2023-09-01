@@ -26,11 +26,13 @@ SQL queries can be run against FeatureBase tables in the following ways:
 ## Syntax notation
 
 ```
-{ required }
-[ optional unless indicated ]
+KEYWORD
+<variable or element>
+<alternative> | <alternative2>
 <repeat element until indicated>...
 <repeat element separated by commas until indicated>,...
-<either> | <or>
+{ required elements }
+[ optional elements ]
 ( required parenthesis )
 ```
 
