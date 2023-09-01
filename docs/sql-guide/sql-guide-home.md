@@ -25,15 +25,15 @@ SQL queries can be run against FeatureBase tables in the following ways:
 
 ## Syntax notation
 
-```
+```sql
 KEYWORD
 <variable or element>
 <alternative> | <alternative2>
 <repeat element until indicated>...
 <repeat element separated by commas until indicated>,...
 { required elements }
-[ optional elements ]
 ( required parenthesis )
+[ optional elements ]
 ```
 
 ## Statements
