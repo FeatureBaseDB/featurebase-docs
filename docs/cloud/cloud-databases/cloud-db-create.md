@@ -23,7 +23,7 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 ## What types of database are available?
 
-{% include /cloud-db/db-types.md %}
+{% include /cloud-db/cloud-db-type.md %}
 
 ## Naming standards
 
