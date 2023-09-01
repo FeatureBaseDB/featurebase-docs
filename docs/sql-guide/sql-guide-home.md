@@ -23,6 +23,18 @@ SQL queries can be run against FeatureBase tables in the following ways:
 
 {% include /sql-guide/sql-guide-supported-tools.md %}
 
+## Syntax notation
+
+```
+{ required }
+[ optional unless indicated ]
+<repeat element until indicated>...
+<repeat element separated by commas until indicated>,...
+<either> | <or>
+( required parenthesis )
+
+```
+
 ## Statements
 
 * [SQL statements](/docs/sql-guide/statements/statements-home)
