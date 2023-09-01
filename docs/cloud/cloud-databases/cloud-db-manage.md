@@ -28,23 +28,17 @@ When you login to FeatureBase for the first time, or have deleted all databases,
 {% include /concepts/standard-naming-obj.md %}
 {% include /cloud-db/cloud-standard-naming-db.md %}
 
-## What kind of database can I create for testing purposes?
+## What kind of database can I create?
 
 | Purpose | Method |
 |---|---|
 | Small projects or testing | [Start with a small database](#start-with-a-small-database) |
 | Test the system with a large database | [Create sample database](/docs/cloud/cloud-databases/cloud-db-create-sample) |
-
-## What kinds of database can I create for testing or production?
-
-| Purpose | Method |
-|---|---|
-| Custom requirements  | [Create custom database](/docs/cloud/cloud-databases/cloud-db-create) |
-| Self sizing database | [Create a serverless database](/docs/cloud/cloud-databases/cloud-db-serverless-home) |
+| Custom requirements including size and processors  | [Create custom database](/docs/cloud/cloud-databases/cloud-db-create) |
 
 ## How do I learn more about my database?
 
-* [Learn more about your database metrics](/docs/cloud/cloud-databases/cloud-db-metrics)
+* [Learn more about your database](/docs/cloud/cloud-databases/cloud-db-metrics)
 
 ## Cloud database backups
 

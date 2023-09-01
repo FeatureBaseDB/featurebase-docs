@@ -32,7 +32,7 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 ## How do I provision a database with a custom configuration?
 
-There are two methods to provision a custom configured database.
+There are three methods to provision a custom configured database.
 
 ### Method one - provision database from the homepage
 
@@ -49,6 +49,10 @@ Choose from the **Memory** drop-down:
 {% include /cloud-db/cloud-db-total-shapes.md %}
 
 {% include /cloud-db/cloud-db-click-create.md %}
+
+## Method 3 - provision the database using Cloud API
+
+* [Create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
 
 ## Next step
 

@@ -9,7 +9,9 @@ nav_order: 4
 # Where do I find my database metrics?
 {: .no_toc }
 
-{% include /cloud-db/cloud-summary-db-metrics.md %}
+Metrics on running databases are available on the home page.
+
+Additional information is available on the Database summary page.
 
 {% include page-toc.md %}
 
@@ -18,18 +20,6 @@ nav_order: 4
 
 * [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create)
-
-## Where do I find database information?
-
-| Information | Page | Description | Additional information |
-|---|---|---|---|
-| Disk utilization | Home<br/>Database |
-
-The FeatureBase Home page displays the following information on every running database:
-*  - the actual memory used by database and data
-* Average query response time (Miliseconds)
-* Credit available (Trial or paid)
-* Ingested records per second
 
 ## Metrics available on the FeatureBase homepage
 
