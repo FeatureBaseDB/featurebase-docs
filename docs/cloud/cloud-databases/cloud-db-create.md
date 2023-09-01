@@ -20,14 +20,22 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
-* [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape)
+
+## What considerations do I need to be aware of?
+
+FeatureBase provides two categories of database:
+
+| Category | Description | Additional information |
+|---|---|---|
+| Shaped | A database with specific storage, memory and processor requirements | [Learn about cloud database shapes](/docs/cloud/cloud-databases/cloud-db-shape) |
+| Serverless | A database that scales based on the available data, provisioning and deprovisioning storage as required | [Learn about serverless databases](/docs/cloud/cloud-databases/cloud-db-serverless-home) |
 
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md %}
 {% include /cloud-db/cloud-standard-naming-db.md %}
 
-## Provision a database with a custom configuration
+## How do I provision a database with a custom configuration?
 
 There are two methods to provision a custom configured database.
 
@@ -35,13 +43,15 @@ There are two methods to provision a custom configured database.
 
 {% include /cloud/homepage-db-create-options.md %} under **Make something custom**.
 
-### Method two - provision database via the Databases page.
+### Method two - provision database via the Databases page
 
 {% include /cloud-db/cloud-db-new-name.md %}
 
-* Choose a database shape
+Choose from the **Memory** drop-down:
 
-{% include /cloud-db/cloud-db-total-shapes.md %}
+* Serverless (Preview) 2GB Worker, or
+
+{% include /cloud-db/cloud-db-total-shape.md %}
 
 {% include /cloud-db/cloud-db-click-create.md %}
 

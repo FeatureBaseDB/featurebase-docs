@@ -25,16 +25,7 @@ When you login to FeatureBase for the first time, or have deleted all databases,
 | Small projects or testing | [Start with a small database](#start-with-a-small-database) |
 | Test the system with a large database | [Create sample database](/docs/cloud/cloud-databases/cloud-db-create-sample) |
 | Custom requirements  | [Create custom database](/docs/cloud/cloud-databases/cloud-db-create) |
-
-## Start with a small database
-
-A one-click database with sufficient size and
-
-<!-- NOTE TO SELF
-Changes to UI means cloud db shapes only relevant to cloud-db-create
-Next step for start small and cloud-db-create is to create tables.
-And from create tables you get to import/ingest
--->
+| Self sizing database | [Create a serverless database](/docs/cloud/cloud-databases/cloud-db-serverless-home) |
 
 ## Cloud database shapes
 
