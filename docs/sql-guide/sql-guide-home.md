@@ -32,7 +32,6 @@ SQL queries can be run against FeatureBase tables in the following ways:
 <repeat element separated by commas until indicated>,...
 <either> | <or>
 ( required parenthesis )
-
 ```
 
 ## Statements
