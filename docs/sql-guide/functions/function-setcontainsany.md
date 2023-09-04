@@ -7,26 +7,27 @@ grand_parent: SQL guide
 
 # SETCONTAINSANY() function
 
-`SETCONTAINSANY()` tests membership of a set of values within a set. It returns true if any of the members of `testset` exist in `targetset`
+`SETCONTAINSANY()` tests for the existence of one or more specified values within an `IDSET` or `STRINGSET` column.
 
 ## Syntax
 
-```
-setcontainsany(targetset, testset)
+```sql
+SETCONTAINSANY(set-column, ['test-member',...])
 ```
 
 ## Arguments
 
-| Argument | Description | Data type | Return value |
+| Argument | Description | Data type | Additional information |
 |---|---|---|---|
-| `targetset` | The set in which the members of testset are being tested for membership. | `stringset` or `idset` |
-| `testset` | The set of values to test membership for in the targetset. | Match `targetset` |
+| `set-column` | Column to test for existence of `test-member` | `IDSET` or `STRINGSET` | `IDSET` or `STRINGSET` | * [IDSET](/docs/sql-guide/data-types/idset)<br/>* [STRINGSET](/docs/sql-guide/data-types/stringset) |
+| `[ ]` | Required brackets for function |  |  |
+| `test-member` | Value to test for in `set-column` | `STRING` | [STRING](/docs/sql-guide/data-types/string) |
 
 ## Returns
 
-| Data type | Value |
-|---|---|
-| `bool` | True if any member of `testset` exists within `targetset`
+| Data type | Returns | When... |
+|---|---|---|
+| `BOOL` | `TRUE` | `set-column` contains one or more `test-member` values |
 
 ## Examples
 
@@ -34,17 +35,22 @@ setcontainsany(targetset, testset)
 
 ### Testing set membership in the select list
 
-This query returns `true`
+This query returns `TRUE`
 
 ```sql
-select setcontainsany(segment, ['BLUE', 'RED']) as HasBlueOrRed  
-    from segments;
+SELECT SETCONTAINSANY
+  (segment, ['BLUE', 'RED'])
+  AS HasBlueOrRed
+  FROM segments;
 ```
 
 ### Testing set membership as a where clause filter
 
-This query returns `true`.
+This query returns `TRUE`.
 
 ```sql
-select _id, segment from segments where setcontainsany(segment, ['BLUE', 'RED']);
+SELECT _id, segment
+  FROM segments
+  WHERE SETCONTAINSANY
+    (segment, ['BLUE', 'RED']);
 ```

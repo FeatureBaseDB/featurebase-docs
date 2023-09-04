@@ -7,19 +7,19 @@ grand_parent: SQL guide
 
 # SETCONTAINS() function
 
-SETCONTAINS() tests membership of a value within a set expression.
+`SETCONTAINS()` tests for the existence of a specified value within an `IDSET` or `STRINGSET` data type column.
 
 ## Syntax
 
 ```
-setcontains(set, value)
+SETCONTAINS(set-column, 'test-member')
 ```
 
 ## Arguments
 
 | Argument | Description | Required | Data type |
 |---|---|---|
-| `set` | The set in which value is being tested for membership. | Yes | `stringset` or `idset` |
+| `set-column` | IDSET or STRINGSET column to test presence or absence of `test-member`
 | `value` | The value to test membership for in the set. `value` must be assignment compatible with the element type of the set. | Yes |  |
 
 ## Returns
