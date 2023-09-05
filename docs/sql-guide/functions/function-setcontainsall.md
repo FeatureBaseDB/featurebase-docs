@@ -7,20 +7,24 @@ grand_parent: SQL guide
 
 # SETCONTAINSALL() function
 
+
+
 `SETCONTAINSALL()` tests membership of a set of values within a set. It returns true if all of the members of `testset` exist in `targetset`
 
 ## Syntax
 
 ```
-setcontainsall(targetset, testset)
+SETCONTAINSALL(set-column, [int-val | 'string-val'])
 ```
 
 ## Arguments
 
+{% include /sql-guide/function-set-args.md %}
+
 | Argument | Description | Data type |
 |---|---|---|
-| `targetset` | The set in which the members of testset are being tested for membership. | `stringset` or `idset` |
-| `testset` | The set of values to test membership for in the targetset. | Type must match `targetset` |
+| `set-column` |  | `stringset` or `idset` |
+| `testset` | The set of values to test membership for in the targetset. |  `targetset` |
 
 ## Returns
 

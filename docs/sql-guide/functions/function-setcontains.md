@@ -20,7 +20,9 @@ SETCONTAINS(set-column, 'test-member')
 | Argument | Description | Required | Data type |
 |---|---|---|
 | `set-column` | IDSET or STRINGSET column to test presence or absence of `test-member`
-| `value` | The value to test membership for in the set. `value` must be assignment compatible with the element type of the set. | Yes |  |
+| `'test-member'` |
+
+The value to test membership for in the set. `value` must be assignment compatible with the element type of the set. | Yes |  |
 
 ## Returns
 
