@@ -7,14 +7,12 @@ grand_parent: SQL guide
 
 # SETCONTAINSALL() function
 
-
-
 `SETCONTAINSALL()` returns **True** when **all specified values** are found within an `IDSET` or `STRINGSET` column.
 
 ## Syntax
 
 ```sql
-SETCONTAINS (
+SETCONTAINSALL (
   {idset-column, [int-value,...]} |
   {stringset-column, ['string-value',...]}
   )
