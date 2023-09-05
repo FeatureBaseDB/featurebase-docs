@@ -7,21 +7,20 @@ grand_parent: SQL guide
 
 # SETEXCLUDES() function
 
-`SETEXCLUDES()` tests for the existence of a specified value within `IDSET` and `STRINGSET` data types.
+`SETEXCLUDES()` returns **True** when a specified value **is not found** within an `IDSET` or `STRINGSET` column.
 
 ## Syntax
 
-```
-SETEXCLUDES(column-set, [int-val | 'string-val'])
+```sql
+SETEXCLUDES(
+  {idset-column, integer-value} |
+  {stringset-column, 'string-value'}
+)
 ```
 
 ## Arguments
 
-| Argument | Description | Data type | Additional information |
-|---|---|---|---|
-| `column-set` | Column tested for existence of `test-member` value | `IDSET` or `STRINGSET` | * [IDSET data type](/docs/sql-guide/data-types/idset)<br/>* [STRINGSET data type](/docs/sql-guide/data-types/stringset) |
-| `int-val` | Integer value to test for in `IDSET` column | [INTEGER data type](/docs/sql-guide/data-types/data-type-int) |
-| `string-val` | Single quoted string value to test for in `STRINGSET` column | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
+{% include /sql-guide/function-set-contains-excludes-args.md %}
 
 ## Additional information
 
@@ -29,9 +28,9 @@ Use a `WHERE` clause with `AND` operator to add two or more `SETINCLUDES()` func
 
 ## Returns
 
-| Data type | Value |
-|---|---|
-| `bool` | `TRUE` when `column-set` does **not** include `test-member` |
+| Column contains | Data type | Result |
+|---|---|--|
+| No specified value | Boolean | True |
 
 ## Examples
 

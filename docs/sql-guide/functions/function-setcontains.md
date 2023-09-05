@@ -7,28 +7,26 @@ grand_parent: SQL guide
 
 # SETCONTAINS() function
 
-`SETCONTAINS()` tests for the existence of a specified value within an `IDSET` or `STRINGSET` data type column.
+`SETCONTAINS()` returns **True** when a specified value **is found** within an `IDSET` or `STRINGSET` column..
 
 ## Syntax
 
-```
-SETCONTAINS(set-column, 'test-member')
+```sql
+SETCONTAINS(
+  {idset-column, integer-value} |
+  {stringset-column, 'string-value'}
+  )
 ```
 
 ## Arguments
 
-| Argument | Description | Required | Data type |
-|---|---|---|
-| `set-column` | IDSET or STRINGSET column to test presence or absence of `test-member`
-| `'test-member'` |
-
-The value to test membership for in the set. `value` must be assignment compatible with the element type of the set. | Yes |  |
+{% include /sql-guide/function-set-contains-excludes-args.md %}
 
 ## Returns
 
-| Data type | Value |
-|---|---|
-| `bool` | True if `value` is member of set. |
+| Column contains | Data type | Result |
+|---|---|---|
+| Specified value | Boolean | True |
 
 ## Examples
 

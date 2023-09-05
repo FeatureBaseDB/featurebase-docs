@@ -7,27 +7,27 @@ grand_parent: SQL guide
 
 # SETCONTAINSANY() function
 
-`SETCONTAINSANY()` tests for the existence of one or more specified values within an `IDSET` or `STRINGSET` column.
+`SETCONTAINSANY()` returns **True** when **one or more** specified values are found within an `IDSET` or `STRINGSET` column.
 
 ## Syntax
 
 ```sql
-SETCONTAINSANY(set-column, ['test-member',...])
+
+SETCONTAINSANY (
+  {idset-column, [int-value,...]} |
+  {stringset-column, ['string-value',...]}
+)
 ```
 
 ## Arguments
 
-| Argument | Description | Data type | Additional information |
-|---|---|---|---|
-| `set-column` | Column to test for existence of `test-member` | `IDSET` or `STRINGSET` | `IDSET` or `STRINGSET` | * [IDSET](/docs/sql-guide/data-types/idset)<br/>* [STRINGSET](/docs/sql-guide/data-types/stringset) |
-| `[ ]` | Required brackets for function |  |  |
-| `test-member` | Value to test for in `set-column` | `STRING` | [STRING](/docs/sql-guide/data-types/string) |
+{% include /sql-guide/function-setcontains-all-any-args.md %}
 
 ## Returns
 
-| Data type | Returns | When... |
-|---|---|---|
-| `BOOL` | `TRUE` | `set-column` contains one or more `test-member` values |
+| Column contains | Data type | Result |
+|---|---|--|
+| One or more values | Boolean | True |
 
 ## Examples
 
