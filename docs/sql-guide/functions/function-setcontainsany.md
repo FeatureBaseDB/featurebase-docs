@@ -13,10 +13,10 @@ grand_parent: SQL guide
 
 ```sql
 
-SETCONTAINSANY (
+SETCONTAINSANY(
   {idset-column, [int-value,...]} |
   {stringset-column, ['string-value',...]}
-)
+  )
 ```
 
 ## Arguments

@@ -12,7 +12,7 @@ grand_parent: SQL guide
 ## Syntax
 
 ```sql
-SETCONTAINSALL (
+SETCONTAINSALL(
   {idset-column, [int-value,...]} |
   {stringset-column, ['string-value',...]}
   )

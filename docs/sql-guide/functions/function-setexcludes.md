@@ -15,7 +15,7 @@ grand_parent: SQL guide
 SETEXCLUDES(
   {idset-column, integer-value} |
   {stringset-column, 'string-value'}
-)
+  )
 ```
 
 ## Arguments
