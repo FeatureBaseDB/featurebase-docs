@@ -48,6 +48,15 @@ Serverless Databases have storage with 11 nines of durability, plus:
 
 ## How are Serverless databases priced?
 
+Serverless database architecture separates Virtual CPU compute resources from database storage.
+Storage and CPU usage are charged separately based on your usage.
+
+Virtual CPU and storage are metered
+
+Compute and storage resources are metered separately and cha
+
+FeatureBase Serverless databases have compute and storage metered and charged independently based on your usage.
+
 Serverless databases are charged based on metred compute and storage usage.
 
 ## How do I create a Serverless database?
@@ -55,6 +64,14 @@ Serverless databases are charged based on metred compute and storage usage.
 * [Create a Serverless Database in the Cloud UI](/docs/cloud-cloud-databases/cloud-db-create.md)
 <!--* [CREATE DATABASE statement](/docs/sql-guide/statements/statement-db-create)-->
 
+## Where do I find information on my database?
+
+
 ## How do I alter and scale a Serverless database?
 
 * [ALTER DATABASE statement](/docs/sql-guide/statements/statement-db-alter)
+
+## How do I delete a Serverless database?
+
+* [Delete Serverless database in Cloud UI](/docs/cloud/cloud-databases/cloud-db-delete)
+* [DROP DATABASE statement](/docs/sql-guide/statements/statement-db-drop)

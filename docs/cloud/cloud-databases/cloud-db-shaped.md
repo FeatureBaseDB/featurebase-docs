@@ -18,7 +18,7 @@ A Shaped database provides a number of benefits, the most important of which is 
 
 ### Predefined resources
 
-You can choose an appropriate database shape depending on your needs.
+CPU and memory resources are bundled for easier billing. Choose an appropriate shape for your requirements:
 
 | Resource | Minimum | Maximum |
 |---|---|
