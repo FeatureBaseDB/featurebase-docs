@@ -6,11 +6,14 @@ grand-parent: Cloud
 nav_order: 1
 ---
 
-## How do I create a database with scalable resources?
+## How do I scale my database resources?
 
 {% include /cloud-db/cloud-db-serverless-summary.md %}
 
 {% include /cloud-db/serverless-preview-warning.md %}
+
+{: .note}
+You can also create a **Shaped** database with fixed resources
 
 ## Before you start
 

@@ -26,7 +26,7 @@ SQL queries can be run against FeatureBase tables in the following ways:
 * [SHOW CREATE TABLE](/docs/sql-guide/statements/statement-table-create-show)
 * [SHOW TABLES](/docs/sql-guide/statements/statement-tables-show)
 * [SHOW COLUMNS](/docs/sql-guide/statements/statement-columns-show)
-* [SHOW DATABASES](/docs/sql-guide/statements/statement-database-show)
+* [SHOW DATABASES](/docs/sql-guide/statements/statement-db-show)
 
 ## TABLE statements
 
@@ -41,7 +41,7 @@ SQL queries can be run against FeatureBase tables in the following ways:
 ## DATABASE statements
 
 * [ALTER DATABASE](/docs/sql-guide/statements/statement-database-alter)
-* [DROP DATABASE](/docs/sql-guide/statements/statement-database-drop)
+* [DROP DATABASE](/docs/sql-guide/statements/statement-db-drop)
 
 ## INSERT statements
 
