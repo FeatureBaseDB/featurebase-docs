@@ -115,7 +115,7 @@ SELECT id, description, cosine_distance([-0.027067707851529, 0.009963636286557, 
 | Values | A query that returns `DISTINCT` values from a table | [SELECT DISTINCT](#select-distinct) |
 | Sets | A query that returns a specific array of values from `SET` or `SETQ` data type columns | [Flatten hint](/docs/sql-guide/hints/hint-flatten) |
 
-## `<expr>` filter
+### `<expr>` filter
 
 `<expr>` can be used in the <select_list> and clauses:
 
@@ -129,7 +129,7 @@ SELECT id, description, cosine_distance([-0.027067707851529, 0.009963636286557, 
 |---|---|---|
 | Subquery | A SELECT query that is run to obtain specific results required for the main query |  |
 | Constant | A literal or scalar value | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) or subquery |
-| Function | [FeatureBase SQL functions](/docs/sql-guide/functions/functions-home) | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) or subquery |
+| Function | [FeatureBase SQL functions](/docs/sql-guide/functions/functions-home) | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) |
 
 ### SELECT list and GROUP BY clause
 
@@ -153,12 +153,6 @@ The table_or_subquery expression can be:
 * a parenthesized `SELECT` statement
 
 Both expressions can be aliased with a `<table_alias>`
-
-#### Arguments
-
-| Argument | Description |
-|---|---|
-| col_name | Column name
 
 ## Examples
 
@@ -249,8 +243,8 @@ This query can also be run using the [FLATTEN() hint](/docs/sql-guide/hints/hint
 {% include /sql-guide/table-create-segments-eg.md %}
 
 ```sql
-select count(*) as cnt, segment from segments
-group by segment;
+SELECT count(*) AS cnt, segment FROM segments
+GROUP BY segment;
 
  cnt | segment
 -----+--------------------------
@@ -276,7 +270,6 @@ This query can also be performed using the [`flatten` hint](/docs/sql-guide/hint
 ## SELECT with one RANGEQ() timestamp
 
 {% include /sql-guide/select-from-stringsetq-timeq-one-arg.md %}
-
 
 ## Further information
 

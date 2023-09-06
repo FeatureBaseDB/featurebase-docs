@@ -9,7 +9,7 @@ nav_order: 2
 # What is FeatureBase Serverless?
 {: .no_toc }
 
-{% include /serverless/serverless-preview-warning.md %}
+{% include /cloud-db/serverless-preview-warning.md %}
 
 FeatureBase Serverless provides a new database architecture which separates computer power and storage so they can be scaled independently.
 

@@ -3,7 +3,7 @@ title: Provision a small database
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 3
+nav_order: 1
 ---
 
 # How do I create a small database?

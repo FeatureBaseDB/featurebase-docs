@@ -3,7 +3,7 @@ title: Create cloud database
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 2
+nav_order: 3
 ---
 
 # How do I create a cloud database?

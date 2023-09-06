@@ -3,7 +3,7 @@ title: Evaluate featurebase at scale
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 3
+nav_order: 2
 ---
 
 # How do I quickly evaluate FeatureBase at scale?
