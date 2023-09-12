@@ -16,6 +16,8 @@ When you login to FeatureBase for the first time, or have deleted all databases,
 * Create sample database - containing terabytes of data to test responsiveness
 * Create custom database - to create a database according to your specific needs
 
+You can also create a database using the Cloud API.
+
 {% include page-toc.md %}
 
 ## Before you begin
@@ -26,19 +28,23 @@ When you login to FeatureBase for the first time, or have deleted all databases,
 
 {% include /cloud-db/cloud-small-db-summary.md %}
 
-* [Learn how to create a small database](/docs/cloud/cloud-databases/cloud-db-create-custom-small)
+* [Learn how to create a small database](/docs/cloud/cloud-databases/cloud-db-create-small)
 
 ## Create sample database
 
 {% include /cloud-db/cloud-sample-db-summary.md %}
 
-* [Learn how to create a sample database](/docs/cloud/cloud-databases/cloud-db-create-custom-sample)
+* [Learn how to create a sample database](/docs/cloud/cloud-databases/cloud-db-create-sample)
 
 ## Create custom database
 
 {% include /cloud-db/cloud-db-custom.md %}
 
-* [Learn how to create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom-custom)
+* [Learn how to create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom)
+
+## Create database using the Cloud API
+
+* [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Databases)
 
 ## How do I learn more about my database?
 
@@ -51,10 +57,6 @@ When you login to FeatureBase for the first time, or have deleted all databases,
 ## How do I drop my database?
 
 * [Drop database](/docs/cloud/cloud-databases/cloud-db-delete)
-
-## Further information
-
-* [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Databases)
 
 ## Next step
 
