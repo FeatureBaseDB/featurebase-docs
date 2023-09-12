@@ -40,8 +40,6 @@ You can also create a database using the Cloud API.
 
 {% include /cloud-db/cloud-db-create-custom.md %}
 
-* [Learn how to create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom)
-
 ## Create database using the Cloud API
 
 * [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Databases)
