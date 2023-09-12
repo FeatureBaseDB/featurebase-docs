@@ -13,7 +13,7 @@ nav_order: 1
 {% include /cloud-db/serverless-preview-warning.md %}
 
 {: .note}
-You can also create a **Shaped** database with fixed resources
+You can also [create a database with fixed resources](/docs/cloud/cloud-databases/cloud-db-shaped)
 
 ## Before you start
 
