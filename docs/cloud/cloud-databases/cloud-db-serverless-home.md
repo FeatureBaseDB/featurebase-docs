@@ -4,6 +4,7 @@ layout: default
 parent: Manage Databases
 grand-parent: Cloud
 nav_order: 2
+nav_exclude: true
 ---
 
 # What is FeatureBase Serverless?
