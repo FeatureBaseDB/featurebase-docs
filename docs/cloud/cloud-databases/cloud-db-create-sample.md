@@ -9,14 +9,14 @@ nav_order: 2
 # How do I quickly evaluate FeatureBase at scale?
 {: .no_toc }
 
-The FeatureBase sample dataset contains 1 billion customer records with attributes that are commonly used for customer segmentation.
+{% include /cloud-db/cloud-sample-db-summary.md %}
 
-There are two methods to provision the database with an approximate duration of 10 minutes.
+There are two methods to provision the sample database with an approximate duration of 10 minutes.
 
 {% include page-toc.md %}
 
 ## Before you begin
-
+{: .no_toc }
 {% include /cloud/cloud-before-begin.md %}
 
 ## Provision a billion record database
