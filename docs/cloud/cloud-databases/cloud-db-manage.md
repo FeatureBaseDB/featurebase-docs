@@ -38,7 +38,7 @@ You can also create a database using the Cloud API.
 
 ## Create custom database
 
-{% include /cloud-db/cloud-db-custom.md %}
+{% include /cloud-db/cloud-db-create-custom.md %}
 
 * [Learn how to create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
