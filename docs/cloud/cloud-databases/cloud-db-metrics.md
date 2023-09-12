@@ -19,7 +19,7 @@ Additional information is available on the Database summary page.
 {: .no_toc }
 
 * [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
-* [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
 ## Metrics available on the FeatureBase homepage
 

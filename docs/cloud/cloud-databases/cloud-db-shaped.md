@@ -38,7 +38,7 @@ A shaped database cannot be resized once created. Data must be migrated to a new
 
 ## How do I create a shaped database?
 
-* [Create a Shaped Database in the Cloud UI](/docs/cloud-cloud-databases/cloud-db-create.md)
+* [Create a Shaped Database in the Cloud UI](/docs/cloud-cloud-databases/cloud-db-create-custom.md)
 
 ## How do I alter a shaped database?
 

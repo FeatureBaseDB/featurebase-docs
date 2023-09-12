@@ -46,7 +46,7 @@ FeatureBase Serverless databases have compute and storage metered and charged in
 
 ## How do I create a Serverless Database?
 
-* [Learn how to create a serverless database](/docs/cloud/cloud-databases/cloud-db-create-serverless)
+* [Learn how to create a serverless database](/docs/cloud/cloud-databases/cloud-db-create-custom-serverless)
 
 ## How do I scale a Serverless Database?
 

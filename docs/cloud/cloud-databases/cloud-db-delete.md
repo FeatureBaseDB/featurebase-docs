@@ -22,7 +22,7 @@ Learn how to delete a FeatureBase Cloud database.
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Create a database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [delete tables](/docs/cloud/cloud-tables/cloud-table-delete)
 
 ## Delete a database

@@ -15,7 +15,7 @@ nav_order: 5
 
 ## Before you begin
 * [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
-* [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
 {: .note}
 If a database's version is "Unknown" then it has failed to respond to a version query.\

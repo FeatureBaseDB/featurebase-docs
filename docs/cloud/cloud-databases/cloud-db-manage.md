@@ -10,31 +10,35 @@ has_toc: false
 # How do I manage databases in FeatureBase Cloud?
 {: .no_toc }
 
-When you login to FeatureBase for the first time, or have deleted all databases, you're presented with the Welcome page which gives you three ways to create your first database.
+When you login to FeatureBase for the first time, or have deleted all databases, you're offered three choices for a first database:
+
+* Start with a small database - suitable for small projects or testing
+* Create sample database - containing terabytes of data to test responsiveness
+* Create custom database - to create a database according to your specific needs
 
 {% include page-toc.md %}
 
 ## Before you begin
 {: .no_toc }
-
 {% include /cloud/cloud-before-begin.md %}
 
-## What types of database can I create?
+## Start with a small database
 
-{% include /cloud-db/cloud-db-type.md %}
+{% include /cloud-db/cloud-small-db-summary.md %}
 
-## Naming standards
+* [Learn how to create a small database](/docs/cloud/cloud-databases/cloud-db-create-custom-small)
 
-{% include /concepts/standard-naming-obj.md %}
-{% include /cloud-db/cloud-standard-naming-db.md %}
+## Create sample database
 
-## What kind of database can I create?
+{% include /cloud-db/cloud-sample-db.md %}
 
-| Purpose | Method |
-|---|---|
-| Small projects or testing | [Start with a small database](#start-with-a-small-database) |
-| Test the system with a large database | [Create sample database](/docs/cloud/cloud-databases/cloud-db-create-sample) |
-| Custom requirements including size and processors  | [Create custom database](/docs/cloud/cloud-databases/cloud-db-create) |
+* [Learn how to create a sample database](/docs/cloud/cloud-databases/cloud-db-create-custom-sample)
+
+## Create custom database
+
+{% include /cloud-db/cloud-db-custom.md %}
+
+* [Learn how to create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom-custom)
 
 ## How do I learn more about my database?
 

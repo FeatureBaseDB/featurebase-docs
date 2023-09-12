@@ -15,7 +15,7 @@ FeatureBase supports different types of queries that are discussed further in th
 
 ## Before you begin
 
-{% include /cloud/cloud-db-create-before-begin.md %}
+{% include /cloud/cloud-db-create-custom-before-begin.md %}
 
 ## Running SQL queries
 

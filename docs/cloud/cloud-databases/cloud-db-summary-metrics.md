@@ -17,7 +17,7 @@ You can obtain summary information on your databases, metrics and statistics, pl
 {: .no_toc }
 
 * [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
-* [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
 ## How do I get summary information on my database?
 

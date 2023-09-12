@@ -9,12 +9,12 @@ nav_order: 1
 # How do I create a small database?
 {: .no_toc }
 
-There are two ways to create a small database that is useful for testing purposes and small projects of less than 8GB of data.
+{% include /cloud-db/cloud-small-db-summary.md %}
 
 {% include page-toc.md %}
 
 ## Before you begin
-
+{: .no_toc}
 {% include /cloud/cloud-before-begin.md %}
 
 ### Method one - provision the database with an auto-generated name
@@ -23,7 +23,7 @@ There are two ways to create a small database that is useful for testing purpose
 
 ## Method two -- provision a small database with a custom name and size
 
-* [Create a custom database](/docs/cloud/cloud-databases/cloud-db-create)
+* [Create a custom database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
 ## Next step
 

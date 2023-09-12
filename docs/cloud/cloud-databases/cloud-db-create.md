@@ -12,7 +12,7 @@ nav_order: 3
 There are two ways to provision a database with a custom configuration in FeatureBase Cloud.
 
 {: .note }
-You can also [create a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
+You can also [create a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-custom-sample)
 
 {% include page-toc.md %}
 
@@ -23,7 +23,7 @@ You can also [create a database with pre-loaded data](/docs/cloud/cloud-database
 
 ## What types of database are available?
 
-{% include /cloud-db/cloud-db-type.md %}
+{% include /cloud-db/cloud-db-custom.md %}
 
 ## Naming standards
 

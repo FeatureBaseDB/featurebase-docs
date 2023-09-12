@@ -22,9 +22,9 @@ nav_order: 6
 
 | Status | Description | Further information |
 |---|---|---|
-| CREATING | FeatureBase Cloud has received the signal to start provisioning a database | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
-| PROVISIONING | Following CREATING, system then provisions hardware, installs software, and performs other tasks to spin up the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
-| RESTORING | The state of restoring data from a backup | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create) |
+| CREATING | FeatureBase Cloud has received the signal to start provisioning a database | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create-custom) |
+| PROVISIONING | Following CREATING, system then provisions hardware, installs software, and performs other tasks to spin up the database. | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create-custom) |
+| RESTORING | The state of restoring data from a backup | [Create a cloud database](/docs/cloud/cloud-databases/cloud-db-create-custom) |
 | RUNNING |  Created or updated database has been spun up and is ready for use. | [Learn about database shapes and their running costs](/docs/cloud/cloud-databases/cloud-db-shape) |
 | BACKUP |  Creating a backup of the database. |  |
 | FROZEN | There was a problem with backup and no new operations can be done on the database |
