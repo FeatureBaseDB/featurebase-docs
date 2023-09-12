@@ -30,7 +30,7 @@ When you login to FeatureBase for the first time, or have deleted all databases,
 
 ## Create sample database
 
-{% include /cloud-db/cloud-sample-db.md %}
+{% include /cloud-db/cloud-sample-db-summary.md %}
 
 * [Learn how to create a sample database](/docs/cloud/cloud-databases/cloud-db-create-custom-sample)
 
