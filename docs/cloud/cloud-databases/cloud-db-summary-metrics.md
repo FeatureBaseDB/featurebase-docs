@@ -1,5 +1,5 @@
 ---
-title: Cloud database summary & metrics
+title: Cloud database information
 layout: default
 parent: Manage databases
 grand_parent: Cloud
@@ -19,35 +19,12 @@ You can obtain summary information on your databases, metrics and statistics, pl
 * [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
+
+
 ## How do I get summary information on my database?
 
-Summary information can be viewed using the GUI or SQL statements.
 
-| GUI | SQL |
-|---|---|
-| Click **Databases** > Your database | `SHOW DATABASES` and `SELECT * FROM `|
-
-| Information | GUI | SHOW DATABASES statement | SELECT statement |
-|---|---|---|---|
-|
-
-
-| Method | Database Version and status information | Database
-|---|---|
-| Click Databases > Your database |
-|
-
-
-| GUI | SQL |
-|---|---|
-| * Click Databases > Your database | `SHOW DATABASES` and `SELECT * FROM FB_DATABASE_INFO` |
-
-
-
-
-
-The following summary information is available via the GUI or SQL statements:
-
+## 
 
 | GUI | SQL | Description | Additional information |
 |---|---|---|---|
