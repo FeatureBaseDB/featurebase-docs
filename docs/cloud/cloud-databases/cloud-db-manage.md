@@ -12,11 +12,12 @@ has_toc: false
 
 When you login to FeatureBase for the first time, or have deleted all databases, you're offered three choices for a first database:
 
-* Start with a small database - suitable for small projects or testing
-* Create sample database - containing terabytes of data to test responsiveness
-* Create custom database - to create a database according to your specific needs
+* **Start with a small database** which is suitable for small projects or testing
+* **Create sample database** which contains terabytes of data you can use to test if FeatureBase meets your expectations
+* **Create custom database** that meets your specific needs
 
-You can also create a database using the Cloud API.
+{: .note}
+You can also [create a database using the Cloud API](#create-database-using-the-cloud-api).
 
 {% include page-toc.md %}
 
@@ -42,13 +43,11 @@ You can also create a database using the Cloud API.
 
 ## Create database using the Cloud API
 
-* [Databases API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Databases)
+* [Databases API reference]
 
 ## How do I learn more about my database?
 
 * [Learn more about your database](/docs/cloud/cloud-databases/cloud-db-metrics)
-* [Learn more about your database](/docs/cloud/cloud-databases/cloud-db-info)
-
 
 ## Cloud database backups
 

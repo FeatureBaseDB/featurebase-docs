@@ -18,12 +18,12 @@ nav_order: 5
 * [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
 {: .note}
-If a database's version is "Unknown" then it has failed to respond to a version query.\
+"Unknown" version information indicates a failed version query
 [Learn more about unknown database versions](/docs/cloud/cloud-troubleshooting/issue-cloud-version-unknown)
 
 ## Find database version in list of databases
-1. Select databases on the sidebar
-2. View your database's version under the version column
+* Select databases on the sidebar
+* View your database's version under the version column
 
 ## Find database version in database summary
 1. Select databases on the sidebar

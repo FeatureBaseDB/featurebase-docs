@@ -21,25 +21,20 @@ Additional information is available on the Database summary page.
 * [Learn about Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
-## Metrics available on the FeatureBase homepage
+## How do I view Database properties?
 
-Click **Home** to learn about the following metrics:
+Database properties can be obtained using two methods:
 
-| Metric | Description | Additional information |
+| Method | Steps |
 |---|---|
-| Disk utilization | How much space is being used by a database and its data |
-| Average query response time | The average time a query takes to execute on your database | Values based on query execution times in [fb_exec_requests system table](/docs/sql-guide/system-tables/system-tables-home/#fb_exec_requests) |
-| Queries per second | A graph of queries processed each second on the database, updated every 15 seconds | Graph reset on page refresh |
-| Ingested records per second | A graph of records ingested by the database, updated every 15 seconds | Graph reset on page refresh |
-| Credit available | Available credit on the account based on current usage | [View detailed credit and usage](/docs/cloud/cloud-org-manage) |
+| GUI | Click **Databases** > `your database name` to open the summary page |
+| SQL | `SELECT * FROM fb_database_info;` and `SELECT * FROM fb_database_nodes;` |
 
-## Information available on the Databases page
+The following properties are available for all databases:
 
-* Click **Databases** then the database name to access further information on your database.
-
-| Information | Description | Additional information |
+| Property | Description | Additional information |
 |---|---|---|
-| Database ID | Unique identifier required for API and FBSQL connections that do not use user credentials |   |
+| Database ID | Unique identifier for the database required for API and FBSQL connections that do not require user credentials |
 | Status | {% include /concepts/summary-db-states.md %} | [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states) |
 | Memory | Current available memory based on your choice of shaped or serverless database | [Learn about database types](#what-types-of-database-can-i-create) |
 | Owner | User name of account that created the database | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
@@ -48,3 +43,48 @@ Click **Home** to learn about the following metrics:
 | Last modified | Time and date since last alteration and user name that made changes |  |
 | Disk utilization | Actual memory used by database and data |  |
 | Query endpoint URL | Endpoint used for Cloud REST API queries |  |
+
+## How do I view query statistics?
+
+Query statistics can be viewed in two ways:
+
+| Method | Steps |
+|---|---|
+| GUI | Click **Home** |
+| SQL | `SELECT * FROM fb_exec_requests;` |
+
+The following statistics are available:
+
+| Statistic | Description | Additional information |
+|---|---|---|
+| Average query response time | The average time a query takes to execute on your database | Values based on query execution times in `fb_exec_requests system table` | [fb_exec_requests system table](/docs/sql-guide/system-tables/system-tables-home/#fb_exec_requests) |
+| Queries per second | A graph of queries processed each second on the database, updated every 15 seconds | Graph is reset on page refresh |
+
+## How do I view disk utilization ?
+
+You can view disk utilization in two ways:
+
+| Method | Steps |
+|---|---|
+| GUI | Click **Home** |
+| SQL | `SELECT * FROM fb_database_nodes;` |
+
+The following metric is available
+
+| Metric | Description |
+|---|---|
+| Disk utilization | How much disk space is being used by a database and its data |
+
+## Data ingestion
+
+Click **Home** to view the data ingestion graph.
+
+| Metric | Description | Additional information |
+|---|---|
+| Ingested records per second | A graph of records ingested by the database, updated every 15 seconds | Graph reset on page refresh |
+
+## Account information
+
+The **Home** page contains a summary of billing information.
+
+* [Learn more about billing on your account](/docs/cloud/cloud-org-manage)
