@@ -1,5 +1,5 @@
 ---
-title: Provision a small database
+title: Create a small database
 layout: default
 parent: Manage databases
 grand_parent: Cloud
