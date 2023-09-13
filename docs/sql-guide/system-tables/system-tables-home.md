@@ -4,10 +4,12 @@ layout: default
 parent: SQL guide
 ---
 
-# System Tables
+# FeatureBase system tables
 {: .no_toc }
 
-System Tables are logical tables to describe the databases configuration, settings, and metrics.  All tables except `fb_views` are logical, in-memory, and dynamically created upon database creation.
+FeatureBase system tables:
+* contain database configuration, settings, and metrics
+* are logical, in-memory and dynamically created unless stated.
 
 {% include page-toc.md %}
 
@@ -15,7 +17,7 @@ System Tables are logical tables to describe the databases configuration, settin
 
 | System table | Description | Additional information |
 |---|---|---|
-| `fb_views` | Contains a catalog of existing views in the database |  |
+| `fb_views` | Contains a catalog of existing views in the database | Created when one or more views are created |
 | `fb_database_info` | Contains properties and state of each database in the system | One database per row |
 | `fb_database_nodes` | Lists database nodes or **Serverless* database state and worker connectivity | [Learn about Cloud Serverless databases](/docs/cloud/cloud-databases/cloud-db-serverless) |
 | `fb_performance_counters` | Contains metrics on database nodes and database workers |
