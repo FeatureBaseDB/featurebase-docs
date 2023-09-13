@@ -41,10 +41,6 @@ You can also [create a database using the Cloud API](#create-database-using-the-
 
 {% include /cloud-db/cloud-db-create-custom.md %}
 
-## Create database using the Cloud API
-
-* [Databases API reference]
-
 ## How do I learn more about my database?
 
 * [Learn more about your database](/docs/cloud/cloud-databases/cloud-db-metrics)
