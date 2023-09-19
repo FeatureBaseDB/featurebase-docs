@@ -38,30 +38,8 @@ TUPLE(expr1,expr2,...)
 
 ## Examples
 
-### Source table definition
-
-```sql
-create table if not exists tuple-demo (
-    _id STRING,
-    time_col TIMESTAMP,
-    stringset_col STRINGSET,
-    ideset_col IDSET,
-    stringsetq_col STRINGSETQ timequantum 'YMD',
-    idesetq_col IDSETQ timequantum 'Y'
-);
-```
+{% include /sql-guide/create-table-tuple-demo-eg.md %}
 
 {% include /sql-guide/insert-bulk-transform-tuple-eg.md %}
 
-### SELECT statement with `TUPLE()`
-
-```sql
-SELECT _id, TUPLE(time_col, stringset_col, idset_col)
-  AS tup
-  FROM tuple-demo;
-
-_id | tup
-----+-------------------------------------
-  A | (2013-07-15T01:18:46Z,stringset1, 1)
-  B | (2014-07-15T01:18:46Z,stringset2, 2)
-```
+{% include /sql-guide/select-with-tuple-eg.md %}

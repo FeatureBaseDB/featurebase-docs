@@ -120,7 +120,7 @@ Wildcards are used with the `LIKE` clause.
 
 ### SELECT with TUPLE() function
 
-When the `TUPLE()` function is used in a `select_list`, the following values are returned: 
+When the `TUPLE()` function is used in a `select_list`, the following values are returned:
 
 {% include /sql-guide/setq-tuple-returns.md %}
 
@@ -251,10 +251,13 @@ This query can also be performed using the [`flatten` hint](/docs/sql-guide/hint
 
 {% include /sql-guide/select-from-stringsetq-timeq.md %}
 
-## SELECT with one RANGEQ() timestamp
+### SELECT with one RANGEQ() timestamp
 
 {% include /sql-guide/select-from-stringsetq-timeq-one-arg.md %}
 
+{% include /sql-guide/create-table-tuple-demo-eg.md %}
+
+{% include /sql-guide/select-with-tuple-eg.md %}
 
 ## Further information
 
