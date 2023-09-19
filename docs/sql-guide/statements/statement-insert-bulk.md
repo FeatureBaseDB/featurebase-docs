@@ -9,7 +9,11 @@ nav_order: 4
 # BULK INSERT statement
 {: .no_toc }
 
-BULK INSERT is a SQL statement that reads data from various source types, maps data locations and data types, performs optional lightweight data transformations, and loads data to a table [using INSERT statements](/docs/sql-guide/statements/statement-insert)
+BULK INSERT is a SQL statement that:
+* reads data from various sources,
+* maps data locations and data types,
+* performs optional lightweight data transformations,
+* then loads the data to a table [using INSERT statements](/docs/sql-guide/statements/statement-insert)
 
 ![expr](/assets/images/sql-guide/bulk_insert_steps.svg)
 
@@ -76,7 +80,7 @@ BULK INSERT
 | `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [Map examples](#map-examples) |
 | `position` | Ordinal position of value in source. |  |  |
 | `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
-| `TRANSFORM expr` | A number of SQL expressions matching those in the column_list which specify data transformation using ordinal positions defined in the MAP clause.  Variables are evaluated during execution for each row. | Optional | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
+| `TRANSFORM expr` | One or more SQL expressions with dependencies on `column_list` and the `MAP` clause | Optional | [Transform additional](#transform-additional) |
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
 | `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL for data source. | Optional |  |
@@ -95,6 +99,16 @@ BULK INSERT
 | `ALLOW_MISSING_VALUES` | `NDJSON` argument that outputs a `NULL` value from the MAP clause if the path expression fails. | Optional |  |
 
 ## Additional information
+
+### Transform additional
+
+The `TRANSFORM` clause must include:
+* SQL expressions that match those in the `column_list`, and
+* specify data transformations using ordinal positions defined in the `MAP` clause
+
+In addition:
+* IDSETQ and STRINGSETQ data type timestamps and values can be loaded using the [`TUPLE()` function](/docs/sql-guide/functions/function-tuple)
+* Any variables are evaluated during execution for each row.
 
 ### CSV Value Assignment
 There are special assignments for certain literal values when inserting CSV data.
