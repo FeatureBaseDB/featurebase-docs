@@ -106,9 +106,10 @@ The `TRANSFORM` clause must include:
 * SQL expressions that match those in the `column_list`, and
 * specify data transformations using ordinal positions defined in the `MAP` clause
 
-In addition:
-* IDSETQ and STRINGSETQ data type timestamps and values can be loaded using the [`TUPLE()` function](/docs/sql-guide/functions/function-tuple)
-* Any variables are evaluated during execution for each row.
+{: .note}
+Any variables are evaluated during execution for each row.
+
+{% include /sql-guide/setq-tuple-extra.md %}
 
 ### CSV Value Assignment
 There are special assignments for certain literal values when inserting CSV data.
