@@ -1,7 +1,7 @@
 ### Source table `tuple-demo`
 
 ```sql
-create table if not exists tuple-demo (
+CREATE TABLE IF NOT EXISTS tuple-demo (
     _id STRING,
     time_col TIMESTAMP,
     stringset_col STRINGSET,
