@@ -41,6 +41,10 @@ Use the INT data type to perform range queries using `<` or `>`
 
 {% include /sql-guide/ttl-additional.md %}
 
+### `TIMEQUANTUM` values and `TUPLE()` function
+
+The `TUPLE()` function can be used in `SELECT` and `BULK INSERT` statements:
+
 {% include /sql-guide/setq-tuple-extra.md %}
 
 ## Examples

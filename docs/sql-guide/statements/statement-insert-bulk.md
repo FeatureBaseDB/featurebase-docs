@@ -109,7 +109,11 @@ The `TRANSFORM` clause must include:
 {: .note}
 Any variables are evaluated during execution for each row.
 
-{% include /sql-guide/setq-tuple-extra.md %}
+#### TRANSFORM with `TUPLE()` function
+
+When the `TUPLE()` function is used in a `TRANSFORM` clause, the following values are returned: 
+
+{% include /sql-guide/setq-tuple-returns.md %}
 
 ### CSV Value Assignment
 There are special assignments for certain literal values when inserting CSV data.

@@ -34,10 +34,7 @@ TUPLE(expr1,expr2,...)
 |---|---|---|
 | tuple | tuple with an element per evaluated expression `(eval_expr1,eval_expr2,...)` |
 
-| Source data type | Returns |
-|---|---|
-| `IDSETQ` | timestamp and corresponding integer value |
-| `STRINGSETQ` | timestamp and corresponding string value |
+{% include /sql-guide/setq-tuple-returns.md %}
 
 ## Examples
 
