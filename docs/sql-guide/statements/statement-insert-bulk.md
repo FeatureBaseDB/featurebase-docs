@@ -241,6 +241,10 @@ bulk replace
     input 'STREAM';
 ```
 
+### BULK INSERT using TRANSFORM with TUPLE() function
+
+{% include /sql-guide/insert-bulk-transform-tuple-eg.md %}
+
 ## Further information
 
 * [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
