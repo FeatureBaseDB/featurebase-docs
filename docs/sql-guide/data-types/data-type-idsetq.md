@@ -45,7 +45,7 @@ Use the INT data type to perform range queries using `<` or `>`
 
 The `TUPLE()` function can be used in `SELECT` and `BULK INSERT` statements:
 
-{% include /sql-guide/setq-tuple-extra.md %}
+{% include /sql-guide/setq-tuple-returns.md %}
 
 ## Examples
 

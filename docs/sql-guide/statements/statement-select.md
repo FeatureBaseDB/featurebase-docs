@@ -118,7 +118,11 @@ Wildcards are used with the `LIKE` clause.
 | `expr` | Filter used to refine the query | [`<expr>` filter](#expr-filter) |
 | `<qualifier>.*` | limit the results to all columns based on the specified qualifier |  |
 
-{% include /sql-guide/setq-tuple-extra.md %}
+### SELECT with TUPLE() function
+
+When the `TUPLE()` function is used in a `select_list`, the following values are returned: 
+
+{% include /sql-guide/setq-tuple-returns.md %}
 
 ### FROM table or subquery
 

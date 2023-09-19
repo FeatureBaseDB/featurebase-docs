@@ -44,7 +44,7 @@ The STRINGSETQ data type:
 
 The `TUPLE()` function can be used in `SELECT` and `BULK INSERT` statements:
 
-{% include /sql-guide/setq-tuple-extra.md %}
+{% include /sql-guide/setq-tuple-returns.md %}
 
 ## Examples
 
