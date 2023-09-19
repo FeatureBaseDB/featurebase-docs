@@ -61,34 +61,6 @@ SELECT
   [<order_by_clause>];
 ```
 
-<!-- Alternate SYNTAX
-SELECT
-  [DISTINCT]
-  [TOP|TOPN (expr]
-  {[select-item,...]| AS | column_alias | [qualifier.]* }
-  {FROM
-    [table | subquery],...] |
-    [
-      [identifier | table_valued_function] [AS] | [table_alias] | [table_options]
-    ]
-    [
-      [shards (integer_literal,...)] |
-      [flatten (identifier)]
-    ]
-  }
-  WHERE expr
-  GROUP BY [column | order_by_expression]
-
-  col-name,...}
-  [WHERE ]
-  [Having]
-  GROUP BY
-
-  ORDER BY [col_name | num_results] [asc | desc]
--->
-
-SELECT id, description, cosine_distance([-0.027067707851529, 0.009963636286557, 0.034747183322906], dabed) AS rank FROM products;
-
 ## Arguments
 
 | Argument | Description | Required | Additional information |
@@ -145,6 +117,8 @@ Wildcards are used with the `LIKE` clause.
 | <column_alias> | Select List column alias |  |
 | `expr` | Filter used to refine the query | [`<expr>` filter](#expr-filter) |
 | `<qualifier>.*` | limit the results to all columns based on the specified qualifier |  |
+
+{% include /sql-guide/setq-tuple-extra.md %}
 
 ### FROM table or subquery
 
