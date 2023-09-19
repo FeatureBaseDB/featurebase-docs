@@ -7,19 +7,19 @@ grand_parent: SQL guide
 
 # TUPLE() function
 
-The `TUPLE()` function takes in n arguments and returns a tuple containing an element for each argument.
+`TUPLE()` is a mathematical function that returns an ordered list of values corresponding to and derived from a supplied argument.
 
 ## Syntax
 
-```
+```sql
 TUPLE (
   [ordinal_position,...] |
   [column_name,...]
   )
-
-
-TUPLE(expr1,expr2,...)
 ```
+<!-- original syntax
+TUPLE(expr1,expr2,...)
+-->
 
 ## Arguments
 

@@ -111,7 +111,7 @@ Any variables are evaluated during execution for each row.
 
 #### TRANSFORM with `TUPLE()` function
 
-When the `TUPLE()` function is used in a `TRANSFORM` clause, the following values are returned: 
+When the `TUPLE()` function is used in a `TRANSFORM` clause, the following values are returned:
 
 {% include /sql-guide/setq-tuple-returns.md %}
 
