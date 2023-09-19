@@ -25,8 +25,8 @@ TUPLE(expr1,expr2,...)
 
 | Argument | Description | Required | Further information |
 |---|---|---|---|
-| `ordinal_position` | An ordinal position defined in the `MAP` clause of a `BULK INSERT` statement | For BULK INSERT `TRANSFORM` clause | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk) |
-| `column_name`| Table column name in existing table | Optional in SELECT statement | [SELECT statement](/docs/sql-guide/statements/statement-select) |
+| `ordinal_position` | An ordinal position defined in the `MAP` clause of a `BULK INSERT` statement | When used in BULK INSERT `TRANSFORM` clause | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk) |
+| `column_name`| Table column name in existing table | When used in SELECT statement `select-list` | [SELECT statement](/docs/sql-guide/statements/statement-select) |
 
 ## Returns
 
