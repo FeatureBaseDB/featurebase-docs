@@ -7,8 +7,11 @@ nav_order: 7
 ---
 
 # SELECT statement
+{: .no_toc }
 
 Returns data from FeatureBase tables based on specified rows, columns and clauses.
+
+{% include page-toc.md %}
 
 ## BNF diagrams
 
@@ -57,34 +60,6 @@ SELECT
   [<having_clause>]
   [<order_by_clause>];
 ```
-
-<!-- Alternate SYNTAX
-SELECT
-  [DISTINCT]
-  [TOP|TOPN (expr]
-  {[select-item,...]| AS | column_alias | [qualifier.]* }
-  {FROM
-    [table | subquery],...] |
-    [
-      [identifier | table_valued_function] [AS] | [table_alias] | [table_options]
-    ]
-    [
-      [shards (integer_literal,...)] |
-      [flatten (identifier)]
-    ]
-  }
-  WHERE expr
-  GROUP BY [column | order_by_expression]
-
-  col-name,...}
-  [WHERE ]
-  [Having]
-  GROUP BY
-
-  ORDER BY [col_name | num_results] [asc | desc]
--->
-
-SELECT id, description, cosine_distance([-0.027067707851529, 0.009963636286557, 0.034747183322906], dabed) AS rank FROM products;
 
 ## Arguments
 
@@ -142,6 +117,12 @@ Wildcards are used with the `LIKE` clause.
 | <column_alias> | Select List column alias |  |
 | `expr` | Filter used to refine the query | [`<expr>` filter](#expr-filter) |
 | `<qualifier>.*` | limit the results to all columns based on the specified qualifier |  |
+
+### SELECT with TUPLE() function
+
+When the `TUPLE()` function is used in a `select_list`, the following values are returned:
+
+{% include /sql-guide/setq-tuple-returns.md %}
 
 ### FROM table or subquery
 
@@ -266,6 +247,17 @@ This query can also be performed using the [`flatten` hint](/docs/sql-guide/hint
 
 {% include /sql-guide/select-cosine-distance.md %}
 
+### SELECT with two RANGEQ() timestamps
+
+{% include /sql-guide/select-from-stringsetq-timeq.md %}
+
+### SELECT with one RANGEQ() timestamp
+
+{% include /sql-guide/select-from-stringsetq-timeq-one-arg.md %}
+
+{% include /sql-guide/create-table-tuple-demo-eg.md %}
+
+{% include /sql-guide/select-with-tuple-eg.md %}
 
 ## Further information
 
