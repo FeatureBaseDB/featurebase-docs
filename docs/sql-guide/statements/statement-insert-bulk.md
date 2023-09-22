@@ -9,13 +9,19 @@ nav_order: 4
 # BULK INSERT statement
 {: .no_toc }
 
-BULK INSERT is a SQL statement that reads data from various source types, maps data locations and data types, performs optional lightweight data transformations, and loads data to a table [using INSERT statements](/docs/sql-guide/statements/statement-insert)
+BULK INSERT is a SQL statement that:
+* reads data from various sources,
+* maps data locations and data types,
+* performs optional lightweight data transformations,
+* then loads the data to a table [using INSERT statements](/docs/sql-guide/statements/statement-insert)
+
+In some cases, the data will be pre-sorted by internal FeatureBase partition before being ingested by multiple concurrent routines.
 
 ![expr](/assets/images/sql-guide/bulk_insert_steps.svg)
 
 Sources can include:
-* file
-* URL
+* file(s)
+* URL(s)
 * inline blob
 
 Supported formats include:
@@ -76,18 +82,19 @@ BULK INSERT
 | `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [Map examples](#map-examples) |
 | `position` | Ordinal position of value in source. |  |  |
 | `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
-| `TRANSFORM expr` | A number of SQL expressions matching those in the column_list which specify data transformation using ordinal positions defined in the MAP clause.  Variables are evaluated during execution for each row. | Optional | [TRANSFORM examples](/docs/sql-guide/statements/statement-insert-bulk/#transform-clause-1) |
+| `TRANSFORM expr` | One or more SQL expressions with dependencies on `column_list` and the `MAP` clause | Optional | [Transform additional](#transform-additional) |
 | `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
 | `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
-| `'URL'` | Valid URL for data source. | Optional |  |
+| `'URL'` | Valid URL(s) for data sources. | Optional | Multiple URLs may be passed separated by whitespace. If newlines are used, must use an x before the quote like `x'URL<newline>URL'` |
 | `x'records'` | CSV or NDJSON records as a string literal. | Required for INLINE | Not supported for `FORMAT 'PARQUET'` |
 | `WITH` | Pass one or more statement level options. | Optional |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional | Can be used with `STREAM` to batch records as they are streamed to the server where batching not available on client |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |
 | `INPUT` | Input values must match those used in the `FROM` clause |  |  |
 | `'INLINE'` | Used for data included directly from the `FROM` clause with contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` Format | [INLINE quotation marks](#using-inline-with-quotation-marks) |
-| `'STREAM'` | `STREAM` supports a streaming payload using an http multipart POST. | Optional | [BULK INSERT with STREAM](#bulk-insert-with-stream) |
+| `'STREAM'` | `STREAM` supports a streaming payload using an HTTP multipart POST. | Optional | [BULK INSERT with STREAM](#bulk-insert-with-stream) |
 | `FORMAT` | Set the format of the source data to `'CSV'`, `'NDJSON'` or `'PARQUET'` | Optional | `'PARQUET'` does not support `INPUT (INLINE)` |
+| `CONCURRENCY` | Number of concurrent workers to ingest the data after it has been presorted. Default `8`. | Optional | Only applies to CSV and NDJSON currently as PARQUET does not yet presort. |
 | `NULL_AS_EMPTY_SET` | Argument that will coerce all `NULL` values resulting from the `MAP` clause into `[]` (empty sets) for all target columns with `SET` datatypes | Optional |  |
 | `HEADER_ROW` | `CSV` argument that will ignore the header in the source CSV file. | Optional |  |
 | `CSV_EMPTY_STRING_AS_NULL` | `CSV` argument that will assign `""` value as `null` | Optional |  |
@@ -95,6 +102,21 @@ BULK INSERT
 | `ALLOW_MISSING_VALUES` | `NDJSON` argument that outputs a `NULL` value from the MAP clause if the path expression fails. | Optional |  |
 
 ## Additional information
+
+### Transform additional
+
+The `TRANSFORM` clause must include:
+* SQL expressions that match those in the `column_list`, and
+* specify data transformations using ordinal positions defined in the `MAP` clause
+
+{: .note}
+Any variables are evaluated during execution for each row.
+
+#### TRANSFORM with `TUPLE()` function
+
+When the `TUPLE()` function is used in a `TRANSFORM` clause, the following values are returned:
+
+{% include /sql-guide/setq-tuple-returns.md %}
 
 ### CSV Value Assignment
 There are special assignments for certain literal values when inserting CSV data.
@@ -215,17 +237,29 @@ with
 
 ### BULK INSERT with STREAM
 
+Using input STREAM requires making an HTTP multipart form POST request. The argument to FROM may be `'*'` and all files attached to the request will be streamed in and ingested together. The fbsql CLI tool implements the multipart POST and you would use it as follows:
+
 ```sql
+\file myfile.csv
+\file myfile2.csv
+\file myfile3.csv
+
 bulk replace
   into insert_test (_id, int1, string1, timestamp1)
   map (0 id, 1 int, 2 string)
   transform (@0, @1, @2, current_timestamp)
   from
-    'icsv'
+    '*'
   with
     format 'CSV'
     input 'STREAM';
 ```
+
+This would ingest all three files in a single request.
+
+### BULK INSERT using TRANSFORM with TUPLE() function
+
+{% include /sql-guide/insert-bulk-transform-tuple-eg.md %}
 
 ## Further information
 
