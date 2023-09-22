@@ -13,6 +13,8 @@ nav_order: 2
 
 There are two methods to provision the sample database with an approximate duration of 10 minutes.
 
+{% include /cloud-db/cloud-db-custom-note.md %}
+
 {% include page-toc.md %}
 
 ## Before you begin

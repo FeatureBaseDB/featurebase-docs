@@ -11,6 +11,8 @@ nav_order: 1
 
 {% include /cloud-db/cloud-small-db-summary.md %}
 
+{% include /cloud-db/cloud-db-custom-note.md %}
+
 {% include page-toc.md %}
 
 ## Before you begin
