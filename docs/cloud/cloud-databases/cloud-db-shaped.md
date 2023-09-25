@@ -34,3 +34,8 @@ Making alterations to processor and memory can only be performed by:
 * recreating the database from scratch
 * recreating the table(s)
 * migrating data to new destination tables
+
+SELECT * FROM <yourtable>
+Export as CSV
+
+Import data
