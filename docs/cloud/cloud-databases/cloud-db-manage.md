@@ -31,13 +31,13 @@ You can also [create a database using the Cloud API](#create-database-using-the-
 
 * [Learn how to create a small database](/docs/cloud/cloud-databases/cloud-db-create-small)
 
-## Create sample database
+## Create a sample database
 
 {% include /cloud-db/cloud-sample-db-summary.md %}
 
 * [Learn how to create a sample database](/docs/cloud/cloud-databases/cloud-db-create-sample)
 
-## Create custom database
+## Create a custom database
 
 {% include /cloud-db/cloud-db-create-custom.md %}
 
