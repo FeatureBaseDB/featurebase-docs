@@ -1,25 +1,22 @@
 ---
-title: Create cloud database
+title: Create custom database
 layout: default
 parent: Manage databases
 grand_parent: Cloud
 nav_order: 3
 ---
 
-# How do I create a cloud database?
+# How do I create a custom database?
 {: .no_toc }
 
-There are two ways to provision a database with a custom configuration in FeatureBase Cloud.
-
-{: .note }
-You can also [create a database with pre-loaded data](/docs/cloud/cloud-databases/cloud-db-create-sample)
-
-{% include page-toc.md %}
+There are three ways to provision a database with a custom configuration in FeatureBase Cloud.
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
+
+{% include page-toc.md %}
 
 ## What types of database are available?
 
