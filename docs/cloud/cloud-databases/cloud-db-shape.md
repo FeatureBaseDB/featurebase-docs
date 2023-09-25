@@ -3,16 +3,13 @@ title: Database shapes
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 1
+nav_exclude: true
 ---
-
-# What types of database can I create in FeatureBase Cloud?
+<!--this page is retained because it's linked from the cloud GUI. However a redesign has taken place with new page structure-->
+# What are shaped databases?
 {: .no_toc }
 
-{% include /cloud-db/cloud-summary-db-shape.md %}
-
-{: .important}
-Cloud Database shapes incur an hourly fee, chargeable at the end of the month.
+{% include /cloud-db/cloud-db-shaped-summary.md %}
 
 {% include page-toc.md %}
 
@@ -20,9 +17,13 @@ Cloud Database shapes incur an hourly fee, chargeable at the end of the month.
 
 {% include /cloud/cloud-before-begin.md %}
 
-## Database Shapes
+{% include /cloud-db/cloud-db-shape-benefits.md %}
 
-{% include /cloud-db/cloud-db-total-shapes.md %}
+{% include /cloud-db/cloud-db-shape-limits.md %}
+
+{% include /cloud-db/cloud-db-shape-pricing.md %}
+
+{% include /cloud-db/cloud-db-shape-create.md %}
 
 ## Further information
 

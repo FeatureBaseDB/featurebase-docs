@@ -16,9 +16,7 @@ There are three ways to provision a database with a custom configuration in Feat
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
-{% include page-toc.md %}
-
-## What types of database are available?
+## What types of custom database are available?
 
 {% include /cloud-db/cloud-db-create-custom.md %}
 
