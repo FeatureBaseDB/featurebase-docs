@@ -13,7 +13,7 @@ has_toc: false
 When you login to FeatureBase for the first time, or have deleted all databases, you're offered three choices for a first database:
 
 * **Start with a small database** which is suitable for small projects or testing
-* **Create a sample database** containing terabytes of data you can query to test if FeatureBase meets your expectations
+* **Create a sample database** containing terabytes of data you can use to evaluate FeatureBase at scale
 * **Create a custom database** that meets your specific needs
 
 {: .note}

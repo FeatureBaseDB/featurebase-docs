@@ -17,7 +17,7 @@ nav_order: 1
 {: .no_toc}
 {% include /cloud/cloud-before-begin.md %}
 
-### Method one - provision the database with an auto-generated name
+## Method one - provision the database with an auto-generated name
 
 {% include /cloud/homepage-db-create-options.md %} under **Start with a small database**
 
