@@ -22,7 +22,9 @@ This process works for any FeatureBase database.
 * [Learn how to install fbsql](/docs/tools/fbsql/fbsql-install)
 * [Connect to your Cloud database using fbsql](/docs/tools/fbsql/fbsql-connect-cloud-db)
 
-## Part one - obtain table definitions and download data
+## Part one - Backup your tables and data
+
+
 
 ### Step 1 - Generate SQL to recreate your tables
 
