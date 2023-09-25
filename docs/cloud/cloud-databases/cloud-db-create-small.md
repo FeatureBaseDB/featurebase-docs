@@ -13,8 +13,6 @@ nav_order: 1
 
 {% include /cloud-db/cloud-db-custom-note.md %}
 
-{% include page-toc.md %}
-
 ## Before you begin
 {: .no_toc}
 {% include /cloud/cloud-before-begin.md %}
