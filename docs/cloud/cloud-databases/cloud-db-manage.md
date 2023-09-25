@@ -49,9 +49,7 @@ You can also [create a database using the Cloud API](#create-database-using-the-
 
 {% include /cloud-db/cloud-db-backup.md %}
 
-## How do I drop my database?
-
-* [Drop database](/docs/cloud/cloud-databases/cloud-db-delete)
+{% include /cloud-db/cloud-db-drop-methods.md %}
 
 ## Next step
 

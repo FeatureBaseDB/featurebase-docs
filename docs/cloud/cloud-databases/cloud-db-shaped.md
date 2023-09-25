@@ -12,7 +12,6 @@ nav_order: 1
 
 ## Before you begin
 
-{% include /cloud/cloud-before-begin.md %}
 * [Learn how to assess your database needs using Data Modeling](/docs/concepts/concept-data-modeling)
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
@@ -24,18 +23,10 @@ nav_order: 1
 
 {% include /cloud-db/cloud-db-shape-create.md %}
 
-{% include /cloud-db/cloud-db-drop-methods.md %}
-
-
-
 ## How do I alter a shaped database?
 
-Making alterations to processor and memory can only be performed by:
-* recreating the database from scratch
-* recreating the table(s)
-* migrating data to new destination tables
+A shaped database cannot be altered, only recreated.
 
-SELECT * FROM <yourtable>
-Export as CSV
+* [Learn how to recreate your tables and migrate data to a new database](/docs/cloud/cloud-db-shaped-alter)
 
-Import data
+{% include /cloud-db/cloud-db-drop-methods.md %}
