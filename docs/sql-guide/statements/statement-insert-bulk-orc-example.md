@@ -1,31 +1,32 @@
 ---
-title: BULK INSERT Parquet example
+title: BULK INSERT ORC example
 layout: default
 parent: Statements
 grand_parent: SQL guide
 nav_order: 5
 ---
 
-# BULK INSERT example using Apache Parquet formatted data source
+# BULK INSERT example using ORC formatted data source
 
 This example demonstrates how to:
 
 * Create a FeatureBase table with a required structure
-* Copy and transform data from an parquet source
+* Copy and transform data from an ORC source
 * Use the `BULK INSERT` statement to copy data from the source to the target table.
 
 ## Before you begin
 
-{% include /sql-guide/bulk-insert-eg-before-begin.md%}
-* [Learn about the Apache Parquet format](https://parquet.apache.org/){:target="_blank"}
+* {% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* [Learn about the Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
 
 ## Step 1: create table
 
 ```sql
-CREATE TABLE sample (
-    _id id,
-    x int,
-    y decimal(4)
+CREATE TABLE sampleorc (
+    _id ID,
+    a STRING,
+    b BOOL,
+    c INT
 );
 ```
 
@@ -33,15 +34,16 @@ CREATE TABLE sample (
 
 ```sql
 BULK INSERT
-      INTO sample(_id,x,y )
+      INTO sampleorc(_id,a,b,c )
       MAP(
-    'id' id,
-    'intval' int,
-    'decval' decimal(4) )
+    0 id,
+    1 STRING,
+    2 BOOL
+    3 INT )
  FROM
-	'https://s3.amazonaws.com/todd-scratch.molecula.com/sample.parquet'
+	'https://sample-files-hh.s3.us-east-2.amazonaws.com/samplefile.orc'
  WITH
-    FORMAT 'PARQUET'
+    FORMAT 'ORC'
     INPUT 'URL';
 ```
 
@@ -49,7 +51,7 @@ BULK INSERT
 ## Step 3: query the data
 
 ```sql
-SELECT TOP(10) * FROM sample;
+SELECT * FROM sampleorc;
 ```
 
 ## Further information

@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 6
 ---
 
-# BULK INSERT example using NDJSON file
+# BULK INSERT example using NDJSON formatted data source
 
 This example demonstrates how to:
 
@@ -17,6 +17,7 @@ This example demonstrates how to:
 ## Before you begin
 
 {% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* [Learn about the New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
 
 ## Step 1: create `github-stats` table
 
@@ -111,5 +112,5 @@ SELECT TOP(10) * FROM github-stats;
 
 ## Further information
 
-* [BULK INSERT using CSV data source](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
-* [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+* [SELECT statement](/docs/sql-guide/statements/statement-select)
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
