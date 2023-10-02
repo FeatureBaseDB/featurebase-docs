@@ -3,6 +3,7 @@ title: BULK INSERT with Tuple and SET
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
+nav_order: 20
 ---
 
 # BULK INSERT data using TUPLE into SET columns

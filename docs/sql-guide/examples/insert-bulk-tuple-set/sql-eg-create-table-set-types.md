@@ -3,6 +3,7 @@ title: CREATE TABLE tuple csv
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
+nav_order: 2
 ---
 
 ## CREATE TABLE for BULK INSERT using tuple
