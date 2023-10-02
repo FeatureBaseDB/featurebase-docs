@@ -10,6 +10,38 @@ has_toc: false
 
 End-to-end SQL examples.
 
+<!-- Conceptualisation, experimentation IN PROGRESS
+
+## Data type examples
+
+| Feature | CREATE TABLE | INSERT | BULK INSERT | Query |
+|---|---|---|---|
+| `IDSET` data type |  |  |  |
+| `STRINGSET` data type |
+| `IDSETQ` data type |
+| `STRINGSETQ` data type |
+
+## Function examples
+
+| Function |
+|---|
+| `FORMAT()` |
+| `IDENTIFER()` |
+| `PREFIX()` |
+| `RANGEQ()` |
+| `TANIMOTO()` |
+| `TOTIMESTAMP()` |
+| `TUPLE()` |
+| `VECTOR()` |
+
+IDEALLY want a way the user can just cross-ref what they need in a table and then click to open the examples.
+PROBLEM is, there's so many variants that the table would become multi-dimensional
+HYPOTHESIS: put it together in a FeatureBase table
+IN SHORT: Dogfood the product for the examples
+
+-->
+
+
 ## CREATE TABLE statements
 
 | CREATE TABLE | BULK INSERT |
