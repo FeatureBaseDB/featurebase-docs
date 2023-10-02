@@ -3,7 +3,6 @@ title: BULK INSERT JSON example
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
-nav_order: 6
 ---
 
 # BULK INSERT example using NDJSON formatted data source

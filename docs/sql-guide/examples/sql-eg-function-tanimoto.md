@@ -1,11 +1,8 @@
 ---
 title: Tanimoto cookbook
 layout: default
-has_children: true
 parent: SQL Examples
 grand_parent: SQL guide
-nav_order: 1
-has_toc: true
 nav_exclude: true
 ---
 

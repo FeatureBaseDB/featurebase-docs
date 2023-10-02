@@ -3,7 +3,6 @@ title: BULK INSERT Parquet example
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
-nav_order: 5
 ---
 
 # BULK INSERT example using Apache Parquet formatted data source
