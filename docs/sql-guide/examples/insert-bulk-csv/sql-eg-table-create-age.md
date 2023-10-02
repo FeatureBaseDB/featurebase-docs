@@ -16,20 +16,7 @@ This table is required for the BULK INSERT example using a CSV data source.
 
 ## CREATE TABLE statement
 
-```sql
-CREATE TABLE age (
-    _id STRING,
-    name STRING,
-    description STRING,
-    gender STRING,
-    country STRING,
-    occupation STRING,
-    birth_year INT min -32767 max 32767,
-    death_year INT min -32767 max 32767,
-    death_manner STRING,
-    birth_age INT min -32767 max 32767
-);
-```
+{% include /sql-guide/sql-eg-table-create-bulk-insert-csv.md %}
 
 ## Next step
 

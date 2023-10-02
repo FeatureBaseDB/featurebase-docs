@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # BULK INSERT example using CSV formatted data source
 
-This `BULK INSERT` example demonstrates how source data at a specified URL can be mapped then copied to destination table columns.
+This `BULK INSERT` example demonstrates how source data at a specified URL can be mapped to destination table columns.
 
 {: .warning}
 The CSV file is 147MB and may take some time to download.
