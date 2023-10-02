@@ -13,7 +13,7 @@ This `BULK INSERT` statement uses the `TRANSFORM...TUPLE` clause to insert data 
 
 * [Part 1 - CREATE TABLE for this example](/docs/sql-guide/examples/insert-bulk-tuple-set/sql-eg-create-table-tuple-set)
 
-{% include /sql-guide/tip-show-table-for-structure.md %}
+{% include /tips/tip-show-table-for-structure.md %}
 
 ## BULK INSERT statement
 
