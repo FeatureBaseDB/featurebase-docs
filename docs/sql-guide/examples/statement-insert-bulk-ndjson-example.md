@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT JSON example
 layout: default
-parent: Statements
+parent: SQL Examples
 grand_parent: SQL guide
 nav_order: 6
 ---

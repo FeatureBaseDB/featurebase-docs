@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT Parquet example
 layout: default
-parent: Statements
+parent: SQL Examples
 grand_parent: SQL guide
 nav_order: 5
 ---
