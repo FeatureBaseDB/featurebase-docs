@@ -16,7 +16,20 @@ This table is required for the BULK INSERT example using a CSV data source.
 
 ## CREATE TABLE statement
 
-{% include /sql-guide/sql-eg-table-create-bulk-insert-csv.md %}
+```sql
+CREATE TABLE age (
+  _id string,
+  name string,
+  description string,
+  gender string,
+  country string,
+  occupation string,
+  birth_year int,
+  death_year int,
+  death_manner string,
+  birth_age int
+);
+```
 
 ## Next step
 
