@@ -42,6 +42,8 @@ The data source must be in one of the following formats:
 ### Column list
 ![expr](/assets/images/sql-guide/column_list.svg)
 
+{% include /tips/tip-show-table-for-structure.md %}
+
 ### Map list
 ![expr](/assets/images/sql-guide/map_list.svg)
 

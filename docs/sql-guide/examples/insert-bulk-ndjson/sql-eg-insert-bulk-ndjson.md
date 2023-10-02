@@ -16,8 +16,8 @@ This example demonstrates how to:
 
 ## Before you begin
 
-{% include /sql-guide/bulk-insert-eg-before-begin.md%}
 * [Learn about the New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 
 ## Step 1: create `github-stats` table
 
@@ -42,6 +42,8 @@ created_at TIMESTAMP
 ```
 
 ## Step 2: BULK INSERT data to `github-stats` table
+
+{% include /tips/tip-show-table-for-structure.md %}
 
 ```sql
 BULK INSERT INTO github-stats (

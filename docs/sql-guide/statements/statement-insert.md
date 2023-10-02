@@ -17,6 +17,8 @@ nav_order: 3
 ### column_list
 ![expr](/assets/images/sql-guide/column_list.svg)
 
+{% include /tips/tip-show-table-for-structure.md %}
+
 ### value_list
 ![expr](/assets/images/sql-guide/value_list.svg)
 

@@ -16,8 +16,8 @@ This example demonstrates how to:
 
 ## Before you begin
 
-* {% include /sql-guide/bulk-insert-eg-before-begin.md%}
 * [Learn about the Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 
 ## Step 1: create table
 
@@ -31,6 +31,8 @@ CREATE TABLE sampleorc (
 ```
 
 ## Step 2: ingest data
+
+{% include /tips/tip-show-table-for-structure.md %}
 
 ```sql
 BULK INSERT
