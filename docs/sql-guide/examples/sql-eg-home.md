@@ -7,3 +7,41 @@ nav_order: 8
 has_toc: true
 ---
 # FeatureBase SQL Examples
+
+End-to-end SQL examples with use cases.
+
+<!--
+
+Need some way to categorize, to make clear what's included in each
+
+For example:
+
+| Statement | Data types | Clauses | Functions | Operators | Relates to |
+|---|---|---|---|---|
+| statement | data types in the statement | clauses | ditto | ditto | the next statement(s) in the sequence |
+## DATABASE statements
+
+
+## TABLE statements
+
+
+
+
+## INSERT statements
+
+
+## VIEW statements
+
+
+
+##
+
+
+-->
+
+## BULK INSERT statements
+
+* [BULK INSERT using CSV data source](/docs/sql-guide/examples/statement-insert-bulk-csv-example)
+* [BULK INSERT using ndJSON data source](/docs/sql-guide/examples/statement-insert-bulk-ndjson-example)
+* [BULK INSERT using ORC data source](/docs/sql-guide/examples/statement-insert-bulk-ork-example)
+* [BULK INSERT using Apache Parquet data source](/docs/sql-guide/examples/statement-insert-bulk-parquet-example)
