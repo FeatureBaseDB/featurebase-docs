@@ -41,7 +41,7 @@ For example:
 
 ## BULK INSERT statements
 
-* [BULK INSERT using CSV data source](/docs/sql-guide/examples/statement-insert-bulk-csv-example)
-* [BULK INSERT using ndJSON data source](/docs/sql-guide/examples/statement-insert-bulk-ndjson-example)
+* [BULK INSERT using CSV data source](/docs/sql-guide/examples/sql-eg-insert-bulk-csv)
+* [BULK INSERT using ndJSON data source](/docs/sql-guide/examples/sql-eg-insert-bulk-ndjson)
 * [BULK INSERT using ORC data source](/docs/sql-guide/examples/statement-insert-bulk-ork-example)
-* [BULK INSERT using Apache Parquet data source](/docs/sql-guide/examples/statement-insert-bulk-parquet-example)
+* [BULK INSERT using Apache Parquet data source](/docs/sql-guide/examples/sql-eg-insert-bulk-parquet)

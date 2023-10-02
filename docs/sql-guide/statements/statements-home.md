@@ -51,7 +51,7 @@ SQL statements can be executed in the Query editor.
 
 ## Further Information
 
-* [BULK INSERT using CSV file](/docs/sql-guide/examples/statement-insert-bulk-csv-example)
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/examples/statement-insert-bulk-ndjson-example)
-* [BULK INSERT using Parquet data source](/docs/sql-guide/examples/statement-insert-bulk-parquet-example)
-* [BULK INSERT using ORC data source](/docs/sql-guide/examples/statement-insert-bulk-orc-example)
+* [BULK INSERT using CSV file](/docs/sql-guide/examples/sql-eg-insert-bulk-csv)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/examples/sql-eg-insert-bulk-ndjson)
+* [BULK INSERT using Parquet data source](/docs/sql-guide/examples/sql-eg-insert-bulk-parquet)
+* [BULK INSERT using ORC data source](/docs/sql-guide/examples/sql-eg-insert-bulk-orc)
