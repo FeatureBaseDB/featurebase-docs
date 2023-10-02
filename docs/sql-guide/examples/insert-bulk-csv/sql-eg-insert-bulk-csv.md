@@ -7,35 +7,23 @@ grand_parent: SQL guide
 
 # BULK INSERT example using CSV formatted data source
 
+This `BULK INSERT` example demonstrates how to:
+* use the `MAP` clause to identify which column data from the CSV file is mapped to
+*
 This example demonstrates how to:
 
-* Create a FeatureBase table with a required structure
 * Copy and transform data from an CSV source
 * Use the `BULK INSERT` statement to copy data from the source to the target table.
 
+{: .warning}
+The CSV file is 147MB and may take some time to download.
+
 ## Before you begin
 
-{% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* [CREATE destination table](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-create-table-age)
 * [Learn about the Comma separated value (CSV) format](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
 
-## Step 1: create table
-
-```sql
-CREATE TABLE age (
-    _id STRING,
-    name STRING,
-    description STRING,
-    gender STRING,
-    country STRING,
-    occupation STRING,
-    birth_year INT min -32767 max 32767,
-    death_year INT min -32767 max 32767,
-    death_manner STRING,
-    birth_age INT min -32767 max 32767
-);
-```
-
-## Step 2: ingest data
+## BULK INSERT statement
 
 ```sql
 BULK INSERT
@@ -61,7 +49,16 @@ WITH
 
 ```
 
-## Step 3: query the data
+## Arguments
+
+| Argument | Description |
+|---|---|
+| `BULK INSERT INTO <column-list>` | The destination table `<column-list>` is used by the `MAP` clause |
+| `MAP` clause | The clause maps to the `<column-list>` in sequential order, starting at `0` which corresponds to the `_id` column |
+| `FROM` clause | The URL of the CSV data source |
+| `WITH` clause | States the number of rows to batch, data source `FORMAT` and the method of `INPUT` and that the data source has a `HEADER_ROW` |
+
+## Run queries on the data
 
 ```sql
 SELECT COUNT(*) FROM age;

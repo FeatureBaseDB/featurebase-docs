@@ -10,6 +10,11 @@ has_toc: false
 
 End-to-end SQL examples.
 
+## CREATE TABLE statements
+
+* [CREATE TABLE age](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-age)
+
+
 <!--
 
 Need some way to categorize, to make clear what's included in each
@@ -41,7 +46,7 @@ For example:
 
 ## BULK INSERT statements
 
-* [BULK INSERT using CSV data source](/docs/sql-guide/examples/sql-eg-insert-bulk-csv)
-* [BULK INSERT using ndJSON data source](/docs/sql-guide/examples/sql-eg-insert-bulk-ndjson)
-* [BULK INSERT using ORC data source](/docs/sql-guide/examples/statement-insert-bulk-ork-example)
-* [BULK INSERT using Apache Parquet data source](/docs/sql-guide/examples/sql-eg-insert-bulk-parquet)
+* [BULK INSERT using CSV data source](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv)
+* [BULK INSERT using ndJSON data source](/docs/sql-guide/examples/insert-bulk-ndjson/sql-eg-insert-bulk-ndjson)
+* [BULK INSERT using ORC data source](/docs/sql-guide/examples/insert-bulk-orc/statement-insert-bulk-orc-example)
+* [BULK INSERT using Apache Parquet data source](/docs/sql-guide/examples/insert-bulk-parquet/sql-eg-insert-bulk-parquet)
