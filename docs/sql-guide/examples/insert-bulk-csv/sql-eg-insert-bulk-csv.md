@@ -22,7 +22,7 @@ The CSV file is 147MB and may take some time to download.
 
 ```sql
 BULK INSERT
-INTO age (_id, name, description, gender, country, occupation,
+INTO pii (_id, name, description, gender, country, occupation,
     birth_year, death_year, death_manner, birth_age )
 MAP(0 STRING,
 1 STRING,
@@ -47,18 +47,18 @@ WITH
 
 | Argument | Description |
 |---|---|
-| `BULK INSERT INTO <column-list>` | The destination table `<column-list>` is used by the `MAP` clause |
-| `MAP` clause | The clause maps to the `<column-list>` in sequential order, starting at `0` which corresponds to the `_id` column |
+| `BULK INSERT INTO` | The destination table `<column-list>` is used by the `MAP` clause |
+| `MAP` clause | A sequential order of integer values, starting at 0 that map to the <column-list> |
 | `FROM` clause | The URL of the CSV data source |
 | `WITH` clause | States the number of rows to batch, data source `FORMAT` and the method of `INPUT` and that the data source has a `HEADER_ROW` |
 
 ## Run queries on the data
 
 ```sql
-SELECT COUNT(*) FROM age;
+SELECT COUNT(*) FROM pii;
 ```
 ```sql
-SELECT TOP(10) * FROM age;
+SELECT TOP(10) * FROM pii;
 ```
 
 ## Further information

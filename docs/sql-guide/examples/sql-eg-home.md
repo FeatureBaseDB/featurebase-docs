@@ -12,7 +12,10 @@ End-to-end SQL examples.
 
 ## CREATE TABLE statements
 
-* [CREATE TABLE age](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-age)
+| CREATE TABLE | BULK INSERT |
+|---|---|
+| [CREATE TABLE eg-age](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-age) | [BULK INSERT using CSV data source](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv) |
+| [CREATE TABLE eg-set-types](/docs/sql)
 
 
 <!--

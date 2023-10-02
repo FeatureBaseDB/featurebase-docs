@@ -9,7 +9,7 @@ grand_parent: SQL guide
 
 The following CREATE TABLE statement includes FeatureBase `SET` data types which permit an `INSERT` of low cardinality data to single table rows.
 
-The Table definition is required for a BULK INSERT example using the TUPLE function.
+This table definition is required for a BULK INSERT example using the TUPLE function.
 
 ## Before you begin
 
@@ -22,14 +22,14 @@ The Table definition is required for a BULK INSERT example using the TUPLE funct
 ## CREATE TABLE
 
 ```sql
-CREATE TABLE (
+CREATE TABLE doctest-tuple (
   _id string,
   time_col TIMESTAMP,
   stringset_col STRINGSET,
   ideset_col IDSET,
   stringsetq_col STRINGSETQ,
   idesetq_col IDSETQ
-)
+);
 ```
 
 ## Next step
