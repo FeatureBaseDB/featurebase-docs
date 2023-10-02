@@ -3,6 +3,7 @@ title: CREATE TABLE age
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
+nav_order: 1
 ---
 
 # CREATE TABLE age

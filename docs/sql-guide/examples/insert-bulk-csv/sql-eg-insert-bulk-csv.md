@@ -3,6 +3,7 @@ title: BULK INSERT CSV example
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
+nav_order: 10
 ---
 
 # BULK INSERT example using CSV formatted data source
