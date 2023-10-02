@@ -1,9 +1,9 @@
 ---
-title: Cookbooks
+title: SQL Examples
 layout: default
 has_children: true
-parent: Concepts
+parent: SQL guide
 nav_order: 1
 has_toc: true
 ---
-# FeatureBase SQL Cookbooks
+# FeatureBase SQL Examples

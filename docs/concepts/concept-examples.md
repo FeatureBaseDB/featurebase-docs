@@ -21,10 +21,10 @@ These examples demonstrate the use of SQL `BULK INSERT`, available for FeatureBa
 
 * [Importing low-cardinality data](/docs/concepts/concept-ingest-eg-key-cardinality-low)
 * [Importing a large dataset](/docs/concepts/concept-ingest-eg-large-dataset)
-* [Importing a large dataset using a CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
-* [Importing a large dataset using a ndjson file](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
-* [Importing a large dataset using a parquet file](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
-* [Importing a large dataset using a ORC file](/docs/sql-guide/statements/statement-insert-bulk-orc-example)
+* [Importing a large dataset using a CSV file](/docs/sql-guide/examples/statement-insert-bulk-csv-example)
+* [Importing a large dataset using a ndjson file](/docs/sql-guide/examples/statement-insert-bulk-ndjson-example)
+* [Importing a large dataset using a parquet file](/docs/sql-guide/examples/statement-insert-bulk-parquet-example)
+* [Importing a large dataset using a ORC file](/docs/sql-guide/examples/statement-insert-bulk-orc-example)
 
 ## CLI ingest examples
 

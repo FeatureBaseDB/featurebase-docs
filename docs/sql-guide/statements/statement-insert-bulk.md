@@ -148,19 +148,19 @@ There are special assignments for certain literal values when inserting NDJSON d
 
 ## Examples
 
-* [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
-* [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
-* [BULK INSERT using ORC data source](/docs/sql-guide/statements/statement-insert-bulk-orc-example)
+* [BULK INSERT using CSV file](/docs/sql-guide/examples/statement-insert-bulk-csv-example)
+* [BULK INSERT using NDJSON data source](/docs/sql-guide/examples/statement-insert-bulk-ndjson-example)
+* [BULK INSERT using PARQUET data source](/docs/sql-guide/examples/statement-insert-bulk-parquet-example)
+* [BULK INSERT using ORC data source](/docs/sql-guide/examples/statement-insert-bulk-orc-example)
 
 ### MAP examples
 
 | Input type | MAP expression for value in source column | Example | Additional information |
 |---|---|---|
-| CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/statements/statement-insert-bulk-csv-example) |  |
-| NDJSON | String | [BULK INSERT NDJSON example](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example) | [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value |
-| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/statements/statement-insert-bulk-parquet-example) |  |
-| ORC | A string label that precisely matches the column name in the schema within the ORC file. | [BULK INSERT ORC example](/docs/sql-guide/statements/statement-insert-bulk-orc-example) |  |
+| CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/examples/statement-insert-bulk-csv-example) |  |
+| NDJSON | String | [BULK INSERT NDJSON example](/docs/sql-guide/examples/statement-insert-bulk-ndjson-example) | [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value |
+| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/examples/statement-insert-bulk-parquet-example) |  |
+| ORC | A string label that precisely matches the column name in the schema within the ORC file. | [BULK INSERT ORC example](/docs/sql-guide/examples/statement-insert-bulk-orc-example) |  |
 
 ### TRANSFORM examples
 
