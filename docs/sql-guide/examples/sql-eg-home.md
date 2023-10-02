@@ -8,7 +8,7 @@ has_toc: false
 ---
 # FeatureBase SQL Examples
 
-End-to-end SQL examples with use cases.
+End-to-end SQL examples.
 
 <!--
 
