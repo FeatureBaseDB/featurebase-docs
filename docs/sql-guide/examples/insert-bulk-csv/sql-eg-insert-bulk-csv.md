@@ -40,7 +40,6 @@ WITH
     FORMAT 'CSV'
     INPUT 'URL'
     HEADER_ROW;
-
 ```
 
 ## Arguments
