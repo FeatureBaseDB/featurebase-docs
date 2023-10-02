@@ -33,4 +33,4 @@ CREATE TABLE age (
 
 ## Next step
 
-* [BULK INSERT using a CSV formatted data source](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv)
+* [Part 2 - BULK INSERT using a CSV formatted data source](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv)

@@ -7,20 +7,14 @@ grand_parent: SQL guide
 
 # BULK INSERT example using CSV formatted data source
 
-This `BULK INSERT` example demonstrates how to:
-* use the `MAP` clause to identify which column data from the CSV file is mapped to
-*
-This example demonstrates how to:
-
-* Copy and transform data from an CSV source
-* Use the `BULK INSERT` statement to copy data from the source to the target table.
+This `BULK INSERT` example demonstrates how source data at a specified URL can be mapped then copied to destination table columns.
 
 {: .warning}
 The CSV file is 147MB and may take some time to download.
 
 ## Before you begin
 
-* [CREATE destination table](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-create-table-age)
+* [Part 1 - CREATE destination table](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-create-table-age)
 * [Learn about the Comma separated value (CSV) format](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
 
 ## BULK INSERT statement
