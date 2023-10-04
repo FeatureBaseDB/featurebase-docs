@@ -8,60 +8,35 @@ nav_exclude: true
 
 # BULK INSERT example using NDJSON formatted data source
 
-This example demonstrates how to:
-
-* Create a FeatureBase table with a required structure
-* Copy and transform data from an NDJSON source
-* Use the `BULK INSERT` statement to copy data from the source to the target table.
+Insert data into a FeatureBase table from a new line delimited JSON data source on a remote file system.
 
 ## Before you begin
 
 * [Learn about the New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
+* [CREATE TABLE ndjson-target](/docs/sql-guide/examples/insert-bulk-ndjson/sql-eg-table-create-ndjson)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
-
-## Step 1: create table
-
-```sql
-CREATE TABLE ndjson-target (
-_id ID,
-type STRING,
-actor_id ID,
-actor_login STRING,
-actor_url STRING,
-repo_id ID,
-repo_name STRING,
-repo_url STRING,
-payload_ref STRING,
-payload_ref_type STRING,
-payload_master_branch STRING,
-payload_description STRING,
-payload_pusher_type STRING,
-public BOOL,
-created_at TIMESTAMP
-);
-```
-
-## Step 2: BULK INSERT data to `github-stats` table
 
 {% include /tips/tip-show-table-for-structure.md %}
 
+## BULK INSERT statement
+
 ```sql
 BULK INSERT INTO ndjson-target (
-_id,
-type,
-actor_id,
-actor_login,
-actor_url,
-repo_id,
-repo_name,
-repo_url,
-payload_ref,
-payload_ref_type,
-payload_master_branch,
-payload_description,
-payload_pusher_type,
-public,
-created_at
+  _id,
+  type,
+  actor_id,
+  actor_login,
+  actor_url,
+  repo_id,
+  repo_name,
+  repo_url,
+  payload_ref,
+  payload_ref_type,
+  payload_master_branch,
+  payload_description,
+  payload_pusher_type,
+  public,
+  created_at
 )
 MAP (
 '$.id' ID,
@@ -103,7 +78,11 @@ INPUT 'URL'
 ALLOW_MISSING_VALUES;
 ```
 
-## Step 3: query the data
+## Next step
+
+* [SQL SELECT queries]
+
+## Query the table
 
 ```sql
 SELECT COUNT(*) FROM github-stats;
@@ -111,8 +90,3 @@ SELECT COUNT(*) FROM github-stats;
 ```sql
 SELECT TOP(10) * FROM github-stats;
 ```
-
-## Further information
-
-* [SELECT statement](/docs/sql-guide/statements/statement-select)
-* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
