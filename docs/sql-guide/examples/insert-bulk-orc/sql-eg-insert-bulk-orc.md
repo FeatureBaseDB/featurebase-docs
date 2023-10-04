@@ -32,15 +32,14 @@ This example demonstrates how to:
 
 ```sql
 BULK INSERT
-      INTO sampleorc(_id,a,b,c )
-      MAP(
+  INTO sampleorc(_id,a,b,c)
+  MAP(
     0 id,
     1 STRING,
-    2 BOOL
+    2 BOOL,
     3 INT )
- FROM
-	'https://sample-files-hh.s3.us-east-2.amazonaws.com/samplefile.orc'
- WITH
+  FROM 'https://sample-files-hh.s3.us-east-2.amazonaws.com/samplefile.orc'
+  WITH
     FORMAT 'ORC'
     INPUT 'URL';
 ```
