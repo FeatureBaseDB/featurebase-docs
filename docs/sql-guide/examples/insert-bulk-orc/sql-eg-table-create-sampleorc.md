@@ -22,12 +22,16 @@ This table is required for the BULK INSERT statement using an orc data type.
 ## CREATE TABLE statement
 
 ```sql
-CREATE TABLE sampleorc (
+CREATE TABLE
+  IF NOT EXISTS
+  sampleorc (
     _id ID,
     a STRING,
     b BOOL,
     c INT
-);
+)
+WITH COMMENT 'destination table for APACHE orc data source'
+;
 ```
 
 ## Next step
