@@ -18,15 +18,9 @@ This example demonstrates how to:
 
 * [Learn about the Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [CREATE TABLE sampleorc](/docs/sql-guide/examples/insert-bulk-orc/sql-eg-table-create-sampleorc)
 
 {% include /tips/tip-show-table-for-structure.md %}
-
-## ORC data source extract
-
-```
-
-
-```
 
 ## BULK INSERT statement
 
