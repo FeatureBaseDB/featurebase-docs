@@ -3,7 +3,7 @@ title: CREATE TABLE csv-target
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
-nav_order: 1
+nav_exclude: true
 ---
 
 # CREATE TABLE csv-target
