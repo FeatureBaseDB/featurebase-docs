@@ -3,50 +3,29 @@ title: SQL Examples
 layout: default
 has_children: true
 parent: SQL guide
-nav_order: 8
+nav_order: 20
 has_toc: false
 ---
 # FeatureBase SQL Examples
 
 End-to-end SQL examples.
 
-<!-- Conceptualisation, experimentation IN PROGRESS
-
-## Data type examples
-
-| Feature | CREATE TABLE | INSERT | BULK INSERT | Query |
-|---|---|---|---|
-| `IDSET` data type |  |  |  |
-| `STRINGSET` data type |
-| `IDSETQ` data type |
-| `STRINGSETQ` data type |
-
-## Function examples
-
-| Function |
-|---|
-| `FORMAT()` |
-| `IDENTIFER()` |
-| `PREFIX()` |
-| `RANGEQ()` |
-| `TANIMOTO()` |
-| `TOTIMESTAMP()` |
-| `TUPLE()` |
-| `VECTOR()` |
-
-IDEALLY want a way the user can just cross-ref what they need in a table and then click to open the examples.
-PROBLEM is, there's so many variants that the table would become multi-dimensional
-HYPOTHESIS: put it together in a FeatureBase table
-IN SHORT: Dogfood the product for the examples
-
--->
-
-
 ## CREATE TABLE statements
 
-| CREATE TABLE | BULK INSERT |
+The following SQL examples demonstrate table creation with different data types, constraints and options
+
+
+
+
+| CREATE TABLE | Data types | Constraints | Table options |
 |---|---|
-| [CREATE TABLE eg-age](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-age) | [BULK INSERT using CSV data source](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv) |
+| [CREATE TABLE eg-age](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-age) |
+
+
+
+
+
+[BULK INSERT using CSV data source](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv) |
 | [CREATE TABLE eg-set-types](/docs/sql)
 
 

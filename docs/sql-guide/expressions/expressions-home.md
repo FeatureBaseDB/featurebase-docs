@@ -2,6 +2,7 @@
 title: Expressions
 layout: default
 parent: SQL guide
+nav_order: 4
 ---
 
 # SQL Expressions

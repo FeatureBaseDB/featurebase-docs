@@ -2,7 +2,7 @@
 title: System Tables
 layout: default
 parent: SQL guide
-nav_order: 10
+nav_order: 30
 ---
 
 # System Tables
