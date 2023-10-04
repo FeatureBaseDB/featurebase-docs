@@ -9,6 +9,7 @@ nav_order: 1
 # CREATE TABLE parquet-sample
 
 Create a FeatureBase table with:
+* A numeric unique identifier
 * ID, INT and DECIMAL data types
 * a DECIMAL constraint of four places
 
@@ -22,9 +23,9 @@ Create a FeatureBase table with:
 
 ```sql
 CREATE TABLE parquet-target (
-    _id id,
-    x int,
-    y decimal(4)
+    _id ID,
+    x INT,
+    y DECIMAL(4)
 );
 ```
 

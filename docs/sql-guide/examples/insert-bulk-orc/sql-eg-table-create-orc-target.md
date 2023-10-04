@@ -1,14 +1,15 @@
 ---
-title: CREATE TABLE orcsample
+title: CREATE TABLE orc-target
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_order: 1
 ---
 
-# CREATE TABLE orcsample
+# CREATE TABLE orc-target
 
 Create a FeatureBase table with:
+* a numeric unique identifier
 * BOOL, ID, INT and STRING data types
 * `IF NOT EXISTS` and `WITH COMMENT` table options
 

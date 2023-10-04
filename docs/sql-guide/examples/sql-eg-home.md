@@ -17,7 +17,7 @@ The following SQL examples demonstrate table creation with different data types,
 | Statement | Data types | Table options |
 |---|---|---|
 | [CREATE TABLE csv-target](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-csv-target) | [INT](/docs/sql-guide/data-types/data-type-int)<br/>* [STRING](/docs/sql-guide/data-types/data-type-string)|  |
-| [CREATE TABLE orc-target](/docs/sql-guide/examples/insert-bulk-orc/sql-eg-table-create-sampleorc) | * [bool](/docs/sql-guide/data-types/data-type-bool)<br/>* [ID](/docs/sql-guide/data-types/data-type-id)<br/>* [INT](/docs/sql-guide/data-types/data-type-int)<br/>* [STRING](/docs/sql-guide/data-types/data-type-string) | * `IF NOT EXISTS`<br/>* `WITH COMMENT` |
+| [CREATE TABLE orc-target](/docs/sql-guide/examples/insert-bulk-orc/sql-eg-table-create-orc-target) | * [bool](/docs/sql-guide/data-types/data-type-bool)<br/>* [ID](/docs/sql-guide/data-types/data-type-id)<br/>* [INT](/docs/sql-guide/data-types/data-type-int)<br/>* [STRING](/docs/sql-guide/data-types/data-type-string) | * `IF NOT EXISTS`<br/>* `WITH COMMENT` |
 | [CREATE TABLE parquet-target](/docs/sql-guide/examples/insert-bulk-parquet/sql-eg-table-create-parquet-target) |  |  |
 
 ## INSERT statements

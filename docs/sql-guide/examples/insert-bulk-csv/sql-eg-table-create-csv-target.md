@@ -1,14 +1,16 @@
 ---
-title: CREATE TABLE age
+title: CREATE TABLE csv-target
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_order: 1
 ---
 
-# CREATE TABLE age
+# CREATE TABLE csv-target
 
-This table is required for the BULK INSERT example using a CSV data source.
+Create a FeatureBase table with:
+* a STRING unique identifier
+* STRING and INT data types
 
 ## Before you begin
 
