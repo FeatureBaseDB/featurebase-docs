@@ -14,37 +14,10 @@ End-to-end SQL examples.
 
 The following SQL examples demonstrate table creation with different data types, constraints and options
 
-
-
-
-| CREATE TABLE | Data types | Constraints | Table options |
-|---|---|
-| [CREATE TABLE eg-age](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-age) |
-
-
-
-
-
-[BULK INSERT using CSV data source](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv) |
-| [CREATE TABLE eg-set-types](/docs/sql)
-
-
-<!--
-
-Need some way to categorize, to make clear what's included in each
-
-For example:
-
-| Statement | Data types | Clauses | Functions | Operators | Relates to |
+| Statement | Numeric data types | String | SET | Timestamp |
 |---|---|---|---|---|
-| statement | data types in the statement | clauses | ditto | ditto | the next statement(s) in the sequence |
-## DATABASE statements
-
-
-## TABLE statements
-
-
-
+| [CREATE TABLE pii](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-pii) | [INT](/docs/sql-guide/data-types/data-type-int) | [STRING](/docs/sql-guide/data-types/data-type-string)|  |  |
+| [CREATE TABLE sampleorc](/docs/sql-guide/examples/insert-bulk-orc/sql-eg-table-create-sampleorc) | * [bool](/docs/sql-guide/data-types/data-type-bool)<br/>* [ID](/docs/sql-guide/data-types/data-type-id)<br/>* [INT](/docs/sql-guide/data-types/data-type-int) | [STRING](/docs/sql-guide/data-types/data-type-string) |  |  |
 
 ## INSERT statements
 

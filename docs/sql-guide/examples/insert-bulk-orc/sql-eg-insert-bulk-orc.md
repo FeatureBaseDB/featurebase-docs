@@ -19,20 +19,16 @@ This example demonstrates how to:
 * [Learn about the Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 
-## Step 1: create table
+{% include /tips/tip-show-table-for-structure.md %}
 
-```sql
-CREATE TABLE sampleorc (
-    _id ID,
-    a STRING,
-    b BOOL,
-    c INT
-);
+## ORC data source extract
+
 ```
 
-## Step 2: ingest data
 
-{% include /tips/tip-show-table-for-structure.md %}
+```
+
+## BULK INSERT statement
 
 ```sql
 BULK INSERT
