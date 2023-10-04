@@ -8,34 +8,21 @@ nav_order: 50
 
 # BULK INSERT example using Apache Parquet formatted data source
 
-This example demonstrates how to:
 
-* Create a FeatureBase table with a required structure
-* Copy and transform data from an parquet source
-* Use the `BULK INSERT` statement to copy data from the source to the target table.
 
 ## Before you begin
 
 * [Learn about the Apache Parquet format](https://parquet.apache.org/){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
-
-## Step 1: create table
-
-```sql
-CREATE TABLE sample (
-    _id id,
-    x int,
-    y decimal(4)
-);
-```
-
-## Step 2: ingest data
+* [CREATE TABLE parquet-sample](/docs/sql-guide/examples/insert-bulk-parquet/sql-eg-table-create-parquet-sample)
 
 {% include /tips/tip-show-table-for-structure.md %}
 
+## BULK INSERT statement
+
 ```sql
 BULK INSERT
-      INTO sample(_id,x,y )
+      INTO parquet-target(_id,x,y )
       MAP(
     'id' id,
     'intval' int,

@@ -22,7 +22,7 @@ The CSV file is 147MB and may take some time to download.
 
 ```sql
 BULK INSERT
-INTO pii (_id, name, description, gender, country, occupation,
+INTO csv-target (_id, name, description, gender, country, occupation,
     birth_year, death_year, death_manner, birth_age )
 MAP(0 STRING,
 1 STRING,

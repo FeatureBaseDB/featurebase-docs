@@ -8,17 +8,15 @@ nav_order: 40
 
 # BULK INSERT example using ORC formatted data source
 
-This example demonstrates how to:
-
-* Create a FeatureBase table with a required structure
-* Copy and transform data from an ORC source
-* Use the `BULK INSERT` statement to copy data from the source to the target table.
+This BULK INSERT statement:
+* reads data from an ORC formatted data source found in a destination URL
+* maps data to destination table columns found in `orc-target` table
 
 ## Before you begin
 
 * [Learn about the Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
-* [CREATE TABLE sampleorc](/docs/sql-guide/examples/insert-bulk-orc/sql-eg-table-create-sampleorc)
+* [CREATE TABLE sampleorc](/docs/sql-guide/examples/insert-bulk-orc/sql-eg-table-create-orc-target)
 
 {% include /tips/tip-show-table-for-structure.md %}
 
@@ -26,7 +24,7 @@ This example demonstrates how to:
 
 ```sql
 BULK INSERT
-  INTO sampleorc(_id,a,b,c)
+  INTO orc-target(_id,a,b,c)
   MAP(
     0 id,
     1 STRING,

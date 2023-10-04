@@ -14,13 +14,20 @@ End-to-end SQL examples.
 
 The following SQL examples demonstrate table creation with different data types, constraints and options
 
-| Statement | Numeric data types | String | SET | Timestamp |
-|---|---|---|---|---|
-| [CREATE TABLE pii](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-pii) | [INT](/docs/sql-guide/data-types/data-type-int) | [STRING](/docs/sql-guide/data-types/data-type-string)|  |  |
-| [CREATE TABLE sampleorc](/docs/sql-guide/examples/insert-bulk-orc/sql-eg-table-create-sampleorc) | * [bool](/docs/sql-guide/data-types/data-type-bool)<br/>* [ID](/docs/sql-guide/data-types/data-type-id)<br/>* [INT](/docs/sql-guide/data-types/data-type-int) | [STRING](/docs/sql-guide/data-types/data-type-string) |  |  |
+| Statement | Data types | Table options |
+|---|---|---|
+| [CREATE TABLE csv-target](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-table-create-csv-target) | [INT](/docs/sql-guide/data-types/data-type-int)<br/>* [STRING](/docs/sql-guide/data-types/data-type-string)|  |
+| [CREATE TABLE orc-target](/docs/sql-guide/examples/insert-bulk-orc/sql-eg-table-create-sampleorc) | * [bool](/docs/sql-guide/data-types/data-type-bool)<br/>* [ID](/docs/sql-guide/data-types/data-type-id)<br/>* [INT](/docs/sql-guide/data-types/data-type-int)<br/>* [STRING](/docs/sql-guide/data-types/data-type-string) | * `IF NOT EXISTS`<br/>* `WITH COMMENT` |
+| [CREATE TABLE parquet-target](/docs/sql-guide/examples/insert-bulk-parquet/sql-eg-table-create-parquet-target) |  |  |
 
 ## INSERT statements
 
+
+## BULK INSERT statements
+
+| Statement | MAP clause | TRANSFORM clause | Data source | x | y |
+|---|---|---|---|---|---|---|
+| [BULK INSERT ]
 
 ## VIEW statements
 

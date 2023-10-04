@@ -19,10 +19,10 @@ This example demonstrates how to:
 * [Learn about the New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 
-## Step 1: create `github-stats` table
+## Step 1: create table
 
 ```sql
-CREATE TABLE github-stats (
+CREATE TABLE ndjson-target (
 _id ID,
 type STRING,
 actor_id ID,
@@ -46,7 +46,7 @@ created_at TIMESTAMP
 {% include /tips/tip-show-table-for-structure.md %}
 
 ```sql
-BULK INSERT INTO github-stats (
+BULK INSERT INTO ndjson-target (
 _id,
 type,
 actor_id,

@@ -18,7 +18,7 @@ This table is required for the BULK INSERT example using a CSV data source.
 ## CREATE TABLE statement
 
 ```sql
-CREATE TABLE pii (
+CREATE TABLE csv-target (
   _id string,
   name string,
   description string,
