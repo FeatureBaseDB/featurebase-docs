@@ -25,12 +25,7 @@ The following SQL examples demonstrate SELECT statements using different:
 
 | Statement | Target table | SELECT clauses | Expressions | Functions | Operators|
 |---|---|---|---|---|---|
-|  | [parquet-target](/docs/sql-guide/) | * `TOP`<br/>* `FROM` |  |  |
-
-
-
-##
-
-```sql
-SELECT TOP(10) * FROM parquet-target;
-```
+| [SELECT...from csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-csv-target) | [parquet-target](/docs/sql-guide/) | * `TOP`<br/>* `FROM` |  |  |
+| [SELECT...from ndjson-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-ndjson-target) | [parquet-target](/docs/sql-guide/) | * `TOP`<br/>* `FROM` |  |  |
+| [SELECT...from orc-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-orc-target) | [parquet-target](/docs/sql-guide/) | * `TOP`<br/>* `FROM` |  |  |
+| [SELECT...from parquet-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-parquet-target) | [parquet-target](/docs/sql-guide/) | * `TOP`<br/>* `FROM` |  |  |
