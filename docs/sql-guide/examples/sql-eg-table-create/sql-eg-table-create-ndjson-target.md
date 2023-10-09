@@ -50,4 +50,4 @@ CREATE TABLE
 
 ## Next step
 
-* [BULK INSERT using an NDJSON data source](/docs/sql-guide/examples/insert-bulk-ndjson/sql-eg-insert-bulk-ndjson)
+* [BULK INSERT using an NDJSON data source](/docs/sql-guide/examples/sql-eg-insert-bulk/sql-eg-insert-bulk-ndjson)

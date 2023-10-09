@@ -19,7 +19,7 @@ The following SQL examples demonstrate BULK INSERT using different clauses and d
 
 | Statement | Target table | FROM clause | TRANSFORM clause | WITH clause |
 |---|---|---|---|---|
-| [BULK INSERT using CSV data source](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv) | [csv-target](/docs/sql-guide/examples/insert-bulk-csv-target/sql-eg-table-create-csv-target) | URL |  |  |
-| [BULK INSERT using ndJSON data source](/docs/sql-guide/examples/insert-bulk-ndjson/sql-eg-insert-bulk-ndjson) | [ndjson-target](/docs/sql-guide/examples/insert-bulk-ndjson-target/sql-eg-table-create-ndjson-target) | CSV URL |  | |
+| [BULK INSERT using CSV data source](/docs/sql-guide/examples/sql-eg-insert-bulk/sql-eg-insert-bulk-csv) | [csv-target](/docs/sql-guide/examples/insert-bulk-csv-target/sql-eg-table-create-csv-target) | URL |  |  |
+| [BULK INSERT using ndJSON data source](/docs/sql-guide/examples/sql-eg-insert-bulk/sql-eg-insert-bulk-ndjson) | [ndjson-target](/docs/sql-guide/examples/insert-bulk-ndjson-target/sql-eg-table-create-ndjson-target) | CSV URL |  | |
 | [BULK INSERT using ORC data source](/docs/sql-guide/examples/insert-bulk-orc/statement-insert-bulk-orc-example) | [orc-target](/docs/sql-guide/examples/insert-bulk-orc-target/sql-eg-table-create-orc-target) | URL |  |  |
 | [BULK INSERT using Apache Parquet data source](/docs/sql-guide/examples/insert-bulk-parquet-target/sql-eg-table-create-parquet-target) | [parquet-target]() | URL |  |  |

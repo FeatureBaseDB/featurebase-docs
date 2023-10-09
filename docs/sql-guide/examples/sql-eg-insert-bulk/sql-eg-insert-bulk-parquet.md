@@ -14,7 +14,7 @@ nav_exclude: true
 
 * [Learn about the Apache Parquet format](https://parquet.apache.org/){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
-* [CREATE TABLE parquet-sample](/docs/sql-guide/examples/insert-bulk-parquet/sql-eg-table-create-parquet-sample)
+* [CREATE TABLE parquet-sample](/docs/sql-guide/examples/sql-eg-table-create/sql-eg-table-create-parquet-sample)
 
 {% include /tips/tip-show-table-for-structure.md %}
 
@@ -38,7 +38,7 @@ BULK INSERT
 ## Step 3: query the data
 
 ```sql
-SELECT TOP(10) * FROM sample;
+SELECT TOP(10) * FROM parquet-sample;
 ```
 
 ## Further information
