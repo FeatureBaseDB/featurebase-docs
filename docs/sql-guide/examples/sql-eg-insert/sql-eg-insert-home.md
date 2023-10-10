@@ -18,9 +18,9 @@ These examples demonstrate the INSERT and BULK INSERT statements in relation to 
 
 ## INSERT statements
 
-| Statement | Target table | clause | clause | clause |
-|---|---|---|---|---|
-| INSERT |  |  |  |  |
+| Statement | Target table |
+|---|---|
+| INSERT INTO cosvec-target | [cosvec-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-cosvec-target) |
 
 
 ## BULK INSERT statements
