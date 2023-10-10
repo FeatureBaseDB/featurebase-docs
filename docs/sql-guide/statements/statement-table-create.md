@@ -79,7 +79,7 @@ CREATE TABLE
 
 ### CREATE TABLE with vector array
 
-{% include /sql-guide/table-create-vector.md %}
+* [CREATE TABLE with VECTOR data type column](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
 
 ### CREATE TABLE with all column types
 
