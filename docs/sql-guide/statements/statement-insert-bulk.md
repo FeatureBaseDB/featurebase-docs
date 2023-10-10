@@ -156,10 +156,10 @@ There are special assignments for certain literal values when inserting NDJSON d
 
 | INPUT data source | MAP expression for value in source column | Example | Additional information |
 |---|---|---|
-| CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/examples/insert-bulk-csv/sql-eg-insert-bulk-csv) |  |
+| CSV | Integer offset | [BULK INSERT CSV example](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv) |  |
 | NDJSON | String | [BULK INSERT NDJSON example](/docs/sql-guide/examples/insert-bulk-ndjson/sql-eg-insert-bulk-ndjson) | [JsonPath expression](https://goessner.net/articles/JsonPath/index.html#e2) for the NDJSON value |
 | ORC | A string label that precisely matches the column name in the schema within the ORC file. | [BULK INSERT ORC example](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-orc) |  |
-| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/examples/insert-bulk-parquet/sql-eg-insert-bulk-parquet) |  |
+| PARQUET | A string label that precisely matches the column name in the schema within the parquet file. | [BULK INSERT PARQUET example](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet) |  |
 
 ### TRANSFORM examples
 
