@@ -8,7 +8,7 @@ nav_exclude: true
 
 # BULK INSERT example using CSV formatted data source
 
-This `BULK INSERT` example demonstrates how source data at a specified URL can be mapped to destination table columns.
+`BULK INSERT` data to the `csv-target` table from a CSV data source found on a specified URL.
 
 {: .warning}
 The CSV file is 147MB and may take some time to download.
@@ -48,7 +48,7 @@ WITH
 
 | Argument | Description |
 |---|---|
-| `BULK INSERT INTO` | The destination table `<column-list>` is used by the `MAP` clause |
+| `BULK INSERT INTO` | Insert data to the `csv-target` table `<column-list>` which is required by the `MAP` clause |
 | `MAP` clause | A sequential order of integer values, starting at 0 that map to the <column-list> |
 | `FROM` clause | The URL of the CSV data source |
 | `WITH` clause | States the number of rows to batch, data source `FORMAT` and the method of `INPUT` and that the data source has a `HEADER_ROW` |
