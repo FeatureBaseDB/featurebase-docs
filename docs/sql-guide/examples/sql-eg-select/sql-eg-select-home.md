@@ -1,9 +1,9 @@
 ---
 title: SELECT examples
 layout: default
-parent: SQL Examples
+parent: SQL examples
 grand_parent: SQL guide
-nav_order: 30
+nav_order: 3
 has_toc: false
 ---
 

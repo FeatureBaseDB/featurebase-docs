@@ -3,7 +3,7 @@ title: TABLE examples
 layout: default
 parent: SQL examples
 grand_parent: SQL guide
-nav_order: 10
+nav_order: 1
 has_toc: false
 ---
 

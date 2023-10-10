@@ -3,7 +3,7 @@ title: INSERT examples
 layout: default
 parent: SQL examples
 grand_parent: SQL guide
-nav_order: 20
+nav_order: 2
 has_toc: false
 ---
 # INSERT & BULK INSERT examples
