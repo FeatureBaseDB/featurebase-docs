@@ -1,19 +1,26 @@
 ---
-title: BULK INSERT examples
+title: INSERT examples
 layout: default
 parent: SQL examples
 grand_parent: SQL guide
-nav_order: 50
+nav_order:
 has_toc: false
 ---
-# BULK INSERT examples
+# INSERT & BULK INSERT examples
 
-INSERT data from a remote data source to a FeatureBase table
+These examples demonstrate the INSERT and BULK INSERT statements in relation to a target table, and different clauses.
 
 ## Before you begin
 
-* [CREATE TABLE examples](/docs/sql-guide/sql-eg-table-create-home)
+* [CREATE TABLE examples](/docs/sql-guide/sql-eg-table/sql-eg-table-home)
+* [INSERT statement](/docs/sql-guide/statements/statement-insert)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+
+## INSERT statements
+
+| Statement | Target table | clause | clause | clause |
+|---|---|---|---|---|
+
 
 ## BULK INSERT statements
 

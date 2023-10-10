@@ -11,9 +11,9 @@ The following SELECT statements demonstrate
 
 ## Before you begin
 
-* [CREATE TABLE parquet-target](/docs/sql-guide/examples/sql-eg-table-create/sql-eg-table-create-parquet-target)
-* [BULK INSERT from parquet data source](/docs/sql-guide/examples/sql-eg-insert-bulk-parquet)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
+* [CREATE TABLE parquet-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-parquet-target)
+* [BULK INSERT from parquet data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet)
 
 ## SELECT with TOP clause
 
