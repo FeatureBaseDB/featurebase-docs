@@ -13,7 +13,7 @@ The following SELECT statements demonstrate
 * [SELECT examples](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-home)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [CREATE TABLE ndjson-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-ndjson-target)
-* [BULK INSERT from ndjson data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson)
+* [BULK INSERT from ndjson data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target)
 
 ## SELECT with TOP clause
 
