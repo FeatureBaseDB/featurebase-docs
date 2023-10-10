@@ -13,7 +13,8 @@ This BULK INSERT statement:
 * maps data to destination table columns found in `orc-target` table
 
 ## Before you begin
-* [Learn about the Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
+* [Learn about the Apache ORC format](https://orc.apache.org/specification/){:target="_blank"}
+* [ORC data types](https://orc.apache.org/docs/types.html){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 * [CREATE TABLE sampleorc](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-orc-target)
 
