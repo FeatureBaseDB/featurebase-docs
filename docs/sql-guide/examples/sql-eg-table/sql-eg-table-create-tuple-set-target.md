@@ -30,8 +30,8 @@ CREATE TABLE tuple-set-target (
   time_col TIMESTAMP,
   stringset_col STRINGSET,
   ideset_col IDSET,
-  stringsetq_col STRINGSETQ,
-  idesetq_col IDSETQ
+  stringsetq_col STRINGSETQ timequantum 'YMD',
+  idesetq_col IDSETQ timequantum 'YMD'
 );
 ```
 
