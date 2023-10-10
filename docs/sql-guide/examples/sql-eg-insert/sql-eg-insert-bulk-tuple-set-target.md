@@ -62,4 +62,6 @@ BULK INSERT INTO tuple-demo(
 | `FROM x` | `x` indicates a multi-line string literal follows |
 | `WITH` | Define the number of values to batch before insertion, the format of the values and input type |
 
-## SELECT statements
+## Next step
+
+* [SELECT FROM tuple-set-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tuple-set-target)
