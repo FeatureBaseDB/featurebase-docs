@@ -23,18 +23,32 @@ This BULK INSERT statement:
 
 ```sql
 BULK INSERT
-  INTO orc-target(_id,a,b,c)
+  INTO orc-target(
+    _id,
+    a,
+    b,
+    c
+  )
   MAP(
     0 id,
     1 STRING,
     2 BOOL,
-    3 INT )
-  FROM 'https://sample-files-hh.s3.us-east-2.amazonaws.com/samplefile.orc'
+    3 INT
+  )
+  FROM
+    'https://sample-files-hh.s3.us-east-2.amazonaws.com/samplefile.orc'
   WITH
     FORMAT 'ORC'
     INPUT 'URL';
 ```
 
+## Arguments
+
+| Argument | Description | Additional information |
+|---|---|---|
+| `BULK INSERT INTO` | Insert data to the `orc-target` table `<column-list>` which is required by the `MAP` clause |  |
+| `MAP` clause | A string label that precisely matches the column name in the schema within the ORC data source |  |
+|
 
 ## Step 3: query the data
 
