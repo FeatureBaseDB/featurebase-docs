@@ -126,13 +126,7 @@ INSERT
 
 ### INSERT data to vector table
 
-#### CREATE TABLE statement
-
-{% include /sql-guide/table-create-vector.md %}
-
-#### INSERT INTO statement
-
-{% include /sql-guide/insert-into-vector-table.md %}
+* [INSERT INTO VECTOR data type column](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
 
 ## Further information
 

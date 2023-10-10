@@ -6,7 +6,7 @@ grand_parent: SQL guide
 ---
 # COSINE_DISTANCE() function
 
-`COSINE_DISTANCE()` is a mathematical function used with vector calculations.
+`COSINE_DISTANCE()` is a mathematical function that can be performed on `VECTOR` data type columns.
 
 ## Syntax
 
@@ -23,14 +23,4 @@ COSINE_DISTANCE ({compare-vector, vector-column})
 
 ## Examples
 
-### Table CREATE with vector data type
-
-{% include /sql-guide/table-create-vector.md%}
-
-### INSERT INTO vector data type
-
-{% include /sql-guide/insert-into-vector-table.md %}
-
-### SELECT with COSINE_DISTANCE from vector column
-
-{% include /sql-guide/select-cosine-distance.md %}
+* [SELECT using COSINE DISTANCE function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-cosvec-target)
