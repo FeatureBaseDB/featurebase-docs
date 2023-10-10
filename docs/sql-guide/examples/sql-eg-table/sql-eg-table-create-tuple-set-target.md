@@ -17,6 +17,7 @@ The `tuple-set-target` table is intended for a `BULK INSERT` statement and inclu
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [IDSET data type](/docs/sql-guide/data-types/data-type-idset)
 * [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)
+* [STRING](/docs/sql-guide/data-types/data-type-string)
 * [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
 * [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq)
 * [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp)
