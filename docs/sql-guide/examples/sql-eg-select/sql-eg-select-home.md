@@ -4,6 +4,7 @@ layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_order: 30
+has_toc: false
 ---
 
 # CREATE TABLE examples
