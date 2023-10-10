@@ -19,15 +19,15 @@ The following SQL examples demonstrate SELECT statements using different:
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
 * [FeatureBase expressions](/docs/sql-guide/expressions/expressions-home)
-* [FeatureBase functions](/docs/sql-guide/data-types/functions-home)
-* [FeatureBase operators](/docs/sql-guide/data-types/operators-home)
+* [FeatureBase functions](/docs/sql-guide/functions/functions-home)
+* [FeatureBase operators](/docs/sql-guide/operators/operators-home)
 
 ## Examples
 
 | Statement | Target table | SELECT clauses | Expressions | Functions | Operators|
 |---|---|---|---|---|---|
-| [SELECT...from csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-csv-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target) | * `TOP()`<br/>* `COUNT()` |  |  |
-| [SELECT...from tuple-set-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-tuple-set-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target) |  |  |  |
-| [SELECT...from ndjson-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-ndjson-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target) | |  |  |
-| [SELECT...from orc-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-orc-target) | [orc-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-orc-target) |  |  |  |
-| [SELECT...from parquet-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-parquet-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet-target) |  |  |  |
+| [SELECT...from csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-csv-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target) | * `TOP()`<br/>* `COUNT()` |  |  |
+| [SELECT...from tuple-set-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tuple-set-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target) |  |  |  |
+| [SELECT...from ndjson-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-ndjson-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target) | |  |  |
+| [SELECT...from orc-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-orc-target) | [orc-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-orc-target) |  |  |  |
+| [SELECT...from parquet-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-parquet-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet-target) |  |  |  |
