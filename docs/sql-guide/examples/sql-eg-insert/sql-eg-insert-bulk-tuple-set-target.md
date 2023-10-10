@@ -20,7 +20,7 @@ This `BULK INSERT` statement uses the `TRANSFORM...TUPLE` clause to insert data 
 ## BULK INSERT statement
 
 ```sql
-BULK INSERT INTO tuple-demo(
+BULK INSERT INTO tuple-set-target(
     _id,
     time_col,
     stringset_col,
@@ -60,7 +60,7 @@ BULK INSERT INTO tuple-demo(
 | `MAP` | Mapping starts at `0` for `_id` column followed by an integer corresponding to each subsequent column |
 | `TRANSFORM` | Each integer corresponds to the mapping, with `TUPLE` functions applied to paired columns |
 | `FROM x` | `x` indicates a multi-line string literal follows |
-| `WITH` | Define the number of values to batch before insertion, the format of the values and input type |
+| `WITH` | States the number of rows to batch, data source `FORMAT` and the `INPUT` is included within the statement |
 
 ## Next step
 
