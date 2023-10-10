@@ -26,7 +26,7 @@ The following SQL examples demonstrate SELECT statements using different:
 
 | Statement | Target table | SELECT clauses | Expressions | Functions | Operators|
 |---|---|---|---|---|---|
-| [SELECT...from csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-csv-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target) |  |  |  |
+| [SELECT...from csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-csv-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target) | * `TOP()`<br/>* `COUNT()` |  |  |
 | [SELECT...from tuple-set-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-tuple-set-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target) |  |  |  |
 | [SELECT...from ndjson-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-ndjson-target) | [parquet-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target) | |  |  |
 | [SELECT...from orc-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-orc-target) | [orc-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-orc-target) |  |  |  |

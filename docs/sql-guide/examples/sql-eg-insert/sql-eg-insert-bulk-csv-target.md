@@ -15,8 +15,9 @@ The CSV file is 147MB and may take some time to download.
 
 ## Before you begin
 
-* [Part 1 - CREATE destination table](/docs/sql-guide/examples/sql-eg-table/sql-eg-create-table-csv-target)
 * [Learn about the Comma separated value (CSV) format](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [CREATE TABLE csv-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-create-table-csv-target)
 
 ## BULK INSERT statement
 
@@ -52,14 +53,9 @@ WITH
 | `FROM` clause | The URL of the CSV data source |
 | `WITH` clause | States the number of rows to batch, data source `FORMAT` and the method of `INPUT` and that the data source has a `HEADER_ROW` |
 
-## Run queries on the data
+## Next step
 
-```sql
-SELECT COUNT(*) FROM pii;
-```
-```sql
-SELECT TOP(10) * FROM pii;
-```
+* [Run SELECT queries on csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-csv-target)
 
 ## Further information
 

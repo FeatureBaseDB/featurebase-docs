@@ -15,6 +15,19 @@ The following SELECT statements demonstrate
 * [CREATE TABLE csv-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-csv-target)
 * [BULK INSERT from csv data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv)
 
+## SELECT COUNT
+
+```sql
+SELECT COUNT(*) FROM csv-target;
+```
+
+## SELECT TOP
+
+```sql
+SELECT TOP(10) * FROM csv-target;
+```
+
+
 ## SELECT with TOP clause
 
 ```sql
