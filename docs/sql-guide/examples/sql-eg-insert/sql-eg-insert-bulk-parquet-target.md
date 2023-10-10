@@ -16,8 +16,8 @@ This BULK INSERT statement:
 ## Before you begin
 
 * [Learn about the Apache Parquet format](https://parquet.apache.org/){:target="_blank"}
-* [CREATE TABLE parquet-sample](/docs/sql-guide/examples/sql-eg-table-create/sql-eg-table-create-parquet-sample)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [CREATE TABLE parquet-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-parquet-target)
 
 {% include /tips/tip-show-table-for-structure.md %}
 

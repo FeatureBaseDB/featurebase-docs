@@ -14,8 +14,8 @@ This BULK INSERT statement:
 
 ## Before you begin
 * [Learn about the Go ORC format](https://pkg.go.dev/github.com/scritchley/orc){:target="_blank"}
-* [CREATE TABLE sampleorc](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-orc-target)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [CREATE TABLE sampleorc](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-orc-target)
 
 {% include /tips/tip-show-table-for-structure.md %}
 

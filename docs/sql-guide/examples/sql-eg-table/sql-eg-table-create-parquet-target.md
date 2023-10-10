@@ -31,4 +31,4 @@ CREATE TABLE parquet-target (
 
 ## Next step
 
-* [BULK INSERT using a PARQUET formatted data source](/docs/sql-guide/examples/sql-eg-insert-bulk/sql-eg-insert-bulk-parquet)
+* [BULK INSERT using a PARQUET formatted data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet-target)

@@ -23,7 +23,7 @@ This table definition is required for a BULK INSERT example using the TUPLE func
 ## CREATE TABLE
 
 ```sql
-CREATE TABLE doctest-tuple (
+CREATE TABLE tuple-set-target (
   _id string,
   time_col TIMESTAMP,
   stringset_col STRINGSET,
@@ -35,4 +35,4 @@ CREATE TABLE doctest-tuple (
 
 ## Next step
 
-* [Part 2 - BULK INSERT CSV formatted data using the TUPLE function](/docs/sql-guide/examples/insert-bulk-tuple-set/sql-eg-insert-bulk-tuple-set)
+* [BULK INSERT CSV formatted data using the TUPLE function](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-tuple-set-target)

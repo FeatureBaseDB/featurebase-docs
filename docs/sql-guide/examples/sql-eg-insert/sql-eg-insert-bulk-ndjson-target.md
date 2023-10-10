@@ -13,8 +13,8 @@ Insert data into a FeatureBase table from a new line delimited JSON data source 
 ## Before you begin
 
 * [Learn about the New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
-* [CREATE TABLE ndjson-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-ndjson)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [CREATE TABLE ndjson-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-ndjson)
 
 {% include /tips/tip-show-table-for-structure.md %}
 

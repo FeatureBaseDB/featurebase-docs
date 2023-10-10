@@ -27,7 +27,7 @@ Learn about FeatureBase data types used in this statement:
 ```sql
 CREATE TABLE
   IF NOT EXISTS
-  sampleorc (
+  orc-target (
     _id ID,
     a STRING,
     b BOOL,
@@ -39,4 +39,4 @@ WITH COMMENT 'destination table for APACHE orc data source'
 
 ## Next step
 
-* [BULK INSERT using an ORC data source](/docs/sql-guide/examples/sql-eg-insert-bulk/sql-eg-insert-bulk-orc)
+* [BULK INSERT using an ORC data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-orc-target)
