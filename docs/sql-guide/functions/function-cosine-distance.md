@@ -23,4 +23,4 @@ COSINE_DISTANCE ({compare-vector, vector-column})
 
 ## Examples
 
-* [SELECT using COSINE DISTANCE function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-cosvec-target)
+* [SELECT using COSINE DISTANCE function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)
