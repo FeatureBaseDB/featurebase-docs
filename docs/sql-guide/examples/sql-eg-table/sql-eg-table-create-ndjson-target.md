@@ -16,7 +16,6 @@ The table `ndjson-target` is the destination for a `BULK INSERT` statement, and 
 ## Before you begin
 
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
-Learn about FeatureBase data types used in this statement:
 * [BOOL data type](/docs/sql-guide/data-types/data-type-bool)
 * [ID data type](/docs/sql-guide/data-types/data-type-id)
 * [INT data type](/docs/sql-guide/data-types/data-type-int)

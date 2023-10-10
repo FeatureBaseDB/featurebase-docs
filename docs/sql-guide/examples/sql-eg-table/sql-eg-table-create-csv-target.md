@@ -14,9 +14,9 @@ The table `csv-target` is required for a `BULK INSERT` statement, and contains:
 
 ## Before you begin
 
+* [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [STRING data type](/docs/sql-guide/data-types/data-type-string)
 * [INT data type](/docs/sql-guide/data-types/data-type-int)
-* [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 
 ## CREATE TABLE statement
 

@@ -15,6 +15,7 @@ The table `parquet-target` is intended for a `BULK INSERT` statement and contain
 
 ## Before you begin
 
+* [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [ID data type](/docs/sql-guide/data-types/data-type-id)
 * [INT data type](/docs/sql-guide/data-types/data-type-int)
 * [DECIMAL data type](/docs/sql-guide/data-types/data-type-decimal)
