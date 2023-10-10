@@ -3,7 +3,7 @@ title: SELECT examples
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
-nav_order: 10
+nav_order: 100
 ---
 
 # CREATE TABLE examples

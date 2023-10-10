@@ -1,9 +1,9 @@
 ---
 title: CREATE TABLE examples
 layout: default
-parent: SQL Examples
+parent: SQL examples
 grand_parent: SQL guide
-nav_order: 1
+nav_order: 10
 ---
 
 # CREATE TABLE examples
