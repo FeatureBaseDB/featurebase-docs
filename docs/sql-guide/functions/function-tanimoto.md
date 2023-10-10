@@ -56,27 +56,5 @@ The **Jaccard index** and **Tanimoto similarity** are widely used for assessing 
 
 ## Examples
 
-### Source table
-
-Create table:
-```sql
-CREATE TABLE tanimoto_test (_id id, stuff stringset);
-```
-
-Insert values:
-```sql
-INSERT INTO tanimoto_test VALUES
-(1, ['cookies', 'milk']),
-(2, ['cup', 'plate']);
-```
-
-### Tanimoto coefficient
-
-```sql
-SELECT *, tanimoto_coefficient (stuff, [milk, chocolate, cookies, cup])
-  AS
-    distance
-  FROM
-    fbtest
-  ORDER BY distance;
+* [SELECT using TANIMOTO function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tan-target)
 ```
