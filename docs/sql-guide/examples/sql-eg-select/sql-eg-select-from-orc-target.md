@@ -15,6 +15,13 @@ The following SELECT statements demonstrate
 * [CREATE TABLE orc-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-orc-target)
 * [BULK INSERT from orc data source](/docs/sql-guide/examples/sql-insert/sql-eg-insert-bulk-orc)
 
+## SELECT *
+
+```sql
+SELECT * FROM orc-target;
+```
+
+
 ## SELECT with TOP clause
 
 ```sql

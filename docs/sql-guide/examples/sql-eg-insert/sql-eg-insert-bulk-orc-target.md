@@ -49,15 +49,9 @@ BULK INSERT
 |---|---|---|
 | `BULK INSERT INTO` | Insert data to the `orc-target` table `<column-list>` which is required by the `MAP` clause |  |
 | `MAP` clause | A string label that precisely matches the column name in the schema within the ORC data source |  |
-|
+| `FROM` clause | The URL for the ORC data source |  |
+| `WITH` clause | States the data source `FORMAT` and URL `INPUT` |
 
-## Step 3: query the data
+## Next step
 
-```sql
-SELECT * FROM sampleorc;
-```
-
-## Further information
-
-* [SELECT statement](/docs/sql-guide/statements/statement-select)
-* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [SELECT FROM orc-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-orc-target)
