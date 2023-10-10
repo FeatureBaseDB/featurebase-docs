@@ -8,9 +8,9 @@ nav_order: 2
 
 ## CREATE TABLE for BULK INSERT using tuple
 
-The following CREATE TABLE statement includes FeatureBase `SET` data types which permit an `INSERT` of low cardinality data to single table rows.
-
-This table definition is required for a BULK INSERT example using the TUPLE function.
+The `tuple-set-target` table is intended for a `BULK INSERT` statement and includes:
+* a STRING unique identifier
+* TIMESTAMP, IDSET, STRINGSET, IDSETQ and STRINGSETQ column data types
 
 ## Before you begin
 
@@ -19,6 +19,7 @@ This table definition is required for a BULK INSERT example using the TUPLE func
 * [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)
 * [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
 * [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq)
+* [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp)
 
 ## CREATE TABLE
 
