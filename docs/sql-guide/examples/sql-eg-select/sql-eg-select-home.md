@@ -18,7 +18,7 @@ The following SQL examples demonstrate SELECT statements using different:
 
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
-* [FeatureBase expressions](/docs/sql-guide/data-types/expressions-home)
+* [FeatureBase expressions](/docs/sql-guide/expressions/expressions-home)
 * [FeatureBase functions](/docs/sql-guide/data-types/functions-home)
 * [FeatureBase operators](/docs/sql-guide/data-types/operators-home)
 
