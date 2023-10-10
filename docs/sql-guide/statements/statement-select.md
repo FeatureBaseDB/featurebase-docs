@@ -245,7 +245,7 @@ This query can also be performed using the [`flatten` hint](/docs/sql-guide/hint
 
 ### SELECT with cosine_distance
 
-{% include /sql-guide/select-cosine-distance.md %}
+* [SELECT with COSINE_DISTANCE function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)
 
 ### SELECT with two RANGEQ() timestamps
 
