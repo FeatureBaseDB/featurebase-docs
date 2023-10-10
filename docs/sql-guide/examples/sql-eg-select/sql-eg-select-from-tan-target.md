@@ -12,7 +12,7 @@ nav_exclude: true
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [TANIMOTO function](/docs/sql-guide/functions/function-tanimoto)
 * [CREATE TABLE tan-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
-* [INSERT INTO tan-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-cosvec-target)
+* [INSERT INTO tan-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
 
 ## SELECT using TANIMOTO() function
 
