@@ -55,9 +55,4 @@ WITH
 
 ## Next step
 
-* [Run SELECT queries on csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-csv-target)
-
-## Further information
-
-* [SELECT statement](/docs/sql-guide/statements/statement-select)
-* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [Run SELECT queries on csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-csv-target)
