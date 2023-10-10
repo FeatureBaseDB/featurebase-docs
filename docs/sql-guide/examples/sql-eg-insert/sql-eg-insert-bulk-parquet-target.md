@@ -15,7 +15,7 @@ This BULK INSERT statement:
 
 ## Before you begin
 
-* [Learn about the Apache Parquet format](https://parquet.apache.org/){:target="_blank"}
+* [Learn about Apache PARQUET format](https://parquet.apache.org/){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 * [CREATE TABLE parquet-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-parquet-target)
 
@@ -25,16 +25,31 @@ This BULK INSERT statement:
 
 ```sql
 BULK INSERT
-  INTO parquet-target(_id,x,y )
+  INTO parquet-target(
+    _id,
+    x,
+    y
+  )
   MAP(
     'id' id,
     'intval' int,
-    'decval' decimal(4) )
-  FROM 'https://s3.amazonaws.com/todd-scratch.molecula.com/sample.parquet'
+    'decval' decimal(4)
+  )
+  FROM
+    'https://s3.amazonaws.com/todd-scratch.molecula.com/sample.parquet'
   WITH
     FORMAT 'PARQUET'
     INPUT 'URL';
 ```
+
+## Arguments
+
+| Argument | Description | Additional information |
+|---|---|---|
+| `BULK INSERT INTO` | Insert data to the `parquet-target` table `<column-list>` which is required by the `MAP` clause |  |
+| `MAP` clause | A string label that precisely matches the column name in the schema within the PARQUET data source |  |
+| `FROM` clause | The URL of the PARQUET data source |
+| `WITH` clause | States the data source `TARGET` and URL `INPUT` |
 
 ## Next step
 
