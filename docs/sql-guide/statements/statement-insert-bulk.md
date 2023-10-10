@@ -269,4 +269,4 @@ This would ingest all three files in a single request.
 
 ### BULK INSERT using TRANSFORM with TUPLE() function
 
-* [BULK INSERT with TUPLE and SET data types](/docs/sql-guide/examples/insert-bulk-tuple-set/sql-eg-insert-bulk-tuple-set)
+* [BULK INSERT with TUPLE and SET data types](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-tuple-set-target)
