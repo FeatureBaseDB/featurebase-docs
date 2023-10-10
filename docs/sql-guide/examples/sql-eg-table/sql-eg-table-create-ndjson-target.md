@@ -8,7 +8,7 @@ nav_exclude: true
 
 # CREATE TABLE ndjson-target
 
-Create a FeatureBase table with:
+The table `ndjson-target` is the destination for a `BULK INSERT` statement, and includes:
 * a numeric unique identifier
 * BOOL, ID, STRING and TIMESTAMP data types
 * `IF NOT EXISTS` and `WITH COMMENT` table options

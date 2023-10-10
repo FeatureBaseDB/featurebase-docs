@@ -8,10 +8,10 @@ nav_exclude: true
 
 # CREATE TABLE parquet-sample
 
-Create a FeatureBase table with:
+The table `parquet-target` is intended for a `BULK INSERT` statement and contains:
 * A numeric unique identifier
 * ID, INT and DECIMAL data types
-* a DECIMAL constraint of four places
+* a four-point DECIMAL constraint
 
 ## Before you begin
 

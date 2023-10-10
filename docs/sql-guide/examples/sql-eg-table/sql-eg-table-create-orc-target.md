@@ -8,7 +8,7 @@ nav_exclude: true
 
 # CREATE TABLE orc-target
 
-Create a FeatureBase table with:
+The table `orc-target` is the destination for a `BULK INSERT` statement, and contains:
 * a numeric unique identifier
 * BOOL, ID, INT and STRING data types
 * `IF NOT EXISTS` and `WITH COMMENT` table options

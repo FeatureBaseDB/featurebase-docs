@@ -8,14 +8,15 @@ nav_exclude: true
 
 # CREATE TABLE csv-target
 
-Create a FeatureBase table with:
+The table `csv-target` is required for a `BULK INSERT` statement, and contains:
 * a STRING unique identifier
-* STRING and INT data types
+* STRING and INT data type columns
 
 ## Before you begin
 
 * [STRING data type](/docs/sql-guide/data-types/data-type-string)
 * [INT data type](/docs/sql-guide/data-types/data-type-int)
+* [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 
 ## CREATE TABLE statement
 
