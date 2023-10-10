@@ -89,6 +89,8 @@ BULK INSERT
 | `BULK INSERT INTO` | Insert data to the `ndjson-target` table `<column-list>` which is required by the `MAP` clause |  |
 | `MAP`clause | String expression mapping source data to target `<column-list>` |
 | `TRANSFORM` clause | Transform each value from data source to `<column-list>` and converts source `public` column to `BOOL` value using `CAST` function | [CAST function](https://www.w3schools.com/sql/func_sqlserver_cast.asp){:target="_blank"} |
+| `FROM` clause | URL to ndjson data source |
+| `WITH` clause | States the number of rows to batch, data source `FORMAT`, the method of `INPUT` and the statement will `ALLOW_MISSING_VALUES` from the data source |
 
 ## Next step
 
