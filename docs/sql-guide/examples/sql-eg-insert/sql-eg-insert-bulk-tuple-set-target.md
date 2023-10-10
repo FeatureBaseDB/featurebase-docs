@@ -11,6 +11,7 @@ nav_order: 20
 This `BULK INSERT` statement uses the `TRANSFORM...TUPLE` clause to insert data in CSV format to `IDSET` and `STRINGSET` columns.
 
 ## Before you begin
+* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-home#bulk-insert-statements)
 * [TUPLE() function](/docs/sql-guide/functions/function-tuple)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 * [CREATE TABLE tuple-set-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-tuple-set-target)
@@ -25,8 +26,6 @@ BULK INSERT INTO tuple-set-target(
     time_col,
     stringset_col,
     ideset_col,
-    stringsetq_col,
-    idesetq_col
   )
   MAP (
     0 STRING,
@@ -44,7 +43,7 @@ BULK INSERT INTO tuple-set-target(
   )
   FROM x'
     A,2013-07-15T01:18:46Z,stringset1, 1
-    B,2014-07-15T01:18:46Z,stringset2, 2
+    B,2014-07-15T01:18:46Z,idset2, 2
   '
   WITH
     BATCHSIZE 10000

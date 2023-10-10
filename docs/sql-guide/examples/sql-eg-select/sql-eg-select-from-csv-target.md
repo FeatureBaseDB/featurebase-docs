@@ -10,7 +10,7 @@ nav_exclude: true
 The following SELECT statements demonstrate
 
 ## Before you begin
-
+* [SELECT examples](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-home)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [CREATE TABLE csv-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-csv-target)
 * [BULK INSERT from csv data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv)
