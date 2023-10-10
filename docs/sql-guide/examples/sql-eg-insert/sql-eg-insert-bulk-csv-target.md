@@ -49,7 +49,7 @@ WITH
 | Argument | Description |
 |---|---|
 | `BULK INSERT INTO` | Insert data to the `csv-target` table `<column-list>` which is required by the `MAP` clause |
-| `MAP` clause | A sequential order of integer values, starting at 0 that map to the <column-list> |
+| `MAP` expression | An integer offset map expression for values in the data source to the <column-list> |
 | `FROM` clause | The URL of the CSV data source |
 | `WITH` clause | States the number of rows to batch, data source `FORMAT` and the method of `INPUT` and that the data source has a `HEADER_ROW` |
 

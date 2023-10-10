@@ -1,11 +1,11 @@
 ---
-title: SELECT from csv-target
+title: SELECT FROM csv-target
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_exclude: true
 ---
-# SELECT ... FROM csv-target
+# SELECT FROM csv-target
 
 The following SELECT statements demonstrate
 

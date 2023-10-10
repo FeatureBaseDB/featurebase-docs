@@ -1,11 +1,11 @@
 ---
-title: SELECT from tuple-set-target
+title: SELECT FROM tuple-set-target
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_exclude: true
 ---
-# SELECT ... FROM tuple-set-target
+# SELECT FROM tuple-set-target
 
 The following SELECT statements demonstrate
 
@@ -15,4 +15,4 @@ The following SELECT statements demonstrate
 * [CREATE TABLE tuple-set-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-tuple-set-target)
 * [BULK INSERT from csv data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-tuple-set-target)
 
-## SELECT 
+## SELECT

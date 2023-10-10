@@ -21,72 +21,75 @@ Insert data into a FeatureBase table from a new line delimited JSON data source 
 ## BULK INSERT statement
 
 ```sql
-BULK INSERT INTO ndjson-target (
-  _id,
-  type,
-  actor_id,
-  actor_login,
-  actor_url,
-  repo_id,
-  repo_name,
-  repo_url,
-  payload_ref,
-  payload_ref_type,
-  payload_master_branch,
-  payload_description,
-  payload_pusher_type,
-  public,
-  created_at
+BULK INSERT
+  INTO ndjson-target (
+    _id,
+    type,
+    actor_id,
+    actor_login,
+    actor_url,
+    repo_id,
+    repo_name,
+    repo_url,
+    payload_ref,
+    payload_ref_type,
+    payload_master_branch,
+    payload_description,
+    payload_pusher_type,
+    public,
+    created_at
 )
-MAP (
-'$.id' ID,
-'$.type' STRING,
-'$.actor.id' ID,
-'$.actor.login' STRING,
-'$.actor.url' STRING,
-'$.repo.id' ID,
-'$.repo.name' STRING,
-'$.repo.url' STRING,
-'$.payload.ref' STRING,
-'$.payload.ref_type' STRING,
-'$.payload.master_branch' STRING,
-'$.payload.description' STRING,
-'$.payload.pusher_type' STRING,
-'$.public' BOOL,
-'$.created_at' TIMESTAMP )
-TRANSFORM(
-@0,
-@1,
-@2,
-@3,
-@4,
-@5,
-@6,
-@7,
-@8,
-@9,
-@10,
-@11,
-@12,
-CAST(@13 as BOOL),
-@14)
-FROM 'https://featurebase-public-data.s3.us-east-2.amazonaws.com/github-2015-data.json'
-WITH
-BATCHSIZE 10000
-FORMAT 'NDJSON'
-INPUT 'URL'
-ALLOW_MISSING_VALUES;
+  MAP (
+    '$.id' ID,
+    '$.type' STRING,
+    '$.actor.id' ID,
+    '$.actor.login' STRING,
+    '$.actor.url' STRING,
+    '$.repo.id' ID,
+    '$.repo.name' STRING,
+    '$.repo.url' STRING,
+    '$.payload.ref' STRING,
+    '$.payload.ref_type' STRING,
+    '$.payload.master_branch' STRING,
+    '$.payload.description' STRING,
+    '$.payload.pusher_type' STRING,
+    '$.public' BOOL,
+    '$.created_at' TIMESTAMP
+  )
+  TRANSFORM(
+    @0,
+    @1,
+    @2,
+    @3,
+    @4,
+    @5,
+    @6,
+    @7,
+    @8,
+    @9,
+    @10,
+    @11,
+    @12,
+    CAST(@13 as BOOL),
+    @14
+  )
+  FROM
+    'https://featurebase-public-data.s3.us-east-2.amazonaws.com/github-2015-data.json'
+  WITH
+    BATCHSIZE 10000
+    FORMAT 'NDJSON'
+    INPUT 'URL'
+    ALLOW_MISSING_VALUES;
 ```
+
+## Arguments
+
+| Argument | Description | Additional information |
+|---|---|---|
+| `BULK INSERT INTO` | Insert data to the `ndjson-target` table `<column-list>` which is required by the `MAP` clause |  |
+| `MAP`clause | String expression mapping source data to target `<column-list>` |
+| `TRANSFORM` clause | Transform each value from data source to `<column-list>` and converts source `public` column to `BOOL` value using `CAST` function | [CAST function](https://www.w3schools.com/sql/func_sqlserver_cast.asp){:target="_blank"} |
 
 ## Next step
 
-* [SQL SELECT queries]
-
-## Query the table
-
-```sql
-SELECT COUNT(*) FROM github-stats;
-```
-```sql
-SELECT TOP(10) * FROM github-stats;
-```
+* [SELECT FROM ndjson-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-ndjson-target)

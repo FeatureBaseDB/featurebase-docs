@@ -1,11 +1,11 @@
 ---
-title: SELECT from ndjson-target
+title: SELECT FROM ndjson-target
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_exclude: true
 ---
-# SELECT ... FROM ndjson-target
+# SELECT FROM ndjson-target
 
 The following SELECT statements demonstrate
 
@@ -19,4 +19,10 @@ The following SELECT statements demonstrate
 
 ```sql
 SELECT TOP(10) * FROM ndjson-target;
+```
+
+## SELECT with COUNT clause
+
+```sql
+SELECT COUNT(*) FROM ndjson-target;
 ```

@@ -1,11 +1,11 @@
 ---
-title: SELECT from parquet-target
+title: SELECT FROM parquet-target
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_exclude: true
 ---
-# SELECT ... FROM parquet-target
+# SELECT FROM parquet-target
 
 The following SELECT statements demonstrate
 

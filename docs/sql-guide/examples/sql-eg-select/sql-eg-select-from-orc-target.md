@@ -1,11 +1,11 @@
 ---
-title: SELECT from orc-target
+title: SELECT FROM orc-target
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_exclude: true
 ---
-# SELECT ... FROM orc-target
+# SELECT FROM orc-target
 
 The following SELECT statements demonstrate
 

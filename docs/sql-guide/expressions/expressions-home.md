@@ -14,12 +14,12 @@ nav_order: 4
 
 {% include /sql-guide/sql-guide-before-begin.md %}
 
-## identifier
+## `<identifier>`
 ![expr](/assets/images/sql-guide/identifier.svg)
 
 {% include /concepts/standard-naming-obj.md %}
 
-## expr
+## `<expr>`
 
 ![expr](/assets/images/sql-guide/expr.svg)
 
@@ -34,13 +34,13 @@ nav_order: 4
 
 Literals are explicitly specified fixed values that conform to a specific data type:
 
-| String literal | BNF diagram | Further information |
+| String literal | BNF diagram | Description | Additional information |
 |---|---|---|
-| `date` |  | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| `decimal` |  | [DECIMAL() data type](/docs/sql-guide/data-types/data-type-decimal)
-| `set` | ![expr](/assets/images/sql-guide/set_literal.svg) | [IDSET data type](/docs/sql-guide/data-types/data-type-idset)<br/>[STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset) |
-| `string` |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
-| `tuple` | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types. |
+| `date` |  |  | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
+| `decimal` |  |  | [DECIMAL() data type](/docs/sql-guide/data-types/data-type-decimal)
+| `set` | ![expr](/assets/images/sql-guide/set_literal.svg) |  | * [IDSET data type](/docs/sql-guide/data-types/data-type-idset)<br/>* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)<br/>* [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)<br/>* [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) |
+| `string` |  |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
+| `tuple` | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types | [TUPLE() function](/docs/sql-guide/functions/function-tuple) |
 
 ### [unary_op] expr
 
@@ -56,20 +56,18 @@ Literals are explicitly specified fixed values that conform to a specific data t
 
 * [SQL Functions](/docs/sql-guide/functions/functions-home)
 
-### CAST expr AS type_name
+### CAST `<expr>` AS `<data-type>`
 
-| Syntax | Example | Result |
-|---|---|---|
-| `CAST expr AS type_name` | `SELECT CAST (25.65 AS int);` | 25 |
-
-* [CAST function](https://www.w3schools.com/sql/func_sqlserver_cast.asp){:target="_blank"}
+| Syntax | Example | Result | Additional information |
+|---|---|---|---|
+| `CAST <expr> AS <data-type>` | `SELECT CAST (25.65 AS int);` | 25 | [CAST function](https://www.w3schools.com/sql/func_sqlserver_cast.asp){:target="_blank"} |
 
 ### paren_select_stmt
 ![expr](/assets/images/sql-guide/paren_select_stmt.svg)
 
-A SQL Statement nested within another SQL statement.
-
-* [SELECT Statement](/docs/sql-guide/statements/statement-select)
+| Description | Additional information |
+|---|---|
+| A SQL Statement nested within another SQL statement | [SELECT Statement](/docs/sql-guide/statements/statement-select) |
 
 ### case_expr
 ![expr](/assets/images/sql-guide/case_expr.svg)
