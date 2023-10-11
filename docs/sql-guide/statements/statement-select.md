@@ -142,6 +142,7 @@ Both expressions can be aliased with a `<table_alias>`
 
 {% include /sql-guide/sql-eg-select-statements.md %}
 
+<!-- The following examples need to be rolled into the examples, above-->
 
 ### Point SELECT
 

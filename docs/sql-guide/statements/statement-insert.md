@@ -72,6 +72,8 @@ There are special assignments for certain literal values.
 
 {% include /sql-guide/sql-eg-insert-statements.md %}
 
+<!-- the following headings and sql commented out because most of them are in the insert statements include, above
+
 ### CREATE TABLE with string data types
 
 {% include /sql-guide/table-create-prod-sale-string-eg.md %}
@@ -129,7 +131,7 @@ INSERT
 ### INSERT data to vector table
 
 * [INSERT INTO VECTOR data type column](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
-
+-->
 ## Further information
 
 * [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)

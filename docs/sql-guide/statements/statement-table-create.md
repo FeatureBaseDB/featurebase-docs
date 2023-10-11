@@ -57,7 +57,11 @@ CREATE TABLE
 
 {% include /cloud-table/cloud-summary-table-pk.md %}
 
-## Examples
+<!--next include has heading "CREATE TABLE examples"-->
+
+{% include /sql-guide/sql-eg-table-create-statements.md %}
+
+<!--original create table statements to be reviewed as they may already be included above
 
 {% include /sql-guide/table-create-prod-sale-string-eg.md %}
 
@@ -84,6 +88,7 @@ CREATE TABLE
 ### CREATE TABLE with all column types
 
 {% include /sql-guide/table-create-types-all-eg.md %}
+-->
 
 ## Further information
 

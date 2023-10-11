@@ -148,7 +148,7 @@ There are special assignments for certain literal values when inserting NDJSON d
 | Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
 | Value Missing () | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
 
-## Examples
+<!--insert has heading "BULK INSERT examples"-->
 
 {% include /sql-guide/sql-eg-insert-bulk-statements.md %}
 
@@ -221,7 +221,7 @@ with
     input 'FILE';
 ```
 -->
-
+<!-- The following examples to be rolled into the new examples-->
 ### BULK INSERT with read from CSV file
 
 ```sql
