@@ -35,4 +35,4 @@ CREATE TABLE tuple-set-target (
 
 ## Next step
 
-* [BULK INSERT CSV formatted data using the TUPLE function](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-tuple-set-target)
+* [BULK INSERT INTO tuple-set-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-tuple-set-target)

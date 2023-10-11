@@ -32,4 +32,4 @@ CREATE TABLE parquet-target (
 
 ## Next step
 
-* [BULK INSERT using a PARQUET formatted data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet-target)
+* [BULK INSERT INTO parquet-target from URL](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet-target)

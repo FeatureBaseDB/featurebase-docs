@@ -39,4 +39,4 @@ WITH COMMENT 'destination table for APACHE orc data source'
 
 ## Next step
 
-* [BULK INSERT using an ORC data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-orc-target)
+* [BULK INSERT INTO orc-target from URL](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-orc-target)

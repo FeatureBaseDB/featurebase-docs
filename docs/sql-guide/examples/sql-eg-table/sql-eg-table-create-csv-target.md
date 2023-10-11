@@ -37,4 +37,4 @@ CREATE TABLE csv-target (
 
 ## Next step
 
-* [BULK INSERT using a CSV formatted data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target)
+* [BULK INSERT INTO csv-target from URL](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target)

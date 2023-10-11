@@ -49,4 +49,4 @@ CREATE TABLE
 
 ## Next step
 
-* [BULK INSERT using an NDJSON data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target)
+* [BULK INSERT INTO ndjson-target from URL](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target)
