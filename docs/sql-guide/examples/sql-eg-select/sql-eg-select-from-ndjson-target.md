@@ -18,11 +18,22 @@ The following SELECT statements demonstrate
 ## SELECT with TOP clause
 
 ```sql
-SELECT TOP(10) * FROM ndjson-target;
+SELECT TOP(3) _id, actor_url FROM ndjson-target;
+
+    _id    | actor_url
+-----------+-------------------------------------
+2489651045 | https://api.github.com/users/petroav
+2489651051 | https://api.github.com/users/rspt
+2489651053 | https://api.github.com/users/izuzero
 ```
 
 ## SELECT with COUNT clause
 
 ```sql
 SELECT COUNT(*) FROM ndjson-target;
+
+COUNT(*) |
+---------
+11351
+
 ```
