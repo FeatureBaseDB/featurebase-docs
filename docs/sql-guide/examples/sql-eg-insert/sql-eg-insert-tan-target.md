@@ -20,7 +20,8 @@ INSERT data to STRINGSET columns in the `tan-target` table
 ```sql
 INSERT INTO tan-target (
   _id,
-  stuff)
+  stuff
+)
   VALUES
     (identifier('tan-target'), ['cookies', 'milk']),
     (identifier('tan-target'), ['cup', 'plate']);
@@ -30,7 +31,7 @@ INSERT INTO tan-target (
 
 | Argument | Description | Additional information |
 |---|---|---|
-| `INSERT INTO` | Insert an array of string values to the `stuff` stringset column  |[IDENTIFIER() function](/docs/sql-guide/functions/function-identifier)
+| `INSERT INTO` | Insert an array of string values to the `stuff` stringset column with automatically incremented row `_id` values  | [IDENTIFIER() function](/docs/sql-guide/functions/function-identifier)
 
 ## Next step
 
