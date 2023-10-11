@@ -3,7 +3,7 @@ title: SQL examples
 layout: default
 parent: SQL guide
 nav_order: 7
-has_toc: true
+has_toc: false
 ---
 
 # FeatureBase SQL-guide examples
