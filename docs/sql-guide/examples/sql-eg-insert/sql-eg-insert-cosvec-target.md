@@ -18,12 +18,17 @@ INSERT data to string and vector columns in the `cosvec-target` table
 ## INSERT statement
 
 ```sql
-INSERT INTO cosvec-target
+INSERT INTO cosvec-target (
+  _id,
+  description,
+  dabed
+)
   VALUES(
     {_id},
     '{tools_array[i]}',
      {dabed}
 );
+
 ```
 
 ## Arguments
