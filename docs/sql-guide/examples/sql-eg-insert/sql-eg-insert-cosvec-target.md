@@ -34,4 +34,4 @@ INSERT INTO cosvec-target
 
 ## Next step
 
-* [Run SELECT queries on cosvec-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)
+* [SELECT FROM cosvec-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)

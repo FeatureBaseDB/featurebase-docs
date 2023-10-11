@@ -55,4 +55,4 @@ WITH
 
 ## Next step
 
-* [Run SELECT queries on csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-csv-target)
+* [SELECT FROM csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-csv-target)

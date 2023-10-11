@@ -53,4 +53,4 @@ BULK INSERT
 
 ## Next step
 
-* [SELECT...FROM parquet-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-parquet-target)
+* [SELECT FROM parquet-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-parquet-target)

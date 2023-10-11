@@ -28,11 +28,10 @@ INSERT INTO tan-target (
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| `INSERT INTO` | Insert an array of string values to the `stuff` stringset column, identified by a single  |
-
+| Argument | Description | Additional information |
+|---|---|---|
+| `INSERT INTO` | Insert an array of string values to the `stuff` stringset column  |[IDENTIFIER() function](/docs/sql-guide/functions/function-identifier)
 
 ## Next step
 
-* [Run SELECT queries on cosvec-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)
+* [SELECT FROM tan-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)
