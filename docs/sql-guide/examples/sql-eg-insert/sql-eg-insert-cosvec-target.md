@@ -18,6 +18,15 @@ INSERT data to string and vector columns in the `cosvec-target` table
 ## INSERT statement
 
 ```sql
+INSERT INTO cosvec-target
+  VALUES (
+    0,
+    'Three vector values',
+    [0.9059894547233159, 0.6554107219473952, 0.11411471973104703]
+  );
+```
+
+```sql
 INSERT INTO cosvec-target (
   _id,
   description,
