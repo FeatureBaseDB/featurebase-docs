@@ -1,5 +1,4 @@
-
-### `CREATE TABLE` examples
+## `CREATE TABLE` examples
 
 | Statement | Data types | Table options | Relates to |
 |---|---|---|---|

@@ -1,4 +1,4 @@
-### `ALTER TABLE` examples
+## `ALTER TABLE` examples
 
 | Statement | Data types | Table options | Relates to |
 |---|---|---|---|

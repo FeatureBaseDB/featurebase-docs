@@ -1,6 +1,6 @@
-## BULK INSERT statements
+## `BULK INSERT` examples
 
-The following SQL examples demonstrate BULK INSERT using different clauses and data sources
+The following SQL examples demonstrate BULK INSERT using different clauses and data sources.
 
 | Statement | Target table | FROM clause | TRANSFORM clause | WITH clause |
 |---|---|---|---|---|
