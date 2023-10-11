@@ -52,19 +52,4 @@ ALTER table_name [
 
 ## Examples
 
-### ADD `stock` column to `products` table
-
-```
-ALTER TABLE products ADD stock int;
-```
-
-### ADD `Hobbies` column to `skillset` table
-```
-ALTER TABLE skillset ADD Hobbies string;
-```
-
-### DROP `Hobbies` column from `skillset` table
-
-```
-ALTER TABLE skillset DROP Hobbies;
-```
+{% include /sql-guide/sql-eg-table-alter-statements.md %}

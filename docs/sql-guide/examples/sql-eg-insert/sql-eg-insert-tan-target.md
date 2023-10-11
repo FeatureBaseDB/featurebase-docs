@@ -8,7 +8,7 @@ nav_exclude: true
 
 # INSERT data to tan-target
 
-INSERT data to string and vector columns in the `cosvec-target` table
+INSERT data to STRINGSET columns in the `tan-target` table
 
 ## Before you begin
 * [INSERT examples](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-home#insert-statements)
