@@ -1,28 +1,3 @@
----
-title: INSERT examples
-layout: default
-parent: SQL examples
-grand_parent: SQL guide
-nav_order: 2
-has_toc: false
----
-# INSERT & BULK INSERT examples
-
-These examples demonstrate the INSERT and BULK INSERT statements in relation to a target table, and different clauses.
-
-## Before you begin
-
-* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-home)
-* [INSERT statement](/docs/sql-guide/statements/statement-insert)
-* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
-
-## INSERT statements
-
-| Statement | Target table |
-|---|---|
-| [INSERT INTO cosvec-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target) | [cosvec-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target) |
-| [INSERT INTO tan-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-tan-target) | [tan-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-tan-target) |
-
 ## BULK INSERT statements
 
 The following SQL examples demonstrate BULK INSERT using different clauses and data sources

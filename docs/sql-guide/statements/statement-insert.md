@@ -70,6 +70,8 @@ There are special assignments for certain literal values.
 
 ## Examples
 
+{% include /sql-guide/sql-eg-insert-statements.md %}
+
 ### CREATE TABLE with string data types
 
 {% include /sql-guide/table-create-prod-sale-string-eg.md %}

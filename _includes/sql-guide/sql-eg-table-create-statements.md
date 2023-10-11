@@ -1,23 +1,5 @@
----
-title: TABLE examples
-layout: default
-parent: SQL examples
-grand_parent: SQL guide
-nav_order: 1
-has_toc: false
----
 
-# TABLE examples
-
-The following SQL examples demonstrate CREATE TABLE and ALTER TABLE statements using different data types, constraints and options.
-
-## Before you begin
-
-* [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
-* [ALTER TABLE statement](/docs/sql-guide/statements/statement-table-alter)
-* [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
-
-## CREATE TABLE examples
+### `CREATE TABLE` examples
 
 | Statement | Data types | Table options | Relates to |
 |---|---|---|---|
@@ -28,12 +10,6 @@ The following SQL examples demonstrate CREATE TABLE and ALTER TABLE statements u
 | [CREATE TABLE parquet-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-parquet-target) | * [ID](/docs/sql-guide/data-types/data-type-id)<br/>* [INT](/docs/sql-guide/data-types/data-type-int)<br/>* [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) |  | [BULK INSERT parquet data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet-target) |
 | [CREATE TABLE tuple-set-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-tuple-set-target) | * [IDSET](/docs/sql-guide/data-types/data-type-idset)<br/>* [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq)<br/>* [INT](/docs/sql-guide/data-types/data-type-int)<br/>* [STRING](/docs/sql-guide/data-types/data-type-string)<br/>* [STRINGSET](/docs/sql-guide/data-types/data-type-stringset)<br/>* [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) |  | [BULK INSERT tuple-set-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-tuple-set-target) |
 | [CREATE TABLE tan-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-tan-target) | * [ID](/docs/sql-guide/data-types/data-type-id)<br/>* [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) |  | [INSERT INTO tan-target](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-tan-target) |
-
-## ALTER TABLE examples
-
-| Statement | Data types | Table options | Relates to |
-|---|---|---|---|
-| ALTER TABLE |  |  |  |
 
 <!-- Data type list for copying into tables
 

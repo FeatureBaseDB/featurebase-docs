@@ -140,17 +140,8 @@ Both expressions can be aliased with a `<table_alias>`
 
 ## Examples
 
-### SELECT COUNT
+{% include /sql-guide/sql-eg-select-statements.md %}
 
-```sql
-SELECT COUNT(*) FROM github-stats;
-```
-
-### SELECT TOP
-
-```sql
-SELECT TOP(10) * FROM github-stats;
-```
 
 ### Point SELECT
 

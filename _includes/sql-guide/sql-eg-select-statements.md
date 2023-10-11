@@ -1,28 +1,6 @@
----
-title: SELECT examples
-layout: default
-parent: SQL examples
-grand_parent: SQL guide
-nav_order: 3
-has_toc: false
----
+## `SELECT` examples
 
-# CREATE TABLE examples
-
-The following SQL examples demonstrate SELECT statements using different:
-* clauses
-* operators
-* functions
-
-## Before you begin
-
-* [SELECT statement](/docs/sql-guide/statements/statement-select)
-* [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
-* [FeatureBase expressions](/docs/sql-guide/expressions/expressions-home)
-* [FeatureBase functions](/docs/sql-guide/functions/functions-home)
-* [FeatureBase operators](/docs/sql-guide/operators/operators-home)
-
-## Examples
+These examples demonstrate SELECT statements that use different clauses, expressions, functions and operators.
 
 | Statement | Target table | SELECT clauses | Expressions | Functions | Operators|
 |---|---|---|---|---|---|

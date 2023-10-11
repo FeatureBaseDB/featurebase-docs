@@ -8,3 +8,25 @@ has_toc: true
 ---
 
 # FeatureBase SQL-guide examples
+
+Supported SQL statements, data-types, expressions, functions and operators are demonstrated in the following examples.
+
+## Before you begin
+
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
+
+## TABLE statements
+
+{% include /sql-guide/sql-eg-table-create-statements.md %}
+
+{% include /sql-guide/sql-eg-table-alter-statements.md %}
+
+## INSERT examples
+
+{% include /sql-guide/sql-eg-insert-statements.md %}
+
+{% include /sql-guide/sql-eg-insert-bulk-statements.md %}
+
+## SELECT examples
+
+{% include /sql-guide/sql-eg-select-statements.md %}
