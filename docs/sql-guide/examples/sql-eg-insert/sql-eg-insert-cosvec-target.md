@@ -35,7 +35,7 @@ INSERT INTO cosvec-target(
 | Argument | Description |
 |---|---|
 | `INSERT INTO` | Insert data to the `cosvec-target` table `<column-list>` |
-
+| `[values]` | Insert three decimal values to `cosvec-col` |
 
 ## Next step
 
