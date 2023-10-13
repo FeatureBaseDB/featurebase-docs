@@ -18,7 +18,11 @@ INSERT data to string and vector columns in the `cosvec-target` table
 ## INSERT statement
 
 ```sql
-INSERT INTO cosvec-target
+INSERT INTO cosvec-target(
+  _id,
+  description,
+  cosvec-col
+)
   VALUES (
     0,
     'Three vector values',
@@ -31,6 +35,7 @@ INSERT INTO cosvec-target
 | Argument | Description |
 |---|---|
 | `INSERT INTO` | Insert data to the `cosvec-target` table `<column-list>` |
+
 
 ## Next step
 
