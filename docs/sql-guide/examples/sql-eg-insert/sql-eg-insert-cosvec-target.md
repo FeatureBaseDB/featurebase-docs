@@ -26,20 +26,6 @@ INSERT INTO cosvec-target
   );
 ```
 
-```sql
-INSERT INTO cosvec-target (
-  _id,
-  description,
-  dabed
-)
-  VALUES(
-    {_id},
-    '{tools_array[i]}',
-     {dabed}
-);
-
-```
-
 ## Arguments
 
 | Argument | Description |
