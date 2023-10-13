@@ -25,7 +25,7 @@ The table `cosvec-target` is required for an `INSERT` statement, and contains:
 CREATE TABLE cosvec-target (
   _id id,
   description string,
-  cosvec-col vector(768)
+  cosvec-col vector(3)
 );
 ```
 

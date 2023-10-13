@@ -17,8 +17,13 @@ nav_exclude: true
 ## SELECT COSINE DISTANCE()
 
 ```sql
-SELECT id, description, cosine_distance(
+SELECT _id, description, cosine_distance(
   [-0.027067707851529, 0.009963636286557, 0.034747183322906], cosvec-col)
    AS rank
    FROM cosvec-target;
+
+id |     description     |   rank
+---+---------------------+----------
+ 0 | Three vector values | 1.2763582
+
 ```
