@@ -49,12 +49,6 @@ occupation |
    9314    |
 ```
 
-## SELECT with TOP clause
-
-```sql
-SELECT TOP(10) * FROM csv-target;
-```
-
 ## Further information
 
 * [SQL Guide examples](/docs/sql-guide/examples/sql-eg-home)

@@ -12,6 +12,7 @@ The following SELECT statements demonstrate
 ## Before you begin
 * [SELECT examples](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-home)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
+* [SQL Operators](/docs/sql-guide/operators/operators-home)
 * [CREATE TABLE parquet-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-parquet-target)
 * [BULK INSERT from parquet data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-parquet-target)
 
