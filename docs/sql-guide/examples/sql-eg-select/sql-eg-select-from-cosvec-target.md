@@ -8,7 +8,7 @@ nav_exclude: true
 # SELECT FROM cosvec-target
 
 ## Before you begin
-* [SELECT examples](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-home)
+* [SELECT examples](/docs/sql-guide/examples/sql-eg-home/#select-examples)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [COSINE_DISTANCE function](/docs/sql-guide/functions/function-cosine-distance)
 * [CREATE TABLE cosvec-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)

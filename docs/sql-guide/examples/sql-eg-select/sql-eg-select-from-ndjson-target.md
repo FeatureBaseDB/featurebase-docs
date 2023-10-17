@@ -10,7 +10,7 @@ nav_exclude: true
 The following SELECT statements demonstrate
 
 ## Before you begin
-* [SELECT examples](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-home)
+* [SELECT examples](/docs/sql-guide/examples/sql-eg-home/#select-examples)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [CREATE TABLE ndjson-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-ndjson-target)
 * [BULK INSERT from ndjson data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target)

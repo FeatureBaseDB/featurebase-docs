@@ -8,7 +8,7 @@ nav_exclude: true
 # SELECT FROM tan-target
 
 ## Before you begin
-* [SELECT examples](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-home)
+* [SELECT examples](/docs/sql-guide/examples/sql-eg-home/#select-examples)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [TANIMOTO function](/docs/sql-guide/functions/function-tanimoto)
 * [CREATE TABLE tan-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)

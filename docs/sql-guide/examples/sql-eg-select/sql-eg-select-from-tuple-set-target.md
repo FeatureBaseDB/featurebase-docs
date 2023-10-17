@@ -9,7 +9,7 @@ nav_exclude: true
 
 
 ## Before you begin
-* [SELECT examples](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-home)
+* [SELECT examples](/docs/sql-guide/examples/sql-eg-home/#select-examples)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [DATETIMENAME() function](/docs/sql-guide/functions/function-datetimename)
 * [CREATE TABLE tuple-set-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-tuple-set-target)
