@@ -195,6 +195,9 @@ string
 literal'
 ```
 
+{: .important}
+Place closing quotation marks on the final line of any multi-line string literal.
+
 #### Using INLINE with quotation marks
 
 FROM clause quotation marks must be escaped before the BULK statement is run, even when CSV values are quoted.
