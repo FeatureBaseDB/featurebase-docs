@@ -25,8 +25,8 @@ The table `parquet-target` is intended for a `BULK INSERT` statement and contain
 ```sql
 CREATE TABLE parquet-target (
     _id ID,
-    x INT,
-    y DECIMAL(4)
+    integercol INT,
+    decimalcol DECIMAL(4)
 );
 ```
 

@@ -21,18 +21,31 @@ The following SELECT statements demonstrate
 SELECT TOP(10) * FROM parquet-target;
 
 
- _id | x |   y
------+---+-------
- 0  |  2 | 1.4142
- 1  | 36 | 6.0000
- 2  | 36 | 6.0000
- 3  | 18 | 4.2426
- 4  | 68 | 8.2462
- 5  | 74 | 8.6023
- 6  | 6  | 2.4494
- 7  | 78 | 8.8317
- 8  | 79 | 8.8881
- 9  | 90 | 9.4868
+ _id | integercol | decimalcol
+-----+------------+-----------
+ 0  |       2     |   1.4142
+ 1  |      36     |   6.0000
+ 2  |      36     |   6.0000
+ 3  |      18     |   4.2426
+ 4  |      68     |   8.2462
+ 5  |      74     |   8.6023
+ 6  |       6     |   2.4494
+ 7  |      78     |   8.8317
+ 8  |      79     |   8.8881
+ 9  |      90     |   9.4868
+```
+
+## SELECT with WHERE clause and BETWEEN operator
+
+```sql
+SELECT integercol, decimalcol FROM parquet-target WHERE decimalcol BETWEEN 1 AND 5;
+
+integercol | decimalcol
+-----------+-----------
+     2     |   1.4142
+    18     |   4.2426
+     6     |   2.4494
+    25     |   5.0000
 ```
 
 ## Further information

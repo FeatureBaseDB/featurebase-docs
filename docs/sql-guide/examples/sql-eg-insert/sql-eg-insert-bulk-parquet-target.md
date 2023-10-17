@@ -27,8 +27,8 @@ This BULK INSERT statement:
 BULK INSERT
   INTO parquet-target(
     _id,
-    x,
-    y
+    integercol,
+    decimalcol
   )
   MAP(
     'id' id,
