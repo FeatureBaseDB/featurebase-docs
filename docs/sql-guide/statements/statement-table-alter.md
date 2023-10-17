@@ -50,6 +50,8 @@ ALTER table_name [
 | data_type | Column data type | [SQL data types](/docs/sql-guide/data-types/data-types-home) |
 | constraint | Optional data type constraint | [SQL data types](/docs/sql-guide/data-types/data-types-home) |
 
+<!-- commenting out because the examples aren't great
 ## Examples
 
 {% include /sql-guide/sql-eg-table-alter-statements.md %}
+-->
