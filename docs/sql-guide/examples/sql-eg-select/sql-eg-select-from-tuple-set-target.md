@@ -14,7 +14,7 @@ nav_exclude: true
 * [CREATE TABLE tuple-set-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-tuple-set-target)
 * [BULK INSERT from csv data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-tuple-set-target)
 
-## SELECT
+## SELECT using 
 
 ## Further information
 

@@ -28,4 +28,6 @@ id |     description     |   rank
 
 ```
 
-## SELECT
+## Further information
+
+* [SQL Guide examples](/docs/sql-guide/examples/sql-eg-home)
