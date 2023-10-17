@@ -7,7 +7,6 @@ nav_exclude: true
 ---
 # SELECT FROM tuple-set-target
 
-The following SELECT statements demonstrate
 
 ## Before you begin
 * [SELECT examples](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-home)
@@ -16,3 +15,7 @@ The following SELECT statements demonstrate
 * [BULK INSERT from csv data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-tuple-set-target)
 
 ## SELECT
+
+## Further information
+
+* [SQL Guide examples](/docs/sql-guide/examples/sql-eg-home)

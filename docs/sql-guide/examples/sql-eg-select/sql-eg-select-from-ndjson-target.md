@@ -30,19 +30,22 @@ SELECT TOP(3) _id, actor_url FROM ndjson-target;
 ## SELECT with COUNT clause
 
 ```sql
-SELECT COUNT(DISTINCT actor_url) AS unique-urls FROM ndjson-target;
-
-unique-urls |
-------------+
-5250
-
-```
-
-
-```sql
 SELECT COUNT(*) FROM ndjson-target;
 
 COUNT(*) |
 ---------
 11351
 ```
+## SELECT with COUNT (DISTINCT) clause
+
+```sql
+SELECT COUNT(DISTINCT actor_url) AS unique-urls FROM ndjson-target;
+
+unique-urls |
+------------+
+5250
+```
+
+## Further information
+
+* [SQL Guide examples](/docs/sql-guide/examples/sql-eg-home)

@@ -29,3 +29,7 @@ SELECT *, tanimoto_coefficient (stuff, ['milk', 'chocolate', 'cookies', 'cup'])
   2  | "cup,plate"    | 0.2
   1  | "cookies,milk" | 0.5
 ```
+
+## Further information
+
+* [SQL Guide examples](/docs/sql-guide/examples/sql-eg-home)

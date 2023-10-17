@@ -33,3 +33,7 @@ SELECT TOP(10) * FROM csv-target;
 ```sql
 SELECT TOP(10) * FROM csv-target;
 ```
+
+## Further information
+
+* [SQL Guide examples](/docs/sql-guide/examples/sql-eg-home)

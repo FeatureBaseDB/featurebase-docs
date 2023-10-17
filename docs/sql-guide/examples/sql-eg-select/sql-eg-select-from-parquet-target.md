@@ -34,3 +34,7 @@ SELECT TOP(10) * FROM parquet-target;
  8  | 79 | 8.8881
  9  | 90 | 9.4868
 ```
+
+## Further information
+
+* [SQL Guide examples](/docs/sql-guide/examples/sql-eg-home)
