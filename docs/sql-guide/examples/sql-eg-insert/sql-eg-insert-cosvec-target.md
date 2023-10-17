@@ -11,7 +11,7 @@ nav_exclude: true
 INSERT data to string and vector columns in the `cosvec-target` table
 
 ## Before you begin
-* [INSERT examples](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-home#insert-statements)
+* [INSERT examples](/docs/sql-guide/examples/sql-eg-home/#insert-examples)
 * [INSERT statement](/docs/sql-guide/statements/statement-insert)
 * [CREATE TABLE cosvec-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
 
