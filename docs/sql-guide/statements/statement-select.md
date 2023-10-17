@@ -132,19 +132,11 @@ The table_or_subquery expression can be:
 
 Both expressions can be aliased with a `<table_alias>`
 
-#### Arguments
-
-| Argument | Description |
-|---|---|
-| col_name | Column name
-
 ## Examples
 
 {% include /sql-guide/sql-eg-select-statements.md %}
 
 <!-- The following examples need to be rolled into the examples, above-->
-
-
 
 ### SELECT int function
 
