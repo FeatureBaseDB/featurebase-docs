@@ -27,9 +27,9 @@ This BULK INSERT statement:
 BULK INSERT
   INTO orc-target(
     _id,
-    a,
-    b,
-    c
+    stringcol,
+    boolcol,
+    intcol
   )
   MAP(
     0 id,

@@ -29,9 +29,9 @@ CREATE TABLE
   IF NOT EXISTS
   orc-target (
     _id ID,
-    a STRING,
-    b BOOL,
-    c INT
+    stringcol STRING,
+    boolcol BOOL,
+    intcol INT
 )
 WITH COMMENT 'destination table for APACHE orc data source'
 ;
