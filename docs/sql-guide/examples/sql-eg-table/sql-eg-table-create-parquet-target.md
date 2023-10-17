@@ -14,7 +14,7 @@ The table `parquet-target` is intended for a `BULK INSERT` statement and contain
 * a four-point DECIMAL constraint
 
 ## Before you begin
-* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-home#create-table-examples)
+* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-home/#create-table-examples)
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [ID data type](/docs/sql-guide/data-types/data-type-id)
 * [INT data type](/docs/sql-guide/data-types/data-type-int)

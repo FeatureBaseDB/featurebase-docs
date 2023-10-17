@@ -14,7 +14,7 @@ The table `ndjson-target` is the destination for a `BULK INSERT` statement, and 
 * `IF NOT EXISTS` and `WITH COMMENT` table options
 
 ## Before you begin
-* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-home#create-table-examples)
+* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-home/#create-table-examples)
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [BOOL data type](/docs/sql-guide/data-types/data-type-bool)
 * [ID data type](/docs/sql-guide/data-types/data-type-id)

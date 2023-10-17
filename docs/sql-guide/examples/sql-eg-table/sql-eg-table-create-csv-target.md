@@ -13,7 +13,7 @@ The table `csv-target` contains:
 * STRING and INT data type columns
 
 ## Before you begin
-* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-home#create-table-examples)
+* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-home/#create-table-examples)
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [STRING data type](/docs/sql-guide/data-types/data-type-string)
 * [INT data type](/docs/sql-guide/data-types/data-type-int)

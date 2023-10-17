@@ -13,7 +13,7 @@ The table `tan-target` is required for an `INSERT` statement, and contains:
 * a STRINGSET data type column
 
 ## Before you begin
-* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-home#create-table-examples)
+* [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-home/#create-table-examples)
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [ID data type](/docs/sql-guide/data-types/data-type-id)
 * [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
