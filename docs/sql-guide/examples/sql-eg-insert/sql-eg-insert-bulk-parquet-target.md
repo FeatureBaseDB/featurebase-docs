@@ -14,7 +14,7 @@ This BULK INSERT statement:
 * inserts the data
 
 ## Before you begin
-* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-home#bulk-insert-statements)
+* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-home/#bulk-insert-examples)
 * [Learn about Apache PARQUET format](https://parquet.apache.org/){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 * [CREATE TABLE parquet-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-parquet-target)

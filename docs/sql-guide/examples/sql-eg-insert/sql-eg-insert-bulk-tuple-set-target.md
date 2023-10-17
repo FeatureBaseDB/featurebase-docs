@@ -11,7 +11,7 @@ nav_order: 20
 This `BULK INSERT` statement uses the `TRANSFORM...TUPLE` clause to insert data in CSV format to `IDSET` and `STRINGSET` columns.
 
 ## Before you begin
-* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-home#bulk-insert-statements)
+* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-home/#bulk-insert-examples)
 * [TUPLE() function](/docs/sql-guide/functions/function-tuple)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 * [CREATE TABLE tuple-set-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-tuple-set-target)

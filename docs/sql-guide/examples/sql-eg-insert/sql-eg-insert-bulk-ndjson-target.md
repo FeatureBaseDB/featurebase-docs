@@ -11,7 +11,7 @@ nav_exclude: true
 Insert data into a FeatureBase table from a new line delimited JSON data source on a remote file system.
 
 ## Before you begin
-* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-home#bulk-insert-statements)
+* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-home/#bulk-insert-examples)
 * [Learn about the New Line Delimited JSON (NDJSON) format](https://en.wikipedia.org/wiki/JSON_streaming){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 * [CREATE TABLE ndjson-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-ndjson-target)

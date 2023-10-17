@@ -13,7 +13,7 @@ This BULK INSERT statement:
 * maps data to destination table columns found in `orc-target` table
 
 ## Before you begin
-* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-home#bulk-insert-statements)
+* [BULK INSERT examples](/docs/sql-guide/examples/sql-eg-home/#bulk-insert-examples)
 * [Learn about the Apache ORC format](https://orc.apache.org/specification/){:target="_blank"}
 * [ORC data types](https://orc.apache.org/docs/types.html){:target="_blank"}
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
