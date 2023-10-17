@@ -13,13 +13,8 @@ The TANIMOTO scalar function quantifies the degree of similarity between two set
 ## Syntax
 
 ```sql
-tanimoto_[coefficient | distance]
-  ( <column-name>,
-    {
-      (<select-statement>) |
-      [<item-list>]
-    }
-  )
+tanimoto_distance
+  ( <column-name>, {(<select-statement>) | [<item-list>]})
 ```
 
 ## Arguments
@@ -30,7 +25,7 @@ tanimoto_[coefficient | distance]
 | `tanimoto_distance` |  |  |  |
 | `<column-name>` | Name of column named in SELECT statement the function is a part of | Optional |  |
 | `<select-statement>` | Nested SQL statement to obtain values |  |  |
-| `<item-list>` | comma separated list of items found in the table named in the surrounding SELECT statement. | Yes |  |
+| `[<item-list>]` | comma separated list of items found in the table named in the surrounding SELECT statement. | Yes | Square brackets are required |
 
 ## Additional information
 
@@ -57,4 +52,3 @@ The **Jaccard index** and **Tanimoto similarity** are widely used for assessing 
 ## Examples
 
 * [SELECT using TANIMOTO function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tan-target)
-```
