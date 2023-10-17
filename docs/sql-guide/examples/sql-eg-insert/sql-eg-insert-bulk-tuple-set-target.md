@@ -26,6 +26,8 @@ BULK INSERT INTO tuple-set-target(
     time_col,
     stringset_col,
     ideset_col,
+    stringsetq_col,
+    idesetq_col
   )
   MAP (
     0 STRING,
@@ -43,8 +45,7 @@ BULK INSERT INTO tuple-set-target(
   )
   FROM x'
     A,2013-07-15T01:18:46Z,stringset1, 1
-    B,2014-07-15T01:18:46Z,idset2, 2
-  '
+    B,2014-07-15T01:18:46Z,stringset2, 2'
   WITH
     BATCHSIZE 10000
     format 'CSV'

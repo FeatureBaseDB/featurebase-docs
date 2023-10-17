@@ -25,12 +25,13 @@ The `tuple-set-target` table is intended for a `BULK INSERT` statement and inclu
 ## CREATE TABLE
 
 ```sql
-CREATE TABLE tuple-set-target (
-  _id string,
-  time_col TIMESTAMP,
-  stringset_col STRINGSET,
-  ideset_col IDSET,
-);
+create table tuple-set-target (
+_id string,
+time_col timestamp,
+stringset_col stringset,
+ideset_col idset,
+stringsetq_col stringsetq timequantum 'YMD',
+idesetq_col idsetq timequantum 'YMD');
 ```
 
 ## Next step

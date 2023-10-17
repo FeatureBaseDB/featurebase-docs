@@ -8,7 +8,7 @@ nav_exclude: true
 
 # CREATE TABLE csv-target
 
-The table `csv-target` is required for a `BULK INSERT` statement, and contains:
+The table `csv-target` contains:
 * a STRING unique identifier
 * STRING and INT data type columns
 
