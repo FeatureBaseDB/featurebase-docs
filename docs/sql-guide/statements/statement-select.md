@@ -84,7 +84,7 @@ SELECT
 
 | DISTINCT | Description | Examples |
 |---|---|---|
-| Values | A query that returns `DISTINCT` values from a table | [SELECT DISTINCT](#select-distinct) |
+| Values | A query that returns `DISTINCT` values from a table | [SELECT from csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-csv-target) |
 | Sets | A query that returns a specific array of values from `SET` or `SETQ` data type columns | [Flatten hint](/docs/sql-guide/hints/hint-flatten) |
 
 ## `<expr>` filter
@@ -144,35 +144,7 @@ Both expressions can be aliased with a `<table_alias>`
 
 <!-- The following examples need to be rolled into the examples, above-->
 
-### Point SELECT
 
-```sql
-SELECT * FROM tbl WHERE _id = 1
-SELECT fld1, fld2 FROM tbl WHERE _id = 1
-SELECT _id, fld FROM tbl WHERE _id = 1
-```
-
-### SELECT DISTINCT
-
-```sql
-SELECT DISTINCT fld FROM tbl
-```
-### SELECT COUNT
-
-```sql
-SELECT count(*) FROM tbl
-SELECT count(*) FROM tbl WHERE fld = 1
-SELECT count(*) FROM tbl WHERE fld1 = 1 AND fld2 = 2
-SELECT count(distinct fld) FROM tbl
-```
-
-### SELECT ids FROM segment
-```sql
-SELECT _id FROM tbl WHERE fld = 1
-SELECT _id FROM tbl WHERE fld in (1, 2)
-SELECT _id FROM tbl WHERE fld1 = 1 LIMIT 1
-SELECT _id FROM tbl WHERE fld1 = 1 AND fld2 = 2
-```
 
 ### SELECT int function
 

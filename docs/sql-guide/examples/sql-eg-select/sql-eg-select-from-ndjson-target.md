@@ -15,35 +15,20 @@ The following SELECT statements demonstrate
 * [CREATE TABLE ndjson-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-ndjson-target)
 * [BULK INSERT from ndjson data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target)
 
-## SELECT with TOP clause
+## SELECT with WHERE, LIKE, ORDER BY clauses
 
 ```sql
-SELECT TOP(3) _id, actor_url FROM ndjson-target;
+SELECT _id, actor_id, repo_url
+  FROM ndjson-target
+  WHERE repo_url LIKE '%suneg%'
+  ORDER BY actor_id;
 
-    _id    | actor_url
------------+-------------------------------------
-2489651045 | https://api.github.com/users/petroav
-2489651051 | https://api.github.com/users/rspt
-2489651053 | https://api.github.com/users/izuzero
-```
-
-## SELECT with COUNT clause
-
-```sql
-SELECT COUNT(*) FROM ndjson-target;
-
-COUNT(*) |
----------
-11351
-```
-## SELECT with COUNT (DISTINCT) clause
-
-```sql
-SELECT COUNT(DISTINCT actor_url) AS unique-urls FROM ndjson-target;
-
-unique-urls |
-------------+
-5250
+   _id     | actor_id | repo_url
+-----------+--------- +----------------------------------------------
+2489677800 | 1258383  | https://api.github.com/repos/suneg/dojo_rules
+2489673246 | 1258383  | https://api.github.com/repos/suneg/dojo_rules
+2489651106 | 1258383  | https://api.github.com/repos/suneg/dojo_rules
+2489651097 | 1258383  | https://api.github.com/repos/suneg/dojo_rules
 ```
 
 ## Further information

@@ -15,7 +15,7 @@ The following SELECT statements demonstrate
 * [CREATE TABLE csv-target](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-csv-target)
 * [BULK INSERT from csv data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-csv-target)
 
-## SELECT COUNT
+## SELECT COUNT queries
 
 ```sql
 SELECT COUNT(*) FROM csv-target;
@@ -54,9 +54,6 @@ occupation |
 ```sql
 SELECT TOP(10) * FROM csv-target;
 ```
-
-
-
 
 ## Further information
 
