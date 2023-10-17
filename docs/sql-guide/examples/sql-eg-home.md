@@ -7,8 +7,11 @@ has_toc: false
 ---
 
 # FeatureBase SQL-guide examples
+{: .no_toc }
 
 Supported SQL statements, data-types, expressions, functions and operators are demonstrated in the following examples.
+
+{% include page-toc.md %}
 
 ## Before you begin
 
