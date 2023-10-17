@@ -19,20 +19,44 @@ The following SELECT statements demonstrate
 
 ```sql
 SELECT COUNT(*) FROM csv-target;
-```
 
-## SELECT TOP
+count (*) |
+----------+
+  1222997 |
+```
 
 ```sql
-SELECT TOP(10) * FROM csv-target;
+SELECT count(*) AS Male FROM csv-target WHERE gender = 'Male';
+
+   Male |
+--------+
+9813567 |
 ```
 
+```sql
+SELECT count(*) AS Danish-Female FROM csv-target WHERE gender = 'Female' AND country = 'Denmark';
+
+Danish-Female |
+--------------+
+       1592   |
+```
+
+```sql
+SELECT count(DISTINCT occupation) AS occupation FROM csv-target;
+
+occupation |
+-----------+
+   9314    |
+```
 
 ## SELECT with TOP clause
 
 ```sql
 SELECT TOP(10) * FROM csv-target;
 ```
+
+
+
 
 ## Further information
 
