@@ -12,7 +12,7 @@ nav_order: 4
 
 ## Before you begin
 
-* [Learn how to assess your database needs using Data Modeling](/docs/concepts/concept-data-modeling)
+* [Learn how to assess your database needs using Data Modeling](/docs/concepts/overview-data-modeling)
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 {% include /cloud-db/cloud-db-shape-benefits.md %}
