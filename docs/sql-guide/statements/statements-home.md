@@ -57,3 +57,4 @@ SQL queries can be run against FeatureBase tables in the following ways:
 * [BULK INSERT using CSV file](/docs/sql-guide/statements/statement-insert-bulk-csv-example)
 * [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
 * [BULK INSERT using Parquet data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+* [BULK INSERT using ORC data source](/docs/sql-guide/statements/statement-insert-bulk-orc-example)

@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 5
 ---
 
-# Ingest a CSV with BULK INSERT
+# BULK INSERT example using CSV formatted data source
 
 This example demonstrates how to:
 
@@ -17,6 +17,7 @@ This example demonstrates how to:
 ## Before you begin
 
 {% include /sql-guide/bulk-insert-eg-before-begin.md%}
+* [Learn about the Comma separated value (CSV) format](https://www.rfc-editor.org/rfc/rfc4180){:target="_blank"}
 
 ## Step 1: create table
 
@@ -73,5 +74,4 @@ SELECT TOP(10) * FROM age;
 ## Further information
 
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
-* [BULK INSERT using NDJSON data source](/docs/sql-guide/statements/statement-insert-bulk-ndjson-example)
-* [BULK INSERT using PARQUET data source](/docs/sql-guide/statements/statement-insert-bulk-parquet-example)
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
