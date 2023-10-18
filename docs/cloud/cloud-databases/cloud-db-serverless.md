@@ -48,16 +48,7 @@ Serverless Databases have storage with 11 nines of durability, plus:
 
 ## How are Serverless databases priced?
 
-Serverless database architecture separates Virtual CPU compute resources from database storage.
-Storage and CPU usage are charged separately based on your usage.
-
-Virtual CPU and storage are metered
-
-Compute and storage resources are metered separately and cha
-
-FeatureBase Serverless databases have compute and storage metered and charged independently based on your usage.
-
-Serverless databases are charged based on metred compute and storage usage.
+Compute and storage usage is charged separately based on usage.
 
 ## How do I create a Serverless database?
 
