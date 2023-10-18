@@ -17,7 +17,6 @@ nav_exclude: true
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
-
 {% include /cloud-db/cloud-db-shape-benefits.md %}
 
 {% include /cloud-db/cloud-db-shape-limits.md %}
