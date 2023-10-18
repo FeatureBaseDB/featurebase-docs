@@ -3,7 +3,7 @@ title: Scalable databases
 layout: default
 parent: Manage Databases
 grand-parent: Cloud
-nav_order: 1
+nav_order: 5
 ---
 
 ## How do I scale my database resources?

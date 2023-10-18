@@ -3,7 +3,7 @@ title: Migrate data
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order:
+nav_order: 6
 ---
 
 # How do I migrate data to a new database?

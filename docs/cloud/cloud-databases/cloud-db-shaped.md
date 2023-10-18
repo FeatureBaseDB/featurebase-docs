@@ -3,7 +3,7 @@ title: Shaped database
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 1
+nav_order: 4
 ---
 
 # How do I setup a database with predictable pricing?
