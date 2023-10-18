@@ -1,4 +1,4 @@
-### Unsupported SQL
+### SQL limitations
 
 | Limitation | Supported? | Additional information |
 |---|---|---|
@@ -9,13 +9,13 @@
 | [IDSETQ() data type](/docs/sql-guide/data-types/data-type-idsetq) | Not supported |
 | [STRINGSETQ() data type](/docs/sql-guide/data-types/data-type-stringsetq) | Not supported |
 
-### Unsupported PQL
+### PQL limitations
 
 | Limitation | Supported? |
 |---|---|
 | [PQL Percentile](/docs/pql-guide/pql-read-percentile) | Not supported |
 
-### Serverless database backup and recovery
+### Database backup and recovery limitations
 
 Serverless databases do not support:
 * Database snapshotting
