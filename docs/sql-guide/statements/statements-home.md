@@ -40,7 +40,6 @@ SQL queries can be run against FeatureBase tables in the following ways:
 
 ## DATABASE statements
 
-* [ALTER DATABASE](/docs/sql-guide/statements/statement-database-alter)
 * [DROP DATABASE](/docs/sql-guide/statements/statement-db-drop)
 
 ## INSERT statements
