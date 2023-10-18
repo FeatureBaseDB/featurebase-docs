@@ -1,5 +1,5 @@
 ---
-title: Shaped database
+title: Shaped databases
 layout: default
 parent: Manage databases
 grand_parent: Cloud
