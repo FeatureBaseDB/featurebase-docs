@@ -17,4 +17,4 @@ nav_order: 4
 ## Further information
 
 * {% include contact-support.md %} to discuss FeatureBase serverless.
-* [Learn about FeatureBase Serverless Databases](/docs/cloud/cloud-databases/cloud0db-serverless-manage)
+* [Learn about FeatureBase Serverless Databases](/docs/cloud/cloud-databases/cloud-db-serverless)
