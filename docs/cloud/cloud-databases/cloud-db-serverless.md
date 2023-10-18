@@ -6,7 +6,7 @@ grand_parent: Cloud
 nav_order: 5
 ---
 
-## How do I scale my database resources?
+# How do I scale my database resources?
 
 {% include /cloud-db/cloud-db-serverless-summary.md %}
 
