@@ -52,7 +52,7 @@ Compute and storage usage is charged separately based on usage.
 
 ## How do I create a Serverless database?
 
-* [Create a Serverless Database in the Cloud UI](/docs/cloud-cloud-databases/cloud-db-create-custom.md)
+* [Create a Serverless Database in the Cloud UI](/docs/cloud-cloud-databases/cloud-db-create-custom)
 <!--* [CREATE DATABASE statement](/docs/sql-guide/statements/statement-db-create)-->
 
 ## Where do I find information on my database?
