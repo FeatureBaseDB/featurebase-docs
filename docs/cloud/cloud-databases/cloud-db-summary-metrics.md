@@ -3,7 +3,7 @@ title: Cloud database information
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 4
+nav_order: 11
 ---
 
 # Where do I find information on my databases?
@@ -24,7 +24,7 @@ You can obtain summary information on your databases, metrics and statistics, pl
 ## How do I get summary information on my database?
 
 
-## 
+##
 
 | GUI | SQL | Description | Additional information |
 |---|---|---|---|

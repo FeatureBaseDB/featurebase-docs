@@ -3,7 +3,7 @@ title: Cloud database versions
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 5
+nav_order: 12
 ---
 
 # Database version information

@@ -3,7 +3,7 @@ title: Delete database
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 7
+nav_order: 9
 ---
 
 # How do I delete a database in FeatureBase Cloud?

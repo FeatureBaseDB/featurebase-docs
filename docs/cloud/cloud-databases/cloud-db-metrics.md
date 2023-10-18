@@ -3,7 +3,7 @@ title: Cloud database metrics
 layout: default
 parent: Manage databases
 grand_parent: Cloud
-nav_order: 4
+nav_order: 10
 ---
 
 # Where do I find my database metrics?
