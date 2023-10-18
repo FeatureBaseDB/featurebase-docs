@@ -2,7 +2,7 @@
 title: Scalable databases
 layout: default
 parent: Manage databases
-grand-parent: Cloud
+grand_parent: Cloud
 nav_order: 5
 ---
 
