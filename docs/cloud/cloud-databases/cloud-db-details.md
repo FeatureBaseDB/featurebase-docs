@@ -1,15 +1,17 @@
 ---
-title: Cloud database properties
+title: Cloud database details
 layout: default
 parent: Manage databases
 grand_parent: Cloud
 nav_order: 10
 ---
 
-# Where do I find my database details?
+# Where do I find database details?
 {: .no_toc }
 
 FeatureBase provides access to details and statistics on your database.
+
+Additionally, a disk utilization graph is available on the **Home** page which lists disk space used by the database and its data.
 
 {% include page-toc.md %}
 
@@ -21,7 +23,10 @@ FeatureBase provides access to details and statistics on your database.
 
 ## How do I view database details?
 
-* Click **Databases** > `your-database-name` to open the summary page
+* Click **Databases** > `your-database-name` to open the summary page.
+
+{: .note}
+You can also get a subset of details by querying the [fb_database_info and fb_database_nodes system tables](/docs/sql-guide/system-tables/system-tables-home)
 
 ## Detail view
 
@@ -37,66 +42,6 @@ FeatureBase provides access to details and statistics on your database.
 | Disk utilization | Actual memory used by database and data | [] |
 | Query endpoint URL | Endpoint used for Cloud REST API queries | [Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"} |
 
-##
+## Related information
 
-
-## Database details
-
-Your database details include
-
-## How do I view Database properties?
-
-Database properties can be obtained using two methods:
-
-| Method | Steps |
-|---|---|
-| GUI |  |
-| SQL | `SELECT * FROM fb_database_info;` and `SELECT * FROM fb_database_nodes;` |
-
-The following properties are available for all databases:
-
-
-## How do I view query statistics?
-
-Query statistics can be viewed in two ways:
-
-| Method | Steps |
-|---|---|
-| GUI | Click **Home** |
-| SQL | `SELECT * FROM fb_exec_requests;` |
-
-The following statistics are available:
-
-| Statistic | Description | Additional information |
-|---|---|---|
-| Average query response time | The average time a query takes to execute on your database | Values based on query execution times in `fb_exec_requests system table` | [fb_exec_requests system table](/docs/sql-guide/system-tables/system-tables-home/#fb_exec_requests) |
-| Queries per second | A graph of queries processed each second on the database, updated every 15 seconds | Graph is reset on page refresh |
-
-## How do I view disk utilization ?
-
-You can view disk utilization in two ways:
-
-| Method | Steps |
-|---|---|
-| GUI | Click **Home** |
-| SQL | `SELECT * FROM fb_database_nodes;` |
-
-The following metric is available
-
-| Metric | Description |
-|---|---|
-| Disk utilization | How much disk space is being used by a database and its data |
-
-## Data ingestion
-
-Click **Home** to view the data ingestion graph.
-
-| Metric | Description | Additional information |
-|---|---|
-| Ingested records per second | A graph of records ingested by the database, updated every 15 seconds | Graph reset on page refresh |
-
-## Account information
-
-The **Home** page contains a summary of billing information.
-
-* [Learn more about billing on your account](/docs/cloud/cloud-org-manage)
+* [Query and ingestion statistics](/docs/cloud/cloud-databases/cloud-db-stats)

@@ -14,8 +14,9 @@ nav_exclude: true
 {% include page-toc.md %}
 
 ## Before you begin
-
 {% include /cloud/cloud-before-begin.md %}
+* [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
+
 
 {% include /cloud-db/cloud-db-shape-benefits.md %}
 
@@ -27,5 +28,4 @@ nav_exclude: true
 
 ## Further information
 
-* [Learn how to manage FeatureBase Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Query database shapes via the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/getServiceProperties)

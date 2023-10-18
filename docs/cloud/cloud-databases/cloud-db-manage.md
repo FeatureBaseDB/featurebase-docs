@@ -43,7 +43,8 @@ You can also [create a database using the Cloud API](#create-database-using-the-
 
 ## How do I learn more about my database?
 
-
+* [Database details](/docs/cloud/cloud-databases/cloud-db-details)
+* [Query and ingestion statistics](/docs/cloud/cloud-databases/cloud-db-stats)
 
 ## Cloud database backups
 
