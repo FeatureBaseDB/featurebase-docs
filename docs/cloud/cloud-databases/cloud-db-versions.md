@@ -6,7 +6,7 @@ grand_parent: Cloud
 nav_order: 12
 ---
 
-# Database version information
+# Reference information: Database version
 {: .no_toc }
 
 {% include /cloud-db/cloud-summary-db-version.md %}
@@ -18,8 +18,8 @@ nav_order: 12
 * [Create a FeatureBase database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 
 {: .note}
-"Unknown" version information indicates a failed version query
-[Learn more about unknown database versions](/docs/cloud/cloud-troubleshooting/issue-cloud-version-unknown)
+>"Unknown" version information indicates a failed version query.
+>* [Learn more about unknown database versions](/docs/cloud/cloud-troubleshooting/issue-cloud-version-unknown)
 
 ## Find database version in list of databases
 * Select databases on the sidebar

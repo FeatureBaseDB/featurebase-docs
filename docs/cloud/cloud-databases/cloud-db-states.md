@@ -36,3 +36,4 @@ nav_order: 10
 ## Further information
 
 * [Query the database state via the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/getDatabase)
+* [Database versions](/docs/cloud/cloud-databases/cloud-db-versions)
