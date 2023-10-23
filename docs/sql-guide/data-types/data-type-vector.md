@@ -10,7 +10,7 @@ nav_order: 11
 
 Vector data types store a specified number of floating point values in an array.
 
-These vectors can be compared using the COSINE_DISTANCE() function
+These vectors can be compared using the [COSINE_DISTANCE() function](#further-information).
 
 ## Syntax
 

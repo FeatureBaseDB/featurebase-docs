@@ -14,12 +14,12 @@ nav_order: 4
 
 {% include /sql-guide/sql-guide-before-begin.md %}
 
-## `<identifier>`
+## `identifier`
 ![expr](/assets/images/sql-guide/identifier.svg)
 
 {% include /concepts/standard-naming-obj.md %}
 
-## `<expr>`
+## `expr`
 
 ![expr](/assets/images/sql-guide/expr.svg)
 
@@ -35,12 +35,12 @@ nav_order: 4
 Literals are explicitly specified fixed values that conform to a specific data type:
 
 | String literal | BNF diagram | Description | Additional information |
-|---|---|---|
+|---|---|---|---|
 | `date` |  |  | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | `decimal` |  |  | [DECIMAL() data type](/docs/sql-guide/data-types/data-type-decimal)
-| `set` | ![expr](/assets/images/sql-guide/set_literal.svg) |  | * [IDSET data type](/docs/sql-guide/data-types/data-type-idset)<br/>* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)<br/>* [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)<br/>* [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) |
+| `set` | ![expr](/assets/images/sql-guide/set_literal.svg) |  | *[IDSET data type](/docs/sql-guide/data-types/data-type-idset)<br/>* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)<br/>* [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)<br/>* [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) |
 | `string` |  |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
-| `tuple` | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types | [TUPLE() function](/docs/sql-guide/functions/function-tuple) |
+| `tuple` | ![expr](/assets/images/sql-guide/tuple_literal.svg) | Tuple literals are a collection of data types. | [TUPLE() function](/docs/sql-guide/functions/function-tuple) |
 
 ### [unary_op] expr
 
