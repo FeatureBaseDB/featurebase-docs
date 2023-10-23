@@ -93,6 +93,3 @@ callouts:
   warning:
     title: Warning
     color: red
-  tip:
-    title: Tip
-    color: green
