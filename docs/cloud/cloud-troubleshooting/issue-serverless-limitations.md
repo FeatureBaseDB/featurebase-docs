@@ -8,13 +8,8 @@ nav_order: 4
 
 # Issue - Known limitations of serverless databases
 
-{% include /cloud-db/serverless-preview-warning.md %}
+{% include /cloud-db/cloud-db-serverless-warning.md %}
 
 ## Limitations
 
-{% include /cloud-db/serverless-preview-limitations.md %}
-
-## Further information
-
-* {% include contact-support.md %} to discuss FeatureBase serverless.
-* [Learn about FeatureBase Serverless Databases](/docs/cloud/cloud-databases/cloud-db-serverless)
+{% include /cloud-db/cloud-db-serverless-limits.md %}

@@ -1,15 +1,17 @@
 ---
-title: System Tables
+title: FeatureBase system tables
 layout: default
 parent: SQL guide
 ---
 
-# FeatureBase system tables
+# Reference: FeatureBase system tables
 {: .no_toc }
 
-FeatureBase system tables:
-* contain database configuration, settings, and metrics
-* are logical, in-memory and dynamically created unless stated.
+At a high-level, FeatureBase system tables:
+* describe database configuration, settings and metrics
+* are logical and in-memory tables, dynamically created on database creation
+
+The only exception is `fb_views` which is automatically created when a user runs the [`CREATE VIEW` statement](/docs/sql-guide/statements/statement-view-create)
 
 {% include page-toc.md %}
 

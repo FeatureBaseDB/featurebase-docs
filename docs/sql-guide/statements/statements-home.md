@@ -9,7 +9,7 @@ has_toc: false
 
 # SQL Statements
 
-SQL queries can be run against FeatureBase tables in the following ways:
+Run SQL queries on your data using the following methods:
 
 {% include /sql-guide/sql-guide-supported-tools.md %}
 
