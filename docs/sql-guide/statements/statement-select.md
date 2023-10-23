@@ -87,7 +87,7 @@ SELECT
 | Values | A query that returns `DISTINCT` values from a table | [SELECT from csv-target](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-csv-target) |
 | Sets | A query that returns a specific array of values from `SET` or `SETQ` data type columns | [Flatten hint](/docs/sql-guide/hints/hint-flatten) |
 
-## `<expr>` filter
+### `<expr>` filter
 
 `<expr>` can be used in the <select_list> and clauses:
 
@@ -101,7 +101,7 @@ SELECT
 |---|---|---|
 | Subquery | A SELECT query that is run to obtain specific results required for the main query |  |
 | Constant | A literal or scalar value | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) or subquery |
-| Function | [FeatureBase SQL functions](/docs/sql-guide/functions/functions-home) | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) or subquery |
+| Function | [FeatureBase SQL functions](/docs/sql-guide/functions/functions-home) | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) |
 
 ### SELECT list and GROUP BY clause
 
@@ -141,36 +141,36 @@ Both expressions can be aliased with a `<table_alias>`
 ### SELECT int function
 
 ```sql
-SELECT min(fld) FROM tbl
-SELECT max(fld) FROM tbl
-SELECT sum(fld) FROM tbl
-SELECT avg(fld) FROM tbl
-SELECT min(fld) FROM tbl WHERE fld = 1
-SELECT max(fld) FROM tbl WHERE fld = 1
-SELECT sum(fld) FROM tbl WHERE fld = 1
-SELECT avg(fld) FROM tbl WHERE fld = 1
+SELECT MIN(fld) FROM tbl
+SELECT MAX(fld) FROM tbl
+SELECT SUM(fld) FROM tbl
+SELECT AVG(fld) FROM tbl
+SELECT MIN(fld) FROM tbl WHERE fld = 1
+SELECT MAX(fld) FROM tbl WHERE fld = 1
+SELECT SUM(fld) FROM tbl WHERE fld = 1
+SELECT AVG(fld) FROM tbl WHERE fld = 1
 ```
 
 ### GROUP BY
 
 ```sql
-SELECT fld, count(*) FROM tbl GROUP BY fld
+SELECT fld, COUNT(*) FROM tbl GROUP BY fld
 
-SELECT fld1, fld2, count(*) FROM tbl GROUP BY fld1, fld2
+SELECT fld1, fld2, COUNT(*) FROM tbl GROUP BY fld1, fld2
 
-SELECT fld1, fld2, count(*) FROM tbl GROUP BY fld1, fld2 LIMIT 1
+SELECT fld1, fld2, COUNT(*) FROM tbl GROUP BY fld1, fld2 LIMIT 1
 
-SELECT fld1, fld2, count(*) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2
+SELECT fld1, fld2, COUNT(*) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2
 
-SELECT fld1, count(*) FROM tbl GROUP BY fld1 having count(*) > 1
+SELECT fld1, COUNT(*) FROM tbl GROUP BY fld1 having COUNT(*) > 1
 
-SELECT fld1, fld2, sum(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2
+SELECT fld1, fld2, SUM(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2
 
-SELECT fld1, fld2, sum(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2 having count(*) > 1
+SELECT fld1, fld2, SUM(fld3) FROM tbl WHERE fld1 = 1 GROUP BY fld1, fld2 HAVING count(*) > 1
 
-SELECT fld, count(fld) FROM tbl GROUP BY fld
+SELECT fld, COUNT(fld) FROM tbl GROUP BY fld
 
-SELECT fld1, count(fld1) FROM tbl WHERE fld2=1 GROUP BY fld1
+SELECT fld1, COUNT(fld1) FROM tbl WHERE fld2=1 GROUP BY fld1
 ```
 
 ### GROUP BY with STRINGSET
@@ -183,10 +183,10 @@ This query can also be run using the [FLATTEN() hint](/docs/sql-guide/hints/hint
 {% include /sql-guide/table-create-segments-eg.md %}
 
 ```sql
-select count(*) as cnt, segment from segments
-group by segment;
+SELECT COUNT(*) as howmany, segment FROM segments
+GROUP BY segment;
 
- cnt | segment
+ howmany | segment
 -----+--------------------------
    2 | ['RED', 'BLUE', 'GREEN']
    1 | ['GREEN']
