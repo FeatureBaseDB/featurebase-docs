@@ -23,7 +23,7 @@ nav_order: 10
 
 ## Database states
 
-| Status | Description | Further information |
+| Status | Description | Additional information |
 |---|---|---|
 | CREATING | FeatureBase Cloud has received the signal to start provisioning a database | |
 | PROVISIONING | Following CREATING, system then provisions hardware, installs software, and performs other tasks to spin up the database. |  |
