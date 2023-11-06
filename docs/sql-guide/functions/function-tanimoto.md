@@ -13,14 +13,14 @@ The TANIMOTO scalar function quantifies the degree of similarity between two set
 ## Syntax
 
 ```sql
-tanimoto_distance(<column-name>, [<select-statement>] | {[<item-list>]})
+tanimoto_coefficient(<column-name>, [<select-statement>] | {[<item-list>]})
 ```
 
 ## Arguments
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `tanimoto_distance` | A function used to assess the similarity between data in a specified column and a nested SELECT statement or item list. |  |  |
+| `tanimoto_coefficient` | A function used to assess the similarity between data in a specified column and a nested SELECT statement or item list. |  |  |
 | `<column-name>` | Table column name contained in the outer SELECT statement. | Optional |  |
 | `<select-statement>` | Nested SELECT statement used to gather values to compare against the <column name> | Optional |  |
 | `[<item-list>]` | comma separated list of items found in the table named in the surrounding SELECT statement. | Yes | Square brackets are required |
