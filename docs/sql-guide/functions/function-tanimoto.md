@@ -1,12 +1,12 @@
 ---
-title: TANIMOTO()
+title: TANIMOTO_COEFFICIENT()
 layout: default
 parent: Functions
 grand_parent: SQL guide
 ---
-# TANIMOTO() scalar function
+# TANIMOTO_COEFFICIENT() scalar function
 
-The TANIMOTO scalar function quantifies the degree of similarity between two sets of data in a specified table or view as a part of a SELECT statement.
+The TANIMOTO_COEFFICIENT scalar function quantifies the degree of similarity between two sets of data in a specified table or view as a part of a SELECT statement.
 
 <!-- QUERY - can JACCARD be substituted for TANIMOTO?-->
 
@@ -43,4 +43,4 @@ The function is used in a SELECT statement and requires:
 
 ## Examples
 
-* [SELECT using TANIMOTO function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tan-target)
+* [SELECT using TANIMOTO_COEFFICIENT function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tan-target)
