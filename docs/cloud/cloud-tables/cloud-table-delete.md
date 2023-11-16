@@ -31,11 +31,10 @@ There are a number of reasons why you may choose to drop a table, including:
 
 ## Delete the selected table
 
-1. Click <span class="material-icons md-18">more_vert</span> > **Drop table**
-2. Enter "DELETE" in the confirmation dialog.
-3. Click **Drop table**.
+* Click <span class="material-icons md-18">more_vert</span> > **Drop table**
+* Enter "DELETE" in the confirmation dialog.
+* Click **Drop table**.
 
 ## Further information
 
 * [Delete table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/deletetable)
-* [Learn how to create tables](/docs/cloud/cloud-tables/cloud-table-create)

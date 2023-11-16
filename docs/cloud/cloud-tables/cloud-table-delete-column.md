@@ -29,11 +29,11 @@ You may need to delete a column if:
 
 ## Drop the selected column
 
-1. Click the table name.
-2. Click **Columns**.
-3. Click <span class="material-icons md-18">more_vert</span> on the column > **Delete**.
-5. Enter "DELETE" in the confirmation dialog.
-6. Click **Delete**.
+* Click the table name.
+* Click **Columns**.
+* Click <span class="material-icons md-18">more_vert</span> on the column > **Delete**.
+* Enter "DELETE" in the confirmation dialog.
+* Click **Delete**.
 
 ## Further information
 

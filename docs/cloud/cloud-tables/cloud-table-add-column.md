@@ -32,11 +32,11 @@ nav_order: 3
 {: .note }
 Table columns cannot be edited once created.
 
-1. Click the table name.
-2. Click **Columns** > **Add column**.
-3. Enter a name for the column
-4. Choose the data type and enter values for the constraints if available.
-5. Click **Add column**
+* Click the table name.
+* Click **Columns** > **Add column**.
+* Enter a name for the column
+* Choose the data type and enter values for the constraints if available.
+* Click **Add column**
 
 ## Further information
 

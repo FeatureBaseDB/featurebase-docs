@@ -30,16 +30,16 @@ You can also create a table using a [SQL CREATE TABLE statement](/docs/sql-guide
 
 ## Step 1: create table
 
-1. Click **Create table**.
-2. Select the destination database.
-3. Enter a table name and an optional description.
+* Click **Create table**.
+* Select the destination database.
+* Enter a table name and an optional description.
 
 ## Step 2: choose the primary key
 
 {% include /cloud-table/cloud-summary-table-pk.md %}
 
-1. Select the ID type.
-2. Click **Create**.
+* Select the ID type.
+* Click **Create**.
 
 ## Next step
 
