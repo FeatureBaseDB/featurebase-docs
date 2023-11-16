@@ -9,55 +9,54 @@ nav_order: 2
 # How do I upload data to FeatureBase Cloud?
 {: .no_toc }
 
-You can upload data to FeatureBase cloud using a specifically structured CSV file.
+Upload data to a FeatureBase table from a CSV file.
 
 {: .note}
-You can also upload data using the [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+You can also upload CSV data using the [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
 * [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
+* Click **Databases** > database name > **Upload Data**.
 
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 
-## Upload file
+## CSV file structure
 
 Your CSV data file needs the following structure:
 
-* Header row
-* First item in the header row and each row is a unique identifier
-* Each row of data is comma-separated
+* Optional header row
+* First column is a unique identifier
+* Each item of data is separated by commas
+* New line is a new row
 
 ## Uploading data to a table
 
 {: .important}
 Table column names cannot be changed once the table is defined.
 
-### Step 1: Navigate to Upload Data
+### Step 1: Select a file to upload
 
-* Click **Databases** > database name > **Upload Data**.
-
-### Step 2: Select a file to upload
-
-1. Click **Upload a file**.
-2. Select the CSV file from the browser.
-3. Click **Done**.
+* Click **Upload a file**.
+* Select the CSV file from the browser.
+* Click **The first row contains column labels** if your CSV contains a header row.
+* Click **Done**.
 
 ### Step 3: Select column type for each column
 
 {% include /cloud-table/cloud-summary-table-pk.md %}
 
-1. Click <span class="material-icons md-18">more_vert</span> on the column.
-2. Click **Update**.
-3. Select a type from the **Type** dropdown menu.
-4. Click **Update Column**.
+* Click <span class="material-icons md-18">more_vert</span> on the column.
+* Click **Update**.
+* Select a type from the **Type** dropdown menu.
+* Click **Update Column**.
 
 {: .note }
-User cannot procced until all column types have been selected.
+User cannot procced until all column data types have been selected.
 
 ### Step 4: Name the table and write data
 
