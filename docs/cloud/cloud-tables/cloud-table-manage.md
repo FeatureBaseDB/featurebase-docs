@@ -60,6 +60,12 @@ Perform data modeling **before** creating tables to avoid issues.
 
 * [Table API reference](https://api-docs-featurebase-cloud.redoc.ly/latest#tag/Tables)
 
+## Managing tables using SQL
+
+* [Create table](/docs/sql-guide/statements/statement-table-create)
+* [Alter table](/docs/sql-guide/statements/statement-table-alter)
+* [Drop table](/docs/sql-guide/statements/statement-table-create)
+
 ## Joining tables
 
 Tables that exist in the same database can be joined.
