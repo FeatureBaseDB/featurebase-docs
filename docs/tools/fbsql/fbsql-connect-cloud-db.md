@@ -1,9 +1,9 @@
 ---
 title: Connect to cloud db
 layout: default
-parent: CLI SQL tool
+parent: fbsql CLI SQL tool
 grand_parent: Tools
-nav_order: 2
+nav_order: 3
 ---
 
 # How do I connect to a FeatureBase cloud database with fbsql?
@@ -69,7 +69,7 @@ Connect to a FeatureBase cloud database when you startup fbsql.
 
 ### Load data from data source
 
-* [Learn how to use fbsql to load data from an external data source](/docs/tools/fbsql/fbsql-loaders)
+* [Learn how to use fbsql to load data from an external data source](/docs/tools/fbsql/fbsql-loader-toml-config)
 
 ## Additional information
 
@@ -86,20 +86,7 @@ There are several ways to create an API key for your FeatureBase Cloud account:
 
 ## Examples
 
-### Connect with API key
-
-```sh
-fbsql --host="https://query.featurebase.com" \
---api-key="asdf-f345-sg-hjyjk-345323"
-```
-
-### Connect with user credentials
-
-```sh
-fbsql --host="https://query.featurebase.com" \
---email="user@example.com" \
---password="a1b2c3d4e5f6"
-```
+{% include /fbsql/fbsql-eg-cloud-connect-api-user.md %}
 
 ### Connect with API key in file
 

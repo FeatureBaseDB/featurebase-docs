@@ -1,9 +1,9 @@
 ---
 title: Connect to community db
 layout: default
-parent: CLI SQL tool
+parent: fbsql CLI SQL tool
 grand_parent: Tools
-nav_order: 3
+nav_order: 4
 ---
 
 # How do I connect to a FeatureBase Community database with fbsql?
@@ -39,8 +39,8 @@ fbsql automatically connects to a local instance of FeatureBase Community
 
 | Argument | Description | Requires | Default | Additional information |
 |---|---|---|---|
-| `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running | port specification | `localhost` |  |
-| `-p`<br>`--port` | Specify TCP port or local Unix-domain socket file extension on which FeatureBase is listening for connections. | Host specification | `10101` | [Set port in featurebase.conf configuration](/docs/community/com-config/com-config-flags) |
+| `--host="<hostname>"` | Specifies remote host name IP address or URL of the machine on which FeatureBase is running. Defaults to `localhost`. | port specification | `localhost` |  |
+| `-p`<br>`--port` | Specify TCP port or local Unix-domain socket file extension on which FeatureBase is listening for connections. | Host specification. Defaults to `10101` | [Set port in featurebase.conf configuration](/docs/community/com-config/com-config-flags) |
 {% include /fbsql/fbsql-config-filename-arg.md %}
 
 ## Optional arguments
@@ -51,7 +51,7 @@ fbsql automatically connects to a local instance of FeatureBase Community
 
 ### Load data from data source
 
-* [Learn how to use fbsql to load data from an external data source](/docs/tools/fbsql/fbsql-loaders)
+* [Learn how to use fbsql to load data from an external data source](/docs/tools/fbsql/fbsql-loader-toml-config)
 
 ## Additional information
 
