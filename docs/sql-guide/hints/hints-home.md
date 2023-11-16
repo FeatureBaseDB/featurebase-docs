@@ -3,7 +3,7 @@ title: SQL hints
 layout: default
 parent: SQL guide
 has_children: true
-nav_order: 7
+nav_order: 2
 ---
 
 # SQL Hints
