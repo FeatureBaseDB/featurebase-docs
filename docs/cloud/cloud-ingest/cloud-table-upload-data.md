@@ -1,7 +1,7 @@
 ---
 title: Upload data
 layout: default
-parent: Manage tables
+parent: Upload data
 grand_parent: Cloud
 nav_order: 2
 ---
