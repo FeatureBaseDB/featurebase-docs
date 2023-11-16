@@ -16,6 +16,7 @@ nav_order: 3
 {% include /cloud/cloud-before-begin.md %}
 * [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
 * [Create a table](/docs/cloud/cloud-tables/cloud-table-create)
+* * Click **Databases** > database name > **Tables** to view tables.
 
 ## Column data types and constraints
 
@@ -26,11 +27,7 @@ nav_order: 3
 {% include /concepts/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-col.md %}
 
-## Step 1: View all tables
-
-{% include /cloud-table/cloud-table-view-list.md %}
-
-## Step 2: Add a column to a table
+## Add a column to a table
 
 {: .note }
 Table columns cannot be edited once created.

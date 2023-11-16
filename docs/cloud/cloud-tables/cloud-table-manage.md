@@ -44,6 +44,10 @@ Perform data modeling **before** creating tables to avoid issues.
 {% include /cloud-table/cloud-standard-naming-table.md %}
 {% include /cloud-table/cloud-standard-naming-col.md%}
 
+## View tables
+
+* Click **Databases** > database name > **Tables**.
+
 ## Managing tables in FeatureBase Cloud
 
 * [Create table](/docs/cloud/cloud-tables/cloud-table-create)

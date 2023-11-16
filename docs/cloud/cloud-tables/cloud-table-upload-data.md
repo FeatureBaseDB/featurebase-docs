@@ -44,7 +44,7 @@ Table column names cannot be changed once the table is defined.
 ### Step 2: Select a file to upload
 
 1. Click **Upload a file**.
-2. Select a file from the file browser.
+2. Select the CSV file from the browser.
 3. Click **Done**.
 
 ### Step 3: Select column type for each column
