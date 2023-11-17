@@ -32,7 +32,7 @@ FeatureBase Cloud has a built-in query editor that supports queries written usin
 | Database picker | Choose a database containing your tables and data |
 | Schema browser | View and search the tables and views in your database |
 | Limit query results | Limit query results to 10, 100, 1000 or 10000 rows |
-| Write queries | Query editor supports one or more queries and auto-suggests valid SQL |
+| Write queries | Query editor supports one or more queries and auto-suggests valid SQL and PQL |
 | Select a query | Select a specific line to run, or insert the cursor to run from that point down |
 | Run queries | Run queries with **Run** button, or via your keyboard:<br/>* **Ctrl**+**Enter**, or<br/>* **CMD** + **Enter** |
 | View query history | View and search all queries run during the current session |
