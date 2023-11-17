@@ -1,5 +1,5 @@
 ---
-title: Cloud Query
+title: Cloud query
 layout: default
 parent: Cloud
 has_children: true
