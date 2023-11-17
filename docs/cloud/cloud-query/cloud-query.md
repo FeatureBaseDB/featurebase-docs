@@ -26,13 +26,13 @@ FeatureBase Cloud has a built-in query editor that supports queries written usin
 
 * Click **Query** then use the following features:
 
-| Feature | Description |
-|---|---|
-| Database picker | Choose a database containing your tables and data |
-| Schema browser | View and search the tables and views in your database |
-| Limit query results | Limit query results to 10, 100, 1000 or 10000 rows |
-| Write queries | Query editor supports one or more queries and auto-suggests valid SQL and PQL |
-| Select a query | Select a specific line to run, or insert the cursor to run from that point down |
-| Run queries | Run queries with **Run** button, or via your keyboard:<br/>* **Ctrl**+**Enter**, or<br/>* **CMD** + **Enter** |
-| Format results | Results columns can be sorted ascending or descending, filtered, hidden, shown and exported to CSV |
-| View query history | View and search all queries run during the current session |
+| Feature | Description | Additional information |
+|---|---|---|
+| Database picker | Choose a database containing your tables and data | [Create database](/docs/cloud/cloud-databases/cloud-db-manage) |
+| Schema browser | View and search the tables and views in your database |  |
+| Limit query results | Limit query results to 10, 100, 1000 or 10000 rows |  Defaults to 100 rows |
+| Write queries | Query editor supports one or more queries and auto-suggests valid SQL and PQL |  |
+| Select a query | Select a specific line to run, or insert the cursor to run from that point down |  |
+| Run queries | Run queries with **Run** button, or via your keyboard:<br/>* **Ctrl**+**Enter**, or<br/>* **CMD** + **Enter** | **Network error** occurs if a query exceeds 4000 seconds before returning results. |
+| Format results | Results columns can be sorted ascending or descending, filtered, hidden, shown and exported to CSV |  |
+| View query history | View and search all queries run during the current session. | Query history is deleted when you logout or clear your browser cache |
