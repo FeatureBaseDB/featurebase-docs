@@ -35,4 +35,5 @@ FeatureBase Cloud has a built-in query editor that supports queries written usin
 | Write queries | Query editor supports one or more queries and auto-suggests valid SQL and PQL |
 | Select a query | Select a specific line to run, or insert the cursor to run from that point down |
 | Run queries | Run queries with **Run** button, or via your keyboard:<br/>* **Ctrl**+**Enter**, or<br/>* **CMD** + **Enter** |
+| Format results | Results columns can be sorted ascending or descending, filtered, hidden, shown and exported to CSV |
 | View query history | View and search all queries run during the current session |
