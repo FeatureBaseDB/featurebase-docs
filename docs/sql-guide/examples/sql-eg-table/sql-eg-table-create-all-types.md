@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS all-types (
     stringsetcol STRINGSET,
     stringsetcolq STRINGSETQ TIMEQUANTUM 'YMD' TTL '24h',
     timestampcol TIMESTAMP timeunit 'ms',
-    vectorcol VECTOR(768)
+    vectorcol VECTOR(5)
   )
   WITH COMMENT 'Table contains all supported data types';
 ```

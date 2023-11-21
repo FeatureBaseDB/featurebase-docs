@@ -35,6 +35,32 @@ VALUES (
 );
 ```
 
+## BULK INSERT to all-types from CSV
+
+```
+INSERT INTO all-types (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetcolq, stringcol, stringsetcol, stringsetcolq, timestampcol, vectorcol)
+MAP(
+  0 ID,
+  1 BOOL,
+  2 DECIMAL(2),
+  3 ID,
+  4 IDSET,
+  5 IDSETQ TIMEQUANTUM 'YMD' TTL '24h',
+  6 STRING,
+  7 STRINGSET,
+  8 STRINGSETQ TIMEQUANTUM 'YMD' TTL '24h',
+  8 TIMESTAMP
+  10 VECTOR(5)
+  )
+
+FROM
+    'https://docs.featurebase.com/assets/sql-eg/insert-bulk-all-cols.csv'
+WITH
+    BATCHSIZE 100000
+    FORMAT 'CSV'
+    INPUT 'URL'
+    HEADER_ROW;
+
 ## Arguments
 
 | Argument | Description | Additional information |
