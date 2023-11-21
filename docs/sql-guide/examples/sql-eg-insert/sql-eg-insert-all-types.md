@@ -52,6 +52,18 @@ MAP(
   9 TIMESTAMP,
   10 VECTOR(5)
   )
+  TRANSFORM(
+    @0,
+    @1,
+    @2,
+    @3,
+    @4,
+    TUPLE (@5,@6, @7)
+    @6,
+    @7,
+    @8,
+    @9,
+    @10)
 FROM
     'https://github.com/FeatureBaseDB/featurebase-docs/blob/sql-example-consolidate/assets/sql-eg/insert-bulk-all-cols.csv'
 WITH
