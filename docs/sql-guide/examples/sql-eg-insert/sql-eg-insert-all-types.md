@@ -8,12 +8,26 @@ nav_exclude: true
 
 # INSERT data to all-types table
 
-INSERT data to the all-types table
+The INSERT and BULK INSERT statement can be used to add data to the all-types table.
+
+The `TUPLE()` function is required for SETQ data types
 
 ## Before you begin
 * [INSERT examples](/docs/sql-guide/examples/sql-eg-home/#insert-examples)
 * [INSERT statement](/docs/sql-guide/statements/statement-insert)
+* [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
+* [TUPLE() function](/docs/sql-guide/functions/function-tuple)
+* [CSV data source](/assets/sql-eg/insert-bulk-all-cols.csv){:target="_blank"}
 * [CREATE TABLE all-types](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
+
+
+## CSV data source
+
+```csv
+
+
+
+```
 
 ## INSERT statement
 
