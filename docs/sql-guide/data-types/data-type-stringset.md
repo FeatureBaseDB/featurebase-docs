@@ -8,7 +8,13 @@ nav_order: 8
 
 # STRINGSET data type
 
-STRINGSET is a FeatureBase datatype used to set multiple STRING values for a single column.
+{% include /sql-guide/set-data-type-summary.md %}
+
+The STRINGSET data type:
+* has a `keyed set` internal datatype
+* is used for:
+  * grouping by
+  * searching for discrete values
 
 ## Syntax
 
@@ -24,11 +30,7 @@ STRINGSET
 
 ## Additional information
 
-The STRINGSET data type:
-* has a `keyed set` internal datatype
-* is used when:
-  * grouping by
-  * searching for discrete values
+{% include /sql-guide/set-datatype-csv-format.md %}
 
 ## Examples
 

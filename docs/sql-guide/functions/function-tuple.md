@@ -28,6 +28,10 @@ TUPLE(expr1,expr2,...)
 | `ordinal_position` | An ordinal position defined in the `MAP` clause of a `BULK INSERT` statement | When used in BULK INSERT `TRANSFORM` clause | [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk) |
 | `column_name`| Table column name in existing table | When used in SELECT statement `select-list` | [SELECT statement](/docs/sql-guide/statements/statement-select) |
 
+## Additional information
+
+{% include /sql-guide/function-tuple-setq.md %}
+
 ## Returns
 
 | Data type | Value |

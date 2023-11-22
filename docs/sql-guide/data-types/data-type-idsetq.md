@@ -8,7 +8,17 @@ nav_order: 5
 
 # IDSETQ data type
 
-IDSETQ is a FeatureBase datatype used to associate multiple TIMESTAMP values with integer values within a single row.
+{% include /sql-guide/set-data-type-summary.md %}
+
+{% include /sql-guide/setq-data-type-summary.md %}
+
+The IDSETQ data type:
+* has a `set` internal data type
+* one standard view by default unless a timeQuantum is set.
+* is used for:
+  * grouping by
+  * searching for discrete values
+
 
 ## Syntax
 
@@ -25,15 +35,9 @@ IDSETQ [TIMEQUANTUM {value} [TTL '{value}']]
 
 ## Additional information
 
-The IDSETQ data type:
-* has a `set` internal data type
-* one standard view by default unless a timeQuantum is set.
-* is used for:
-  * grouping by
-  * searching for discrete values
+{% include /sql-guide/setq-query-range.md %}
 
-{: .note}
-Use the INT data type to perform range queries using `<` or `>`
+{% include /sql-guide/function-tuple-setq.md %}
 
 {% include /sql-guide/timequantum-additional.md %}
 

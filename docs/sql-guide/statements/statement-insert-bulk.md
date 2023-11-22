@@ -125,6 +125,8 @@ When the `TUPLE()` function is used in a `TRANSFORM` clause, the following value
 
 {% include /sql-guide/setq-tuple-returns.md %}
 
+{% include /sql-guide/function-tuple-setq.md %}
+
 ### CSV Value Assignment
 There are special assignments for certain literal values when inserting CSV data.
 

@@ -8,7 +8,16 @@ nav_order: 9
 
 # STRINGSETQ data type
 
-STRINGSETQ is a FeatureBase datatype used to associate multiple TIMESTAMP values with string values within a single row.
+{% include /sql-guide/set-data-type-summary.md %}
+
+{% include /sql-guide/setq-data-type-summary.md %}
+
+The STRINGSETQ data type:
+* has a `keyed set` internal datatype
+* one standard view by default unless a timeQuantum is set.
+* is used when:
+  * grouping by
+  * searching for discrete values
 
 ## Syntax
 
@@ -25,20 +34,15 @@ STRINGSETQ [TIMEQUANTUM {value} [TTL '{value}']]
 
 ## Additional information
 
-### STRINGSETQ properties
-
-The STRINGSETQ data type:
-* has a `keyed set` internal datatype
-* one standard view by default unless a timeQuantum is set.
-* is used when:
-  * grouping by
-  * searching for discrete values
+{% include /sql-guide/function-tuple-setq.md %}
 
 {% include /sql-guide/timequantum-additional.md %}
 
 {% include /sql-guide/timequantum-timestamp-summary.md %}
 
 {% include /sql-guide/ttl-additional.md %}
+
+{% include /sql-guide/set-datatype-csv-format.md %}
 
 ### `TIMEQUANTUM` values and `TUPLE()` function
 

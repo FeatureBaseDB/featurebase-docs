@@ -8,7 +8,13 @@ nav_order: 4
 
 # IDSET data type
 
-IDSET is a FeatureBase datatype used to set multiple ID values for a single column.
+{% include /sql-guide/set-data-type-summary.md %}
+
+The IDSET data type:
+* has a `set` internal data type
+* is used for:
+  * grouping by
+  * searching for discrete values
 
 ## Syntax
 
@@ -24,11 +30,7 @@ IDSET
 
 ## Additional information
 
-The IDSET data type:
-* has a `set` internal data type
-* is used for:
-  * grouping by
-  * searching for discrete values
+{% include /sql-guide/set-datatype-csv-format.md %}
 
 ## Examples
 
