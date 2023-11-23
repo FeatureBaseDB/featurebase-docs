@@ -26,14 +26,14 @@ CREATE TABLE IF NOT EXISTS all-types (
     decimalcol DECIMAL(2),
     idcol ID,
     idsetcol IDSET,
-    idsetcolq IDSETQ TIMEQUANTUM 'YMD' TTL '24h',
+    idsetqcol IDSETQ TIMEQUANTUM 'YMD' TTL '24h',
     stringcol STRING,
     stringsetcol STRINGSET,
-    stringsetcolq STRINGSETQ TIMEQUANTUM 'YMD' TTL '24h',
-    timestampcol TIMESTAMP timeunit 'ms',
+    stringsetqcol STRINGSETQ TIMEQUANTUM 'YMD' TTL '24h',
+    timestampcol TIMESTAMP timeunit 'YMD',
     vectorcol VECTOR(5)
   )
-  WITH COMMENT 'Table contains all supported data types';
+  WITH COMMENT 'Table contains all supported data types with valid constraints';
 ```
 
 ## Next step

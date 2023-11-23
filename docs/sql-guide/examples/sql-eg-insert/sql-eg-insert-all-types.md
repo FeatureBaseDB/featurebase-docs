@@ -23,10 +23,12 @@ The `TUPLE()` function is required for SETQ data types
 
 ## CSV data source
 
+{: .note}
+This data source also available at `https://docs.featurebase.com/assets/sql-eg/sql-eg-all-col.csv`
+
 ```csv
-
-
-
+id,intcol,boolcol,decimalcol,idcol,idsetcol,idsetcolq,stringcol,stringsetcol,stringscetcolq,timestampcol,vectorcol
+1,1,true,1.23,123,123;234;345,456;567;678;789,first row, this;is;the;first;row, also;the;first;row,2023-11-22T04:46:59, 8.90
 ```
 
 ## INSERT statement
@@ -51,8 +53,13 @@ VALUES (
 
 ## BULK INSERT to all-types from CSV
 
+The following BULK INSERT statement uses the `TUPLE()` function to:
+* add the timestamp from timestampcol
+* as the timestamp used for the array of values to be added to idsetqcol and stringsetqcol
+* combine timestamp values from timestampcol, with
+
 ```
-BULK INSERT INTO all-types (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetcolq, stringcol, stringsetcol, stringsetcolq, timestampcol, vectorcol)
+BULK INSERT INTO all-types (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetqcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
 MAP(
   0 ID,
   1 BOOL,
@@ -72,10 +79,10 @@ MAP(
     @2,
     @3,
     @4,
-    TUPLE (@5,@6, @7)
+    TUPLE (@9,@5)
     @6,
     @7,
-    @8,
+    TUPLE (@9,@8)
     @9,
     @10)
 FROM
@@ -86,6 +93,9 @@ WITH
     INPUT 'URL'
     HEADER_ROW;
 ```
+
+
+
 ERROR FOR IDSETQ - NEEDS TRANSFORM CLAUSE
 ## Arguments
 
