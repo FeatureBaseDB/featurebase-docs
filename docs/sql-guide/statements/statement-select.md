@@ -67,7 +67,7 @@ SELECT
 |---|---|---|---|
 | `DISTINCT` | Keyword that specifies only unique rows exist in the output | Optional | * [DISTINCT additional](#distinct-additional)<br/>* [SELECT...flatten hint](/docs/sql-guide/hints/hint-flatten) |
 | top_clause | Specify a limit to apply to the number of rows returned in the output. | Optional | Requires integer literal |
-| select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | [SELECT list and GROUP BY clause](#select-list-and-group-by-clause) |
+| select_list | A series of expressions separated by commas that contains the items selected to form the output result set. | Yes | Table columns named in the `<select list>` must be aggregated or grouped |
 | from_clause | A list of table or subquery expressions that specify which relations to select data from. | Yes | [FROM table or subquery expression](#from-table-or-subquery) |
 | from...with | A list of table query hints | Optional for table queries | [Query hints](/docs/sql-guide/hints/hints-home) |
 | where_clause | An expression that defines a filter condition for the rows returned by the query. | Optional | * [`<expr>` filter conditions](#expr-filter)<br/>* [SELECT...flatten hint](/docs/sql-guide/hints/hint-flatten) |
@@ -89,7 +89,7 @@ SELECT
 
 ### `<expr>` filter
 
-`<expr>` can be used in the <select_list> and clauses:
+`<expr>` can be used in the <select_list> and the following clauses:
 
 * TOP
 * WHERE
@@ -103,9 +103,6 @@ SELECT
 | Constant | A literal or scalar value | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) or subquery |
 | Function | [FeatureBase SQL functions](/docs/sql-guide/functions/functions-home) | Can be joined by a subquery or [SQL operators](/docs/sql-guide/operators/operators-home) |
 
-### SELECT list and GROUP BY clause
-
-SELECT LIST Columns referenced in non-aggregate expressions must also appear in the GROUP BY clause.
 
 ### SELECT...LIKE wildcards
 
