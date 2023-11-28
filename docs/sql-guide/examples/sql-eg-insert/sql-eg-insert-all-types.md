@@ -60,6 +60,14 @@ VALUES
   '2024-11-21T00:00:00Z',
   [0.11,0.22,0.33,0.44,0.55]);
 ```
+
+## INSERT STATEMENT with two columns
+
+```sql
+INSERT INTO all-types (_id, stringcol)
+VALUES (03, '*');
+```
+
 <!-- commented out due to Jira https://molecula.atlassian.net/browse/CLOUD-1818 which details an error experienced for IDSETQ and STRINGSETQ data types
 
 ## BULK INSERT to all-types from CSV
