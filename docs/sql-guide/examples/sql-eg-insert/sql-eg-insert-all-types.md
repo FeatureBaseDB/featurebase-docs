@@ -8,9 +8,9 @@ nav_exclude: true
 
 # INSERT data to all-types table
 
-The INSERT and BULK INSERT statement can be used to add data to the all-types table.
-
-The `TUPLE()` function is required for SETQ data types
+Add data to the `all-types` table using INSERT and BULK INSERT statements that feature:
+* the `TUPLE()` function for SETQ data types
+* the `TRANSFORM` clause for BULK INSERT
 
 ## Before you begin
 * [INSERT examples](/docs/sql-guide/examples/sql-eg-home/#insert-examples)
@@ -19,7 +19,6 @@ The `TUPLE()` function is required for SETQ data types
 * [TUPLE() function](/docs/sql-guide/functions/function-tuple)
 * [CSV data source](/assets/sql-eg/insert-bulk-all-cols.csv){:target="_blank"}
 * [CREATE TABLE all-types](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
-
 
 ## CSV data source
 
@@ -50,16 +49,31 @@ VALUES (
   [0.1,0.2,0.3,0.4,0.5]
 );
 ```
+<!-- commented out due to Jira https://molecula.atlassian.net/browse/CLOUD-1818 which details an error experienced for IDSETQ and STRINGSETQ data types
 
 ## BULK INSERT to all-types from CSV
 
-The following BULK INSERT statement uses the `TUPLE()` function to:
-* add the timestamp from timestampcol
-* as the timestamp used for the array of values to be added to idsetqcol and stringsetqcol
-* combine timestamp values from timestampcol, with
+The following BULK INSERT statement:
+* uses the `TRANSFORM` clause with `TUPLE()` function
+* to combine values from a CSV file
+* for `SETQ` data types
+
+The statement also includes `WITH HEADER_ROW` to account for the first row of the CSV data source.
 
 ```
-BULK INSERT INTO all-types (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetqcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
+BULK INSERT INTO all-types (
+  _id,
+  intcol,
+  boolcol,
+  decimalcol,
+  idcol,
+  idsetcol,
+  idsetqcol,
+  stringcol,
+  stringsetcol,
+  stringsetqcol,
+  timestampcol,
+  vectorcol)
 MAP(
   0 ID,
   1 BOOL,
@@ -71,18 +85,17 @@ MAP(
   7 STRINGSET,
   8 STRINGSETQ,
   9 TIMESTAMP,
-  10 VECTOR(5)
-  )
-  TRANSFORM(
+  10 VECTOR(5))
+TRANSFORM(
     @0,
     @1,
     @2,
     @3,
     @4,
-    TUPLE (@9,@5)
+    TUPLE(@9,@5),
     @6,
     @7,
-    TUPLE (@9,@8)
+    TUPLE(@9,@8),
     @9,
     @10)
 FROM
@@ -93,10 +106,8 @@ WITH
     INPUT 'URL'
     HEADER_ROW;
 ```
+-->
 
-
-
-ERROR FOR IDSETQ - NEEDS TRANSFORM CLAUSE
 ## Arguments
 
 | Argument | Description | Additional information |
