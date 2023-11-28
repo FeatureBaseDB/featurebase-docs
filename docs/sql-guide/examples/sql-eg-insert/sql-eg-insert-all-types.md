@@ -33,9 +33,9 @@ id,intcol,boolcol,decimalcol,idcol,idsetcol,idsetcolq,stringcol,stringsetcol,str
 ## INSERT statement
 
 ```sql
-INSERT INTO all-types (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetcolq, stringcol, stringsetcol, stringsetcolq, timestampcol, vectorcol)
-VALUES (
-  001,
+INSERT INTO all-types (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetqcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
+VALUES
+  (001,
   1,
   true,
   10.10,
@@ -46,8 +46,19 @@ VALUES (
   ['ten', 'twenty', 'thirty'],
   {'2023-11-21T00:00:00Z', ['one hundred', 'two hundred', 'three hundred']},
   '2023-11-21T00:00:00Z',
-  [0.1,0.2,0.3,0.4,0.5]
-);
+  [0.1,0.2,0.3,0.4,0.5]),
+  (002,
+  2,
+  false,
+  11.11,
+  11,
+  [11, 22, 33],
+  {'2024-11-21T00:00:00Z', [111, 222, 333]},
+  'another string-col',
+  ['eleven', 'twenty two', 'thirty three'],
+  {'2024-11-21T00:00:00Z', ['one hundred and eleven', 'two hundred and twenty two', 'three hundred and thirty three']},
+  '2024-11-21T00:00:00Z',
+  [0.11,0.22,0.33,0.44,0.55]);
 ```
 <!-- commented out due to Jira https://molecula.atlassian.net/browse/CLOUD-1818 which details an error experienced for IDSETQ and STRINGSETQ data types
 
