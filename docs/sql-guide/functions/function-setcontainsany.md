@@ -14,9 +14,7 @@ grand_parent: SQL guide
 ```sql
 
 SETCONTAINSANY(
-  {idset-column, [int-value,...]} |
-  {stringset-column, ['string-value',...]}
-  )
+  {idset-column, [int-value,...]} | {stringset-column, ['string-value',...]})
 ```
 
 ## Arguments

@@ -43,7 +43,7 @@ The IDENTIFIER() function auto-numbers column `_id` values
 
 ```sql
 INSERT INTO all-types (_id, stringcol)
-VALUES (IDENTIFIER(all-types), '*');
+VALUES (IDENTIFIER('all-types'), '*');
 ```
 
 ## INSERT STATEMENT for all columns

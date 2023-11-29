@@ -31,7 +31,7 @@ column-average /
 ### ASCII function
 
 ```sql
-SELECT stringcol, ASCII(stringcol) AS converted-to-ascii FROM all-types WHERE _id=3;
+SELECT stringcol, ASCII(stringcol) AS converted-to-ascii FROM all-types WHERE _id=1;
 
 stringcol | converted-to-ascii
 ----------+-------------------
@@ -44,38 +44,64 @@ SELECT COUNT(*) as how-many-items, stringsetcol FROM all-types
 GROUP BY stringsetcol;
 
  howmany | stringsetcol
------+--------------------------
-  1 | ten, twenty, thirty
-  1 | eleven, twenty two, thirty three
+--------+------------------------
+  1     | null
+  1     | ten, twenty, thirty
+  1     | eleven, twenty two, thirty three
 ```
 
 ### DATE_TRUNC function
 
 ```sql
-SELECT timestampcol, DATE_TRUNC('hh',timestampcol) AS convert-to-hours FROM all-types;
+SELECT _id, timestampcol, DATE_TRUNC('hh',timestampcol) AS convert-to-hours FROM all-types;
 
-timestampcol | convert-to-hours
--------------|-----------------
-2023-11-21T00:00:00Z | 2023-11-21T00:00:00.000
-2024-11-21T00:00:00Z | 2024-11-21T00:00:00.000
-null,null
+_id | timestampcol         | convert-to-hours
+----+----------------------+------------------------
+ 1  | null                 |  null
+ 2  | 2023-11-21T00:00:00Z | 2023-11-21T00:00:00.000
+ 3  | 2024-11-21T00:00:00Z | 2024-11-21T00:00:00.000
 ```
-
-
-
 
 ## SELECT COSINE DISTANCE()
 
 ```sql
-SELECT _id, description, cosine_distance(
-  [-0.027067707851529, 0.009963636286557, 0.034747183322906], cosvec-col)
+SELECT _id, cosine_distance(
+  [-0.027067707851529, 0.009963636286557, 0.034747183322906, 0.490922, 0.0000002], vectorcol)
    AS rank
-   FROM cosvec-target;
+   FROM all-types;
 
-id |     description     |   rank
----+---------------------+----------
- 0 | Three vector values | 1.2763582
+ _id |  rank
+-----+-----------
+ 2   | 0.4363491
+ 3   | 0.4363491
+```
 
+## SETCONTAINS functions
+
+```sql
+SELECT _id, SETCONTAINS(idsetcol, 20) AS results FROM all-types;
+
+ _id | results
+-----+---------
+1    | null
+2    | true
+3    | false
+
+SELECT _id, SETCONTAINSANY (idsetcol, [20, 30]) AS results FROM all-types;
+
+ _id  | results
+------+--------
+  1   | null
+  2   | true
+  3   | false
+
+SELECT _id, SETCONTAINSALL (stringsetcol, ['ten', 'thirty']) AS results FROM all-types;
+
+_id  | results
+------+--------
+  1   | null
+  2   | true
+  3   | false
 ```
 
 ## Further information
