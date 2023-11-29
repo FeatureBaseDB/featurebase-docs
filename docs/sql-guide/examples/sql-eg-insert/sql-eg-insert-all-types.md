@@ -15,11 +15,13 @@ Add data to the `all-types` table using INSERT and BULK INSERT statements that f
 ## Before you begin
 * [INSERT examples](/docs/sql-guide/examples/sql-eg-home/#insert-examples)
 * [INSERT statement](/docs/sql-guide/statements/statement-insert)
+* [IDENTIFIER function](/docs/sql-guide/functions/function-identifier)
 * [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
-* [TUPLE() function](/docs/sql-guide/functions/function-tuple)
-* [CSV data source](/assets/sql-eg/insert-bulk-all-cols.csv){:target="_blank"}
 * [CREATE TABLE all-types](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
 
+<!-- commented out because it applies to the BULK INSERT statement that doesn't work
+* [TUPLE() function](/docs/sql-guide/functions/function-tuple)
+* [CSV data source](/assets/sql-eg/insert-bulk-all-cols.csv){:target="_blank"}
 ## CSV data source
 
 {: .note}
@@ -27,15 +29,29 @@ This data source also available at `https://docs.featurebase.com/assets/sql-eg/s
 
 ```csv
 id,intcol,boolcol,decimalcol,idcol,idsetcol,idsetcolq,stringcol,stringsetcol,stringscetcolq,timestampcol,vectorcol
-1,1,true,1.23,123,123;234;345,456;567;678;789,first row, this;is;the;first;row, also;the;first;row,2023-11-22T04:46:59, 8.90
+004,1,true,1.23,123,123;234;345,456;567;678;789,first row, this;is;the;first;row, also;the;first;row,2023-11-22T04:46:59, 8.90
+```
+--->
+
+## INSERT statements
+
+<!--NOTE: Numbering in below and the /assets/sql-eg/insert-bulk-all-cols.csv data source need to be kept in sync otherwise SELECT queries that follow will have different results-->
+
+## INSERT STATEMENT using IDENTIFIER function
+
+The IDENTIFIER() function auto-numbers column `_id` values
+
+```sql
+INSERT INTO all-types (_id, stringcol)
+VALUES (IDENTIFIER(all-types), '*');
 ```
 
-## INSERT statement
+## INSERT STATEMENT for all columns
 
 ```sql
 INSERT INTO all-types (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetqcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
 VALUES
-  (001,
+  (002,
   1,
   true,
   10.10,
@@ -47,7 +63,7 @@ VALUES
   {'2023-11-21T00:00:00Z', ['one hundred', 'two hundred', 'three hundred']},
   '2023-11-21T00:00:00Z',
   [0.1,0.2,0.3,0.4,0.5]),
-  (002,
+  (003,
   2,
   false,
   11.11,
@@ -59,13 +75,6 @@ VALUES
   {'2024-11-21T00:00:00Z', ['one hundred and eleven', 'two hundred and twenty two', 'three hundred and thirty three']},
   '2024-11-21T00:00:00Z',
   [0.11,0.22,0.33,0.44,0.55]);
-```
-
-## INSERT STATEMENT with two columns
-
-```sql
-INSERT INTO all-types (_id, stringcol)
-VALUES (03, '*');
 ```
 
 <!-- commented out due to Jira https://molecula.atlassian.net/browse/CLOUD-1818 which details an error experienced for IDSETQ and STRINGSETQ data types
@@ -125,7 +134,7 @@ WITH
     INPUT 'URL'
     HEADER_ROW;
 ```
--->
+
 
 ## Arguments
 
@@ -135,6 +144,8 @@ WITH
 | `[<value>,...]` | Required square brackets around array of values to insert into SET and SETQ columns, and vector column |  |
 | `{<timestamp>,[<value>,...]}` | Required curly brackets to gather timestamped `[<set>]` values to insert into a SETQ column |
 | `[<decimal-val>,...]` | Decimal value array to insert into Vector data type column. |
+
+-->
 
 ## Next step
 

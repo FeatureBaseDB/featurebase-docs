@@ -81,19 +81,41 @@ BULK INSERT
 
 ## Arguments
 
+### Target definition
+
 | Argument | Description | Required? | Additional information |
 |---|---|---|---|
 | `INSERT` | Insert new records if the `_id` does not exist else update the record with the values passed. Values are not updated for missing columns. | Yes | `REPLACE` can be used but is the same functionality |
 | `table_name` | Name of target table | Yes |  |
 | `column_name` | Valid columns belonging to `table_name` starting with the `_id` column | Optional | System builds a column list from existing columns in `table_name` if columns are not specified. |
-| `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [Map examples](#map-examples) |
-| `position` | Ordinal position of value in source. |  |  |
-| `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
-| `TRANSFORM expr` | One or more SQL expressions with dependencies on `column_list` and the `MAP` clause | Optional | [Transform additional](#transform-additional) |
-| `FROM` | A single or multi-line string literal that specifies the source of data and are interpreted based on the INPUT option. | Yes |  |
+
+### MAP clause
+
+| Argument | Description | Required? | Additional information |
+|---|---|---|---|
+| `MAP` | Specify the source data location as a numeric value, together with the target data type. | Yes | Values identified by the MAP clause are inserted to columns specified in the `column_list` |
+| `position` | Ordinal position of value in data source source. |  |  |
+| `type_name` | Target data type |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
+
+### TRANSFORM clause
+
+| Argument | Description | Required? | Additional information |
+|---|---|---|---|
+| `TRANSFORM` | One or more SQL expressions with dependencies on `column_list` and the `MAP` clause | Optional | [Transform additional](#transform-additional) |
+
+### FROM clause
+
+| Argument | Description | Required? | Additional information |
+|---|---|---|---|
+| `FROM` | A single or multi-line string literal that specifies the data source that is interpreted based on the INPUT option. | Yes |  |
 | `'path/file_name'` | Valid path and file name for data source. | Optional | Not available for FeatureBase Cloud. |
 | `'URL'` | Valid URL(s) for data sources. | Optional | Multiple URLs may be passed separated by whitespace. If newlines are used, must use an x before the quote like `x'URL<newline>URL'` |
 | `x'records'` | CSV or NDJSON records as a string literal. | Required for INLINE | Not supported for `FORMAT 'PARQUET'` |
+
+### WITH clause
+
+| Argument | Description | Required? | Additional information |
+|---|---|---|---|
 | `WITH` | Pass one or more statement level options. | Optional |  |
 | `BATCHSIZE` | Specify the batch size of the BULK commit. Defaults to 1000. | Optional | Can be used with `STREAM` to batch records as they are streamed to the server where batching not available on client |
 | `ROWSLIMIT` | Limit the number of rows processed in a batch. | Optional |  |

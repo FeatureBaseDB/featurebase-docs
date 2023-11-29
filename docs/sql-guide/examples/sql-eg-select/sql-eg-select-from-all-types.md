@@ -63,6 +63,7 @@ null,null
 
 
 
+
 ## SELECT COSINE DISTANCE()
 
 ```sql
