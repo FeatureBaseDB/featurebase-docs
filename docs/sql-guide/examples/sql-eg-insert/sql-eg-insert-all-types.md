@@ -60,7 +60,7 @@ VALUES
   {'2023-11-21T00:00:00Z', [100, 200, 300]},
   'string-col',
   ['ten', 'twenty', 'thirty'],
-  {'2023-11-21T00:00:00Z', ['one hundred', 'two hundred', 'three hundred']},
+  {'2023-11-21T02:01:03Z', ['one hundred', 'two hundred', 'three hundred']},
   '2023-11-21T00:00:00Z',
   [0.1,0.2,0.3,0.4,0.5]),
   (003,

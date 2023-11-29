@@ -6,8 +6,11 @@ grand_parent: SQL guide
 nav_exclude: true
 ---
 # SELECT FROM all-types
+{: .no_toc }
 
 The following SELECT statements return data from the `all-types` table.
+
+{% include page-toc.md %}
 
 ## Before you begin
 * [SELECT examples](/docs/sql-guide/examples/sql-eg-home/#select-examples)
@@ -21,7 +24,7 @@ The following SELECT statements return data from the `all-types` table.
 ```sql
 SELECT AVG(intcol) AS column-average FROM all-types;
 
-column-average /
+column-average |
 ---------------+
     1.5000
 ```
@@ -29,7 +32,7 @@ column-average /
 ## SELECT with functions
 
 ### ASCII function
-
+The ASCII function converts a single string character to its equivalent ASCII.
 ```sql
 SELECT stringcol, ASCII(stringcol) AS converted-to-ascii FROM all-types WHERE _id=1;
 
@@ -43,7 +46,7 @@ stringcol | converted-to-ascii
 SELECT COUNT(*) as how-many-items, stringsetcol FROM all-types
 GROUP BY stringsetcol;
 
- howmany | stringsetcol
+ how-many-items | stringsetcol
 --------+------------------------
   1     | null
   1     | ten, twenty, thirty
