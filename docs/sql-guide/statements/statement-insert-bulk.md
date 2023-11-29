@@ -161,6 +161,33 @@ There are special assignments for certain literal values when inserting NDJSON d
 
 {% include /sql-guide/sql-eg-insert-bulk-statements.md %}
 
+### MAP and TRANSFORM example for SETQ data types
+
+```sql
+BULK INSERT INTO doctest (
+  _id,
+  idsetqcol,
+  stringsetqcol,
+  timestampcol)
+MAP(
+  0 ID,
+  1 IDSET,
+  2 STRINGSET,
+  3 TIMESTAMP
+  )
+TRANSFORM(
+    @0,
+    TUPLE(@3,@1),
+    TUPLE(@3,@2),
+    @3
+)
+FROM x'004,456;567;678;789,this;is;the;first;row,2023-11-22T04:46:59Z'
+WITH
+    BATCHSIZE 1
+    FORMAT 'CSV'
+    input 'INLINE';
+```
+
 ### TRANSFORM examples
 
 | Map clause | TRANSFORM clause |
