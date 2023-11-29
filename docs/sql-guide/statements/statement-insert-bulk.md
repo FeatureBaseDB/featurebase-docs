@@ -86,7 +86,7 @@ BULK INSERT
 | `INSERT` | Insert new records if the `_id` does not exist else update the record with the values passed. Values are not updated for missing columns. | Yes | `REPLACE` can be used but is the same functionality |
 | `table_name` | Name of target table | Yes |  |
 | `column_name` | Valid columns belonging to `table_name` starting with the `_id` column | Optional | System builds a column list from existing columns in `table_name` if columns are not specified. |
-| `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [Map examples](#map-examples) |
+| `MAP` | Specifies how source data is mapped from its location and what datatype to output as. Values from the MAP clause are inserted to columns specified in the `column_list`. | Yes | [MAP and TRANSFORM with `SETQ` data types](#map-and-transform-clauses-for-setq-data-types) |
 | `position` | Ordinal position of value in source. |  |  |
 | `type_name` | Data type of the value in source. |  | [Data types](/docs/sql-guide/data-types/data-types-home) |
 | `TRANSFORM expr` | One or more SQL expressions with dependencies on `column_list` and the `MAP` clause | Optional | [Transform additional](#transform-additional) |
@@ -109,6 +109,17 @@ BULK INSERT
 | `ALLOW_MISSING_VALUES` | `NDJSON` argument that outputs a `NULL` value from the MAP clause if the path expression fails. | Optional |  |
 
 ## Additional information
+
+### MAP and TRANSFORM clauses for SETQ data types
+
+SETQ data types are handled differently in the MAP and TRANSFORM clauses:
+
+* MAP the numeric identifier for your `SETQ` data type to an equivalent `IDSET` or `STRINGSET` data type
+* Combine the MAP identified `TIMESTAMP` and `SET` data types together in the TRANSFORM clause as follows:
+
+```sql
+TUPLE(<timestamp-map-identifier>,<set-map-identifier>)
+```
 
 ### Transform additional
 
@@ -148,15 +159,13 @@ There are special assignments for certain literal values when inserting NDJSON d
 | Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
 | Value Missing () | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
 
-<!--insert has heading "BULK INSERT examples"-->
-
 {% include /sql-guide/sql-eg-insert-bulk-statements.md %}
 
 ### TRANSFORM examples
 
 | Map clause | TRANSFORM clause |
 |---|---|
-| `MAP (0 id, 1 int, 4 string)` | Variables: `@0`, `@1` and `@2` |
+| `MAP (0 id, 1 int, 4 string)` | `TRANSFORM @0, @1 @2 |
 
 ```sql
 TRANSFORM (
