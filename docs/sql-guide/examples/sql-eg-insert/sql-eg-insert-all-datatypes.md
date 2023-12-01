@@ -77,6 +77,9 @@ VALUES
   [0.11,0.22,0.33,0.44,0.55]);
 ```
 
+<!-- this throws error query error: [36:5] an expression of type 'tuple(timestamp, stringset)' cannot be assigned to type 'stringset'
+
+
 ## BULK INSERT to all-datatypes from CSV
 
 The following BULK INSERT statement:
@@ -132,16 +135,6 @@ WITH
     INPUT 'URL'
     HEADER_ROW;
 ```
-
-
-## Arguments
-
-| Argument | Description | Additional information |
-|---|---|---|
-| `INSERT INTO` | Insert data to the `all-cols` table `<column-list>` | [INSERT statement](/docs/sql-guide/statements/statement-insert)
-| `[<value>,...]` | Required square brackets around array of values to insert into SET and SETQ columns, and vector column |  |
-| `{<timestamp>,[<value>,...]}` | Required curly brackets to gather timestamped `[<set>]` values to insert into a SETQ column |
-| `[<decimal-val>,...]` | Decimal value array to insert into Vector data type column. |
 
 -->
 
