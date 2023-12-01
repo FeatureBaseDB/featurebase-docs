@@ -1,14 +1,14 @@
 ---
-title: INSERT INTO all-types
+title: INSERT INTO all-datatypes
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_exclude: true
 ---
 
-# INSERT data to all-types table
+# INSERT data to all-datatypes table
 
-Add data to the `all-types` table using INSERT and BULK INSERT statements that feature:
+Add data to the `all-datatypes` table using INSERT and BULK INSERT statements that feature:
 * the `TUPLE()` function for SETQ data types
 * the `TRANSFORM` clause for BULK INSERT
 
@@ -17,7 +17,7 @@ Add data to the `all-types` table using INSERT and BULK INSERT statements that f
 * [INSERT statement](/docs/sql-guide/statements/statement-insert)
 * [IDENTIFIER function](/docs/sql-guide/functions/function-identifier)
 * [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
-* [CREATE TABLE all-types](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
+* [CREATE TABLE all-datatypes](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
 
 <!-- commented out because it applies to the BULK INSERT statement that doesn't work
 * [TUPLE() function](/docs/sql-guide/functions/function-tuple)
@@ -42,14 +42,14 @@ id,intcol,boolcol,decimalcol,idcol,idsetcol,idsetcolq,stringcol,stringsetcol,str
 The IDENTIFIER() function auto-numbers column `_id` values
 
 ```sql
-INSERT INTO all-types (_id, stringcol)
-VALUES (IDENTIFIER('all-types'), '*');
+INSERT INTO all-datatypes (_id, stringcol)
+VALUES (IDENTIFIER('all-datatypes'), '*');
 ```
 
 ## INSERT STATEMENT for all columns
 
 ```sql
-INSERT INTO all-types (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetqcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
+INSERT INTO all-datatypes (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetqcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
 VALUES
   (002,
   1,
@@ -77,26 +77,22 @@ VALUES
   [0.11,0.22,0.33,0.44,0.55]);
 ```
 
-<!-- commented out due to Jira https://molecula.atlassian.net/browse/CLOUD-1818 which details an error experienced for IDSETQ and STRINGSETQ data types
-
-## BULK INSERT to all-types from CSV
+## BULK INSERT to all-datatypes from CSV
 
 The following BULK INSERT statement:
-* uses the `TRANSFORM` clause with `TUPLE()` function
-* to combine values from a CSV file
-* for `SETQ` data types
-
-The statement also includes `WITH HEADER_ROW` to account for the first row of the CSV data source.
+* MAPs `SETQ` data types as `idset` and `stringset`
+* TRANSFORMs data intended for `SETQ` data types using the `TUPLE` function to combine TIMESTAMP and semicolon-separated values into `SETQ` target columns
+* Includes `WITH HEADER ROW` to ignore the first row in the CSV data source
 
 ```
-BULK INSERT INTO all-types (
+BULK INSERT INTO all-datatypes (
   _id,
-  intcol,
   boolcol,
   decimalcol,
   idcol,
   idsetcol,
   idsetqcol,
+  intcol,
   stringcol,
   stringsetcol,
   stringsetqcol,
@@ -108,24 +104,26 @@ MAP(
   2 DECIMAL(2),
   3 ID,
   4 IDSET,
-  5 IDSETQ,
-  6 STRING,
-  7 STRINGSET,
-  8 STRINGSETQ,
-  9 TIMESTAMP,
-  10 VECTOR(5))
+  5 IDSET,
+  6 INT,
+  7 STRING,
+  8 STRINGSET,
+  9 STRINGSET,
+  10 TIMESTAMP,
+  11 VECTOR(5))
 TRANSFORM(
     @0,
     @1,
     @2,
     @3,
     @4,
-    TUPLE(@9,@5),
+    TUPLE(@10,@5),
     @6,
     @7,
-    TUPLE(@9,@8),
+    TUPLE(@10,@9),
     @9,
-    @10)
+    @10,
+    @11)
 FROM
     'https://github.com/FeatureBaseDB/featurebase-docs/blob/sql-example-consolidate/assets/sql-eg/insert-bulk-all-cols.csv'
 WITH
@@ -149,4 +147,4 @@ WITH
 
 ## Next step
 
-* [SELECT FROM all-types](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-all-types)
+* [SELECT FROM all-datatypes](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-all-datatypes)

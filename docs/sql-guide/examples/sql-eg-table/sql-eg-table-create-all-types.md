@@ -1,14 +1,14 @@
 ---
-title: CREATE TABLE all-types
+title: CREATE TABLE all-datatypes
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_exclude: true
 ---
 
-# CREATE TABLE all-types
+# CREATE TABLE all-datatypes
 
-The table `all-types` is contains:
+The table `all-datatypes` is contains:
 * an ID unique identifier
 * columns for each supported data type
 
@@ -19,14 +19,14 @@ The table `all-types` is contains:
 ## CREATE TABLE statement
 
 ```sql
-CREATE TABLE IF NOT EXISTS all-types (
+CREATE TABLE IF NOT EXISTS all-datatypes (
     _id id,
-    intcol INT MIN 0 MAX 10000,
     boolcol BOOL,
     decimalcol DECIMAL(2),
     idcol ID,
     idsetcol IDSET,
     idsetqcol IDSETQ TIMEQUANTUM 'YMD' TTL '24h',
+    intcol INT MIN 0 MAX 10000,
     stringcol STRING,
     stringsetcol STRINGSET,
     stringsetqcol STRINGSETQ TIMEQUANTUM 'YMD' TTL '24h',
@@ -38,4 +38,4 @@ CREATE TABLE IF NOT EXISTS all-types (
 
 ## Next step
 
-* [INSERT INTO all-types](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-types)
+* [INSERT INTO all-datatypes](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-datatypes)
