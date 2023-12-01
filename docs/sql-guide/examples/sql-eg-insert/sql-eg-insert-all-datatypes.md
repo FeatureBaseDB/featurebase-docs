@@ -78,6 +78,7 @@ VALUES
 ```
 
 <!-- this throws error query error: [36:5] an expression of type 'tuple(timestamp, stringset)' cannot be assigned to type 'stringset'
+Updated destination URL to raw because the GH page caused errors.
 
 
 ## BULK INSERT to all-datatypes from CSV
@@ -128,7 +129,7 @@ TRANSFORM(
     @10,
     @11)
 FROM
-    'https://github.com/FeatureBaseDB/featurebase-docs/blob/sql-example-consolidate/assets/sql-eg/insert-bulk-all-cols.csv'
+    'https://raw.githubusercontent.com/FeatureBaseDB/featurebase-docs/sql-example-consolidate/assets/sql-eg/insert-bulk-all-cols2.csv'
 WITH
     BATCHSIZE 100000
     FORMAT 'CSV'
