@@ -88,7 +88,7 @@ A SETQ column requires:
 
 A BULK INSERT statement requires the following to successfully INSERT values to SETQ data types:
 * MAP clause numeric identifier for:
-  * SETQ data type uses SET to correspond with the array of values in the data source
+  * SETQ data type uses SET to correspond with the array of values in the data source (e.g., IDSET instead of IDSETQ)
   * TIMESTAMP
 * TRANSFORM clause that combines above MAP values: `TUPLE(@<timestamp-map-id>,@<setq-map-identifier>)`
 
@@ -130,8 +130,8 @@ TRANSFORM(
     TUPLE(@10,@5),
     @6,
     @7,
+    @8
     TUPLE(@10,@9),
-    @9,
     @10,
     @11)
 FROM
