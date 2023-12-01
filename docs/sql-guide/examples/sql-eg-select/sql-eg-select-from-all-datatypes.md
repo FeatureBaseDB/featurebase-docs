@@ -1,14 +1,14 @@
 ---
-title: SELECT FROM all-types
+title: SELECT FROM all-datatypes
 layout: default
 parent: SQL Examples
 grand_parent: SQL guide
 nav_exclude: true
 ---
-# SELECT FROM all-types
+# SELECT FROM all-datatypes
 {: .no_toc }
 
-The following SELECT statements return data from the `all-types` table.
+The following SELECT statements return data from the `all-datatypes` table.
 
 {% include page-toc.md %}
 
@@ -16,13 +16,13 @@ The following SELECT statements return data from the `all-types` table.
 * [SELECT examples](/docs/sql-guide/examples/sql-eg-home/#select-examples)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [COSINE_DISTANCE function](/docs/sql-guide/functions/function-cosine-distance)
-* [CREATE TABLE all-types](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
-* [INSERT INTO all-types](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-types)
+* [CREATE TABLE all-datatypes](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
+* [INSERT INTO all-datatypes](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-datatypes)
 
 ## SELECT with Operators
 
 ```sql
-SELECT AVG(intcol) AS column-average FROM all-types;
+SELECT AVG(intcol) AS column-average FROM all-datatypes;
 
 column-average |
 ---------------+
@@ -34,7 +34,7 @@ column-average |
 ### ASCII function
 The ASCII function converts a single string character to its equivalent ASCII.
 ```sql
-SELECT stringcol, ASCII(stringcol) AS converted-to-ascii FROM all-types WHERE _id=1;
+SELECT stringcol, ASCII(stringcol) AS converted-to-ascii FROM all-datatypes WHERE _id=1;
 
 stringcol | converted-to-ascii
 ----------+-------------------
@@ -43,7 +43,7 @@ stringcol | converted-to-ascii
 
 ### COUNT function
 ```
-SELECT COUNT(*) as how-many-items, stringsetcol FROM all-types
+SELECT COUNT(*) as how-many-items, stringsetcol FROM all-datatypes
 GROUP BY stringsetcol;
 
  how-many-items | stringsetcol
@@ -56,7 +56,7 @@ GROUP BY stringsetcol;
 ### DATE_TRUNC function
 
 ```sql
-SELECT _id, timestampcol, DATE_TRUNC('hh',timestampcol) AS convert-to-hours FROM all-types;
+SELECT _id, timestampcol, DATE_TRUNC('hh',timestampcol) AS convert-to-hours FROM all-datatypes;
 
 _id | timestampcol         | convert-to-hours
 ----+----------------------+------------------------
@@ -71,7 +71,7 @@ _id | timestampcol         | convert-to-hours
 SELECT _id, cosine_distance(
   [-0.027067707851529, 0.009963636286557, 0.034747183322906, 0.490922, 0.0000002], vectorcol)
    AS rank
-   FROM all-types;
+   FROM all-datatypes;
 
  _id |  rank
 -----+-----------
@@ -82,7 +82,7 @@ SELECT _id, cosine_distance(
 ## SETCONTAINS functions
 
 ```sql
-SELECT _id, SETCONTAINS(idsetcol, 20) AS results FROM all-types;
+SELECT _id, SETCONTAINS(idsetcol, 20) AS results FROM all-datatypes;
 
  _id | results
 -----+---------
@@ -90,7 +90,7 @@ SELECT _id, SETCONTAINS(idsetcol, 20) AS results FROM all-types;
 2    | true
 3    | false
 
-SELECT _id, SETCONTAINSANY (idsetcol, [20, 30]) AS results FROM all-types;
+SELECT _id, SETCONTAINSANY (idsetcol, [20, 30]) AS results FROM all-datatypes;
 
  _id  | results
 ------+--------
@@ -98,7 +98,7 @@ SELECT _id, SETCONTAINSANY (idsetcol, [20, 30]) AS results FROM all-types;
   2   | true
   3   | false
 
-SELECT _id, SETCONTAINSALL (stringsetcol, ['ten', 'thirty']) AS results FROM all-types;
+SELECT _id, SETCONTAINSALL (stringsetcol, ['ten', 'thirty']) AS results FROM all-datatypes;
 
 _id  | results
 ------+--------
