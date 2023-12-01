@@ -135,14 +135,13 @@ TRANSFORM(
     @10,
     @11)
 FROM
-    'https://raw.githubusercontent.com/FeatureBaseDB/featurebase-docs/sql-example-consolidate/assets/sql-eg/insert-bulk-all-cols2.csv'
+    'https://raw.githubusercontent.com/FeatureBaseDB/featurebase-docs/sql-example-consolidate/assets/sql-eg/insert-bulk-all-cols.csv'
 WITH
     BATCHSIZE 100000
     FORMAT 'CSV'
     INPUT 'URL'
     HEADER_ROW;
 ```
-
 
 ## Next step
 
