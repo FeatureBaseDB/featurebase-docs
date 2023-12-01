@@ -94,6 +94,7 @@ A BULK INSERT statement requires the following to successfully INSERT values to 
 
 The `WITH` clause includes `WITH HEADER ROW` to ignore the first row in the CSV data source
 
+<!-- need to check vector mapping here because this throws errors!-->
 ```
 BULK INSERT INTO all-datatypes (
   _id,
