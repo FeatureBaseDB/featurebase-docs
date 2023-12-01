@@ -39,11 +39,14 @@ id,intcol,boolcol,decimalcol,idcol,idsetcol,idsetcolq,stringcol,stringsetcol,str
 
 ## INSERT STATEMENT using IDENTIFIER function
 
-The IDENTIFIER() function auto-numbers column `_id` values
+This INSERT statement:
+* uses the IDENTIFIER() function to automatically add an identifier to the `_id` column for this row
+* inserts a single character which will be queried in a SELECT...ASCII function query
+* adds a single string value into the STRINGSET data type column
 
 ```sql
-INSERT INTO all-datatypes (_id, stringcol)
-VALUES (IDENTIFIER('all-datatypes'), '*');
+INSERT INTO all-datatypes (_id, stringcol, stringsetcol)
+VALUES (IDENTIFIER('all-datatypes'), '*', ['string val for ASCII function']);
 ```
 
 ## INSERT STATEMENT for all columns
@@ -77,16 +80,19 @@ VALUES
   [0.11,0.22,0.33,0.44,0.55]);
 ```
 
-<!-- this throws error query error: [36:5] an expression of type 'tuple(timestamp, stringset)' cannot be assigned to type 'stringset'
-Updated destination URL to raw because the GH page caused errors.
-
-
 ## BULK INSERT to all-datatypes from CSV
 
-The following BULK INSERT statement:
-* MAPs `SETQ` data types as `idset` and `stringset`
-* TRANSFORMs data intended for `SETQ` data types using the `TUPLE` function to combine TIMESTAMP and semicolon-separated values into `SETQ` target columns
-* Includes `WITH HEADER ROW` to ignore the first row in the CSV data source
+A SETQ column requires:
+* one TIMESTAMP as an identifier,
+* for an array of one or more values
+
+A BULK INSERT statement requires the following to successfully INSERT values to SETQ data types:
+* MAP clause numeric identifier for:
+  * SETQ data type uses SET to correspond with the array of values in the data source
+  * TIMESTAMP
+* TRANSFORM clause that combines above MAP values: `TUPLE(@<timestamp-map-id>,@<setq-map-identifier>)`
+
+The `WITH` clause includes `WITH HEADER ROW` to ignore the first row in the CSV data source
 
 ```
 BULK INSERT INTO all-datatypes (
@@ -137,7 +143,6 @@ WITH
     HEADER_ROW;
 ```
 
--->
 
 ## Next step
 
