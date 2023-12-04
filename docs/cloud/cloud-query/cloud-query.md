@@ -29,10 +29,11 @@ FeatureBase Cloud has a built-in query editor that supports queries written usin
 | Feature | Description | Additional information |
 |---|---|---|
 | Database picker | Choose a database containing your tables and data | [Create database](/docs/cloud/cloud-databases/cloud-db-manage) |
-| Schema browser | View and search the tables and views in your database |  |
+| Export results | Click **<span class="material-icons-outlined">download</span> Export** to save results |  |
+| Format results | * Click result column to sort ascending or descending<br/>* Click **Columns <span class="material-icons md-18">View Column</span>** to select columns to show or hide |  |
 | Limit query results | Limit query results to 10, 100, 1000 or 10000 rows |  Defaults to 100 rows |
-| Write queries | Query editor supports one or more queries and auto-suggests valid SQL and PQL |  |
+| Run queries | * Click **Run**<br/>* **Ctrl**+**Enter** on Windows or Linux)<br/>* **CMD** + **Enter** on MacOS | **Network error** occurs if a query exceeds 4000 seconds before returning results. |
+| Schema browser | View and search the tables and views in your database | [CREATE TABLE](/docs/cloud/cloud-tables/cloud-table-manage) |
 | Select a query | Select a specific line to run, or insert the cursor to run from that point down |  |
-| Run queries | Run queries with **Run** button, or via your keyboard:<br/>* **Ctrl**+**Enter**, or<br/>* **CMD** + **Enter** | **Network error** occurs if a query exceeds 4000 seconds before returning results. |
-| Format results | Results columns can be sorted ascending or descending, filtered, hidden, shown and exported to CSV |  |
 | View query history | View and search all queries run during the current session. | Query history is deleted when you logout or clear your browser cache |
+| Write queries | Query editor supports one or more queries and auto-suggests valid SQL and PQL | * [SQL Guide](/docs/sql-guide/sql-guide-home)<br/>* [PQL Guide](/docs/pql-guide/pql-home) |
