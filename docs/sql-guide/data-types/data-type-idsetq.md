@@ -45,6 +45,8 @@ IDSETQ [TIMEQUANTUM {value} [TTL '{value}']]
 
 {% include /sql-guide/ttl-additional.md %}
 
+{% include /sql-guide/insert-bulk-map-trans-setq.md %}
+
 ### `TIMEQUANTUM` values and `TUPLE()` function
 
 When the `TUPLE()` function is used in `SELECT` and `BULK INSERT` statements, the following values are returned:

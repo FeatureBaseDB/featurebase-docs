@@ -3,7 +3,7 @@ title: BULK INSERT
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 4
+nav_order: 13
 ---
 
 # BULK INSERT statement
@@ -132,6 +132,8 @@ BULK INSERT
 
 ## Additional information
 
+{% include /sql-guide/insert-bulk-map-trans-setq.md %}
+
 ### Transform additional
 
 The `TRANSFORM` clause must include:
@@ -172,15 +174,40 @@ There are special assignments for certain literal values when inserting NDJSON d
 | Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
 | Value Missing () | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
 
-<!--insert has heading "BULK INSERT examples"-->
-
 {% include /sql-guide/sql-eg-insert-bulk-statements.md %}
+
+### MAP and TRANSFORM example for SETQ data types
+
+```sql
+BULK INSERT INTO doctest (
+  _id,
+  idsetqcol,
+  stringsetqcol,
+  timestampcol)
+MAP(
+  0 ID,
+  1 IDSET,
+  2 STRINGSET,
+  3 TIMESTAMP
+  )
+TRANSFORM(
+    @0,
+    TUPLE(@3,@1),
+    TUPLE(@3,@2),
+    @3
+)
+FROM x'004,456;567;678;789,this;is;the;first;row,2023-11-22T04:46:59Z'
+WITH
+    BATCHSIZE 1
+    FORMAT 'CSV'
+    input 'INLINE';
+```
 
 ### TRANSFORM examples
 
 | Map clause | TRANSFORM clause |
 |---|---|
-| `MAP (0 id, 1 int, 4 string)` | Variables: `@0`, `@1` and `@2` |
+| `MAP (0 id, 1 int, 4 string)` | `TRANSFORM @0, @1 @2 |
 
 ```sql
 TRANSFORM (

@@ -42,7 +42,7 @@ STRINGSETQ [TIMEQUANTUM {value} [TTL '{value}']]
 
 {% include /sql-guide/ttl-additional.md %}
 
-{% include /sql-guide/set-datatype-csv-format.md %}
+{% include /sql-guide/insert-bulk-map-trans-setq.md %}
 
 ### `TIMEQUANTUM` values and `TUPLE()` function
 

@@ -3,7 +3,7 @@ title: DROP DATABASE
 layout: default
 parent: Statements
 grand_parent: SQL guide
-nav_order: 9
+nav_order: 4
 ---
 
 # DROP DATABASE statement
@@ -20,14 +20,11 @@ DROP DATABASE database_name;
 
 ## Arguments
 
-| Argument | Data type | Description | Required | Additional information |
-|---|---|---|---|---|
-| `database_name` | string |Name of the database to delete | yes | |
+| Argument | Data type | Description | Required |
+|---|---|---|---|
+| `database_name` | string | Name of the database to delete | yes |
 
-
-## Examples
-
-### Drop database `test_db`
+## Example
 
 ```sql
 DROP DATABASE test_db
