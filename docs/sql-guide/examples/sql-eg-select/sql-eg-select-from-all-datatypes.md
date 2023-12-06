@@ -40,7 +40,19 @@ stringcol | converted-to-ascii
 ----------+-------------------
      *    |        42
 ```
+<!--
+### COALESCE function
+Relies on https://github.com/FeatureBaseDB/featurebase-docs/pull/208/files
 
+Idea: add a value in place of null in row 1 of all-datatypes using COALESCE function.
+
+Can this be used to insert a value? As in, can INSERT INTO be used with a SELECT FROM?
+
+```sql
+SELECT _id, COALESCE()
+
+```
+-->
 ### COUNT function
 ```
 SELECT COUNT(*) as how-many-items, stringsetcol FROM all-datatypes
