@@ -7,8 +7,7 @@ grand_parent: SQL guide
 
 # IDENTIFIER() function
 
-{: .note}
-`IDENTIFIER()` is supported on [FeatureBase Cloud](/docs/cloud/cloud-home)
+{% include /sql-guide/note-supported-cloud-only.md %}
 
 `IDENTIFIER()` is used with the `INSERT INTO` statement and automatically generates unique numeric row values for the `_id` column.
 

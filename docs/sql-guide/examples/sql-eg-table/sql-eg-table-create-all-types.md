@@ -22,7 +22,7 @@ The table `all-datatypes` is contains:
 CREATE TABLE IF NOT EXISTS all-datatypes (
     _id id,
     boolcol BOOL,
-    decimalcol DECIMAL(2),
+    decimalcol DECIMAL(3),
     idcol ID,
     idsetcol IDSET,
     idsetqcol IDSETQ TIMEQUANTUM 'YMD' TTL '24h',

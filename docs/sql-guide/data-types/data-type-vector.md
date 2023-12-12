@@ -8,6 +8,8 @@ nav_order: 11
 
 # VECTOR() data type
 
+{% include /sql-guide/note-supported-cloud-only.md %}
+
 Vector data types store a specified number of floating point values in an array.
 
 These vectors can be compared using the [COSINE_DISTANCE() function](#further-information).

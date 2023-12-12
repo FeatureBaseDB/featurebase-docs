@@ -7,6 +7,8 @@ grand_parent: SQL guide
 
 # COALESCE() function
 
+{% include /sql-guide/note-supported-cloud-only.md %}
+
 The `COALESCE()` function inserts a specified value in place of `null` values in SELECT query results. This can be used to:
 * remove `null` values in calculations or concatenations
 * insert a default value where one is not available

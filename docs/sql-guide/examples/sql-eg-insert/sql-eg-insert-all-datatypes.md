@@ -28,8 +28,8 @@ Add data to the `all-datatypes` table using INSERT and BULK INSERT statements th
 This data source also available at `https://docs.featurebase.com/assets/sql-eg/sql-eg-all-col.csv`
 
 ```csv
-id,intcol,boolcol,decimalcol,idcol,idsetcol,idsetcolq,stringcol,stringsetcol,stringscetcolq,timestampcol,vectorcol
-004,1,true,1.23,123,123;234;345,456;567;678;789,first row, this;is;the;first;row, also;the;first;row,2023-11-22T04:46:59, 8.90
+id,boolcol,decimalcol,idcol,idsetcol,idsetcolq,intcol,stringcol,stringsetcol,stringscetcolq,timestampcol,vectorcol
+004,true,1.23,123,123;234;345,456;567;678;789,1,first row, this;is;the;first;row, also;the;first;row,2023-11-22T04:46:59, 8.90
 ```
 --->
 
@@ -52,27 +52,27 @@ VALUES (IDENTIFIER('all-datatypes'), '*', ['string val for ASCII function']);
 ## INSERT STATEMENT for all columns
 
 ```sql
-INSERT INTO all-datatypes (_id, intcol, boolcol, decimalcol, idcol, idsetcol, idsetqcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
+INSERT INTO all-datatypes (_id, boolcol, decimalcol, idcol, idsetcol, idsetqcol, intcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
 VALUES
   (002,
-  1,
   true,
-  10.10,
+  7.543,
   01,
   [10, 20, 30],
   {'2023-11-21T00:00:00Z', [100, 200, 300]},
+  2,
   'string-col',
   ['ten', 'twenty', 'thirty'],
   {'2023-11-21T02:01:03Z', ['one hundred', 'two hundred', 'three hundred']},
   '2023-11-21T00:00:00Z',
   [0.1,0.2,0.3,0.4,0.5]),
   (003,
-  2,
   false,
   11.11,
   11,
   [11, 22, 33],
   {'2024-11-21T00:00:00Z', [111, 222, 333]},
+  3,
   'another string-col',
   ['eleven', 'twenty two', 'thirty three'],
   {'2024-11-21T00:00:00Z', ['one hundred and eleven', 'two hundred and twenty two', 'three hundred and thirty three']},
@@ -112,7 +112,7 @@ BULK INSERT INTO all-datatypes (
 MAP(
   0 ID,
   1 BOOL,
-  2 DECIMAL(2),
+  2 DECIMAL(3),
   3 ID,
   4 IDSET,
   5 IDSET,

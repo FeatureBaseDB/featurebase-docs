@@ -33,10 +33,6 @@ DECIMAL[({SCALE value})]
 
 ## Examples
 
-### CREATE TABLE with all data types
-
-{% include /sql-guide/table-create-types-all-eg.md %}
-
-### CREATE TABLE with decimal data type
-
-{% include /sql-guide/table-create-prod-sale-string-eg.md %}
+* [CREATE TABLE with decimal data type](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
+* [INSERT data to decimal data type](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-types)
+* [Query decimal data type](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-all-types)

@@ -7,6 +7,8 @@ grand_parent: SQL guide
 
 # TUPLE() function
 
+{% include /sql-guide/note-supported-cloud-only.md %}
+
 `TUPLE()` is a mathematical function that returns an ordered list of values corresponding to and derived from a supplied argument.
 
 ## Syntax

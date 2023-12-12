@@ -6,6 +6,8 @@ grand_parent: SQL guide
 ---
 # COSINE_DISTANCE() function
 
+{% include /sql-guide/note-supported-cloud-only.md %}
+
 `COSINE_DISTANCE()` is a mathematical function that can be performed on `VECTOR` data type columns.
 
 ## Syntax

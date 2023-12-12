@@ -19,6 +19,17 @@ The following SELECT statements return data from the `all-datatypes` table.
 * [CREATE TABLE all-datatypes](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
 * [INSERT INTO all-datatypes](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-datatypes)
 
+## SELECT on each data type
+
+### SELECT `BOOL` data type
+
+```sql
+SELECT * FROM all-datatypes WHERE boolcol=true;
+```
+
+### SELECT
+
+
 ## SELECT with Operators
 
 ```sql
@@ -118,6 +129,14 @@ _id  | results
   2   | true
   3   | false
 ```
+
+### STR() function
+
+<!-- STR function values need to be confirmed added into the insert statements so can just move the examples here from STR function -->
+
+```sql
+select _id, str(segment, 10, 2) as text from segments;
+
 
 ## Further information
 
