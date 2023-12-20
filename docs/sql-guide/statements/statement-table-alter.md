@@ -14,11 +14,9 @@ Add, Rename or Drop columns from an existing table.
 
 <!---NOTE: alter_table_stmt.svg IS WRONG:
 * It omits table_name
-* RENAME is not yet implemented so needs to be removed (see below)
-The statement in the Syntax is correct and I've tested it-->
-![expr](/assets/images/sql-guide/alter_table_stmt.svg)
-
-<!--RENAME generates an error reported as JIRA CLOUD-1884-->
+* RENAME is not yet implemented and reported reported as JIRA CLOUD-1884
+The statement in the Syntax is correct and I've tested it
+![expr](/assets/images/sql-guide/alter_table_stmt.svg)-->
 
 ![expr](/assets/images/sql-guide/add_column.svg)
 ![expr](/assets/images/sql-guide/drop_column.svg)
