@@ -8,7 +8,7 @@ nav_order: 8
 
 # ALTER TABLE statement
 
-Add, Rename or Drop columns from an existing table.
+ADD or DROP columns from an existing table
 
 ## BNF diagrams
 
