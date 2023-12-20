@@ -35,8 +35,8 @@ RENAME COLUMN {column_name to column_name } |
 ## Syntax
 
 ```
-ALTER table_name [
-  ADD {identifier data_type [constraint]} |
+ALTER <table_name> [
+  ADD {<col-name> <data_type>} |
   DROP_COLUMN {identifier}
   ];
 ```
@@ -45,13 +45,14 @@ ALTER table_name [
 
 | Argument | Description | Additional information |
 |---|---|---|
-| table_name | Name of existing table to alter | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
-| identifier | Column identifier or name |
-| data_type | Column data type | [SQL data types](/docs/sql-guide/data-types/data-types-home) |
-| constraint | Optional data type constraint | [SQL data types](/docs/sql-guide/data-types/data-types-home) |
+| `<table_name>` | Name of existing table to alter | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
+| `<column-name>` | Column identifier or name | [Naming standards](#naming-standards) |
+| `<data-type>` | Column data type with optional or required constraint | [SQL data types](/docs/sql-guide/data-types/data-types-home) |
 
-<!-- commenting out because the examples aren't great
-## Examples
+## Additional information
 
-{% include /sql-guide/sql-eg-table-alter-statements.md %}
--->
+### Naming standards
+
+{% include /concepts/standard-naming-obj.md %}
+{% include /cloud-table/cloud-standard-naming-table.md %}
+{% include /cloud-table/cloud-standard-naming-col.md %}
