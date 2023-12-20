@@ -8,7 +8,10 @@ nav_order: 6
 
 # INT data type
 
-Int is a numeric datatype used with the `min` and `max` constraints.
+Use `INT` for data that spans a large range of values and will be used for aggregate queries.
+
+{: .note}
+Use `ID` data type if you intend to run queries with `GROUP BY` constraint or with low-cardinality data.
 
 ## Syntax
 
@@ -18,22 +21,12 @@ INT [MIN {value}] [MAX {value}]
 
 ## Arguments
 
-| Argument | Description | Default |
-|---|---|---|
-| INT | Used for integer data that spans a large range of values intended for aggregate queries |  |
-| MIN | Minimum value constraint | -2^63 |
-| MAX | Maximum value constraint | 2^63 -1 |
-
-## Additional information
-
-INT is **not suitable** for queries that
-* group by
-* include data sets with low cardinality
-
-Instead, use the [ID data type](/docs/sql-guide/data-types/data-type-id).
+| Argument | Description | Default | Required |
+|---|---|---|---|
+| INT | Accepts numerical values between -2^63 and 2^63-1 by default |  | Yes |
+| MIN | Minimum value constraint | -2^63 | No |
+| MAX | Maximum value constraint | 2^63 -1 | No |
 
 ## Examples
 
-{% include /sql-guide/table-create-integer-constraints-eg.md%}
-
-{% include /sql-guide/table-create-types-all-eg.md %}
+* [CREATE TABLE with all data types](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
