@@ -24,17 +24,14 @@ The statement in the Syntax is correct and I've tested it
 ## Syntax
 
 ```
-ALTER <table_name> [
-  ADD {<col-name> <data_type>} |
-  DROP_COLUMN {identifier}
-  ];
+ALTER <table-name> {ADD <col-name> <data-type>} | {DROP <col-name>};
 ```
 
 ## Arguments
 
 | Argument | Description | Additional information |
 |---|---|---|
-| `<table_name>` | Name of existing table to alter | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
+| `<table-name>` | Name of existing table to alter | [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create) |
 | `<column-name>` | Column identifier or name | [Naming standards](#naming-standards) |
 | `<data-type>` | Column data type with optional or required constraint | [SQL data types](/docs/sql-guide/data-types/data-types-home) |
 
