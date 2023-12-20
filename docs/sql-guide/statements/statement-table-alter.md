@@ -18,16 +18,7 @@ Add, Rename or Drop columns from an existing table.
 The statement in the Syntax is correct and I've tested it-->
 ![expr](/assets/images/sql-guide/alter_table_stmt.svg)
 
-<!--RENAME generates an error:
-"query error: internal error (/builds/molecula/featurebase/sql3/planner/opaltertable.go:112) column rename is unimplemented"
-Once it's implemented:
-1. add RENAME back into the BNF diagram
-2. add the following SQL to the Syntax (between ADD and DROP) once it's implemented:
-
-RENAME COLUMN {column_name to column_name } |
-
-3. Create an equivalent BNF diagram
--->
+<!--RENAME generates an error reported as JIRA CLOUD-1884-->
 
 ![expr](/assets/images/sql-guide/add_column.svg)
 ![expr](/assets/images/sql-guide/drop_column.svg)
