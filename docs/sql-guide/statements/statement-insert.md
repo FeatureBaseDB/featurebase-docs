@@ -72,66 +72,6 @@ There are special assignments for certain literal values.
 
 {% include /sql-guide/sql-eg-insert-statements.md %}
 
-<!-- the following headings and sql commented out because most of them are in the insert statements include, above
-
-### CREATE TABLE with string data types
-
-{% include /sql-guide/table-create-prod-sale-string-eg.md %}
-
-### INSERT multiple records INTO `products` and `services` tables
-
-{% include /sql-guide/insert-into-products-table-eg.md %}
-
-{% include /sql-guide/insert-into-services-table-eg.md %}
-
-### INSERT value in services table
-
-```sql
-INSERT INTO services (_id, servicelist, price)
-VALUES (1, 'free deliveries on orders over $50', 0.00);
-```
-
-### Overwrite existing value
-
-```sql
-INSERT INTO services (_id, servicelist, price)
-VALUES (2, 'local postage per item', 2.20);
-```
-
-### CREATE TABLE with TIMEQUANTUM constraints
-
-{% include /sql-guide/table-create-timequantum-eg.md %}
-
-### INSERT for time quantum data types
-
-The following statement inserts values with an associated timestamp (using either a unix time or timestamp) into `timeq`,  which has `IDSETQ` and `STRINGSETQ` data types.
-
-{: .important}
-Curly brackets in the following example are mandatory and do not represent syntax grammar.
-
-```sql
-INSERT INTO timeq(_id, stringsetcolq, idsetcolq)
-VALUES (1, {'2018-08-31T00:00:00Z', ['A','B']}, {1676649734, [1]});
-```
-
-### CREATE TABLE with `STRINGSET` data types
-
-{% include /sql-guide/table-create-stringset-datatype-eg.md %}
-
-### INSERT data to `STRINGSET`
-
-```sql
-INSERT
-  into myspecies (_id, species)
-  values
-    ('yes', ['Manatee', 'Sea Horse', 'Koala']),
-    ('no', ['Starfish']);
-```
-
-### INSERT data to vector table
-
-* [INSERT INTO VECTOR data type column](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
--->
 ## Further information
 
 * [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)
