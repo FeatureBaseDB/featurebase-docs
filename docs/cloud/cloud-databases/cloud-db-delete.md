@@ -15,15 +15,14 @@ Learn how to delete a FeatureBase Cloud database.
 
 ## Warnings
 
-* You must delete database tables **before** deleting a database.
-* Databases cannot be recovered once deleted.
-* Deletion may take some time.
+* Databases, tables and data cannot be recovered once deleted
+* Deletion may take some time
 
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
-* [Create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
-* [delete tables](/docs/cloud/cloud-tables/cloud-table-delete)
+* [Learn how to create a database](/docs/cloud/cloud-databases/cloud-db-create-custom)
+* [Learn how to delete tables](/docs/cloud/cloud-tables/cloud-table-delete)
 
 ## Delete a database
 
