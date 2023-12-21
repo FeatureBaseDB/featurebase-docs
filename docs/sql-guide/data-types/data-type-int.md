@@ -8,7 +8,7 @@ nav_order: 6
 
 # INT data type
 
-Use `INT` for data that spans a large range of values and will be used for aggregate queries.
+Use `INT` for data that spans a large range of values that is intended for aggregate queries.
 
 {: .note}
 Use `ID` data type if you intend to run queries with `GROUP BY` constraint or with low-cardinality data.
@@ -29,4 +29,4 @@ INT [MIN {value}] [MAX {value}]
 
 ## Examples
 
-* [CREATE TABLE with all data types](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}

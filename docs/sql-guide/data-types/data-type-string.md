@@ -8,6 +8,11 @@ nav_order: 7
 
 # STRING data type
 
+`STRING` is recommended for low-cardinality data for queries on discrete values and using `GROUP BY`.
+
+{: .warning}
+High-cardinality data inserted to `STRING` will lead to increased performance issues and storage overheads.
+
 ## Syntax
 
 ```
@@ -22,14 +27,7 @@ STRING
 
 ## Additional information
 
-The STRING data type has a `keyed mutex` internal data type and recommended for queries:
-* on discrete values,
-* with `group by` where cardinality is low
-
-{: .note}
->High cardinality data will:
->* decrease performance
->* increase storage overheads
+* `STRING` has a `keyed mutex` internal data type
 
 ### Constraining string values
 
@@ -39,6 +37,4 @@ Single quotation marks are used for string values in the following statements:
 
 ## Examples
 
-{% include /sql-guide/table-create-prod-sale-string-eg.md %}
-
-{% include /sql-guide/select-string-type-eg.md %}
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}
