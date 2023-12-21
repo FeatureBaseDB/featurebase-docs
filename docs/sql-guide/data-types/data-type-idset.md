@@ -10,11 +10,7 @@ nav_order: 4
 
 {% include /sql-guide/set-data-type-summary.md %}
 
-The IDSET data type:
-* has a `set` internal data type
-* is used for:
-  * grouping by
-  * searching for discrete values
+The IDSET data type is used for searching for discrete values and `GROUP BY` queries
 
 ## Syntax
 
@@ -26,14 +22,14 @@ IDSET
 
 | Argument | Description |
 |---|---|
-| IDSET | Data type used where there is a need to set multiple ID values for a single column |
+| IDSET | IDSET stores an array of comma-separated-values in a single row |
 
 ## Additional information
+
+* `IDSET` has a `set` internal data type
 
 {% include /sql-guide/set-datatype-csv-format.md %}
 
 ## Examples
 
-### CREATE TABLE with all data types
-
-{% include /sql-guide/table-create-types-all-eg.md %}
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}
