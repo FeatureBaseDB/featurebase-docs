@@ -1,41 +1,113 @@
 ---
-title: Python client library usage example
+title: Python client examples
 layout: default
 parent: Python client library
 grand_parent: Tools
-nav_order: 2
+nav_order: 5
 ---
 
-# Example application using python client library
+# FeatureBase Python client examples
 
-In this example, FeatureBase python client library is used to bulk insert data into a demo table.
+These examples demonstrate how FeatureBase Python client classes work in practice.
 
 ## Before you begin
 
-{% include /cloud/cloud-before-begin.md %}, Or
-{% include /com-install/com-install-before-begin.md %}
-* [Learn How To Install python client library](/docs/tools/python-client-library/python-client-install)
+* [Install FeatureBase Python client library](/docs/tools/python-client-library/python-client-install)
+* [Learn how to connect to FeatureBase Cloud](/docs/tools/python-client-library/python-client-connect-cloud)
+* [Learn how to connect to FeatureBase Community](/docs/tools/python-client-library/python-client-connect-community)
+* [Learn how to run SQL queries against your database](/docs/tools/python-client-library/python-client-query)
 
-## Example python application
+{: .note}
+* Add or remove `#` characters to disable or enable the connection classes
 
-```python
+## Example one - SQL queries
+
+This example contains SQL queries to:
+* create a table
+* insert data
+* query the table
+
+Results are output using the Python `PRINT()` function
+
+```py
+# import the library
+import featurebase
+
+# FeatureBase Cloud client
+print("Connecting to FeatureBase Cloud...")
+client = featurebase.client(
+#hostport = "https://query.featurebase.com/v2/",
+database = "<cloud-database-id>",  # Replace with your own database id
+apikey = "<cloud-api-key>")    # Replace with your API key
+
+# FeatureBase Community client
+#print ("Connecting to FeatureBase Community...")
+#client = featurebase.client(
+#hostport = "localhost:10101")
+
+# DROP demo table
+print ("Dropping table if it exists")
+result=c_client.query(sql="DROP TABLE python-demo") # Remove `_c` prefix to run against Community
+
+# CREATE demo table
+print ("Single CREATE TABLE python-demo statement")
+result=c_client.query(sql="CREATE TABLE python-demo(_id ID, intcol INT, stringcol STRING, idsetcol IDSET)")
+
+# Run SQL statements in sequence and stop on error
+print ("Array of INSERT INTO python-demo statements")
+sqllist=[]
+sqllist.append("INSERT INTO python-demo (_id, intcol, stringcol, idsetcol) VALUES (2,234,'row2, stringcolumn',[500,600,700,800])")
+sqllist.append("INSERT INTO python-demo (_id, intcol, stringcol, idsetcol) VALUES (3,345,'row3, stringcolumn',[900,1000,1100,1200])")
+# run statements then stop on error
+results = client.querybatch(sqllist, stoponerror=True)
+if result.ok:
+  print("Rows affected:",result.rows_affected,"Execution time:",result.execution_time,"ms")
+  print(result.schema)
+else:
+  print(result.error)
+
+# SELECT FROM python-demo
+print("SELECT statement on python-demo")
+result=client.query(sql="SELECT _id,SETCONTAINS(idsetcol,700) FROM python-demo")
+if result.ok:
+  print(result.data)
+  print("Execution time:",result.execution_time,"ms")
+else:
+  print(result.error)
+```
+
+## Example two - Python application
+
+This example is a Python application that:
+* creates a target table in the database of choice
+* randomly generates data
+* inserts that data into the target table using the BULK INSERT statement
+
+```py
 import string
 import random
 import featurebase
 import time
 
-# intialize featurebase client for community or cloud featurebase server
-client = featurebase.client(hostport="localhost:10101") #community
-#client = featurebase.client(hostport="query.featurebase.com/v2", database="", apikey="") #cloud
+# FeatureBase Cloud client
+print("Connecting to FeatureBase Cloud...")
+client = featurebase.client(
+#hostport = "https://query.featurebase.com/v2/",
+database = "<cloud-database-id>",  # Replace with your own database id
+apikey = "<cloud-api-key>")    # Replace with your API key
 
+# FeatureBase Community client
+#print ("Connecting to FeatureBase Community...")
+#client = featurebase.client(
+#hostport = "localhost:10101")
 
-# generate random data
+# Generate random data
 def get_random_string(length: int):
     letters = string.ascii_lowercase
     result_str = ''.join(random.choice(letters) for i in range(length))
     return result_str
 
-# build a BULK INSERT sql and execute it using featurebase client
+# Build BULK INSERT SQL statement for later execution
 def upload_data_bulk(key_from: int, key_to: int):
     # build bulk insert sql
     insertClause="BULK INSERT INTO demo_upload(_id, keycol, val1, val2) MAP (0 ID, 1 INT, 2 STRING, 3 STRING) FROM x"
@@ -68,18 +140,20 @@ def run(batchSize: int):
     l=1
     h=batchSize
     for i in range(1, n):
-        if not upload_data_bulk(l, h):
+        if not upload_data_bulk(l, h):   # running BULK INSERT statement
             break
         l=h+1
         h+=batchSize
         if h>1000000:
             h=1000000
 
-
 run(10000)
 ```
 
-## Further Information
+## Further information
 
-* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk/)
-* [SQL guide](/docs/sql-guide/sql-guide-home)
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
+  * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
+  * [INSERT statement](/docs/sql-guide/statements/statement-insert)
+  * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+  * [SELECT statement](/docs/sql-guide/statements/statement-select)

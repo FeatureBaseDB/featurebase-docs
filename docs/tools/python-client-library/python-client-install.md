@@ -5,22 +5,34 @@ parent: Python client library
 grand_parent: Tools
 nav_order: 1
 ---
-# How do I install the Python client library?
+# How do I install the FeatureBase Python client library?
+
+{% include /python-lib/python-lib-classes-summary.md %}
 
 ## Before you begin
 
-* [Learn About fbsql](/docs/tools/fbsql/fbsql-home)
-* [Install python 3.7+](https://www.python.org/downloads/)
+* [Learn about the FeatureBase Python client library](/docs/tools/python-client-library/python-client-home)
+* Install the following if not already on the target system:
+  * [Install python 3.7+](https://www.python.org/downloads/){:target="_blank"}
+  * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
+  * [Git version control](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}, OR
+  * [Install pip](https://pip.pypa.io/en/stable/installation/){:target="_blank"}
 
-## Step 1 - Navigate to source code
+## Step 1 - download the library
 
-The source code for FeatureBase Python client library is stored in a public repository on github.
-* [Navigate to FeatureBase repository](https://github.com/FeatureBaseDB/python-featurebase){:target="_blank"}
+* Open a CLI on the target system
+* Download using one of the following methods:
 
-## Step 2 - Download the python client source
+| Method | Command | Additional information |
+|---|---|---|
+| Git | `git clone git@github.com:FeatureBaseDB/python-featurebase.git` | [GitHub repository](https://github.com/FeatureBaseDB/python-featurebase){:target="_blank"} |
+| Pip | `pip install featurebase` | [Pypi repository](https://pypi.org/project/featurebase/){:target="_blank"} |
 
-Download the repository content to your local. You can clone the repository using `git` or download the source code as a zip file and extract.
+## Step 2 - install the library
 
-## Step 3 - Install the python client library
+* CD to `python-featurebase`
+* Run `make`
 
-Navigate to the directory where you have downloaded the `python-featurebase` source files and run `make` command to build and install the library as a new package into your local python environment.
+## Next step
+
+{% include /python-lib/python-lib-connect-db-links.md %}
