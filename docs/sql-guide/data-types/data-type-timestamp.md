@@ -16,7 +16,7 @@ Timestamp is a date-time data type which represents the specified `timeunit` as 
 ## Syntax
 
 ```
-TIMESTAMP [TIMEUNIT {value}]
+TIMESTAMP [{TIMEUNIT <value>]
 ```
 
 ## Arguments
@@ -38,6 +38,11 @@ TIMESTAMP [TIMEUNIT {value}]
 
 Integer values inserted into a column with `timestamp` data type are converted to a value of seconds since the beginning of the unix epoch.
 
+## Examples
+
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}
+
+<!-- Incorporate into the examples
 #### Demo table
 
 ```sql
@@ -69,4 +74,4 @@ select _id, ts from demo;
 | 2   | 1970-01-02 00:00:00 +0000 UTC |
 | 3   | 1970-01-02 01:01:01 +0000 UTC |
 | 4   | 1969-12-31 00:00:00 +0000 UTC |
-```
+``` -->
