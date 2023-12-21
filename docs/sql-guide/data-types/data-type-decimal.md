@@ -8,31 +8,26 @@ nav_order: 2
 
 # DECIMAL data type
 
-Decimal is a numeric data type used with `scale` constraint.
+DECIMAL is used for numeric data with a fixed number of decimal places and used for `GROUP BY` or searching for specific values.
 
 ## Syntax
 
 ```
-DECIMAL[({SCALE value})]
+DECIMAL[({SCALE <value>})]
 ```
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| DECIMAL | Numeric data type ideally used for decimal numbers where the exact scale is known. |
-| SCALE | Constraint that determines the number of digits of precision to store after the decimal point. integer value of zero or more. Defaults to two (2) |
+| Argument | Description | Default | Required | Additional information |
+|---|---|---|---|---|
+| DECIMAL | Used for numeric data where the number of digits after the decimal point (SCALE) are already known. |  |  |
+| SCALE | Number of digits of precision after decimal point which  | 2 | Optional | Values inserted are truncated to the SCALE |
 
 ## Additional information
 
-* Values added to a column with DECIMAL data type are truncated to the stated number of decimal places.
-  * Users should round their values prior to ingestion.
-* STRING values added to Columns with DECIMAL data type are parsed as floats where possible
-* Aggregate and range queries work best with DECIMAL data types.
-* Use STRING data type if you intend to run queries to group by or search for distinct values.
+* Source values should be rounded prior to import
+* Source STRING values are parsed as floats where possible
 
 ## Examples
 
-* [CREATE TABLE with decimal data type](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-types)
-* [INSERT data to decimal data type](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-types)
-* [Query decimal data type](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-all-types)
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}

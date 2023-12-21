@@ -67,12 +67,4 @@ Values are supplied as comma-separated values and once ingested can be queried u
 
 ## Examples
 
-### Create Table statement with all data types
-
-{% include /sql-guide/table-create-types-all-eg.md %}
-
-## Further information
-
-* [Create a Cloud table using SQL](/docs/sql-guide/statements/statement-table-create)
-* [Create a Cloud table using the Cloud UI](/docs/cloud/cloud-tables/cloud-table-create)
-* [Create a Cloud table using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createTable)
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}

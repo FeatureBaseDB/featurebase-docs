@@ -6,11 +6,15 @@ grand_parent: SQL guide
 nav_order: 3
 ---
 
-# ID numeric datatype
+# ID numeric data type
+
+The `ID` data type accepts unsigned integer values and used:
+* as a valid data type for the `_id` unique identifier in CREATE TABLE statements
+* to query distinct values and low-cardinality data sets using `GROUP BY`
 
 ## Syntax
 
-```
+```sql
 ID
 ```
 
@@ -22,14 +26,8 @@ ID
 
 ## Additional information
 
-The ID data type:
-* has a `mutex` internal data type
-* is used with data sets with low cardinality when:
-  * grouping by
-  * querying discrete values
+* `ID` has a `mutex` internal data type
 
 ## Examples
 
-### CREATE TABLE with all data types
-
-{% include /sql-guide/table-create-types-all-eg.md %}
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}

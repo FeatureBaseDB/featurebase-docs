@@ -27,9 +27,6 @@ The following SELECT statements return data from the `all-datatypes` table.
 SELECT * FROM all-datatypes WHERE boolcol=true;
 ```
 
-### SELECT
-
-
 ## SELECT with Operators
 
 ```sql
