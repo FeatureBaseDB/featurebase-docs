@@ -20,7 +20,7 @@ The table `all-datatypes` is contains:
 
 ```sql
 CREATE TABLE IF NOT EXISTS all-datatypes (
-    _id id,
+    _id ID,
     boolcol BOOL,
     decimalcol DECIMAL(3),
     idcol ID,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS all-datatypes (
     stringcol STRING,
     stringsetcol STRINGSET,
     stringsetqcol STRINGSETQ TIMEQUANTUM 'YMD' TTL '24h',
-    timestampcol TIMESTAMP timeunit 'ms',
+    timestampcol TIMESTAMP TIMEUNIT 'ms',
     vectorcol VECTOR(5)
   )
   WITH COMMENT 'Table contains all supported data types with valid constraints';

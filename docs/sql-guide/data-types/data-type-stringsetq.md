@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 9
 ---
 
-# STRINGSETQ data type
+# STRINGSETQ () data type
 
 {% include /sql-guide/set-data-type-summary.md %}
 
