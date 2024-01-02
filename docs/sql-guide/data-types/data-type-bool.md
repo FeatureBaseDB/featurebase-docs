@@ -33,6 +33,6 @@ Use this table to determine how integer and string values are represented when a
 
 ## Examples
 
-{% include /sql-guide/sql-eg-all-datatypes-create-insert.md %}
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}
 
 * [Query bool data type](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-all-types)

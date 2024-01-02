@@ -52,4 +52,4 @@ When the `TUPLE()` function is used in `SELECT` and `BULK INSERT` statements, th
 
 ## Examples
 
-{% include /sql-guide/sql-eg-all-datatypes-create-insert.md %}
+{% include /sql-guide/sql-eg-all-datatypes-list.md %}
