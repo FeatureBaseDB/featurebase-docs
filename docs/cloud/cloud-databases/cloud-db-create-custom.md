@@ -9,39 +9,42 @@ nav_order: 3
 # How do I create a custom database?
 {: .no_toc }
 
-There are three ways to provision a database with a custom configuration in FeatureBase Cloud.
+{% include /cloud-db/cloud-db-shaped-summary.html %}
+
+{% include /cloud-db/cloud-db-create-api.md %}
+
+{% include page-toc.md %}
 
 ## Before you begin
-
+{: .no_toc }
+* [Check pricing information on FeatureBase.com](https://www.featurebase.com/pricing)
 {% include /cloud/cloud-before-begin.md %}
-* [Learn how to manage databases](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## Naming standards
 
 {% include /concepts/standard-naming-obj.md %}
-{% include /cloud-db/cloud-standard-naming-db.md %}
 
-## How do I provision a database with a custom configuration?
+{: .note}
+FeatureBase Cloud database names can be up to 300 characters in length
 
-There are three methods to provision a custom configured database.
+## Provisioning memory, RAM and virtual CPU for production systems
 
-### Method one - provision database from the homepage
+Choose bundled resources for your production system between the following values:
 
-{% include /cloud/homepage-db-create-options.md %} under **Make something custom**.
+| Resource | Minimum | Maximum |
+|---|---|
+| Memory | 32GB | 2TB |
+| Disk storage | 100GB | 2TB |
+| Virtual CPU | 12 | 576 |
 
-### Method two - provision database via the Databases page
+## Create a database
 
 {% include /cloud-db/cloud-db-new-name.md %}
-
-Choose from the **Memory** drop-down:
-
-{% include /cloud-db/cloud-db-total-shapes.md %}
-
+* Click **Start with a clean database**.
+* Choose the Vendor.
+* Choose a shape suitable for your data.
 {% include /cloud-db/cloud-db-click-create.md %}
-
-## Method 3 - provision the database using Cloud API
-
-* [Create a database using Cloud API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
 
 ## Next step
 
