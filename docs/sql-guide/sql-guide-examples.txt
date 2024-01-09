@@ -1,0 +1,8 @@
+
+functions to implement
+
+| Function | Data type | Value | Example source | Query Result |
+|---|---|---|---|---|
+| ASCII | STRING | one character | 'r' | ASCII(colname) | 114 |
+| CHAR | INT | integer value within ASCII range | 114 | CHAR(colname) | r |
+| CHARINDEX | String | multiple words | 'this is a test' | CHARINDEX('is',colname) |   |

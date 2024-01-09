@@ -21,6 +21,8 @@ The following SELECT statements return data from the `all-datatypes` table.
 
 ## SELECT on each data type
 
+### SELECT
+
 ### SELECT `BOOL` data type
 
 ```sql
