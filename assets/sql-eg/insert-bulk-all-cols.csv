@@ -1,2 +1,2 @@
 id,boolcol,decimalcol,idcol,idsetcol,idsetcolq,intcol,stringcol,stringsetcol,stringscetcolq,timestampcol,vectorcol
-004,true,1.23,123,123;234;345,456;567;678;789,4,first row,this;is;the;first;row,also;the;first;row,2023-12-01T06:40:51.995Z,0.001
+004,true,1.23,123,123;234;345,456;567;678;789,4,first row,this;is;the;first;row,also;the;first;row,2023-12-01T06:40:51.995Z,[0.001, 0.294, 0.889, 0.7398, 0,7777]
