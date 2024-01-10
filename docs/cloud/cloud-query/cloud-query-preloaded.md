@@ -18,6 +18,7 @@ Learn how fast the FeatureBase database is by running queries against the `cseg`
 
 * [Create a database with sample data](/docs/cloud/cloud-databases/cloud-db-sample)
 * [Learn about the Cloud SQL editor](/docs/cloud/cloud-query/cloud-query-home)
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 
 ## Table statements
 
