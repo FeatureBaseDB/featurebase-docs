@@ -29,7 +29,7 @@ The sample database takes approximately 10 minutes to restore from backup.
 
 ## Next step
 
-* [Query sample data](/docs/cloud/cloud-query/cloud-query-preloaded)
+* [Query sample data](/docs/cloud/cloud-query/cloud-query-sample-db)
 
 ## Further information
 

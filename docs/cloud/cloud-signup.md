@@ -3,7 +3,7 @@ title: Signup to cloud
 layout: default
 parent: Cloud
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 
 # How do I signup to FeatureBase Cloud?

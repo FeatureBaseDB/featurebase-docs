@@ -18,7 +18,6 @@ Learn how fast the FeatureBase database is by running queries against the `cseg`
 
 * [Create a database with sample data](/docs/cloud/cloud-databases/cloud-db-sample)
 * [Learn about the Cloud SQL editor](/docs/cloud/cloud-query/cloud-query-home)
-* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
 
 ## Table statements
 
@@ -117,3 +116,8 @@ Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
 
 {: .important}
 * [Delete the sample database](/docs/cloud/cloud-databases/cloud-db-delete) to reduce costs as soon as testing concludes
+
+## Related information
+
+* [FeatureBase SQL guide](/docs/sql-guide/sql-guide-home)
+* [FeatureBase data types](/docs/sql-guide/data-types/data-types-home)
