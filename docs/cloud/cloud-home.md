@@ -42,13 +42,17 @@ Connect to FeatureBase Cloud via the web portal, API calls or the fbsql command-
 
 ### Step 3 - Create a database
 
+* [Learn how to create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ### Step 4 - Create tables
 
+* [Learn how to create Cloud tables](/docs/cloud/cloud-tables/cloud-table-manage)
 
 ### Step 5 - Add data
 
+You can add data to FeatureBase using several methods
 
+* [Learn how to add data to Cloud tables](/docs/cloud/cloud-)
 
 * [Learn how to login to FeatureBase Cloud]()
 
