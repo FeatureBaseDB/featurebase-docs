@@ -29,6 +29,12 @@ SHOW CREATE TABLE cseg;
 SHOW CREATE TABLE skills;
 ```
 
+### What are `IDSET` and `STRINGSET` data types?
+
+The [`IDSET`](/docs/sql-guide/data-types/data-type-idset) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-stringset) data types in the `cseg` table allow FeatureBase to store low-cardinality data (1:1 or 1:many) as comma-limited arrays in each row.
+
+In other words, these allow FeatureBase to collapse traditional data models, like the star schema, by efficiently storing multiple values for a single column.
+
 ## SQL queries
 
 The following queries demonstrate sub-second latency in the FeatureBase database
