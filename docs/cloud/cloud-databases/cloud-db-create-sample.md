@@ -11,8 +11,8 @@ nav_order: 2
 
 {% include /cloud-db/cloud-sample-db-summary.md %}
 
-{: .note}
-Provisioning a sample database takes approximately 10 minutes.
+{: .important}
+The sample database uses 32GB and costs $1USD/hour. Remember to [Delete the database when testing concludes](/docs/cloud/cloud-databases/cloud-db-delete)
 
 ## Before you begin
 {: .no_toc }
@@ -20,6 +20,8 @@ Provisioning a sample database takes approximately 10 minutes.
 * [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## How do I provision a sample database?
+
+The sample database takes approximately 10 minutes to restore from backup.
 
 {% include /cloud-db/cloud-db-new-name.md %}
 * Choose **start with pre-loaded sample data**.

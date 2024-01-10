@@ -26,7 +26,7 @@ FeatureBase Cloud is fully managed on AWS infrastructure and makes it even easie
 | HTTPS API | Programmatic access to all Cloud features over HTTPS | [FeatureBase Cloud API](https://api-docs-featurebase-cloud.redoc.ly/){:target="_blank"} |
 | SQL-based data import | Import data using BULK INSERT statement from CSV, NDJSON , Parquet or ORC | [SQL BULK INSERT](/docs/sql-guide/statements/statement-insert-bulk) |
 
-## Cloud trial
+## How do I trial and use FeatureBase Cloud?
 
 {% include /cloud/trial-account-limits.md %}
 
@@ -50,11 +50,11 @@ Connect to FeatureBase Cloud via the web portal, API calls or the fbsql command-
 
 ### Step 5 - Add data
 
-You can add data to FeatureBase using several methods
+* [Learn how to add data to Cloud tables](/docs/cloud/cloud-ingest/cloud-ingest-manage)
 
-* [Learn how to add data to Cloud tables](/docs/cloud/cloud-)
+### Step 6 - Run queries on your data
 
-* [Learn how to login to FeatureBase Cloud]()
+* [Learn how to query your data](/docs/cloud/cloud-query/cloud-query-home)
 
 ## Troubleshooting
 
