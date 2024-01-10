@@ -14,7 +14,7 @@ There are several ways to import data to an existing table in your database.
 
 ## Before you begin
 
-* [Signup to FeatureBase Cloud](/docs/cloud/cloud-signup)
+* [Signup to FeatureBase Cloud](/docs/cloud/cloud-org/cloud-signup)
 * [Learn how to connect to Cloud](/docs/cloud/cloud-db-connect/cloud-db-connect)
 * [Learn how to create databases](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Learn how to create Cloud tables](/docs/cloud/cloud-tables/cloud-table-manage)

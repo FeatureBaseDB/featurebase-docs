@@ -12,7 +12,7 @@ has_toc: false
 Connect to FeatureBase Cloud via the web portal, API calls or the fbsql command-line tool.
 
 ## Before you begin
-* [Create a FeatureBase Cloud account](/docs/cloud/cloud-signup)
+* [Create a FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
 
 ## What are the different methods to connect to Cloud?
 

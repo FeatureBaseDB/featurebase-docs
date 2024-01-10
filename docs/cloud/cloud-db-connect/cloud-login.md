@@ -10,7 +10,7 @@ grand_parent: Cloud
 
 ## Before you begin
 
-* [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-signup)
+* [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-org/cloud-signup)
 
 ## Sign in to FeatureBase Cloud
 
