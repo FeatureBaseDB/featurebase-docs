@@ -20,9 +20,9 @@ Sign up to FeatureBase cloud using these instructions.
 
 ## Signing up for Featurebase cloud
 
-1. Click [Sign up for cloud trial](https://cloud.featurebase.com/signup){:target="_blank"}
-2. Complete the form then click **Next**
-3. Check your email for the confirmation message to complete signup.
+* Click [Sign up for cloud trial](https://cloud.featurebase.com/signup){:target="_blank"}
+* Complete the form then click **Next**
+* Check your email for the confirmation message to complete signup.
 
 ## Next step
 

@@ -30,11 +30,27 @@ FeatureBase Cloud is fully managed on AWS infrastructure and makes it even easie
 
 {% include /cloud/trial-account-limits.md %}
 
-## Terms and conditions
+### Step 1 - Get a trial account
 
-Cloud users must agree to the FeatureBase terms of service to complete sign-up.
+* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-signup)
 
-* [Learn about the Cloud terms of service](https://www.featurebase.com/cloud-terms){:target="_blank"}
+### Step 2 - Login
+
+Connect to FeatureBase Cloud via the web portal, API calls or the fbsql command-line tool.
+
+* [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
+
+### Step 3 - Create a database
+
+
+### Step 4 - Create tables
+
+
+### Step 5 - Add data
+
+
+
+* [Learn how to login to FeatureBase Cloud]()
 
 ## Troubleshooting
 
@@ -43,5 +59,3 @@ Refer to troubleshooting pages if you experience issues:
 * [FeatureBase Cloud troubleshooting](/docs/cloud/cloud-troubleshooting/cloud-troubleshooting-home)
 
 ## Next step
-
-* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-signup)
