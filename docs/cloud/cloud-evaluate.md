@@ -18,7 +18,7 @@ FeatureBase Cloud has the option to create a database with over a billion record
 
 ## Step 1 - create the sample database
 
-* [Learn how to create the sample database]
+* [Learn how to create the sample database](/docs/cloud/cloud-databases/cloud-db-create-sample)
 
 ## Step 2 - run queries on the data to evaluate the system
 
