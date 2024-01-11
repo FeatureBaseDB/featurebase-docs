@@ -26,4 +26,4 @@ Sign up to FeatureBase cloud using these instructions.
 
 ## Next step
 
-* [Sign in to FeatureBase Cloud](/docs/cloud/cloud-db-connect/cloud-login)
+* [Sign in to FeatureBase Cloud](/docs/cloud/cloud-db-connect/cloud-db-connect)
