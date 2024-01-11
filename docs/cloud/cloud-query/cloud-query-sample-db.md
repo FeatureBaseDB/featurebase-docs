@@ -32,6 +32,9 @@ SHOW CREATE TABLE skills;
 
 The `cseg` table has multiple columns assigned to [`IDSET`](/docs/sql-guide/data-types/data-type-idset) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-stringset) data types. These data types enable FeatureBase to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
 
+{: .note}
+Some aggregate queries on `IDSET` and `STRINGSET` columns may output multiple results for the same row. This occurs because different clauses and functions may identify specific values in the same array.
+
 ## SQL queries
 
 The following queries demonstrate sub-second latency in the FeatureBase database
@@ -51,14 +54,9 @@ SELECT TOP(10) * FROM cseg;
 SELECT TOP(10) * FROM skills;
 ```
 
-### Complex Segmentation 
-
-```sql
-SELECT SUM(income) FROM cseg
-WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));
-```
-
 ### Aggregations
+
+These queries aggregate the values in the `income` column of the `cseg` table.
 
 ```sql
 SELECT SUM(income) FROM cseg;
@@ -72,7 +70,24 @@ SELECT SUM(income) FROM cseg where income > 5000;
 SELECT AVG(income) FROM cseg;
 ```
 
+### Complex Segmentation 
+
+This query is based on the aggregate queries and outputs those rows where the:
+* `income` is greater-than 5000
+* `age` is 45
+* `skills` column contains two specific values.
+
+{: .note}
+`SETCONTAINSANY` is a function used to identify specific values in `IDSET` and `STRINGSET` comma-separated arrays.
+
+```sql
+SELECT SUM(income) FROM cseg
+WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));
+```
+
 ### Grouping with Complex Conditions
+
+These queries use the `FLATTEN` hint to return distinct or group on individual members of `IDSET` and `STRINGSET` columns.
 
 ```sql
 SELECT hobbies, COUNT(*) as cnt
@@ -91,7 +106,14 @@ WHERE age=18
 GROUP BY education;
 ```
 
-### JOINS
+### Count records using joins
+
+The following ```INNER JOIN``` query is built using the PQL query language, native to FeatureBase.
+
+{: .note}
+PQL expressions are built by composing function calls.
+
+The following query returns the number of people who are teachers and also available for hire:
 
 ```
 [cseg]Count(Intersect(
@@ -99,12 +121,16 @@ Row(hobbies="Teaching"),
 Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
 ```
 
-### Top K 
+### Ranking queries
 
+The following query is built using the PQL query language and is equivalent to a `GROUP BY` query.
+
+This query returns the top 5 hobbies from the `cseg` database.
 ```
 [cseg]TopK(hobbies, k=5)
 ```
 
+This query returns the top 10 values in the column with filtering on gender and hobby.
 ```
 [cseg]TopK(hobbies, k=10, filter=Intersect(Row(sex=Female),Row(hobbies='Scuba Diving')))
 ```
