@@ -20,19 +20,19 @@ Set up a FeatureBase trial account with $300USD credit then create databases and
 {: .note}
 Refer to [Cloud troubleshooting](/docs/cloud/cloud-troubleshooting/cloud-troubleshooting-home) if you experience issues, or [contact FeatureBase via our Discord support channel]
 
-## Step 1 - Create a custom database
+## Step 1 - create a custom database
 
 * [Learn how to create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
 
-## Step 2 - Create tables
+## Step 2 - create tables
 
 * [Learn how to create Cloud tables](/docs/cloud/cloud-tables/cloud-table-manage)
 
-## Step 3 - Add data
+## Step 3 - add data
 
 * [Learn how to add data to Cloud tables](/docs/cloud/cloud-ingest/cloud-ingest-manage)
 
-## Step 4 - Run queries on your data
+## Step 4 - run queries on your data
 
 * [Learn how to query your data](/docs/cloud/cloud-query/cloud-query-home)
 
