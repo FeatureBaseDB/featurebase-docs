@@ -2,7 +2,7 @@
 title: Setup FeatureBase
 layout: default
 parent: Cloud
-has_children: true
+has_children: false
 nav_order: 2
 ---
 
