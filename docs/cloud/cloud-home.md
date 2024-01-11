@@ -30,7 +30,7 @@ FeatureBase Cloud is fully managed on AWS infrastructure and makes it even easie
 
 ## Next step
 
-* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
+* [Learn how to sign-up for a FeatureBase Trial account with $300USD credit](/docs/cloud/cloud-org/cloud-signup)
 * [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
 
 ## Further information
