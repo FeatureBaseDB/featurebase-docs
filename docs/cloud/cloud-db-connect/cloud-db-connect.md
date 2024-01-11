@@ -24,4 +24,5 @@ Connect to FeatureBase Cloud via the web portal, API calls or the fbsql command-
 
 ## Next step
 
-* [Learn how to create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
+* [Learn how to evaluate FeatureBase Cloud and test our claims with a billion records](/docs/cloud/cloud-evaluate.md), or
+* [Learn how to set up a custom database for your data](/docs/cloud/cloud-setup)

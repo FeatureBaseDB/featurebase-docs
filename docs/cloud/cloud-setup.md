@@ -6,7 +6,7 @@ has_children: true
 nav_order: 2
 ---
 
-# How do I set up FeatureBase?
+# How do I set up a custom database in FeatureBase Cloud?
 
 Set up a FeatureBase trial account with $300USD credit then create databases and tables, import your data and run queries.
 
@@ -14,33 +14,25 @@ Set up a FeatureBase trial account with $300USD credit then create databases and
 
 * [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
 * [Learn about FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"}
+* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
+* [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
 
 {: .note}
 Refer to [Cloud troubleshooting](/docs/cloud/cloud-troubleshooting/cloud-troubleshooting-home) if you experience issues, or [contact FeatureBase via our Discord support channel]
 
-## Step 1 - Get a trial account
-
-* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
-
-## Step 2 - Login
-
-Connect to FeatureBase Cloud via the web portal, API calls or the fbsql command-line tool.
-
-* [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
-
-## Step 3 - Create a database
+## Step 1 - Create a custom database
 
 * [Learn how to create a Cloud database](/docs/cloud/cloud-databases/cloud-db-manage)
 
-## Step 4 - Create tables
+## Step 2 - Create tables
 
 * [Learn how to create Cloud tables](/docs/cloud/cloud-tables/cloud-table-manage)
 
-## Step 5 - Add data
+## Step 3 - Add data
 
 * [Learn how to add data to Cloud tables](/docs/cloud/cloud-ingest/cloud-ingest-manage)
 
-## Step 6 - Run queries on your data
+## Step 4 - Run queries on your data
 
 * [Learn how to query your data](/docs/cloud/cloud-query/cloud-query-home)
 
