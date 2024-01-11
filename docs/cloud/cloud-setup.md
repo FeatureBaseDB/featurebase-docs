@@ -8,7 +8,7 @@ nav_order: 2
 
 # How do I set up FeatureBase?
 
-Set up a FeatureBase trial account with $300USD credit then create databases and tables, import your data then run queries.
+Set up a FeatureBase trial account with $300USD credit then create databases and tables, import your data and run queries.
 
 ## Before you begin
 

@@ -30,6 +30,11 @@ FeatureBase Cloud is fully managed on AWS infrastructure and makes it even easie
 
 ## Next step
 
+* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
+* [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
+* [Learn how to evaluate FeatureBase Cloud and test our claims with a billion records](/docs/cloud/cloud-evaluate.md)
+* [Learn how to set up a custom database for your data](/docs/cloud/cloud-setup)
+
+## Further information
+
 * [Learn about the FeatureBase database and its features](/docs/concepts/concepts-home)
-* [Evaluate FeatureBase Cloud and test our claims with a billion records](/docs/cloud/cloud-evaluate.md)
-* [Setup your own database](/docs/cloud/cloud-setup)
