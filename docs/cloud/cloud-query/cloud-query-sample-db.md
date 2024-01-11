@@ -17,12 +17,11 @@ Learn how fast the FeatureBase database is by running queries against the `cseg`
 ## Before you begin
 
 * [Create a database with sample data](/docs/cloud/cloud-databases/cloud-db-create-sample)
-* [Learn about the Cloud SQL editor](/docs/cloud/cloud-query/cloud-query-home)
-* Click **Query** on the FeatureBase Cloud menu
+* [Learn how to run queries on FeatureBase Cloud data](/docs/cloud/cloud-query/cloud-query-home)
 
 ## Table statements
 
-Run the [SHOW CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create-show) to output CREATE TABLE statements for both tables.
+Output CREATE TABLE statements for both tables with these queries.
 
 ```sql
 SHOW CREATE TABLE cseg;
