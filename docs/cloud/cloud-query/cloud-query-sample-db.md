@@ -30,9 +30,7 @@ SHOW CREATE TABLE skills;
 
 ### What are `IDSET` and `STRINGSET` data types?
 
-The [`IDSET`](/docs/sql-guide/data-types/data-type-idset) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-stringset) data types in the `cseg` table allow FeatureBase to store low-cardinality data (1:1 or 1:many) as comma-limited arrays in each row.
-
-In other words, these allow FeatureBase to collapse traditional data models, like the star schema, by efficiently storing multiple values for a single column.
+The `cseg` table has multiple columns assigned to [`IDSET`](/docs/sql-guide/data-types/data-type-idset) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-stringset) data types. These data types enable FeatureBase to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
 
 ## SQL queries
 
@@ -52,6 +50,7 @@ SELECT COUNT(*) FROM skills;
 Output the top 10 rows in each table:
 ```sql
 SELECT TOP(10) * FROM cseg;
+SELECT TOP(10) * FROM skills;
 ```
 
 ### Complex Segmentation 
