@@ -14,11 +14,10 @@ Sign up to FeatureBase cloud using these instructions.
 ## Before you begin
 
 * [Learn more about FeatureBase cloud](/docs/cloud/cloud-home)
-* [Learn about the trial](/docs/cloud/cloud-home#cloud-trial)
-* [Read the terms of service](https://www.featurebase.com/cloud-terms)
-* Have contact details and a password ready
+* [Learn about FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"}
+* Have your contact details and a secure password ready
 
-## Signing up for Featurebase cloud
+## Signing up for FeatureBase cloud
 
 * Click [Sign up for cloud trial](https://cloud.featurebase.com/signup){:target="_blank"}
 * Complete the form then click **Next**
