@@ -1,8 +1,8 @@
 ---
 title: Signup to cloud
 layout: default
-parent: Cloud
-has_children: false
+parent: Manage organization
+grand_parent: Cloud
 nav_order: 1
 ---
 
