@@ -36,8 +36,6 @@ The `cseg` table has multiple columns assigned to [`IDSET`](/docs/sql-guide/data
 
 The following queries demonstrate sub-second latency in the FeatureBase database
 
-## Queries
-
 ### Data Exploration 
 
 Prove the sample database contains 1000025000 rows, the majority contained in `cseg`.
