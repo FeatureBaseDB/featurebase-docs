@@ -1,5 +1,5 @@
 ---
-title: Create an evaluation database
+title: Evaluate with a billion records
 layout: default
 parent: Cloud
 has_children: false
@@ -9,7 +9,7 @@ has_toc: false
 
 # How do I evaluate FeatureBase?
 
-Evaluate FeatureBase Cloud with a database of over a billion records.
+Add the sample database which contains over a billion records to test our claims
 
 ## Before you begin
 
