@@ -1,5 +1,5 @@
 ---
-title: Setup FeatureBase
+title: Create custom databases
 layout: default
 parent: Cloud
 has_children: false

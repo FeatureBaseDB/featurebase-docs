@@ -1,5 +1,5 @@
 ---
-title: Evaluate FeatureBase
+title: Create an evaluation database
 layout: default
 parent: Cloud
 has_children: false
