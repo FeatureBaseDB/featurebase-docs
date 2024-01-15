@@ -19,6 +19,10 @@ The sample database uses 32GB and costs $1USD/hour. Remember to [Delete the data
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
+## Naming standards
+
+{% include /concepts/standard-naming-obj.md %}
+
 ## How do I provision a sample database?
 
 The sample database takes approximately 10 minutes to restore from backup.
