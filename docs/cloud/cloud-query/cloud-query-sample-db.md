@@ -30,10 +30,12 @@ SHOW CREATE TABLE skills;
 
 ### What are `IDSET` and `STRINGSET` data types?
 
-The `cseg` table has multiple columns assigned to [`IDSET`](/docs/sql-guide/data-types/data-type-idset) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-stringset) data types. These data types enable FeatureBase to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
+The `cseg` table has multiple columns assigned to [`IDSET`](/docs/sql-guide/data-types/data-type-idset) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-stringset) data types.
 
-{: .note}
-Some aggregate queries on `IDSET` and `STRINGSET` columns may output multiple results for the same row. This occurs because different clauses and functions may identify specific values in the same array.
+These data types enable FeatureBase to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
+
+* [IDSET data type](/docs/sql-guide/data-types/data-type-idset)
+* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
 
 ## SQL queries
 
@@ -87,7 +89,24 @@ WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel'
 
 ### Grouping with Complex Conditions
 
-These queries use the `FLATTEN` hint to return distinct or group on individual members of `IDSET` and `STRINGSET` columns.
+These queries demonstrate how GROUP BY may output more results than expected when IDSET and STRINGSET columns are queried:
+
+```sql
+SELECT hobbies, COUNT(*) as cnt
+FROM cseg
+GROUP BY hobbies
+HAVING COUNT(*) > 200000000
+ORDER BY cnt DESC;
+```
+
+```sql
+SELECT education, SUM(income)
+FROM cseg
+WHERE age=18
+GROUP BY education;
+```
+
+Use the `FLATTEN` hint to output distinct rather than grouped results:
 
 ```sql
 SELECT hobbies, COUNT(*) as cnt
@@ -105,6 +124,8 @@ WITH (flatten(education))
 WHERE age=18
 GROUP BY education;
 ```
+
+* [Learn why the GROUP BY on IDSET and STRINGSET columns has unexpected results](/docs/cloud/cloud-troubleshooting/cloud-groupby-flatten-set-setq)
 
 ### Count records using joins
 
