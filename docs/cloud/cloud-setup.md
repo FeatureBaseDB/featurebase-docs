@@ -4,6 +4,7 @@ layout: default
 parent: Cloud
 has_children: false
 nav_order: 2
+has_toc: false
 ---
 
 # How do I set up a custom database in FeatureBase Cloud?

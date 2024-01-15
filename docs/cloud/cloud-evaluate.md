@@ -2,17 +2,18 @@
 title: Evaluate FeatureBase
 layout: default
 parent: Cloud
-has_children: true
+has_children: false
 nav_order: 2
+has_toc: false
 ---
 
 # How do I evaluate FeatureBase?
 
-FeatureBase Cloud has the option to create a database with over a billion records which can be used to evaluate the system.
+Evaluate FeatureBase Cloud with a database of over a billion records.
 
 ## Before you begin
 
-* [Read our 'Breaking the latency floor' whitepaper](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"}
+* [Read "Breaking the latency floor" a whitepaper that explains FeatureBase](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"}
 * [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
 * [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
 
