@@ -1,5 +1,5 @@
 ---
-title: Query sample data
+title: Query a billion row database
 layout: default
 parent: Cloud query
 grand_parent: Cloud
@@ -7,7 +7,7 @@ nav_order: 1
 has_toc: false
 ---
 
-# How do I evaluate FeatureBase sample data?
+# How do I query the billion row database?
 {: .no_toc }
 
 {% include /cloud-db/cloud-sample-db-summary.md %}
