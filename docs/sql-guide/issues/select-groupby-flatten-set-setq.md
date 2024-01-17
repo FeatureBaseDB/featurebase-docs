@@ -1,8 +1,8 @@
 ---
 title: Issue querying SET and SETQ
 layout: default
-parent: Cloud troubleshooting
-grand_parent: Cloud
+parent: FeatureBase SQL issues
+grand_parent: sql-guide
 nav_order: 1
 ---
 # Issue
