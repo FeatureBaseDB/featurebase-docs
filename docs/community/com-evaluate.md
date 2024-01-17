@@ -7,7 +7,7 @@ nav_order: 5
 
 # How do I evaluate FeatureBase?
 
-Use these instructions to import a one billion row database you can use to prove our claims about FeatureBase.
+Load a sample database of a billion rows to test FeatureBase Cloud.
 
 {% include /page-toc.md %}
 
