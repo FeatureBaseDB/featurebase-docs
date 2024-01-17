@@ -14,8 +14,10 @@ has_toc: false
 
 Learn how fast the FeatureBase database is by running queries against the `cseg` (customer segmentation) and `skills` tables
 
-## Before you begin
+{% include page-toc.md %}
 
+## Before you begin
+{: .no_toc }
 * [Create a database with sample data](/docs/cloud/cloud-databases/cloud-db-create-sample)
 * [Learn how to run queries on FeatureBase Cloud data](/docs/cloud/cloud-query/cloud-query-home)
 
@@ -25,17 +27,52 @@ Output CREATE TABLE statements for both tables with these queries.
 
 ```sql
 SHOW CREATE TABLE cseg;
+```
+
+This outputs:
+
+```sql
+CREATE TABLE cseg (
+  _id ID,
+  age INT,
+  bools STRINGSET,
+  bools-exists STRINGSET,
+  city STRINGSET,
+  education STRINGSET,
+  general_election_voting_frequency IDSET,
+  hobbies STRINGSET,
+  income INT,
+  political_party_affiliation STRINGSET,
+  primary_election_voting_frequency IDSET,
+  race STRINGSET,
+  sex STRINGSET,
+  skills STRINGSET,
+  titles STRINGSET,
+  zip_code STRINGSET);
+```
+
+```sql
 SHOW CREATE TABLE skills;
+```
+
+This outputs:
+
+```sql
+CREATE TABLE skills (
+  _id STRING(max),
+  bools STRINGSET,
+  bools-exists STRINGSET,
+  id INT,
+  skills STRINGSET,
+  titles STRINGSET);
 ```
 
 ### What are `IDSET` and `STRINGSET` data types?
 
-The `cseg` table has multiple columns assigned to [`IDSET`](/docs/sql-guide/data-types/data-type-idset) and [`STRINGSET`](/docs/sql-guide/data-types/data-type-stringset) data types.
+Both tables include FeatureBase IDSET and STRINGSET data types to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
 
-These data types enable FeatureBase to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
-
-* [IDSET data type](/docs/sql-guide/data-types/data-type-idset)
-* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
+* [Learn about the IDSET data type](/docs/sql-guide/data-types/data-type-idset)
+* [Learn about the STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
 
 ## SQL queries
 
