@@ -7,7 +7,7 @@ nav_order: 1
 nav_exclude: true
 ---
 
-# How do I query the billion row database?
+# How do I evaluate FeatureBase using the billion row database?
 {: .no_toc }
 
 Load a sample database of a billion rows to test FeatureBase Cloud and Community.
