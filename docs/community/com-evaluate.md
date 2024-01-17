@@ -16,6 +16,9 @@ Load a sample database of a billion rows to test FeatureBase Cloud.
 * [Read "Breaking the latency floor" a whitepaper that explains FeatureBase](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"}
 {% include /com-install/com-install-before-begin.md %}
 
+{: .note}
+This process may take some time to complete.
+
 ## Step 1 - download the sample database
 
 * Open a new CLI on your FeatureBase server, then create a new directory:
@@ -28,9 +31,6 @@ wget https://se-public-datasets.s3.us-east-2.amazonaws.com/cseg0_backup.tar.gz
 ```
 
 ## Step 2 - decompress the backup
-
-{: .note}
-This process may take some time to complete.
 
 * Run this command in the `sample-db` directory:
 ```sh
