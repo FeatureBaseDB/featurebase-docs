@@ -23,7 +23,7 @@ Add the sample database which contains over a billion records to test our claims
 
 ## Step 2 - run queries on the data to evaluate the system
 
-* [Run queries on the one billion records](/docs/cloud/cloud-query/cloud-query-sample-db)
+* [Run queries on one billion records](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-sample-db)
 
 ## Step 3 - delete the trial database
 
