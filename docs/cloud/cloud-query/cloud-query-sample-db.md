@@ -80,7 +80,7 @@ The following queries demonstrate sub-second latency in the FeatureBase database
 
 ### Data Exploration 
 
-Prove the sample database contains 1000025000 rows, the majority contained in `cseg`.
+These queries prove the database contains 1000025000 rows, the majority contained in `cseg`.
 
 ```sql
 SELECT COUNT(*) FROM cseg;
@@ -97,17 +97,11 @@ SELECT TOP(10) * FROM skills;
 
 These queries aggregate the values in the `income` column of the `cseg` table.
 
-```sql
-SELECT SUM(income) FROM cseg;
-```
-
-```sql
-SELECT SUM(income) FROM cseg where income > 5000;
-```
-
-```sql
-SELECT AVG(income) FROM cseg;
-```
+| Query | Result |
+|---|---|
+| `SELECT SUM(income) FROM cseg;` | 100775986981472 |
+| `SELECT SUM(income) FROM cseg where income > 5000;` | 100700159226528 |
+| `SELECT AVG(income) FROM cseg;` | 100775.9869 |
 
 ### Complex Segmentation 
 
@@ -119,12 +113,14 @@ This query is based on the aggregate queries and outputs those rows where the:
 {: .note}
 `SETCONTAINSANY` is a function used to identify specific values in `IDSET` and `STRINGSET` comma-separated arrays.
 
-```sql
-SELECT SUM(income) FROM cseg
-WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));
-```
+| Query | Result |
+|---|---|
+| `SELECT SUM(income) FROM cseg WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));` | 32177307009 |
 
+<!-- commenting out because these hang cloud. Jira is FB-2480
 ### Grouping with Complex Conditions
+
+A `GROUP BY` query on IDSET and STRINGSET columns will output all values in the
 
 These queries demonstrate how GROUP BY may output more results than expected when IDSET and STRINGSET columns are queried:
 
@@ -142,6 +138,7 @@ FROM cseg
 WHERE age=18
 GROUP BY education;
 ```
+
 
 Use the `FLATTEN` hint to output distinct rather than grouped results:
 
@@ -163,7 +160,7 @@ GROUP BY education;
 ```
 
 * [Learn why the GROUP BY on IDSET and STRINGSET columns has unexpected results](/docs/cloud/cloud-troubleshooting/cloud-groupby-flatten-set-setq)
-
+-->
 ### Count records using joins
 
 The following ```INNER JOIN``` query is built using the PQL query language, native to FeatureBase.
