@@ -40,5 +40,4 @@ make install-fbsql
 ## Further information
 
 * [Learn how to connect to a Cloud database with fbsql](/docs/tools/fbsql/fbsql-connect-cloud-db)
-* [Learn how to connect to a Community database with fbsql](/docs/tools/fbsql/fbsql-connect-com-db)
 * [Learn how to run SQL commands with fbsql](/docs/tools/fbsql/fbsql-running-sql)

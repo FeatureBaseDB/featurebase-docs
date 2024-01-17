@@ -77,12 +77,7 @@ At a high level FeatureBase bitmaps are stored as **Shards**, made up of:
 * a Roaring Bitmap Format (RBF) data file
 * a Write Ahead Log (WAL) file
 
-FeatureBase stores shards on disk in the following directories:
-
-| FeatureBase Product | Directory | Additional information |
-|---|---|---|
-| Cloud | `etc` |  |
-| Community | `pilosa` | [FeatureBase Community data directory](/docs/community/com-config/com-config-data-directory)
+FeatureBase Cloud stores shards on disk in the `etc` directory.
 
 * [Learn more about shards and Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
 
