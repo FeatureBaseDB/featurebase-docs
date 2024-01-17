@@ -36,7 +36,7 @@ tar -zxvf ~/Downloads/cseg0_backup.tar.gz -C ~/sample-backup
 
 * CD to `featurebase/opt` to run the restore command:
 ```sh
-featurebase restore --host localhost:10101 -s ~/Cseg0_backup/
+featurebase restore --host localhost:10101 -s ~/sample-backup/
 ```
 
 ## Next step
