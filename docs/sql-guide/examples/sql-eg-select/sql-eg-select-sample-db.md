@@ -10,9 +10,7 @@ nav_exclude: true
 # How do I query the billion row database?
 {: .no_toc }
 
-{% include /cloud-db/cloud-sample-db-summary.md %}
-
-Learn how fast the FeatureBase database is by running queries against the `cseg` (customer segmentation) and `skills` tables
+Load a sample database of a billion rows to test FeatureBase Cloud and Community.
 
 {% include page-toc.md %}
 
