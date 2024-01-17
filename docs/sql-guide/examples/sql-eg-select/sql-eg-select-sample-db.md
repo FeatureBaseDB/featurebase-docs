@@ -7,15 +7,16 @@ nav_order: 1
 nav_exclude: true
 ---
 
-# How do I evaluate FeatureBase using the billion row database?
+# How do I evaluate Featurebase using SQL queries?
 {: .no_toc }
 
-Load a sample database of a billion rows to test FeatureBase Cloud and Community.
+Query a billion-row database to evaluate FeatureBase.
 
 {% include page-toc.md %}
 
 ## Before you begin
 {: .no_toc }
+
 * [Create a Cloud database with sample data](/docs/cloud/cloud-evaluate), OR
 * [Create a Community database with sample data](/docs/community/com-evaluate)
 
@@ -78,12 +79,12 @@ The following queries demonstrate sub-second latency in the FeatureBase database
 
 ### Data Exploration 
 
-These queries prove the database contains 1000025000 rows, the majority contained in `cseg`.
+Prove there are over one billion rows in the database with these queries:
 
-```sql
-SELECT COUNT(*) FROM cseg;
-SELECT COUNT(*) FROM skills;
-```
+| Query | Result |
+|---|---|
+| `SELECT COUNT(*) FROM cseg;` | 1000000000 |
+| `SELECT COUNT(*) FROM skills;` | 25000 |
 
 Output the top 10 rows in each table:
 ```sql

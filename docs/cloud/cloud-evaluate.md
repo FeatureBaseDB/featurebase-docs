@@ -9,7 +9,7 @@ has_toc: false
 
 # How do I evaluate FeatureBase?
 
-Add the sample database which contains over a billion records to test our claims
+Load a sample database of a billion rows to test FeatureBase Cloud.
 
 ## Before you begin
 
