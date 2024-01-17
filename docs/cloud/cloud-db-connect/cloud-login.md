@@ -8,7 +8,7 @@ grand_parent: Cloud
 # How do I sign in to FeatureBase Cloud?
 {: .no_toc }
 
-One you've created a trial account, you can sign-in and go to work.
+One you've created a trial account, use these instructions to sign-in.
 
 ## Before you begin
 
