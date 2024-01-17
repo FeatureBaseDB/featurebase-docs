@@ -23,28 +23,21 @@ This process may take some time to complete.
 
 * Open a new CLI on your FeatureBase server, then create a new directory:
 ```sh
-mkdir ~/sample_db
+mkdir ~/sample_backup
 ```
 * CD to the backup directory, then download the file:
 ```sh
 wget https://se-public-datasets.s3.us-east-2.amazonaws.com/cseg0_backup.tar.gz
 ```
 
-## Step 2 - decompress the backup
-
-* Run this command in the `sample-db` directory:
+* Decompress the backup:
 ```sh
-tar -zxvf cseg0_backup.tar.gz
+tar -zxvf ~/Downloads/cseg0_backup.tar.gz -C ~/sample-backup
 ```
-
-## Step 2 - restore the sample database
-
-{: .warning}
-This process requires your database to be empty.
 
 * CD to `featurebase/opt` to run the restore command:
 ```sh
-featurebase restore --host localhost:10101 -s ~/sample-db/
+featurebase restore --host localhost:10101 -s ~/sample_backup/
 ```
 
 ## Next step
