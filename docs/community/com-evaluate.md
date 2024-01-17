@@ -39,6 +39,9 @@ tar -zxvf cseg0_backup.tar.gz
 
 ## Step 2 - restore the sample database
 
+{: .warning}
+This process requires your database to be empty.
+
 * CD to `featurebase/opt` to run the restore command:
 ```sh
 featurebase restore --host localhost:10101 -s ~/sample-db/
