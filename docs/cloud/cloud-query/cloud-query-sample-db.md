@@ -196,13 +196,12 @@ Slacklining     | 359565952
 BMX             | 319970304
 ```
 
-Return the top 10 values in the `hobbies` column, while filtering on gender and hobbies:
+Return the top 10 hobbies for women who also like scuba-diving:
 ```
 [cseg]TopK(hobbies, k=10, filter=Intersect(Row(sex=Female),Row(hobbies='Scuba Diving')))
 ```
 
 Result:
-
 ```
 field              |count
 -------------------+----------
