@@ -169,7 +169,7 @@ The following ```INNER JOIN``` query is built using the PQL query language, nati
 >The native query language **PQL** (Pilosa Query Language) are used in the following expressions.
 >[Learn more about Pilosa Query Language (PQL)](/docs/pql-guide/pql-home)
 
-Return the number of people who are teachers who are available to hire:
+Prove there are 89 teachers available to hire by running this PQL query:
 
 ```
 [cseg]Count(Intersect(
@@ -185,9 +185,36 @@ Return the top five hobbies from the `cseg` table using the PQL equivalent to a 
 [cseg]TopK(hobbies, k=5)
 ```
 
+Result:
+```
+field           | count
+----------------+-----------
+Lego building   | 533344432
+Watching movies | 464147056
+Watch making    | 406943232
+Slacklining     | 359565952
+BMX             | 319970304
+```
+
 Return the top 10 values in the `hobbies` column, while filtering on gender and hobbies:
 ```
 [cseg]TopK(hobbies, k=10, filter=Intersect(Row(sex=Female),Row(hobbies='Scuba Diving')))
+```
+
+Result:
+
+```
+field              |count
+-------------------+----------
+Scuba Diving       | 94048
+Lego building      | 88624
+Watching movies    | 85648
+Watch making       | 83680
+Slacklining        | 81248
+BMX                | 78800
+Cricket            | 75968
+Sketching          | 73536
+Satellite watching | 71152
 ```
 
 ## Next step
