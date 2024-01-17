@@ -13,6 +13,7 @@ Use these instructions to import a one billion row database you can use to prove
 
 ## Before you begin
 
+* [Read "Breaking the latency floor" a whitepaper that explains FeatureBase](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"}
 {% include /com-install/com-install-before-begin.md %}
 
 ## Step 1 - download the sample database
@@ -30,6 +31,8 @@ wget https://se-public-datasets.s3.us-east-2.amazonaws.com/cseg0_backup.tar.gz
 ```sh
 tar -zxvf ~/Downloads/cseg0_backup.tar.gz -C ~/sample-backup
 ```
+
+## Step 2 - restore the sample database
 
 * CD to `featurebase/opt` to run the restore command:
 ```sh
