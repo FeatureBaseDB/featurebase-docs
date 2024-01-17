@@ -12,7 +12,7 @@ nav_order: 2
 {% include /cloud-db/cloud-sample-db-summary.md %}
 
 {: .important}
-The sample database uses 32GB and costs $1USD/hour. Remember to [Delete the database when testing concludes](/docs/cloud/cloud-databases/cloud-db-delete)
+The sample database uses 32GB and costs $1USD/hour. Remember to [Delete the database when testing is over](/docs/cloud/cloud-databases/cloud-db-delete)
 
 ## Before you begin
 {: .no_toc }
