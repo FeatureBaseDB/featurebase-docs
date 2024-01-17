@@ -217,9 +217,10 @@ Satellite watching | 71152
 ## Next step
 
 {: .important}
-> Delete the database or tables as soon as testing concludes to reduce costs:
-> [Delete the sample database in FeatureBase Cloud](/docs/cloud/cloud-databases/cloud-db-delete), or
-> Run SQL `DROP TABLE` statements to drop the `cseg` and `skills` tables.
+Delete the database or tables as soon as testing concludes to reduce costs
+
+* [Delete the sample database in FeatureBase Cloud](/docs/cloud/cloud-databases/cloud-db-delete), or
+* Delete the tables with SQL `DROP TABLE cseg;` and `DROP TABLE skills;`
 
 ## Related information
 
