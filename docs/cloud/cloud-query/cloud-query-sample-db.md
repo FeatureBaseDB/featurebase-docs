@@ -166,9 +166,10 @@ GROUP BY education;
 The following ```INNER JOIN``` query is built using the PQL query language, native to FeatureBase.
 
 {: .note}
-PQL expressions are built by composing function calls.
+>The native query language **PQL** (Pilosa Query Language) are used in the following expressions.
+>[Learn more about Pilosa Query Language (PQL)](/docs/pql-guide/pql-home)
 
-The following query returns the number of people who are teachers and also available for hire:
+Return the number of people who are teachers who are available to hire:
 
 ```
 [cseg]Count(Intersect(
@@ -178,14 +179,13 @@ Distinct(Row(bools='available_for_hire'), field= id, index=skills)))
 
 ### Ranking queries
 
-The following query is built using the PQL query language and is equivalent to a `GROUP BY` query.
+Return the top five hobbies from the `cseg` table using the PQL equivalent to a `GROUP BY` query.
 
-This query returns the top 5 hobbies from the `cseg` database.
 ```
 [cseg]TopK(hobbies, k=5)
 ```
 
-This query returns the top 10 values in the column with filtering on gender and hobby.
+Return the top 10 values in the `hobbies` column, while filtering on gender and hobbies:
 ```
 [cseg]TopK(hobbies, k=10, filter=Intersect(Row(sex=Female),Row(hobbies='Scuba Diving')))
 ```
