@@ -16,7 +16,7 @@ Load a sample database of a billion rows to test FeatureBase Cloud and Community
 
 ## Before you begin
 {: .no_toc }
-* [Create a Cloud database with sample data](/docs/cloud/cloud-databases/cloud-db-create-sample), OR
+* [Create a Cloud database with sample data](/docs/cloud/cloud-evaluate), OR
 * [Create a Community database with sample data](/docs/community/com-evaluate)
 
 ## Table statements
