@@ -20,23 +20,28 @@ Load a sample database of a billion rows to test FeatureBase Cloud.
 
 * Open a new CLI on your FeatureBase server, then create a new directory:
 ```sh
-mkdir ~/sample_backup
+mkdir ~/sample_db
 ```
 * CD to the backup directory, then download the file:
 ```sh
 wget https://se-public-datasets.s3.us-east-2.amazonaws.com/cseg0_backup.tar.gz
 ```
 
-* Decompress the backup:
+## Step 2 - decompress the backup
+
+{: .note}
+This process may take some time to complete.
+
+* Run this command in the `sample-db` directory:
 ```sh
-tar -zxvf ~/Downloads/cseg0_backup.tar.gz -C ~/sample-backup
+tar -zxvf cseg0_backup.tar.gz
 ```
 
 ## Step 2 - restore the sample database
 
 * CD to `featurebase/opt` to run the restore command:
 ```sh
-featurebase restore --host localhost:10101 -s ~/sample-backup/
+featurebase restore --host localhost:10101 -s ~/sample-db/
 ```
 
 ## Next step
