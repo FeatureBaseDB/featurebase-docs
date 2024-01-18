@@ -9,14 +9,17 @@ has_toc: false
 # Welcome to FeatureBase Cloud help
 {: .no_toc }
 
-FeatureBase Help contains everything you need to create, import and run queries on your data.
+FeatureBase Cloud help contains everything you need to create a database and tables, import your data then run queries.
+
+{: .note}
+FeatureBase Cloud is not related to the [Featurebase user feedback tool](https://help.featurebase.app/en/){:target="_blank"}.
 
 {% include page-toc.md %}
-
 
 ## Before you begin
 
 * [Learn more about FeatureBase](https://www.featurebase.com/){:target="_blank"}
+* [Learn about FeatureBase Cloud pricing](https://www.featurebase.com/pricing){:target="_blank"}
 
 ## Summary of features
 
@@ -37,8 +40,6 @@ FeatureBase Help contains everything you need to create, import and run queries 
 | Usage-based metering and billing | GUI provides detailed intra-hour insights into your spend |  |
 | User control | Users can be invited via their email address, then assigned Admin or User roles |  |
 
-
-
 ## Cloud trial
 
 {% include /cloud/trial-account-limits.md %}
@@ -49,52 +50,6 @@ Cloud users must agree to the FeatureBase terms of service to complete sign-up.
 
 * [Learn about the Cloud terms of service](https://www.featurebase.com/cloud-terms){:target="_blank"}
 
+## Next step
 
-## Comparing Cloud and Community editions
-
-These tables provided a side-by-side comparison of Cloud and Community functionality.
-
-
-
-## Data Consumption
-
-| Feature | Cloud | Community | Additional information |
-|---|---|---|---|
-| Query UI  | [Query cloud tables](/docs/cloud/cloud-query/cloud-query-home) | [Query community tables](/docs/community/com-query/com-query-home) |  |
-| FeatureBase SQL - HTTPS | Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
-| FeatureBase PQL - HTTPS |  Yes | Yes | Any language/tool (Python, Go, etc) that can read over HTTPS  |
-
-| Python Client | [Python client library](/docs/tools/python-client-library/python-client-library-home/) | [Python client library](/docs/tools/python-client-library/python-client-library-home/) | |
-
-
-## Operations
-
-| Feature | Cloud | Community |
-|---|---|---|
-| Backup and Restore | Yes | [Community backup and restore](/docs/community/com-backup/com-config-backup) |
-| Data Replication | Yes | Yes |
-| Metrics & Monitoring | [Cloud metrics](/docs/cloud/cloud-databases/cloud-db-details/) | [Community metrics & monitoring](/docs/community/com-monitoring/com-monitoring-home) |
-| Editable FeatureBase Config File | No | Yes |
-
-## Security
-
-| Feature | Cloud | Community | Additional information |
-|---|---|---|---|
-| Encryption In Flight | Yes | Yes |  |
-| Encryption at Rest | Yes | Yes |   |
-| Authentication + Authorization (OAuth) | Yes | [Community authentication](/docs/community/com-auth/com-auth-manage) |  |
-| Role-Based Access Control (Basic) | [Cloud user roles](/docs/cloud/cloud-users/cloud-ref-user-roles) | Yes |   |
-| User Management | [Cloud user management](/docs/cloud/cloud-users/cloud-users-manage) | Yes |  |
-| Audit Logging | Yes | Yes |   |
-
-## How do I set up FeatureBase Cloud?
-
-Follow these instructions which will guide you through the setup process:
-
-* [Set up your FeatureBase cloud account](/docs/cloud/cloud-home)
-
-## How do I install FeatureBase Community?
-
-Follow these instructions to learn about system requirements and how to install FeatureBase on your operating system.
-
-* [Install FeatureBase Community locally](/docs/community/com-home)
+* [Sign-up for a trial account](/docs/cloud/cloud-signup)

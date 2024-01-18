@@ -7,9 +7,6 @@ grand_parent: SQL guide
 
 # FLATTEN() hint
 
-{: .note}
-`FLATTEN()` is supported on [FeatureBase Cloud](/docs/cloud/cloud-home)
-
 The FLATTEN() hint is used to return distinct or group on individual members of IDSET and STRINGSET columns. It can be used for:
 * SELECT...WITH...GROUP BY queries
 * SELECT DISTINCT... queries
