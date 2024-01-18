@@ -14,7 +14,9 @@ The application will run natively on any Linux or MacOS operating system. For Wi
 ## Before you begin
 
 * [Learn about fbsql](/docs/tools/fbsql/fbsql-home)
-{% include /common/common-install-before-begin.md %}
+* Obtain administrator permissions on your target environment
+* [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git){:target="_blank"}
+* [Create and login to a GitHub account](https://github.com/){:target="_blank"}
 * [Install make](https://www.gnu.org/software/make/){:target="_blank"}
 * [Install go](https://go.dev/doc/install){:target="_blank"}
 * Delete earlier installations at the CLI with `rm -rf fbsql`
