@@ -6,9 +6,9 @@ grand_parent: SQL guide
 ---
 # Issue
 
-`SELECT...GROUP BY` queries return distinct groupings even when a value exists in each SET or SETQ column.
+`SELECT...GROUP BY` queries return distinct groupings, rather than individual results, even when a value exists in each SET or SETQ column.
 
-For example, in the following table, data is added to a STRINGSET column:
+For example, the following queries setup a table and insert data:
 
 ```sql
 
@@ -19,7 +19,7 @@ INSERT INTO demo-table VALUES
   (1, ['biking'], 100000);
 ```
 
-And a query on the table outputs the following:
+A `SELECT` query returns:
 
 ```sql
 SELECT * FROM demo-table;
@@ -29,13 +29,9 @@ SELECT * FROM demo-table;
    1 | ['biking']                        | 100000
 ```
 
-## Cause
+In a traditional RDBMS, a `SELECT...GROUP BY` query would return results for each hobby.
 
-SET and SETQ columns contain comma-limited arrays of values and are designed for low-cardinality data (one-to-many or many-to-many) which are separated into different tables to avoid duplication.
-
-This means a `SELECT...GROUP BY` will return distinct groupings regardless of whether a chosen value is found in multiple columns.
-
-For example:
+However, the query returns the following:
 
 ```sql
 SELECT hobby, sum(income) FROM demo-table GROUP BY hobby;
@@ -44,11 +40,16 @@ SELECT hobby, sum(income) FROM demo-table GROUP BY hobby;
  ['biking']                        | 100000
  ['running', 'biking', 'swimming'] |  80000
 ```
+
+## Cause
+
+SET and SETQ columns contain comma-limited arrays of values and are designed for low-cardinality data (one-to-many or many-to-many) which are separated into different tables to avoid duplication.
+
+This means a `SELECT...GROUP BY` will return distinct groupings regardless of whether a chosen value is found in multiple columns.
+
 ## Solution
 
-Use the `FLATTEN` hint to treat each value as a distinct result in a `SELECT...GROUP BY` query.
-
-For example:
+The `FLATTEN` hint in the following query returns the results originally intended:
 
 ```sql
 SELECT hobby, sum(income) FROM demo-table WITH (flatten(hobby)) GROUP BY hobby;
