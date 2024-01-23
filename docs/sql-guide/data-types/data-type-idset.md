@@ -30,6 +30,10 @@ The IDSET data type:
   * grouping by
   * searching for discrete values
 
+## GROUP BY issues on SET data types
+
+* [GROUP BY issues for IDSET and STRINGSET data types](/docs/sql-guide/issues/select-groupby-flatten-set-setq)
+
 ## Examples
 
 ### CREATE TABLE with all data types
