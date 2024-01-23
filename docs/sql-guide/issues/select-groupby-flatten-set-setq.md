@@ -1,9 +1,8 @@
 ---
-title: Issue querying SET and SETQ
+title: Issue for GROUP BY on SET and SETQ
 layout: default
 parent: FeatureBase SQL issues
-grand_parent: sql-guide
-nav_order: 1
+grand_parent: SQL guide
 ---
 # Issue
 
