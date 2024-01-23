@@ -158,7 +158,7 @@ WHERE age=18
 GROUP BY education;
 ```
 
-* [Learn why the GROUP BY on IDSET and STRINGSET columns has unexpected results](/docs/cloud/cloud-troubleshooting/select-groupby-flatten-set-setq)
+* [Learn why the GROUP BY on IDSET and STRINGSET columns has unexpected results](/docs/sql-guide/issues/select-groupby-flatten-set-setq)
 -->
 ### Count records using joins
 
