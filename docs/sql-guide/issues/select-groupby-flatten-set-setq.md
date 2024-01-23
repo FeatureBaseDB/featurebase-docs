@@ -43,13 +43,13 @@ SELECT hobby, sum(income) FROM demo-table GROUP BY hobby;
 
 ## Cause
 
-SET and SETQ columns contain comma-limited arrays of values and are designed for low-cardinality data (one-to-many or many-to-many). This data would ordinarily be normalized to avoid duplication and reduce the database size.
+SET and SETQ data types are designed for low-cardinality data (one-to-many or many-to-many) that would ordinarily be normalized to avoid duplication and reduce the database size.
 
-This means a `SELECT...GROUP BY` query returns any array that contains an appropriate value, not the individual values.
+This means a `SELECT...GROUP BY` query returns the array itself, rather than individual values.
 
 ## Solution
 
-A `SELECT...GROUP BY` with a `FLATTEN()` hint returns individual values from the arrays as follows:
+A `SELECT...GROUP BY` with the `FLATTEN()` hint returns individual values from the arrays as expected:
 
 ```sql
 SELECT hobby, sum(income) FROM demo-table WITH (flatten(hobby)) GROUP BY hobby;
