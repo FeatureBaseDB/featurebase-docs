@@ -7,10 +7,7 @@ grand_parent: SQL guide
 
 # FLATTEN() hint
 
-{: .note}
-`FLATTEN()` is supported on [FeatureBase Cloud](/docs/cloud/cloud-home)
-
-The FLATTEN() hint is used to return distinct or group on individual members of IDSET and STRINGSET columns. It can be used for:
+The `FLATTEN()` hint is used to return distinct or group on individual members of IDSET and STRINGSET columns. It can be used for:
 * SELECT...WITH...GROUP BY queries
 * SELECT DISTINCT... queries
 * queries with one input argument that matches the sole DISTINCT/GROUP BY column
@@ -45,6 +42,10 @@ Individual values are returned from the specified column based on the source dat
 |---|---|
 | IDSET/IDSETQ | ID (unsigned integer) |
 | STRINGSET/STRINGSETQ | String |
+
+## Additional information
+
+{% include /sql-guide/issue-set-setq-group-by-link.md%}
 
 ## Examples
 
