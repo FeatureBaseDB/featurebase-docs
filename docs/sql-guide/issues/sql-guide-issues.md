@@ -3,6 +3,7 @@ title: FeatureBase SQL issues
 layout: default
 parent: SQL guide
 nav_order: 20
+has_toc: true
 ---
 
 ## FeatureBase SQL Issues
