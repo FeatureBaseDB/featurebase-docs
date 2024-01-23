@@ -31,11 +31,13 @@ This data source also available at `https://docs.featurebase.com/assets/sql-eg/s
 id,boolcol,decimalcol,idcol,idsetcol,idsetcolq,intcol,stringcol,stringsetcol,stringscetcolq,timestampcol,vectorcol
 004,true,1.23,123,123;234;345,456;567;678;789,1,first row, this;is;the;first;row, also;the;first;row,2023-11-22T04:46:59, 8.90
 ```
---->
+-->
 
 ## INSERT statements
 
 <!--NOTE: Numbering in below and the /assets/sql-eg/insert-bulk-all-cols.csv data source need to be kept in sync otherwise SELECT queries that follow will have different results-->
+
+<!-- IDENTIFIER CURRENTLY BROKEN -- see FB-2461
 
 ## INSERT STATEMENT using IDENTIFIER function
 
@@ -48,6 +50,7 @@ This INSERT statement:
 INSERT INTO all-datatypes (_id, stringcol, stringsetcol)
 VALUES (IDENTIFIER('all-datatypes'), '*', ['string val for ASCII function']);
 ```
+-->
 
 ## INSERT STATEMENT for all columns
 
@@ -80,6 +83,8 @@ VALUES
   [0.11,0.22,0.33,0.44,0.55]);
 ```
 
+
+<!-- Commented out because SQL fails with errors because of VECTOR FB-
 ## BULK INSERT to all-datatypes from CSV
 
 A SETQ column requires:
