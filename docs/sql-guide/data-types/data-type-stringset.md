@@ -30,10 +30,7 @@ The STRINGSET data type:
   * grouping by
   * searching for discrete values
 
-
-## GROUP BY issues on SET data types
-
-* [GROUP BY issues for IDSET and STRINGSET data types](/docs/sql-guide/issues/select-groupby-flatten-set-setq)
+{% include /sql-guide/issue-set-setq-group-by-link.md%}
 
 ## Examples
 

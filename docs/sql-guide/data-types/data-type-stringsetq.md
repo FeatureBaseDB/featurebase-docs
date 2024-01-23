@@ -48,9 +48,7 @@ When the `TUPLE()` function is used in `SELECT` and `BULK INSERT` statements, th
 
 {% include /sql-guide/setq-tuple-returns.md %}
 
-## GROUP BY issues on SETQ data types
-
-* [GROUP BY issues for IDSETQ and STRINGSETQ data types](/docs/sql-guide/issues/select-groupby-flatten-set-setq)
+{% include /sql-guide/issue-set-setq-group-by-link.md%}
 
 ## Examples
 
