@@ -45,11 +45,11 @@ SELECT hobby, sum(income) FROM demo-table GROUP BY hobby;
 
 SET and SETQ columns contain comma-limited arrays of values and are designed for low-cardinality data (one-to-many or many-to-many) which are separated into different tables to avoid duplication.
 
-This means a `SELECT...GROUP BY` will return distinct groupings regardless of whether a chosen value is found in multiple columns.
+This means a `SELECT...GROUP BY` query returns any array that contains an appropriate value, not the individual values.
 
 ## Solution
 
-The `FLATTEN` hint in the following query returns the results originally intended:
+A `SELECT...GROUP BY` with a `FLATTEN()` hint returns individual values from the arrays as follows:
 
 ```sql
 SELECT hobby, sum(income) FROM demo-table WITH (flatten(hobby)) GROUP BY hobby;
