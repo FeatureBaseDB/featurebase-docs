@@ -43,7 +43,7 @@ SELECT hobby, sum(income) FROM demo-table GROUP BY hobby;
 
 ## Cause
 
-SET and SETQ columns contain comma-limited arrays of values and are designed for low-cardinality data (one-to-many or many-to-many) which are separated into different tables to avoid duplication.
+SET and SETQ columns contain comma-limited arrays of values and are designed for low-cardinality data (one-to-many or many-to-many). This data would ordinarily be normalized to avoid duplication and reduce the database size.
 
 This means a `SELECT...GROUP BY` query returns any array that contains an appropriate value, not the individual values.
 
