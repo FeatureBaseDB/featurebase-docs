@@ -30,7 +30,7 @@ The IDSET data type:
   * grouping by
   * searching for discrete values
 
-{% include /sql-guide/issue-set-setq-group-by-link.md%}
+{% include /sql-guide/issue-select-set-setq-link.md%}
 
 ## Examples
 

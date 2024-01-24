@@ -49,7 +49,7 @@ When the `TUPLE()` function is used in `SELECT` and `BULK INSERT` statements, th
 
 {% include /sql-guide/setq-tuple-returns.md %}
 
-{% include /sql-guide/issue-set-setq-group-by-link.md%}
+{% include /sql-guide/issue-select-set-setq-link.md%}
 
 ## Examples
 

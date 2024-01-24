@@ -1,70 +1,27 @@
 ---
-title: Issue for GROUP BY on SET and SETQ
+title: Issue - unexpected values returned on query
 layout: default
 parent: FeatureBase SQL issues
 grand_parent: SQL guide
 ---
-# Issue
+# Issue - unexpected values returned on query
 
-`SELECT...GROUP BY` queries return distinct groupings, rather than individual results, even when a value exists in each SET or SETQ column.
-
-For example, the following queries setup a table and insert data:
-
-```sql
-
-CREATE TABLE demo-table (_id id, hobby stringset, income int);
-
-INSERT INTO demo-table VALUES
-  (0, ['running', 'biking', 'swimming'], 80000),
-  (1, ['biking'], 100000);
-```
-
-A `SELECT` query returns:
-
-```sql
-SELECT * FROM demo-table;
- _id | hobby                             | income
------+-----------------------------------+--------
-   0 | ['running', 'biking', 'swimming'] |  80000
-   1 | ['biking']                        | 100000
-```
-
-In a traditional RDBMS, a `SELECT...GROUP BY` query would return results for each hobby.
-
-However, the query returns the following:
-
-```sql
-SELECT hobby, sum(income) FROM demo-table GROUP BY hobby;
- hobby                             |        
------------------------------------+--------
- ['biking']                        | 100000
- ['running', 'biking', 'swimming'] |  80000
-```
+Unexpected results are returned for `SELECT...DISTINCT` and `SELECT...GROUP BY` queries that include columns assigned the following data types:
+* [IDSET](/docs/sql-guide/data-types/data-type-idset)
+* [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq)
+* [STRINGSET](/docs/sql-guide/data-types/data-type-stringset)
+* [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq)
 
 ## Cause
 
-SET and SETQ data types are designed for low-cardinality data (one-to-many or many-to-many) that would ordinarily be normalized to avoid duplication and reduce the database size.
+{% include /sql-guide/datatype-set-setq-summary.md %}
 
-This means a `SELECT...GROUP BY` query returns the array itself, rather than individual values.
+{% include /sql-guide/select-set-setq-unexpected-results.md %}
 
 ## Solution
 
-A `SELECT...GROUP BY` with the `FLATTEN()` hint returns individual values from the arrays as expected:
-
-```sql
-SELECT hobby, sum(income) FROM demo-table WITH (flatten(hobby)) GROUP BY hobby;
- hobby    |        
-----------+--------
- running  |  80000
- biking   | 180000
- swimming |  80000
-```
+* [Learn how to use the `FLATTEN()` hint to return expected values](/docs/sql-guide/hints/hint-flatten)
 
 ## Further information
 
-* [IDSET data type](/docs/sql-guide/data-types/data-type-idset)
-* [IDSETQ data type](/docs/sql-guide/data-types/data-type-idsetq)
-* [STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
-* [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-stringsetq)
-* [FLATTEN hint](/docs/sql-guide/hints/hint-flatten)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
