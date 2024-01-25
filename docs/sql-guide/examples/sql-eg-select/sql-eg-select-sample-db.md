@@ -74,12 +74,10 @@ The following query, based on the aggregate queries above, has the following con
 |---|---|---|
 | `SELECT SUM(income) FROM cseg WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));` | 32177307009 | [SETCONTAINSANY function](/docs/sql-guide/functions/function-setcontainsany) |
 
-<!-- commenting out because these hang cloud. Jira is FB-2480
 ### Grouping with Complex Conditions
 
-A `GROUP BY` query on IDSET and STRINGSET columns will output all values in the
 
-These queries demonstrate how GROUP BY may output more results than expected when IDSET and STRINGSET columns are queried:
+<!-- commenting out because these hang cloud. Jira is FB-2480
 
 ```sql
 SELECT hobbies, COUNT(*) as cnt
@@ -95,9 +93,7 @@ FROM cseg
 WHERE age=18
 GROUP BY education;
 ```
-
-
-Use the `FLATTEN` hint to output distinct rather than grouped results:
+-->
 
 ```sql
 SELECT hobbies, COUNT(*) as cnt
@@ -111,20 +107,18 @@ ORDER BY cnt DESC;
 ```sql
 SELECT education, SUM(income)
 FROM cseg
-WITH (flatten(education))
+WITH (FLATTEN(education))
 WHERE age=18
 GROUP BY education;
 ```
 
-* [Learn why the GROUP BY on IDSET and STRINGSET columns has unexpected results](/docs/sql-guide/issues/select-groupby-flatten-set-setq)
--->
 ### Count records using joins
 
 The following ```INNER JOIN``` query is built using the PQL query language, native to FeatureBase.
 
 {: .note}
->The native query language **PQL** (Pilosa Query Language) are used in the following expressions.
->[Learn more about Pilosa Query Language (PQL)](/docs/pql-guide/pql-home)
+>**PQL** (Pilosa Query Language) is the native query language in FeatureBase
+>* [Learn more about PQL](/docs/pql-guide/pql-home)
 
 Prove there are 89 teachers available to hire by running this PQL query:
 
