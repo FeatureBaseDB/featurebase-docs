@@ -22,56 +22,17 @@ Query a billion-row database to evaluate FeatureBase.
 
 ## Table statements
 
-Output CREATE TABLE statements for both tables with these queries.
+Run `SHOW CREATE TABLE` statements to view the table structure:
 
 ```sql
 SHOW CREATE TABLE cseg;
-```
-
-This outputs:
-
-```sql
-CREATE TABLE cseg (
-  _id ID,
-  age INT,
-  bools STRINGSET,
-  bools-exists STRINGSET,
-  city STRINGSET,
-  education STRINGSET,
-  general_election_voting_frequency IDSET,
-  hobbies STRINGSET,
-  income INT,
-  political_party_affiliation STRINGSET,
-  primary_election_voting_frequency IDSET,
-  race STRINGSET,
-  sex STRINGSET,
-  skills STRINGSET,
-  titles STRINGSET,
-  zip_code STRINGSET);
-```
-
-```sql
 SHOW CREATE TABLE skills;
 ```
 
-This outputs:
-
-```sql
-CREATE TABLE skills (
-  _id STRING(max),
-  bools STRINGSET,
-  bools-exists STRINGSET,
-  id INT,
-  skills STRINGSET,
-  titles STRINGSET);
-```
-
-### What are `IDSET` and `STRINGSET` data types?
-
-Both tables include FeatureBase IDSET and STRINGSET data types to store low-cardinality data (1:many relationships) in a single column without needing to rely on traditional data models such as the star schema.
-
-* [Learn about the IDSET data type](/docs/sql-guide/data-types/data-type-idset)
-* [Learn about the STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
+{: .note}
+>FeatureBase `IDSET` and `STRINGSET` data types are present in both tables:
+>* [Learn about the IDSET data type](/docs/sql-guide/data-types/data-type-idset)
+>* [Learn about the STRINGSET data type](/docs/sql-guide/data-types/data-type-stringset)
 
 ## SQL queries
 
