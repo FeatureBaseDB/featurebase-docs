@@ -53,7 +53,7 @@ SELECT TOP(10) * FROM cseg;
 SELECT TOP(10) * FROM skills;
 ```
 
-### Aggregations
+### Aggregate queries
 
 These queries aggregate the values in the `income` column of the `cseg` table.
 
@@ -63,19 +63,16 @@ These queries aggregate the values in the `income` column of the `cseg` table.
 | `SELECT SUM(income) FROM cseg where income > 5000;` | 100700159226528 |
 | `SELECT AVG(income) FROM cseg;` | 100775.9869 |
 
-### Complex Segmentation 
+### Complex segmentation 
 
-This query is based on the aggregate queries and outputs those rows where the:
+The following query, based on the aggregate queries above, has the following conditions:
 * `income` is greater-than 5000
 * `age` is 45
-* `skills` column contains two specific values.
+* `skills` column contain either of `MS Office` or `Excel`
 
-{: .note}
-`SETCONTAINSANY` is a function used to identify specific values in `IDSET` and `STRINGSET` comma-separated arrays.
-
-| Query | Result |
-|---|---|
-| `SELECT SUM(income) FROM cseg WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));` | 32177307009 |
+| Query | Result | Additional information |
+|---|---|---|
+| `SELECT SUM(income) FROM cseg WHERE income > 5000 AND age = 45 AND (SETCONTAINSANY(skills,['Ms Office','Excel']));` | 32177307009 | [SETCONTAINSANY function](/docs/sql-guide/functions/function-setcontainsany) |
 
 <!-- commenting out because these hang cloud. Jira is FB-2480
 ### Grouping with Complex Conditions

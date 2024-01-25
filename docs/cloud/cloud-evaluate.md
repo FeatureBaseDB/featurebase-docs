@@ -1,5 +1,5 @@
 ---
-title: Evaluate with a billion row database
+title: Evaluate FeatureBase with a billion-row database
 layout: default
 parent: Cloud
 has_children: false
