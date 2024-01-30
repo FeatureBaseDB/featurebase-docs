@@ -2,7 +2,6 @@
 title: Query cloud data
 layout: default
 parent: Cloud query
-
 nav_order: 1
 has_toc: false
 ---

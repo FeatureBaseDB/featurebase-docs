@@ -1,8 +1,7 @@
 ---
 title: Query sample data
 layout: default
- query
-
+parent: Cloud query
 nav_order: 1
 has_toc: false
 ---

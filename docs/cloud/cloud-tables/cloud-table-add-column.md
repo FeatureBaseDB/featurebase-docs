@@ -2,7 +2,6 @@
 title: Add columns
 layout: default
 parent: Manage tables
-
 nav_order: 3
 ---
 
