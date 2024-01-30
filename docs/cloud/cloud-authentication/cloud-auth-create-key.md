@@ -2,8 +2,7 @@
 title: Create API Key
 layout: default
 parent: Manage API Keys
-grand_parent: Cloud
-nav_order: 3
+nav_order: 1
 ---
 
 # How do I create a FeatureBase Cloud API key?

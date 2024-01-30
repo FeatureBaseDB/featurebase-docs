@@ -2,8 +2,7 @@
 title: Revoke Key
 layout: default
 parent: Manage API Keys
-grand_parent: Cloud
-nav_order: 5
+nav_order: 3
 ---
 
 # How do I revoke an API key in FeatureBase Cloud?
