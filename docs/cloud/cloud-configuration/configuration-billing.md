@@ -1,9 +1,8 @@
 ---
 title: Account management
 layout: default
-parent: Cloud
-has_children: false
-nav_order: 10
+parent: Configuration
+nav_order: 1
 has_toc: false
 ---
 
