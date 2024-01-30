@@ -1,8 +1,9 @@
 ---
 title: Sign in to cloud
 layout: default
-parent: Connect to cloud db
-grand_parent: Cloud
+parent: Getting started
+nav_order: 3
+has_children: false
 ---
 
 # How do I sign in to FeatureBase Cloud?

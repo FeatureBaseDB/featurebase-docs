@@ -1,9 +1,9 @@
 ---
 title: Create custom databases
 layout: default
+parent: Getting started
+nav_order: 4
 has_children: false
-nav_order: 2
-has_toc: false
 ---
 
 # How do I set up a custom database in FeatureBase Cloud?
@@ -14,7 +14,7 @@ Set up a FeatureBase trial account with $300USD credit then create databases and
 
 * [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
 * [Learn about FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"}
-* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
+* [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-org/cloud-signup)
 * [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
 
 {: .note}

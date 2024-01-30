@@ -1,10 +1,9 @@
 ---
 title: Evaluate FeatureBase with a billion-row database
 layout: default
-parent: Cloud
+parent: Getting started
+nav_order: 3
 has_children: false
-nav_order: 2
-has_toc: false
 ---
 
 # How do I evaluate FeatureBase?
@@ -14,7 +13,9 @@ Load a sample database of a billion rows to test FeatureBase Cloud.
 ## Before you begin
 
 * [Read "Breaking the latency floor" a whitepaper that explains FeatureBase](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"}
-* [Learn how to set up your FeatureBase Cloud account](/docs/cloud/cloud-org/cloud-signup)
+* [Learn about FeatureBase Cloud](/index)
+* [Getting started with FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-getstart)
+* [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-org/cloud-signup)
 * [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
 
 ## Step 1 - create the sample database

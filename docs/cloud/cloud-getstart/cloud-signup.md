@@ -1,9 +1,9 @@
 ---
 title: Signup to cloud
 layout: default
-parent: Cloud
+parent: Getting started
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 
 # How do I signup to FeatureBase Cloud?
@@ -13,6 +13,8 @@ Sign up to FeatureBase cloud using these instructions.
 
 ## Before you begin
 
+* [Learn about FeatureBase Cloud](/index)
+* [Getting started with FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-getstart)
 * [Read the terms of service](https://www.featurebase.com/cloud-terms)
 * Have contact details and a password ready
 
@@ -24,4 +26,4 @@ Sign up to FeatureBase cloud using these instructions.
 
 ## Next step
 
-* [Sign in to FeatureBase Cloud](/docs/cloud/cloud-db-connect/cloud-login)
+* [Sign in to FeatureBase Cloud](/docs/cloud/cloud-login)
