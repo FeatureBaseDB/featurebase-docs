@@ -1,8 +1,7 @@
 ---
 title: Integer precision loss error
 layout: default
- troubleshooting
-
+parent: Troubleshooting
 nav_order: 3
 ---
 

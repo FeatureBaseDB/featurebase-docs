@@ -1,8 +1,7 @@
 ---
 title: Limit reached error
 layout: default
- troubleshooting
-
+parent: Troubleshooting
 nav_order: 2
 ---
 

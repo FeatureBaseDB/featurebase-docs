@@ -1,8 +1,7 @@
 ---
 title: Creating database issues
 layout: default
- troubleshooting
-
+parent: Troubleshooting
 nav_order: 5
 ---
 
