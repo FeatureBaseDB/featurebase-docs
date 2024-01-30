@@ -13,7 +13,7 @@ Run through the sign-up form then connect to FeatureBase Cloud.
 
 ## Before you begin
 
-* [Learn about FeatureBase Cloud](/index.md)
+* [Learn about FeatureBase Cloud](/index)
 
 ## Sign up to FeatureBase Cloud
 
