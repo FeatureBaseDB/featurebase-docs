@@ -1,7 +1,6 @@
 ---
 title: Manage API Keys
 layout: default
-parent: Cloud
 has_children: true
 nav_order: 11
 has_toc: false
