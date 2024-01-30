@@ -2,7 +2,7 @@
 title: Cloud status site
 layout: default
 parent: Cloud troubleshooting
-grand_parent: Cloud
+
 nav_order: 1
 ---
 # How do I check for FeatureBase Cloud outages?

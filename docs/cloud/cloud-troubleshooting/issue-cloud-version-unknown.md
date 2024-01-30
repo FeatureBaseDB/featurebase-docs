@@ -2,7 +2,7 @@
 title: Database Unknown
 layout: default
 parent: Cloud troubleshooting
-grand_parent: Cloud
+
 nav_order: 4
 ---
 

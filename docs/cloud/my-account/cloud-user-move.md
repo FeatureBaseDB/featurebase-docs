@@ -2,7 +2,7 @@
 title: Accept invitation to new organization
 layout: default
 parent: Manage my account
-grand_parent: Cloud
+
 nav_order: 3
 ---
 

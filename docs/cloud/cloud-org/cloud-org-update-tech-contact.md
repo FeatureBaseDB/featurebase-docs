@@ -2,7 +2,7 @@
 title: Update technical contact
 layout: default
 parent: Manage organization
-grand_parent: Cloud
+
 nav_order: 3
 ---
 

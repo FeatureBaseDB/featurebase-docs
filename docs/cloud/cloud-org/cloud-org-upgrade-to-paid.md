@@ -2,7 +2,7 @@
 title: Upgrade to a paid account
 layout: default
 parent: Manage organization
-grand_parent: Cloud
+
 nav_order: 4
 ---
 

@@ -2,7 +2,7 @@
 title: Query sample data
 layout: default
 parent: Cloud query
-grand_parent: Cloud
+
 nav_order: 1
 has_toc: false
 ---

@@ -2,7 +2,7 @@
 title: Activate account
 layout: default
 parent: Manage my account
-grand_parent: Cloud
+
 nav_order: 1
 ---
 
