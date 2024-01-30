@@ -1,7 +1,6 @@
 ---
 title: Create custom databases
 layout: default
-parent: Cloud
 has_children: false
 nav_order: 2
 has_toc: false
