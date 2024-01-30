@@ -7,10 +7,12 @@ nav_order: 1
 nav_exclude: true
 ---
 
-# How do I evaluate Featurebase using SQL queries?
+# How do I query the billion row database?
 {: .no_toc }
 
-Query a billion-row database to evaluate FeatureBase.
+{% include /cloud-db/cloud-sample-db-summary.md %}
+
+Learn how fast the FeatureBase database is by running queries against the `cseg` (customer segmentation) and `skills` tables
 
 {% include page-toc.md %}
 
