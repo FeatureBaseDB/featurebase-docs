@@ -1,7 +1,7 @@
 ---
 title: Limit reached error
 layout: default
-parent: Cloud troubleshooting
+ troubleshooting
 
 nav_order: 2
 ---

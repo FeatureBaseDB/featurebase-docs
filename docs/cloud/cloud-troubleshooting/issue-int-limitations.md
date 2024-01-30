@@ -1,7 +1,7 @@
 ---
 title: Integer precision loss error
 layout: default
-parent: Cloud troubleshooting
+ troubleshooting
 
 nav_order: 3
 ---

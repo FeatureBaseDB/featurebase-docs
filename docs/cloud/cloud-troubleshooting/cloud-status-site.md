@@ -1,7 +1,7 @@
 ---
 title: Cloud status site
 layout: default
-parent: Cloud troubleshooting
+ troubleshooting
 
 nav_order: 1
 ---

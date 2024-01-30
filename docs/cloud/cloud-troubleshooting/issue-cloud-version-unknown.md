@@ -1,7 +1,7 @@
 ---
 title: Database Unknown
 layout: default
-parent: Cloud troubleshooting
+ troubleshooting
 
 nav_order: 4
 ---

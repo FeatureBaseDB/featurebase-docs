@@ -1,7 +1,7 @@
 ---
 title: Cloud troubleshooting
 layout: default
-parent: Cloud
+
 has_children: true
 nav_order: 14
 ---

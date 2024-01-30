@@ -1,7 +1,7 @@
 ---
 title: Manage organization
 layout: default
-parent: Cloud
+
 has_children: true
 nav_order: 13
 has_toc: false

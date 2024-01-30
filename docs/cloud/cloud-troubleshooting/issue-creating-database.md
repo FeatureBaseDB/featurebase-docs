@@ -1,7 +1,7 @@
 ---
 title: Creating database issues
 layout: default
-parent: Cloud troubleshooting
+ troubleshooting
 
 nav_order: 5
 ---
