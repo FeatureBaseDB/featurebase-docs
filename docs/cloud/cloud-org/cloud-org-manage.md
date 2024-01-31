@@ -27,7 +27,7 @@ has_toc: false
 
 {% include /cloud-org/cloud-summary-billing-contact.md %}
 
-* [Learn how to update billing details](/docs/cloud/cloud-org/cloud-org-update-billing)
+* [Learn how to update billing details](/docs/cloud/cloud-org/cloud-org-update-billing-address)
 
 ## How do I change my technical contact details?
 

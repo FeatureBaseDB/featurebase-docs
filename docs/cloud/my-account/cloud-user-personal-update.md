@@ -2,7 +2,6 @@
 title: Update account
 layout: default
 parent: Manage my account
-
 nav_order: 2
 ---
 

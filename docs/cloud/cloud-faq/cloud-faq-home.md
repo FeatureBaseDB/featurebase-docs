@@ -32,7 +32,7 @@ has_toc: false
 |---|---|
 | What does `DATABASE UNKNOWN` mean? | This message may appear when a database is changing state<br/> * [Learn about Database states](/docs/cloud/cloud-databases/cloud-db-states) |
 | I cannot create a database | * [Verify the Cloud App is running](/docs/cloud/cloud-faq/coud-status-site){:target="_blank"}<br/>* [Upgrade from a Trial to a paid account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/) |
-| What does `LIMIT REACHED` mean? | FeatureBase Trial accounts are limited to 5 databases<br/>* [Learn how to upgrade your account](/docs/cloud-org/cloud-org-billing) |
+| What does `LIMIT REACHED` mean? | FeatureBase Trial accounts are limited to 5 databases<br/>* [Learn how to upgrade your account](/docs/cloud-org/cloud-org-usage) |
 
 <!-- this is put aside for the concepts which can be simplified
 ## Import/Ingest FAQ

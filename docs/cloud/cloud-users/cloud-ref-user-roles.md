@@ -53,7 +53,7 @@ has_toc: false
 |---|---|
 | Read organization details | Administrator |
 | [Update organization details](/docs/cloud/cloud-org/cloud-org-address) | Administrator |
-| [Update billing contact](/docs/cloud/cloud-org/cloud-org-update-billing) | Administrator |
+| [Update billing contact](/docs/cloud/cloud-org/cloud-org-update-billing-address) | Administrator |
 | [Update technical contact](/docs/cloud/cloud-org/cloud-org-update-tech-contact) | Administrator |
 
 
