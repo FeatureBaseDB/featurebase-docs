@@ -1,7 +1,7 @@
 ---
 title: Accept invitation to new organization
 layout: default
-parent: Manage my account
+parent: My account
 nav_order: 3
 ---
 
