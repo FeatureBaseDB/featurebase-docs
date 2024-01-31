@@ -7,7 +7,8 @@ nav_order: 14
 
 # Frequently Asked Questions
 
-The FeatureBase Cloud FAQ contains answers to your questions.
+{: .note}
+[Contact FeatureBase Support on our Slack channel](https://featurebase.com/slack){:target="_blank"} if you can't find an answer to your question.
 
 ## Connection FAQ
 
