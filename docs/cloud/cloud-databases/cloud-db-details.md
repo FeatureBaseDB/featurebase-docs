@@ -32,7 +32,7 @@ Additionally, a disk utilization graph is available on the **Home** page which l
 | Status | Cloud database states include Provisioning and Running. | [Learn about cloud database states](/docs/cloud/cloud-databases/cloud-db-states) |
 | Memory | Current available memory based on your choice of database shape | [Learn about shaped databases](/docs/cloud/cloud-databases/cloud-db-manage) |
 | Owner | User name of account that created the database | [Manage users](/docs/cloud/cloud-users/cloud-users-manage) |
-| Version | Database version as represented by `<current-featurebase-version>-<commit-hash>` | [Issues with Database version](/docs/cloud/cloud-faq/issue-cloud-version-unknown/) |
+| Version | Database version as represented by `<current-featurebase-version>-<commit-hash>` |  |
 | Created | Time and date since database creation with user name of creator |  |
 | Last modified | User account, time and date of last alteration to the database |  |
 | Disk utilization | Actual memory used by database and data |  |
