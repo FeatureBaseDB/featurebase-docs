@@ -22,9 +22,7 @@ has_toc: false
 
 ## How do I connect to my database?
 
-* Connect to the database using:
-  * [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud), OR
-  * [FeatureBase Community connection classes](/docs/tools/python-client-library/python-client-connect-community)
+* [FeatureBase Cloud connection classes](/docs/tools/python-client-library/python-client-connect-cloud)
 
 ## How do I query my database?
 
