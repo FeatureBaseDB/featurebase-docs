@@ -32,6 +32,13 @@ The FeatureBase Cloud FAQ contains answers to your questions.
 | I cannot create a database | * [Verify the Cloud App is running](/docs/cloud/cloud-faq/coud-status-site){:target="_blank"}<br/>* [Upgrade from a Trial to a paid account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/) |
 | What does `LIMIT REACHED` mean? | FeatureBase Trial accounts are limited to 5 databases<br/>[Learn how to upgrade your account](/docs/cloud-org/cloud-org-billing) |
 
+<!-- this is put aside for the concepts which can be simplified
+## Import/Ingest FAQ
+
+| Question | Answer |
+|---|---|
+-->
+
 ## Query FAQ
 
 | Question | Answer |
