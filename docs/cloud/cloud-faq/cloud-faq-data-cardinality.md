@@ -94,7 +94,7 @@ FeatureBase does not use Database normalization. Instead, the system inserts dat
 
 ## Examples with data
 
-* [Data import examples](/docs/concepts/concept-examples)
+* [Data import examples](/docs/sql-guide/examples/sql-eg-home)
 
 ## Further information
 
