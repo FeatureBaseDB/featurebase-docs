@@ -1,8 +1,7 @@
 ---
 title: Data modeling low-cardinality data
 layout: default
-parent: Examples
-grand_parent: Frequently Asked Questions
+parent: Frequently Asked Questions
 ---
 
 # Data modeling low-cardinality data
