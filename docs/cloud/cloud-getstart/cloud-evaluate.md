@@ -16,7 +16,7 @@ Load a sample database of a billion rows to test FeatureBase Cloud.
 * [Learn about FeatureBase Cloud](/index)
 * [Getting started with FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-getstart)
 * [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-signup)
-* [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
+* [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-getstart/cloud-db-connect)
 
 ## Step 1 - create the sample database
 

@@ -14,7 +14,7 @@ There are several ways to add data to an existing table in your database.
 ## Before you begin
 
 * [Signup to FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-signup)
-* [Learn how to connect to Cloud](/docs/cloud/cloud-db-connect/cloud-db-connect)
+* [Learn how to connect to Cloud](/docs/cloud/cloud-getstart/cloud-db-connect)
 * [Learn how to create databases](/docs/cloud/cloud-databases/cloud-db-manage)
 * [Learn how to create Cloud tables](/docs/cloud/cloud-tables/cloud-table-manage)
 
