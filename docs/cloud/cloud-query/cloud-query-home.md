@@ -1,5 +1,5 @@
 ---
-title: Cloud query
+title: Running queries
 layout: default
 has_children: true
 nav_order: 8

@@ -1,5 +1,5 @@
 ---
-title: Query cloud data
+title: Run queries in Cloud GUI
 layout: default
 parent: Cloud query
 nav_order: 1
