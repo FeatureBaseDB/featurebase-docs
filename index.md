@@ -9,10 +9,10 @@ has_toc: false
 # Welcome to FeatureBase Cloud help
 {: .no_toc }
 
-FeatureBase Cloud help contains everything you need to create a database and tables, import your data then run queries. All without needing to maintain your own infrastructure.
+FeatureBase Cloud help contains everything you need to create a database and tables, import your data then run queries.
 
 {: .note}
-FeatureBase Cloud is not related to the [Featurebase user feedback tool](https://help.featurebase.app/en/){:target="_blank"}.
+[FeatureBase community users can download open-source help from GitHub](https://github.com/FeatureBaseDB/featurebase-docs/tree/featurebase-community-help){:target="_blank"}
 
 {% include page-toc.md %}
 
