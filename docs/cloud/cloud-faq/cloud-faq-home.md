@@ -11,6 +11,12 @@ has_toc: false
 {: .note}
 [Contact FeatureBase Support on our Slack channel](https://featurebase.com/slack){:target="_blank"} if you can't find an answer to your question.
 
+## Conceptual FAQ
+
+| Question | Answer |
+|---|---|
+| How does FeatureBase handle high cardinality data?<br/>How does FeatureBase work with normalized data?<br/>How does a bitmap index deal with one-to-many and many-to-many relationships? | [Learn about FeatureBase SET and SETQ data types](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) |
+
 ## Connection FAQ
 
 | Question | Answer |
@@ -34,12 +40,12 @@ has_toc: false
 | I cannot create a database | * [Verify the Cloud App is running](/docs/cloud/cloud-faq/coud-status-site){:target="_blank"}<br/>* [Upgrade from a Trial to a paid account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/) |
 | What does `LIMIT REACHED` mean? | FeatureBase Trial accounts are limited to 5 databases<br/>* [Learn how to upgrade your account](/docs/cloud-org/cloud-org-usage) |
 
-<!-- this is put aside for the concepts which can be simplified
-## Import/Ingest FAQ
+## Data and data sources FAQ
 
 | Question | Answer |
 |---|---|
--->
+| What data sources can I import data from?<br/>Can I import data from the web interface (GUI)?<br/>What format should I use to export my data from my database? | [Supported data sources](/docs/cloud/cloud-ingest/cloud-ingest-manage/#what-data-sources-can-i-import-to-featurebase-cloud) |
+| What happens to my data?<br/>Is my data lost during import?<br/>Does FeatureBase use INSERT or UPSERT behaviour? | [Is existing data overwritten or lost during import?](/docs/cloud/cloud-ingest/cloud-ingest-manage/#is-existing-data-overwritten-or-lost-during-import?) |
 
 ## Query FAQ
 
