@@ -15,7 +15,6 @@ FeatureBase also provides three tools that allow you to interact with your datab
 ## Before you begin
 
 * [Learn about FeatureBase Cloud](index)
-* [Learn about FeatureBase Community](/docs/community/com-home)
 
 ## What tools are available?
 

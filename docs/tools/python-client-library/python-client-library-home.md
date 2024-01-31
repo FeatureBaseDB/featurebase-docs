@@ -13,8 +13,7 @@ has_toc: false
 
 ## Before you begin
 
-* [Learn how to create a FeatureBase Cloud account](/docs/cloud/cloud-getstart/cloud-signup), or
-* [Learn how to install FeatureBase Community](/docs/community/com-home/#install-featurebase-community)
+* [Learn how to create a FeatureBase Cloud account](/docs/cloud/cloud-getstart/cloud-signup)
 
 ## How do I install FeatureBase Python client library?
 
