@@ -13,7 +13,7 @@ One you've created a trial account, use these instructions to sign-in.
 
 ## Before you begin
 
-* [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
+* [Learn about FeatureBase Cloud](https://docs.featurebase.com)
 * [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-signup)
 
 ## Sign in to FeatureBase Cloud
