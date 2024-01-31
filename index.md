@@ -12,7 +12,7 @@ has_toc: false
 FeatureBase Cloud help contains everything you need to create a database and tables, import your data then run queries.
 
 {: .note}
-[FeatureBase community users can download open-source help from GitHub](https://github.com/FeatureBaseDB/featurebase-docs/tree/featurebase-community-help){:target="_blank"}
+FeatureBase community users can [download open-source help from GitHub](https://github.com/FeatureBaseDB/featurebase-docs/tree/featurebase-community-help){:target="_blank"}
 
 {% include page-toc.md %}
 
