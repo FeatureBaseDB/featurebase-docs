@@ -29,4 +29,4 @@ You can upgrade to a Paid account using a US account number or credit card via t
 
 ## Further information
 
-* [Learn how to manage your invoices](/docs/cloud/cloud-org/cloud-org-billing/)
+* [Learn how to download PDF invoices](/docs/cloud/cloud-org/cloud-org-usage/)
