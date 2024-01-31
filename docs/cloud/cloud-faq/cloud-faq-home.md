@@ -2,11 +2,14 @@
 title: Frequently Asked Questions
 layout: default
 has_children: true
-nav_order: 11
+nav_order: 2
 has_toc: false
 ---
 
 # Frequently Asked Questions
+{: .no_toc }
+
+{% include page-toc.md %}
 
 {: .note}
 [Contact FeatureBase Support on our Slack channel](https://featurebase.com/slack){:target="_blank"} if you can't find an answer to your question.
@@ -16,6 +19,14 @@ has_toc: false
 | Question | Answer |
 |---|---|
 | How does FeatureBase handle high cardinality data?<br/>How does FeatureBase work with normalized data?<br/>How does a bitmap index deal with one-to-many and many-to-many relationships? | [Learn about FeatureBase SET and SETQ data types](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) |
+| How do I determine whether FeatureBase is right for my use case? | [Test your use case against a billion row database](/docs/cloud-getstart/cloud-evaluate) |
+
+## Billing FAQ
+
+| Question | Answer |
+|---|---|
+| How much does FeatureBase cost to run? | [FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"} |
+| How do I upgrade my organization account? | [Upgrade your trial account](/docs/cloud/cloud-org/cloud-org-update-to-paid) |
 
 ## Connection FAQ
 
