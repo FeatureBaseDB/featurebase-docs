@@ -24,6 +24,9 @@ You can query the database state in the following ways:
 * [Query database state using the API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/getDatabase){:target="_blank"}
 * [Query database state in the GUI](/docs/cloud/cloud-databases/cloud-db-details)
 
+{: .note}
+`Database Unknown` can occur when a database state is changing.
+
 ## Post-creation states
 
 | Database Status | Definition | Available for use? |

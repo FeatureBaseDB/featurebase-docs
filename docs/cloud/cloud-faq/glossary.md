@@ -1,7 +1,7 @@
 ---
 title: Glossary
 layout: default
-parent: Concepts
+parent: Frequently Asked Questions
 has_children: false
 nav_order: 1
 ---

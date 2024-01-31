@@ -2,7 +2,6 @@
 title: Manage organization billing
 layout: default
 parent: Manage organization
-
 nav_order: 5
 ---
 
