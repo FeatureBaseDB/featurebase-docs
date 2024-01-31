@@ -16,7 +16,8 @@ The user profile summary displays:
 * Dates the profile was created and last modified
 * The account status
 
-{% include /cloud-users/cloud-username-nochange.md %}
+{: .note}
+FeatureBase registers email addresses as user names. These cannot be changed.
 
 ## Before you begin
 

@@ -20,16 +20,12 @@ has_toc: false
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage cloud users](/docs/cloud/cloud-users/cloud-users-manage)
 
-{% include /cloud-users/cloud-username-nochange.md %}
-
-## How do I invite a user to my organization?
-
-When you invite a user, FeatureBase will:
-* generate a unique invitation URL that expires after 7 days
-* send the invitation URL to the provided email address
-* add the user email address to the **Invited users** list
-
 ### Invite a user
+
+When you invite a user, FeatureBase:
+* generates a unique invitation URL that expires after 7 days
+* sends the invitation URL to the provided email address
+* adds the user email address to the **Invited users** list
 
 * Click **Configuration** > **Manage users**.
 * Click **Invite new user**.

@@ -42,6 +42,7 @@ has_toc: false
 | Question | Answer |
 |---|---|
 | I can't login to FeatureBase Cloud | * Reset your password<br/>* Contact your organization administrator<br/>* [Verify the Cloud App is running](https://status.featurebase.com/){:target="_blank"} |
+| Can I change user names on my account | Email addresses are used as user names in FeatureBase and cannot be changed. An Administrator can send an invitation to a new email address if this has changed, then revoke the old address. |
 
 ## Database FAQ
 
