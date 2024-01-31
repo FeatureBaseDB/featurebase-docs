@@ -2,7 +2,7 @@
 title: Manage users
 layout: default
 has_children: true
-nav_order: 12
+nav_order: 21
 has_toc: false
 ---
 
