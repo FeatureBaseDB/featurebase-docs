@@ -1,7 +1,7 @@
 ---
 title: Bitmap index overview
 layout: default
-parent: Concepts
+parent: Frequently Asked Questions
 has_children: true
 nav_order: 1
 has_toc: false
@@ -17,7 +17,7 @@ FeatureBase converts data to base-2 (binary) in two types of bitmap:
 
 ## Before you begin
 
-* [Learn about cardinality and data normalization](/docs/concepts/concepts-home)
+* [Learn about cardinality and data normalization](/docs/cloud/cloud-faq/cloud-faq-data-cardinality)
 
 ## Why use bitmaps for data storage?
 
@@ -63,7 +63,7 @@ FeatureBase overcomes low-cardinality issues with four unique data types suitabl
 
 {% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
-* [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
+* [Learn about Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)
 
 ## What bitmaps are created for my data?
 
@@ -79,7 +79,7 @@ At a high level FeatureBase bitmaps are stored as **Shards**, made up of:
 
 FeatureBase Cloud stores shards on disk in the `etc` directory.
 
-* [Learn more about shards and Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
+* [Learn more about shards and Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)
 
 ## Are column names converted to bitmaps?
 
@@ -87,6 +87,6 @@ FeatureBase Cloud stores shards on disk in the `etc` directory.
 
 ## Further information
 
-* [Learn about equality-encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
-* [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
+* [Learn about equality-encoded bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps-equality-encoded)
+* [Learn about bit-sliced bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps-bit-slice)
 * [Learn about importing data to FeatureBase](/docs/concepts/overview-data-modeling)

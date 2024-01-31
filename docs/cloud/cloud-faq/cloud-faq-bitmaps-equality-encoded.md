@@ -2,7 +2,7 @@
 title: Equality-encoded bitmaps
 layout: default
 parent: Bitmap index overview
-grand_parent: Concepts
+grand_parent: Frequently Asked Questions
 nav_order: 1
 ---
 
@@ -15,8 +15,8 @@ FeatureBase uses **equality encoding** to create a Boolean relationship between 
 
 ## Before you begin
 
-* [Learn how FeatureBase differs to traditional databases](/docs/concepts/concepts-home)
-* [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
+* [Learn how FeatureBase differs to traditional databases](/docs/cloud/cloud-faq/cloud-faq-data-cardinality)
+* [Learn about FeatureBase bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps)
 
 ## What data types are equality-encoded?
 
@@ -108,11 +108,11 @@ The following issues occur with equality encoding integers.
 
 FeatureBase avoids these issues by bit-slicing integer values.
 
-* [Learn about bit-slice bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
+* [Learn about bit-slice bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps-bit-slice)
 
 ## Bitmap storage overheads
 
 {% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
-* [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
-* [Learn about bitmap compression with Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
+* [Learn about Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)
+* [Learn about bitmap compression with Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)

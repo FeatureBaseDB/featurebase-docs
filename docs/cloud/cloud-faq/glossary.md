@@ -117,7 +117,7 @@ nav_order: 1
 
 | Term | Context | Additional information |
 |---|---|---|
-| Normalizing | The act of identifying the cardinality of your data in order to design the relationships between different tables. | [FeatureBase concepts](/docs/concepts/concepts-home) |
+| Normalizing | The act of identifying the cardinality of your data in order to design the relationships between different tables. | [FeatureBase concepts](/docs/cloud/cloud-faq/cloud-faq-data-cardinality) |
 | NOT | PQL query | [PQL NOT read query](/docs/pql-guide/pql-read-not) |
 
 ## O
@@ -160,7 +160,7 @@ nav_order: 1
 | Term | Context | Additional information |
 |---|---|---|
 | SET | PQL query | [PQL SET write query](/docs/pql-guide/pql-write-set) |
-| Shard | Roaring Bitmap format | [Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format) |
+| Shard | Roaring Bitmap format | [Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format) |
 | SORT | PQL query | [PQL SORT read query](/docs/pql-guide/pql-read-sort) |
 | STORE | PQL query | [PQL STORE write query](/docs/pql-guide/pql-write-store) |
 | SUM | PQL query | [PQL SUM read query](/docs/pql-guide/pql-read-sum) |

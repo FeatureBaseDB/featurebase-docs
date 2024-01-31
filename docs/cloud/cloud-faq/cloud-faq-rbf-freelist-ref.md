@@ -2,7 +2,7 @@
 title: RBF page allocation
 layout: default
 parent: Bitmap index overview
-grand_parent: Concepts
+grand_parent: Frequently Asked Questions
 nav_order: 4
 ---
 
@@ -12,7 +12,7 @@ The Roaring Bitmap Format Freelist page is an internal bitmap used to track deal
 
 ## Before you begin
 
-* [Learn about Roaring Bitmap Format pages](/docs/concepts/concept-roaring-bitmap-format)
+* [Learn about Roaring Bitmap Format pages](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)
 
 ## How are pages deallocated?
 

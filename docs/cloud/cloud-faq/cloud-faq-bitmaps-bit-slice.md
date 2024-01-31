@@ -2,7 +2,7 @@
 title: Bit-slice bitmaps
 layout: default
 parent: Bitmap index overview
-grand_parent: Concepts
+grand_parent: Frequently Asked Questions
 nav_order: 2
 ---
 
@@ -15,8 +15,8 @@ Bit-sliced data creates a single bitmap for each power of 2. This approach means
 
 ## Before you begin
 
-* [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Learn about equality encoding data in bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
+* [Learn about FeatureBase bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps)
+* [Learn about equality encoding data in bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps-equality-encoded)
 
 ## What data types are converted to bit-sliced bitmaps?
 
@@ -97,7 +97,7 @@ The bit-slice columns can now be saved as individual bitmaps. For example:
 
 {% include /concepts/concept-bitmap-storage-overhead-table.md %}
 
-* [Learn about Roaring Bitmap Format](/docs/concepts/concept-roaring-bitmap-format)
+* [Learn about Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)
 
 ## Further information
 

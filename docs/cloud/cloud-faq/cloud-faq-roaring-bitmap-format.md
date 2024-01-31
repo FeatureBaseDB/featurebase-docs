@@ -2,7 +2,7 @@
 title: Roaring Bitmap Format
 layout: default
 parent: Bitmap index overview
-grand_parent: Concepts
+grand_parent: Frequently Asked Questions
 nav_order: 3
 ---
 # How does FeatureBase reduce storage overheads?
@@ -15,9 +15,9 @@ nav_order: 3
 ## Before you begin
 
 * [Learn about Roaring Bitmaps](https://www.roaringbitmap.org/){:target="_blank"}
-* [Learn about FeatureBase bitmaps](/docs/concepts/concept-bitmaps)
-* [Learn about equality-encoded bitmaps](/docs/concepts/concept-bitmaps-equality-encoded)
-* [Learn about bit-sliced bitmaps](/docs/concepts/concept-bitmaps-bit-slice)
+* [Learn about FeatureBase bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps)
+* [Learn about equality-encoded bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps-equality-encoded)
+* [Learn about bit-sliced bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps-bit-slice)
 
 ## What kind of database is Roaring Bitmap Format?
 
@@ -42,7 +42,7 @@ The following page types contain RBF metadata:
 
 | Page number | Page type | Description | Additional information |
 |---|---|---|---|
-| 0 | Meta | The Meta page keeps track of b-tree information including:<br/>* total pages<br/>* current position in the Write Ahead Log<br/>* Root record page number<br/>* Freelist page number | * [Freelist reference](/docs/concepts/concept-rbf-freelist-ref)<br/>* [Meta page example](#meta-page) |
+| 0 | Meta | The Meta page keeps track of b-tree information including:<br/>* total pages<br/>* current position in the Write Ahead Log<br/>* Root record page number<br/>* Freelist page number | * [Freelist reference](/docs/cloud/cloud-faq/cloud-faq-rbf-freelist-ref)<br/>* [Meta page example](#meta-page) |
 | 1 | Root record | Stores a list of bitmaps<br/>* defined as combination of field and view<br/>* and root page number for that b-tree | [Root record example](#root-record) |
 
 ### B-tree structure and data pages

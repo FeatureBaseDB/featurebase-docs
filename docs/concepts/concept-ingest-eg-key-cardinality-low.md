@@ -19,7 +19,7 @@ The examples below demonstrate:
 
 ## Before you begin
 
-* [Learn about data cardinality](/docs/concepts/concepts-home)
+* [Learn about data cardinality](/docs/cloud/cloud-faq/cloud-faq-data-cardinality)
 * [Learn about data modeling](/docs/concepts/overview-data-modeling)
 
 ## Sample data
