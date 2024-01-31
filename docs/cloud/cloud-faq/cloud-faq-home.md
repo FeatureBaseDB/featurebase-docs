@@ -2,7 +2,8 @@
 title: Frequently Asked Questions
 layout: default
 has_children: true
-nav_order: 14
+nav_order: 11
+has_toc: false
 ---
 
 # Frequently Asked Questions
