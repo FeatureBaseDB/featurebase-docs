@@ -20,7 +20,7 @@ has_toc: false
 |---|---|
 | How is my data stored in FeatureBase?<br/>What kind of bitmaps are used for my data? | [Learn about FeatureBase bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps) |
 | How does FeatureBase handle high cardinality data?<br/>How does FeatureBase work with normalized data?<br/>How does a bitmap index deal with one-to-many and many-to-many relationships? | [Learn about FeatureBase SET and SETQ data types](/docs/sql-guide/data-types/data-types-home/#low-cardinality-data-types) |
-| How do I determine whether FeatureBase is right for my use case? | [Test your use case against a billion row database](/docs/cloud-getstart/cloud-evaluate) |
+| How do I determine whether FeatureBase is right for my use case? | [Test your use case against a billion row database](/docs/cloud/cloud-getstart/cloud-evaluate) |
 
 ## Billing FAQ
 
