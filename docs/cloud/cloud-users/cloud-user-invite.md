@@ -16,7 +16,9 @@ has_toc: false
 
 ## Before you begin
 
-{% include /cloud-users/cloud-user-admin-role-needed.md %}
+{: .note}
+You will need a user with the `ADMINISTRATOR` role to invite users to your organization.
+
 {% include /cloud/cloud-before-begin.md %}
 * [Learn how to manage cloud users](/docs/cloud/cloud-users/cloud-users-manage)
 

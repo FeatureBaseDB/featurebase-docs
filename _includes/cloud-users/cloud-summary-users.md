@@ -1,5 +1,3 @@
-You will need a user with the `ADMINISTRATOR` role to invite users to your organization.
-
 A valid email address, belonging to any domain, is required to register a user account with a FeatureBase organization.
 
 Registration is successful when a user registers before the 7-day expiry period:
