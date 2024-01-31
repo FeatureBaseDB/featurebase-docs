@@ -17,14 +17,14 @@ has_toc: false
 |---|---|
 | I can't connect to `https://cloud.featurebase.com` | [Check Web App Availability on `FeatureBase Status`](/docs/cloud/cloud-faq/coud-status-site){:target="_blank"} |
 | My API calls are failing to connect to my database |  Check your database exists<br/>[Check API availability on `FeatureBase Status`](/docs/cloud/cloud-faq/coud-status-site){:target="_blank"}<br/>[Create API keys](/docs/cloud/cloud-authentication/cloud-auth-create-key) |
-| The fbsql tool won't connect to my database | Connection parameters may be incorrect | [Learn how to connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db) |
+| The fbsql tool won't connect to my database | [Learn how to connect to FeatureBase Cloud](/docs/tools/fbsql/fbsql-connect-cloud-db) |
 | My Python app won't connect to FeatureBase Cloud | [Learn how to connect using the Python Client Library](/docs/tools/python-client-library/python-client-connect-cloud) |
 
 ## Login FAQ
 
 | Question | Answer |
 |---|---|
-| I can't login to FeatureBase Cloud | * Reset your password</br>* Contact your organization administrator<br/>* [Verify the Cloud App is running](/docs/cloud/cloud-faq/coud-status-site){:target="_blank"} |
+| I can't login to FeatureBase Cloud | * Reset your password<br/>* Contact your organization administrator<br/>* [Verify the Cloud App is running](/docs/cloud/cloud-faq/coud-status-site){:target="_blank"} |
 
 ## Database FAQ
 
