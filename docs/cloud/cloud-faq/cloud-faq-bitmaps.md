@@ -3,7 +3,6 @@ title: Bitmap index overview
 layout: default
 parent: Frequently Asked Questions
 has_children: true
-nav_order: 1
 has_toc: false
 ---
 # An overview of FeatureBase bitmaps
