@@ -2,7 +2,6 @@
 title: Update billing contact
 layout: default
 parent: Manage organization
-nav_order: 2
 ---
 
 # How do I change my organization billing address?

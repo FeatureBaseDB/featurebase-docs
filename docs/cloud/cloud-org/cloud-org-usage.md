@@ -1,8 +1,7 @@
 ---
 title: View usage and invoices
 layout: default
-nav_order:
-has_toc: false
+parent: Manage organization
 ---
 
 # How I view my usage and generate invoices?

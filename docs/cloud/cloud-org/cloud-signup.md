@@ -2,8 +2,6 @@
 title: Signup to cloud
 layout: default
 parent: Manage organization
-
-nav_order: 1
 ---
 
 # How do I signup to FeatureBase Cloud?

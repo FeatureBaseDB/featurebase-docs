@@ -2,8 +2,6 @@
 title: Upgrade to a paid account
 layout: default
 parent: Manage organization
-
-nav_order: 4
 ---
 
 # How do I upgrade my account?

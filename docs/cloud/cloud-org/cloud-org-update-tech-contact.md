@@ -2,8 +2,6 @@
 title: Update technical contact
 layout: default
 parent: Manage organization
-
-nav_order: 3
 ---
 
 # How do I change my organization technical contact address?
