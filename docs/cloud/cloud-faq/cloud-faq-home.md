@@ -32,8 +32,9 @@ The FeatureBase Cloud FAQ contains answers to your questions.
 | I cannot create a database | * [Verify the Cloud App is running](/docs/cloud/cloud-faq/coud-status-site){:target="_blank"}<br/>* [Upgrade from a Trial to a paid account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/) |
 | What does `LIMIT REACHED` mean? | FeatureBase Trial accounts are limited to 5 databases<br/>[Learn how to upgrade your account](/docs/cloud-org/cloud-org-billing) |
 
-## Table FAQ
+## Query FAQ
 
 | Question | Answer |
 |---|---|
-| My integer values are truncated | Integer values that fall outside the default or user-specified minimum and maximum constraints are truncated | [SQL INT data type](/docs/sql-guide/data-types/data-type-int) |
+| Wrong number of rows or results in SELECT query | [Unexpected query results](/docs/sql-guide/issues/select-groupby-flatten-set-setq) |
+| Integer values are truncated | Integer values that fall outside the default or user-specified minimum and maximum constraints are truncated | [SQL INT data type](/docs/sql-guide/data-types/data-type-int) |
