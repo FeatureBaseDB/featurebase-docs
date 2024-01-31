@@ -30,15 +30,17 @@ This FAQ guides you through:
 | Koala | Yes | 19 |
 | Starfish | No | 20 |
 
-## Step 1 - Choose the unique identifier that minimizes the number of rows
+## Which unique identifier should I choose?
 
-Your choice of unique identifier can help:
-* reduce the number of rows to be ingested,
-* increase speed of queries
+Each row in a FeatureBase table needs a unique identifier. This can be an `ID` (numeric) or `STRING` data type.
 
-In the example, `Vertebrae` is the best choice for unique identifier, and results in:
-* low cardinality data populated in the `species` column
-* less rows to be ingested
+{: .important}
+>A choice of `STRING` unique identifier will increase your disk requirements.
+>* [Learn how data is encoded by FeatureBase](/docs/cloud/cloud-faq/cloud-faq-bitmaps)
+
+The choice of unique identifier helps reduce the number of rows to be ingested, which then increases the speed of your queries.
+
+In this example, `Vertebrae` is the best choice for unique identifier because it reduces four rows to two:
 
 | Vertebrae | Species |
 |---|---|
