@@ -2,12 +2,11 @@
 title: Data cardinality
 layout: default
 parent: Frequently Asked Questions
-has_children: true
 nav_order: 2
 ---
 # How does FeatureBase differ to a traditional database?
 
-FeatureBase is a database that uses a bitmap-based data format rather than pure bitmap indexes.
+The FeatureBase database uses a bitmap-based data format rather than pure bitmap indexes.
 
 This high-level overview provides context by explaining:
 * data cardinality
@@ -84,17 +83,9 @@ FeatureBase does not use Database normalization. Instead, the system inserts dat
 * designed to overcome issues with low cardinality data
 * optimized to reduce storage overheads and query execution time
 
+## Next step
+
 [Learn how data is encoded in bitmap indexes](/docs/cloud/cloud-faq/cloud-faq-bitmaps)
-
-## How should I structure data to be imported to FeatureBase?
-
-{% include /concepts/concept-data-modeling-summary.md %}
-
-[Learn how to perform Data Modeling for the FeatureBase Bitmap database](/docs/concepts/overview-data-modeling)
-
-## Examples with data
-
-* [Data import examples](/docs/sql-guide/examples/sql-eg-home)
 
 ## Further information
 
