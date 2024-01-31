@@ -15,7 +15,7 @@ Load a sample database of a billion rows to test FeatureBase Cloud.
 * [Read "Breaking the latency floor" a whitepaper that explains FeatureBase](https://www.featurebase.com/blog/breaking-the-latency-floor-white-paper){:target="_blank"}
 * [Learn about FeatureBase Cloud](/index)
 * [Getting started with FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-getstart)
-* [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-org/cloud-signup)
+* [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-signup)
 * [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-db-connect/cloud-db-connect)
 
 ## Step 1 - create the sample database
