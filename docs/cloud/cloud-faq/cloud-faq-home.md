@@ -27,7 +27,7 @@ has_toc: false
 | Question | Answer |
 |---|---|
 | How much does FeatureBase cost to run? | [FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"} |
-| How do I upgrade my organization account? | [Upgrade your trial account](/docs/cloud/cloud-org/cloud-org-update-to-paid) |
+| How do I upgrade my organization account? | [Upgrade your trial account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/) |
 
 ## Connection FAQ
 
