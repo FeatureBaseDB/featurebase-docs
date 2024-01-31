@@ -12,7 +12,7 @@ Set up a FeatureBase trial account with $300USD credit then create databases and
 
 ## Before you begin
 
-* [Learn about FeatureBase Cloud](/docs/cloud/cloud-home)
+* [Learn about FeatureBase Cloud](https://docs.featurebase.com)
 * [Learn about FeatureBase pricing](https://www.featurebase.com/pricing){:target="_blank"}
 * [Sign-up to FeatureBase Cloud](/docs/cloud/cloud-getstart/cloud-signup)
 * [Learn how to connect to your FeatureBase database](/docs/cloud/cloud-getstart/cloud-db-connect)
