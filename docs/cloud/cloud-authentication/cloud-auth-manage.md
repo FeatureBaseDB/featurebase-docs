@@ -1,5 +1,5 @@
 ---
-title: Manage API Keys
+title: Manage authentication
 layout: default
 has_children: true
 nav_order: 11

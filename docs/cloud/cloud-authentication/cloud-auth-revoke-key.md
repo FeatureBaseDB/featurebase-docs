@@ -1,7 +1,7 @@
 ---
 title: Revoke Key
 layout: default
-parent: Manage API Keys
+parent: Manage authentication
 nav_order: 3
 ---
 
