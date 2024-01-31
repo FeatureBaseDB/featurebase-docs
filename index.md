@@ -52,4 +52,4 @@ Cloud users must agree to the FeatureBase terms of service to complete sign-up.
 
 ## Next step
 
-* [Sign-up for a trial account](/docs/cloud/cloud-signup)
+* [Sign-up for a trial account](/docs/cloud/cloud-getstart/cloud-signup)

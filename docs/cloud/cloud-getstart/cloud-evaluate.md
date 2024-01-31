@@ -34,4 +34,4 @@ When finished, it's important to delete the trial database to reduce costs.
 
 ## Next step
 
-* [Learn how to set-up FeatureBase with a custom database](/docs/cloud/cloud-setup)
+* [Learn how to set-up FeatureBase with a custom database](/docs/cloud/cloud-getstart/cloud-setup)
