@@ -34,7 +34,7 @@ A header row is not required because the `BULK INSERT` statement defines the des
 ## BULK INSERT to `myspecies`
 
 {: .note}
-In a `BULK INSERT` statement, `MAP` always uses `0` to correspond to the table `_id` unique identifier.
+The `MAP` clause always uses `0` to correspond to the table `_id` unique identifier.
 
 ```sql
 BULK INSERT INTO myspecies (_id, species)
