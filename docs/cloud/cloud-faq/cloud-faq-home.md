@@ -14,6 +14,16 @@ has_toc: false
 {: .note}
 [Contact FeatureBase Support on our Slack channel](https://featurebase.com/slack){:target="_blank"} if you can't find an answer to your question.
 
+## Looking for older documentation?
+
+{: .important}
+FeatureBase Community help has been moved.
+
+| Question | Answer |
+|---|---|
+Where do I find older documentation? | [Link to FB Community help repo](url here) |
+| GRPC endpoint has gone boom | [GRPC Help]()
+
 ## Conceptual FAQ
 
 | Question | Answer |
