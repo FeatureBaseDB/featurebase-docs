@@ -15,9 +15,9 @@ The following `BULK INSERT` SQL statement:
 
 ## Before you begin
 
+* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 * [Learn about data modeling low-cardinality data](/docs/cloud/cloud-faq/cloud-faq-data-modeling)
 * [CREATE TABLE myspecies](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-myspecies)
-* [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
 
 ## Create a CSV data source
 
@@ -33,16 +33,17 @@ A header row is not required because the `BULK INSERT` statement defines the des
 
 ## BULK INSERT to `myspecies`
 
+{: .note}
+In a `BULK INSERT` statement, `MAP` always uses `0` to correspond to the table `_id` unique identifier.
 
 ```sql
-BULK INSERT
-  into myspecies (_id, species)
-  map (0 string, 1 stringset)
-  from
+BULK INSERT INTO myspecies (_id, species)
+  MAP (0 string, 1 stringset)
+  FROM
     '/home/myuser/featurebase/import/myspecies.csv'
-  with
-    format 'CSV'
-    input 'FILE';
+  WITH
+    FORMAT 'CSV'
+    INPUT 'FILE';
 ```
 
 ## Next step
