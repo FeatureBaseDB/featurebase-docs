@@ -48,4 +48,4 @@ BULK INSERT INTO myspecies (_id, species)
 
 ## Next step
 
-* [Query the `myspecies` table](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-myspecies)
+* [Query the `myspecies` table](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-myspecies)
