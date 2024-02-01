@@ -26,7 +26,7 @@ Create a CSV file with the following structure then save as `*/featurebase/impor
 {: .note}
 A header row is not required because the `BULK INSERT` statement defines the destination columns
 
-```csv
+```
 "yes", "Manatee, Sea Horse, Koala"
 "no", "Starfish"
 ```
