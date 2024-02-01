@@ -53,13 +53,13 @@ Where do I find older documentation? | [Link to FB Community help repo](url here
 | Question | Answer |
 |---|---|
 | I can't login to FeatureBase Cloud | * Reset your password<br/>* Contact your organization administrator<br/>* [Verify the Cloud App is running](https://status.featurebase.com/){:target="_blank"} |
-| Can I change user names on my account | Email addresses are used as user names in FeatureBase and cannot be changed. An Administrator can send an invitation to a new email address if this has changed, then revoke the old address. |
+| Can I change user names on my account | Account user names cannot be changed because FeatureBase uses the same email address used to invite you to the organization. An administrator can send an invitation to your changed email address then revoke the original. |
 
 ## Database FAQ
 
 | Question | Answer |
 |---|---|
-| What does `DATABASE UNKNOWN` mean? | This message may appear when a database is changing state<br/> * [Learn about Database states](/docs/cloud/cloud-databases/cloud-db-states) |
+| What does `DATABASE UNKNOWN` mean? | This message may appear when a database is changing state<br/>* [Learn about Database states](/docs/cloud/cloud-databases/cloud-db-states) |
 | I cannot create a database | * [Verify the Cloud App is running](https://status.featurebase.com/){:target="_blank"}<br/>* [Upgrade from a Trial to a paid account](/docs/cloud/cloud-org/cloud-org-upgrade-to-paid/) |
 | What does `LIMIT REACHED` mean? | FeatureBase Trial accounts are limited to 5 databases<br/>* [Learn how to upgrade your account](/docs/cloud/cloud-org/cloud-org-usage) |
 | How do I backup and restore my database? | Database backups are automatic and occur daily. [Contact FeatureBase Support on our Slack channel](https://featurebase.com/slack){:target="_blank"} to discuss restoring a backup |
@@ -77,4 +77,4 @@ Where do I find older documentation? | [Link to FB Community help repo](url here
 | Question | Answer |
 |---|---|
 | Wrong number of rows or results in SELECT query | [Unexpected query results](/docs/sql-guide/issues/select-groupby-flatten-set-setq) |
-| Integer values are truncated | Integer values that fall outside the default or user-specified minimum and maximum constraints are truncated | [SQL INT data type](/docs/sql-guide/data-types/data-type-int) |
+| Integer values are truncated | Integer values that fall outside the default or user-specified minimum and maximum constraints are truncated<br/>[SQL INT data type](/docs/sql-guide/data-types/data-type-int) |
