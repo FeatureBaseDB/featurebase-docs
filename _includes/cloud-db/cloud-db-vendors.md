@@ -10,7 +10,7 @@ FeatureBase runs on the following vendor architecture:
 | Architecture | ARM | AMD |
 | Externalized storage | Supported | Not supported |
 | Backups | S3 buckets | BLOB Storage that keeps the data within the cloud provider |
-| FeatureBase Nodes (per shape) | 1 | 3 |
+| FeatureBase Nodes (per shape) | 3 | 3 |
 | Shape replica factor |   | 2 |
 | Region | US-east-2 (Ohio) | eastus2 |
 
