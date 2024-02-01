@@ -32,11 +32,11 @@ This FAQ guides you through:
 
 ## Which unique identifier should I choose?
 
-Each row in a FeatureBase table needs a unique identifier. This can be an `ID` (numeric) or `STRING` data type.
+The first column in every FeatureBase table is the unique identifier `_id` and can be assigned one of two data types:
+* [ID data type](/docs/sql-guide/data-types/data-type-id)
+* [STRING data type](/docs/sql-guide/data-types/data-type-string)
 
-{: .important}
->A choice of `STRING` unique identifier will increase your disk requirements.
->* [Learn how data is encoded by FeatureBase](/docs/cloud/cloud-faq/cloud-faq-bitmaps)
+{% include /sql-guide/unique-id-string-warning.md %}
 
 The choice of unique identifier helps reduce the number of rows to be ingested, which then increases the speed of your queries.
 
