@@ -16,7 +16,7 @@ nav_exclude: true
 
 ## Before you begin
 
-* [COSINE() function](/docs/sql-guide/functions/function-cosine-distance)
+* [COSINE_DISTANCE() function](/docs/sql-guide/functions/function-vector-distances)
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * Any
 * Other
