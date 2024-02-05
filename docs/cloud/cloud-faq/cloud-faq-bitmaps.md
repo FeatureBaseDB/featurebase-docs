@@ -60,7 +60,7 @@ FeatureBase overcomes low-cardinality issues with four unique data types suitabl
 
 ### Data storage overheads
 
-{% include /concepts/concept-bitmap-storage-overhead-table.md %}
+{% include /faq/concept-bitmap-storage-overhead-table.md %}
 
 * [Learn about Roaring Bitmap Format](/docs/cloud/cloud-faq/cloud-faq-roaring-bitmap-format)
 
@@ -82,7 +82,7 @@ FeatureBase Cloud stores shards on disk in the `etc` directory.
 
 ## Are column names converted to bitmaps?
 
-{% include /concepts/concept-table-def-save-to-disk.md %}
+{% include /faq/concept-table-def-save-to-disk.md %}
 
 ## Further information
 

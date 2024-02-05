@@ -11,7 +11,7 @@ has_toc: false
 
 This page provides an overview of FeatureBase tables and links to guide you through creating, altering and dropping tables.
 
-{% include /concepts/summary-table-create.md %}
+{% include /faq/summary-table-create.md %}
 
 {% include page-toc.md %}
 
@@ -23,7 +23,7 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 
 ## Data modeling
 
-{% include /concepts/summary-data-modeling.md %}
+{% include /faq/summary-data-modeling.md %}
 
 ## Table primary key
 
@@ -35,7 +35,7 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 
 ## Naming standard
 
-{% include /concepts/standard-naming-obj.md%}
+{% include /faq/standard-naming-obj.md%}
 {% include /cloud-table/cloud-standard-naming-table.md %}
 {% include /cloud-table/cloud-standard-naming-col.md%}
 
