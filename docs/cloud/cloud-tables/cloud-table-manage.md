@@ -18,16 +18,12 @@ This page provides an overview of FeatureBase tables and links to guide you thro
 ## Before you begin
 
 {% include /cloud/cloud-before-begin.md %}
+* [Learn about FeatureBase bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps)
 * [Learn how to manage Cloud databases](/docs/cloud/cloud-databases/cloud-db-manage)
 
 ## Data modeling
 
 {% include /concepts/summary-data-modeling.md %}
-
-{: .important}
-Perform data modeling **before** creating tables to avoid issues.
-
-* [Learn about data modeling](/docs/concepts/overview-data-modeling)
 
 ## Table primary key
 

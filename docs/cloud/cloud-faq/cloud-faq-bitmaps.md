@@ -88,4 +88,5 @@ FeatureBase Cloud stores shards on disk in the `etc` directory.
 
 * [Learn about equality-encoded bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps-equality-encoded)
 * [Learn about bit-sliced bitmaps](/docs/cloud/cloud-faq/cloud-faq-bitmaps-bit-slice)
-* [Learn about importing data to FeatureBase](/docs/concepts/overview-data-modeling)
+* [Learn about data modeling for FeatureBase](/docs/cloud/cloud-faq/cloud-faq-data-modeling)
+* [Learn about importing data to FeatureBase](/docs/cloud/cloud-ingest/cloud-ingest-manage)
