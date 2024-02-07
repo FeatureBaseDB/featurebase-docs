@@ -31,9 +31,19 @@ Use this table to determine how integer and string values are represented when a
 | string | empty, `0`, `f`, `false` | 0 |
 | string | other string values | 1 |
 
-## Examples
+## Example queries
 
-### CREATE TABLE with boolean data type
+### CREATE TABLE with `bool` data type
+
+* [CREATE TABLE with `bool` data type](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
+
+### INSERT data to `bool` column
+
+* [INSERT INTO `bool` column](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-datatypes)
+
+### SELECT FROM `bool` column
+
+
 
 ```sql
 CREATE TABLE docbool  (

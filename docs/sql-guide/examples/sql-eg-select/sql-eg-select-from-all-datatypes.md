@@ -20,6 +20,8 @@ The following SELECT statements return data from the `all-datatypes` table.
 * [CREATE TABLE all-datatypes](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
 * [INSERT INTO all-datatypes](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-datatypes)
 
+## heading goes here
+
 | Expression | Function | Operator | Statement |
 |---|---|---|---|---|
 |  | ASCII |  | `SELECT stringcol, ASCII(stringcol) AS converted-to-ascii FROM all-datatypes WHERE _id=1;` |
