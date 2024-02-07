@@ -8,6 +8,8 @@ nav_order: 3
 
 # ID numeric datatype
 
+The `ID` data type is used for unsigned integer data, and can be applied to any table column, including the `_id` unique identifier.
+
 ## Syntax
 
 ```
@@ -16,17 +18,15 @@ ID
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| ID | Numeric data type used for unsigned integers that are between `1` and `2^63 -1` |
+| Argument | Description | Limits |
+|---|---|---|
+| ID | Numeric data type used for unsigned integers | `1` to `2^63 -1` |
 
 ## Additional information
 
-The ID data type:
-* has a `mutex` internal data type
-* is used with data sets with low cardinality when:
-  * grouping by
-  * querying discrete values
+The ID data type has a `mutex` internal data type and is best used for low-cardinality data in queries:
+* with GROUP BY clause
+* on discrete values
 
 ## Examples
 
