@@ -8,9 +8,11 @@ nav_order: 11
 
 # VECTOR() data type
 
-Vector data types store a specified number of floating point values in an array.
+Vector data types store a specified quantity of floating point values in an array that can be queried using [Cosine and Euclidean Distance functions](#further-information).
 
-These vectors can be compared using the [COSINE_DISTANCE() function](#further-information).
+## Before you begin
+
+* [Learn about Word embedding in Natural Language Processing systems](https://en.wikipedia.org/wiki/Word_embedding){:target="_blank"}
 
 ## Syntax
 
@@ -22,13 +24,16 @@ VECTOR({length})
 
 | Argument | Description | Additional information |
 |---|---|---|
-| length | An integer value representing the number of elements in the array | Cannot have a zero length |
+| length | An integer value representing the number of distinct values in the array | Length must be >= 1 |
 
 ## Additional information
 
-* values in the array must be floats
-* vector itself can be null
-* maximum precision is 64-bit float
+## Vector value requirements
+
+Each distinct value must be:
+* floating point,
+* with the same scale (number of digits after decimal point)
+* and [64-bit maximum precision](https://en.wikipedia.org/wiki/Double-precision_floating-point_format){:target="_blank"}
 
 ## Examples
 
