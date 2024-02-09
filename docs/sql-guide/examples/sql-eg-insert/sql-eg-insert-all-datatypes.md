@@ -141,7 +141,7 @@ TRANSFORM(
     @10,
     @11)
 FROM
-    'https://raw.githubusercontent.com/FeatureBaseDB/featurebase-docs/sql-example-consolidate/assets/sql-eg/insert-bulk-all-datatypes-no-vector.csv'
+    'https://raw.githubusercontent.com/FeatureBaseDB/featurebase-docs/sql-eg-rework/assets/sql-eg/insert-bulk-all-datatypes-no-vector.csv'
 WITH
     BATCHSIZE 100000
     FORMAT 'CSV'
