@@ -25,7 +25,7 @@ Add data to the `all-datatypes` table using INSERT and BULK INSERT statements th
 ## CSV data source
 
 {: .note}
-This data source also available at `https://docs.featurebase.com/assets/sql-eg/sql-eg-all-col.csv`
+This data source also available at `https://docs.featurebase.com/assets/sql-eg/sql-eg-all-datatypes.csv`
 
 ```csv
 id,boolcol,decimalcol,idcol,idsetcol,idsetcolq,intcol,stringcol,stringsetcol,stringscetcolq,timestampcol,vectorcol
@@ -141,7 +141,7 @@ TRANSFORM(
     @10,
     @11)
 FROM
-    'https://raw.githubusercontent.com/FeatureBaseDB/featurebase-docs/sql-example-consolidate/assets/sql-eg/insert-bulk-all-cols-no-vector.csv'
+    'https://raw.githubusercontent.com/FeatureBaseDB/featurebase-docs/sql-example-consolidate/assets/sql-eg/insert-bulk-all-datatypes-no-vector.csv'
 WITH
     BATCHSIZE 100000
     FORMAT 'CSV'
