@@ -31,6 +31,8 @@ suffix(expr, length)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Convert strings in a column to a suffix
 
 ```sql

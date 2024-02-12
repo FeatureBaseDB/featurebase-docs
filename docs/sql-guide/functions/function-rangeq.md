@@ -42,6 +42,8 @@ Substitute `null` if `ts-begin` or `ts-end` is not known.
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Source table definition
 
 {% include /sql-guide/create-table-with-stringsetq-timeq.md %}

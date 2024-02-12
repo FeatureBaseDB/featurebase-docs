@@ -30,6 +30,8 @@ SETCONTAINS(
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Testing set membership in the select list
 
 {% include /sql-guide/create-table-segments.md %}

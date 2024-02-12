@@ -36,6 +36,8 @@ If the `string_length` is less than the characters needed to display the `value`
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Str of a decimal in a column
 
 ```sql
@@ -87,4 +89,3 @@ select _id, str(segment, 7, 2) as text from segments;
 |   1 | ******* |
 +-----+---------+
 ```
-

@@ -34,6 +34,8 @@ Use a `WHERE` clause with `AND` operator to add two or more `SETINCLUDES()` func
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 {% include /sql-guide/create-table-segments.md %}
 
 ### Testing set membership in the select list

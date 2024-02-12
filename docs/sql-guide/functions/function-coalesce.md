@@ -30,6 +30,8 @@ The specified value in place of `null` values in the destination column
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### using Coalesce() function to handle null values
 
 ```sql

@@ -73,3 +73,7 @@ Literals are explicitly specified fixed values that conform to a specific data t
 ![expr](/assets/images/sql-guide/case_expr.svg)
 
 * [SQL CASE expression](https://www.w3schools.com/sql/sql_case.asp){:target="_blank"}
+
+## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}

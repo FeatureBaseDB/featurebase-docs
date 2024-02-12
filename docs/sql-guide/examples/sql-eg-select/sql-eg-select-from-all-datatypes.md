@@ -25,6 +25,7 @@ The following SELECT statements return data from the `all-datatypes` table.
 | Expression | Function | Operator | Statement |
 |---|---|---|---|---|
 |  | ASCII |  | `SELECT stringcol, ASCII(stringcol) AS converted-to-ascii FROM all-datatypes WHERE _id=1;` |
+|  | CHAR |  | `SELECT stringcol, CHAR(stringcol) AS converted-from-ascii FROM all-datatypes WHERE _id=2;` |
 |  | COUNT |  | `SELECT COUNT(*) as how-many-items, stringsetcol FROM all-datatypes GROUP BY stringsetcol;` |
 |  | COSINE_DISTANCE |  |  `SELECT _id, cosine_distance([-0.027067707851529, 0.009963636286557, 0.034747183322906, 0.490922, 0.0000002], vectorcol) AS rank FROM all-datatypes;` |
 |  | DATE_TRUNC |  | `SELECT _id, timestampcol, DATE_TRUNC('hh',timestampcol) AS convert-to-hours FROM all-datatypes;` |
@@ -32,19 +33,6 @@ The following SELECT statements return data from the `all-datatypes` table.
 |  |  | AVG | `SELECT AVG(intcol) AS column-average FROM all-datatypes;` |
 |  |  | SUM | `SELECT stringsetqcol, SUM(decimalcol) FROM doctest WITH (FLATTEN(stringsetqcol)) GROUP BY stringsetqcol;` |
 
-<!--
-### COALESCE function
-Relies on https://github.com/FeatureBaseDB/featurebase-docs/pull/208/files
-
-Idea: add a value in place of null in row 1 of all-datatypes using COALESCE function.
-
-Can this be used to insert a value? As in, can INSERT INTO be used with a SELECT FROM?
-
-```sql
-SELECT _id, COALESCE()
-
-```
--->
 
 ## SETCONTAINS functions
 

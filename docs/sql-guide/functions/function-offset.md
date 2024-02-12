@@ -30,6 +30,8 @@ The `OFFSET()` function doesn't have a direct return value. It affects the resul
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Colors table
 
 This table is used in subsequent OFFSET() queries.

@@ -43,4 +43,6 @@ The function is used in a SELECT statement and requires:
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 * [SELECT using TANIMOTO_COEFFICIENT function](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-tan-target)

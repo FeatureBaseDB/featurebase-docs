@@ -31,7 +31,9 @@ Use this table to determine how integer and string values are represented when a
 | string | empty, `0`, `f`, `false` | 0 |
 | string | other string values | 1 |
 
-## Example queries
+## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
 ### CREATE TABLE with `bool` data type
 

@@ -30,5 +30,4 @@ The ID data type has a `mutex` internal data type and is best used for low-cardi
 
 ## Examples
 
-* [CREATE TABLE with `ID` data type](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
-* [INSERT INTO `ID` column](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-datatypes)
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}

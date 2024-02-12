@@ -38,6 +38,8 @@ DATETIMENAME(timeunit, date-time)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Find out what month a particular date is in
 
 ```sql
@@ -69,5 +71,3 @@ select _id, datetimename('w',ts) from demo;
 -----+----------
    1 | Thursday
 ```
-
-

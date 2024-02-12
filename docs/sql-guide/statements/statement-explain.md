@@ -13,7 +13,6 @@ Prefix any valid SQL query with `EXPLAIN` to output an execution plan for the st
 
 ## Before you begin
 
-
 {% include page-toc.md %}
 
 ## Syntax
@@ -33,8 +32,8 @@ EXPLAIN <statement>;
 ```sql
 EXPLAIN CREATE TABLE doctest (_id ID, stringcol STRING);
 
-                         plan                                                |
------------------------------------------------------------------------------+
+plan |
+-----+
 plan
 "{
     ""_op"": ""*planner.PlanOpQuery"",

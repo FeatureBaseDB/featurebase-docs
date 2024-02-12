@@ -27,4 +27,8 @@ COSINE and EUCLIDEAN distance is identical for unit-length vectors.
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!--adapt the example below for all-datatypes-->
+
 * [SELECT using DISTANCE functions](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)

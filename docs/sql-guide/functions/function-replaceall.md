@@ -31,6 +31,8 @@ replaceall(expr,exprOld,exprNew)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Replace `hello world` string
 
 ```sql

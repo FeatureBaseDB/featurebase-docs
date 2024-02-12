@@ -29,6 +29,8 @@ reverse(expr)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Reverse strings in a column
 
 ```sql

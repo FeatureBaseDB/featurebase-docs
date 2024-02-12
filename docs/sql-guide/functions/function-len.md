@@ -29,7 +29,9 @@ len(str_expr)
 
 ## Examples
 
-### LEN() function on a column.
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+### LEN() function on a column
 
 ```sql
 create table segments

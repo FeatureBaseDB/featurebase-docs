@@ -37,6 +37,8 @@ Instead, use the [ID data type](/docs/sql-guide/data-types/data-type-id).
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 {% include /sql-guide/table-create-integer-constraints-eg.md%}
 
 {% include /sql-guide/table-create-types-all-eg.md %}

@@ -30,6 +30,8 @@ upper(expr)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Convert strings in a column to upper-case
 
 ```sql

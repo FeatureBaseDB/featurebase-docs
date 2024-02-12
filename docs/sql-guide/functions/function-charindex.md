@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # CHARINDEX() function
 
-The `Charindex()` function supplies an integer value that represents the start of a substring within a string value. 
+The `Charindex()` function supplies an integer value that represents the start of a substring within a string value.
 
 ## Syntax
 
@@ -34,6 +34,8 @@ charindex(substring,expr,[position])
 * Returns -1 if the substring cannot be found.
 
 ## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
 ### CHARINDEX statement
 ```sql

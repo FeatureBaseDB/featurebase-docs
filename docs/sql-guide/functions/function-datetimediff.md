@@ -42,15 +42,17 @@ DATETIMEDIFF(timeunit, start-datetime, end-datetime)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Number of days between 27 feb and 01 march 2023.
 
 ```sql
-create table demo 
+create table demo
     (_id id, start-date timestamp timeunit 's', end-date timestamp timeunit 's');
 
 insert into demo(_id, start-date, end-date)
     values (1, '2023-02-27T21:30:00Z', '2023-03-01T21:30:00Z');
-    
+
 select _id, datetimediff('d', start-date, end-date) as days_diff from demo;
 
 _id | days_diff
@@ -61,12 +63,12 @@ _id | days_diff
 ### Endtime is before starttime
 
 ```sql
-create table demo 
+create table demo
     (_id id, start-date timestamp timeunit 's', end-date timestamp timeunit 's');
 
 insert into demo(_id, start-date, end-date)
     values (1, '2023-03-01T12:00:00Z', '2023-03-01T09:00:00Z');
-    
+
 select _id, datetimediff('h', start-date, end-date) as hours_diff from demo;
 
 _id | hours_diff
@@ -77,12 +79,12 @@ _id | hours_diff
 ### Returns NULL if any input parameter is null.
 
 ```sql
-create table demo 
+create table demo
     (_id id, start-date timestamp timeunit 's', end-date timestamp timeunit 's');
 
 insert into demo(_id, start-date, end-date)
     values (1, '2023-02-27T21:30:00Z', '2023-03-01T21:30:00Z');
-    
+
 select _id, datetimediff(null, start-date, end-date) as diff from demo;
 
 _id | diff

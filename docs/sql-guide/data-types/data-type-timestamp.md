@@ -8,7 +8,7 @@ nav_order: 10
 
 # TIMESTAMP data type
 
-Timestamp is a date-time data type which represents the specified `timeunit` as integer values elapsed since the specified Unix Epoch.
+Timestamp is a date-time data type which represents the specified `timeunit` as integer values elapsed since the specified 32-bit Unix Epoch.
 
 ## Before you begin
 * [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
@@ -33,6 +33,8 @@ TIMESTAMP [TIMEUNIT {value}]
 {% include /sql-guide/timestamp-timeunit-table.md %}
 
 ## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
 ### Implicitly convert integer to timestamp
 

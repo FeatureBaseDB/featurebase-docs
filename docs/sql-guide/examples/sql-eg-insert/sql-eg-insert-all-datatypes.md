@@ -37,8 +37,6 @@ id,boolcol,decimalcol,idcol,idsetcol,idsetcolq,intcol,stringcol,stringsetcol,str
 
 <!--NOTE: Numbering in below and the /assets/sql-eg/insert-bulk-all-cols.csv data source need to be kept in sync otherwise SELECT queries that follow will have different results-->
 
-<!-- IDENTIFIER CURRENTLY BROKEN -- see FB-2461
-
 ## INSERT STATEMENT using IDENTIFIER function
 
 This INSERT statement:
@@ -50,7 +48,6 @@ This INSERT statement:
 INSERT INTO all-datatypes (_id, stringcol, stringsetcol)
 VALUES (IDENTIFIER('all-datatypes'), '*', ['string val for ASCII function']);
 ```
--->
 
 ## INSERT STATEMENT for all columns
 

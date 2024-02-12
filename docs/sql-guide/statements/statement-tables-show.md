@@ -55,33 +55,14 @@ SHOW TABLES [WITH SYSTEM];
 
 ## Examples
 
-### Show your tables
-```
-SHOW TABLES;
-
-Results:
-
- _id                     | name                    | owner | updated_by | created_at                | updated_at                | keys  |  space_used | description
--------------------------+-------------------------+-------+------------+---------------------------+---------------------------+-------+-------------+------------------------------------
- skills                  | skills                  |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | true  |    37998707 |
-
-```
-
-### Show your tables and system tables
+{: .note}
+>Run the following statement before attempting the example that follows:
+> * [CREATE TABLE all-datatypes](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
 
 ```
 SHOW TABLES WITH SYSTEM;
-
-Results:
-
- _id                     | name                    | owner | updated_by | created_at                | updated_at                | keys  |  space_used | description
--------------------------+-------------------------+-------+------------+---------------------------+---------------------------+-------+-------------+------------------------------------
- fb_database_info        | fb_database_info        |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
- fb_database_nodes       | fb_database_nodes       |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
- fb_exec_requests        | fb_exec_requests        |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
- fb_performance_counters | fb_performance_counters |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
- fb_table_ddl            | fb_table_ddl            |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | false |           0 |
- fb_views                | fb_views                |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | true  |     8642560 | system table for views
- skills                  | skills                  |       |            | 1969-12-31T18:00:00-06:00 | 1969-12-31T18:00:00-06:00 | true  |    37998707 |
-
 ```
+
+## Further information
+
+* [FeatureBase Cloud system tables](/docs/sql-guide/system-tables/system-tables-home)

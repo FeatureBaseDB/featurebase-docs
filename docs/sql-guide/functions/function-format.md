@@ -42,7 +42,9 @@ format({specifier}, value,...)
 
 ## Examples
 
-### Format with multiple arguments.
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+### Format with multiple arguments
 
 Table definition and inserting values
 ```sql

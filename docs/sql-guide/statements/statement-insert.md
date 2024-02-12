@@ -70,6 +70,10 @@ There are special assignments for certain literal values.
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!--fix below so the examples are covered in the insert all-datatypes eg page-->
+
 {% include /sql-guide/sql-eg-insert-statements.md %}
 
 <!-- the following headings and sql commented out because most of them are in the insert statements include, above

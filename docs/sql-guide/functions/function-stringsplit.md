@@ -31,6 +31,8 @@ stringsplit(expr,seperator,position)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Split strings then return second substring
 
 ```sql

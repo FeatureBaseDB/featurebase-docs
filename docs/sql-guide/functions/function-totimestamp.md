@@ -40,6 +40,8 @@ TOTIMESTAMP(int_expr, [timeunit])
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Implicitly convert integer to timestamp.
 Implicit conversion will treat the integer value as seconds since unix epoch. Seconds is the default granularity of integer date-time value.
 

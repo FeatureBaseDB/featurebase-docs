@@ -52,6 +52,8 @@ When the `TUPLE()` function is used in `SELECT` and `BULK INSERT` statements, th
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### CREATE TABLE with SETQ Timequantum
 
 {% include /sql-guide/table-create-timequantum-eg.md %}

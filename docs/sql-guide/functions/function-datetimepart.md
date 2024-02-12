@@ -22,7 +22,6 @@ DATETIMEPART(timeunit, date-time)
 | timeunit | string | String value that specifies the time unit for the duration to be added to the target date-time. | Yes | [Time units](#timeunit).|
 | date-time | timestamp | The target date-time specified as literal or expression the time duration is added to. | Yes | |
 
-
 ## Returns
 
 | Data type | Value |
@@ -36,6 +35,8 @@ DATETIMEPART(timeunit, date-time)
 {% include /sql-guide/datetimename-function-timeunit-table.md %}
 
 ## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
 ### Select the month from a given date
 
@@ -68,5 +69,3 @@ select _id, datetimepart('w',ts) from demo;
 -----+----------
    1 | 4
 ```
-
-

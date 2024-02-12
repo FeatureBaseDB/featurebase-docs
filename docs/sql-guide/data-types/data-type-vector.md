@@ -37,6 +37,10 @@ Each distinct value must be:
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!--older-->
+
 * [CREATE TABLE with VECTOR data type](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-cosvec-target)
 * [INSERT INTO VECTOR data type](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-cosvec-target)
 * [SELECT FROM VECTOR data type](/docs/sql-guide/examples/sql-eg-select/sql-eg-select-from-cosvec-target)

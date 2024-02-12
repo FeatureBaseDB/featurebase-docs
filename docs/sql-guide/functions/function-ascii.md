@@ -33,6 +33,8 @@ ascii(expr)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### ASCII function on a column
 
 ```sql

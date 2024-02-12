@@ -31,6 +31,8 @@ substring(expr,startIndex,length)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Substring of the string in a column
 
 ```sql

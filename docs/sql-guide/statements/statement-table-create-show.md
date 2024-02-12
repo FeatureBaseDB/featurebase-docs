@@ -34,15 +34,14 @@ SHOW CREATE TABLE table_name;
 
 ## Examples
 
-### Show DDL for sample data `skills` table
+{: .note}
+>Run the following statement before attempting the example that follows:
+> * [CREATE TABLE all-datatypes](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
 
-The `skills` table is created automatically when a user chooses to create a Database with pre-loaded sample data.
+```
+SHOW CREATE TABLE all-datatypes;
 
-```
-SHOW CREATE TABLE skills;
-```
-Returns:
-```
-ddl
-"create table skills (_id string, bools stringset, bools-exists stringset, id int, skills stringset, titles stringset, doctest int);"
+ddl  |
+-----+
+create table all-datatypes (_id id, boolcol bool, decimalcol decimal(3), idcol id, idsetcol idset, idsetqcol idsetq timequantum 'YMD' ttl '24h0m0s', intcol int min 0 max 10000, stringcol string(max), stringsetcol stringset, stringsetqcol stringsetq timequantum 'YMD' ttl '24h0m0s', timestampcol timestamp timeunit 'ms', vectorcol vector(5) tuplestore);
 ```

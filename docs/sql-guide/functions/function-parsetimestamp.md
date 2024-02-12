@@ -62,11 +62,13 @@ PARSETIMESTAMP(expr, format)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### ParseTimesStamp
 ```sql
 create table demo
     (_id id, ts string);
-  
+
 insert into demo(_id, ts)
     values (1, '2023-01-02');
 insert into demo(_id, ts)

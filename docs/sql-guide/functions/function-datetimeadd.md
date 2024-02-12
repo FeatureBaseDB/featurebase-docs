@@ -48,6 +48,8 @@ Adding 1 day to current date time can be coded in multiple posible ways using va
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Add 62 years to date of birth to derive retirement date
 
 ```sql
@@ -86,7 +88,7 @@ insert into demo(_id, last_ad_run)
 insert into demo(_id, last_ad_run)
     values (3, '2023-03-03T21:30:00Z');
 insert into demo(_id, last_ad_run)
-    values (4, '2023-03-04T21:30:00Z'); 
+    values (4, '2023-03-04T21:30:00Z');
 
 select _id, last_ad_run, datetimeadd('hh',24,last_ad_run) as next_ad_run_time from demo;
 

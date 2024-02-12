@@ -29,6 +29,8 @@ char(int_expr)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### CHAR() function on a column.
 
 ```sql

@@ -20,7 +20,7 @@ prefix(expr, length)
 | Argument | Data type | Description | Required | Additional information |
 |---|---|---|---|---|
 | `expr` | string | String value or any expression that resolves to a string | Yes| |
-| `length` | int | Length of the prefix to extract | Yes | | 
+| `length` | int | Length of the prefix to extract | Yes | |
 
 ## Returns
 
@@ -28,8 +28,9 @@ prefix(expr, length)
 |---|---|
 | `string` | A prefix substring extracted from `expr` of length `length` |
 
-
 ## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
 ### Convert strings in a column to a prefix
 

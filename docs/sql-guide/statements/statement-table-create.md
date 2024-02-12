@@ -57,6 +57,11 @@ CREATE TABLE
 
 {% include /cloud-table/cloud-summary-table-pk.md %}
 
+## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!-- fix what follows-->
 <!--next include has heading "CREATE TABLE examples"-->
 
 {% include /sql-guide/sql-eg-table-create-statements.md %}

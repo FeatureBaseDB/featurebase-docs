@@ -77,6 +77,10 @@ SQL Operators are used in SELECT statements to perform mathematical and logical 
 |:---:|---|---|---|
 | `||` | Concatenate two strings into a single string. | `SELECT 'CON' || 'CAT';` | `CONCAT` |
 
+## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ## Further information
 
 FeatureBase also supports standard operators:

@@ -29,6 +29,8 @@ ltrim(expr)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Trim strings in a column
 
 ```sql

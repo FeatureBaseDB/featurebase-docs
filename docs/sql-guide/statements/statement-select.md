@@ -136,6 +136,10 @@ Both expressions can be aliased with a `<table_alias>`
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!--adapt the examples below for all-datatypes table-->
+
 {% include /sql-guide/sql-eg-select-statements.md %}
 
 <!-- The following examples need to be rolled into the examples, above-->

@@ -38,6 +38,10 @@ TUPLE(expr1,expr2,...)
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!--older examples-->
+
 {% include /sql-guide/create-table-tuple-demo-eg.md %}
 
 {% include /sql-guide/insert-bulk-transform-tuple-eg.md %}

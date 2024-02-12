@@ -43,6 +43,8 @@ A mismatched table name in the `INSERT INTO` statement and `IDENTIFIER()` functi
 
 ## Examples
 
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
 ### Destination Table
 ```sql
 CREATE TABLE auto-id

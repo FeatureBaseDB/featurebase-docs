@@ -22,7 +22,6 @@ DATE_TRUNC(timeunit, date-time)
 | timeunit | string | String value that specifies the time unit for the duration to be added to the target date-time. | Yes | [Time units](#timeunit).|
 | date-time | timestamp | The target date-time specified as literal or expression the time duration is added to. | Yes | |
 
-
 ## Returns
 
 | Data type | Value |
@@ -36,6 +35,8 @@ DATE_TRUNC(timeunit, date-time)
 {% include /sql-guide/datetimeadd-function-timeunit-table.md %}
 
 ## Examples
+
+{% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
 ### Display year and month only
 
@@ -68,5 +69,3 @@ select _id, date_trunc('mi',ts) from demo;
 -----+----------
    1 | 1970-01-01T00:00
 ```
-
-
