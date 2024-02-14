@@ -21,7 +21,10 @@ VARCHAR(<length> | max)
 | Argument | Description |
 |---|---|
 | `<length>` | integer value representing the number of characters allowed in the string |
-| `max` | Allow unlimited characters |
+{% include /sql-guide/max-val-string-varchar.md %}
+
+
+
 
 ## Additional information
 
