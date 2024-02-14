@@ -3,7 +3,7 @@ title: VARCHAR
 layout: default
 parent: Data types & constraints
 grand_parent: SQL guide
-nav_order: 7
+nav_order: 11
 ---
 
 # VARCHAR data type
