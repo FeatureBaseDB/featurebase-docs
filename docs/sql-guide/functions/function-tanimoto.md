@@ -8,8 +8,6 @@ grand_parent: SQL guide
 
 The TANIMOTO_COEFFICIENT scalar function quantifies the degree of similarity between two sets of data in a specified table or view as a part of a SELECT statement.
 
-<!-- QUERY - can JACCARD be substituted for TANIMOTO?-->
-
 ## Syntax
 
 ```sql

@@ -7,20 +7,20 @@ grand_parent: SQL guide
 
 # CHARINDEX() function
 
-The `Charindex()` function supplies an integer value that represents the start of a substring within a string value.
+The `CHARINDEX()` function supplies an integer value that represents the start of a substring within a string value.
 
 ## Syntax
 
 ```
-charindex(substring,expr,[position])
+CHARINDEX(<substring>,<expression>,[position])
 ```
 
 ## Arguments
 
 | Argument | Data type | Description | Required? | Additional information |
 |---|---|---|---|---|
-| `substring` | string | Character or string to be identified in the input string | Yes |  |
-| `expr` | string | Input string to search for `substring` | Yes |  [SQL expressions](/docs/sql-guide/expressions/expressions-home) |
+| `<substring>` | string | Character or string to be identified in the input string | Yes |  |
+| `<expression>` | string | Input string to search for `substring` | Yes |  [SQL expressions](/docs/sql-guide/expressions/expressions-home) |
 | `position` | int | Position in `expr` to begin search for `substring`. | Optional | Defaults to `0` |
 
 ## Returns
