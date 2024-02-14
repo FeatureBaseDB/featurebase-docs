@@ -41,13 +41,19 @@ id,boolcol,decimalcol,idcol,idsetcol,idsetcolq,intcol,stringcol,stringsetcol,str
 
 This INSERT statement:
 * uses the IDENTIFIER() function to automatically add an identifier to the `_id` column for this row
-* inserts a single character which will be queried in a SELECT...ASCII function query
+* inserts values which will be queried using the ASCII and CHAR functions
 * adds a single string value into the STRINGSET data type column
 
+
 ```sql
-INSERT INTO all-datatypes (_id, stringcol, stringsetcol)
-VALUES (IDENTIFIER('all-datatypes'), '*', ['string val for ASCII function']);
+INSERT INTO all-datatypes (_id, intcol, stringcol, stringsetcol)
+VALUES
+  (IDENTIFIER('all-datatypes'), 42, '*', ['int val for CHAR function', 'string val for ASCII function']);
 ```
+
+* [ASCII function](/docs/sql-guide/functions/function-ascii)
+* [CHAR function](/docs/sql-guide/functions/function-char)
+
 
 ## INSERT STATEMENT for all columns
 

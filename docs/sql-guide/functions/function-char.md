@@ -12,38 +12,22 @@ grand_parent: SQL guide
 ## Syntax
 
 ```
-char(int_expr)
+CHAR(<value> | <col-name>)
 ```
 
 ## Arguments
 
 | Argument | Description | Length |
 |---|---|---|---|
-| `int_expr` | Integer value between 0 and 255 representing the decimal value of an ASCII character. |
-
-## Returns
-
-| Data type | Value |
-|---|---|
-| `string` | ASCII character that equates to `int_expr` |
+| `<value>` | Integer value between 0 and 255 representing the decimal value of an ASCII character. |
+| `<col-name>` | Column name containing an integer value between 0 and 255 |
 
 ## Examples
 
 {% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
-### CHAR() function on a column.
+## CHAR() function on a column
 
 ```sql
-create table segments
-    (_id id, segment string, ascii_number int);
-
-insert into segments(_id, segment, ascii_number)
-    values (1,'red', 114)
-
-select _id, segment, char(ascii_number) as num from segments;
-+-----+----------+------+
-| _id | segment  | num  |
-+-----+----------+------+
-|   1 | red      | r    |
-+-----+----------+------+
+SELECT _id CHAR(intcol) FROM all-datatypes;
 ```

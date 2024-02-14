@@ -35,19 +35,8 @@ ascii(expr)
 
 {% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
-### ASCII function on a column
+## Convert string character to ASCII value
 
-```sql
-create table segments
-    (_id id, segment string);
-
-insert into segments(_id, segment)
-    values (1,'r')
-
-select _id, ascii(segment) as segment from segments;
-+-----+----------+
-| _id | segment  |
-+-----+----------+
-|   1 | 114      |
-+-----+----------+
+```
+SELECT _id, ASCII(stringcol) FROM all_datatypes;
 ```
