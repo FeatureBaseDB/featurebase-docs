@@ -13,7 +13,7 @@ nav_order: 7
 ## Syntax
 
 ```sql
-VARCHAR(<length> | max)
+VARCHAR([<length> | max])
 ```
 
 ## Arguments
