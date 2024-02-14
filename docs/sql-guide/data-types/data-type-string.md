@@ -15,7 +15,7 @@ The `STRING` data type has a `keyed-mutex` internal type and is recommended for 
 ## Syntax
 
 ```
-STRING[max]
+STRING[(max)]
 ```
 
 ## Arguments
