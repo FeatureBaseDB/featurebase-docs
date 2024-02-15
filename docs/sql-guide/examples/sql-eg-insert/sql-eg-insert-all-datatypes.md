@@ -58,7 +58,7 @@ VALUES
 ## INSERT STATEMENT for all columns
 
 ```sql
-INSERT INTO all-datatypes (_id, boolcol, decimalcol, idcol, idsetcol, idsetqcol, intcol, stringcol, stringsetcol, stringsetqcol, timestampcol, vectorcol)
+INSERT INTO all-datatypes (_id, boolcol, decimalcol, idcol, idsetcol, idsetqcol, intcol, stringcol, stringsetcol, stringsetqcol, timestampcol, varcharcol, vectorcol)
 VALUES
   (002,
   true,
