@@ -71,6 +71,7 @@ VALUES
   ['ten', 'twenty', 'thirty'],
   {'2023-11-21T02:01:03Z', ['one hundred', 'two hundred', 'three hundred']},
   '2023-11-21T00:00:00Z',
+  'Varchar col, 21 chars',
   [0.1,0.2,0.3,0.4,0.5]),
   (003,
   false,
@@ -83,6 +84,7 @@ VALUES
   ['eleven', 'twenty two', 'thirty three'],
   {'2024-11-21T00:00:00Z', ['one hundred and eleven', 'two hundred and twenty two', 'three hundred and thirty three']},
   '2024-11-21T00:00:00Z',
+  'A 21 character string',
   [0.11,0.22,0.33,0.44,0.55]);
 ```
 

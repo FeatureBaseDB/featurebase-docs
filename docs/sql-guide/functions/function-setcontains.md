@@ -32,20 +32,17 @@ SETCONTAINS(
 
 {% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
 
-### Testing set membership in the select list
-
-{% include /sql-guide/create-table-segments.md %}
-
-This query returns `true`.
+### SETCONTAINS a specific value
 
 ```sql
-select setcontains(segment, 'BLUE') as HasBlue  
-    from segments;  
+SELECT SETCONTAINS (idsetcol, '20') as Twenty FROM all-datatypes;
 ```
 
 ### Testing set membership as a where clause filter
 
 This query returns `true`.
+
+<!--check this because it returns the values in the SET column-->
 
 ```sql
 select _id, segment from segments where setcontains(segment, 'BLUE');

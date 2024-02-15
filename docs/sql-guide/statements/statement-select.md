@@ -78,6 +78,12 @@ SELECT
 
 ## Additional information
 
+### Table and column alias
+
+For any alias containing space characters:
+* replace spaces with `-` dash or `_` underscore characters, OR
+* double-quote the alias
+
 ### DISTINCT additional
 
 `DISTINCT` can return two kinds of results:
@@ -116,7 +122,7 @@ Wildcards are used with the `LIKE` clause.
 | Wildcard | Description | Additional information |
 |---|---|
 | `*` | All columns |  |
-| <column_alias> | Select List column alias |  |
+| `<column_alias>` | Select List column alias |  |
 | `expr` | Filter used to refine the query | [`<expr>` filter](#expr-filter) |
 | `<qualifier>.*` | limit the results to all columns based on the specified qualifier |  |
 

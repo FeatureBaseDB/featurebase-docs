@@ -43,12 +43,10 @@ INSERT INTO
 
 ### Limitations
 
-The `INSERT` statement has the following limitations:
-
 | Limitation | Example | Result |
 |---|---|---|
-| Number of values to INSERT must match the number of columns in `column_list` | `INSERT INTO productnames (_id, products, sales)` VALUES (1, 'FeatureBase') | Run fails with error |
-| Values in rows with duplicate `_id` keys are overwritten | `INSERT INTO productnames (_id, products, sales) VALUES (1, 'FeatureBase', 2468121), (1, 'Pilosa', 132940);` | Second row overwrites the first |
+| Each item in the `<column-list>` must have a matching `VALUE` | `INSERT INTO productnames (_id, products, sales) VALUES (1, 'FeatureBase')` | Run fails with error |
+| If an `_id` value matches an existing value in the target table, existing values are overwritten | `INSERT INTO productnames (_id, products, sales) VALUES (1, 'FeatureBase', 2468121), (1, 'Pilosa', 132940);` | Second row overwrites the first |
 | Null values in rows with duplicate `_id` keys are ignored | | `INSERT INTO competitors (_id, competitor) VALUES (1, 'BitQuick'), (1, NULL)` | NULL ignored |
 
 ### Value assignment

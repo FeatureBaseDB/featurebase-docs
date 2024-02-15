@@ -44,11 +44,11 @@ Literals are explicitly specified fixed values that conform to a specific data t
 
 ### [unary_op] expr
 
-* [Unary operators](/docs/sql-guide/operators/operators-home/#unary_op)
+* [Unary operators](/docs/sql-guide/operators/operators-home/#unary-operators)
 
 ### expr binary_op expr
 
-* [Binary operators](/docs/sql-guide/operators/operators-home/#binary_op)
+* [Binary operators](/docs/sql-guide/operators/operators-home/#binary-operators)
 
 ### function_call
 
