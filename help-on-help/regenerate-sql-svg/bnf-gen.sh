@@ -1,6 +1,8 @@
 echo "Have you updated sql3.ebnf? (yes/no)"
   read requirements
   if [[ "$requirements" == y* ]]; then
+    echo "Pull latest"
+      git pull
     echo "Generate bnf files"
       bash makebnf.sh
     echo "Extract the svg files"
