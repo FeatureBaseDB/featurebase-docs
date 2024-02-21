@@ -9,12 +9,12 @@
 
 sql3 = statement, [ ";" ] ;
 
-statement = show_tables
+statement = create_table_stmt
       | explain_stmt
       | show_columns
       | show_create_table
       | drop_table
-      | create_table_stmt
+      | show_tables
       | create_view_stmt
       | kill_query_stmt
       | alter_table_stmt
@@ -22,49 +22,6 @@ statement = show_tables
       | insert_stmt
       | bulk_insert_stmt
       | delete_stmt ;
-(*
-  EXPLAIN
-  ----------------
-  Generate execution plan for any statement
-*)
-explain_stmt = "EXPLAIN", "<statement>" ;
-
-(*
-
-  SHOW TABLES
-  ----------------
-  Shows the tables within a FeatureBase database, optionally with system tables.
-
-*)
-show_tables = "SHOW", "TABLES", [ "WITH SYSTEM" ] ;
-
-(*
-
-  SHOW COLUMNS
-  ----------------
-  Shows the columns on a FeatureBase table.
-
-*)
-show_columns = "SHOW", "COLUMNS", "FROM", identifier ;
-
-(*
-
-  SHOW CREATE TABLE
-  ----------------
-  Shows the ddl on a FeatureBase table.
-
-*)
-show_create_table = "SHOW", "CREATE", "TABLE", identifier ;
-
-(*
-
-  DROP TABLE
-  ----------------
-  Drops a FeatureBase table.
-
-*)
-drop_table = "DROP", "TABLE", [ "IF", "EXISTS" ], identifier ;
-
 
 (*
 
@@ -88,6 +45,50 @@ create_view_stmt = "CREATE", "VIEW", [ "IF", "NOT", "EXISTS" ], identifier, "AS"
 
 (*
 
+  SHOW CREATE TABLE
+  ----------------
+  Shows the ddl on a FeatureBase table.
+
+*)
+show_create_table = "SHOW", "CREATE", "TABLE", identifier ;
+
+(*
+
+  SHOW TABLES
+  ----------------
+  Shows the tables within a FeatureBase database, optionally with system tables.
+
+*)
+show_tables = "SHOW", "TABLES", [ "WITH SYSTEM" ] ;
+
+(*
+
+  SHOW COLUMNS
+  ----------------
+  Shows the columns on a FeatureBase table.
+
+*)
+show_columns = "SHOW", "COLUMNS", "FROM", identifier ;
+
+(*
+
+  DROP TABLE
+  ----------------
+  Drops a FeatureBase table.
+
+*)
+drop_table = "DROP", "TABLE", [ "IF", "EXISTS" ], identifier ;
+
+
+(*
+  EXPLAIN
+  ----------------
+  Generate execution plan for any statement
+*)
+explain_stmt = "EXPLAIN", "<statement>" ;
+
+(*
+
   KILL QUERY
   ----------------
   Cancels a running query.
@@ -99,25 +100,30 @@ kill_query_stmt = "KILL", "QUERY", string_literal;
 
   Column Constraint
   ----------------
-  Constraints for a column:
-
+  Constraints for a column apply to specific data types:
   SCALE for Decimal
-  MIN, MAX - min/max for int types
-  TIMEUNIT - 's', 'ms' etc.
-
+  MIN - for int types
+  MAX - for int, string and varchar
   TIMEQUANTUM - 'YMD' etc.
+  TIMEUNIT - 's', 'ms' etc. for timequantum and timestamp
 
 *)
 column_constraint =
         "MIN", integer_literal
-      | "MAX", integer_literal
-      | "TIMEUNIT", string_literal
-      | "TIMEQUANTUM", string_literal, [ "TTL", string_literal ];
+      | "MAX", [ integer_literal ]
+      | "SCALE", integer_literal
+      | "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
+      | "TIMEUNIT", string_literal;
 
 table_options = "COMMENT", string_literal ;
 
+(*
+  Data types
+  All data types and their constraints
+*)
+
 type_name = "BOOL"
-    | "DECIMAL", [ ("SCALE", integer_literal) ]
+    | "DECIMAL", [ "SCALE", integer_literal ]
     | "ID"
     | "IDSET"
     | "IDSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
