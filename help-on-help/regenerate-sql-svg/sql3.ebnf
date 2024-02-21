@@ -10,6 +10,7 @@
 sql3 = statement, [ ";" ] ;
 
 statement = show_tables
+      | explain_stmt
       | show_columns
       | show_create_table
       | drop_table
@@ -21,6 +22,12 @@ statement = show_tables
       | insert_stmt
       | bulk_insert_stmt
       | delete_stmt ;
+(*
+  EXPLAIN
+  ----------------
+  Generate execution plan for any statement
+*)
+explain_stmt = "EXPLAIN", "<statement>" ;
 
 (*
 
