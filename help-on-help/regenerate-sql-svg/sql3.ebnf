@@ -10,18 +10,18 @@
 sql3 = statement, [ ";" ] ;
 
 statement = create_table_stmt
-      | explain_stmt
-      | show_columns
-      | show_create_table
-      | drop_table
-      | show_tables
-      | create_view_stmt
-      | kill_query_stmt
       | alter_table_stmt
-      | select_stmt
+      | create_view_stmt
+      | show_create_table
+      | show_tables
+      | show_columns
       | insert_stmt
       | bulk_insert_stmt
+      | select_stmt
+      | drop_table
       | delete_stmt ;
+      | explain_stmt
+      | kill_query_stmt
 
 (*
 
@@ -30,9 +30,24 @@ statement = create_table_stmt
   Creates a FeatureBase table.
 
 *)
-create_table_stmt = "CREATE", "TABLE", [ "IF", "NOT", "EXISTS" ], identifier, "(", column_def, { ",", column_def }, ")", { table_options } ;
+create_table_stmt = "CREATE", "TABLE", [ "IF", "NOT", "EXISTS" ], identifier, "(", column_def, { ",", column_def }, ")", [ "COMMENT", string_literal ];
 
 column_def = identifier, type_name, { column_constraint } ;
+
+(*
+
+  ALTER TABLE
+  ----------------
+  Alters a FeatureBase table.
+
+*)
+alter_table_stmt = "ALTER", "TABLE", ( add_column | drop_column | rename_column ) ;
+
+add_column = "ADD", [ "COLUMN" ], column_def ;
+
+drop_column =  "DROP", [ "COLUMN" ], identifier ;
+
+rename_column = "RENAME", [ "COLUMN" ], identifier, "TO", identifier ;
 
 (*
 
@@ -72,86 +87,6 @@ show_columns = "SHOW", "COLUMNS", "FROM", identifier ;
 
 (*
 
-  DROP TABLE
-  ----------------
-  Drops a FeatureBase table.
-
-*)
-drop_table = "DROP", "TABLE", [ "IF", "EXISTS" ], identifier ;
-
-
-(*
-  EXPLAIN
-  ----------------
-  Generate execution plan for any statement
-*)
-explain_stmt = "EXPLAIN", "<statement>" ;
-
-(*
-
-  KILL QUERY
-  ----------------
-  Cancels a running query.
-
-*)
-kill_query_stmt = "KILL", "QUERY", string_literal;
-
-(*
-
-  Column Constraint
-  ----------------
-  Constraints for a column apply to specific data types:
-  SCALE for Decimal
-  MIN - for int types
-  MAX - for int, string and varchar
-  TIMEQUANTUM - 'YMD' etc.
-  TIMEUNIT - 's', 'ms' etc. for timequantum and timestamp
-
-*)
-column_constraint =
-        "MIN", integer_literal
-      | "MAX", [ integer_literal ]
-      | "SCALE", integer_literal
-      | "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
-      | "TIMEUNIT", string_literal;
-
-table_options = "COMMENT", string_literal ;
-
-(*
-  Data types
-  All data types and their constraints
-*)
-
-type_name = "BOOL"
-    | "DECIMAL", [ "SCALE", integer_literal ]
-    | "ID"
-    | "IDSET"
-    | "IDSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
-    | "INT", [ "MIN", integer_literal], ["MAX", integer_literal ]
-    | "STRING", [ "MAX" ]
-    | "STRINGSET"
-    | "STRINGSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
-    | "TIMESTAMP", "TIMEUNIT", integer_literal
-    | "VARCHAR", [integer_literal], ["MAX"]
-    | "VECTOR", integer_literal;
-
-(*
-
-  ALTER TABLE
-  ----------------
-  Alters a FeatureBase table.
-
-*)
-alter_table_stmt = "ALTER", "TABLE", ( add_column | drop_column | rename_column ) ;
-
-add_column = "ADD", [ "COLUMN" ], column_def ;
-
-drop_column =  "DROP", [ "COLUMN" ], identifier ;
-
-rename_column = "RENAME", [ "COLUMN" ], identifier, "TO", identifier ;
-
-(*
-
   INSERT
   ----------------
   Inserts data into a FeatureBase table.
@@ -176,69 +111,6 @@ bulk_insert_stmt = "BULK", ( "INSERT" | "REPLACE" ), "INTO", table_name, [ colum
 
 *)
 bulk_insert_steps = "SOURCE DATA", "MAP DATA", [ "TRANSFORM DATA" ], "INSERT DATA" ;
-
-(*
-
-  Examples
-  ----------------
-
-Bulk insert from a csv file - assumes that the server has access to the file at that path. `map` clause for csv files is the column index.
-
-  `bulk insert into testtable (_id, i1, 12, d1) map (0, 1, 2, 3) from '/users/foo/bar.csv' with format csv batchsize 1000 rowslimit 10000;`
-
-Source could be an url.
-
-  `bulk insert into testtable (_id, i1, 12, d1) map (0, 1, 2, 3) from 'https://foo.bar.com/bar.csv' with format csv batchsize 1000 rowslimit 10000;`
-
-Pre-batching transformation of values using a values clause - to refer to the new column value from the source we can use `$value`.
-
-  `bulk insert into testtable (_id, i1, i2, d1) map (0, 1, 2, 3) transform ($value, $value + 2, $value, $value) from '/users/foo/bar.csv' with format csv batchsize 1000 rowslimit 10000;`
-
-We can support ndjson as a format - in this case the `map` clause contains jsonpath expressions.
-
-  `bulk insert into testtable (_id, i1, 12, d1) map ('$.foo', '$.bar', '$.baz', '$.boo') transform ($value, $value + 2, $value, $value) from '/users/foo/bar.json' with format ndjson batchsize 1000 rowslimit 10000;`
-
-Another variant with an inline 'stream' (multi-line string delimiter to be decided).
-
-  `bulk insert into testtable (_id, i1, 12, d1) map ('$.foo', '$.bar', '$.baz', '$.boo') transform ($value, $value + 2, $value, $value) from
-  """
-  {"foo": 1000, "bar": 10, "baz": 20, "boo": 3}
-  """
-  with input stream format ndjson batchsize 1000 rowslimit 10000;`
-
-*)
-
-column_list =
-  "(", column_name, { ",", column_name }, ")" ;
-
-map_list =
-  "(", expr type_name, { ",", expr type_name }, ")" ;
-
-value_list =
-  "(", expr, { ",", expr }, ")" ;
-
-bulk_insert_options =
-  bulk_insert_option, { bulk_insert_option } ;
-
-bulk_insert_option =
-      "BATCHSIZE", integer_literal
-    | "ROWSLIMIT", integer_literal
-    | "INPUT", string_literal
-    | "FORMAT", string_literal
-    | "NULL_AS_EMPTY_SET"
-    | "ALLOW_MISSING_VALUES"
-    | "HEADER_ROW"
-    | "CSV_EMPTY_STRING_AS_NULL"
-    | "CSV_NULL_AS_NULL" ;
-
-(*
-
-  DELETE
-  ----------------
-  Deletes data from a FeatureBase table.
-
-*)
-delete_stmt = "DELETE" ;
 
 (*
 
@@ -286,6 +158,78 @@ having_clause = "HAVING", expr ;
 order_by_clause = "ORDER", "BY", order_by_expression, { ",", order_by_expression };
 
 order_by_expression = expr, [ "ASC" | "DESC" ] ;
+
+(*
+
+  DROP TABLE
+  ----------------
+  Drops a FeatureBase table.
+
+*)
+drop_table = "DROP", "TABLE", [ "IF", "EXISTS" ], identifier ;
+
+
+(*
+  EXPLAIN
+  ----------------
+  Generate execution plan for any statement
+*)
+explain_stmt = "EXPLAIN", "<statement>" ;
+
+(*
+
+  KILL QUERY
+  ----------------
+  Cancels a running query.
+
+*)
+kill_query_stmt = "KILL", "QUERY", string_literal;
+
+(*
+
+  DELETE
+  ----------------
+  Deletes data from a FeatureBase table.
+
+*)
+delete_stmt = "DELETE" ;
+
+(*
+
+  Column Constraints
+  ------------------
+  Constraints for a column apply to specific data types:
+  MIN - for int types
+  MAX - for int, string and varchar
+  SCALE for Decimal
+  TIMEQUANTUM - 'YMD' etc.
+  TIMEUNIT - 's', 'ms' etc. for timequantum and timestamp
+
+*)
+column_constraint =
+        "MIN", integer_literal
+      | "MAX", [ integer_literal ]
+      | "SCALE", integer_literal
+      | "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
+      | "TIMEUNIT", string_literal;
+
+(*
+  Data types
+  All data types and their constraints
+*)
+
+type_name = "BOOL"
+    | "DECIMAL", [ "SCALE", integer_literal ]
+    | "ID"
+    | "IDSET"
+    | "IDSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
+    | "INT", [ "MIN", integer_literal], ["MAX", integer_literal ]
+    | "STRING", [ "MAX" ]
+    | "STRINGSET"
+    | "STRINGSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
+    | "TIMESTAMP", "TIMEUNIT", integer_literal
+    | "VARCHAR", [integer_literal], ["MAX"]
+    | "VECTOR", integer_literal;
 
 
 (*
@@ -377,6 +321,60 @@ letter = "A" | "B" | "C" | "D" | "E" | "F" | "G"
        | "x" | "y" | "z" ;
 
 digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+
+(*
+
+  Examples
+  ----------------
+
+Bulk insert from a csv file - assumes that the server has access to the file at that path. `map` clause for csv files is the column index.
+
+  `bulk insert into testtable (_id, i1, 12, d1) map (0, 1, 2, 3) from '/users/foo/bar.csv' with format csv batchsize 1000 rowslimit 10000;`
+
+Source could be an url.
+
+  `bulk insert into testtable (_id, i1, 12, d1) map (0, 1, 2, 3) from 'https://foo.bar.com/bar.csv' with format csv batchsize 1000 rowslimit 10000;`
+
+Pre-batching transformation of values using a values clause - to refer to the new column value from the source we can use `$value`.
+
+  `bulk insert into testtable (_id, i1, i2, d1) map (0, 1, 2, 3) transform ($value, $value + 2, $value, $value) from '/users/foo/bar.csv' with format csv batchsize 1000 rowslimit 10000;`
+
+We can support ndjson as a format - in this case the `map` clause contains jsonpath expressions.
+
+  `bulk insert into testtable (_id, i1, 12, d1) map ('$.foo', '$.bar', '$.baz', '$.boo') transform ($value, $value + 2, $value, $value) from '/users/foo/bar.json' with format ndjson batchsize 1000 rowslimit 10000;`
+
+Another variant with an inline 'stream' (multi-line string delimiter to be decided).
+
+  `bulk insert into testtable (_id, i1, 12, d1) map ('$.foo', '$.bar', '$.baz', '$.boo') transform ($value, $value + 2, $value, $value) from
+  """
+  {"foo": 1000, "bar": 10, "baz": 20, "boo": 3}
+  """
+  with input stream format ndjson batchsize 1000 rowslimit 10000;`
+
+*)
+
+column_list =
+  "(", column_name, { ",", column_name }, ")" ;
+
+map_list =
+  "(", expr type_name, { ",", expr type_name }, ")" ;
+
+value_list =
+  "(", expr, { ",", expr }, ")" ;
+
+bulk_insert_options =
+  bulk_insert_option, { bulk_insert_option } ;
+
+bulk_insert_option =
+      "BATCHSIZE", integer_literal
+    | "ROWSLIMIT", integer_literal
+    | "INPUT", string_literal
+    | "FORMAT", string_literal
+    | "NULL_AS_EMPTY_SET"
+    | "ALLOW_MISSING_VALUES"
+    | "HEADER_ROW"
+    | "CSV_EMPTY_STRING_AS_NULL"
+    | "CSV_NULL_AS_NULL" ;
 
 (*
   Grammar
