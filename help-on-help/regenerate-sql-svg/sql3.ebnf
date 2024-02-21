@@ -121,7 +121,7 @@ type_name = "BOOL"
     | "ID"
     | "IDSET"
     | "IDSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
-    | "INT", [ "MIN", integer_literal, | "MAX", integer_literal ]
+    | "INT", [ "MIN", integer_literal], ["MAX", integer_literal ]
     | "STRING", [ "MAX" ]
     | "STRINGSET"
     | "STRINGSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
