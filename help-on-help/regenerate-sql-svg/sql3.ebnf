@@ -15,7 +15,7 @@
   item -- lower-case text representing variables such as literals are rendered as a square cornered block
 *)
 
-
+ebnf_grammar = "SYNTAX", variables, [item1 | item2], {item1, item2}, - exception;
 
 (*
 
