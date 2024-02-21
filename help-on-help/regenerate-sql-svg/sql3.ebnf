@@ -57,6 +57,8 @@ show_create_table = "SHOW", "CREATE", "TABLE", identifier ;
 
 *)
 drop_table = "DROP", "TABLE", [ "IF", "EXISTS" ], identifier ;
+
+
 (*
 
   CREATE TABLE
@@ -107,18 +109,16 @@ column_constraint =
 
 table_options = "COMMENT", string_literal ;
 
-type_name = "BOOL"
+type_name = "INT"
+    | "BOOL"
+    | "TIMESTAMP"
     | "DECIMAL"
-    | "ID"
-    | "IDSET"
-    | "IDSETQ"
-    | "INT"
     | "STRING"
     | "STRINGSET"
     | "STRINGSETQ"
-    | "TIMESTAMP"
-    | "VARCHAR"
-    | "VECTOR" ;
+    | "ID"
+    | "IDSET"
+    | "IDSETQ" ;
 
 (*
 
