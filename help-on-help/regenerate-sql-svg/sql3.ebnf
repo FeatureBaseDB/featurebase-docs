@@ -117,17 +117,17 @@ column_constraint =
 table_options = "COMMENT", string_literal ;
 
 type_name = "BOOL"
-    | "DECIMAL", ["SCALE", integer_literal]
+    | "DECIMAL", [ "SCALE", integer_literal ]
     | "ID"
     | "IDSET"
-    | "IDSETQ", { "TIMEQUANTUM", string_literal, [ "TTL", string_literal ] }
-    | "INT", [ "MIN", integer_literal, ["MAX", integer_literal]]
-    | "STRING", ["MAX"]
+    | "IDSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
+    | "INT", [ "MIN", integer_literal, | "MAX", integer_literal ]
+    | "STRING", [ "MAX" ]
     | "STRINGSET"
-    | "STRINGSETQ", { "TIMEQUANTUM", string_literal, [ "TTL", string_literal ] }
+    | "STRINGSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
     | "TIMESTAMP", "TIMEUNIT", integer_literal
-    | "VARCHAR", {integer_literal | "MAX"}
-    | "VECTOR", {integer_literal};
+    | "VARCHAR", integer_literal | "MAX"
+    | "VECTOR", integer_literal;
 
 (*
 
