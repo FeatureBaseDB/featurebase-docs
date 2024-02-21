@@ -19,9 +19,9 @@ statement = create_table_stmt
       | bulk_insert_stmt
       | select_stmt
       | drop_table
-      | delete_stmt ;
+      | delete_stmt
       | explain_stmt
-      | kill_query_stmt
+      | kill_query_stmt;
 
 (*
 
