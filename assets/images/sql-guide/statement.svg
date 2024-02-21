@@ -12,15 +12,15 @@
    <path d="M40 31h20">
    </path>
    <g class="non-terminal">
-    <path d="M60 31h25.5">
+    <path d="M60 31h0">
     </path>
-    <path d="M199 31h25.5">
+    <path d="M224.5 31h0">
     </path>
-    <rect height="22" width="113.5" x="85.5" y="20">
+    <rect height="22" width="164.5" x="60" y="20">
     </rect>
     <a>
      <text x="142.25" y="35">
-      show_tables
+      create_table_stmt
      </text>
     </a>
    </g>
@@ -29,15 +29,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 61h21.25">
+    <path d="M60 61h4.25">
     </path>
-    <path d="M203.25 61h21.25">
+    <path d="M220.25 61h4.25">
     </path>
-    <rect height="22" width="122" x="81.25" y="50">
+    <rect height="22" width="156" x="64.25" y="50">
     </rect>
     <a>
      <text x="142.25" y="65">
-      explain_stmt
+      alter_table_stmt
      </text>
     </a>
    </g>
@@ -46,15 +46,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 91h21.25">
+    <path d="M60 91h4.25">
     </path>
-    <path d="M203.25 91h21.25">
+    <path d="M220.25 91h4.25">
     </path>
-    <rect height="22" width="122" x="81.25" y="80">
+    <rect height="22" width="156" x="64.25" y="80">
     </rect>
     <a>
      <text x="142.25" y="95">
-      show_columns
+      create_view_stmt
      </text>
     </a>
    </g>
@@ -80,15 +80,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v100a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 151h29.75">
+    <path d="M60 151h25.5">
     </path>
-    <path d="M194.75 151h29.75">
+    <path d="M199 151h25.5">
     </path>
-    <rect height="22" width="105" x="89.75" y="140">
+    <rect height="22" width="113.5" x="85.5" y="140">
     </rect>
     <a>
      <text x="142.25" y="155">
-      drop_table
+      show_tables
      </text>
     </a>
    </g>
@@ -97,15 +97,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v130a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 181h0">
+    <path d="M60 181h21.25">
     </path>
-    <path d="M224.5 181h0">
+    <path d="M203.25 181h21.25">
     </path>
-    <rect height="22" width="164.5" x="60" y="170">
+    <rect height="22" width="122" x="81.25" y="170">
     </rect>
     <a>
      <text x="142.25" y="185">
-      create_table_stmt
+      show_columns
      </text>
     </a>
    </g>
@@ -114,15 +114,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v160a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 211h4.25">
+    <path d="M60 211h25.5">
     </path>
-    <path d="M220.25 211h4.25">
+    <path d="M199 211h25.5">
     </path>
-    <rect height="22" width="156" x="64.25" y="200">
+    <rect height="22" width="113.5" x="85.5" y="200">
     </rect>
     <a>
      <text x="142.25" y="215">
-      create_view_stmt
+      insert_stmt
      </text>
     </a>
    </g>
@@ -131,15 +131,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v190a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 241h8.5">
+    <path d="M60 241h4.25">
     </path>
-    <path d="M216 241h8.5">
+    <path d="M220.25 241h4.25">
     </path>
-    <rect height="22" width="147.5" x="68.5" y="230">
+    <rect height="22" width="156" x="64.25" y="230">
     </rect>
     <a>
      <text x="142.25" y="245">
-      kill_query_stmt
+      bulk_insert_stmt
      </text>
     </a>
    </g>
@@ -148,15 +148,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v220a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 271h4.25">
+    <path d="M60 271h25.5">
     </path>
-    <path d="M220.25 271h4.25">
+    <path d="M199 271h25.5">
     </path>
-    <rect height="22" width="156" x="64.25" y="260">
+    <rect height="22" width="113.5" x="85.5" y="260">
     </rect>
     <a>
      <text x="142.25" y="275">
-      alter_table_stmt
+      select_stmt
      </text>
     </a>
    </g>
@@ -165,15 +165,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v250a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 301h25.5">
+    <path d="M60 301h29.75">
     </path>
-    <path d="M199 301h25.5">
+    <path d="M194.75 301h29.75">
     </path>
-    <rect height="22" width="113.5" x="85.5" y="290">
+    <rect height="22" width="105" x="89.75" y="290">
     </rect>
     <a>
      <text x="142.25" y="305">
-      select_stmt
+      drop_table
      </text>
     </a>
    </g>
@@ -190,7 +190,7 @@
     </rect>
     <a>
      <text x="142.25" y="335">
-      insert_stmt
+      delete_stmt
      </text>
     </a>
    </g>
@@ -199,15 +199,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v310a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 361h4.25">
+    <path d="M60 361h21.25">
     </path>
-    <path d="M220.25 361h4.25">
+    <path d="M203.25 361h21.25">
     </path>
-    <rect height="22" width="156" x="64.25" y="350">
+    <rect height="22" width="122" x="81.25" y="350">
     </rect>
     <a>
      <text x="142.25" y="365">
-      bulk_insert_stmt
+      explain_stmt
      </text>
     </a>
    </g>
@@ -216,15 +216,15 @@
    <path d="M40 31a10 10 0 0 1 10 10v340a10 10 0 0 0 10 10">
    </path>
    <g class="non-terminal">
-    <path d="M60 391h25.5">
+    <path d="M60 391h8.5">
     </path>
-    <path d="M199 391h25.5">
+    <path d="M216 391h8.5">
     </path>
-    <rect height="22" width="113.5" x="85.5" y="380">
+    <rect height="22" width="147.5" x="68.5" y="380">
     </rect>
     <a>
      <text x="142.25" y="395">
-      delete_stmt
+      kill_query_stmt
      </text>
     </a>
    </g>
