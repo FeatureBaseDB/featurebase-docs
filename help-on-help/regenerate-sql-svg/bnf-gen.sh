@@ -5,9 +5,8 @@ echo "Have you updated sql3.ebnf? (yes/no)"
       bash makebnf.sh
     echo "Extract the svg files"
       python3 extract.py
-    echo "List updated svg files in assets folder"
+    echo "Check if your updated file exists:"
      ls ~/featurebase-docs/assets/images/sql-guide
-    echo "Remember to run git commit -a, and git push!"
   else
     echo "Computer says NO."
   fi
