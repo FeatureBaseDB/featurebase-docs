@@ -36,6 +36,9 @@ Use `pip` or `conda` to install dependencies if these are not already installed.
 
 ## Step 2 - Make changes to source file
 
+{: .note}
+Extended Bakaus Naur Form grammar is listed at the top of the sql3.ebnf file
+
 * CD to `featurebase-docs/help-on-help/regenerate-sql-svg`
 * Edit  `sql3.ebnf`
 

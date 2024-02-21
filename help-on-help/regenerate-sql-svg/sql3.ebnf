@@ -1,4 +1,23 @@
 (*
+  Grammar
+  ----------
+  Based on https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form
+
+  "name = " -- name of output file for the definition
+  " = " -- definition follows
+  " , " -- concatentation represented by connected elements
+  " ; " -- terminator represented by two vertical lines
+  "item1 | item2" -- item1 and item2 are connected by divided lines, which represent alternation or multiple items that can be used in the context
+  {item1} -- repeat the items within, represented by a looping line
+  "..." -- terminal string
+  " - " exception
+  "NAME" -- double-quoted NAME represents syntax element and block renders with curved corners.
+  item -- lower-case text representing variables such as literals are rendered as a square cornered block
+*)
+
+
+
+(*
 
   sql3
   ==========================
