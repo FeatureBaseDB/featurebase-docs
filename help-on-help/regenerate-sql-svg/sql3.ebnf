@@ -32,7 +32,7 @@ statement = create_table_stmt
   Creates a FeatureBase table.
 
 *)
-create_table_stmt = "CREATE", "TABLE", [ "IF", "NOT", "EXISTS" ], "(", "_id", ["ID", | "STRING" ], {column_def,} ")", [ "COMMENT", string_literal ];
+create_table_stmt = "CREATE", "TABLE", [ "IF", "NOT", "EXISTS" ], "(", "_id", ["ID", | "STRING" ], {column_def}, ")", [ "COMMENT", string_literal ];
 
 column_def = { identifier, type_name, [column_constraint] } ;
 
@@ -42,7 +42,7 @@ column_def = { identifier, type_name, [column_constraint] } ;
   Alters a FeatureBase table.
 *)
 
-alter_table_stmt = "ALTER", "TABLE", identifier, ( add_column | drop_column ) ;
+alter_table_stmt = "ALTER", "TABLE", table_name, ( add_column | drop_column ) ;
 
 add_column = "ADD", [ "COLUMN" ], column_def ;
 
