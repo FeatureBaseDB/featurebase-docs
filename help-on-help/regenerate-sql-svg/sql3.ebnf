@@ -12,14 +12,14 @@ sql3 = statement, [ ";" ] ;
 statement = create_table_stmt
       | alter_table_stmt
       | create_view_stmt
-      | show_create_table
-      | show_tables
-      | show_columns
       | insert_stmt
       | bulk_insert_stmt
       | select_stmt
       | drop_table
       | delete_stmt
+      | show_create_table
+      | show_columns
+      | show_tables
       | explain_stmt
       | kill_query_stmt;
 
@@ -35,19 +35,20 @@ create_table_stmt = "CREATE", "TABLE", [ "IF", "NOT", "EXISTS" ], identifier, "(
 column_def = identifier, type_name, { column_constraint } ;
 
 (*
-
   ALTER TABLE
   ----------------
   Alters a FeatureBase table.
-
 *)
-alter_table_stmt = "ALTER", "TABLE", ( add_column | drop_column | rename_column ) ;
+
+alter_table_stmt = "ALTER", "TABLE", identifier, ( add_column | drop_column ) ;
 
 add_column = "ADD", [ "COLUMN" ], column_def ;
 
 drop_column =  "DROP", [ "COLUMN" ], identifier ;
 
+(* rename not supported at 2024-02-22
 rename_column = "RENAME", [ "COLUMN" ], identifier, "TO", identifier ;
+*)
 
 (*
 
@@ -58,33 +59,6 @@ rename_column = "RENAME", [ "COLUMN" ], identifier, "TO", identifier ;
 *)
 
 create_view_stmt = "CREATE", "VIEW", [ "IF", "NOT", "EXISTS" ], identifier, "AS", select_statement ;
-
-(*
-
-  SHOW CREATE TABLE
-  ----------------
-  Shows the ddl on a FeatureBase table.
-
-*)
-show_create_table = "SHOW", "CREATE", "TABLE", identifier ;
-
-(*
-
-  SHOW TABLES
-  ----------------
-  Shows the tables within a FeatureBase database, optionally with system tables.
-
-*)
-show_tables = "SHOW", "TABLES", [ "WITH SYSTEM" ] ;
-
-(*
-
-  SHOW COLUMNS
-  ----------------
-  Shows the columns on a FeatureBase table.
-
-*)
-show_columns = "SHOW", "COLUMNS", "FROM", identifier ;
 
 (*
 
@@ -171,11 +145,37 @@ drop_table = "DROP", "TABLE", [ "IF", "EXISTS" ], identifier ;
 
 
 (*
+  SHOW CREATE TABLE
+  ----------------
+  Shows the ddl on a FeatureBase table.
+*)
+
+show_create_table = "SHOW", "CREATE", "TABLE", identifier ;
+
+(*
+
+  SHOW COLUMNS
+  ----------------
+  Shows the columns on a FeatureBase table.
+
+*)
+show_columns = "SHOW", "COLUMNS", "FROM", identifier ;
+
+(*
+
+  SHOW TABLES
+  ----------------
+  Shows the tables within a FeatureBase database, optionally with system tables.
+
+*)
+show_tables = "SHOW", "TABLES", [ "WITH SYSTEM" ] ;
+
+(*
   EXPLAIN
   ----------------
   Generate execution plan for any statement
 *)
-explain_stmt = "EXPLAIN", "<statement>" ;
+explain_stmt = "EXPLAIN", "statement" ;
 
 (*
 
@@ -220,7 +220,7 @@ column_constraint =
 *)
 
 type_name = "BOOL"
-    | "DECIMAL", [ "SCALE", integer_literal ]
+    | "DECIMAL", [ "(", "SCALE", integer_literal ")" ]
     | "ID"
     | "IDSET"
     | "IDSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
