@@ -27,42 +27,57 @@
    <path d="M40 31a10 10 0 0 1 10 10v18a10 10 0 0 0 10 10">
    </path>
    <g>
-    <path d="M60 69h146.25">
+    <path d="M60 69h97.75">
     </path>
-    <path d="M565.75 69h146.25">
+    <path d="M614.25 69h97.75">
     </path>
     <g class="terminal">
-     <path d="M206.25 69h0">
+     <path d="M157.75 69h0">
      </path>
-     <path d="M285.75 69h0">
+     <path d="M237.25 69h0">
      </path>
-     <rect height="22" rx="10" ry="10" width="79.5" x="206.25" y="58">
+     <rect height="22" rx="10" ry="10" width="79.5" x="157.75" y="58">
      </rect>
-     <text x="246" y="73">
+     <text x="197.5" y="73">
       DECIMAL
      </text>
     </g>
-    <path d="M285.75 69h10">
+    <path d="M237.25 69h10">
     </path>
     <g>
-     <path d="M295.75 69h0">
+     <path d="M247.25 69h0">
      </path>
-     <path d="M565.75 69h0">
+     <path d="M614.25 69h0">
      </path>
-     <path d="M295.75 69a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
+     <path d="M247.25 69a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
      </path>
      <g>
-      <path d="M315.75 49h230">
+      <path d="M267.25 49h327">
       </path>
      </g>
-     <path d="M545.75 49a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
+     <path d="M594.25 49a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
      </path>
-     <path d="M295.75 69h20">
+     <path d="M247.25 69h20">
      </path>
      <g>
-      <path d="M315.75 69h0">
+      <path d="M267.25 69h0">
       </path>
-      <path d="M545.75 69h0">
+      <path d="M594.25 69h0">
+      </path>
+      <g class="terminal">
+       <path d="M267.25 69h0">
+       </path>
+       <path d="M295.75 69h0">
+       </path>
+       <rect height="22" rx="10" ry="10" width="28.5" x="267.25" y="58">
+       </rect>
+       <text x="281.5" y="73">
+        (
+       </text>
+      </g>
+      <path d="M295.75 69h10">
+      </path>
+      <path d="M305.75 69h10">
       </path>
       <g class="terminal">
        <path d="M315.75 69h0">
@@ -92,8 +107,23 @@
         </text>
        </a>
       </g>
+      <path d="M545.75 69h10">
+      </path>
+      <path d="M555.75 69h10">
+      </path>
+      <g class="terminal">
+       <path d="M565.75 69h0">
+       </path>
+       <path d="M594.25 69h0">
+       </path>
+       <rect height="22" rx="10" ry="10" width="28.5" x="565.75" y="58">
+       </rect>
+       <text x="580" y="73">
+        )
+       </text>
+      </g>
      </g>
-     <path d="M545.75 69h20">
+     <path d="M594.25 69h20">
      </path>
     </g>
    </g>
@@ -366,50 +396,86 @@
    <path d="M40 31a10 10 0 0 1 10 10v192a10 10 0 0 0 10 10">
    </path>
    <g>
-    <path d="M60 243h242.75">
+    <path d="M60 243h194.25">
     </path>
-    <path d="M469.25 243h242.75">
+    <path d="M517.75 243h194.25">
     </path>
     <g class="terminal">
-     <path d="M302.75 243h0">
+     <path d="M254.25 243h0">
      </path>
-     <path d="M373.75 243h0">
+     <path d="M325.25 243h0">
      </path>
-     <rect height="22" rx="10" ry="10" width="71" x="302.75" y="232">
+     <rect height="22" rx="10" ry="10" width="71" x="254.25" y="232">
      </rect>
-     <text x="338.25" y="247">
+     <text x="289.75" y="247">
       STRING
      </text>
     </g>
-    <path d="M373.75 243h10">
+    <path d="M325.25 243h10">
     </path>
     <g>
-     <path d="M383.75 243h0">
+     <path d="M335.25 243h0">
      </path>
-     <path d="M469.25 243h0">
+     <path d="M517.75 243h0">
      </path>
-     <path d="M383.75 243a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
+     <path d="M335.25 243a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
      </path>
      <g>
-      <path d="M403.75 223h45.5">
+      <path d="M355.25 223h142.5">
       </path>
      </g>
-     <path d="M449.25 223a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
+     <path d="M497.75 223a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
      </path>
-     <path d="M383.75 243h20">
+     <path d="M335.25 243h20">
      </path>
-     <g class="terminal">
-      <path d="M403.75 243h0">
+     <g>
+      <path d="M355.25 243h0">
       </path>
-      <path d="M449.25 243h0">
+      <path d="M497.75 243h0">
       </path>
-      <rect height="22" rx="10" ry="10" width="45.5" x="403.75" y="232">
-      </rect>
-      <text x="426.5" y="247">
-       MAX
-      </text>
+      <g class="terminal">
+       <path d="M355.25 243h0">
+       </path>
+       <path d="M383.75 243h0">
+       </path>
+       <rect height="22" rx="10" ry="10" width="28.5" x="355.25" y="232">
+       </rect>
+       <text x="369.5" y="247">
+        (
+       </text>
+      </g>
+      <path d="M383.75 243h10">
+      </path>
+      <path d="M393.75 243h10">
+      </path>
+      <g class="terminal">
+       <path d="M403.75 243h0">
+       </path>
+       <path d="M449.25 243h0">
+       </path>
+       <rect height="22" rx="10" ry="10" width="45.5" x="403.75" y="232">
+       </rect>
+       <text x="426.5" y="247">
+        MAX
+       </text>
+      </g>
+      <path d="M449.25 243h10">
+      </path>
+      <path d="M459.25 243h10">
+      </path>
+      <g class="terminal">
+       <path d="M469.25 243h0">
+       </path>
+       <path d="M497.75 243h0">
+       </path>
+       <rect height="22" rx="10" ry="10" width="28.5" x="469.25" y="232">
+       </rect>
+       <text x="483.5" y="247">
+        )
+       </text>
+      </g>
      </g>
-     <path d="M449.25 243h20">
+     <path d="M497.75 243h20">
      </path>
     </g>
    </g>
@@ -540,50 +606,50 @@
    <path d="M40 31a10 10 0 0 1 10 10v290a10 10 0 0 0 10 10">
    </path>
    <g>
-    <path d="M60 341h140">
+    <path d="M60 341h144.25">
     </path>
-    <path d="M572 341h140">
+    <path d="M567.75 341h144.25">
     </path>
     <g class="terminal">
-     <path d="M200 341h0">
+     <path d="M204.25 341h0">
      </path>
-     <path d="M296.5 341h0">
+     <path d="M300.75 341h0">
      </path>
-     <rect height="22" rx="10" ry="10" width="96.5" x="200" y="330">
+     <rect height="22" rx="10" ry="10" width="96.5" x="204.25" y="330">
      </rect>
-     <text x="248.25" y="345">
+     <text x="252.5" y="345">
       TIMESTAMP
      </text>
     </g>
-    <path d="M296.5 341h10">
+    <path d="M300.75 341h10">
     </path>
-    <path d="M306.5 341h10">
+    <path d="M310.75 341h10">
     </path>
     <g class="terminal">
-     <path d="M316.5 341h0">
+     <path d="M320.75 341h0">
      </path>
-     <path d="M404.5 341h0">
+     <path d="M408.75 341h0">
      </path>
-     <rect height="22" rx="10" ry="10" width="88" x="316.5" y="330">
+     <rect height="22" rx="10" ry="10" width="88" x="320.75" y="330">
      </rect>
-     <text x="360.5" y="345">
+     <text x="364.75" y="345">
       TIMEUNIT
      </text>
     </g>
-    <path d="M404.5 341h10">
+    <path d="M408.75 341h10">
     </path>
-    <path d="M414.5 341h10">
+    <path d="M418.75 341h10">
     </path>
     <g class="non-terminal">
-     <path d="M424.5 341h0">
+     <path d="M428.75 341h0">
      </path>
-     <path d="M572 341h0">
+     <path d="M567.75 341h0">
      </path>
-     <rect height="22" width="147.5" x="424.5" y="330">
+     <rect height="22" width="139" x="428.75" y="330">
      </rect>
      <a>
       <text x="498.25" y="345">
-       integer_literal
+       string_literal
       </text>
      </a>
     </g>
@@ -593,82 +659,110 @@
    <path d="M40 31a10 10 0 0 1 10 10v328a10 10 0 0 0 10 10">
    </path>
    <g>
-    <path d="M60 379h144.75">
+    <path d="M60 379h101.25">
     </path>
-    <path d="M567.25 379h144.75">
+    <path d="M610.75 379h101.25">
     </path>
     <g class="terminal">
-     <path d="M204.75 379h0">
+     <path d="M161.25 379h0">
      </path>
-     <path d="M284.25 379h0">
+     <path d="M240.75 379h0">
      </path>
-     <rect height="22" rx="10" ry="10" width="79.5" x="204.75" y="368">
+     <rect height="22" rx="10" ry="10" width="79.5" x="161.25" y="368">
      </rect>
-     <text x="244.5" y="383">
+     <text x="201" y="383">
       VARCHAR
      </text>
     </g>
-    <path d="M284.25 379h10">
+    <path d="M240.75 379h10">
+    </path>
+    <path d="M250.75 379h10">
+    </path>
+    <g class="terminal">
+     <path d="M260.75 379h0">
+     </path>
+     <path d="M289.25 379h0">
+     </path>
+     <rect height="22" rx="10" ry="10" width="28.5" x="260.75" y="368">
+     </rect>
+     <text x="275" y="383">
+      (
+     </text>
+    </g>
+    <path d="M289.25 379h10">
     </path>
     <g>
-     <path d="M294.25 379h0">
+     <path d="M299.25 379h0">
      </path>
-     <path d="M481.75 379h0">
+     <path d="M486.75 379h0">
      </path>
-     <path d="M294.25 379a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
+     <path d="M299.25 379a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
      </path>
      <g>
-      <path d="M314.25 359h147.5">
+      <path d="M319.25 359h147.5">
       </path>
      </g>
-     <path d="M461.75 359a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
+     <path d="M466.75 359a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
      </path>
-     <path d="M294.25 379h20">
+     <path d="M299.25 379h20">
      </path>
      <g class="non-terminal">
-      <path d="M314.25 379h0">
+      <path d="M319.25 379h0">
       </path>
-      <path d="M461.75 379h0">
+      <path d="M466.75 379h0">
       </path>
-      <rect height="22" width="147.5" x="314.25" y="368">
+      <rect height="22" width="147.5" x="319.25" y="368">
       </rect>
       <a>
-       <text x="388" y="383">
+       <text x="393" y="383">
         integer_literal
        </text>
       </a>
      </g>
-     <path d="M461.75 379h20">
+     <path d="M466.75 379h20">
      </path>
     </g>
     <g>
-     <path d="M481.75 379h0">
+     <path d="M486.75 379h0">
      </path>
-     <path d="M567.25 379h0">
+     <path d="M572.25 379h0">
      </path>
-     <path d="M481.75 379a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
+     <path d="M486.75 379a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10">
      </path>
      <g>
-      <path d="M501.75 359h45.5">
+      <path d="M506.75 359h45.5">
       </path>
      </g>
-     <path d="M547.25 359a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
+     <path d="M552.25 359a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10">
      </path>
-     <path d="M481.75 379h20">
+     <path d="M486.75 379h20">
      </path>
      <g class="terminal">
-      <path d="M501.75 379h0">
+      <path d="M506.75 379h0">
       </path>
-      <path d="M547.25 379h0">
+      <path d="M552.25 379h0">
       </path>
-      <rect height="22" rx="10" ry="10" width="45.5" x="501.75" y="368">
+      <rect height="22" rx="10" ry="10" width="45.5" x="506.75" y="368">
       </rect>
-      <text x="524.5" y="383">
+      <text x="529.5" y="383">
        MAX
       </text>
      </g>
-     <path d="M547.25 379h20">
+     <path d="M552.25 379h20">
      </path>
+    </g>
+    <path d="M572.25 379h10">
+    </path>
+    <g class="terminal">
+     <path d="M582.25 379h0">
+     </path>
+     <path d="M610.75 379h0">
+     </path>
+     <rect height="22" rx="10" ry="10" width="28.5" x="582.25" y="368">
+     </rect>
+     <text x="596.5" y="383">
+      )
+     </text>
     </g>
    </g>
    <path d="M712 379a10 10 0 0 0 10 -10v-328a10 10 0 0 1 10 -10">
@@ -676,19 +770,34 @@
    <path d="M40 31a10 10 0 0 1 10 10v358a10 10 0 0 0 10 10">
    </path>
    <g>
-    <path d="M60 409h206.75">
+    <path d="M60 409h158.25">
     </path>
-    <path d="M505.25 409h206.75">
+    <path d="M553.75 409h158.25">
     </path>
     <g class="terminal">
-     <path d="M266.75 409h0">
+     <path d="M218.25 409h0">
+     </path>
+     <path d="M289.25 409h0">
+     </path>
+     <rect height="22" rx="10" ry="10" width="71" x="218.25" y="398">
+     </rect>
+     <text x="253.75" y="413">
+      VECTOR
+     </text>
+    </g>
+    <path d="M289.25 409h10">
+    </path>
+    <path d="M299.25 409h10">
+    </path>
+    <g class="terminal">
+     <path d="M309.25 409h0">
      </path>
      <path d="M337.75 409h0">
      </path>
-     <rect height="22" rx="10" ry="10" width="71" x="266.75" y="398">
+     <rect height="22" rx="10" ry="10" width="28.5" x="309.25" y="398">
      </rect>
-     <text x="302.25" y="413">
-      VECTOR
+     <text x="323.5" y="413">
+      (
      </text>
     </g>
     <path d="M337.75 409h10">
@@ -707,6 +816,21 @@
        integer_literal
       </text>
      </a>
+    </g>
+    <path d="M505.25 409h10">
+    </path>
+    <path d="M515.25 409h10">
+    </path>
+    <g class="terminal">
+     <path d="M525.25 409h0">
+     </path>
+     <path d="M553.75 409h0">
+     </path>
+     <rect height="22" rx="10" ry="10" width="28.5" x="525.25" y="398">
+     </rect>
+     <text x="539.5" y="413">
+      )
+     </text>
     </g>
    </g>
    <path d="M712 409a10 10 0 0 0 10 -10v-358a10 10 0 0 1 10 -10">
