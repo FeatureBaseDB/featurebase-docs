@@ -32,5 +32,5 @@ DROP DATABASE <database_name>;
 ## Example
 
 ```sql
-DROP DATABASE test_db
+DROP DATABASE test_db;
 ```
