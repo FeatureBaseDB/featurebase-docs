@@ -1,6 +1,6 @@
 The `_id` column in each table represents the primary key for each column.
 
-| UI Type | SQL data type | Data source table unique key | Disk utilization (no data) | Additional information |
+| Intended key | UI type | SQL data type | Disk utilization (no data) | Additional information |
 |---|---|---|---|---|
-| Number | [`ID`](/docs/sql-guide/data-types/data-type-id) | Positive integer | 0.2MB | Increased query speeds |
-| String | [`STRING`](/docs/sql-guide/data-types/data-type-string) | String key or a combination of columns used to create a unique key | 25.36MB | System adds new BoltDB |
+| Positive integer | Number | [`ID`](/docs/sql-guide/data-types/data-type-id) | 0.2MB | Faster query speed |
+| Alphanumeric | String | [`STRING`](/docs/sql-guide/data-types/data-type-string) | 25.36MB | Requires new BoltDB which accounts for larger disk utilization |
