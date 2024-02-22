@@ -50,7 +50,7 @@
     </rect>
     <a>
      <text x="267.5" y="35">
-      identifier
+      table_name
      </text>
     </a>
    </g>
