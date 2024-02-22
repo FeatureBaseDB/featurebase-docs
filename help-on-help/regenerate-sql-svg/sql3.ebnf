@@ -407,8 +407,8 @@ bulk_insert_option =
   item -- lower-case text representing variables such as literals render as a square cornered block
    , -- concatenation represented as elements connected by horizontal line
    ; or ... -- terminator represented by a trailing horizontal line and two vertical lines
-  item1 | item2 -- item1 and item2 are connected by divided lines, which represent alternation or multiple items that can be used in the context.
+  item1 | item2 -- item1 and item2 are connected by divided lines, which represent alternation or multiple items that can be used in the context. No commas required on items separated by pipe symbol
   { item1 } -- repeat the items within, represented by a looping line
   " - " exception
-  [ optional_items ] items that can be omitted. no commas required if using pipe character
+  [ optional_items ] items that can be omitted.
 *)
