@@ -220,7 +220,7 @@ column_constraint =
 *)
 
 type_name = "BOOL"
-    | "DECIMAL", [ "(", "SCALE", integer_literal ")" ]
+    | "DECIMAL", [ "(", "SCALE", integer_literal, ")" ]
     | "ID"
     | "IDSET"
     | "IDSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
@@ -231,7 +231,7 @@ type_name = "BOOL"
     | "TIMESTAMP", "TIMEUNIT", string_literal
     | "VARCHAR", "(", [integer_literal], ["MAX"], ")"
     | "VECTOR", "(", integer_literal, ")";
-    
+
 (*
 
   Expressions
