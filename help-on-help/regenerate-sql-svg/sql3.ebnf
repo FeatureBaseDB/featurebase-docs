@@ -16,6 +16,7 @@ statement = create_table_stmt
       | bulk_insert_stmt
       | select_stmt
       | drop_table
+      | drop_db
       | delete_stmt
       | show_create_table
       | show_columns
@@ -143,6 +144,14 @@ order_by_expression = expr, [ "ASC" | "DESC" ] ;
 *)
 drop_table = "DROP", "TABLE", [ "IF", "EXISTS" ], identifier ;
 
+(*
+  DROP DATABASE
+  -----------------
+  Drop an existing database
+
+*)
+
+drop_db = "DROP", "DATABASE", database_name;
 
 (*
   SHOW CREATE TABLE
