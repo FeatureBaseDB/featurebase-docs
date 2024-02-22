@@ -1,4 +1,4 @@
-The `_id` column in each table represents the primary key for each column.
+The `_id` column in each table represents the primary key.
 
 | Intended key | UI type | SQL data type | Disk utilization (no data) | Additional information |
 |---|---|---|---|---|
