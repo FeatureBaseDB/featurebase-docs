@@ -32,7 +32,7 @@ statement = create_table_stmt
   Creates a FeatureBase table.
 
 *)
-create_table_stmt = "CREATE", "TABLE", [ "IF", "NOT", "EXISTS" ], "(", "_id", ( "ID" | "STRING" ), {column_def}, ")", [ "COMMENT", string_literal ];
+create_table_stmt = "CREATE", "TABLE", [ "IF", "NOT", "EXISTS" ], "(", "_id", ( "ID" | "STRING" ), {column_def}, ")", [ "WITH", "COMMENT", string_literal ];
 
 column_def = { identifier, type_name, [column_constraint] } ;
 
