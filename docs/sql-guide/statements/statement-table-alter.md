@@ -13,8 +13,17 @@ Add, Rename or Drop columns from an existing table.
 ## BNF diagrams
 
 ![expr](/assets/images/sql-guide/alter_table_stmt.svg)
+
+### Add column
+
 ![expr](/assets/images/sql-guide/add_column.svg)
+
+### Drop column
+
 ![expr](/assets/images/sql-guide/drop_column.svg)
+
+### Column definition
+
 ![expr](/assets/images/sql-guide/column_def.svg)
 
 ## Syntax
