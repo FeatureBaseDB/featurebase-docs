@@ -6,7 +6,7 @@ grand_parent: SQL guide
 nav_order: 5
 ---
 
-## CREATE TABLE statement
+# CREATE TABLE statement
 
 Create a FeatureBase table with the specified columns and data types.
 
