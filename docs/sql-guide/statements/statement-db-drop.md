@@ -17,6 +17,10 @@ Drops the specified database.
 * [Create Cloud database in GUI](/docs/cloud/cloud-databases/cloud-db-manage/#how-do-i-create-a-cloud-database), OR
 * [Create Cloud database using API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
 
+## BNF diagram
+
+![expr](/assets/images/sql-guide/drop_db.svg)
+
 ## Syntax
 
 ```sql
