@@ -35,7 +35,8 @@ nav_order: 1
 
 {% include /cloud-table/cloud-summary-table-pk.md %}
 
-* Select the ID data type.
+## Step 3: Create the table
+
 * Click **Create**.
 
 ## Next step
