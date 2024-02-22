@@ -410,5 +410,6 @@ bulk_insert_option =
   item1 | item2 -- item1 and item2 are connected by divided lines, which represent alternation or multiple items that can be used in the context. No commas required on items separated by pipe symbol
   { item1 } -- repeat the items within, represented by a looping line
   " - " exception
-  [ optional_items ] items that can be omitted.
+  [ optional_items ] -- items that can be omitted.
+  ( bracketed_items ) -- brackets won't appear in rendered BNF diagram but when used with pipe (either, or items) the items will render correctly
 *)
