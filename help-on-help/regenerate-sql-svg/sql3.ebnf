@@ -229,7 +229,7 @@ type_name = "BOOL"
     | "STRINGSET"
     | "STRINGSETQ", "TIMEQUANTUM", string_literal, [ "TTL", string_literal ]
     | "TIMESTAMP", "TIMEUNIT", string_literal
-    | "VARCHAR", "(", [integer_literal], ["MAX"], ")"
+    | "VARCHAR", [ "(", integer_literal, ")" ], [ "(", "MAX", ")" ]
     | "VECTOR", "(", integer_literal, ")";
 
 (*
