@@ -34,7 +34,7 @@ statement = create_table_stmt
 *)
 create_table_stmt = "CREATE", "TABLE", [ "IF", "NOT", "EXISTS" ], identifier, "(", column_def, { ",", column_def }, ")", [ "COMMENT", string_literal ];
 
-column_def = identifier, type_name, { column_constraint } ;
+column_def = identifier, type_name, [column_constraint]  ;
 
 (*
   ALTER TABLE
