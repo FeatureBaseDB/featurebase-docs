@@ -8,12 +8,10 @@ nav_order: 4
 
 # DROP DATABASE statement
 
-Drops the specified database.
-
-{: .note}
-[DROP DATABASE from Cloud](/docs/cloud/cloud-databases/cloud-db-drop) for GUI actions.
+Run `DROP DATABASE` from Cloud API, fbsql CLI tool or FeatureBase Python library.
 
 ## Before you begin
+
 * [Create Cloud database in GUI](/docs/cloud/cloud-databases/cloud-db-manage/#how-do-i-create-a-cloud-database), OR
 * [Create Cloud database using API](https://api-docs-featurebase-cloud.redoc.ly/latest#operation/createDatabase){:target="_blank"}
 
