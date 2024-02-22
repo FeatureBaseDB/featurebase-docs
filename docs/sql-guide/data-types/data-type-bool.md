@@ -34,31 +34,3 @@ Use this table to determine how integer and string values are represented when a
 ## Examples
 
 {% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
-
-### CREATE TABLE with `bool` data type
-
-* [CREATE TABLE with `bool` data type](/docs/sql-guide/examples/sql-eg-table/sql-eg-table-create-all-datatypes)
-
-### INSERT data to `bool` column
-
-* [INSERT INTO `bool` column](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-all-datatypes)
-
-### SELECT FROM `bool` column
-
-
-
-```sql
-CREATE TABLE docbool  (
-    _id id,
-    boolcol bool);
-```
-
-### INSERT INTO boolean data type
-
-```sql
-INSERT INTO docbool
-  (_id, boolcol)
-  VALUES
-  (1, FALSE),
-  (2, TRUE);
-```
