@@ -18,6 +18,7 @@ statement = create_table_stmt
       | drop_table
       | drop_db
       | delete_stmt
+      | show_dbs
       | show_create_table
       | show_columns
       | show_tables
@@ -152,6 +153,16 @@ drop_table = "DROP", "TABLE", [ "IF", "EXISTS" ], identifier ;
 *)
 
 drop_db = "DROP", "DATABASE", database_name;
+
+(*
+  SHOW DATABASES
+  -----------------
+  Output existing databases
+
+*)
+
+show_db = "SHOW", "DATABASES";
+
 
 (*
   SHOW CREATE TABLE
