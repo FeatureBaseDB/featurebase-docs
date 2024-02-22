@@ -18,7 +18,7 @@ statement = create_table_stmt
       | drop_table
       | drop_db
       | delete_stmt
-      | show_dbs
+      | show_db
       | show_create_table
       | show_columns
       | show_tables
