@@ -9,6 +9,7 @@ echo "Have you updated sql3.ebnf? (yes/no)"
       python3 extract.py
     echo "Check if your updated file exists:"
      ls ~/featurebase-docs/assets/images/sql-guide
+    echo "And scroll-up and fix any errors (and ignore missing references)"
   else
     echo "Computer says NO."
   fi
