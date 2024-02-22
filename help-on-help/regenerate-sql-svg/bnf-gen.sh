@@ -3,13 +3,13 @@ echo "Have you updated sql3.ebnf? (yes/no)"
   if [[ "$requirements" == y* ]]; then
     echo "Pull latest"
       git pull
-    echo "Generate bnf files"
+    echo "--> Generate bnf files"
       bash makebnf.sh
-    echo "Extract the svg files"
+    echo "--> Extract the svg files"
       python3 extract.py
-    echo "Check if your updated file exists:"
+    echo "--> Check if your updated file exists:"
      ls ~/featurebase-docs/assets/images/sql-guide
-    echo "And scroll-up and fix any errors (and ignore missing references)"
+    echo "--> And scroll-up and fix any errors (ignore missing references)"
   else
     echo "Computer says NO."
   fi
