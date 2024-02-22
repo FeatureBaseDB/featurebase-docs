@@ -15,6 +15,7 @@ Add, Rename or Drop columns from an existing table.
 ![expr](/assets/images/sql-guide/alter_table_stmt.svg)
 ![expr](/assets/images/sql-guide/add_column.svg)
 ![expr](/assets/images/sql-guide/drop_column.svg)
+![expr](/assets/images/sql-guide/column_def.svg)
 
 ## Syntax
 

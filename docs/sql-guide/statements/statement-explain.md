@@ -14,6 +14,7 @@ Prefix any valid SQL query with `EXPLAIN` to output an execution plan for the st
 ## BNF diagram
 
 ![expr](/assets/images/sql-guide/explain_stmt.svg)
+![expr](/assets/images/sql-guide/statement.svg)
 
 ## Before you begin
 
