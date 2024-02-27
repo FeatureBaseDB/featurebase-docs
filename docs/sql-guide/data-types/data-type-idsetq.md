@@ -54,3 +54,10 @@ When the `TUPLE()` function is used in `SELECT` and `BULK INSERT` statements, th
 ## Examples
 
 {% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!-- commented out because of FB-2513
+```sql
+INSERT INTO doctest (_id, idsetqcol) VALUES
+  (1, {'2024-02-27T05:19:59+00:00', [9223372036854775807, 1234567890,12345]});
+```
+--->
