@@ -35,3 +35,10 @@ The IDSET data type:
 ## Examples
 
 {% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!-- commented out because of FB-2513
+```sql
+INSERT INTO all-datatypes (_id, idsetcol) VALUES
+  (1, 12345;1234567890;9223372036854775807);
+```
+-->
