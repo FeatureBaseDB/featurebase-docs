@@ -42,3 +42,12 @@ Instead, use the [ID data type](/docs/sql-guide/data-types/data-type-id).
 {% include /sql-guide/table-create-integer-constraints-eg.md%}
 
 {% include /sql-guide/table-create-types-all-eg.md %}
+
+<!-- commented out for FB-2514 to be fixed
+```sql
+INSERT INTO all-datatypes (_id, intcol) VALUES
+  (1, 12345),
+  (2, 1234567890),
+  (3, 9223372036854775807);
+```
+-->

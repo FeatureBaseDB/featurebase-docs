@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS all-datatypes (
     idcol ID,
     idsetcol IDSET,
     idsetqcol IDSETQ TIMEQUANTUM 'YMD' TTL '24h',
-    intcol INT MIN 0 MAX 10000,
+    intcol INT MIN 0 MAX 9223372036854775807,
     stringcol STRING,
     stringsetcol STRINGSET,
     stringsetqcol STRINGSETQ TIMEQUANTUM 'YMD' TTL '24h',
