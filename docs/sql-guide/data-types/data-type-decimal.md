@@ -34,3 +34,10 @@ DECIMAL[({SCALE value})]
 ## Examples
 
 {% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+```sql
+INSERT INTO all-datatypes (_id, decimalcol) VALUES
+(1, 1.12345678),
+(2, 2.33),
+(3, 123456.78);
+```
