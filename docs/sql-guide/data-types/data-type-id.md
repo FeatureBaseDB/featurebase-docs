@@ -31,3 +31,11 @@ The ID data type has a `mutex` internal data type and is best used for low-cardi
 ## Examples
 
 {% include /sql-guide/sql-eg-table-all-datatypes-links.md %}
+
+<!-- commented out so FB-2512 can be fixed
+```sql
+INSERT INTO all-datatypes (_id, idcol) VALUES
+  (1, 12345),
+  (2, 9223372036854775807);
+```
+-->
