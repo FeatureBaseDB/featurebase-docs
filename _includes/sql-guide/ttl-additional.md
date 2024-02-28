@@ -15,8 +15,8 @@ NOTE: FeatureBase recommends using a TTL of `1h` or more to improve results.
 
 This example demonstrates the deletion dates of three column views where TTL is set to `30d`
 
-| View date | ttl date of deletion | Explanation |
-|---|---|---|
-| 2022 | January 30, 2023 | Date assumed to be end of 2022 |
-| 2022-09 | October 30, 2022 | Date assumed to be end of September |
-| 2022-09-02 | October 2, 2022 | Deletion after 30 days as intended |
+| TIMEQUANTUM value | Timestamp | `TTL` deletion date | Description |
+|---|---|---|---|
+| `TIMEQUANTUM 'Y'`| 2022 | 2023-01-30 | TTL assumes date is 2022-12-31 |
+| `TIMEQUANTUM 'YM'`| 2022-09 | 2022-10-30 | TTL assumes date is 09-30 |
+| `TIMEQUANTUM 'YMD' | 2022-09-02 | 2022-10-02 | Deletion after 30 days as intended |
