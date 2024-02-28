@@ -34,6 +34,8 @@ TIMESTAMP [TIMEUNIT {time-unit}]
 
 ### TIMEUNIT value
 
+| Unit | Declaration |
+|---|---|
 {% include /sql-guide/timestamp-ttl-timeunit-table.md %}
 
 ## Examples

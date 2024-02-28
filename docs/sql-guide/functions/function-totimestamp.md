@@ -36,6 +36,8 @@ TOTIMESTAMP(int_expr, [timeunit])
 
 `timeunit` defaults to `s` if not specified.
 
+| Unit | Declaration |
+|---|---|
 {% include /sql-guide/timestamp-ttl-timeunit-table.md %}
 
 ## Examples

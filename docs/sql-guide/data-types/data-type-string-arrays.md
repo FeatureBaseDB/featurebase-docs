@@ -46,6 +46,10 @@ TIMEQUANTUM creates a view on the data that is used to improve range query respo
 
 ### TTL additional
 
+| Unit | Declaration |
+|---|---|
+| Hour | `h` |
+| Minute | `m` |
 {% include /sql-guide/timestamp-ttl-timeunit-table.md %}
 
 ## TTL automatic deletion rules
@@ -71,6 +75,28 @@ TIMEQUANTUM creates a view on the data that is used to improve range query respo
 | '2024-02-28T08:04:13.867Z'  | `TIMEQUANTUM 'YMD'` |  | `TTL 30s` |  |
 | '2024-02-28T08:04:13.867Z'  | `TIMEQUANTUM 'YMDH'` |  | `TTL 30s` |  |
 
+<!--
+view timestamp + ttl-value
+-->
+
 ### CREATE TABLE with all data types
 
 {% include /sql-guide/table-create-types-all-eg.md %}
+
+
+
+<!--
+TTL test
+
+DROP TABLE doctest1;
+
+CREATE TABLE doctest1 (_id ID, idsetqcol IDSETQ TIMEQUANTUM 'YMDH' TTL '30s', timestampcol TIMESTAMP TIMEUNIT 's', stringcol STRING);
+
+INSERT INTO doctest1 (_id, idsetqcol, timestampcol, stringcol) VALUES
+  (1, { '2023-02-28T22:25:06.033Z',[123,456,789]}, '2023-02-28T22:25:06.033Z', 'deleted first'),
+  (2, {1709159106,[987,654,321,000]},1709159106, 'deleted second'),
+  (3, { '2025-02-28T22:25:06.033Z',[123,456,789]}, '2023-02-28T22:25:06.033Z', 'deleted third');
+
+SELECT * FROM doctest1;
+
+-->
