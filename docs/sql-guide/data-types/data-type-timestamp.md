@@ -27,12 +27,15 @@ TIMESTAMP [TIMEUNIT {time-unit}]
 
 | Argument | Description | Default | Additional information |
 |---|---|---|
-| TIMESTAMP | Data type that accepts unix epoch integer or string literal ISO-8601 timestamps |  | [Time stamp](https://en.wikipedia.org/wiki/Timestamp){:target="_blank"} |
+| TIMESTAMP | Data type that accepts unix epoch integer or string literal ISO-8601 timestamps |  | [Time stamp converter](https://www.timestamp-converter.com/){:target="_blank"} |
 | TIMEUNIT | Time unit used to convert the value to unix-epoch timestamp | `s` (second) | [TIMEUNIT values](#timeunit-value) |
 
 ## Additional information
 
 ### TIMEUNIT value
+
+{: .important}
+Time units are treated as string literals and require a single quotation mark.
 
 | Unit | Declaration |
 |---|---|
