@@ -13,7 +13,7 @@ nav_order: 8
 ## Syntax
 
 ```sql
-{ID | STRING}{SET}[Q {TIMEQUANTUM ['<tq-unit>']} [TTL '<int-value><ttl-unit>']]
+{ID | STRING}{SET | {SETQ TIMEQUANTUM ['<date-unit>'] [TTL '<int-value><time-unit>']}}
 ```
 
 ## Arguments
@@ -23,42 +23,46 @@ nav_order: 8
 | `ID` | Values to be inserted conform to `ID` data type |  |  | [ID data type](/docs/sql-guide/data-types/data-type-id) |
 | `STRING` | Values to be inserted conform to `STRING` data type |  |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
 | `SET` | Array of values inserted to table as a comma-separated list | Yes |  |
-| `SETQ` | Array of `STRING` values identified by a valid timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| `TIMEQUANTUM <tq-unit>` | One or more time-units in a decending sequence with no omissions | Optional |  | [Timequantum additional](#timequantum-additional) |
-| `TTL '<int-value><ttl-unit>'` | Governs automatic deletion of timestamp and values from SETQ column | Optional | `0s` (disables `TTL`) | * [TTL additional](#ttl-additional)<br/>* [TTL automatic deletion rules](#ttl-automatic-deletion-rules)|
+| `SETQ` | Array of `STRING` values identified by a Unix-epoch or ISO-8601 timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
+| `TIMEQUANTUM` | `SETQ` constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
+| `<date-unit>` | One or more sequential, descending date units, defined as `Y`, `M`, `D`, `H` | Y |  | [TIMEQUANTUM views](#timequantum-views) |
+| `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL time units](#ttl-time-unit)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
 
 ## Additional information
 
-### TIMEQUANTUM additional
+### TIMEQUANTUM views
 
-TIMEQUANTUM creates a view on the data that is used to improve range query responsiveness.
+TIMEQUANTUM views are created and named for each `<date-unit>`
 
-`TIMEQUANTUM <tq-unit>` governs the how the timestamp value is truncated for the TIMEQUANTUM view, and has a direct effect on `TTL`.
+| Name | `<date-unit>` declaration | View timestamp |
+|---|---|---|
+| Year | `Y` | YYYY-01-01T00:00:00.000Z |
+| Month | `M` | YYYY-MM-01T00:00:00.000Z |
+| Day | `D` | YYYY-MM-DDT00:00:00.000Z |
+| Hour | `H` | YYYY-MM-DDTHH:00:00.000Z |
 
-| Unit | Declaration |
-|---|---|
-| Year | `Y` |
-| Month | `M` |
-| Day | `D` |
-| Hour | `H` |
+### `TTL <time-unit>`
 
-* [TTL deletion examples](#ttl-deletion-examples)
+An integer and time unit are used to calculate the number of seconds before a `TIMEQUANTUM` vie can be deleted.
 
-### TTL additional
-
-| Unit | Declaration |
+| Name | `<time-unit>` declaration |
 |---|---|
 | Hour | `h` |
 | Minute | `m` |
 {% include /sql-guide/timestamp-ttl-timeunit-table.md %}
 
-## TTL automatic deletion rules
+### `TIMEQUANTUM` view deletion
 
-| Rule | Additional information |
-|---|---|
-| Runs hourly from FeatureBase server startup |  |
-| Deletion occurs based on `[<tq-unit> + <ttl-unit>]` | [TTL deletion examples](#ttl-deletion-examples) |
-| Data cannot be recovered once deleted | Set `TTL '0s'` to prevent deletion of historical data |
+FeatureBase converts timestamps and `TTL` to UNIX epoch (seconds since 1970-01-01). The resulting integer values are subtracted.
+
+A `TIMEQUANTUM` view is deleted when:
+
+```
+<database-timestamp> - <view-timestamp> >= <ttl-value>
+```
+
+{: .note}
+View deletion may take longer than expected because the database timestamp is governed by the vendor region.
 
 ### GROUP BY issues on SET and SETQ data types
 
@@ -66,37 +70,6 @@ TIMEQUANTUM creates a view on the data that is used to improve range query respo
 
 ## Examples
 
-### TTL deletion examples
-
-| Timestamp value | TIMEQUANTUM | View timestamp | TTL | Deletion date |
-|---|---|---|---|---|
-| '2024-02-28T08:04:13.867Z'  | `TIMEQUANTUM 'Y'` |  | `TTL 30s` |  |
-| '2024-02-28T08:04:13.867Z'  | `TIMEQUANTUM 'YM'` |  | `TTL 30s` |  |
-| '2024-02-28T08:04:13.867Z'  | `TIMEQUANTUM 'YMD'` |  | `TTL 30s` |  |
-| '2024-02-28T08:04:13.867Z'  | `TIMEQUANTUM 'YMDH'` |  | `TTL 30s` |  |
-
-<!--
-view timestamp + ttl-value
--->
-
 ### CREATE TABLE with all data types
 
 {% include /sql-guide/table-create-types-all-eg.md %}
-
-
-
-<!--
-TTL test
-
-DROP TABLE doctest1;
-
-CREATE TABLE doctest1 (_id ID, idsetqcol IDSETQ TIMEQUANTUM 'YMDH' TTL '30s', timestampcol TIMESTAMP TIMEUNIT 's', stringcol STRING);
-
-INSERT INTO doctest1 (_id, idsetqcol, timestampcol, stringcol) VALUES
-  (1, { '2023-02-28T22:25:06.033Z',[123,456,789]}, '2023-02-28T22:25:06.033Z', 'deleted first'),
-  (2, {1709159106,[987,654,321,000]},1709159106, 'deleted second'),
-  (3, { '2025-02-28T22:25:06.033Z',[123,456,789]}, '2023-02-28T22:25:06.033Z', 'deleted third');
-
-SELECT * FROM doctest1;
-
--->
