@@ -45,6 +45,9 @@ TIMEQUANTUM views are created and named for each `<date-unit>`
 
 An integer and time unit are used to calculate the number of seconds before a `TIMEQUANTUM` vie can be deleted.
 
+{: .note}
+`TTL` defaults to `0s` which indicates no views will be deleted.
+
 | Name | `<time-unit>` declaration |
 |---|---|
 | Hour | `h` |
