@@ -13,7 +13,11 @@ nav_order: 8
 ## Syntax
 
 ```sql
-{ID | STRING}{SET | {SETQ TIMEQUANTUM ['<date-unit>'] [TTL '<int-value><time-unit>']}}
+{ID | STRING}{SET | SETQ <SETQ-constraints>}
+```
+
+```sql
+TIMEQUANTUM '<date-unit>' [TTL '<int-value><time-unit>']
 ```
 
 ## Arguments
@@ -22,17 +26,29 @@ nav_order: 8
 |---|---|---|---|---|
 | `ID` | Values to be inserted conform to `ID` data type |  |  | [ID data type](/docs/sql-guide/data-types/data-type-id) |
 | `STRING` | Values to be inserted conform to `STRING` data type |  |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
-| `SET` | Array of values inserted to table as a comma-separated list | Yes |  |
-| `SETQ` | Array of `STRING` values identified by a Unix-epoch or ISO-8601 timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| `TIMEQUANTUM` | `SETQ` constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
+| `SET` | Comma-separated array of values | Yes |  |
+| `SETQ` | Comma-separated array of values identified by a Unix-epoch or ISO-8601 timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
+
+### `SETQ <constraints>`
+
+| Argument | Description | Required? | Default | Additional information |
+|---|---|---|---|---|
+| `TIMEQUANTUM` | Constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
 | `<date-unit>` | One or more sequential, descending date units, defined as `Y`, `M`, `D`, `H` | Y |  | [TIMEQUANTUM views](#timequantum-views) |
 | `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL time units](#ttl-time-unit)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
 
 ## Additional information
 
+### Delimiters
+
+| Data source | Delimiter | Example |
+|---|---|---|
+| SQL query | `[value,value,value,...]` |
+| CSV file | `value;value;value;...` |
+
 ### TIMEQUANTUM views
 
-TIMEQUANTUM views are created and named for each `<date-unit>`
+A TIMEQUANTUM view is created for each `<date-unit>` in a `CREATE TABLE` statement
 
 | Name | `<date-unit>` declaration | View timestamp |
 |---|---|---|
@@ -41,11 +57,16 @@ TIMEQUANTUM views are created and named for each `<date-unit>`
 | Day | `D` | YYYY-MM-DDT00:00:00.000Z |
 | Hour | `H` | YYYY-MM-DDTHH:00:00.000Z |
 
+TIMEQUANTUM views:
+* improve the responsiveness of Range queries where a query uses the same combination of date units
+* increase storage overheads which may require the use of `TTL`(time-to-live)
+
 ### `TTL <time-unit>`
 
-An integer and time unit are used to calculate the number of seconds before a `TIMEQUANTUM` vie can be deleted.
+An integer and time unit are used to calculate the number of seconds before a `TIMEQUANTUM` view can be deleted.
 
 {: .note}
+`TTL '0s'` is the default and should be used where
 `TTL` defaults to `0s` which indicates no views will be deleted.
 
 | Name | `<time-unit>` declaration |
@@ -65,7 +86,9 @@ A `TIMEQUANTUM` view is deleted when:
 ```
 
 {: .note}
-View deletion may take longer than expected because the database timestamp is governed by the vendor region.
+View deletion may take longer than expected because:
+* the database timestamp is governed by the vendor region
+* views may contain large quantities of data
 
 ### GROUP BY issues on SET and SETQ data types
 
