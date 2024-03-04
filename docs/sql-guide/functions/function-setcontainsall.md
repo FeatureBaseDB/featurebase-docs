@@ -7,26 +7,24 @@ grand_parent: SQL guide
 
 # SETCONTAINSALL() function
 
-`SETCONTAINSALL()` returns **True** when **all specified values** are found within an `IDSET` or `STRINGSET` column.
+`SETCONTAINSALL()` tests for one or more specified values within `SET` or `SETQ` columns.
 
 ## Syntax
 
 ```sql
-SETCONTAINSALL(
-  {idset-column, [int-value,...]} |
-  {stringset-column, ['string-value',...]}
-  )
+SETCONTAINS[ANY | ALL](<column-name>,[<value>,...])
 ```
 
 ## Arguments
 
 {% include /sql-guide/function-setcontains-all-any-args.md %}
 
+{: .important}
+Square brackets `[...]` are required in the query.
+
 ## Returns
 
-| Column contains | Data type | Result |
-|---|---|--|
-| All specified values | Boolean | True |
+{% includes /sql-guide/function-set-returns.md %}
 
 ## Examples
 

@@ -7,27 +7,24 @@ grand_parent: SQL guide
 
 # SETCONTAINSANY() function
 
-`SETCONTAINSANY()` returns **True** when **one or more** specified values are found within an `IDSET` or `STRINGSET` column.
+`SETCONTAINSANY()` tests for one or more specified values within `SET` or `SETQ` columns.
 
 ## Syntax
 
 ```sql
-
-SETCONTAINSANY(
-  {idset-column, [int-value,...]} |
-  {stringset-column, ['string-value',...]}
-  )
+SETCONTAINSANY(<set-column>,[<value,...])
 ```
 
 ## Arguments
 
 {% include /sql-guide/function-setcontains-all-any-args.md %}
 
+{: .important}
+Square brackets `[...]` are required in the query.
+
 ## Returns
 
-| Column contains | Data type | Result |
-|---|---|--|
-| One or more values | Boolean | True |
+{% include /sql-guide/function-set-returns.md %}
 
 ## Examples
 

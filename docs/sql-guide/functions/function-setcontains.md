@@ -7,15 +7,12 @@ grand_parent: SQL guide
 
 # SETCONTAINS() function
 
-`SETCONTAINS()` returns **True** when a specified value **is found** within an `IDSET` or `STRINGSET` column..
+`SETCONTAINS()` tests for a value within `SET` or `SETQ` column.
 
 ## Syntax
 
 ```sql
-SETCONTAINS(
-  {idset-column, integer-value} |
-  {stringset-column, 'string-value'}
-  )
+SETCONTAINS(<set-column>, <value>)
 ```
 
 ## Arguments
@@ -24,9 +21,7 @@ SETCONTAINS(
 
 ## Returns
 
-| Column contains | Data type | Result |
-|---|---|---|
-| Specified value | Boolean | True |
+{% include /sql-guide/function-set-returns.md %}
 
 ## Examples
 
@@ -43,7 +38,7 @@ select setcontains(segment, 'BLUE') as HasBlue
 
 ### Testing set membership as a where clause filter
 
-This query returns `true`.
+This query returns the row(s) containing the SETCONTAINS value:
 
 ```sql
 select _id, segment from segments where setcontains(segment, 'BLUE');
