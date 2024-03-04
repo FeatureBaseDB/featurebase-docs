@@ -1,5 +1,5 @@
 ---
-title: SET()
+title: SET and SETQ functions
 layout: default
 parent: Functions
 grand_parent: SQL guide
@@ -7,7 +7,7 @@ grand_parent: SQL guide
 
 # SET functions
 
-SET functions test for a value within a `SET` or `SETQ` column.
+SET functions used in `SELECT` queries test for a value within a `SET` or `SETQ` column then output a result.
 
 ## Syntax
 
@@ -23,32 +23,24 @@ SETINCLUDES[ANY | ALL](<set-column>,[<value>,...])
 |---|---|---|
 | INCLUDES | `<value>` is within the `<set-column>` |  |
 | EXCLUDES | `<value>` is NOT within `<set-column>` |  |
-| ANY | One or more `[<value>,...]` are found within `<set-column>` |  |
-| ALL | All `[<value>,...]` are found within `<set-column>` |  |
+| ANY | One or more `[<value>,...]` are found within `<set-column>` | `[...]` required by function |
+| ALL | All `[<value>,...]` are found within `<set-column>` | `[...]` required by function |
 | `<set-column>` | Name of `SET` or `SETQ` column | [`SET` and `SETQ` data types](/docs/sql-guide/data-types/data-type-set-setq) |
 | `<value>` | Value to search for |  |
 
+## Additional information
+
+* Position of `SET` function in `SELECT` query will change results
+* Chain two or more `SET` functions using `WHERE...AND` clause
+
 ## Returns
 
-The values returned depend on the position of the `SET` function within the query:
+Values returned depend on the position of the `SET` function within the `SELECT` query:
 
 | Position | Returns | Example |
 |---|---|---|
 | Within `<select-list>` | True or False | `SELECT <set-function> (<set-column>, <value>) FROM <table-name>;` |
 | Within `WHERE` clause | Row | `SELECT * FROM <table-name> WHERE <set-function> (<set-column>,<set-value>)` |
-
-
-{% include /sql-guide/function-set-args.md %}
-
-## Additional information
-
-Use a `WHERE` clause with `AND` operator to add two or more `SETINCLUDES()` functions.
-
-## Returns
-
-| Column contains | Data type | Result |
-|---|---|--|
-| No specified value | Boolean | True |
 
 ## Examples
 

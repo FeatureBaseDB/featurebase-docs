@@ -17,7 +17,7 @@ SETCONTAINS(<set-column>, <value>)
 
 ## Arguments
 
-{% include /sql-guide/function-set-contains-excludes-args.md %}
+{% include /sql-guide/function-set-args.md %}
 
 ## Returns
 

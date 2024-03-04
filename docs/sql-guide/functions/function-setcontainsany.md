@@ -17,7 +17,7 @@ SETCONTAINSANY(<set-column>,[<value,...])
 
 ## Arguments
 
-{% include /sql-guide/function-setcontains-all-any-args.md %}
+{% include /sql-guide/function-set-args.md %}
 
 {: .important}
 Square brackets `[...]` are required in the query.
