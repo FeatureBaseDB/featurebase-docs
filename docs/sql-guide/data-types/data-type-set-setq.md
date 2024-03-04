@@ -1,12 +1,12 @@
 ---
-title: High cardinality data types
+title: SET & SETQ
 layout: default
 parent: Data types & constraints
 grand_parent: SQL guide
 nav_order: 8
 ---
 
-# Datatypes for high cardinality data
+# `SET` and `SETQ` data types
 
 {% include /sql-guide/datatype-set-setq-summary.md %}
 
