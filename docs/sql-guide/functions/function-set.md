@@ -7,7 +7,13 @@ grand_parent: SQL guide
 
 # SET functions
 
-SET functions used in `SELECT` queries test for a value within a `SET` or `SETQ` column then output a result.
+SET functions test for one or more values within a `SET` or `SETQ` column.
+
+## Before you begin
+
+* [SET and SETQ data types](/docs/sql-guide/data-types/data-type-set-setq)
+* [SELECT statement](/docs/sql-guide/statements/statement-select)
+* [FeatureBase operators](/docs/sql-guide/operators/operators-home)
 
 ## Syntax
 
@@ -21,26 +27,29 @@ SETINCLUDES[ANY | ALL](<set-column>,[<value>,...])
 
 | Argument | Description | Additional information |
 |---|---|---|
-| INCLUDES | `<value>` is within the `<set-column>` |  |
-| EXCLUDES | `<value>` is NOT within `<set-column>` |  |
-| ANY | One or more `[<value>,...]` are found within `<set-column>` | `[...]` required by function |
-| ALL | All `[<value>,...]` are found within `<set-column>` | `[...]` required by function |
+| INCLUDES | Test if a single `<value>` **is** within the `<set-column>` |  |
+| EXCLUDES | Test if a single `<value>` **is not** within the `<set-column>` |  |
+| ANY | Test for **any** comma-separated values within the `<set-column>` | Values must be comma-separated and grouped within square brackets `[...]` |
+| ALL | Test for **all** comma-separated values within the `<set-column>`  | Values must be comma-separated and grouped within square brackets `[...]` |
 | `<set-column>` | Name of `SET` or `SETQ` column | [`SET` and `SETQ` data types](/docs/sql-guide/data-types/data-type-set-setq) |
-| `<value>` | Value to search for |  |
+| `<value>` | `ID` or `STRING` literal value | * [ID data type](/docs/sql-guide/data-types/data-type-id)<br/>* [STRING data type](/docs/sql-guide/data-types/data-type-string) |
 
 ## Additional information
 
-* Position of `SET` function in `SELECT` query will change results
-* Chain two or more `SET` functions using `WHERE...AND` clause
+### Function operators
+
+`SET` functions can be used with [supported operators](/docs/sql-guide/operators/operators-home)
+
+{% include /sql-guide/note-operator-logic-wrong.md %}
 
 ## Returns
 
 Values returned depend on the position of the `SET` function within the `SELECT` query:
 
-| Position | Returns | Example |
-|---|---|---|
-| Within `<select-list>` | True or False | `SELECT <set-function> (<set-column>, <value>) FROM <table-name>;` |
-| Within `WHERE` clause | Row | `SELECT * FROM <table-name> WHERE <set-function> (<set-column>,<set-value>)` |
+| Position | Returns | Example | Additional information |
+|---|---|---|---|
+| Within `<select-list>` | True or False | `SELECT <set-function> (<set-column>, <value>) FROM <table-name>;` | [SELECT list](/docs/sql-guide/statements/statement-select/#select-list) |
+| Within `WHERE` clause | Row | `SELECT * FROM <table-name> WHERE <set-function> (<set-column>,<set-value>)` | [WHERE clause](/docs/sql-guide/statements/statement-select/#where-clause) |
 
 ## Examples
 
