@@ -37,32 +37,24 @@ Data types and constraints are used to define table columns when creating tables
 |---|---|
 | Boolean, yes/no | [BOOL](/docs/sql-guide/data-types/data-type-bool) |
 | Floating point | [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) |
-| Floating point array | [VECTOR](/docs/sql-guide/data-types/data-type-vector) |
 | Unsigned integer | [ID](/docs/sql-guide/data-types/data-type-id) |
+| Comma-separated unsigned integers | [SET and SETQ](/docs/sql-guide/data-types/data-type-set-setq)
 | Signed integer | [INT](/docs/sql-guide/data-types/data-type-int) |
+| Floating point array | [VECTOR](/docs/sql-guide/data-types/data-type-vector) |
 
 ## String data types
 
 | User data | Data type |
 |---|---|
 | Sequence of characters up to 256mb | [STRING](/docs/sql-guide/data-types/data-type-string) |
+| Comma-separated array of string values | [SET and SETQ](/docs/sql-guide/data-types/data-type-set-setq)
 | Fixed-length sequence of characters | [VARCHAR](/docs/sql-guide/data-types/data-type-varchar) |
 
 ## Low-cardinality data types
 
-`SET` and `SETQ` data types are designed for low-cardinality user data and avoid the need for data normalization:
+{% include /sql-guide/datatype-set-setq-summary.md %}
 
-| User data | Associated date/time values | Data type |
-|---|---|---|
-| Unsigned integer | None | [IDSET](/docs/sql-guide/data-types/data-type-idset) |
-| Unsigned integer | Yes | [IDSETQ](/docs/sql-guide/data-types/data-type-idsetq) |
-| String | None | [STRINGSET](/docs/sql-guide/data-types/data-type-stringset) |
-| String | Yes | [STRINGSETQ](/docs/sql-guide/data-types/data-type-stringsetq) |
-
-Values are supplied as comma-separated values and once ingested can be queried using SELECT...SETCONTAINS functions:
-* [SETCONTAINS](/docs/sql-guide/functions/function-setcontains)
-* [SETCONTAINSANY](/docs/sql-guide/functions/function-setcontainsany)
-* [SETCONTAINSALL](/docs/sql-guide/functions/function-setcontainsall)
+* [SET and SETQ](/docs/sql-guide/data-types/data-types-set-setq)
 
 ## Constraints
 

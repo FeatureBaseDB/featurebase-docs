@@ -1,5 +1,5 @@
 ---
-title: SET and SETQ functions
+title: SET and SETQ
 layout: default
 parent: Functions
 grand_parent: SQL guide
