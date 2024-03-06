@@ -17,14 +17,14 @@ SETCONTAINS[ANY | ALL](<column-name>,[<value>,...])
 
 ## Arguments
 
-{% includes /sql-guide/function-set-args.md %}
+{% include /sql-guide/function-set-args.md %}
 
 {: .important}
 Square brackets `[...]` are required in the query.
 
 ## Returns
 
-{% includes /sql-guide/function-set-returns.md %}
+{% include /sql-guide/function-set-returns.md %}
 
 ## Examples
 
