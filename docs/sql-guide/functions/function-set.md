@@ -18,27 +18,25 @@ SET functions test for one or more values within a `SET` or `SETQ` column.
 ## Syntax
 
 ```sql
-SET[INCLUDES | EXCLUDES](<set-column>,<value>)
-
-SETINCLUDES[ANY | ALL](<set-column>,[<value>,...])
+SET{CONTAINS[ANY | ALL] | EXCLUDES}(<set-column>,<value>)
 ```
 
 ## Arguments
 
 | Argument | Description | Additional information |
 |---|---|---|
-| INCLUDES | Test if a single `<value>` **is** within the `<set-column>` |  |
-| EXCLUDES | Test if a single `<value>` **is not** within the `<set-column>` |  |
-| ANY | Test for **any** comma-separated values within the `<set-column>` | Values must be comma-separated and grouped within square brackets `[...]` |
-| ALL | Test for **all** comma-separated values within the `<set-column>`  | Values must be comma-separated and grouped within square brackets `[...]` |
-| `<set-column>` | Name of `SET` or `SETQ` column | [`SET` and `SETQ` data types](/docs/sql-guide/data-types/data-type-set-setq) |
+| `SETCONTAINS` | Test for a value found in `<set-column>` |  |
+| `SETCONTAINSANY` | Test for **any** values found in `<set-column>` | Values must be comma-separated and grouped within square brackets `[...]` |
+| `SETCONTAINSALL` | Test for **all** supplied values found in `<set-column>` | Values must be comma-separated and grouped within square brackets `[...]` |
+| `SETEXCLUDES` | Test a `<value>` **is not** found in `<set-column>` |  |
+| `<set-column>` | `SET` or `SETQ` column name | [`SET` and `SETQ` data types](/docs/sql-guide/data-types/data-type-set-setq) |
 | `<value>` | `ID` or `STRING` literal value | * [ID data type](/docs/sql-guide/data-types/data-type-id)<br/>* [STRING data type](/docs/sql-guide/data-types/data-type-string) |
 
 ## Additional information
 
 ### Function operators
 
-`SET` functions can be used with [supported operators](/docs/sql-guide/operators/operators-home)
+`SET` functions work with `AND` and `OR` logical operators
 
 {% include /sql-guide/note-operator-logic-wrong.md %}
 
