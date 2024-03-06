@@ -39,13 +39,6 @@ TIMEQUANTUM '<date-unit>' [TTL '<int-value><time-unit>']
 
 ## Additional information
 
-### Delimiters
-
-| Data source | Delimiter | Example |
-|---|---|---|
-| SQL query | `[value,value,value,...]` |
-| CSV file | `value;value;value;...` |
-
 ### TIMEQUANTUM views
 
 A TIMEQUANTUM view is created for each `<date-unit>` in a `CREATE TABLE` statement
@@ -90,12 +83,33 @@ View deletion may take longer than expected because:
 * the database timestamp is governed by the vendor region
 * views may contain large quantities of data
 
+### Value definition
+
+| Data type | Definition | Statement |
+|---|---|---|
+| SET | `[<value>,...]` | [INSERT](/docs/sql-guide/statements/statement-insert) <br/> [BULK INSERT...MAP](/docs/sql-guide/statements/statement-insert-bulk) |
+| SETQ | `{<timestamp>,[<value>,...]}` | [INSERT](/docs/sql-guide/statements/statement-insert) |
+
+{: .important}
+>Values must be **semicolon-separated** for `CSV` data sources used with `BULK INSERT`
+>e.g., `<previous-value>,<value>;...,<next-value>`
+
 ### GROUP BY issues on SET and SETQ data types
 
 * [GROUP BY issues for SET and SETQ data types](/docs/sql-guide/issues/select-groupby-flatten-set-setq)
 
 ## Examples
 
-### CREATE TABLE with all data types
-
 {% include /sql-guide/table-create-types-all-eg.md %}
+
+### INSERT statement
+
+```sql
+INSERT INTO all-datatypes (_id, idsetcol, idsetqcol, stringsetcol, stringsetqcol) VALUES
+
+(1, [10,20,30],
+{1709706283,[90,80,70]},
+['ten', 'twenty', 'thirty'],
+{'2024-03-06T06:24:43.261Z',['ninety','eighty','seventy']});
+
+```

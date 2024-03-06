@@ -130,25 +130,25 @@ When the `TUPLE()` function is used in a `TRANSFORM` clause, the following value
 ### CSV Value Assignment
 There are special assignments for certain literal values when inserting CSV data.
 
-| Literal Value | Target Data Type | Resultant | Additional information |
+| Literal Value | Target Data Type | Result | Additional information |
 |---|---|---|---|
 | `,,` or `,"",` | All unless explicitly listed | `NULL` | |
-| `,,` or `,"",` | `string` | `''` (empty string) | if `CSV_EMPTY_STRING_AS_NULL` is used, the resultant becomes `NULL` |
-| `,,` or `,"",` | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set) |
-| `,NULL,` | All unless explicitly listed | `'NULL'` (string literal) | if `CSV_NULL_AS_NULL` is used, the resultant becomes `NULL` |
+| `,,` or `,"",` | `string` | `''` (empty string) | if `CSV_EMPTY_STRING_AS_NULL` is used, the result is `NULL` |
+| `,,` or `,"",` | `SET` and `SETQ` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set) |
+| `,NULL,` | All unless explicitly listed | `'NULL'` (string literal) | if `CSV_NULL_AS_NULL` is used, the result is `NULL` |
 
 ### NDJSON Value Assignment
 
 There are special assignments for certain literal values when inserting NDJSON data.
 
-| Literal Value | Target Data Type | Resultant | Additional information |
+| Literal Value | Target Data Type | Result | Additional information |
 |---|---|---|---|
 | `""` | `string` | `''` (empty string) | |
 | `""` | `stringset`<br/>`stringsetq` | `['']` (set with empty string member) | |
 | `null` | All unless explicitly listed | `NULL` | |
-| `[]` | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `[]` (empty set) | |
+| `[]` | `SET` and `SETQ` | `[]` (empty set) | |
 | Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
-| Value Missing () | `stringset` <br/>`idset` <br/>`stringsetq` <br/>`idsetq` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
+| Value Missing () |`SET` and `SETQ` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
 
 {% include /sql-guide/sql-eg-insert-bulk-statements.md %}
 
