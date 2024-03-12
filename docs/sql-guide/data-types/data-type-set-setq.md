@@ -89,7 +89,7 @@ Use the following syntax to `INSERT` or `BULK INSERT` values to `SET` and `SETQ`
 {% include /sql-guide/set-setq-value-def.md %}
 {% include /sql-guide/vector-value-def.md %}
 
-{% include /sql-guide/insert-csv-datasource-ref.md %}
+{% include /sql-guide/set-setq-csv-datasource-ref.md %}
 
 ### GROUP BY issues on SET and SETQ data types
 
