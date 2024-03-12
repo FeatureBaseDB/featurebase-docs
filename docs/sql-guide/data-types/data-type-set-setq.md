@@ -13,9 +13,7 @@ nav_order: 8
 ## Syntax
 
 ```sql
-{ID | STRING}SET{Q
-  TIMEQUANTUM '<date-unit>'
-  [TTL '<int-value><time-unit>']}
+{ID | STRING}SET{Q TIMEQUANTUM '<date-unit>' [TTL '<int-value><time-unit>']}
 ```
 
 ## Arguments
