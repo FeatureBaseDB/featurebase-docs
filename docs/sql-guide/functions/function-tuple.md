@@ -9,10 +9,13 @@ grand_parent: SQL guide
 
 `TUPLE()` is a mathematical function that returns an ordered list of values corresponding to and derived from a supplied argument.
 
+It is especially important for use in `BULK INSERT` statements to combine a `TIMESTAMP` value with values intended for `SETQ` columns
+
 ## Before you begin
 
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
 * [BULK INSERT statement](/docs/sql-guide/statements/statement-insert-bulk)
+* [SETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
 
 ## Syntax
 
@@ -45,7 +48,3 @@ TUPLE(expr1,expr2,...)
 {% include /sql-guide/insert-bulk-transform-tuple-eg.md %}
 
 {% include /sql-guide/select-with-tuple-eg.md %}
-
-## Further information
-
-* [SET and SETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
