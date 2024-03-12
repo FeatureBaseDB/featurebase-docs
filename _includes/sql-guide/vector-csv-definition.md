@@ -1,3 +1,3 @@
 {: .important}
->`VECTOR` values contained in a CSV data source must be **semicolon-separated**
+>Use semicolons to separate values in a CSV data source intended for `VECTOR` columns:
 >e.g., `<previous-value>,<value>;...,<next-value>`

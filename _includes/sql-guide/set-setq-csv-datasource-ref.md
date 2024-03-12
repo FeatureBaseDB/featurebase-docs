@@ -1,3 +1,3 @@
 {: .important}
->`SET` and `SETQ` values contained in a CSV data source must be **semicolon-separated**
+>Use semicolons to separate values in a CSV data source intended for `SET` and `SETQ` columns.
 >e.g., `<previous-value>,<value>;...,<next-value>`
