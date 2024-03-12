@@ -16,10 +16,6 @@ nav_order: 8
 {ID | STRING}{SET | SETQ <SETQ-constraints>}
 ```
 
-```sql
-TIMEQUANTUM '<date-unit>' [TTL '<int-value><time-unit>']
-```
-
 ## Arguments
 
 | Argument | Description | Required? | Default | Additional information |
@@ -30,6 +26,10 @@ TIMEQUANTUM '<date-unit>' [TTL '<int-value><time-unit>']
 | `SETQ` | Comma-separated array of values identified by a Unix-epoch or ISO-8601 timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
 
 ### `SETQ <constraints>`
+
+```sql
+TIMEQUANTUM '<date-unit>' [TTL '<int-value><time-unit>']
+```
 
 | Argument | Description | Required? | Default | Additional information |
 |---|---|---|---|---|
