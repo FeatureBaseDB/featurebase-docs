@@ -23,7 +23,7 @@ nav_order: 8
 | `ID` | Values to be inserted conform to `ID` data type |  |  | [ID data type](/docs/sql-guide/data-types/data-type-id) |
 | `STRING` | Values to be inserted conform to `STRING` data type |  |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
 | `SET` | Comma-separated array of values | Yes |  |
-| `SETQ` | Comma-separated array of values identified by a Unix-epoch or ISO-8601 timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
+| `SETQ` | Comma-separated array of values identified by a Unix-epoch or ISO-8601 timestamp |  |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | `TIMEQUANTUM` | `SETQ` constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
 | `<date-unit>` | One or more sequential, descending date units, defined as `Y`, `M`, `D`, `H` | Y |  | [TIMEQUANTUM views](#timequantum-views) |
 | `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL (Time To Live)](#ttl-time-to-live)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
@@ -51,8 +51,9 @@ TIMEQUANTUM views:
 An integer and time unit are used to calculate the number of seconds before a `TIMEQUANTUM` view can be deleted.
 
 {: .note}
-`TTL '0s'` is the default and should be used where
-`TTL` defaults to `0s` which indicates no views will be deleted.
+>`TTL` defaults to `0s` which means:
+>* No `TIMEQUANTUM` views are deleted,
+>* Disk requirements will increase
 
 | Name | `<time-unit>` declaration |
 |---|---|
