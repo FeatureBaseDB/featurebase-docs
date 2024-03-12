@@ -33,7 +33,7 @@ nav_order: 8
 
 ### TIMEQUANTUM views
 
-A TIMEQUANTUM view is created for each `<date-unit>` in a `CREATE TABLE` statement
+A TIMEQUANTUM view is created for each `<date-unit>` defined in a `CREATE TABLE` statement
 
 | Name | `<date-unit>` declaration | View timestamp |
 |---|---|---|
