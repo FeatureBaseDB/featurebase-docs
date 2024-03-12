@@ -7,10 +7,11 @@ grand_parent: SQL guide
 
 # RANGEQ() function
 
-`RANGEQ()` is used on `IDSETQ` or `STRINGSETQ` data type columns to return values between one or more specified timestamps.
+The `RANGEQ()` function returns values between specified timestamps for `SETQ` columns.
 
 ## Before you begin
 * [Learn about unix epoch/unix time](https://en.wikipedia.org/wiki/Unix_time){:target="_blank"}
+* [SETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
 
 ## Syntax
 
@@ -52,3 +53,7 @@ Only one `NULL` value is permitted
 ## SELECT with one RANGEQ() timestamp
 
 {% include /sql-guide/select-from-stringsetq-timeq-one-arg.md %}
+
+## Further information
+
+* [SET functions](/docs/sql-guide/functions/function-set)

@@ -87,7 +87,6 @@ Use the following syntax to `INSERT` or `BULK INSERT` values to `SET` and `SETQ`
 | Column data type | Assignment | Additional information |
 |---|---|---|
 {% include /sql-guide/set-setq-value-def.md %}
-{% include /sql-guide/vector-value-def.md %}
 
 {% include /sql-guide/set-setq-csv-datasource-ref.md %}
 
@@ -110,3 +109,8 @@ INSERT INTO all-datatypes (_id, idsetcol, idsetqcol, stringsetcol, stringsetqcol
 {'2024-03-06T06:24:43.261Z',['ninety','eighty','seventy']});
 
 ```
+
+## Further information
+
+* [SET functions](/docs/sql-guide/functions/function-set)
+* [RANGE function](/docs/sql-guide/functions/function-range)
