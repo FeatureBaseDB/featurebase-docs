@@ -9,7 +9,7 @@ grand_parent: SQL guide
 
 `TUPLE()` is a mathematical function that returns an ordered list of values corresponding to and derived from a supplied argument.
 
-It is especially important for use in `BULK INSERT` statements to combine a `TIMESTAMP` value with values intended for `SETQ` columns
+It is especially important for use in `BULK INSERT` statements to combine values intended for `SETQ` columns.
 
 ## Before you begin
 
