@@ -30,7 +30,7 @@ TUPLE(expr1,expr2,...)
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `@<map_position>,...` | Used with `BULK INSERT` statements in the `TRANSFORM` clause to combine two or more values defined by integers under the `MAP` clause |  | Used to combine `TIMESTAMP` and values for `SETQ` columns |
+| `@<map-position>,...` | Used with `BULK INSERT` statements in the `TRANSFORM` clause to combine two or more values represented in the `MAP` clause |  | [BULK INSERT...MAP]() |
 | `<column-name>,...` | Used in a `SELECT` statement to combine values from one or more columns in a given table |
 
 ## Returns
