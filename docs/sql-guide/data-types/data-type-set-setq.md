@@ -61,6 +61,9 @@ An integer and time unit are used to calculate the number of seconds before a `T
 | Minute | `m` |
 {% include /sql-guide/timestamp-ttl-timeunit-table.md %}
 
+{: .note}
+FeatureBase recommends `TTL '1h'` for best results
+
 ### `TIMEQUANTUM` view deletion
 
 To determine when `TIMEQUANTUM` views are deleted, FeatureBase performs the following operations:
