@@ -13,7 +13,9 @@ nav_order: 8
 ## Syntax
 
 ```sql
-{ID | STRING}{SET | SETQ <SETQ-constraints>}
+{ID | STRING}SET{Q
+  TIMEQUANTUM '<date-unit>'
+   [TTL '<int-value><time-unit>']}
 ```
 
 ## Arguments
@@ -24,16 +26,7 @@ nav_order: 8
 | `STRING` | Values to be inserted conform to `STRING` data type |  |  | [STRING data type](/docs/sql-guide/data-types/data-type-string) |
 | `SET` | Comma-separated array of values | Yes |  |
 | `SETQ` | Comma-separated array of values identified by a Unix-epoch or ISO-8601 timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
-
-### `SETQ <constraints>`
-
-```sql
-TIMEQUANTUM '<date-unit>' [TTL '<int-value><time-unit>']
-```
-
-| Argument | Description | Required? | Default | Additional information |
-|---|---|---|---|---|
-| `TIMEQUANTUM` | Constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
+| `TIMEQUANTUM` | `SETQ` constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
 | `<date-unit>` | One or more sequential, descending date units, defined as `Y`, `M`, `D`, `H` | Y |  | [TIMEQUANTUM views](#timequantum-views) |
 | `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL time units](#ttl-time-unit)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
 
