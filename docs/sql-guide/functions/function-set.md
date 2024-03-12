@@ -58,16 +58,18 @@ Values returned depend on the position of the `SET` function within the `SELECT`
 This query returns `true`.
 
 ```sql
-select setexcludes(segment, 'purple') as NOTPURPLE
-    from segments;  
+SELECT SETEXCLUDES(segment, 'purple')
+  AS NOTPURPLE
+  FROM segments;  
 ```
 
 ### Testing set membership as a where clause filter
 
-This query returns `true` with the selected `_id`.
+This query returns `true`
 
 ```sql
-select _id from segments where setexcludes(segment, 'purple');
+SELECT _id FROM segments WHERE
+  SETEXCLUDES(segment, 'purple');
 ```
 
 ### Testing set membership as a where clause filter with multiple set members
@@ -75,5 +77,12 @@ select _id from segments where setexcludes(segment, 'purple');
 This query returns `true` with the selected `_id`.
 
 ```sql
-select _id from segments where setexcludes(segment, 'purple') and setexcludes(segment, 'yellow');
+SELECT _id FROM segments WHERE
+  SETEXCLUDES(segment, 'purple') AND
+  SETEXCLUDES(segment, 'yellow');
 ```
+
+## Further information
+
+* [SET functions](/docs/sql-guide/functions/function-set)
+* [RANGE function](/docs/sql-guide/functions/function-range)

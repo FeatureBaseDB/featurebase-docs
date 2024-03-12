@@ -50,15 +50,16 @@ The `INSERT` statement has the following limitations:
 
 ### Value assignment
 
-| Data type | Literal | Assignment | Additional information |
-|---|---|---|---|
-| All | NULL | `NULL` (case insensitive) | Cannot be assigned for `SETQ` value list |
+| Data type | Assignment | Additional information |
+|---|---|---|
+| All | `NULL` (case insensitive)<br/>`''`(String) | Cannot be assigned for `SETQ` value list |
 | String | `'<value>'` | Empty string can also be represented as `NULL` |
-| `SET` and `SETQ` | `[<value>,...]` | [SET and SETQ data types](/docs/sql-guide/data-types/data-type-set-setq) |
-| `SETQ` | `{<timestamp>,[<value>,...]}` | [SET and SETQ data types](/docs/sql-guide/data-types/data-type-set-setq) |
-| `VECTOR` | `{<decimal-value>,...}` | [VECTOR data type](/docs/sql-guide/data-types/data-type-vector) |
+{% include /sql-guide/set-setq-value-def.md %}
+{% include /sql-guide/vector-value-def.md %}
 
-{% include /sql-guide/timequantum-timestamp-summary.md %}
+{% include /sql-guide/set-setq-csv-datasource-ref.md %}
+
+{% include /sql-guide/vector-csv-definition.md %}
 
 ## UPDATE/REPLACE behavior
 

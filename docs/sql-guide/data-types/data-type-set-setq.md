@@ -28,7 +28,8 @@ nav_order: 8
 | `SETQ` | Comma-separated array of values identified by a Unix-epoch or ISO-8601 timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | `TIMEQUANTUM` | `SETQ` constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
 | `<date-unit>` | One or more sequential, descending date units, defined as `Y`, `M`, `D`, `H` | Y |  | [TIMEQUANTUM views](#timequantum-views) |
-| `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL(Time To Live)](#ttl-time-to-live)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
+| `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL (Time To Live)](#ttl-time-to-live)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
+| `'<int-value><time-unit>'` | Single quoted integer value and single time-unit | Y | `'0s'` | [TTL (Time To Live)](#ttl-time-to-live) |
 
 ## Additional information
 
@@ -63,29 +64,32 @@ An integer and time unit are used to calculate the number of seconds before a `T
 
 ### `TIMEQUANTUM` view deletion
 
-FeatureBase converts timestamps and `TTL` to UNIX epoch (seconds since 1970-01-01). The resulting integer values are subtracted.
+To determine when `TIMEQUANTUM` views are deleted, FeatureBase performs the following operations:
 
-A `TIMEQUANTUM` view is deleted when:
+* Timestamp values are converted to Unix-epoch seconds since 1970-01-01
+* TTL is converted to seconds, regardless of its `<time-unit>`
+
+If the following equation is true, the `TIMEQUANTUM` view is deleted:
 
 ```
 <database-timestamp> - <view-timestamp> >= <ttl-value>
 ```
 
 {: .note}
-View deletion may take longer than expected because:
+`TIMEQUANTUM` view deletion may not occur immediately because:
 * the database timestamp is governed by the vendor region
 * views may contain large quantities of data
 
 ### Value definition
 
-| Data type | Definition | Statement |
-|---|---|---|
-| SET | `[<value>,...]` | [INSERT](/docs/sql-guide/statements/statement-insert) <br/> [BULK INSERT...MAP](/docs/sql-guide/statements/statement-insert-bulk) |
-| SETQ | `{<timestamp>,[<value>,...]}` | [INSERT](/docs/sql-guide/statements/statement-insert) |
+Use the following syntax to `INSERT` or `BULK INSERT` values to `SET` and `SETQ` columns in a target table:
 
-{: .important}
->Values must be **semicolon-separated** for `CSV` data sources used with `BULK INSERT`
->e.g., `<previous-value>,<value>;...,<next-value>`
+| Column data type | Assignment | Additional information |
+|---|---|---|
+{% include /sql-guide/set-setq-value-def.md %}
+{% include /sql-guide/vector-value-def.md %}
+
+{% include /sql-guide/insert-csv-datasource-ref.md %}
 
 ### GROUP BY issues on SET and SETQ data types
 
