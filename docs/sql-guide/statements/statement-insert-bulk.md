@@ -59,9 +59,9 @@ The data source must be in one of the following formats:
 ```
 BULK INSERT
   INTO
-    <table_name> [(<column-list>)]
+    <table-name> [(<column-list>)]
   MAP
-    (<map-id> <data-type>,...)
+    ({$.<column-name> | <map-id>} <data-type>,...)
   [TRANSFORM
     (expr,...)]
   FROM
@@ -86,31 +86,32 @@ BULK INSERT
 | Argument | Description | Required? | Additional information |
 |---|---|---|---|
 | `INSERT` | INSERT a row of data identified by an `_id` value not in the table<br/>UPDATE values in a row where the `_id` already exists | Yes | Columns not defined in the `<column-list>` are not updated |
-| `<table_name>` | Name of target table | Yes |  |
-| `<column-list>` | Columns belonging to `<table-name>`, starting with the `_id` column | Optional | Assumes all columns in `<table_name>` are to be updated if left blank |
+| `<table-name>` | Name of target table | Yes |  |
+| `<column-list>` | Columns belonging to `<table-name>`, starting with the `_id` column | Optional | Assumes all columns in `<table-name>` are to be updated if left blank |
 
 ## MAP clause
 
 | Argument | Description | Required? | Additional information |
 |---|---|---|---|
-| `MAP` | Comma-separated list defining each column in the <column-list> as a positive integer and data type | Yes |  |
-| `<map-id>` | Corresponds to the ordinal position of each column | `_id` column is numbered `0` | Yes |  |
+| `MAP` | Comma-separated list defining each column in the `<column-list>` as a positive integer and data type | Yes |  |
+| `$.<column-name>` | `MAP` values in `NDJSON` data source to the target table `<column-name>` |  | [MAP clause with NDJSON data source](/docs/sql-guide/examples/sql-eg-insert/sql-eg-insert-bulk-ndjson-target) |
+| `<map-id>` | Corresponds to the ordinal position of each column | Yes | `_id` column is numbered `0` |
 | `<data-type>` | The data type assigned to each column in the `CREATE TABLE` statement | Yes | [Data types](/docs/sql-guide/data-types/data-types-home) |
 
 ## TRANSFORM clause
 
 | Argument | Description | Required? | Additional information |
 |---|---|---|---|
-| `TRANSFORM` | Prefix each column integer from the `MAP` clause with the `@` symbol | Optional | [TRANSFORM examples](#transform-examples) |
-| `expr` | Any valid function or operator used to manipulate values identified by `@<map-id>` | [TRANSFORM examples](#transform-examples) |
+| `TRANSFORM` | Prefix each column integer from the `MAP` clause with the `@` symbol | Optional |  |
+| `expr` | Any valid function or operator used to manipulate values identified by `@<map-id>` | Optional |  |
 
 ## FROM clause
 
 | Argument | Description | Required? | Additional information |
 |---|---|---|---|
 | `FROM` | A single or multi-line string literal that specifies the data source defined in the `WITH...INPUT` and `WITH...SOURCE` clauses | Yes |  |
-| `'<URL>'` | One or more valid URLs that link to a data source defined in the `WITH...SOURCE` clause | Optional | Two or more URLS can be separated using whitespace or on by with the [`x` prefix to represent a string literal with newline](#) |
-| `<string-literal>` | CSV or NDJSON records as a string literal. | Required for INLINE | Not supported for `FORMAT 'PARQUET'` |
+| `'<URL>'` | One or more valid URLs that link to valid data sources | Required for `INPUT 'URL'`| Define multiple URLs as [string literals](#string-literals)  |
+| `<string-literal>` | CSV or NDJSON records as a string literal. | Required for `INPUT 'INLINE'` | * Not supported for `FORMAT 'PARQUET'`<br/>* [String literals](#string-literals) |
 
 ## WITH clause
 
@@ -131,18 +132,20 @@ BULK INSERT
 | Argument | Description | Required? | Additional information |
 |---|---|---|---|
 | `INPUT` | Input values must match those used in the `FROM` clause |  |  |
-| `'INLINE'` | Used for data included directly from the `FROM` clause with contents of the literal read as though they were in a file.  | Required for `FROM x'records'`<br/>Not supported for `PARQUET` and `ORC` | [INLINE quotation marks](#using-inline-with-quotation-marks) |
+| `'INLINE'` | Used for data included directly from the `FROM` clause with contents of the literal read as though they were in a file.  | Required for  `FROM <string-literal>'`<br/>Not supported for `PARQUET` and `ORC` | [INPUT additional](#input-additional) |
 | `'STREAM'` | `STREAM` supports a streaming payload using an HTTP multipart POST. | Optional | [BULK INSERT with STREAM](#bulk-insert-with-stream) |
 | `FORMAT` | Supported data source formats are:<br/>* CSV<br/>* `NDJSON`<br/>* `ORC`<br/>* `PARQUET` | Optional | `INPUT 'INLINE'` does not support `PARQUET` or `ORC` |
 
-### Optional data source arguments
+### FORMAT arguments
+
+The following arguments are optional
 
 | Argument | Data source | Description | Additional information |
 |---|---|---|---|
-| `ALLOW_MISSING_VALUES` | `NDJSON` | Output a `NULL` value from the `MAP` clause if the path expression fails | Optional | [NDJSON value assignment](#ndjson-data-source-value-assignment) |
-| `CSV_EMPTY_STRING_AS_NULL` | `CSV` | Assign `""` value as `null` | Optional | [CSV value assignment](#csv-data-source-value-assignment) |
-| `CSV_NULL_AS_NULL` | `CSV` | Assign `NULL` value as `null` | Optional | [CSV value assignment](#csv-data-source-value-assignment) |
-| `HEADER_ROW` | `CSV` | Ignore the header row | Optional |  |
+| `ALLOW_MISSING_VALUES` | `NDJSON` | Output a `NULL` value from the `MAP` clause if the path expression fails | [NDJSON value assignment](#ndjson-data-source-value-assignment) |
+| `CSV_EMPTY_STRING_AS_NULL` | `CSV` | Assign `""` value as `null` | [CSV value assignment](#csv-data-source-value-assignment) |
+| `CSV_NULL_AS_NULL` | `CSV` | Assign `NULL` value as `null` | [CSV value assignment](#csv-data-source-value-assignment) |
+| `HEADER_ROW` | `CSV` | Ignore the header row |  |
 | `NULL_AS_EMPTY_SET` | All | `MAP` any `NULL` values from the data source to a `SET` column without error | [SET and SETQ data types](/docs/sql-guide/data-types/data-type-set-setq) |
 
 ## Additional information
@@ -160,51 +163,25 @@ Any variables are evaluated during execution for each row
 
 | Literal Value | Target Data Type | Result | Additional information |
 |---|---|---|---|
-| `,,` or `,"",` | All unless explicitly listed | `NULL` | |
-| `,,` or `,"",` | `string` | `''` (empty string) | If `WITH` clause if `CSV_EMPTY_STRING_AS_NULL` is used, the result is `NULL` |
-| `,,` or `,"",` | `SET` and `SETQ` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set) |
-| `,NULL,` | All unless explicitly listed | `'NULL'` (string literal) | if `CSV_NULL_AS_NULL` is used, the result is `NULL` |
+| `,,` or `,"",` | [All data types](/docs/sql-guide/data-types/data-types-home) unless stated | `NULL` | |
+| `,,` or `,"",` | [STRING](/docs/sql-guide/data-types/data-type-string) | `''` (empty string) | `NULL` when `WITH` `'CSV_EMPTY_STRING_AS_NULL'` is defined |
+| `,,` or `,"",` | [SET and SETQ](/docs/sql-guide/data-types/data-type-set-setq) | `NULL` | Empty set `[]` if `WITH 'NULL AS EMPTY SET'` is defined |
+| `,NULL,` | [All data types](/docs/sql-guide/data-types/data-types-home) unless stated | `'NULL'` (string literal) | `NULL` when `WITH 'CSV_NULL_AS_NULL'` is defined |
 
 #### NDJSON data source value assignment
 
 | Literal Value | Target Data Type | Result | Additional information |
 |---|---|---|---|
-| `""` | `string` | `''` (empty string) | |
-| `""` | `stringset`<br/>`stringsetq` | `['']` (set with empty string member) | |
-| `null` | All unless explicitly listed | `NULL` | |
-| `[]` | `SET` and `SETQ` | `[]` (empty set) | |
-| Value Missing () | All unless explicitly listed | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
-| Value Missing () |`SET` and `SETQ` | `NULL` | if `NULL_AS_EMPTY_SET` is used, the resultant becomes `[]` (empty set). This will only occur if using `ALLOW_MISSING_VALUES` |
-
-{% include /sql-guide/sql-eg-insert-bulk-statements.md %}
+| `""` | [STRING](/docs/sql-guide/data-types/data-type-string) | `''` (empty string) | |
+| `""` | [STRINGSET and STRINGSETQ](/docs/sql-guide/data-types/data-type-set-setq) | `['']` (set with empty string member) | |
+| `null` | [All data types](/docs/sql-guide/data-types/data-types-home) unless stated | `NULL` | Not supported for  |
+| `[]` | [SET and SETQ](/docs/sql-guide/data-types/data-type-set-setq) | `[]` (empty set) | |
+| Value Missing () | [All data types](/docs/sql-guide/data-types/data-types-home) unless stated | `NULL` | This will only occur if using `ALLOW_MISSING_VALUES` |
+| Value Missing () | [SET and SETQ](/docs/sql-guide/data-types/data-type-set-setq) | `NULL` | Empty set `[]` if `FORMAT` includes `'NULL_AS_EMPTY_SET'` and `'ALLOW_MISSING_VALUES'` |
 
 ## Examples
 
-### BULK INSERT using TUPLE for SETQ column
-
-```sql
-BULK INSERT INTO doctest (
-  _id,
-  idsetqcol,
-  stringsetqcol,
-  timestampcol)
-MAP
-  (0 ID,
-  1 IDSET,
-  2 STRINGSET,
-  3 TIMESTAMP)
-TRANSFORM(
-    @0,
-    TUPLE(@3,@1),
-    TUPLE(@3,@2),
-    @3
-)
-FROM x'004,456;567;678;789,this;is;the;first;row,2023-11-22T04:46:59Z'
-WITH
-    BATCHSIZE 1
-    FORMAT 'CSV'
-    input 'INLINE';
-```
+{% include /sql-guide/sql-eg-insert-bulk-statements.md %}
 
 ### TRANSFORM with operators and expressions
 
@@ -225,25 +202,8 @@ TRANSFORM (
 )
 ```
 
+<!-- Applies only to FB Community which is now archived
 
-
-<!-- COMMENTED OUT BECAUSE AS OF 2023-01-31 this is the same as INSERT
-
-### BULK REPLACE from CSV file with TRANSFORM
-
-```sql
-bulk replace
-    into insert_test (_id, int1, string1, timestamp1)
-    map (0 id, 1 int, 2 string)
-    transform (@0, @1, @2, current_timestamp)
-from
-    '/dev/queries/insert_test.csv'
-with
-    format 'CSV'
-    input 'FILE';
-```
--->
-<!-- The following examples to be rolled into the new examples-->
 ### BULK INSERT with read from CSV file
 
 ```sql
@@ -257,6 +217,7 @@ with
     format 'CSV'
     input 'FILE';
 ```
+-->
 
 ### BULK INSERT with STREAM
 
@@ -277,5 +238,3 @@ bulk replace
     format 'CSV'
     input 'STREAM';
 ```
-
-This would ingest all three files in a single request.
