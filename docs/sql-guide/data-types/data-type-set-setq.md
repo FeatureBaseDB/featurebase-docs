@@ -15,7 +15,7 @@ nav_order: 8
 ```sql
 {ID | STRING}SET{Q
   TIMEQUANTUM '<date-unit>'
-   [TTL '<int-value><time-unit>']}
+  [TTL '<int-value><time-unit>']}
 ```
 
 ## Arguments
@@ -28,7 +28,7 @@ nav_order: 8
 | `SETQ` | Comma-separated array of values identified by a Unix-epoch or ISO-8601 timestamp |  | [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | `TIMEQUANTUM` | `SETQ` constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
 | `<date-unit>` | One or more sequential, descending date units, defined as `Y`, `M`, `D`, `H` | Y |  | [TIMEQUANTUM views](#timequantum-views) |
-| `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL time units](#ttl-time-unit)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
+| `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL(Time To Live)](#ttl-time-to-live)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
 
 ## Additional information
 
@@ -47,7 +47,7 @@ TIMEQUANTUM views:
 * improve the responsiveness of Range queries where a query uses the same combination of date units
 * increase storage overheads which may require the use of `TTL`(time-to-live)
 
-### `TTL <time-unit>`
+### TTL (Time To Live)
 
 An integer and time unit are used to calculate the number of seconds before a `TIMEQUANTUM` view can be deleted.
 
