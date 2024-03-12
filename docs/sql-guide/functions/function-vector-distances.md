@@ -1,5 +1,5 @@
 ---
-title: vector distance functions
+title: VECTOR DISTANCE
 layout: default
 parent: Functions
 grand_parent: SQL guide
