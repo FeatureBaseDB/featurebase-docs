@@ -9,8 +9,6 @@ grand_parent: SQL guide
 
 `TUPLE()` is a mathematical function that returns an ordered list of values corresponding to and derived from a supplied argument.
 
-It can be used in SELECT statements or the `BULK INSERT...TRANSFORM` clause.
-
 ## Before you begin
 
 * [SELECT statement](/docs/sql-guide/statements/statement-select)
@@ -29,7 +27,7 @@ TUPLE(expr1,expr2,...)
 
 | Argument | Description | Required | Additional information |
 |---|---|---|---|
-| `@<map_position>,...` | Used with `BULK INSERT` statements in the `TRANSFORM` clause to combine two or more values defined by integers under the `MAP` clause |  | Map values Used in the `TRANSFORM` clause |
+| `@<map_position>,...` | Used with `BULK INSERT` statements in the `TRANSFORM` clause to combine two or more values defined by integers under the `MAP` clause |  | Used to combine `TIMESTAMP` and values for `SETQ` columns |
 | `<column-name>,...` | Used in a `SELECT` statement to combine values from one or more columns in a given table |
 
 ## Returns
@@ -47,3 +45,7 @@ TUPLE(expr1,expr2,...)
 {% include /sql-guide/insert-bulk-transform-tuple-eg.md %}
 
 {% include /sql-guide/select-with-tuple-eg.md %}
+
+## Further information
+
+* [SET and SETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
