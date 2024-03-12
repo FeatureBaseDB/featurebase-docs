@@ -154,7 +154,7 @@ Any variables are evaluated during execution for each row
 
 #### String literals
 
-{% include def-string-literal-def.md %}
+{% include /sql-guide/string-literal-def.md %}
 
 #### CSV data source value assignment
 

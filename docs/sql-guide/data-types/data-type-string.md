@@ -30,7 +30,7 @@ STRING[(max)]
 
 ### String literals
 
-{% include string-literal-def.md %}
+{% include /sql-guide/string-literal-def.md %}
 
 ## Examples
 
