@@ -27,9 +27,18 @@ nav_order: 8
 | `TIMEQUANTUM` | `SETQ` constraint that creates views on `SETQ` data for each `<date-unit>` | Y |  | [TIMEQUANTUM views](#timequantum-views)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion) |
 | `<date-unit>` | One or more sequential, descending date units, defined as `Y`, `M`, `D`, `H` | Y |  | [TIMEQUANTUM views](#timequantum-views) |
 | `TTL` | Governs automatic deletion of `TIMEQUANTUM` views | Optional | `0s` (disables `TTL`) | * [TTL (Time To Live)](#ttl-time-to-live)<br/>* [TIMEQUANTUM view deletion](#timequantum-view-deletion)|
-| `'<int-value><time-unit>'` | Single quoted integer value and single time-unit | Y | `'0s'` | [TTL (Time To Live)](#ttl-time-to-live) |
+| `'<int-value><time-unit>'` | String literal that requires a positive integer with time-unit | Y | `'0s'` | [TTL (Time To Live)](#ttl-time-to-live) |
 
 ## Additional information
+
+### INSERT and UPSERT behaviour
+
+INSERT or UPSERT behaviour occurs when any of the following are true:
+
+| Change type | `_id` | `TIMEQUANTUM` | `SET` values |
+|---|---|---|---|
+| INSERT | New | New | New |
+| UPSERT | Existing | Existing | New |
 
 ### TIMEQUANTUM views
 
