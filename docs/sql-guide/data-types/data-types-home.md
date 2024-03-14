@@ -21,9 +21,20 @@ Data types and constraints are used to define table columns when creating tables
 {% include /sql-guide/sql-guide-before-begin.md %}
 * [Learn about data cardinality](/docs/cloud/cloud-faq/cloud-faq-data-cardinality)
 
-## Mapping data types
+## Mapping data types for INSERT and BULK INSERT statements
 
-{% include /sql-guide/datatype-mapping.md %}
+| General data type | FeatureBase SQL data type | Internal data type |
+|---|---|---|
+| boolean | [BOOL](/docs/sql-guide/data-types/data-type-bool) | bool |
+| integer | [INT](/docs/sql-guide/data-types/data-type-int) | int |
+| decimal | [DECIMAL](/docs/sql-guide/data-types/data-type-decimal) | decimal |
+| unsigned integer | [ID](/docs/sql-guide/data-types/data-type-id) | mutex |
+| low-cardinality unsigned integer | * [IDSET and IDSETQ](/docs/sql-guide/data-types/data-type-set-setq) | set |
+| string | [STRING](/docs/sql-guide/data-types/data-type-string) | keyed mutex |
+| low-cardinality string | * [STRINGSET and STRINGSETQ](/docs/sql-guide/data-types/data-type-set-setq) | keyed set |
+| timestamp | [TIMESTAMP](/docs/sql-guide/data-types/data-type-timestamp) | timestamp |
+| varchar | [VARCHAR](/docs/sql-guide/data-types/data-type-varchar) |  |
+| vector | [vector](/docs/sql-guide/data-types/data-type-vector) | vector |
 
 ## Date/Time data types
 
