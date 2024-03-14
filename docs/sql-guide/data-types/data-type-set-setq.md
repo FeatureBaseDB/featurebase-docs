@@ -122,4 +122,4 @@ INSERT INTO all-datatypes (_id, idsetcol, idsetqcol, stringsetcol, stringsetqcol
 ## Further information
 
 * [SET functions](/docs/sql-guide/functions/function-set)
-* [RANGE function](/docs/sql-guide/functions/function-range)
+* [RANGE function](/docs/sql-guide/functions/function-rangeq)

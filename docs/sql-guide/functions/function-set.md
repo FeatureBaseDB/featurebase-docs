@@ -85,4 +85,4 @@ SELECT _id FROM segments WHERE
 ## Further information
 
 * [SET functions](/docs/sql-guide/functions/function-set)
-* [RANGE function](/docs/sql-guide/functions/function-range)
+* [RANGE function](/docs/sql-guide/functions/function-rangeq)
