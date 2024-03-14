@@ -39,8 +39,8 @@ SHOW COLUMNS FROM table_name;
 | `max` | int | Maximum value for `INT()` column | [INT() data type](/docs/sql-guide/data-types/data-type-int) |
 | `timeunit` | string | TIMEUNIT for `TIMESTAMP()` column | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
 | `epoch` | int | Epoch for `TIMESTAMP()` column | [TIMESTAMP() data type](/docs/sql-guide/data-types/data-type-timestamp) |
-| `time_quantum` | string | Applies to `IDSETQ()` and `STRINGSETQ()` columns | [IDSETQ() data type](/docs/sql-guide/data-types/data-type-set-setqq)<br/>[STRINGSETQ() data type](/docs/sql-guide/data-types/data-type-set-setqq) |
-| `ttl` | string | Applies to `IDSETQ()` and `STRINGSETQ()` columns | [IDSETQ() data type](/docs/sql-guide/data-types/data-type-set-setqq)<br/>[STRINGSETQ() data type](/docs/sql-guide/data-types/data-type-set-setqq) |
+| `time_quantum` | string | Applies to `IDSETQ()` and `STRINGSETQ()` columns | [IDSETQ() data type](/docs/sql-guide/data-types/data-type-set-setq)<br/>[STRINGSETQ() data type](/docs/sql-guide/data-types/data-type-set-setq) |
+| `ttl` | string | Applies to `IDSETQ()` and `STRINGSETQ()` columns | [IDSETQ() data type](/docs/sql-guide/data-types/data-type-set-setq)<br/>[STRINGSETQ() data type](/docs/sql-guide/data-types/data-type-set-setq) |
 
 ## Examples
 

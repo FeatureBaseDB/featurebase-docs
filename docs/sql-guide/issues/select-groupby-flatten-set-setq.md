@@ -8,9 +8,9 @@ grand_parent: SQL guide
 
 Unexpected results are returned for `SELECT...DISTINCT` and `SELECT...GROUP BY` queries that include columns assigned the following data types:
 * [IDSET](/docs/sql-guide/data-types/data-type-set-setq)
-* [IDSETQ](/docs/sql-guide/data-types/data-type-set-setqq)
+* [IDSETQ](/docs/sql-guide/data-types/data-type-set-setq)
 * [STRINGSET](/docs/sql-guide/data-types/data-type-set-setq)
-* [STRINGSETQ](/docs/sql-guide/data-types/data-type-set-setqq)
+* [STRINGSETQ](/docs/sql-guide/data-types/data-type-set-setq)
 
 ## Cause
 

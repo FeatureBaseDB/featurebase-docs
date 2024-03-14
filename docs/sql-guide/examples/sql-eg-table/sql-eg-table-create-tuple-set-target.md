@@ -16,10 +16,10 @@ The `tuple-set-target` table is intended for a `BULK INSERT` statement and inclu
 * [CREATE TABLE examples](/docs/sql-guide/examples/sql-eg-home/#create-table-examples)
 * [CREATE TABLE statement](/docs/sql-guide/statements/statement-table-create)
 * [IDSET data type](/docs/sql-guide/data-types/data-type-set-setq)
-* [IDSETQ data type](/docs/sql-guide/data-types/data-type-set-setqq)
+* [IDSETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
 * [STRING](/docs/sql-guide/data-types/data-type-string)
 * [STRINGSET data type](/docs/sql-guide/data-types/data-type-set-setq)
-* [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-set-setqq)
+* [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
 * [TIMESTAMP data type](/docs/sql-guide/data-types/data-type-timestamp)
 
 ## CREATE TABLE

@@ -131,5 +131,5 @@ INSERT
 -->
 ## Further information
 
-* [IDSETQ data type](/docs/sql-guide/data-types/data-type-set-setqq)
-* [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-set-setqq)
+* [IDSETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
+* [STRINGSETQ data type](/docs/sql-guide/data-types/data-type-set-setq)
