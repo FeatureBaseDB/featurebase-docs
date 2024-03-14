@@ -65,7 +65,7 @@ Data types and constraints are used to define table columns when creating tables
 
 {% include /sql-guide/datatype-set-setq-summary.md %}
 
-* [SET and SETQ](/docs/sql-guide/data-types/data-types-set-setq)
+* [SET and SETQ](/docs/sql-guide/data-types/data-type-set-setq)
 
 ## Constraints
 
