@@ -10,7 +10,7 @@ Images and videos are **BANNED** for the following reasons:
 
 1. They become maintenance overhead with changing GUI
 2. They don't scale well on smart devices (yes, CSS and whatnot can help, but read on before you leap to a conclusion)
-3. CSS styling images for different screens doesn't help unless the user is willing to manually zoom to see what it's showing, or tap and open in another tab, and IN BOTH CASES, the instructions that back-up the image will be lost
+3. CSS styling images for different screens doesn't help unless the user is willing to manually zoom to see what it's showing, or tap and open in another tab, and IN BOTH CASES, the instructions that reinforce what the image is saying disappear
 4. You need image `alt` tags to make them accessible to sight/hearing impaired people, which adds more complexity
 5. However small the resolution of filesize an image is, it'll still affect site build and load time either locally or on a user browser
 
